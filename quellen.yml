@@ -106,6 +106,9 @@ quellen:
     url: https://www.vhs-freising.org/p/fachbereiche/vhs-kostenfrei-633-CAT-KAT332
     methode: text
     eintritt_vorgabe: frei
+    # Die ersten 5.000 Zeichen sind Menue und Sortierknoepfe. Die Marke sitzt
+    # unmittelbar vor dem ersten Kurs.
+    text_ab: 'mehr laden'
     aktiv: true
 
   # ---------------------------------------------------------------
@@ -116,16 +119,12 @@ quellen:
   - name: Modern Studio
     url: https://modern-studio.de/termine/
     methode: text
-    aktiv: false
+    # Kunstverein im eigenen Haus. Geprueft 19.08.2026: Termine mit vollem
+    # Datum im Fliesstext, etwa "18. September – 4. Oktober 2026".
+    ort_standard: Modern Studio Freising
+    ort_adresse_standard: Obere Hauptstr. 20, 85354 Freising
+    aktiv: true
 
-  # ---------------------------------------------------------------
-  # Am 19.08.2026 geprueft: liefern beim einfachen Abruf keine
-  # verwertbaren Termine. Vor dem Aktivieren muss die Ursache geloest
-  # sein, sonst produzieren sie nur leere Laeufe.
-  # ---------------------------------------------------------------
-
-  # Jahresuebersicht mit Datumsangaben OHNE Jahreszahl ("23. April").
-  # Untauglich: das Modell muesste das Jahr raten.
   - name: Aktive City Freising
     url: https://aktivecityfreising.de/service/freisinger-stadttermine/
     methode: text
@@ -173,7 +172,11 @@ quellen:
   - name: DAV Freising — Vortraege
     url: https://dav-freising.de/calendar-2/vortraege/
     methode: text
-    aktiv: false
+    # Die Seite sagt ausdruecklich "Der Eintritt ist frei" und nennt den Saal.
+    # Wenige Termine, dafuer eindeutige.
+    ort_standard: Ottosaal
+    ort_adresse_standard: Seilerbrücklstr. 3, 85354 Freising
+    aktiv: true
 
   - name: HSG Freising — Kultur und Freizeit
     url: https://hsg-freising.de/kultur-freizeit/
@@ -195,13 +198,12 @@ quellen:
   - name: 3Klang Musik
     url: https://www.3klang-musik.de/freising.html
     methode: text
-    aktiv: false
+    # Kleine Konzertreihe, Termine mit vollem Datum und Uhrzeit.
+    # Der Server lehnt Verbindungen gelegentlich ab. Der Lauf uebersteht das —
+    # quellen-status.json zaehlt mit und meldet erst nach drei Fehlversuchen
+    # in Folge.
+    aktiv: true
 
-  # ---------------------------------------------------------------
-  # Bekannte Problemfaelle. Bleiben aus, bis wir sie einzeln loesen.
-  # ---------------------------------------------------------------
-
-  # Wix-Seite, laedt Termine per JavaScript nach. Braucht Playwright.
   - name: Genussgarten Freising
     url: https://www.genussgarten-freising.de/biergarten-events-freising
     methode: text
@@ -217,4 +219,12 @@ quellen:
   - name: TUM Freising
     url: https://www.tum.de/aktuelles/veranstaltungen/terminuebersicht?tx_solr%5Bfilter%5D%5B0%5D=location%3AFreising
     methode: text
-    aktiv: false
+    # Die Vortragsreihe TUM@Freising, meist kostenfrei. Der Ortsfilter in der
+    # Adresse greift beim einfachen Abruf nicht durch — die Seite liefert
+    # Muenchen und Heilbronn mit. `nur_ort` wirft die wieder raus.
+    nur_ort: Freising
+    # Vor dem ersten Termin stehen 23.000 Zeichen Menue. Nach Laenge zu kuerzen
+    # wuerde die Termine treffen und das Menue behalten — deshalb eine Marke.
+    text_ab: 'Aktuelle Veranstaltungen'
+    aktiv: true
+

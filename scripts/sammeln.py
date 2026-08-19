@@ -458,10 +458,24 @@ def detailseiten_holen(quelle: dict, uebersicht_html: str) -> list:
     return huelle_entfernen(seiten)
 
 
+def ab_marke(text: str, muster: str) -> str:
+    """Alles vor der Marke wegwerfen.
+
+    Manche Seiten stellen der Terminliste ihr ganzes Menue voran — bei der TUM
+    sind es 23.000 Zeichen Navigation vor dem ersten Termin. Nach Laenge zu
+    kuerzen wuerde genau die Termine treffen und die Navigation behalten.
+    """
+    if not muster:
+        return text
+    treffer = re.search(muster, text, re.I)
+    return text[treffer.start():] if treffer else text
+
+
 def text_lesen(quelle: dict) -> list:
     uebersichten = uebersichten_holen(quelle)
     uebersicht_html = "\n".join(h for _, h in uebersichten)
-    uebersicht = text_aus_html(uebersicht_html, quelle.get("max_zeichen", 40000))
+    uebersicht = ab_marke(text_aus_html(uebersicht_html, quelle.get("max_zeichen", 40000)),
+                          quelle.get("text_ab"))
     seiten = detailseiten_holen(quelle, uebersicht_html)
 
     kopf = (f"Quelle: {quelle['name']}\nAdresse der Uebersichtsseite: {quelle['url']}\n"
@@ -633,6 +647,23 @@ def eintritt_uebernehmen(alt: dict, roh: dict) -> int:
     return 1
 
 
+def ort_passt(roh: dict, quelle: dict) -> bool:
+    """Fuer Quellen, die ueber Freising hinaus veroeffentlichen.
+
+    Der TUM-Kalender laesst sich per Adresse auf Freising filtern, liefert beim
+    einfachen Abruf aber trotzdem Muenchen und Heilbronn mit. Ohne diese
+    Pruefung stuenden Vortraege in Garching in einem Kalender, der "Gratis in
+    FREISING" heisst — und niemand wuerde den Fehler bemerken, bis jemand
+    hinfaehrt.
+    """
+    verlangt = quelle.get("nur_ort")
+    if not verlangt:
+        return True
+    heuhaufen = " ".join(str(roh.get(feld) or "") for feld in
+                         ("ort_name", "ort_adresse", "titel", "beschreibung")).lower()
+    return verlangt.lower() in heuhaufen
+
+
 def zeitraum_pruefen(roh: dict) -> None:
     """Ein Einzeltermin darf nicht ueber Tage reichen.
 
@@ -723,6 +754,9 @@ def zusammenfuehren(bestand: dict, gefunden: list, quelle: dict, heute: str) -> 
             continue
 
         if ignorieren(roh):
+            continue
+        if not ort_passt(roh, quelle):
+            print(f"    nicht in {quelle['nur_ort']}: {roh.get('titel', '')[:50]}")
             continue
 
         zeitraum_pruefen(roh)

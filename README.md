@@ -247,12 +247,23 @@ GitHub schickt Ihnen außerdem automatisch eine E-Mail, wenn ein Lauf abbricht.
 
 ## Stand der Quellen (geprüft am 19.08.2026)
 
-Von den 23 gesammelten Adressen liefern beim einfachen Abruf nur sechs
-verwertbare Daten — die übrigen laden ihre Termine per JavaScript nach oder
-nennen Datumsangaben ohne Jahreszahl. Die Gründe stehen einzeln in `quellen.yml`.
+Von den 23 gesammelten Adressen liefern zehn verwertbare Daten. Die übrigen
+laden ihre Termine per JavaScript nach oder nennen Datumsangaben ohne
+Jahreszahl — die Gründe stehen einzeln in `quellen.yml`.
 
 Aktiv: Stadtkalender Freising, Merkur, Schafhof, Furtner (API), Einfach selber
-machen (API), vhs „kostenfrei".
+machen (API), vhs „kostenfrei", Modern Studio, DAV Freising, 3Klang Musik,
+TUM Freising.
+
+Zwei Werkzeuge helfen bei sperrigen Seiten und stehen jeder Quelle offen:
+
+`text_ab` schneidet alles vor einer Marke weg. Die TUM stellt ihrer
+Terminliste 23.000 Zeichen Menü voran — nach Länge zu kürzen hätte genau die
+Termine getroffen und das Menü behalten.
+
+`nur_ort` wirft Veranstaltungen weg, die den Ort nicht nennen. Der
+TUM-Kalender lässt sich per Adresse auf Freising filtern, liefert beim
+einfachen Abruf aber München und Heilbronn mit.
 
 Bevor weitere Quellen dazukommen, lohnt der Blick in die Daten: Wenn die beiden
 Aggregatoren die Veranstaltungen der Einzelveranstalter ohnehin mit abdecken,
@@ -260,10 +271,12 @@ bringt jede zusätzliche Quelle vor allem zusätzliche Wartung.
 
 ## Kosten
 
-Rund 25.000 Tokens pro Lauf — die Detailseiten hinter den Übersichten kosten
-mehr als die Listen selbst, liefern aber erst die Preisangabe. Mit
-`mistral-small-latest` sind das etwa 0,4 Cent pro Lauf, also weniger als
-einen Euro im Monat. GitHub Actions ist bei öffentlichen Repositories kostenlos.
+Rund 43.000 Tokens für die Textquellen, dazu die beiden API-Quellen und etwa
+6.000 für die Nachprüfung — zusammen knapp 1 Cent pro Lauf mit
+`mistral-small-latest`, also gut 25 Cent im Monat.
+
+Die Detailseiten hinter den Übersichten sind der größte Posten, liefern aber
+erst die Preisangabe. GitHub Actions ist bei öffentlichen Repositories kostenlos.
 
 Ein anderes Modell lässt sich ohne Codeänderung setzen: Umgebungsvariable
 `MISTRAL_MODELL`, lokal vorangestellt oder im Workflow als `env:`.
