@@ -461,6 +461,12 @@ def einstufung_pruefen(roh: dict) -> None:
     getroffen hat, wird nie zu "unklar" zurueckgestuft. Wir raeumen einen
     Widerspruch auf, wir ueberstimmen kein Urteil.
     """
+    # Das Modell haelt sich nicht immer an die drei erlaubten Werte und
+    # schreibt schon mal "unklar" in das Sicherheitsfeld. Alles Unbekannte
+    # gilt als "niedrig" — dann greifen Rangfolge und Pruefregel wie gedacht.
+    if roh.get("eintritt_confidence") not in ("hoch", "mittel", "niedrig"):
+        roh["eintritt_confidence"] = "niedrig"
+
     beleg = roh.get("eintritt_beleg") or ""
     if not beleg or roh.get("eintritt") not in (None, "unklar"):
         return
@@ -491,6 +497,65 @@ def ausgebucht_pruefen(roh: dict) -> None:
         return
     text = f"{roh.get('titel') or ''} {roh.get('beschreibung') or ''}"
     roh["ausgebucht"] = bool(AUSGEBUCHT.search(text))
+
+
+# Die drei Felder sind eine Aussage, kein Trio unabhaengiger Angaben. Werden
+# sie einzeln abgeglichen, entsteht genau der Widerspruch, den wir schon einmal
+# hatten: der Beleg "Eintritt frei" bleibt stehen, waehrend die Einstufung auf
+# "unklar" zurueckfaellt, weil eine zweite Quelle zur selben Veranstaltung
+# nichts zum Preis sagt.
+EINTRITT_FELDER = ("eintritt", "eintritt_beleg", "eintritt_confidence")
+
+RANG = {"hoch": 3, "mittel": 2, "niedrig": 1}
+
+
+def guete(ev: dict) -> tuple:
+    """Wie belastbar ist diese Eintrittsaussage?"""
+    return (
+        ev.get("eintritt") not in (None, "unklar"),
+        RANG.get(ev.get("eintritt_confidence"), 0),
+        bool(ev.get("eintritt_beleg")),
+    )
+
+
+def eintritt_uebernehmen(alt: dict, roh: dict) -> int:
+    """Die bessere der beiden Aussagen gewinnt — und zwar vollstaendig.
+
+    Zwei Quellen beschreiben dieselbe Veranstaltung unterschiedlich genau. Die
+    Detailseite des Stadtkalenders nennt "Eintritt frei", der Merkur-Eintrag
+    schweigt. Wer zuletzt gelesen wird, ist Zufall; deshalb entscheidet nicht
+    die Reihenfolge, sondern welche Aussage mehr traegt.
+
+    Bei Gleichstand gewinnt die neue: Preise aendern sich, und die frischere
+    Angabe ist dann die wahrscheinlichere.
+    """
+    if guete(roh) < guete(alt):
+        return 0
+    if all(alt.get(f) == roh.get(f) for f in EINTRITT_FELDER):
+        return 0
+    for feld in EINTRITT_FELDER:
+        alt[feld] = roh.get(feld)
+    return 1
+
+
+def ende_uebernehmen(alt: dict, roh: dict) -> int:
+    """Das spaetere Ende gewinnt.
+
+    Uebersichtsseiten fuehren eine mehrtaegige Veranstaltung haeufig nur mit
+    dem heutigen Termin. Wer das ungeprueft uebernimmt, verkuerzt eine
+    Ausstellung, die noch zwei Wochen laeuft, auf einen Tag — genau das ist
+    hier passiert: "Sport im Park" lief bis zum 31., ein Lauf machte den 19.
+    daraus, und damit verschwanden zwoelf Tage aus dem Kalender.
+
+    Die Gegenrichtung ist harmlos: Endet etwas frueher als gedacht, steht es
+    ein paar Tage zu lang im Kalender. Faellt es dagegen zu frueh heraus,
+    erfaehrt niemand mehr davon.
+    """
+    frisch, bisher = roh.get("ende"), alt.get("ende")
+    if not frisch or (bisher and frisch <= bisher):
+        return 0
+    alt["ende"] = frisch
+    return 1
 
 
 def zusammenfuehren(bestand: dict, gefunden: list, quelle: dict, heute: str) -> tuple:
@@ -580,10 +645,14 @@ def zusammenfuehren(bestand: dict, gefunden: list, quelle: dict, heute: str) -> 
             # Ihre Entscheidung gewinnt. Nur der Zeitstempel wird nachgezogen.
             continue
 
+        geaendert += eintritt_uebernehmen(alt, roh)
+        geaendert += ende_uebernehmen(alt, roh)
+
         for feld, wert in roh.items():
             # quelle_name bleibt beim Erstfinder — davon haengt unten ab, ob
             # das Verschwinden eines Events ueberhaupt bewertet werden darf.
-            if feld in ("quelle_url", "quelle_name", "quellen_weitere"):
+            if feld in ("quelle_url", "quelle_name", "quellen_weitere",
+                        "ende", *EINTRITT_FELDER):
                 continue
             if wert not in (None, "", []) and alt.get(feld) != wert:
                 alt[feld] = wert

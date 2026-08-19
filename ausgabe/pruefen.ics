@@ -23,29 +23,8 @@ RRULE:FREQ=YEARLY;BYMONTH=10;BYDAY=-1SU
 END:STANDARD
 END:VTIMEZONE
 BEGIN:VEVENT
-UID:90f2fb9057f18163@gratis-freising
-DTSTAMP:20260819T110632Z
-DTSTART;TZID=Europe/Berlin:20260819T090000
-DTEND;TZID=Europe/Berlin:20260819T170000
-SUMMARY:[PRUEFEN] EIN LEBEN IN FARBEN – DIE MALERIN RUTH KOHLER
-LOCATION:Diözesanmuseum Freising — Domberg 21\, 85354 Freising
-DESCRIPTION:Eine Ausstellung der Malerin Ruth Kohler\, die sich in ihrem We
- rk intensiv mit Farbe und emotionalen Ausdrucksformen auseinandersetzt. Ge
- zeigt werden Gemälde aus verschiedenen Schaffensphasen der international 
- anerkannten Künstlerin.\n\nEintritt: Eintritt UNKLAR — bitte pruefen\nB
- eleg: "8\,00 Euro"\nSicherheit: unklar\n\nVeranstalter: Diözesanmuseum Fr
- eising\nKategorie: Kunst\nZielgruppe: Alle\nDrinnen/Draussen: drinnen\n\nQ
- uelle: https://veranstaltungen.freising.de/freising/ein-leben-in-farben-di
- e-malerin-ruth-kohler-e757a5c3d33158cbab25d719172f48fa1.html\nAuch bei: ht
- tps://veranstaltungen.merkur.de/freising/ein-leben-in-farben-die-malerin-r
- uth-kohler-e757a5c3d33158cbab25d719172f48fa1.html
-URL:https://veranstaltungen.freising.de/freising/ein-leben-in-farben-die-ma
- lerin-ruth-kohler-e757a5c3d33158cbab25d719172f48fa1.html
-CATEGORIES:Kunst
-END:VEVENT
-BEGIN:VEVENT
 UID:7c62dab1505ff73c@gratis-freising
-DTSTAMP:20260819T110632Z
+DTSTAMP:20260819T111713Z
 DTSTART;TZID=Europe/Berlin:20260819T093000
 DTEND;TZID=Europe/Berlin:20260819T110000
 SUMMARY:[PRUEFEN] Zwillings-Krabbelgruppe
@@ -53,65 +32,17 @@ LOCATION:Epiphanias-Zentrum — Katharina-Mair-Straße 19\, 85356 Freising
 DESCRIPTION:Ein Treffpunkt für Eltern mit Zwillingen\, Babys und Kleinkind
  ern ab Krabbelalter. Gemeinsame Bewegung und Austausch stehen im Mittelpun
  kt. Anmeldung erforderlich.\n\nEintritt: Eintritt UNKLAR — bitte pruefen
- \nSicherheit: unklar\n\nKategorie: Familie\nZielgruppe: Kinder\nDrinnen/Dr
- aussen: drinnen\nAnmeldung noetig: ja — siehe Quelle\n\nQuelle: https://
- veranstaltungen.merkur.de/freising/zwillings-krabbelgruppe-e940437dc64af40
- f2d1829b2001e77dd2.html
+ \nSicherheit: niedrig\n\nKategorie: Familie\nZielgruppe: Kinder\nDrinnen/D
+ raussen: drinnen\nAnmeldung noetig: ja — siehe Quelle\n\nQuelle: https:/
+ /veranstaltungen.merkur.de/freising/zwillings-krabbelgruppe-e940437dc64af4
+ 0f2d1829b2001e77dd2.html
 URL:https://veranstaltungen.merkur.de/freising/zwillings-krabbelgruppe-e940
  437dc64af40f2d1829b2001e77dd2.html
 CATEGORIES:Familie
 END:VEVENT
 BEGIN:VEVENT
-UID:ce0aa7f2a4646fa4@gratis-freising
-DTSTAMP:20260819T110632Z
-DTSTART;TZID=Europe/Berlin:20260819T100000
-DTEND;TZID=Europe/Berlin:20260819T180000
-SUMMARY:[PRUEFEN] Ausstellung Max Pfefferle "Alles nur Kleinigkeiten" in de
- r Stadtbibliothek Freising
-LOCATION:Stadtbibliothek Freising — Weizengasse 3 (Zugang über Untere Ha
- uptstraße)\, 85354 Freising
-DESCRIPTION:Eine Ausstellung des Künstlers Max Pfefferle\, der großformat
- ige Fotografien mit filigranen Acryl-Elementen kombiniert. Die Werke laden
-  zum Schmunzeln und zweimaligen Hinsehen ein und verbinden digitale Fotogr
- afie mit handwerklicher Malerei.\n\nEintritt: Eintritt UNKLAR — bitte pr
- uefen\nBeleg: "Eintritt frei"\nSicherheit: unklar\n\nVeranstalter: Stadtbi
- bliothek Freising\, Nora Hopfenmüller\nKategorie: Ausstellung\nZielgruppe
- : Alle\nDrinnen/Draussen: drinnen\n\nQuelle: https://veranstaltungen.freis
- ing.de/freising/ausstellung-max-pfefferle-alles-nur-kleinigkeiten-in-der-s
- tadtbibliothek-freising-e53afc4e6925e3b99f772794c59e4cd9f.html\nAuch bei: 
- https://veranstaltungen.merkur.de/freising/ausstellung-max-pfefferle-alles
- -nur-kleinigkeiten-in-der-stadtbibliothek-freising-e53afc4e6925e3b99f77279
- 4c59e4cd9f.html
-URL:https://veranstaltungen.freising.de/freising/ausstellung-max-pfefferle-
- alles-nur-kleinigkeiten-in-der-stadtbibliothek-freising-e53afc4e6925e3b99f
- 772794c59e4cd9f.html
-CATEGORIES:Ausstellung
-END:VEVENT
-BEGIN:VEVENT
-UID:37abfa4825a64291@gratis-freising
-DTSTAMP:20260819T110632Z
-DTSTART;TZID=Europe/Berlin:20260819T140000
-DTEND;TZID=Europe/Berlin:20260819T190000
-SUMMARY:[PRUEFEN] SpielRäume
-LOCATION:Schafhof - Europäisches Kunstforum Oberbayern — Am Schafhof 1\,
-  85354 Freising
-DESCRIPTION:Eine Tandemausstellung zweier Künstlerinnen\, die im Rahmen de
- s Residenzprogramms des Bezirks Oberbayern experimentelle Räume schaffen.
-  Die Werke verfremden die Wahrnehmung von Alltag und Realität und verwand
- eln sie in fiktive Erlebniswelten.\n\nEintritt: Eintritt UNKLAR — bitte 
- pruefen\nBeleg: "Eintritt frei"\nSicherheit: unklar\n\nVeranstalter: Schaf
- hof - Europäisches Kunstforum Oberbayern\nKategorie: Kunst\nZielgruppe: A
- lle\nDrinnen/Draussen: drinnen\n\nQuelle: https://veranstaltungen.freising
- .de/freising/spielraeume-e962a5c9f4f3a618a9bee56a76fb2b908.html\nAuch bei:
-  https://veranstaltungen.merkur.de/freising/spielraeume-e962a5c9f4f3a618a9
- bee56a76fb2b908.html
-URL:https://veranstaltungen.freising.de/freising/spielraeume-e962a5c9f4f3a6
- 18a9bee56a76fb2b908.html
-CATEGORIES:Kunst
-END:VEVENT
-BEGIN:VEVENT
 UID:a14f53d918a66454@gratis-freising
-DTSTAMP:20260819T110632Z
+DTSTAMP:20260819T111713Z
 DTSTART;TZID=Europe/Berlin:20260819T150000
 DTEND;TZID=Europe/Berlin:20260819T160000
 SUMMARY:Vorlesen für Kinder ab 5 Jahren
@@ -133,7 +64,7 @@ CATEGORIES:Kinderprogramm
 END:VEVENT
 BEGIN:VEVENT
 UID:2f8dd7195f78456e@gratis-freising
-DTSTAMP:20260819T110632Z
+DTSTAMP:20260819T111713Z
 DTSTART;TZID=Europe/Berlin:20260821T200000
 DTEND;TZID=Europe/Berlin:20260821T220000
 SUMMARY:Anonyme Alkoholiker
@@ -151,7 +82,7 @@ CATEGORIES:Sonstiges
 END:VEVENT
 BEGIN:VEVENT
 UID:c5e2d8b175557eb3@gratis-freising
-DTSTAMP:20260819T110632Z
+DTSTAMP:20260819T111713Z
 DTSTART;TZID=Europe/Berlin:20260822T070000
 DTEND;TZID=Europe/Berlin:20260822T130000
 SUMMARY:Wochenmarkt
