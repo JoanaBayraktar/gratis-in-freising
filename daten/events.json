@@ -813,7 +813,7 @@
     {
       "titel": "Führung im Furtner (ausgebucht!)",
       "beginn": "2026-08-22T12:00:00",
-      "ende": "2026-08-30T17:00:00",
+      "ende": "2026-08-22T17:00:00",
       "ganztaegig": false,
       "ort_name": "Furtnerbräu",
       "ort_adresse": "Obere Hauptstr. 42, 85354 Freising",
@@ -1408,7 +1408,7 @@
     {
       "titel": "Silver Surfer: Nachhaltigkeit und Ordnung – Digitale Grundreinigung für das Smartphone",
       "beginn": "2026-09-16T14:30:00",
-      "ende": "2026-09-16T16:00:00",
+      "ende": "2026-09-16T14:30:00",
       "ganztaegig": false,
       "ort_name": "Freising",
       "ort_adresse": "Freising",
@@ -1467,8 +1467,8 @@
     },
     {
       "titel": "Maotik: ZufallsBlüten",
-      "beginn": "2026-09-18T19:00:00",
-      "ende": "2027-02-28T00:00:00",
+      "beginn": "2026-09-19T00:00:00",
+      "ende": "2026-11-29T00:00:00",
       "ganztaegig": true,
       "ort_name": "Schafhof — Europäisches Künstlerhaus",
       "ort_adresse": "Am Schafhof 1, 85354 Freising",
@@ -1709,7 +1709,7 @@
     {
       "titel": "Sprachberatung Spanisch",
       "beginn": "2026-09-23T17:30:00",
-      "ende": "2026-09-23T19:00:00",
+      "ende": "2026-09-23T17:30:00",
       "ganztaegig": false,
       "ort_name": "Freising",
       "ort_adresse": "Freising",
@@ -1739,7 +1739,7 @@
     {
       "titel": "Sprachberatung Französisch",
       "beginn": "2026-09-23T17:30:00",
-      "ende": "2026-09-23T19:00:00",
+      "ende": "2026-09-23T17:30:00",
       "ganztaegig": false,
       "ort_name": "Freising",
       "ort_adresse": null,
@@ -1769,7 +1769,7 @@
     {
       "titel": "Sprachberatung Italienisch",
       "beginn": "2026-09-23T17:30:00",
-      "ende": "2026-09-23T19:00:00",
+      "ende": "2026-09-23T17:30:00",
       "ganztaegig": false,
       "ort_name": "Freising",
       "ort_adresse": null,
@@ -1800,7 +1800,7 @@
     {
       "titel": "Sprachberatung Englisch",
       "beginn": "2026-09-23T17:30:00",
-      "ende": "2026-09-23T19:00:00",
+      "ende": "2026-09-23T17:30:00",
       "ganztaegig": false,
       "ort_name": "Freising",
       "ort_adresse": null,
@@ -1957,7 +1957,7 @@
     {
       "titel": "Resilienz und Selbstfürsorge – Vortrag für Ehrenamtliche im Asylbereich",
       "beginn": "2026-09-29T18:00:00",
-      "ende": "2026-09-29T20:00:00",
+      "ende": "2026-09-29T18:00:00",
       "ganztaegig": false,
       "ort_name": "Freising",
       "ort_adresse": null,
@@ -2296,7 +2296,7 @@
     {
       "titel": "Silver Surfer: KI-Kreativwerkstatt – Bilder und Texte zaubern",
       "beginn": "2026-10-14T14:30:00",
-      "ende": "2026-10-14T16:00:00",
+      "ende": "2026-10-14T14:30:00",
       "ganztaegig": false,
       "ort_name": "Freising",
       "ort_adresse": null,
@@ -2604,7 +2604,7 @@
     {
       "titel": "Karaoke mit Stefan",
       "beginn": "2026-10-30T20:00:00",
-      "ende": "2026-11-20T20:00:00",
+      "ende": "2026-10-30T20:00:00",
       "ganztaegig": false,
       "ort_name": "Furtnerbräu",
       "ort_adresse": "Obere Hauptstr. 42, 85354 Freising",
@@ -2634,7 +2634,7 @@
     {
       "titel": "Forró – Tanzabend",
       "beginn": "2026-11-04T20:00:00",
-      "ende": "2026-12-02T17:00:00",
+      "ende": "2026-11-04T20:00:00",
       "ganztaegig": false,
       "ort_name": "Furtnerbräu",
       "ort_adresse": "Obere Hauptstr. 42, 85354 Freising",
@@ -2697,7 +2697,7 @@
     {
       "titel": "Irish Night mit der Paul Daly Band (Folk/Irish)",
       "beginn": "2026-11-06T20:00:00",
-      "ende": "2026-12-05T20:00:00",
+      "ende": "2026-11-06T20:00:00",
       "ganztaegig": false,
       "ort_name": "Furtnerbräu",
       "ort_adresse": "Obere Hauptstr. 42, 85354 Freising",
@@ -2791,7 +2791,7 @@
     {
       "titel": "Feierabendbühne – Comedy, Poetry slam, Musik",
       "beginn": "2026-11-12T20:00:00",
-      "ende": "2026-12-10T20:00:00",
+      "ende": "2026-11-12T20:00:00",
       "ganztaegig": false,
       "ort_name": "Furtnerbräu",
       "ort_adresse": "Obere Hauptstr. 42, 85354 Freising",
@@ -2913,7 +2913,7 @@
     {
       "titel": "Silver Surfer: Google Maps 2026 – Die Welt in 3D und KI-Planung",
       "beginn": "2026-11-18T14:30:00",
-      "ende": "2026-11-18T16:00:00",
+      "ende": "2026-11-18T14:30:00",
       "ganztaegig": false,
       "ort_name": "Freising",
       "ort_adresse": null,
@@ -3003,7 +3003,7 @@
     },
     {
       "titel": "Weihnachtliches Kneipensingen",
-      "beginn": "2026-11-25T20:00:00",
+      "beginn": "2026-12-17T20:00:00",
       "ende": "2026-12-17T20:00:00",
       "ganztaegig": false,
       "ort_name": "Furtnerbräu",

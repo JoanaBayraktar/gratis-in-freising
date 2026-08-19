@@ -62,8 +62,14 @@ button.filter[aria-pressed="true"] {
 /* Liste */
 .tag {
   font-size: 12px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase;
-  color: var(--blau); margin: 26px 0 6px; padding-bottom: 4px;
+  color: var(--blau); margin: 30px 0 6px; padding-bottom: 4px;
   border-bottom: 2px solid var(--blau);
+}
+/* Tage stehen unter "Einzeltermine" und damit eine Ebene tiefer — gleiches
+   Gewicht wäre wieder das, was die Liste vorher unübersichtlich machte. */
+.tag.datum {
+  color: var(--text); border-bottom: 1px solid var(--linie);
+  letter-spacing: .02em; text-transform: none; font-size: 13px; margin: 20px 0 2px;
 }
 .tag .rel { float: right; color: var(--leiser); font-weight: 400;
             letter-spacing: 0; text-transform: none; }
@@ -88,8 +94,10 @@ article {
 }
 .marke.frei { background: var(--gruen-hell); color: var(--gruen); }
 .marke.spende { background: var(--gelb-hell); color: var(--gelb); }
-.marke.kostenpflichtig { background: var(--kasten); color: var(--leise); }
-.marke.unklar, .marke.warnung { background: var(--rot-hell); color: var(--rot); }
+.marke.kosten { background: var(--kasten); color: var(--leise); }
+.marke.vermutlich { background: var(--kasten); color: var(--leise);
+                    box-shadow: inset 0 0 0 1px var(--linie); }
+.marke.warnung { background: var(--rot-hell); color: var(--rot); }
 .marke.dauer { background: var(--blau-hell); color: var(--blau); }
 .quelle { font-size: 12px; color: var(--leiser); }
 .quelle a { color: var(--leiser); }
@@ -137,9 +145,9 @@ footer a { color: var(--leiser); }
   <div class="zeile" id="filter">
     <button class="filter" data-f="kommend" aria-pressed="true">Ab heute</button>
     <button class="filter" data-f="woche" aria-pressed="false">7 Tage</button>
-    <button class="filter" data-f="gratis" aria-pressed="false">Nur gesichert gratis</button>
-    <button class="filter" data-f="pruefen" aria-pressed="false">Zu prüfen</button>
-    <button class="filter" data-f="dauer" aria-pressed="false">Dauertermine</button>
+    <button class="filter" data-f="gratis" aria-pressed="false">Belegt gratis</button>
+    <button class="filter" data-f="pruefen" aria-pressed="false">Nur vermutlich</button>
+    <button class="filter" data-f="mitpreis" aria-pressed="false">Mit Eintritt</button>
     <span class="zahl" id="zahl"></span>
   </div>
 </div>
@@ -209,13 +217,20 @@ function relativ(d) {
 }
 
 /** Deckt sich mit scripts/regeln.py — wer hier etwas ändert, muss es dort auch tun. */
-const inDieMail = ev => ev.eintritt === "frei" || ev.eintritt === "spende";
-function zuPruefen(ev) {
-  if (ev.manuell_bestaetigt) return false;
-  if (ev.eintritt === "unklar") return true;
-  return inDieMail(ev) && ev.eintritt_confidence !== "hoch";
+const BESCHRIFTUNG = { frei: "Eintritt frei", spende: "Spende erbeten",
+                       vermutlich: "vermutlich kostenfrei", kosten: "kostenpflichtig" };
+
+function anzeige(ev) {
+  if (ev.manuell_bestaetigt)
+    return { frei: "frei", spende: "spende", kostenpflichtig: "kosten" }[ev.eintritt] || "vermutlich";
+  if (ev.eintritt === "kostenpflichtig") return "kosten";
+  if ((ev.eintritt === "frei" || ev.eintritt === "spende")
+      && ev.eintritt_confidence === "hoch")
+    return ev.eintritt === "frei" ? "frei" : "spende";
+  return "vermutlich";
 }
-const gesichertGratis = ev => inDieMail(ev) && !zuPruefen(ev);
+const zuPruefen = ev => anzeige(ev) === "vermutlich";
+const gesichertGratis = ev => anzeige(ev) === "frei" || anzeige(ev) === "spende";
 
 function escape(s) {
   return String(s == null ? "" : s)
@@ -237,7 +252,7 @@ function passt(ev) {
   }
   if (zustand.filter.has("gratis") && !gesichertGratis(ev)) return false;
   if (zustand.filter.has("pruefen") && !zuPruefen(ev)) return false;
-  if (zustand.filter.has("dauer") && !istDauer(ev)) return false;
+  if (zustand.filter.has("mitpreis") && anzeige(ev) !== "kosten") return false;
   if (zustand.quelle && ev.quelle_name !== zustand.quelle) return false;
 
   if (zustand.suche) {
@@ -253,13 +268,8 @@ function passt(ev) {
 
 function marken(ev) {
   const m = [];
-  const beschriftung = { frei: "Eintritt frei", spende: "Spende erbeten",
-                         kostenpflichtig: "kostenpflichtig", unklar: "Eintritt unklar" };
-  const art = ev.eintritt || "unklar";
-  m.push(`<span class="marke ${art}">${escape(beschriftung[art] || art)}</span>`);
-
-  if (inDieMail(ev) && ev.eintritt_confidence !== "hoch")
-    m.push(`<span class="marke warnung">nicht belegt</span>`);
+  const art = anzeige(ev);
+  m.push(`<span class="marke ${art}">${escape(BESCHRIFTUNG[art])}</span>`);
   if (istDauer(ev)) {
     const [, e] = spanne(ev);
     m.push(`<span class="marke dauer">läuft bis ${kurz(e)}</span>`);
@@ -340,19 +350,26 @@ function zeichnen() {
     return;
   }
 
-  // Was schon laeuft, kommt voran und nicht unter sein Anfangsdatum. Eine
-  // Ausstellung, die im Juli begann, staende sonst als "vor 47 Tagen" ganz
-  // oben — richtig einsortiert und trotzdem irrefuehrend.
+  // Mehrtägiges kommt vollständig nach oben, nicht teils hier und teils unter
+  // einer Tagesüberschrift. Vorher stand eine laufende Ausstellung unter
+  // "Läuft gerade" und die morgen beginnende unter ihrem Datum — zwei Orte für
+  // dieselbe Sorte Termin, und man sucht beide ab.
   const h = heute();
-  const laufend = gewaehlt.filter(ev => istDauer(ev) && spanne(ev)[0] < h && spanne(ev)[1] >= h);
-  const uebrig  = gewaehlt.filter(ev => !laufend.includes(ev));
-  laufend.sort((a, b) => spanne(a)[1] - spanne(b)[1]);
+  const dauer  = gewaehlt.filter(istDauer);
+  const uebrig = gewaehlt.filter(ev => !istDauer(ev));
+  dauer.sort((a, b) => spanne(a)[1] - spanne(b)[1]);
 
   let html = "";
-  if (laufend.length) {
-    html += `<h2 class="tag">Läuft gerade
-             <span class="rel">${laufend.length} mehrtägig</span></h2>`
-         + laufend.map(karte).join("");
+  if (dauer.length) {
+    const laufen = dauer.filter(ev => spanne(ev)[0] <= h).length;
+    const bemerkung = laufen === dauer.length ? "läuft bereits"
+                    : laufen ? `${laufen} laufen bereits` : "beginnt später";
+    html += `<h2 class="tag">Über mehrere Tage
+             <span class="rel">${dauer.length} — ${escape(bemerkung)}</span></h2>`
+         + dauer.map(karte).join("");
+    if (uebrig.length)
+      html += `<h2 class="tag">Einzeltermine
+               <span class="rel">${uebrig.length}</span></h2>`;
   }
 
   let letzter = "";
@@ -362,7 +379,7 @@ function zeichnen() {
       letzter = tag;
       const d = alsDatum(tag);
       const rel = d ? relativ(d) : "";
-      html += `<h2 class="tag">${d ? escape(datumLang(d)) : "ohne Datum"}
+      html += `<h2 class="tag datum">${d ? escape(datumLang(d)) : "ohne Datum"}
                ${rel ? `<span class="rel">${escape(rel)}</span>` : ""}</h2>`;
     }
     html += karte(ev);

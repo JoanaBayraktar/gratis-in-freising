@@ -64,6 +64,22 @@ steht dort „Eintritt frei" oder „kostenlos", gilt `frei` mit Sicherheit `hoc
 Das greift nur bei `unklar` — eine Einstufung, die das Modell selbst getroffen
 hat, wird nie überstimmt.
 
+**Wie daraus die Anzeige wird** — `scripts/regeln.py` fasst `eintritt` und
+`eintritt_confidence` zu dem zusammen, was Mail, Kalender und Webseite zeigen:
+
+| Anzeige | wann |
+|---|---|
+| Eintritt frei | `frei` **mit** Beleg (Sicherheit `hoch`) |
+| Spende erbeten | `spende` mit Beleg |
+| vermutlich kostenfrei | `unklar`, oder `frei`/`spende` ohne Beleg |
+| kostenpflichtig | `kostenpflichtig` |
+
+„vermutlich kostenfrei" ist eine bewusste Entscheidung: Diese Termine fielen
+früher ganz aus Mail und Kalender. Das war ehrlich, aber unbrauchbar — das
+meiste, was ohne Preisangabe angekündigt wird, ist tatsächlich kostenlos. Sie
+erscheinen deshalb, aber nie unter derselben Beschriftung wie ein belegter
+freier Eintritt.
+
 **`eintritt_confidence`** — `hoch` heißt: steht wörtlich in der Quelle. Ohne
 `eintritt_beleg` kann das nicht stimmen, deshalb stuft `einstufung_pruefen()`
 solche Fälle auf `mittel` zurück. `unklar` mit `hoch` ist ebenfalls ein

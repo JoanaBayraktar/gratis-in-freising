@@ -15,7 +15,7 @@ import json
 import pathlib
 from datetime import datetime, timedelta, timezone
 
-from regeln import zu_pruefen
+from regeln import BESCHRIFTUNG, FREI, KOSTEN, SPENDE, VERMUTLICH, anzeige
 
 BASIS = pathlib.Path(__file__).resolve().parent.parent
 DATEN = BASIS / "daten" / "events.json"
@@ -87,13 +87,8 @@ def beschreibung_bauen(ev: dict) -> str:
     if ev.get("beschreibung"):
         zeilen += [ev["beschreibung"], ""]
 
-    label = {
-        "frei": "Eintritt frei",
-        "spende": "Eintritt frei, Spende erbeten",
-        "kostenpflichtig": "Kostenpflichtig",
-        "unklar": "Eintritt UNKLAR — bitte pruefen",
-    }.get(ev.get("eintritt"), "Eintritt unbekannt")
-    zeilen.append(f"Eintritt: {label}")
+    zeilen.append(f"Eintritt: {BESCHRIFTUNG[anzeige(ev)]}"
+                  f" (Quelle nennt: {ev.get('eintritt')})")
 
     if ev.get("eintritt_beleg"):
         zeilen.append(f'Beleg: "{ev["eintritt_beleg"]}"')
@@ -151,10 +146,13 @@ def event_block(ev: dict, jetzt: str) -> list:
 
     ort = " — ".join(x for x in [ev.get("ort_name"), ev.get("ort_adresse")] if x)
     titel = ev["titel"]
-    if ev.get("eintritt") == "spende":
+    art = anzeige(ev)
+    if art == SPENDE:
         titel = f"{titel} (Spende)"
-    elif ev.get("eintritt") == "unklar":
-        titel = f"[PRUEFEN] {titel}"
+    elif art == VERMUTLICH:
+        # Im Kalendereintrag muss stehen, worauf man sich verlassen kann —
+        # dort sieht niemand mehr die Belegzeile aus der Pruefliste.
+        titel = f"{titel} (vermutlich frei)"
     # Im Kalender bleibt Ausgebuchtes sichtbar — er ist zum Nachschlagen da,
     # nicht zum Empfehlen. In der Mail faellt es weg.
     if ev.get("ausgebucht"):
@@ -217,7 +215,8 @@ def pruefliste_schreiben(pfad: pathlib.Path, events: list) -> None:
             f"## {ev['titel']}",
             f"- **Wann:** {datum}",
             f"- **Wo:** {ev.get('ort_name') or '—'}",
-            f"- **Eingestuft als:** `{ev.get('eintritt')}` (Sicherheit: {ev.get('eintritt_confidence') or '—'})",
+            f"- **Angezeigt als:** {BESCHRIFTUNG[anzeige(ev)]} — Quelle nennt "
+            f"`{ev.get('eintritt')}` (Sicherheit: {ev.get('eintritt_confidence') or '—'})",
             f"- **Beleg:** {ev.get('eintritt_beleg') or '_kein Hinweis im Text gefunden_'}",
             f"- **Quelle:** {ev.get('quelle_url') or '—'}",
             "",
@@ -239,12 +238,10 @@ def main() -> None:
         and ev.get("status") != "verschwunden"
     ]
 
-    gratis = [
-        ev
-        for ev in kommend
-        if ev.get("eintritt") == "frei" and ev.get("eintritt_confidence") == "hoch"
-    ]
-    pruefen = [ev for ev in kommend if zu_pruefen(ev)]
+    # Der oeffentliche Kalender zeigt alles, was nicht nachweislich Geld
+    # kostet — Vermutungen sind im Titel als solche gekennzeichnet.
+    gratis = [ev for ev in kommend if anzeige(ev) != KOSTEN]
+    pruefen = [ev for ev in kommend if anzeige(ev) == VERMUTLICH]
 
     kalender_schreiben(AUSGABE / "gratis-freising.ics", "Gratis in Freising", gratis)
     kalender_schreiben(AUSGABE / "pruefen.ics", "Gratis in Freising — zu pruefen", pruefen)

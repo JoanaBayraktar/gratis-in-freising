@@ -26,7 +26,7 @@ import pathlib
 import re
 from datetime import datetime, timedelta
 
-from regeln import IN_DIE_MAIL, zu_pruefen
+from regeln import BESCHRIFTUNG, FREI, KOSTEN, SPENDE, VERMUTLICH, anzeige
 
 BASIS = pathlib.Path(__file__).resolve().parent.parent
 DATEN = BASIS / "daten" / "events.json"
@@ -136,12 +136,37 @@ def ueberschrift(text: str, unter: str = "") -> str:
             f'{e(text)}</span>{zusatz}</div>')
 
 
+# Farben je Einstufung. "vermutlich kostenfrei" bekommt bewusst einen eigenen,
+# zurueckhaltenderen Ton als der belegte freie Eintritt — die Mail soll auf
+# einen Blick zeigen, worauf man sich verlassen kann.
+FARBEN = {
+    SPENDE: ("#fff3cd", "#7a5b00"),
+    VERMUTLICH: ("#eef1f4", "#4a5a68"),
+}
+
+
+def eintrittsmarke(ev: dict, klein: bool = False) -> str:
+    """Nur was nicht selbstverstaendlich ist, wird beschriftet.
+
+    Ein belegter freier Eintritt braucht keine Marke: Die Mail heisst "Gratis
+    in Freising", das ist der Normalfall. Beschriftet wird die Abweichung —
+    Spendenbasis und alles, was nur vermutlich kostenlos ist.
+    """
+    art = anzeige(ev)
+    if art not in FARBEN:
+        return ""
+    hintergrund, schrift = FARBEN[art]
+    if klein:
+        return (f' <span style="color:{schrift};font-size:12px">'
+                f'({e(BESCHRIFTUNG[art])})</span>')
+    return (f'<span style="display:inline-block;background:{hintergrund};'
+            f'color:{schrift};padding:1px 7px;border-radius:10px;font-size:12px;'
+            f'font-weight:600;margin-left:6px">{e(BESCHRIFTUNG[art])}</span>')
+
+
 def karte(ev: dict) -> str:
     """Einzeltermin heute — das Wichtigste der Mail, entsprechend gross."""
-    marke = ('<span style="display:inline-block;background:#fff3cd;color:#7a5b00;'
-             'padding:1px 7px;border-radius:10px;font-size:12px;font-weight:600;'
-             'margin-left:6px">Spende erbeten</span>'
-             if ev.get("eintritt") == "spende" else "")
+    marke = eintrittsmarke(ev)
     anmeldung = ('<span style="color:#8a6d3b;font-size:12px;margin-left:6px">'
                  'Anmeldung nötig</span>' if ev.get("anmeldung_noetig") else "")
     text = ""
@@ -180,8 +205,7 @@ def dauerzeile(ev: dict, heute) -> str:
 
 
 def listenzeile(ev: dict) -> str:
-    marke = (' <span style="color:#7a5b00;font-size:12px">(Spende)</span>'
-             if ev.get("eintritt") == "spende" else "")
+    marke = eintrittsmarke(ev, klein=True)
     return (
         f'<tr>'
         f'<td style="padding:5px 10px 5px 0;color:#6b6b6b;font-size:13px;'
@@ -217,14 +241,13 @@ def main() -> None:
     heute = datetime.now().date()
     bis = heute + timedelta(days=7)
 
-    # Was hier oben steht, taucht unter "Noch zu pruefen" nicht auf und
-    # umgekehrt. Derselbe Termin einmal als gratis und einmal als ungeklaert
-    # wuerde beides entwerten.
+    # Alles ausser dem, was nachweislich Geld kostet. Was nur vermutlich
+    # kostenlos ist, steht mit dabei und traegt seine Marke — frueher fiel es
+    # ganz heraus und niemand erfuhr davon.
     zeigbar = [ev for ev in daten["events"]
                if ev.get("status") == "aktiv"
-               and ev.get("eintritt") in IN_DIE_MAIL
-               and not ev.get("ausgebucht")
-               and not zu_pruefen(ev)]
+               and anzeige(ev) != KOSTEN
+               and not ev.get("ausgebucht")]
 
     # Dauertermine nach Ende sortiert: was bald ausläuft, ist die eigentliche
     # Nachricht. Eine Ausstellung, die noch drei Monate zu sehen ist, steht
@@ -274,23 +297,19 @@ def main() -> None:
         teile.append(f'<table style="border-collapse:collapse;width:100%">'
                      f'{"".join(zeilen)}</table>')
 
-    offen = sorted([ev for ev in daten["events"]
-                    if ev.get("status") == "aktiv" and zu_pruefen(ev)
-                    and heute <= spanne(ev)[0] <= bis],
-                   key=lambda x: x["beginn"])
-    if offen:
-        teile.append(pruefblock(offen))
+    offen = [ev for ev in zeigbar if anzeige(ev) == VERMUTLICH
+             and heute <= spanne(ev)[1] and spanne(ev)[0] <= bis]
 
     verborgen = sum(1 for ev in daten["events"]
                     if ev.get("status") == "aktiv" and ev.get("ausgebucht")
-                    and ev.get("eintritt") in IN_DIE_MAIL
+                    and anzeige(ev) != KOSTEN
                     and heute <= spanne(ev)[0] <= bis)
     zaehler = [f"{len(heute_ev)} heute", f"{len(dauer)} laufend",
                f"{len(spaeter)} in den nächsten 7 Tagen"]
     if verborgen:
         zaehler.append(f"{verborgen} ausgebucht")
     if offen:
-        zaehler.append(f"{len(offen)} zu prüfen")
+        zaehler.append(f"{len(offen)} nur vermutlich kostenfrei")
 
     teile.append(
         '<div style="border-top:1px solid #e2e2e2;margin-top:28px;padding-top:10px;'

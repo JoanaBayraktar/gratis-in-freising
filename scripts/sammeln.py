@@ -127,11 +127,19 @@ erwartet — was passiert, fuer wen es gedacht ist, was das Besondere daran ist.
 Keine Wiederholung des Titels, keine Werbesprache, nur was im Text steht.
 
 dauertermin: true bei allem, was ueber mehrere Tage laeuft — Ausstellung,
-Programmreihe, Markt. Achtung, hier steckt eine Falle: Uebersichtsseiten fuehren
-eine laufende Ausstellung oft mit dem heutigen Datum, als waere sie ein
-Einzeltermin an diesem Tag. Sieh auf den Text, nicht auf die Datumszeile —
-"noch bis 30. September zu sehen" ist ein Dauertermin, auch wenn oben nur der
-heutige Tag steht. Trage `ende` dann auf den letzten Tag.
+Programmreihe, Markt.
+
+WICHTIG, und hier wird am haeufigsten falsch gelesen: Bei Datumsangaben schlaegt
+der Fliesstext die Datumszeile. Uebersichtsseiten fuehren eine laufende
+Ausstellung mit dem HEUTIGEN Datum, weil sie heute zu sehen ist. Morgen steht
+dort das morgige. Wer das uebernimmt, laesst eine Ausstellung jeden Tag neu
+beginnen.
+
+Steht also im Text "vom 3. Juli bis 30. September", "noch bis 30.09.",
+"seit Anfang Juli" oder "Laufzeit: 3.7.–30.9.", dann gilt das — auch wenn die
+Datumszeile oben etwas anderes sagt. `beginn` ist der erste Tag der ganzen
+Laufzeit, `ende` der letzte. Nur wenn der Text gar keinen Zeitraum nennt, nimm
+die Datumszeile.
 
 besonderheit: nur bei Dauerterminen und nur, wenn an diesem Tag etwas
 stattfindet, das es an den anderen Tagen nicht gibt — Vernissage, Eroeffnung,
@@ -625,6 +633,44 @@ def eintritt_uebernehmen(alt: dict, roh: dict) -> int:
     return 1
 
 
+def zeitraum_pruefen(roh: dict) -> None:
+    """Ein Einzeltermin darf nicht ueber Tage reichen.
+
+    Kalender-Schnittstellen liefern bei wiederkehrenden Reihen gelegentlich das
+    Ende der ganzen Reihe statt das des einzelnen Abends. Sagt das Modell
+    ausdruecklich, dass es kein Dauertermin ist, gilt sein Urteil: Das Ende
+    faellt auf den Anfangstag zurueck.
+    """
+    beginn, ende = roh.get("beginn"), roh.get("ende")
+    if not beginn or not ende or ende[:10] == beginn[:10]:
+        return
+    if roh.get("dauertermin") is False:
+        roh["ende"] = beginn[:11] + ende[11:] if len(ende) > 11 else beginn
+
+
+def beginn_uebernehmen(alt: dict, roh: dict) -> int:
+    """Bei Mehrtaegigem gewinnt der fruehere Anfang.
+
+    Der Stadtkalender fuehrt eine laufende Ausstellung mit dem heutigen Datum,
+    weil sie heute zu sehen ist — morgen steht dort das morgige. Wer das
+    uebernimmt, laesst die Ausstellung jeden Tag neu beginnen: Sie waere immer
+    "ab heute", nie "laeuft seit Juli", und in der Uebersicht stuende sie
+    dauerhaft ganz oben statt bei ihrem tatsaechlichen Anfang.
+
+    Nur fuer Mehrtaegiges. Bei einem Einzeltermin ist der Anfang Teil seiner
+    Kennung; ein anderer Anfang ist dort ein anderer Termin.
+    """
+    frisch, bisher = roh.get("beginn"), alt.get("beginn")
+    if not frisch or not bisher or frisch >= bisher:
+        return 0
+    mehrtaegig = (roh.get("dauertermin") or alt.get("dauertermin")
+                  or (alt.get("ende") or "")[:10] > bisher[:10])
+    if not mehrtaegig:
+        return 0
+    alt["beginn"] = frisch
+    return 1
+
+
 def ende_uebernehmen(alt: dict, roh: dict) -> int:
     """Das spaetere Ende gewinnt.
 
@@ -641,6 +687,15 @@ def ende_uebernehmen(alt: dict, roh: dict) -> int:
     frisch, bisher = roh.get("ende"), alt.get("ende")
     if not frisch or (bisher and frisch <= bisher):
         return 0
+
+    # Aber nur bei etwas, das wirklich ueber Tage laeuft. Der Furtner
+    # veranstaltet "Karaoke mit Stefan" am 30.10. und am 20.11. — zwei Abende.
+    # Ohne diese Bremse wuerde daraus ein Termin, der drei Wochen dauert, und
+    # die Mail zeigte drei Wochen lang eine Karaokenacht an.
+    if (frisch[:10] != (roh.get("beginn") or "")[:10]
+            and roh.get("dauertermin") is False):
+        return 0
+
     alt["ende"] = frisch
     return 1
 
@@ -669,6 +724,8 @@ def zusammenfuehren(bestand: dict, gefunden: list, quelle: dict, heute: str) -> 
 
         if ignorieren(roh):
             continue
+
+        zeitraum_pruefen(roh)
 
         roh["ort_name"] = ort_vereinheitlichen(roh.get("ort_name"), ORTE)
         einstufung_pruefen(roh)
@@ -746,13 +803,14 @@ def zusammenfuehren(bestand: dict, gefunden: list, quelle: dict, heute: str) -> 
             continue
 
         geaendert += eintritt_uebernehmen(alt, roh)
+        geaendert += beginn_uebernehmen(alt, roh)
         geaendert += ende_uebernehmen(alt, roh)
 
         for feld, wert in roh.items():
             # quelle_name bleibt beim Erstfinder — davon haengt unten ab, ob
             # das Verschwinden eines Events ueberhaupt bewertet werden darf.
             if feld in ("quelle_url", "quelle_name", "quellen_weitere",
-                        "ende", *EINTRITT_FELDER):
+                        "beginn", "ende", *EINTRITT_FELDER):
                 continue
             if wert not in (None, "", []) and alt.get(feld) != wert:
                 alt[feld] = wert

@@ -24,180 +24,184 @@ END:STANDARD
 END:VTIMEZONE
 BEGIN:VEVENT
 UID:7c62dab1505ff73c@gratis-freising
-DTSTAMP:20260819T123043Z
+DTSTAMP:20260819T124526Z
 DTSTART;TZID=Europe/Berlin:20260819T093000
 DTEND;TZID=Europe/Berlin:20260819T110000
-SUMMARY:Zwillings-Krabbelgruppe
+SUMMARY:Zwillings-Krabbelgruppe (vermutlich frei)
 LOCATION:Epiphanias-Zentrum — Katharina-Mair-Straße 19\, 85356 Freising
 DESCRIPTION:Ein Treffpunkt speziell für Eltern mit Zwillingen\, Babys und 
  Kleinkindern ab Krabbelalter. Jeden 1. und 3. Mittwoch im Monat wird gemei
- nsam gespielt und ausgetauscht. Anmeldung erforderlich.\n\nEintritt: Eintr
- itt frei\nSicherheit: mittel\n\nKategorie: Familie\nZielgruppe: Kinder\nDr
- innen/Draussen: drinnen\nAnmeldung noetig: ja — siehe Quelle\n\nQuelle: 
- https://veranstaltungen.merkur.de/freising/zwillings-krabbelgruppe-e940437
- dc64af40f2d1829b2001e77dd2.html
+ nsam gespielt und ausgetauscht. Anmeldung erforderlich.\n\nEintritt: vermu
+ tlich kostenfrei (Quelle nennt: frei)\nSicherheit: mittel\n\nKategorie: Fa
+ milie\nZielgruppe: Kinder\nDrinnen/Draussen: drinnen\nAnmeldung noetig: ja
+  — siehe Quelle\n\nQuelle: https://veranstaltungen.merkur.de/freising/zw
+ illings-krabbelgruppe-e940437dc64af40f2d1829b2001e77dd2.html
 URL:https://veranstaltungen.merkur.de/freising/zwillings-krabbelgruppe-e940
  437dc64af40f2d1829b2001e77dd2.html
 CATEGORIES:Familie
 END:VEVENT
 BEGIN:VEVENT
 UID:91f5bb9d5d9d475f@gratis-freising
-DTSTAMP:20260819T123043Z
+DTSTAMP:20260819T124526Z
 DTSTART;TZID=Europe/Berlin:20260820T170000
 DTEND;TZID=Europe/Berlin:20260820T180000
-SUMMARY:Sport im Park: Body and Back vom TSV Jahn
+SUMMARY:Sport im Park: Body and Back vom TSV Jahn (vermutlich frei)
 LOCATION:Sportpark Savoyer Au Freising — Roider-Jackl-Straße 4\, 85356 F
  reising
 DESCRIPTION:Ein spezieller Kurs des TSV Jahn Freising zur Stärkung von Rü
  cken und Körperhaltung. Das kostenfreie Angebot richtet sich an alle Inte
  ressierten und findet im Rahmen des Sport-im-Park-Programms statt.\n\nEint
- ritt: Eintritt frei\nSicherheit: mittel\n\nKategorie: Sport\nZielgruppe: A
- lle\nDrinnen/Draussen: draussen\n\nQuelle: https://veranstaltungen.merkur.
- de/freising/sport-im-park-e6ab311ca87a5ed32aa5f91c62d59d42b.html
+ ritt: vermutlich kostenfrei (Quelle nennt: frei)\nSicherheit: mittel\n\nKa
+ tegorie: Sport\nZielgruppe: Alle\nDrinnen/Draussen: draussen\n\nQuelle: ht
+ tps://veranstaltungen.merkur.de/freising/sport-im-park-e6ab311ca87a5ed32aa
+ 5f91c62d59d42b.html
 URL:https://veranstaltungen.merkur.de/freising/sport-im-park-e6ab311ca87a5e
  d32aa5f91c62d59d42b.html
 CATEGORIES:Sport
 END:VEVENT
 BEGIN:VEVENT
 UID:0b8750db9f962483@gratis-freising
-DTSTAMP:20260819T123043Z
+DTSTAMP:20260819T124526Z
 DTSTART;TZID=Europe/Berlin:20260820T193000
 DTEND;TZID=Europe/Berlin:20260820T210000
-SUMMARY:Kreuzbund SHG Bahnhofstraße
+SUMMARY:Kreuzbund SHG Bahnhofstraße (vermutlich frei)
 LOCATION:Caritas-Zentrum Freising — Bahnhofstr. 20\, 85356 Freising
 DESCRIPTION:Selbsthilfegruppe für Betroffene und Angehörige. Offenes Ange
  bot jeden Donnerstag von 19:30 bis 21 Uhr. Kontakt: Michael Kraml\, 08168/
- 1460.\n\nEintritt: Eintritt frei\nSicherheit: mittel\n\nVeranstalter: Mich
- ael Kraml\nKategorie: Rat und Hilfe\nZielgruppe: Alle\nDrinnen/Draussen: d
- rinnen\n\nQuelle: https://veranstaltungen.merkur.de/freising/kreuzbund-shg
- -bahnhofstrasse-ec0093f7bfcf96906ff24eb4ce9eea60e.html
+ 1460.\n\nEintritt: vermutlich kostenfrei (Quelle nennt: frei)\nSicherheit:
+  mittel\n\nVeranstalter: Michael Kraml\nKategorie: Rat und Hilfe\nZielgrup
+ pe: Alle\nDrinnen/Draussen: drinnen\n\nQuelle: https://veranstaltungen.mer
+ kur.de/freising/kreuzbund-shg-bahnhofstrasse-ec0093f7bfcf96906ff24eb4ce9ee
+ a60e.html
 URL:https://veranstaltungen.merkur.de/freising/kreuzbund-shg-bahnhofstrasse
  -ec0093f7bfcf96906ff24eb4ce9eea60e.html
 CATEGORIES:Rat und Hilfe
 END:VEVENT
 BEGIN:VEVENT
 UID:53f1c56a9e6f9c8d@gratis-freising
-DTSTAMP:20260819T123043Z
+DTSTAMP:20260819T124526Z
 DTSTART;TZID=Europe/Berlin:20260820T200000
 DTEND;TZID=Europe/Berlin:20260820T220000
-SUMMARY:Anonyme Alkoholiker
+SUMMARY:Anonyme Alkoholiker (vermutlich frei)
 LOCATION:Paul-Gerhardt-Haus — General-von-Stein-Straße 22\, 85356 Freisi
  ng
 DESCRIPTION:Ein regelmäßiges Treffen der Selbsthilfegruppe für Betroffen
  e und Angehörige. Jeden Donnerstag und Freitag um 20 Uhr im Paul-Gerhardt
- -Haus. Offenes Angebot für alle Interessierten.\n\nEintritt: Eintritt fre
- i\nSicherheit: mittel\n\nKategorie: Rat und Hilfe\nZielgruppe: Alle\nDrinn
- en/Draussen: drinnen\n\nQuelle: https://veranstaltungen.merkur.de/freising
- /anonyme-alkoholiker-e3ae9b93c79a784e9e0d9eba917314af3.html
+ -Haus. Offenes Angebot für alle Interessierten.\n\nEintritt: vermutlich k
+ ostenfrei (Quelle nennt: frei)\nSicherheit: mittel\n\nKategorie: Rat und H
+ ilfe\nZielgruppe: Alle\nDrinnen/Draussen: drinnen\n\nQuelle: https://veran
+ staltungen.merkur.de/freising/anonyme-alkoholiker-e3ae9b93c79a784e9e0d9eba
+ 917314af3.html
 URL:https://veranstaltungen.merkur.de/freising/anonyme-alkoholiker-e3ae9b93
  c79a784e9e0d9eba917314af3.html
 CATEGORIES:Rat und Hilfe
 END:VEVENT
 BEGIN:VEVENT
 UID:678505c327ef381e@gratis-freising
-DTSTAMP:20260819T123043Z
+DTSTAMP:20260819T124526Z
 DTSTART;TZID=Europe/Berlin:20260820T200000
 DTEND;TZID=Europe/Berlin:20260820T220000
-SUMMARY:Probe der Kantorei
+SUMMARY:Probe der Kantorei (vermutlich frei)
 LOCATION:Evang. Gemeindehaus Christi Himmelfahrt — Martin-Luther-Str. 10\
  , 85356 Freising
 DESCRIPTION:Ein offenes Probenangebot des Kirchenchors Kantorei. Alle Inter
  essierten sind willkommen\, eine vorherige Anmeldung ist möglich. Geprobt
-  wird donnerstags um 20 Uhr im Gemeindehaus.\n\nEintritt: Eintritt frei\nS
- icherheit: mittel\n\nKategorie: Sonstiges\nZielgruppe: Alle\nDrinnen/Draus
- sen: drinnen\n\nQuelle: https://veranstaltungen.merkur.de/freising/probe-d
- er-kantorei-ef6138cb4952290182f49706f76359ddc.html
+  wird donnerstags um 20 Uhr im Gemeindehaus.\n\nEintritt: vermutlich koste
+ nfrei (Quelle nennt: frei)\nSicherheit: mittel\n\nKategorie: Sonstiges\nZi
+ elgruppe: Alle\nDrinnen/Draussen: drinnen\n\nQuelle: https://veranstaltung
+ en.merkur.de/freising/probe-der-kantorei-ef6138cb4952290182f49706f76359ddc
+ .html
 URL:https://veranstaltungen.merkur.de/freising/probe-der-kantorei-ef6138cb4
  952290182f49706f76359ddc.html
 CATEGORIES:Sonstiges
 END:VEVENT
 BEGIN:VEVENT
 UID:a92f8503b655cdde@gratis-freising
-DTSTAMP:20260819T123043Z
+DTSTAMP:20260819T124526Z
 DTSTART;TZID=Europe/Berlin:20260821T110000
 DTEND;TZID=Europe/Berlin:20260821T130000
-SUMMARY:Senioren-Netzwerk Frieda & Ben
+SUMMARY:Senioren-Netzwerk Frieda & Ben (vermutlich frei)
 LOCATION:dASAMa Dialograum im Asamgebäude — 85356 Freising
 DESCRIPTION:Ein regelmäßiges Treffen des Senioren-Netzwerks Frieda & Ben.
   Jeden Freitag von 11 bis 13 Uhr im Dialograum im Asamgebäude. Mitglieder
   und Interessierte tauschen sich über Aktivitäten und Themen aus.\n\nEin
- tritt: Eintritt frei\nSicherheit: mittel\n\nKategorie: Sonstiges\nZielgrup
- pe: Senioren\nDrinnen/Draussen: drinnen\n\nQuelle: https://veranstaltungen
- .merkur.de/freising/senioren-netzwerk-frieda-ben-e4f72cabf4ae7eae9d11d7b20
- 4fe8e52b.html
+ tritt: vermutlich kostenfrei (Quelle nennt: frei)\nSicherheit: mittel\n\nK
+ ategorie: Sonstiges\nZielgruppe: Senioren\nDrinnen/Draussen: drinnen\n\nQu
+ elle: https://veranstaltungen.merkur.de/freising/senioren-netzwerk-frieda-
+ ben-e4f72cabf4ae7eae9d11d7b204fe8e52b.html
 URL:https://veranstaltungen.merkur.de/freising/senioren-netzwerk-frieda-ben
  -e4f72cabf4ae7eae9d11d7b204fe8e52b.html
 CATEGORIES:Sonstiges
 END:VEVENT
 BEGIN:VEVENT
 UID:3c0bc5197c3f304e@gratis-freising
-DTSTAMP:20260819T123043Z
+DTSTAMP:20260819T124526Z
 DTSTART;TZID=Europe/Berlin:20260821T180000
 DTEND;TZID=Europe/Berlin:20260821T190000
-SUMMARY:Sport im Park: Boogie Basics & Karate
+SUMMARY:Sport im Park: Boogie Basics & Karate (vermutlich frei)
 LOCATION:Sportpark Savoyer Au Freising — Roider-Jackl-Straße 4\, 85356 F
  reising
 DESCRIPTION:Ein Doppelangebot im Rahmen des Sport-im-Park-Programms: Um 18 
  Uhr beginnt der Kurs „Boogie Basics“\, gefolgt um 19 Uhr von einem Kar
  ate-Training. Beide Kurse sind kostenfrei und richten sich an alle Altersg
- ruppen.\n\nEintritt: Eintritt frei\nSicherheit: mittel\n\nKategorie: Sport
- \nZielgruppe: Alle\nDrinnen/Draussen: draussen\n\nQuelle: https://veransta
- ltungen.merkur.de/freising/sport-im-park-eaf42a985708af5077ceea3c9c8796407
- .html
+ ruppen.\n\nEintritt: vermutlich kostenfrei (Quelle nennt: frei)\nSicherhei
+ t: mittel\n\nKategorie: Sport\nZielgruppe: Alle\nDrinnen/Draussen: drausse
+ n\n\nQuelle: https://veranstaltungen.merkur.de/freising/sport-im-park-eaf4
+ 2a985708af5077ceea3c9c8796407.html
 URL:https://veranstaltungen.merkur.de/freising/sport-im-park-eaf42a985708af
  5077ceea3c9c8796407.html
 CATEGORIES:Sport
 END:VEVENT
 BEGIN:VEVENT
 UID:2f8dd7195f78456e@gratis-freising
-DTSTAMP:20260819T123043Z
+DTSTAMP:20260819T124526Z
 DTSTART;TZID=Europe/Berlin:20260821T200000
 DTEND;TZID=Europe/Berlin:20260821T213000
-SUMMARY:Anonyme Alkoholiker
+SUMMARY:Anonyme Alkoholiker (vermutlich frei)
 LOCATION:Paul-Gerhardt-Haus — General-von-Stein-Straße 22\, 85356 Freisi
  ng
 DESCRIPTION:Ein regelmäßiges Treffen der Anonymen Alkoholiker für Betrof
  fene und Interessierte. Das Angebot ist kostenlos und anonym. Keine Anmeld
- ung erforderlich.\n\nEintritt: Eintritt frei\nSicherheit: mittel\n\nKatego
- rie: Sonstiges\nZielgruppe: Erwachsene\nDrinnen/Draussen: drinnen\n\nQuell
- e: https://veranstaltungen.merkur.de/freising/anonyme-alkoholiker-e3ae9b93
- c79a784e9e0d9eba917314af3.html
+ ung erforderlich.\n\nEintritt: vermutlich kostenfrei (Quelle nennt: frei)\
+ nSicherheit: mittel\n\nKategorie: Sonstiges\nZielgruppe: Erwachsene\nDrinn
+ en/Draussen: drinnen\n\nQuelle: https://veranstaltungen.merkur.de/freising
+ /anonyme-alkoholiker-e3ae9b93c79a784e9e0d9eba917314af3.html
 URL:https://veranstaltungen.merkur.de/freising/anonyme-alkoholiker-e3ae9b93
  c79a784e9e0d9eba917314af3.html
 CATEGORIES:Sonstiges
 END:VEVENT
 BEGIN:VEVENT
 UID:cf9869fdabf80146@gratis-freising
-DTSTAMP:20260819T123043Z
+DTSTAMP:20260819T124526Z
 DTSTART;TZID=Europe/Berlin:20260822T180000
 DTEND;TZID=Europe/Berlin:20260822T200000
-SUMMARY:[PRUEFEN] König-Ludwig-Verein
+SUMMARY:König-Ludwig-Verein (vermutlich frei)
 LOCATION:85356 Freising
 DESCRIPTION:Ein Sommerfest für Mitglieder des König-Ludwig-Vereins mit ih
  ren Partnern. Um 18 Uhr beginnt das gesellige Beisammensein beim Vorsitzen
  den Martin Wiesheu. Geschirr\, Besteck und Gläser sind selbst mitzubringe
- n.\n\nEintritt: Eintritt UNKLAR — bitte pruefen\nSicherheit: mittel\n\nK
- ategorie: Feste/Bälle/Tanz\nZielgruppe: Alle\nDrinnen/Draussen: beides\n\
- nQuelle: https://veranstaltungen.merkur.de/freising/koenig-ludwig-verein-e
- e3f84f419caa41de2b8b0ae7a23bf5b3.html
+ n.\n\nEintritt: vermutlich kostenfrei (Quelle nennt: unklar)\nSicherheit: 
+ mittel\n\nKategorie: Feste/Bälle/Tanz\nZielgruppe: Alle\nDrinnen/Draussen
+ : beides\n\nQuelle: https://veranstaltungen.merkur.de/freising/koenig-ludw
+ ig-verein-ee3f84f419caa41de2b8b0ae7a23bf5b3.html
 URL:https://veranstaltungen.merkur.de/freising/koenig-ludwig-verein-ee3f84f
  419caa41de2b8b0ae7a23bf5b3.html
 CATEGORIES:Feste/Bälle/Tanz
 END:VEVENT
 BEGIN:VEVENT
 UID:a753c7385e31a4c3@gratis-freising
-DTSTAMP:20260819T123043Z
+DTSTAMP:20260819T124526Z
 DTSTART;TZID=Europe/Berlin:20260827T193000
 DTEND;TZID=Europe/Berlin:20260827T210000
-SUMMARY:Kreuzbund SHG Bahnhofstraße
+SUMMARY:Kreuzbund SHG Bahnhofstraße (vermutlich frei)
 LOCATION:Caritas-Zentrum Freising — Bahnhofstr. 20\, 85356 Freising
 DESCRIPTION:Ein Treffen der Selbsthilfegruppe Kreuzbund für Betroffene und
   Angehörige. Jeden Donnerstag um 19:30 Uhr im Caritas-Zentrum. Offenes An
- gebot für alle Interessierten.\n\nEintritt: Eintritt frei\nSicherheit: mi
- ttel\n\nVeranstalter: Michael Kraml\nKategorie: Rat und Hilfe\nZielgruppe:
-  Alle\nDrinnen/Draussen: drinnen\n\nQuelle: https://veranstaltungen.merkur
- .de/freising/kreuzbund-shg-bahnhofstrasse-ec0093f7bfcf96906ff24eb4ce9eea60
- e.html
+ gebot für alle Interessierten.\n\nEintritt: vermutlich kostenfrei (Quelle
+  nennt: frei)\nSicherheit: mittel\n\nVeranstalter: Michael Kraml\nKategori
+ e: Rat und Hilfe\nZielgruppe: Alle\nDrinnen/Draussen: drinnen\n\nQuelle: h
+ ttps://veranstaltungen.merkur.de/freising/kreuzbund-shg-bahnhofstrasse-ec0
+ 093f7bfcf96906ff24eb4ce9eea60e.html
 URL:https://veranstaltungen.merkur.de/freising/kreuzbund-shg-bahnhofstrasse
  -ec0093f7bfcf96906ff24eb4ce9eea60e.html
 CATEGORIES:Rat und Hilfe

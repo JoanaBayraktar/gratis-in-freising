@@ -71,10 +71,13 @@ sortiert nach Ende: was bald ausläuft, steht oben und wird in den letzten zwei
 Tagen farbig. Eine Ausstellung, die noch drei Monate zu sehen ist, eilt nicht
 und steht unten.
 
-**Die nächsten Tage** — Einzeltermine als knappe Liste, ohne Beschreibung. Enthalten sind nur Veranstaltungen mit `frei` oder
-`spende` — Spendenbasis ist sichtbar gekennzeichnet, weil das nicht dasselbe
-ist wie kostenlos. Unklare Fälle bleiben draußen und erscheinen nur als Zähler
-am Fuß der Mail, damit Sie sehen, wie viel in der Prüfliste liegt.
+**Die nächsten Tage** — Einzeltermine als knappe Liste, ohne Beschreibung.
+
+Enthalten ist alles, was nicht nachweislich Geld kostet. Was nur vermutlich
+kostenlos ist — weil die Seite zum Preis schweigt —, steht mit dabei und trägt
+die Marke „vermutlich kostenfrei". Spendenbasis ebenso. Nur der belegte freie
+Eintritt bleibt unbeschriftet: Das ist der Normalfall, beschriftet wird die
+Abweichung.
 
 Der Mailtext lässt sich jederzeit ohne Versand ansehen:
 
