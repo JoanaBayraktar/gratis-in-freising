@@ -75,9 +75,9 @@ Eintrag nicht mehr an.
 - **Beleg:** Um Spenden wird gebeten!
 - **Quelle:** https://www.furtner-freising.de/veranstaltung/abtanzparty-zu-rock-und-pop-querbeet-2/
 
-## Abtanzparty zu Rock und Pop querbeet
-- **Wann:** 05.12.2026 20:00
+## Irish Night mit der Paul Daly Band (Folk/Irish)
+- **Wann:** 06.11.2026 20:00
 - **Wo:** Furtnerbräu
-- **Eingestuft als:** `spende` (Sicherheit: mittel)
-- **Beleg:** Um Spenden wird gebeten!
-- **Quelle:** https://www.furtner-freising.de/veranstaltung/abtanzparty-zu-rock-und-pop-querbeet/
+- **Eingestuft als:** `spende` (Sicherheit: hoch)
+- **Beleg:** Eintritt frei! Um Spenden wird gebeten.
+- **Quelle:** https://www.furtner-freising.de/veranstaltung/irish-night-mit-der-paul-daly-band-folk-irish/

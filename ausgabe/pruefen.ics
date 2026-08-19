@@ -24,7 +24,7 @@ END:STANDARD
 END:VTIMEZONE
 BEGIN:VEVENT
 UID:90f2fb9057f18163@gratis-freising
-DTSTAMP:20260819T093907Z
+DTSTAMP:20260819T095956Z
 DTSTART;TZID=Europe/Berlin:20260819T090000
 DTEND;TZID=Europe/Berlin:20260927T000000
 SUMMARY:[PRUEFEN] EIN LEBEN IN FARBEN – DIE MALERIN RUTH KOHLER
@@ -46,7 +46,7 @@ CATEGORIES:Kunst
 END:VEVENT
 BEGIN:VEVENT
 UID:7c62dab1505ff73c@gratis-freising
-DTSTAMP:20260819T093907Z
+DTSTAMP:20260819T095956Z
 DTSTART;TZID=Europe/Berlin:20260819T093000
 DTEND;TZID=Europe/Berlin:20260819T113000
 SUMMARY:[PRUEFEN] Zwillings-Krabbelgruppe
@@ -64,7 +64,7 @@ CATEGORIES:Familie
 END:VEVENT
 BEGIN:VEVENT
 UID:ce0aa7f2a4646fa4@gratis-freising
-DTSTAMP:20260819T093907Z
+DTSTAMP:20260819T095956Z
 DTSTART;TZID=Europe/Berlin:20260819T100000
 DTEND;TZID=Europe/Berlin:20260822T180000
 SUMMARY:[PRUEFEN] Ausstellung Max Pfefferle "Alles nur Kleinigkeiten" in de
@@ -89,7 +89,7 @@ CATEGORIES:Kunst
 END:VEVENT
 BEGIN:VEVENT
 UID:37abfa4825a64291@gratis-freising
-DTSTAMP:20260819T093907Z
+DTSTAMP:20260819T095956Z
 DTSTART;TZID=Europe/Berlin:20260819T140000
 DTEND;TZID=Europe/Berlin:20260819T190000
 SUMMARY:[PRUEFEN] SpielRäume
@@ -111,7 +111,7 @@ CATEGORIES:Kunst
 END:VEVENT
 BEGIN:VEVENT
 UID:2cf3f35f5b46eb23@gratis-freising
-DTSTAMP:20260819T093907Z
+DTSTAMP:20260819T095956Z
 DTSTART;TZID=Europe/Berlin:20260819T140000
 DTEND;TZID=Europe/Berlin:20260819T160000
 SUMMARY:Gemeinsames Handarbeiten (Spende)
@@ -129,7 +129,7 @@ CATEGORIES:Sonstiges
 END:VEVENT
 BEGIN:VEVENT
 UID:a14f53d918a66454@gratis-freising
-DTSTAMP:20260819T093907Z
+DTSTAMP:20260819T095956Z
 DTSTART;TZID=Europe/Berlin:20260819T150000
 DTEND;TZID=Europe/Berlin:20260819T160000
 SUMMARY:[PRUEFEN] Vorlesen für Kinder ab 5 Jahren
@@ -151,7 +151,7 @@ CATEGORIES:Kinderprogramm
 END:VEVENT
 BEGIN:VEVENT
 UID:2f8dd7195f78456e@gratis-freising
-DTSTAMP:20260819T093907Z
+DTSTAMP:20260819T095956Z
 DTSTART;TZID=Europe/Berlin:20260821T200000
 DTEND;TZID=Europe/Berlin:20260821T220000
 SUMMARY:Anonyme Alkoholiker
@@ -169,7 +169,7 @@ CATEGORIES:Sonstiges
 END:VEVENT
 BEGIN:VEVENT
 UID:c5e2d8b175557eb3@gratis-freising
-DTSTAMP:20260819T093907Z
+DTSTAMP:20260819T095956Z
 DTSTART;TZID=Europe/Berlin:20260822T070000
 DTEND;TZID=Europe/Berlin:20260822T090000
 SUMMARY:Wochenmarkt
@@ -186,55 +186,54 @@ CATEGORIES:Markt
 END:VEVENT
 BEGIN:VEVENT
 UID:cbb4c1fbee50595c@gratis-freising
-DTSTAMP:20260819T093907Z
+DTSTAMP:20260819T095956Z
 DTSTART;TZID=Europe/Berlin:20260921T183000
 DTEND;TZID=Europe/Berlin:20260921T203000
 SUMMARY:Nähcafé & Handwerksabend (Ende der Sommerpause!) (Spende)
 LOCATION:Offene Werkstatt Freising — Schwalbenweg 1\, 85356 Freising
 DESCRIPTION:Gemeinschaftliches Näh- und Handwerkscafé mit Möglichkeit zu
- m Stricken\, Häkeln und Basteln. Spendenbasis für Nichtmitglieder zur De
- ckung der Unkosten.\n\nEintritt: Eintritt frei\, Spende erbeten\nBeleg: "W
- ir freuen uns über eine kleine Spende bei Nichtmitgliedern\, um die Unkos
- ten zu decken."\nSicherheit: hoch\n\nKategorie: Sonstiges\nZielgruppe: All
- e\n\nQuelle: https://einfach-selber-machen.org/event/naehcafe-handwerksabe
- nd-ende-der-sommerpause/
+ m Austausch und kreativem Arbeiten. Spendenbasis für Nichtmitglieder zur 
+ Deckung der Unkosten.\n\nEintritt: Eintritt frei\, Spende erbeten\nBeleg: 
+ "Wir freuen uns über eine kleine Spende bei Nichtmitgliedern\, um die Unk
+ osten zu decken."\nSicherheit: hoch\n\nKategorie: Sonstiges\nZielgruppe: A
+ lle\n\nQuelle: https://einfach-selber-machen.org/event/naehcafe-handwerksa
+ bend-ende-der-sommerpause/
 URL:https://einfach-selber-machen.org/event/naehcafe-handwerksabend-ende-de
  r-sommerpause/
 CATEGORIES:Sonstiges
 END:VEVENT
 BEGIN:VEVENT
 UID:0b77632db79f9951@gratis-freising
-DTSTAMP:20260819T093907Z
+DTSTAMP:20260819T095956Z
 DTSTART;TZID=Europe/Berlin:20261003T200000
 DTEND;TZID=Europe/Berlin:20261003T200000
 SUMMARY:Abtanzparty zu Rock und Pop querbeet (Spende)
 LOCATION:Furtnerbräu — Obere Hauptstr. 42\, 85354 Freising
-DESCRIPTION:Tanzparty mit Rock- und Popmusik im Jagdzimmer. Eintritt auf Sp
- endenbasis – DJ-Team Martin und Uli sorgen für Stimmung.\n\nEintritt: E
- intritt frei\, Spende erbeten\nBeleg: "Um Spenden wird gebeten!"\nSicherhe
- it: hoch\n\nKategorie: Musik\nZielgruppe: Alle\n\nQuelle: https://www.furt
- ner-freising.de/veranstaltung/abtanzparty-zu-rock-und-pop-querbeet-2/\nBil
- d: https://www.furtner-freising.de/wp-content/uploads/2026/03/63526380cc26
- 6_1666343808.jpg
+DESCRIPTION:Tanzparty mit Rock- und Popmusik\, moderiert vom DJ-Team Martin
+  und Uli. Spendenbasis.\n\nEintritt: Eintritt frei\, Spende erbeten\nBeleg
+ : "Um Spenden wird gebeten!"\nSicherheit: hoch\n\nKategorie: Musik\nZielgr
+ uppe: Alle\n\nQuelle: https://www.furtner-freising.de/veranstaltung/abtanz
+ party-zu-rock-und-pop-querbeet-2/\nBild: https://www.furtner-freising.de/w
+ p-content/uploads/2026/03/63526380cc266_1666343808.jpg
 URL:https://www.furtner-freising.de/veranstaltung/abtanzparty-zu-rock-und-p
  op-querbeet-2/
 CATEGORIES:Musik
 END:VEVENT
 BEGIN:VEVENT
-UID:ee477e5da391da09@gratis-freising
-DTSTAMP:20260819T093907Z
-DTSTART;TZID=Europe/Berlin:20261205T200000
-DTEND;TZID=Europe/Berlin:20261205T200000
-SUMMARY:Abtanzparty zu Rock und Pop querbeet (Spende)
+UID:e043902a8dd775c9@gratis-freising
+DTSTAMP:20260819T095956Z
+DTSTART;TZID=Europe/Berlin:20261106T200000
+DTEND;TZID=Europe/Berlin:20261106T200000
+SUMMARY:Irish Night mit der Paul Daly Band (Folk/Irish) (Spende)
 LOCATION:Furtnerbräu — Obere Hauptstr. 42\, 85354 Freising
-DESCRIPTION:Tanzparty mit Rock- und Popmusik. DJ-Team Martin und Uli sorgen
-  für Stimmung.\n\nEintritt: Eintritt frei\, Spende erbeten\nBeleg: "Um Sp
- enden wird gebeten!"\nSicherheit: mittel\n\nKategorie: Musik\nZielgruppe: 
- Alle\n\nQuelle: https://www.furtner-freising.de/veranstaltung/abtanzparty-
- zu-rock-und-pop-querbeet/\nBild: https://www.furtner-freising.de/wp-conten
- t/uploads/2026/03/63526380cc266_1666343808.jpg
-URL:https://www.furtner-freising.de/veranstaltung/abtanzparty-zu-rock-und-p
- op-querbeet/
+DESCRIPTION:Irish-Folk-Konzert mit der Paul Daly Band. Eintritt frei\, Spen
+ denbasis.\n\nEintritt: Eintritt frei\, Spende erbeten\nBeleg: "Eintritt fr
+ ei! Um Spenden wird gebeten."\nSicherheit: hoch\n\nKategorie: Musik\nZielg
+ ruppe: Alle\n\nQuelle: https://www.furtner-freising.de/veranstaltung/irish
+ -night-mit-der-paul-daly-band-folk-irish/\nBild: https://www.furtner-freis
+ ing.de/wp-content/uploads/2026/03/688cab650c4d6_1754049381-scaled.jpg
+URL:https://www.furtner-freising.de/veranstaltung/irish-night-mit-der-paul-
+ daly-band-folk-irish/
 CATEGORIES:Musik
 END:VEVENT
 END:VCALENDAR
