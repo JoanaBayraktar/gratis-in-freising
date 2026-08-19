@@ -7,6 +7,7 @@
       12,
       23,
       24,
+      24,
       24
     ],
     "fehlversuche": 0,
@@ -20,7 +21,8 @@
       10,
       22,
       30,
-      17
+      17,
+      18
     ],
     "fehlversuche": 0,
     "letzter_erfolg": "2026-08-19"
@@ -33,6 +35,7 @@
       4,
       4,
       4,
+      4,
       4
     ],
     "fehlversuche": 0,
@@ -40,6 +43,7 @@
   },
   "Furtner Freising": {
     "verlauf": [
+      23,
       23,
       23,
       23,
@@ -59,6 +63,7 @@
       1,
       1,
       1,
+      1,
       1
     ],
     "fehlversuche": 0,
@@ -72,7 +77,36 @@
       36,
       36,
       40,
-      36
+      36,
+      40
+    ],
+    "fehlversuche": 0,
+    "letzter_erfolg": "2026-08-19"
+  },
+  "Modern Studio": {
+    "verlauf": [
+      3
+    ],
+    "fehlversuche": 0,
+    "letzter_erfolg": "2026-08-19"
+  },
+  "DAV Freising — Vortraege": {
+    "verlauf": [
+      3
+    ],
+    "fehlversuche": 0,
+    "letzter_erfolg": "2026-08-19"
+  },
+  "3Klang Musik": {
+    "verlauf": [
+      2
+    ],
+    "fehlversuche": 0,
+    "letzter_erfolg": "2026-08-19"
+  },
+  "TUM Freising": {
+    "verlauf": [
+      11
     ],
     "fehlversuche": 0,
     "letzter_erfolg": "2026-08-19"

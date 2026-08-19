@@ -5,6 +5,13 @@ Nach dem Pruefen in `daten/events.json` das Feld `eintritt` korrigieren
 und `manuell_bestaetigt` auf `true` setzen — dann fasst der Agent den
 Eintrag nicht mehr an.
 
+## TUM tanzt!
+- **Wann:** 18.05.2026 00:00
+- **Wo:** München, Garching, Freising
+- **Angezeigt als:** vermutlich kostenfrei — Quelle nennt `frei` (Sicherheit: mittel)
+- **Beleg:** _kein Hinweis im Text gefunden_
+- **Quelle:** https://www.tum.de/aktuelles/veranstaltungen/terminuebersicht?tx_solr%5Bfilter%5D%5B0%5D=location%3AFreising
+
 ## Zwillings-Krabbelgruppe
 - **Wann:** 19.08.2026 09:30
 - **Wo:** Epiphanias-Zentrum
@@ -40,13 +47,6 @@ Eintrag nicht mehr an.
 - **Beleg:** _kein Hinweis im Text gefunden_
 - **Quelle:** https://veranstaltungen.merkur.de/freising/senioren-netzwerk-frieda-ben-e4f72cabf4ae7eae9d11d7b204fe8e52b.html
 
-## Sport im Park: Boogie Basics & Karate
-- **Wann:** 21.08.2026 18:00
-- **Wo:** Sportpark Savoyer Au Freising
-- **Angezeigt als:** vermutlich kostenfrei — Quelle nennt `frei` (Sicherheit: mittel)
-- **Beleg:** _kein Hinweis im Text gefunden_
-- **Quelle:** https://veranstaltungen.merkur.de/freising/sport-im-park-eaf42a985708af5077ceea3c9c8796407.html
-
 ## Anonyme Alkoholiker
 - **Wann:** 21.08.2026 20:00
 - **Wo:** Paul-Gerhardt-Haus
@@ -56,7 +56,7 @@ Eintrag nicht mehr an.
 
 ## König-Ludwig-Verein
 - **Wann:** 22.08.2026 18:00
-- **Wo:** —
+- **Wo:** Privatwohnung des Vorsitzenden Martin Wiesheu
 - **Angezeigt als:** vermutlich kostenfrei — Quelle nennt `unklar` (Sicherheit: mittel)
 - **Beleg:** _kein Hinweis im Text gefunden_
 - **Quelle:** https://veranstaltungen.merkur.de/freising/koenig-ludwig-verein-ee3f84f419caa41de2b8b0ae7a23bf5b3.html
@@ -67,3 +67,38 @@ Eintrag nicht mehr an.
 - **Angezeigt als:** vermutlich kostenfrei — Quelle nennt `frei` (Sicherheit: mittel)
 - **Beleg:** _kein Hinweis im Text gefunden_
 - **Quelle:** https://veranstaltungen.merkur.de/freising/kreuzbund-shg-bahnhofstrasse-ec0093f7bfcf96906ff24eb4ce9eea60e.html
+
+## Nachhaltige Materialnutzung von Baumrinde
+- **Wann:** 29.09.2026 19:00
+- **Wo:** —
+- **Angezeigt als:** vermutlich kostenfrei — Quelle nennt `frei` (Sicherheit: mittel)
+- **Beleg:** _kein Hinweis im Text gefunden_
+- **Quelle:** https://www.tum.de/aktuelles/veranstaltungen/terminuebersicht?tx_solr%5Bfilter%5D%5B0%5D=location%3AFreising
+
+## Die Demokratie feiern – gemeinsam in Freising
+- **Wann:** 02.10.2026 18:00
+- **Wo:** —
+- **Angezeigt als:** vermutlich kostenfrei — Quelle nennt `frei` (Sicherheit: niedrig)
+- **Beleg:** _kein Hinweis im Text gefunden_
+- **Quelle:** https://www.3klang-musik.de/freising.html
+
+## Pflanzenschutz im Wandel
+- **Wann:** 07.10.2026 08:30
+- **Wo:** —
+- **Angezeigt als:** vermutlich kostenfrei — Quelle nennt `unklar` (Sicherheit: niedrig)
+- **Beleg:** _kein Hinweis im Text gefunden_
+- **Quelle:** https://www.tum.de/aktuelles/veranstaltungen/terminuebersicht?tx_solr%5Bfilter%5D%5B0%5D=location%3AFreising
+
+## Netzwerke in der Bioinformatik
+- **Wann:** 29.10.2026 19:00
+- **Wo:** Freising
+- **Angezeigt als:** vermutlich kostenfrei — Quelle nennt `frei` (Sicherheit: mittel)
+- **Beleg:** _kein Hinweis im Text gefunden_
+- **Quelle:** https://www.tum.de/aktuelles/veranstaltungen/terminuebersicht?tx_solr%5Bfilter%5D%5B0%5D=location%3AFreising
+
+## Der Fettversteher kehrt zurück
+- **Wann:** 24.11.2026 19:00
+- **Wo:** Freising
+- **Angezeigt als:** vermutlich kostenfrei — Quelle nennt `frei` (Sicherheit: mittel)
+- **Beleg:** _kein Hinweis im Text gefunden_
+- **Quelle:** https://www.tum.de/aktuelles/veranstaltungen/terminuebersicht?tx_solr%5Bfilter%5D%5B0%5D=location%3AFreising
