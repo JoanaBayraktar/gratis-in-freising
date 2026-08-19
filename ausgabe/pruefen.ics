@@ -24,44 +24,25 @@ END:STANDARD
 END:VTIMEZONE
 BEGIN:VEVENT
 UID:7c62dab1505ff73c@gratis-freising
-DTSTAMP:20260819T124526Z
+DTSTAMP:20260819T125342Z
 DTSTART;TZID=Europe/Berlin:20260819T093000
 DTEND;TZID=Europe/Berlin:20260819T110000
 SUMMARY:Zwillings-Krabbelgruppe (vermutlich frei)
 LOCATION:Epiphanias-Zentrum — Katharina-Mair-Straße 19\, 85356 Freising
-DESCRIPTION:Ein Treffpunkt speziell für Eltern mit Zwillingen\, Babys und 
- Kleinkindern ab Krabbelalter. Jeden 1. und 3. Mittwoch im Monat wird gemei
- nsam gespielt und ausgetauscht. Anmeldung erforderlich.\n\nEintritt: vermu
- tlich kostenfrei (Quelle nennt: frei)\nSicherheit: mittel\n\nKategorie: Fa
- milie\nZielgruppe: Kinder\nDrinnen/Draussen: drinnen\nAnmeldung noetig: ja
-  — siehe Quelle\n\nQuelle: https://veranstaltungen.merkur.de/freising/zw
- illings-krabbelgruppe-e940437dc64af40f2d1829b2001e77dd2.html
+DESCRIPTION:Ein Treffpunkt für Eltern mit Zwillingen\, Babys und Kleinkind
+ ern ab Krabbelalter. Gemeinsame Aktivitäten und Austausch in lockerer Atm
+ osphäre.\n\nEintritt: vermutlich kostenfrei (Quelle nennt: frei)\nSicherh
+ eit: mittel\n\nKategorie: Familie\nZielgruppe: Kinder\nDrinnen/Draussen: d
+ rinnen\nAnmeldung noetig: ja — siehe Quelle\n\nQuelle: https://veranstal
+ tungen.merkur.de/freising/zwillings-krabbelgruppe-e940437dc64af40f2d1829b2
+ 001e77dd2.html
 URL:https://veranstaltungen.merkur.de/freising/zwillings-krabbelgruppe-e940
  437dc64af40f2d1829b2001e77dd2.html
 CATEGORIES:Familie
 END:VEVENT
 BEGIN:VEVENT
-UID:91f5bb9d5d9d475f@gratis-freising
-DTSTAMP:20260819T124526Z
-DTSTART;TZID=Europe/Berlin:20260820T170000
-DTEND;TZID=Europe/Berlin:20260820T180000
-SUMMARY:Sport im Park: Body and Back vom TSV Jahn (vermutlich frei)
-LOCATION:Sportpark Savoyer Au Freising — Roider-Jackl-Straße 4\, 85356 F
- reising
-DESCRIPTION:Ein spezieller Kurs des TSV Jahn Freising zur Stärkung von Rü
- cken und Körperhaltung. Das kostenfreie Angebot richtet sich an alle Inte
- ressierten und findet im Rahmen des Sport-im-Park-Programms statt.\n\nEint
- ritt: vermutlich kostenfrei (Quelle nennt: frei)\nSicherheit: mittel\n\nKa
- tegorie: Sport\nZielgruppe: Alle\nDrinnen/Draussen: draussen\n\nQuelle: ht
- tps://veranstaltungen.merkur.de/freising/sport-im-park-e6ab311ca87a5ed32aa
- 5f91c62d59d42b.html
-URL:https://veranstaltungen.merkur.de/freising/sport-im-park-e6ab311ca87a5e
- d32aa5f91c62d59d42b.html
-CATEGORIES:Sport
-END:VEVENT
-BEGIN:VEVENT
 UID:0b8750db9f962483@gratis-freising
-DTSTAMP:20260819T124526Z
+DTSTAMP:20260819T125342Z
 DTSTART;TZID=Europe/Berlin:20260820T193000
 DTEND;TZID=Europe/Berlin:20260820T210000
 SUMMARY:Kreuzbund SHG Bahnhofstraße (vermutlich frei)
@@ -79,26 +60,25 @@ CATEGORIES:Rat und Hilfe
 END:VEVENT
 BEGIN:VEVENT
 UID:53f1c56a9e6f9c8d@gratis-freising
-DTSTAMP:20260819T124526Z
+DTSTAMP:20260819T125342Z
 DTSTART;TZID=Europe/Berlin:20260820T200000
-DTEND;TZID=Europe/Berlin:20260820T220000
+DTEND;TZID=Europe/Berlin:20260820T210000
 SUMMARY:Anonyme Alkoholiker (vermutlich frei)
 LOCATION:Paul-Gerhardt-Haus — General-von-Stein-Straße 22\, 85356 Freisi
  ng
-DESCRIPTION:Ein regelmäßiges Treffen der Selbsthilfegruppe für Betroffen
- e und Angehörige. Jeden Donnerstag und Freitag um 20 Uhr im Paul-Gerhardt
- -Haus. Offenes Angebot für alle Interessierten.\n\nEintritt: vermutlich k
- ostenfrei (Quelle nennt: frei)\nSicherheit: mittel\n\nKategorie: Rat und H
- ilfe\nZielgruppe: Alle\nDrinnen/Draussen: drinnen\n\nQuelle: https://veran
- staltungen.merkur.de/freising/anonyme-alkoholiker-e3ae9b93c79a784e9e0d9eba
- 917314af3.html
+DESCRIPTION:Regelmäßiges Treffen der Selbsthilfegruppe für Betroffene un
+ d Angehörige. Ein geschützter Rahmen zum Austausch und zur gegenseitigen
+  Unterstützung.\n\nEintritt: vermutlich kostenfrei (Quelle nennt: frei)\n
+ Sicherheit: mittel\n\nKategorie: Rat und Hilfe\nZielgruppe: Alle\nDrinnen/
+ Draussen: drinnen\n\nQuelle: https://veranstaltungen.merkur.de/freising/an
+ onyme-alkoholiker-e3ae9b93c79a784e9e0d9eba917314af3.html
 URL:https://veranstaltungen.merkur.de/freising/anonyme-alkoholiker-e3ae9b93
  c79a784e9e0d9eba917314af3.html
 CATEGORIES:Rat und Hilfe
 END:VEVENT
 BEGIN:VEVENT
 UID:678505c327ef381e@gratis-freising
-DTSTAMP:20260819T124526Z
+DTSTAMP:20260819T125342Z
 DTSTART;TZID=Europe/Berlin:20260820T200000
 DTEND;TZID=Europe/Berlin:20260820T220000
 SUMMARY:Probe der Kantorei (vermutlich frei)
@@ -117,25 +97,24 @@ CATEGORIES:Sonstiges
 END:VEVENT
 BEGIN:VEVENT
 UID:a92f8503b655cdde@gratis-freising
-DTSTAMP:20260819T124526Z
+DTSTAMP:20260819T125342Z
 DTSTART;TZID=Europe/Berlin:20260821T110000
 DTEND;TZID=Europe/Berlin:20260821T130000
 SUMMARY:Senioren-Netzwerk Frieda & Ben (vermutlich frei)
 LOCATION:dASAMa Dialograum im Asamgebäude — 85356 Freising
-DESCRIPTION:Ein regelmäßiges Treffen des Senioren-Netzwerks Frieda & Ben.
-  Jeden Freitag von 11 bis 13 Uhr im Dialograum im Asamgebäude. Mitglieder
-  und Interessierte tauschen sich über Aktivitäten und Themen aus.\n\nEin
- tritt: vermutlich kostenfrei (Quelle nennt: frei)\nSicherheit: mittel\n\nK
- ategorie: Sonstiges\nZielgruppe: Senioren\nDrinnen/Draussen: drinnen\n\nQu
- elle: https://veranstaltungen.merkur.de/freising/senioren-netzwerk-frieda-
- ben-e4f72cabf4ae7eae9d11d7b204fe8e52b.html
+DESCRIPTION:Ein regelmäßiges Treffen des Vereins für Mitglieder und Inte
+ ressierte. Informationen über Aktivitäten und Austausch in geselliger Ru
+ nde.\n\nEintritt: vermutlich kostenfrei (Quelle nennt: frei)\nSicherheit: 
+ mittel\n\nKategorie: Sonstiges\nZielgruppe: Senioren\nDrinnen/Draussen: dr
+ innen\n\nQuelle: https://veranstaltungen.merkur.de/freising/senioren-netzw
+ erk-frieda-ben-e4f72cabf4ae7eae9d11d7b204fe8e52b.html
 URL:https://veranstaltungen.merkur.de/freising/senioren-netzwerk-frieda-ben
  -e4f72cabf4ae7eae9d11d7b204fe8e52b.html
 CATEGORIES:Sonstiges
 END:VEVENT
 BEGIN:VEVENT
 UID:3c0bc5197c3f304e@gratis-freising
-DTSTAMP:20260819T124526Z
+DTSTAMP:20260819T125342Z
 DTSTART;TZID=Europe/Berlin:20260821T180000
 DTEND;TZID=Europe/Berlin:20260821T190000
 SUMMARY:Sport im Park: Boogie Basics & Karate (vermutlich frei)
@@ -154,7 +133,7 @@ CATEGORIES:Sport
 END:VEVENT
 BEGIN:VEVENT
 UID:2f8dd7195f78456e@gratis-freising
-DTSTAMP:20260819T124526Z
+DTSTAMP:20260819T125342Z
 DTSTART;TZID=Europe/Berlin:20260821T200000
 DTEND;TZID=Europe/Berlin:20260821T213000
 SUMMARY:Anonyme Alkoholiker (vermutlich frei)
@@ -172,25 +151,24 @@ CATEGORIES:Sonstiges
 END:VEVENT
 BEGIN:VEVENT
 UID:cf9869fdabf80146@gratis-freising
-DTSTAMP:20260819T124526Z
+DTSTAMP:20260819T125342Z
 DTSTART;TZID=Europe/Berlin:20260822T180000
-DTEND;TZID=Europe/Berlin:20260822T200000
+DTEND;TZID=Europe/Berlin:20260822T220000
 SUMMARY:König-Ludwig-Verein (vermutlich frei)
 LOCATION:85356 Freising
-DESCRIPTION:Ein Sommerfest für Mitglieder des König-Ludwig-Vereins mit ih
- ren Partnern. Um 18 Uhr beginnt das gesellige Beisammensein beim Vorsitzen
- den Martin Wiesheu. Geschirr\, Besteck und Gläser sind selbst mitzubringe
- n.\n\nEintritt: vermutlich kostenfrei (Quelle nennt: unklar)\nSicherheit: 
- mittel\n\nKategorie: Feste/Bälle/Tanz\nZielgruppe: Alle\nDrinnen/Draussen
- : beides\n\nQuelle: https://veranstaltungen.merkur.de/freising/koenig-ludw
- ig-verein-ee3f84f419caa41de2b8b0ae7a23bf5b3.html
+DESCRIPTION:Ein Sommerfest für Mitglieder und deren Partner mit gemütlich
+ em Beisammensein. Geschirr\, Besteck und Gläser sind selbst mitzubringen.
+ \n\nEintritt: vermutlich kostenfrei (Quelle nennt: unklar)\nSicherheit: mi
+ ttel\n\nKategorie: Feste/Bälle/Tanz\nZielgruppe: Alle\nDrinnen/Draussen: 
+ drinnen\n\nQuelle: https://veranstaltungen.merkur.de/freising/koenig-ludwi
+ g-verein-ee3f84f419caa41de2b8b0ae7a23bf5b3.html
 URL:https://veranstaltungen.merkur.de/freising/koenig-ludwig-verein-ee3f84f
  419caa41de2b8b0ae7a23bf5b3.html
 CATEGORIES:Feste/Bälle/Tanz
 END:VEVENT
 BEGIN:VEVENT
 UID:a753c7385e31a4c3@gratis-freising
-DTSTAMP:20260819T124526Z
+DTSTAMP:20260819T125342Z
 DTSTART;TZID=Europe/Berlin:20260827T193000
 DTEND;TZID=Europe/Berlin:20260827T210000
 SUMMARY:Kreuzbund SHG Bahnhofstraße (vermutlich frei)

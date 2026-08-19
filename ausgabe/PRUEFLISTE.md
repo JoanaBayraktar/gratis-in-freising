@@ -12,13 +12,6 @@ Eintrag nicht mehr an.
 - **Beleg:** _kein Hinweis im Text gefunden_
 - **Quelle:** https://veranstaltungen.merkur.de/freising/zwillings-krabbelgruppe-e940437dc64af40f2d1829b2001e77dd2.html
 
-## Sport im Park: Body and Back vom TSV Jahn
-- **Wann:** 20.08.2026 17:00
-- **Wo:** Sportpark Savoyer Au Freising
-- **Angezeigt als:** vermutlich kostenfrei — Quelle nennt `frei` (Sicherheit: mittel)
-- **Beleg:** _kein Hinweis im Text gefunden_
-- **Quelle:** https://veranstaltungen.merkur.de/freising/sport-im-park-e6ab311ca87a5ed32aa5f91c62d59d42b.html
-
 ## Kreuzbund SHG Bahnhofstraße
 - **Wann:** 20.08.2026 19:30
 - **Wo:** Caritas-Zentrum Freising
