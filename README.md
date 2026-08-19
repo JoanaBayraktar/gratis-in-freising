@@ -98,14 +98,17 @@ etwa 0,1 Cent. Drei Fragen mit drei verschiedenen Folgen:
 | Findet | Was passiert |
 |---|---|
 | Ortsname meint einen bekannten Ort | wird übernommen |
-| Dublette über Quellen hinweg | wird verschmolzen, **wenn** auch Adresse oder Ort übereinstimmen |
-| Widerspruch beim Eintritt | wird **nur gemeldet**, nie automatisch geändert |
+| Dublettenverdacht | wird **nur gemeldet** |
+| Widerspruch beim Eintritt | wird **nur gemeldet** |
 
-Die Abstufung ist Absicht. Ein Ortsname ist Anzeigetext, da kann nichts
-kaputtgehen. Eine falsch verschmolzene Veranstaltung dagegen ist weg, ohne dass
-es auffällt — deshalb braucht das Modellurteil dort ein zweites, hartes Merkmal.
-Und ob etwas Eintritt kostet, entscheidet der Beleg auf der Seite, nicht die
-Vermutung eines Modells.
+Nur der Ortsname wird automatisch geändert, weil das reiner Anzeigetext ist.
+Alles andere ist ein Hinweis zum Nachsehen, keine Entscheidung.
+
+Der erste Lauf hat gezeigt, warum das so sein muss: Das Modell hielt jede
+wiederkehrende Reihe für eine Dublette — „Führung im Furtner" an vier Terminen,
+„Karaoke mit Stefan" an zwei Abenden. Es schrieb sogar dazu, dass die Tage
+verschieden seien, und meldete sie trotzdem. Verschmolzen wird deshalb
+ausschließlich nach den festen Regeln in `sammeln.py`.
 
 Alles Gefundene steht hinterher in `ausgabe/NACHPRUEFUNG.md`, auch das
 Übernommene. Ohne Änderungen, nur zum Ansehen:

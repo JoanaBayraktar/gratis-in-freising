@@ -19,9 +19,12 @@ Drei Fragen, drei verschiedene Konsequenzen:
   Widerspruch  wird NICHT uebernommen, sondern zur Pruefung vorgelegt. Ob eine
                Veranstaltung Geld kostet, entscheidet der Beleg auf der Seite,
                nicht die Vermutung eines Modells.
-  Dublette     wird uebernommen, wenn beide Eintraege dieselbe Quelladresse
-               oder denselben Ort haben — sonst vorgelegt. Falsch verschmolzen
-               heisst: eine Veranstaltung ist weg, und niemand merkt es.
+  Dublette     wird NUR gemeldet. Der erste Lauf hat gezeigt, warum: Das
+               Modell haelt jede wiederkehrende Reihe fuer eine Dublette —
+               "Fuehrung im Furtner" an vier Terminen, "Karaoke mit Stefan" an
+               zwei Abenden. Es sagt sogar dazu, dass die Tage verschieden
+               sind, und meldet sie trotzdem. Verschmolzen wird deshalb nur
+               nach den festen Regeln in sammeln.py.
 
 Jede Entscheidung steht hinterher in ausgabe/NACHPRUEFUNG.md, auch die
 uebernommenen. Automatik, die man nicht nachlesen kann, ist keine Hilfe.
@@ -35,7 +38,7 @@ from datetime import date, datetime
 import yaml
 
 from sammeln import (SICHERHEIT, modell_antwort, ort_vereinheitlichen,
-                     ort_woerter, tage, verschmelzen)
+                     ort_woerter, tage)
 
 BASIS = pathlib.Path(__file__).resolve().parent.parent
 DATEN = BASIS / "daten" / "events.json"
@@ -150,36 +153,6 @@ def bekannte_orte(events: list, tabelle: dict) -> list:
     return namen
 
 
-def zusammenlegen(events: list, gruppe: list, bericht: list, streng: bool) -> set:
-    """Eine vom Modell gemeldete Dublettengruppe verschmelzen."""
-    teile = [events[n] for n in gruppe if 0 <= n < len(events)]
-    if len(teile) < 2:
-        return set()
-
-    if any(ev.get("manuell_bestaetigt") for ev in teile):
-        bericht.append("  übergangen: enthält einen von Hand bestätigten Eintrag")
-        return set()
-
-    if streng:
-        # Ein gemeinsames Merkmal ausser dem Urteil des Modells: dieselbe
-        # Adresse oder derselbe Ort. Ohne das bleibt es ein Vorschlag.
-        adressen = [ev.get("quelle_url") for ev in teile]
-        orte = [ort_woerter(ev.get("ort_name")) for ev in teile]
-        gleich = (len(set(adressen)) == 1 and adressen[0]
-                  or all(o and o & orte[0] for o in orte))
-        if not gleich:
-            bericht.append("  nur gemeldet, nicht verschmolzen: "
-                           "weder gleiche Adresse noch gleicher Ort")
-            return set()
-
-    behalten = max(teile, key=lambda ev: (len(ev.get("beschreibung") or ""),
-                                          len(ev.get("quellen_weitere") or [])))
-    for ev in teile:
-        if ev is not behalten:
-            verschmelzen(behalten, ev)
-    return {id(ev) for ev in teile if ev is not behalten}
-
-
 def main() -> None:
     nur_melden = "--nur-melden" in sys.argv
     if not os.environ.get("MISTRAL_API_KEY"):
@@ -201,7 +174,7 @@ def main() -> None:
     orte = bekannte_orte(kommend, tabelle)
     text = ("Bekannte Orte:\n" + "\n".join(f"- {o}" for o in orte)
             + "\n\nVeranstaltungen:\n"
-            + "\n".join(zeile(i, ev) for i, ev in enumerate(kommend)))
+            + "\n".join(zeile(i, ev) for i, ev in enumerate(kommend, 1)))
 
     print(f"{len(kommend)} Veranstaltungen, {len(orte)} bekannte Orte "
           f"({len(text)} Zeichen)")
@@ -209,17 +182,19 @@ def main() -> None:
 
     bericht = [f"# Nachprüfung {datetime.now():%d.%m.%Y %H:%M}", "",
                f"{len(kommend)} kommende Veranstaltungen geprüft.", ""]
-    entfernen = set()
 
     gruppen = antwort.get("dubletten") or []
-    bericht += ["## Dubletten", ""] if gruppen else ["## Dubletten", "", "_Keine._", ""]
+    bericht += ["## Dublettenverdacht", "",
+                "Nur gemeldet, nichts davon wurde zusammengelegt. Das Modell hält "
+                "wiederkehrende Reihen für Dubletten, auch wenn die Termine "
+                "verschieden sind — prüfen Sie selbst, bevor Sie etwas ändern.", ""]
+    if not gruppen:
+        bericht.append("_Keine._")
     for g in gruppen:
         nummern = g.get("nummern") or []
-        titel = [kommend[n]["titel"] for n in nummern if 0 <= n < len(kommend)]
+        titel = [kommend[n - 1]["titel"] for n in nummern if 1 <= n <= len(kommend)]
         bericht.append(f"- {' + '.join(repr(t) for t in titel)}")
         bericht.append(f"  {g.get('begruendung')}")
-        if not nur_melden:
-            entfernen |= zusammenlegen(kommend, nummern, bericht, streng=True)
     bericht.append("")
 
     wid = antwort.get("widersprueche") or []
@@ -229,9 +204,9 @@ def main() -> None:
     bericht.append("")
     for w in wid:
         n = w.get("nummer")
-        if not (isinstance(n, int) and 0 <= n < len(kommend)):
+        if not (isinstance(n, int) and 1 <= n <= len(kommend)):
             continue
-        ev = kommend[n]
+        ev = kommend[n - 1]
         bericht.append(f"- **{ev['titel']}** ({tage(ev)[0]})")
         bericht.append(f"  eingestuft als `{ev.get('eintritt')}`, "
                        f"vermutet `{w.get('vermutet')}` — {w.get('begruendung')}")
@@ -244,9 +219,9 @@ def main() -> None:
     bericht += ["## Orte vereinheitlicht", ""]
     for o in antwort.get("orte") or []:
         n = o.get("nummer")
-        if not (isinstance(n, int) and 0 <= n < len(kommend)):
+        if not (isinstance(n, int) and 1 <= n <= len(kommend)):
             continue
-        ev = kommend[n]
+        ev = kommend[n - 1]
         neu = ort_vereinheitlichen(o.get("bekannter_ort"), tabelle)
         alt = ev.get("ort_name")
         if not neu or neu == alt or ev.get("manuell_bestaetigt"):
@@ -263,9 +238,6 @@ def main() -> None:
         bericht.append("_Nichts zu ändern._")
     bericht.append("")
 
-    if entfernen:
-        daten["events"] = [ev for ev in daten["events"] if id(ev) not in entfernen]
-
     if not nur_melden:
         with DATEN.open("w", encoding="utf-8") as datei:
             json.dump(daten, datei, ensure_ascii=False, indent=2)
@@ -273,7 +245,7 @@ def main() -> None:
 
     BERICHT.parent.mkdir(exist_ok=True)
     BERICHT.write_text("\n".join(bericht) + "\n", encoding="utf-8")
-    print(f"  {len(gruppen)} Dublettenmeldungen, davon {len(entfernen)} verschmolzen")
+    print(f"  {len(gruppen)} Dublettenverdachte gemeldet")
     print(f"  {len(wid)} Widersprüche zur Prüfung vorgelegt")
     print(f"  {geaendert} Ortsnamen vereinheitlicht")
     print(f"  Bericht: {BERICHT.relative_to(BASIS)}")
