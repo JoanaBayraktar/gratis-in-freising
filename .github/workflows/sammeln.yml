@@ -1,0 +1,77 @@
+name: Events sammeln
+
+on:
+  # GitHub rechnet in UTC. 03:20 UTC sind 05:20 deutscher Sommerzeit
+  # bzw. 04:20 im Winter. Der Start verschiebt sich bei GitHub regelmaessig
+  # um 5 bis 20 Minuten — fuer einen naechtlichen Abgleich ohne Belang.
+  schedule:
+    - cron: "20 3 * * *"
+  # Erlaubt den Lauf jederzeit von Hand: Actions-Tab, "Run workflow".
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: sammeln
+  cancel-in-progress: false
+
+jobs:
+  sammeln:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - run: pip install -r requirements.txt
+
+      - name: Quellen abfragen
+        env:
+          MISTRAL_API_KEY: ${{ secrets.MISTRAL_API_KEY }}
+        run: python scripts/sammeln.py
+
+      - name: Kalender bauen
+        run: python scripts/build_kalender.py
+
+      # Freitags zusaetzlich die Social-Entwuerfe fuer die kommende Woche.
+      - name: Social-Entwuerfe
+        run: |
+          if [ "$(date +%u)" = "5" ]; then
+            python scripts/build_social.py
+          else
+            echo "Kein Freitag, uebersprungen."
+          fi
+
+      - name: Tagesmail bauen
+        id: mail
+        run: |
+          python scripts/build_mail.py
+          echo "betreff=$(cat ausgabe/mail-betreff)" >> "$GITHUB_OUTPUT"
+
+      - name: Tagesmail senden
+        uses: dawidd6/action-send-mail@v18
+        with:
+          server_address: ${{ secrets.MAIL_SERVER }}
+          server_port: 465
+          secure: true
+          username: ${{ secrets.MAIL_BENUTZER }}
+          password: ${{ secrets.MAIL_PASSWORT }}
+          from: Gratis in Freising <${{ secrets.MAIL_BENUTZER }}>
+          to: ${{ secrets.MAIL_AN }}
+          subject: ${{ steps.mail.outputs.betreff }}
+          html_body: file://ausgabe/mail.html
+
+      - name: Ergebnis festschreiben
+        run: |
+          git config user.name  "gratis-freising-bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add daten ausgabe
+          if git diff --staged --quiet; then
+            echo "Nichts geaendert."
+          else
+            git commit -m "Sammellauf $(date +%F)"
+            git push
+          fi

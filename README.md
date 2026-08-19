@@ -1,0 +1,138 @@
+# Gratis in Freising — automatische Eventsammlung
+
+Jede Nacht liest ein GitHub-Action-Lauf die Quellen aus `quellen.yml`, erkennt
+Veranstaltungen mit freiem Eintritt und pflegt daraus zwei Kalender. Das läuft
+auf GitHubs Servern — Ihr Rechner muss dafür nicht an sein.
+
+## Was wo liegt
+
+```
+quellen.yml              Quellenliste  ← hier Quellen an- und abschalten
+SCHEMA.md                welche Felder ein Event hat und was sie bedeuten
+daten/
+  events.json            die Datenablage — das ist die Wahrheit
+  quellen-status.json    Gesundheit je Quelle: Fehlversuche, Trefferverlauf
+ausgabe/
+  gratis-freising.ics    gesicherte Gratis-Events → abonnieren
+  pruefen.ics            unklare Fälle → wöchentlich sichten
+  PRUEFLISTE.md          dieselben Fälle als lesbare Liste
+  SOCIAL-KWxx.md         Post-Entwürfe, entstehen freitags
+  mail.html              die Tagesmail, wird täglich neu erzeugt
+scripts/
+  sammeln.py             holt die Quellen, fragt das Modell, schreibt events.json
+  build_kalender.py      baut die .ics-Dateien und die Prüfliste
+  build_mail.py          baut die Tagesmail
+  build_social.py        baut die Social-Entwürfe
+  event_id.py            stabile ID für die Dublettenerkennung
+.github/workflows/       der nächtliche Ablauf
+```
+
+Wichtig zu verstehen: **`daten/events.json` ist die Quelle, alles unter `ausgabe/`
+wird daraus neu erzeugt.** Änderungen direkt in einer `.ics`-Datei sind beim
+nächsten Lauf weg. Korrekturen gehören in die JSON-Datei.
+
+## Einrichtung
+
+1. Repository auf GitHub anlegen (öffentlich) und diesen Ordner hochladen.
+2. Unter **Settings → Secrets and variables → Actions → New repository secret**
+   ein Secret namens `MISTRAL_API_KEY` mit Ihrem Mistral-Schlüssel anlegen.
+   Der Schlüssel gehört ausschließlich dorthin — nie in eine Datei im Repo.
+3. Für die Tagesmail vier weitere Secrets anlegen:
+
+   | Name | Wert |
+   |---|---|
+   | `MAIL_SERVER` | SMTP-Server, bei Gmail `smtp.gmail.com` |
+   | `MAIL_BENUTZER` | Ihre Absenderadresse |
+   | `MAIL_PASSWORT` | **App-Passwort**, nicht das Kontopasswort |
+   | `MAIL_AN` | Empfänger, mehrere mit Komma getrennt |
+
+   Gmail und die meisten Anbieter verlangen für SMTP ein eigenes App-Passwort,
+   das Sie in Ihren Kontoeinstellungen erzeugen. Das normale Passwort
+   funktioniert nicht und gehört auch nicht in ein Repository-Secret.
+
+4. Unter **Actions** den Workflow „Events sammeln" einmal von Hand starten
+   („Run workflow"), um zu sehen, ob alles greift.
+
+Danach läuft er täglich um 03:20 UTC, also 05:20 deutscher Sommerzeit.
+
+## Die Tagesmail
+
+Nach jedem Sammellauf geht eine Mail raus: was heute läuft, dann Tag für Tag
+die kommenden sieben Tage. Enthalten sind nur Veranstaltungen mit `frei` oder
+`spende` — Spendenbasis ist sichtbar gekennzeichnet, weil das nicht dasselbe
+ist wie kostenlos. Unklare Fälle bleiben draußen und erscheinen nur als Zähler
+am Fuß der Mail, damit Sie sehen, wie viel in der Prüfliste liegt.
+
+Der Mailtext lässt sich jederzeit ohne Versand ansehen:
+
+```bash
+./venv/bin/python scripts/build_mail.py
+```
+
+Danach `ausgabe/mail.html` im Browser öffnen.
+
+## Kalender abonnieren
+
+Nach dem ersten erfolgreichen Lauf liegt `ausgabe/gratis-freising.ics` im Repo.
+Den Raw-Link kopieren (Datei öffnen → Button „Raw" → Adresse aus der Zeile) und
+im Kalenderprogramm unter „Kalenderabonnement hinzufügen" eintragen. Der
+Kalender aktualisiert sich dann von selbst.
+
+## Die wöchentliche Handarbeit
+
+Rechnen Sie mit rund 15 Minuten:
+
+1. `ausgabe/PRUEFLISTE.md` öffnen
+2. Bei jedem Fall entscheiden — das Belegzitat steht dabei, meist reicht es
+3. In `daten/events.json` das Feld `eintritt` korrigieren **und
+   `manuell_bestaetigt` auf `true` setzen**
+
+Schritt 3 ist der entscheidende: `manuell_bestaetigt: true` schützt Ihre
+Entscheidung davor, im nächsten Lauf wieder überschrieben zu werden. Der
+Sammellauf fasst solche Einträge nur noch an, um `zuletzt_gesehen` nachzuziehen.
+
+## Quellen pflegen
+
+`quellen.yml` lässt sich direkt auf github.com bearbeiten: Datei öffnen,
+Stift-Symbol, ändern, „Commit changes". Kein Git nötig.
+
+`aktiv: false` schaltet eine Quelle ab, ohne sie zu löschen — samt Notiz, warum.
+
+Eine einzelne Quelle vorher ausprobieren:
+
+```bash
+MISTRAL_API_KEY=... python3 scripts/sammeln.py "Schafhof Kunstforum"
+```
+
+## Wenn eine Quelle Ärger macht
+
+`daten/quellen-status.json` führt je Quelle Buch: letzter Erfolg, Fehlversuche
+in Folge, wie viele Events die letzten zehn Läufe gebracht haben. Der Lauf meldet
+am Ende, welche Quellen dreimal hintereinander versagt haben, und warnt, wenn
+eine Quelle plötzlich null Events liefert, die sonst zuverlässig welche hatte.
+Das ist der stille Ausfall, der sonst monatelang unbemerkt bliebe.
+
+GitHub schickt Ihnen außerdem automatisch eine E-Mail, wenn ein Lauf abbricht.
+
+## Stand der Quellen (geprüft am 19.08.2026)
+
+Von den 23 gesammelten Adressen liefern beim einfachen Abruf nur sechs
+verwertbare Daten — die übrigen laden ihre Termine per JavaScript nach oder
+nennen Datumsangaben ohne Jahreszahl. Die Gründe stehen einzeln in `quellen.yml`.
+
+Aktiv: Stadtkalender Freising, Merkur, Schafhof, Furtner (API), Einfach selber
+machen (API), vhs „kostenfrei".
+
+Bevor weitere Quellen dazukommen, lohnt der Blick in die Daten: Wenn die beiden
+Aggregatoren die Veranstaltungen der Einzelveranstalter ohnehin mit abdecken,
+bringt jede zusätzliche Quelle vor allem zusätzliche Wartung.
+
+## Kosten
+
+Rund 25.000 Tokens pro Lauf — die Detailseiten hinter den Übersichten kosten
+mehr als die Listen selbst, liefern aber erst die Preisangabe. Mit
+`mistral-small-latest` sind das etwa 0,4 Cent pro Lauf, also weniger als
+einen Euro im Monat. GitHub Actions ist bei öffentlichen Repositories kostenlos.
+
+Ein anderes Modell lässt sich ohne Codeänderung setzen: Umgebungsvariable
+`MISTRAL_MODELL`, lokal vorangestellt oder im Workflow als `env:`.

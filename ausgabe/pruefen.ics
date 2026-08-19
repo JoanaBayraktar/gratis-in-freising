@@ -1,0 +1,240 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Gratis in Freising//Eventsammler//DE
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:Gratis in Freising — zu pruefen
+X-WR-TIMEZONE:Europe/Berlin
+BEGIN:VTIMEZONE
+TZID:Europe/Berlin
+BEGIN:DAYLIGHT
+TZOFFSETFROM:+0100
+TZOFFSETTO:+0200
+TZNAME:CEST
+DTSTART:19700329T020000
+RRULE:FREQ=YEARLY;BYMONTH=3;BYDAY=-1SU
+END:DAYLIGHT
+BEGIN:STANDARD
+TZOFFSETFROM:+0200
+TZOFFSETTO:+0100
+TZNAME:CET
+DTSTART:19701025T030000
+RRULE:FREQ=YEARLY;BYMONTH=10;BYDAY=-1SU
+END:STANDARD
+END:VTIMEZONE
+BEGIN:VEVENT
+UID:90f2fb9057f18163@gratis-freising
+DTSTAMP:20260819T093907Z
+DTSTART;TZID=Europe/Berlin:20260819T090000
+DTEND;TZID=Europe/Berlin:20260927T000000
+SUMMARY:[PRUEFEN] EIN LEBEN IN FARBEN – DIE MALERIN RUTH KOHLER
+LOCATION:Diözesanmuseum Freising — Domberg 21\, 85354 Freising
+DESCRIPTION:Ausstellung der international anerkannten Künstlerin Ruth Kohl
+ er\, die sich in ihren Werken mit Farbe als Ausdruck von Emotionen und Eri
+ nnerungen auseinandersetzt. Gezeigt wird ihr künstlerischer Werdegang von
+  Fresken über Glasfenster bis zur abstrakten Malerei.\n\nEintritt: Eintri
+ tt UNKLAR — bitte pruefen\nBeleg: "8\,00 Euro"\nSicherheit: mittel\n\nVe
+ ranstalter: Diözesanmuseum Freising\nKategorie: Kunst\nZielgruppe: Alle\n
+ Drinnen/Draussen: drinnen\n\nQuelle: https://veranstaltungen.freising.de/f
+ reising/ein-leben-in-farben-die-malerin-ruth-kohler-e757a5c3d33158cbab25d7
+ 19172f48fa1.html\nAuch bei: https://veranstaltungen.merkur.de/freising/ein
+ -leben-in-farben-die-malerin-ruth-kohler-e757a5c3d33158cbab25d719172f48fa1
+ .html
+URL:https://veranstaltungen.freising.de/freising/ein-leben-in-farben-die-ma
+ lerin-ruth-kohler-e757a5c3d33158cbab25d719172f48fa1.html
+CATEGORIES:Kunst
+END:VEVENT
+BEGIN:VEVENT
+UID:7c62dab1505ff73c@gratis-freising
+DTSTAMP:20260819T093907Z
+DTSTART;TZID=Europe/Berlin:20260819T093000
+DTEND;TZID=Europe/Berlin:20260819T113000
+SUMMARY:[PRUEFEN] Zwillings-Krabbelgruppe
+LOCATION:Epiphanias-Zentrum — Katharina-Mair-Straße 19\, 85356 Freising
+DESCRIPTION:Treffpunkt für Eltern mit Zwillingen\, Babys und Kleinkindern 
+ ab Krabbelalter. Gemeinsame Aktivitäten und Austausch in entspannter Atmo
+ sphäre.\n\nEintritt: Eintritt UNKLAR — bitte pruefen\nSicherheit: niedr
+ ig\n\nKategorie: Familie\nZielgruppe: Kinder\nDrinnen/Draussen: drinnen\nA
+ nmeldung noetig: ja — siehe Quelle\n\nQuelle: https://veranstaltungen.me
+ rkur.de/freising/zwillings-krabbelgruppe-e940437dc64af40f2d1829b2001e77dd2
+ .html
+URL:https://veranstaltungen.merkur.de/freising/zwillings-krabbelgruppe-e940
+ 437dc64af40f2d1829b2001e77dd2.html
+CATEGORIES:Familie
+END:VEVENT
+BEGIN:VEVENT
+UID:ce0aa7f2a4646fa4@gratis-freising
+DTSTAMP:20260819T093907Z
+DTSTART;TZID=Europe/Berlin:20260819T100000
+DTEND;TZID=Europe/Berlin:20260822T180000
+SUMMARY:[PRUEFEN] Ausstellung Max Pfefferle "Alles nur Kleinigkeiten" in de
+ r Stadtbibliothek Freising
+LOCATION:Stadtbibliothek — Weizengasse 3 (Zugang über Untere Hauptstraß
+ e)\, 85354 Freising
+DESCRIPTION:Ausstellung des Künstlers Max Pfefferle\, der großformatige F
+ otografien mit filigranen Acryl-Elementen kombiniert. Die Werke laden zum 
+ Schmunzeln ein und verbinden digitale Fotografie mit handwerklicher Malere
+ i.\n\nEintritt: Eintritt UNKLAR — bitte pruefen\nBeleg: "Eintritt frei"\
+ nSicherheit: mittel\n\nVeranstalter: Stadtbibliothek Freising\, Nora Hopfe
+ nmüller\nKategorie: Kunst\nZielgruppe: Alle\nDrinnen/Draussen: drinnen\n\
+ nQuelle: https://veranstaltungen.freising.de/freising/ausstellung-max-pfef
+ ferle-alles-nur-kleinigkeiten-in-der-stadtbibliothek-freising-e53afc4e6925
+ e3b99f772794c59e4cd9f.html\nAuch bei: https://veranstaltungen.merkur.de/fr
+ eising/ausstellung-max-pfefferle-alles-nur-kleinigkeiten-in-der-stadtbibli
+ othek-freising-e53afc4e6925e3b99f772794c59e4cd9f.html
+URL:https://veranstaltungen.freising.de/freising/ausstellung-max-pfefferle-
+ alles-nur-kleinigkeiten-in-der-stadtbibliothek-freising-e53afc4e6925e3b99f
+ 772794c59e4cd9f.html
+CATEGORIES:Kunst
+END:VEVENT
+BEGIN:VEVENT
+UID:37abfa4825a64291@gratis-freising
+DTSTAMP:20260819T093907Z
+DTSTART;TZID=Europe/Berlin:20260819T140000
+DTEND;TZID=Europe/Berlin:20260819T190000
+SUMMARY:[PRUEFEN] SpielRäume
+LOCATION:Schafhof - Europäisches Kunstforum Oberbayern — Am Schafhof 1\,
+  85354 Freising
+DESCRIPTION:Tandemausstellung der Künstlerinnen Judit Lilla Molnár und Li
+ na Zylla\, die im Rahmen des Residenzprogramms des Bezirks Oberbayern expe
+ rimentelle Räume schaffen. Die Werke verfremden Alltagswahrnehmung und ve
+ rwandeln sie in fiktive Erlebniswelten.\n\nEintritt: Eintritt UNKLAR — b
+ itte pruefen\nBeleg: "Eintritt frei"\nSicherheit: mittel\n\nVeranstalter: 
+ Schafhof - Europäisches Kunstforum Oberbayern\nKategorie: Kunst\nZielgrup
+ pe: Alle\nDrinnen/Draussen: drinnen\n\nQuelle: https://veranstaltungen.fre
+ ising.de/freising/spielraeume-e962a5c9f4f3a618a9bee56a76fb2b908.html\nAuch
+  bei: https://veranstaltungen.merkur.de/freising/spielraeume-e962a5c9f4f3a
+ 618a9bee56a76fb2b908.html
+URL:https://veranstaltungen.freising.de/freising/spielraeume-e962a5c9f4f3a6
+ 18a9bee56a76fb2b908.html
+CATEGORIES:Kunst
+END:VEVENT
+BEGIN:VEVENT
+UID:2cf3f35f5b46eb23@gratis-freising
+DTSTAMP:20260819T093907Z
+DTSTART;TZID=Europe/Berlin:20260819T140000
+DTEND;TZID=Europe/Berlin:20260819T160000
+SUMMARY:Gemeinsames Handarbeiten (Spende)
+LOCATION:Neustifter Pfarrheim — 85356 Freising
+DESCRIPTION:Regelmäßiges Treffen zum gemeinsamen Handarbeiten im Neustift
+ er Pfarrheim. Der Verkauf der entstandenen Werke dient einem guten Zweck. 
+ Ohne Anmeldung.\n\nEintritt: Eintritt frei\, Spende erbeten\nBeleg: "Verka
+ uf für einen guten Zweck"\nSicherheit: hoch\n\nKategorie: Sonstiges\nZiel
+ gruppe: Alle\nDrinnen/Draussen: drinnen\n\nQuelle: https://veranstaltungen
+ .merkur.de/freising/gemeinsames-handarbeiten-eb60e87c10cfbdc74b655208247bd
+ b7cf.html
+URL:https://veranstaltungen.merkur.de/freising/gemeinsames-handarbeiten-eb6
+ 0e87c10cfbdc74b655208247bdb7cf.html
+CATEGORIES:Sonstiges
+END:VEVENT
+BEGIN:VEVENT
+UID:a14f53d918a66454@gratis-freising
+DTSTAMP:20260819T093907Z
+DTSTART;TZID=Europe/Berlin:20260819T150000
+DTEND;TZID=Europe/Berlin:20260819T160000
+SUMMARY:[PRUEFEN] Vorlesen für Kinder ab 5 Jahren
+LOCATION:Stadtbibliothek — Weizengasse 3 (Zugang über Untere Hauptstraß
+ e)\, 85354 Freising
+DESCRIPTION:Interaktive Vorlesestunde für Kinder ab 5 Jahren mit dem Märc
+ hen „Das Märchen von der Regentrude“. Eltern werden gebeten\, währen
+ d der Veranstaltung in der Bibliothek zu bleiben.\n\nEintritt: Eintritt UN
+ KLAR — bitte pruefen\nBeleg: "Eintritt frei"\nSicherheit: mittel\n\nVera
+ nstalter: Stadtbibliothek Freising\, Auer Claudia\nKategorie: Kinderprogra
+ mm\nZielgruppe: Kinder\nDrinnen/Draussen: drinnen\n\nQuelle: https://veran
+ staltungen.freising.de/freising/vorlesen-fuer-kinder-ab-5-jahren-e61b37966
+ 50edcc284e95079ae92c872b.html\nAuch bei: https://veranstaltungen.merkur.de
+ /freising/vorlesen-fuer-kinder-ab-5-jahren-e61b3796650edcc284e95079ae92c87
+ 2b.html
+URL:https://veranstaltungen.freising.de/freising/vorlesen-fuer-kinder-ab-5-
+ jahren-e61b3796650edcc284e95079ae92c872b.html
+CATEGORIES:Kinderprogramm
+END:VEVENT
+BEGIN:VEVENT
+UID:2f8dd7195f78456e@gratis-freising
+DTSTAMP:20260819T093907Z
+DTSTART;TZID=Europe/Berlin:20260821T200000
+DTEND;TZID=Europe/Berlin:20260821T220000
+SUMMARY:Anonyme Alkoholiker
+LOCATION:Paul-Gerhardt-Haus — General-von-Stein-Straße 22\, 85356 Freisi
+ ng
+DESCRIPTION:Regelmäßiges Treffen der Selbsthilfegruppe Anonyme Alkoholike
+ r. Offenes Angebot für Betroffene und Interessierte jeden Donnerstag und 
+ Freitag um 20 Uhr.\n\nEintritt: Eintritt frei\nSicherheit: niedrig\n\nKate
+ gorie: Sonstiges\nZielgruppe: Erwachsene\nDrinnen/Draussen: drinnen\n\nQue
+ lle: https://veranstaltungen.merkur.de/freising/anonyme-alkoholiker-e3ae9b
+ 93c79a784e9e0d9eba917314af3.html
+URL:https://veranstaltungen.merkur.de/freising/anonyme-alkoholiker-e3ae9b93
+ c79a784e9e0d9eba917314af3.html
+CATEGORIES:Sonstiges
+END:VEVENT
+BEGIN:VEVENT
+UID:c5e2d8b175557eb3@gratis-freising
+DTSTAMP:20260819T093907Z
+DTSTART;TZID=Europe/Berlin:20260822T070000
+DTEND;TZID=Europe/Berlin:20260822T090000
+SUMMARY:Wochenmarkt
+LOCATION:Marienplatz Freising — Marienplatz 1\, 85354 Freising
+DESCRIPTION:Traditioneller Wochenmarkt auf dem Marienplatz mit frischen reg
+ ionalen Produkten\, Blumen und handwerklichen Erzeugnissen. Mittwochs und 
+ samstags von 7 bis 13 Uhr.\n\nEintritt: Eintritt frei\nSicherheit: mittel\
+ n\nKategorie: Markt\nZielgruppe: Alle\nDrinnen/Draussen: draussen\n\nQuell
+ e: https://veranstaltungen.merkur.de/freising/wochenmarkt-e4ea65bd0fb311d6
+ 2e7b0c01da7197bac.html
+URL:https://veranstaltungen.merkur.de/freising/wochenmarkt-e4ea65bd0fb311d6
+ 2e7b0c01da7197bac.html
+CATEGORIES:Markt
+END:VEVENT
+BEGIN:VEVENT
+UID:cbb4c1fbee50595c@gratis-freising
+DTSTAMP:20260819T093907Z
+DTSTART;TZID=Europe/Berlin:20260921T183000
+DTEND;TZID=Europe/Berlin:20260921T203000
+SUMMARY:Nähcafé & Handwerksabend (Ende der Sommerpause!) (Spende)
+LOCATION:Offene Werkstatt Freising — Schwalbenweg 1\, 85356 Freising
+DESCRIPTION:Gemeinschaftliches Näh- und Handwerkscafé mit Möglichkeit zu
+ m Stricken\, Häkeln und Basteln. Spendenbasis für Nichtmitglieder zur De
+ ckung der Unkosten.\n\nEintritt: Eintritt frei\, Spende erbeten\nBeleg: "W
+ ir freuen uns über eine kleine Spende bei Nichtmitgliedern\, um die Unkos
+ ten zu decken."\nSicherheit: hoch\n\nKategorie: Sonstiges\nZielgruppe: All
+ e\n\nQuelle: https://einfach-selber-machen.org/event/naehcafe-handwerksabe
+ nd-ende-der-sommerpause/
+URL:https://einfach-selber-machen.org/event/naehcafe-handwerksabend-ende-de
+ r-sommerpause/
+CATEGORIES:Sonstiges
+END:VEVENT
+BEGIN:VEVENT
+UID:0b77632db79f9951@gratis-freising
+DTSTAMP:20260819T093907Z
+DTSTART;TZID=Europe/Berlin:20261003T200000
+DTEND;TZID=Europe/Berlin:20261003T200000
+SUMMARY:Abtanzparty zu Rock und Pop querbeet (Spende)
+LOCATION:Furtnerbräu — Obere Hauptstr. 42\, 85354 Freising
+DESCRIPTION:Tanzparty mit Rock- und Popmusik im Jagdzimmer. Eintritt auf Sp
+ endenbasis – DJ-Team Martin und Uli sorgen für Stimmung.\n\nEintritt: E
+ intritt frei\, Spende erbeten\nBeleg: "Um Spenden wird gebeten!"\nSicherhe
+ it: hoch\n\nKategorie: Musik\nZielgruppe: Alle\n\nQuelle: https://www.furt
+ ner-freising.de/veranstaltung/abtanzparty-zu-rock-und-pop-querbeet-2/\nBil
+ d: https://www.furtner-freising.de/wp-content/uploads/2026/03/63526380cc26
+ 6_1666343808.jpg
+URL:https://www.furtner-freising.de/veranstaltung/abtanzparty-zu-rock-und-p
+ op-querbeet-2/
+CATEGORIES:Musik
+END:VEVENT
+BEGIN:VEVENT
+UID:ee477e5da391da09@gratis-freising
+DTSTAMP:20260819T093907Z
+DTSTART;TZID=Europe/Berlin:20261205T200000
+DTEND;TZID=Europe/Berlin:20261205T200000
+SUMMARY:Abtanzparty zu Rock und Pop querbeet (Spende)
+LOCATION:Furtnerbräu — Obere Hauptstr. 42\, 85354 Freising
+DESCRIPTION:Tanzparty mit Rock- und Popmusik. DJ-Team Martin und Uli sorgen
+  für Stimmung.\n\nEintritt: Eintritt frei\, Spende erbeten\nBeleg: "Um Sp
+ enden wird gebeten!"\nSicherheit: mittel\n\nKategorie: Musik\nZielgruppe: 
+ Alle\n\nQuelle: https://www.furtner-freising.de/veranstaltung/abtanzparty-
+ zu-rock-und-pop-querbeet/\nBild: https://www.furtner-freising.de/wp-conten
+ t/uploads/2026/03/63526380cc266_1666343808.jpg
+URL:https://www.furtner-freising.de/veranstaltung/abtanzparty-zu-rock-und-p
+ op-querbeet/
+CATEGORIES:Musik
+END:VEVENT
+END:VCALENDAR

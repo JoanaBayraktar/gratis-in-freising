@@ -1,0 +1,184 @@
+# Quellen fuer den naechtlichen Sammellauf.
+#
+# Diese Datei koennen Sie direkt auf github.com bearbeiten: Datei oeffnen,
+# Stift-Symbol, aendern, unten "Commit changes". Kein Git noetig.
+#
+#   aktiv: false   schaltet eine Quelle ab, ohne sie zu loeschen
+#   methode: text  Seite holen, Text extrahieren, Modell liest ihn
+#   methode: tribe WordPress-Kalender-API, liefert fertige Felder (viel genauer)
+#   eintritt_vorgabe: frei   nur fuer Seiten, auf denen per Definition
+#                            alles kostenlos ist. Sparsam verwenden.
+#   max_zeichen    Obergrenze fuer den Text, der ans Modell geht (Standard 40000)
+
+quellen:
+
+  # ---------------------------------------------------------------
+  # MVP — diese laufen ab sofort. Drei Aggregatoren, zwei offene APIs,
+  # eine Sonderseite. Nach zwei Wochen sehen wir an den Zahlen, was die
+  # abgeschalteten Quellen darueber hinaus ueberhaupt noch beitragen.
+  # ---------------------------------------------------------------
+
+  # detail_muster: regulaerer Ausdruck. Passt er auf einen Link der
+  # Uebersichtsseite, wird diese Detailseite mitgelesen. Dort steht meist erst
+  # der Eintrittspreis, und die Adresse landet als quelle_url im Kalender.
+  # Ohne detail_muster wird nur die Uebersichtsseite gelesen.
+  # max_details begrenzt die Zahl der Unterseiten pro Lauf (Standard 30).
+  - name: Stadtkalender Freising
+    url: https://veranstaltungen.freising.de/freising/
+    methode: text
+    detail_muster: '-e[0-9a-f]{30,}\.html'
+    aktiv: true
+
+  - name: Merkur Veranstaltungen
+    url: https://veranstaltungen.merkur.de/freising/?suche&datumspezial=abheute&kms=5
+    methode: text
+    detail_muster: '-e[0-9a-f]{30,}\.html'
+    aktiv: true
+
+  # ort_standard greift nur, wenn die Quelle selbst keinen Ort nennt. Sinnvoll
+  # bei Veranstaltern, die ausschliesslich im eigenen Haus veranstalten —
+  # NICHT bei Aggregatoren wie Stadtkalender oder Merkur.
+  - name: Schafhof Kunstforum
+    url: https://www.schafhof-kunstforum.de/Aktuell/Veranstaltungskalender/
+    methode: text
+    detail_muster: 'Veranstaltungskalender/(?!index)[^/?]+\.php'
+    ort_standard: Schafhof — Europäisches Künstlerhaus Oberbayern
+    ort_adresse_standard: Am Schafhof 1, 85354 Freising
+    aktiv: true
+
+  - name: Furtner Freising
+    url: https://furtner-freising.de/wp-json/tribe/events/v1/events?per_page=50
+    methode: tribe
+    ort_standard: Furtnerbräu
+    ort_adresse_standard: Obere Hauptstr. 42, 85354 Freising
+    # Hausregel: Im Furtner ist der Eintritt frei, solange nichts anderes
+    # dabeisteht. Greift nur, wenn die Seite gar keine Preisangabe macht —
+    # ein ausgewiesener Preis oder "Spende erbeten" gewinnt immer.
+    # Auf "mittel" stellen, wenn diese Faelle lieber in die Pruefliste sollen.
+    eintritt_wenn_unklar: frei
+    eintritt_wenn_unklar_confidence: hoch
+    aktiv: true
+
+  - name: Einfach selber machen
+    url: https://einfach-selber-machen.org/wp-json/tribe/events/v1/events?per_page=50
+    methode: tribe
+    ort_standard: Offene Werkstatt Freising
+    ort_adresse_standard: Schwalbenweg 1, 85356 Freising
+    aktiv: true
+
+  - name: vhs Freising — kostenfrei
+    url: https://www.vhs-freising.org/p/fachbereiche/vhs-kostenfrei-633-CAT-KAT332
+    methode: text
+    eintritt_vorgabe: frei
+    aktiv: true
+
+  # ---------------------------------------------------------------
+  # Ausbaustufe 2 — noch nicht geprueft, auf aktiv: true stellen und
+  # einzeln testen mit:  python3 scripts/sammeln.py "Name der Quelle"
+  # ---------------------------------------------------------------
+
+  - name: Modern Studio
+    url: https://modern-studio.de/termine/
+    methode: text
+    aktiv: false
+
+  # ---------------------------------------------------------------
+  # Am 19.08.2026 geprueft: liefern beim einfachen Abruf keine
+  # verwertbaren Termine. Vor dem Aktivieren muss die Ursache geloest
+  # sein, sonst produzieren sie nur leere Laeufe.
+  # ---------------------------------------------------------------
+
+  # Jahresuebersicht mit Datumsangaben OHNE Jahreszahl ("23. April").
+  # Untauglich: das Modell muesste das Jahr raten.
+  - name: Aktive City Freising
+    url: https://aktivecityfreising.de/service/freisinger-stadttermine/
+    methode: text
+    aktiv: false
+
+  # Nur 220 Zeichen Text, keine Termine — laedt per JavaScript nach.
+  - name: Stadtkirche Freising
+    url: https://www.stadtkirche-freising.de/termine/c/0
+    methode: text
+    aktiv: false
+
+  # 9400 Zeichen Text, aber keine einzige Datumsangabe im Quelltext.
+  - name: HSWT Veranstaltungskalender
+    url: https://www.hswt.de/newsroom/veranstaltungskalender
+    methode: text
+    aktiv: false
+
+  # Keine Datumsangaben im Quelltext.
+  - name: Domberg-Akademie
+    url: https://domberg-akademie.de/veranstaltungen
+    methode: text
+    aktiv: false
+
+  - name: Bildungswerk Freising
+    url: https://bildungswerk-freising.de/suche/?suchbegriff=&ort=Freising&kategorie=ALL
+    methode: text
+    aktiv: false
+
+  # Ausstellungsdaten ohne Jahreszahl.
+  - name: Galerie 13
+    url: https://galerie13.net/ausstellungen/
+    methode: text
+    aktiv: false
+
+  - name: Altes Gefaengnis Freising
+    url: https://www.altesgefaengnisfreising.de/ausstellungen
+    methode: text
+    aktiv: false
+
+  - name: Freising evangelisch
+    url: https://freising-evangelisch.de/aktuelles/veranstaltungen/
+    methode: text
+    aktiv: false
+
+  - name: DAV Freising — Vortraege
+    url: https://dav-freising.de/calendar-2/vortraege/
+    methode: text
+    aktiv: false
+
+  - name: HSG Freising — Kultur und Freizeit
+    url: https://hsg-freising.de/kultur-freizeit/
+    methode: text
+    aktiv: false
+
+  - name: HSG Freising — International
+    url: https://hsg-freising.de/international/
+    methode: text
+    aktiv: false
+
+  # Umlaut-Domain uebrig.org. Immer die Punycode-Form verwenden,
+  # der Umlaut bricht sonst manche Werkzeuge.
+  - name: uebrig.org
+    url: https://xn--brig-zra.org/aktuelles/
+    methode: text
+    aktiv: false
+
+  - name: 3Klang Musik
+    url: https://www.3klang-musik.de/freising.html
+    methode: text
+    aktiv: false
+
+  # ---------------------------------------------------------------
+  # Bekannte Problemfaelle. Bleiben aus, bis wir sie einzeln loesen.
+  # ---------------------------------------------------------------
+
+  # Wix-Seite, laedt Termine per JavaScript nach. Braucht Playwright.
+  - name: Genussgarten Freising
+    url: https://www.genussgarten-freising.de/biergarten-events-freising
+    methode: text
+    aktiv: false
+
+  # Blockt automatisierte Zugriffe mit HTTP 403.
+  - name: Junkers Cafe
+    url: https://www.junkerscafe.de/kontrastprogramm/
+    methode: text
+    aktiv: false
+
+  # Filterung laeuft ueber JavaScript, ohne Browser kommt eine leere Liste.
+  - name: TUM Freising
+    url: https://www.tum.de/aktuelles/veranstaltungen/terminuebersicht?tx_solr%5Bfilter%5D%5B0%5D=location%3AFreising
+    methode: text
+    aktiv: false

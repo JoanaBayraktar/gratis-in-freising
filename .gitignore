@@ -1,0 +1,13 @@
+# Lokale Python-Umgebung — gehoert nicht ins Repo
+venv/
+__pycache__/
+*.pyc
+
+# macOS
+.DS_Store
+
+# Falls Sie den Schluessel lokal in eine Datei legen: die bleibt hier.
+.env
+
+# Rechnerspezifische Claude-Code-Einstellungen
+.claude/settings.local.json
