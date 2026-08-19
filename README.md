@@ -7,6 +7,7 @@ auf GitHubs Servern — Ihr Rechner muss dafür nicht an sein.
 ## Was wo liegt
 
 ```
+index.html               die Übersichtsseite (GitHub Pages)
 quellen.yml              Quellenliste  ← hier Quellen an- und abschalten
 SCHEMA.md                welche Felder ein Event hat und was sie bedeuten
 daten/
@@ -112,6 +113,24 @@ Alles Gefundene steht hinterher in `ausgabe/NACHPRUEFUNG.md`, auch das
 ```bash
 MISTRAL_API_KEY=... ./venv/bin/python scripts/nachpruefen.py --nur-melden
 ```
+
+## Die Übersichtsseite
+
+`index.html` zeigt alle gesammelten Veranstaltungen im Browser — mit Datum,
+Ort, Quelle samt Link, Eintrittseinstufung und dem Belegzitat unter „Details".
+Suchen, nach Quelle filtern, nach Datum oder Titel sortieren.
+
+Die Seite liest `daten/events.json` direkt und hat keinen Bauschritt: Was der
+nächtliche Lauf schreibt, steht dort ohne weiteres Zutun. Sie lädt nichts aus
+dem Netz nach — keine Schriften, keine Bibliotheken.
+
+Lokal ansehen (ein Server ist nötig, `file://` darf die JSON nicht laden):
+
+```bash
+./venv/bin/python -m http.server 8765
+```
+
+Dann http://localhost:8765 öffnen.
 
 ## Kalender abonnieren
 

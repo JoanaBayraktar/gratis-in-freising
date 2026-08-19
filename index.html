@@ -1,0 +1,435 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Gratis in Freising — Eventübersicht</title>
+<style>
+/* Bewusst ohne externe Schriften und Bibliotheken: die Seite soll auch dann
+   funktionieren, wenn ein CDN nicht erreichbar ist, und nichts nachladen,
+   was Besucher nicht erwarten. */
+:root {
+  --grund: #ffffff; --text: #1c1c1c; --leise: #6b6b6b; --leiser: #8a8a8a;
+  --linie: #e4e4e4; --kasten: #f7f7f5; --blau: #1a5490; --blau-hell: #e8f0f7;
+  --gruen: #1e6b3a; --gruen-hell: #e6f4ea; --gelb: #7a5b00; --gelb-hell: #fff3cd;
+  --rot: #a8471a; --rot-hell: #fbeae1;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --grund: #16181a; --text: #e8e8e6; --leise: #a0a4a8; --leiser: #7d8288;
+    --linie: #2c3034; --kasten: #1e2124; --blau: #7fb3e0; --blau-hell: #1b2b3a;
+    --gruen: #7fd6a0; --gruen-hell: #16301f; --gelb: #e0c069; --gelb-hell: #332b12;
+    --rot: #e5a179; --rot-hell: #33211a;
+  }
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0; background: var(--grund); color: var(--text);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  line-height: 1.5; -webkit-text-size-adjust: 100%;
+}
+.huelle { max-width: 940px; margin: 0 auto; padding: 24px 18px 64px; }
+
+header h1 { font-size: 26px; margin: 0 0 2px; letter-spacing: -.02em; }
+header p { margin: 0; color: var(--leise); font-size: 14px; }
+header a { color: var(--blau); }
+
+/* Steuerung */
+.steuerung {
+  position: sticky; top: 0; z-index: 5; background: var(--grund);
+  padding: 14px 0 10px; border-bottom: 1px solid var(--linie); margin: 18px 0 0;
+}
+.zeile { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; }
+.zeile + .zeile { margin-top: 8px; }
+input[type=search], select {
+  font: inherit; font-size: 14px; padding: 7px 10px; color: var(--text);
+  background: var(--grund); border: 1px solid var(--linie); border-radius: 7px;
+}
+input[type=search] { flex: 1 1 220px; min-width: 0; }
+button.filter {
+  font: inherit; font-size: 13px; padding: 6px 12px; cursor: pointer;
+  background: var(--grund); color: var(--leise);
+  border: 1px solid var(--linie); border-radius: 999px;
+}
+button.filter[aria-pressed="true"] {
+  background: var(--blau); border-color: var(--blau); color: #fff; font-weight: 600;
+}
+@media (prefers-color-scheme: dark) {
+  button.filter[aria-pressed="true"] { color: #10161c; }
+}
+.zahl { color: var(--leiser); font-size: 13px; margin-left: auto; white-space: nowrap; }
+
+/* Liste */
+.tag {
+  font-size: 12px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase;
+  color: var(--blau); margin: 26px 0 6px; padding-bottom: 4px;
+  border-bottom: 2px solid var(--blau);
+}
+.tag .rel { float: right; color: var(--leiser); font-weight: 400;
+            letter-spacing: 0; text-transform: none; }
+
+article {
+  padding: 13px 0; border-bottom: 1px solid var(--linie);
+  display: grid; grid-template-columns: 92px 1fr; gap: 0 14px;
+}
+@media (max-width: 560px) { article { grid-template-columns: 1fr; gap: 2px; } }
+.wann { color: var(--leise); font-size: 13px; font-variant-numeric: tabular-nums;
+        white-space: nowrap; padding-top: 2px; }
+.titel { font-size: 16px; font-weight: 650; line-height: 1.35; }
+.titel a { color: inherit; text-decoration: none; }
+.titel a:hover { text-decoration: underline; text-decoration-color: var(--blau); }
+.wo { color: var(--leise); font-size: 13px; margin-top: 1px; }
+.text { color: var(--leise); font-size: 14px; margin-top: 5px; }
+
+.marken { display: flex; flex-wrap: wrap; gap: 5px; margin-top: 6px; align-items: center; }
+.marke {
+  font-size: 11.5px; font-weight: 600; padding: 2px 8px; border-radius: 999px;
+  background: var(--kasten); color: var(--leise); white-space: nowrap;
+}
+.marke.frei { background: var(--gruen-hell); color: var(--gruen); }
+.marke.spende { background: var(--gelb-hell); color: var(--gelb); }
+.marke.kostenpflichtig { background: var(--kasten); color: var(--leise); }
+.marke.unklar, .marke.warnung { background: var(--rot-hell); color: var(--rot); }
+.marke.dauer { background: var(--blau-hell); color: var(--blau); }
+.quelle { font-size: 12px; color: var(--leiser); }
+.quelle a { color: var(--leiser); }
+
+details.beleg { margin-top: 5px; }
+details.beleg summary {
+  cursor: pointer; font-size: 12px; color: var(--leiser); list-style: none;
+}
+details.beleg summary::-webkit-details-marker { display: none; }
+details.beleg summary::before { content: "▸ "; }
+details.beleg[open] summary::before { content: "▾ "; }
+details.beleg div {
+  font-size: 13px; color: var(--leise); background: var(--kasten);
+  border-radius: 6px; padding: 8px 10px; margin-top: 5px;
+}
+details.beleg a { color: var(--blau); word-break: break-all; }
+
+.hinweis { color: var(--leiser); padding: 40px 0; text-align: center; }
+footer { margin-top: 40px; padding-top: 14px; border-top: 1px solid var(--linie);
+         color: var(--leiser); font-size: 12.5px; }
+footer a { color: var(--leiser); }
+</style>
+</head>
+<body>
+<div class="huelle">
+
+<header>
+  <h1>Gratis in Freising</h1>
+  <p>Automatisch gesammelte Veranstaltungen. Quelle der Daten:
+     <a href="daten/events.json">events.json</a> —
+     <a href="https://github.com/JoanaBayraktar/gratis-in-freising">Repository</a></p>
+</header>
+
+<div class="steuerung">
+  <div class="zeile">
+    <input type="search" id="suche" placeholder="Titel, Ort, Veranstalter, Kategorie …"
+           autocomplete="off" aria-label="Suchen">
+    <select id="quelle" aria-label="Quelle"><option value="">Alle Quellen</option></select>
+    <select id="sortierung" aria-label="Sortierung">
+      <option value="datum">nach Datum</option>
+      <option value="titel">nach Titel</option>
+      <option value="gefunden">zuletzt gefunden</option>
+    </select>
+  </div>
+  <div class="zeile" id="filter">
+    <button class="filter" data-f="kommend" aria-pressed="true">Ab heute</button>
+    <button class="filter" data-f="woche" aria-pressed="false">7 Tage</button>
+    <button class="filter" data-f="gratis" aria-pressed="false">Nur gesichert gratis</button>
+    <button class="filter" data-f="pruefen" aria-pressed="false">Zu prüfen</button>
+    <button class="filter" data-f="dauer" aria-pressed="false">Dauertermine</button>
+    <span class="zahl" id="zahl"></span>
+  </div>
+</div>
+
+<main id="liste"><p class="hinweis">Lade Daten …</p></main>
+
+<footer id="fuss"></footer>
+</div>
+
+<script>
+"use strict";
+
+const WOCHENTAGE = ["Sonntag","Montag","Dienstag","Mittwoch","Donnerstag","Freitag","Samstag"];
+const MONATE = ["Januar","Februar","März","April","Mai","Juni","Juli","August",
+                "September","Oktober","November","Dezember"];
+
+const liste = document.getElementById("liste");
+const fuss  = document.getElementById("fuss");
+const zahl  = document.getElementById("zahl");
+
+let EVENTS = [];
+const zustand = { suche: "", quelle: "", sortierung: "datum",
+                  filter: new Set(["kommend"]) };
+
+// --- Hilfen -----------------------------------------------------------------
+
+const heute = () => { const d = new Date(); d.setHours(0,0,0,0); return d; };
+
+/** Datumsteil ohne Zeitzonenkorrektur: die Daten stehen in Ortszeit ohne Suffix,
+    `new Date("2026-08-19")` würde als UTC gelesen und könnte einen Tag zurück
+    springen. Deshalb die Bestandteile einzeln übergeben. */
+function alsDatum(wert) {
+  if (!wert) return null;
+  const t = wert.slice(0, 10).split("-").map(Number);
+  if (t.length !== 3 || t.some(isNaN)) return null;
+  return new Date(t[0], t[1] - 1, t[2]);
+}
+
+function spanne(ev) {
+  const b = alsDatum(ev.beginn);
+  const e = alsDatum(ev.ende) || b;
+  return [b, (e && b && e < b) ? b : e];
+}
+const istDauer = ev => { const [b,e] = spanne(ev); return b && e && e > b; };
+
+function zeit(ev) {
+  if (ev.ganztaegig) return "ganztägig";
+  const t = (ev.beginn || "").slice(11, 16);
+  if (!t) return "";
+  const bis = (ev.ende || "").slice(11, 16);
+  const selberTag = (ev.ende || "").slice(0,10) === (ev.beginn || "").slice(0,10);
+  return (bis && selberTag && bis !== t) ? `${t}–${bis}` : `${t} Uhr`;
+}
+
+function datumLang(d) {
+  return `${WOCHENTAGE[d.getDay()]}, ${d.getDate()}. ${MONATE[d.getMonth()]} ${d.getFullYear()}`;
+}
+const kurz = d => `${String(d.getDate()).padStart(2,"0")}.${String(d.getMonth()+1).padStart(2,"0")}.`;
+
+function relativ(d) {
+  const tage = Math.round((d - heute()) / 86400000);
+  if (tage === 0) return "heute";
+  if (tage === 1) return "morgen";
+  if (tage < 0)   return `vor ${-tage} Tagen`;
+  if (tage < 7)   return `in ${tage} Tagen`;
+  return "";
+}
+
+/** Deckt sich mit scripts/regeln.py — wer hier etwas ändert, muss es dort auch tun. */
+const inDieMail = ev => ev.eintritt === "frei" || ev.eintritt === "spende";
+function zuPruefen(ev) {
+  if (ev.manuell_bestaetigt) return false;
+  if (ev.eintritt === "unklar") return true;
+  return inDieMail(ev) && ev.eintritt_confidence !== "hoch";
+}
+const gesichertGratis = ev => inDieMail(ev) && !zuPruefen(ev);
+
+function escape(s) {
+  return String(s == null ? "" : s)
+    .replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;")
+    .replace(/"/g,"&quot;");
+}
+
+// --- Auswahl ----------------------------------------------------------------
+
+function passt(ev) {
+  const [b, e] = spanne(ev);
+  if (!b) return false;
+  const h = heute();
+
+  if (zustand.filter.has("kommend") && e < h) return false;
+  if (zustand.filter.has("woche")) {
+    const grenze = new Date(h); grenze.setDate(grenze.getDate() + 7);
+    if (b > grenze || e < h) return false;
+  }
+  if (zustand.filter.has("gratis") && !gesichertGratis(ev)) return false;
+  if (zustand.filter.has("pruefen") && !zuPruefen(ev)) return false;
+  if (zustand.filter.has("dauer") && !istDauer(ev)) return false;
+  if (zustand.quelle && ev.quelle_name !== zustand.quelle) return false;
+
+  if (zustand.suche) {
+    const heu = [ev.titel, ev.ort_name, ev.ort_adresse, ev.veranstalter,
+                 ev.kategorie, ev.beschreibung, ev.quelle_name]
+                .filter(Boolean).join(" ").toLowerCase();
+    if (!zustand.suche.split(/\s+/).every(w => heu.includes(w))) return false;
+  }
+  return true;
+}
+
+// --- Darstellung ------------------------------------------------------------
+
+function marken(ev) {
+  const m = [];
+  const beschriftung = { frei: "Eintritt frei", spende: "Spende erbeten",
+                         kostenpflichtig: "kostenpflichtig", unklar: "Eintritt unklar" };
+  const art = ev.eintritt || "unklar";
+  m.push(`<span class="marke ${art}">${escape(beschriftung[art] || art)}</span>`);
+
+  if (inDieMail(ev) && ev.eintritt_confidence !== "hoch")
+    m.push(`<span class="marke warnung">nicht belegt</span>`);
+  if (istDauer(ev)) {
+    const [, e] = spanne(ev);
+    m.push(`<span class="marke dauer">läuft bis ${kurz(e)}</span>`);
+  }
+  if (ev.ausgebucht)          m.push(`<span class="marke warnung">ausgebucht</span>`);
+  if (ev.status === "abgesagt") m.push(`<span class="marke warnung">abgesagt</span>`);
+  if (ev.status === "verschwunden") m.push(`<span class="marke warnung">nicht mehr gelistet</span>`);
+  if (ev.anmeldung_noetig)    m.push(`<span class="marke">Anmeldung nötig</span>`);
+  if (ev.manuell_bestaetigt)  m.push(`<span class="marke">von Hand geprüft</span>`);
+  if (ev.kategorie)           m.push(`<span class="marke">${escape(ev.kategorie)}</span>`);
+  return m.join("");
+}
+
+function quellenzeile(ev) {
+  const teile = [];
+  if (ev.quelle_url)
+    teile.push(`<a href="${escape(ev.quelle_url)}" rel="noopener noreferrer" target="_blank">${escape(ev.quelle_name || "Quelle")} ↗</a>`);
+  else if (ev.quelle_name) teile.push(escape(ev.quelle_name));
+  (ev.quellen_weitere || []).forEach((u, i) =>
+    teile.push(`<a href="${escape(u)}" rel="noopener noreferrer" target="_blank">auch hier ${i + 1} ↗</a>`));
+  return teile.length ? `<div class="quelle">${teile.join(" · ")}</div>` : "";
+}
+
+function karte(ev) {
+  const [b, e] = spanne(ev);
+  const ort = [ev.ort_name, ev.ort_adresse].filter(Boolean).join(", ");
+  const titel = ev.quelle_url
+    ? `<a href="${escape(ev.quelle_url)}" rel="noopener noreferrer" target="_blank">${escape(ev.titel)}</a>`
+    : escape(ev.titel);
+
+  const wann = istDauer(ev) ? `${kurz(b)}–${kurz(e)}` : zeit(ev);
+
+  const belegteile = [];
+  if (ev.eintritt_beleg)
+    belegteile.push(`<strong>Beleg:</strong> „${escape(ev.eintritt_beleg)}"`);
+  belegteile.push(`<strong>Sicherheit:</strong> ${escape(ev.eintritt_confidence || "—")}`);
+  if (ev.veranstalter) belegteile.push(`<strong>Veranstalter:</strong> ${escape(ev.veranstalter)}`);
+  if (ev.zielgruppe)   belegteile.push(`<strong>Für:</strong> ${escape(ev.zielgruppe)}`);
+  belegteile.push(`<strong>Zuerst gesehen:</strong> ${escape(ev.zuerst_gesehen || "—")} ·
+                   <strong>zuletzt:</strong> ${escape(ev.zuletzt_gesehen || "—")}`);
+
+  return `<article>
+    <div class="wann">${escape(wann)}</div>
+    <div>
+      <div class="titel">${titel}</div>
+      ${ort ? `<div class="wo">${escape(ort)}</div>` : ""}
+      ${ev.beschreibung ? `<div class="text">${escape(ev.beschreibung)}</div>` : ""}
+      <div class="marken">${marken(ev)}</div>
+      ${quellenzeile(ev)}
+      <details class="beleg"><summary>Details</summary>
+        <div>${belegteile.join("<br>")}</div></details>
+    </div>
+  </article>`;
+}
+
+function zeichnen() {
+  const gewaehlt = EVENTS.filter(passt);
+
+  if (zustand.sortierung === "titel")
+    gewaehlt.sort((a, b) => (a.titel || "").localeCompare(b.titel || "", "de"));
+  else if (zustand.sortierung === "gefunden")
+    gewaehlt.sort((a, b) => (b.zuerst_gesehen || "").localeCompare(a.zuerst_gesehen || "")
+                            || (a.beginn || "").localeCompare(b.beginn || ""));
+  else
+    gewaehlt.sort((a, b) => (a.beginn || "").localeCompare(b.beginn || ""));
+
+  zahl.textContent = `${gewaehlt.length} von ${EVENTS.length}`;
+
+  if (!gewaehlt.length) {
+    liste.innerHTML = `<p class="hinweis">Nichts gefunden. Filter ändern?</p>`;
+    return;
+  }
+
+  // Nach Datum gruppiert, sonst als durchgehende Liste — eine Tagesüberschrift
+  // über einer alphabetischen Sortierung wäre irreführend.
+  if (zustand.sortierung !== "datum") {
+    liste.innerHTML = gewaehlt.map(karte).join("");
+    return;
+  }
+
+  // Was schon laeuft, kommt voran und nicht unter sein Anfangsdatum. Eine
+  // Ausstellung, die im Juli begann, staende sonst als "vor 47 Tagen" ganz
+  // oben — richtig einsortiert und trotzdem irrefuehrend.
+  const h = heute();
+  const laufend = gewaehlt.filter(ev => istDauer(ev) && spanne(ev)[0] < h && spanne(ev)[1] >= h);
+  const uebrig  = gewaehlt.filter(ev => !laufend.includes(ev));
+  laufend.sort((a, b) => spanne(a)[1] - spanne(b)[1]);
+
+  let html = "";
+  if (laufend.length) {
+    html += `<h2 class="tag">Läuft gerade
+             <span class="rel">${laufend.length} mehrtägig</span></h2>`
+         + laufend.map(karte).join("");
+  }
+
+  let letzter = "";
+  for (const ev of uebrig) {
+    const tag = (ev.beginn || "").slice(0, 10);
+    if (tag !== letzter) {
+      letzter = tag;
+      const d = alsDatum(tag);
+      const rel = d ? relativ(d) : "";
+      html += `<h2 class="tag">${d ? escape(datumLang(d)) : "ohne Datum"}
+               ${rel ? `<span class="rel">${escape(rel)}</span>` : ""}</h2>`;
+    }
+    html += karte(ev);
+  }
+  liste.innerHTML = html;
+}
+
+// --- Bedienung --------------------------------------------------------------
+
+document.getElementById("suche").addEventListener("input", ereignis => {
+  zustand.suche = ereignis.target.value.trim().toLowerCase();
+  zeichnen();
+});
+document.getElementById("quelle").addEventListener("change", ereignis => {
+  zustand.quelle = ereignis.target.value; zeichnen();
+});
+document.getElementById("sortierung").addEventListener("change", ereignis => {
+  zustand.sortierung = ereignis.target.value; zeichnen();
+});
+document.getElementById("filter").addEventListener("click", ereignis => {
+  const knopf = ereignis.target.closest("button.filter");
+  if (!knopf) return;
+  const name = knopf.dataset.f;
+  // "Ab heute" und "7 Tage" schliessen einander aus, alles andere ist frei
+  // kombinierbar.
+  if (name === "kommend" || name === "woche") {
+    const anderer = name === "kommend" ? "woche" : "kommend";
+    zustand.filter.delete(anderer);
+  }
+  zustand.filter.has(name) ? zustand.filter.delete(name) : zustand.filter.add(name);
+  document.querySelectorAll("button.filter").forEach(k =>
+    k.setAttribute("aria-pressed", zustand.filter.has(k.dataset.f) ? "true" : "false"));
+  zeichnen();
+});
+
+// --- Laden ------------------------------------------------------------------
+
+fetch("daten/events.json", { cache: "no-cache" })
+  .then(antwort => {
+    if (!antwort.ok) throw new Error(`HTTP ${antwort.status}`);
+    return antwort.json();
+  })
+  .then(daten => {
+    EVENTS = (daten.events || []).filter(ev => ev && ev.titel && ev.beginn);
+
+    const auswahl = document.getElementById("quelle");
+    [...new Set(EVENTS.map(ev => ev.quelle_name).filter(Boolean))].sort()
+      .forEach(name => {
+        const o = document.createElement("option");
+        o.value = o.textContent = name;
+        auswahl.appendChild(o);
+      });
+
+    const letzte = EVENTS.map(ev => ev.zuletzt_gesehen).filter(Boolean).sort().pop();
+    fuss.innerHTML = `${EVENTS.length} Veranstaltungen in der Ablage
+      ${letzte ? `· zuletzt gesammelt am ${escape(letzte)}` : ""}<br>
+      Die Angaben stammen automatisch von den Veranstalterseiten und können
+      falsch sein. „Eintritt frei" ohne Beleg heißt: auf der Seite stand nichts
+      dazu. Im Zweifel beim Veranstalter nachsehen.`;
+
+    zeichnen();
+  })
+  .catch(fehler => {
+    liste.innerHTML = `<p class="hinweis">Daten konnten nicht geladen werden
+      (${escape(fehler.message)}).<br>Die Seite erwartet <code>daten/events.json</code>
+      im selben Verzeichnis.</p>`;
+  });
+</script>
+</body>
+</html>
