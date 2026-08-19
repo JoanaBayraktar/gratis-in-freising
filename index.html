@@ -168,6 +168,12 @@ button.senden {
 }
 @media (prefers-color-scheme: dark) { button.senden { color: #10161c; } }
 .melde-hinweis { font-size: 13px; color: var(--rot); margin-left: 10px; }
+.melde-hinweis a { color: var(--rot); }
+#melden .klein { font-size: 12px; color: var(--leiser); margin: 6px 0 0; }
+/* Honigtopf: für Menschen unsichtbar, für einfache Bots ein Feld wie jedes
+   andere. Nicht display:none — manche Bots überspringen genau das. */
+.honigtopf { position: absolute; left: -9999px; width: 1px; height: 1px;
+             overflow: hidden; opacity: 0; }
 
 .hinweis { color: var(--leiser); padding: 40px 0; text-align: center; }
 footer { margin-top: 40px; padding-top: 14px; border-top: 1px solid var(--linie);
@@ -216,8 +222,7 @@ footer a { color: var(--leiser); }
 <section id="melden">
   <h2>Veranstaltung melden</h2>
   <p>Etwas Kostenloses gefunden, das hier fehlt? Das Formular öffnet einen
-     vorausgefüllten Eintrag auf GitHub — dort noch auf „Submit" klicken.
-     Aufgenommen wird die Veranstaltung erst nach Freigabe.</p>
+     Aufgenommen wird sie erst nach Prüfung.</p>
   <div class="melde-gitter">
     <label>Titel <input id="m-titel" required placeholder="Konzert im Lindenkeller"></label>
     <label>Datum <input id="m-datum" type="date" required></label>
@@ -233,8 +238,12 @@ footer a { color: var(--leiser); }
     <label class="breit">Was ist das? <textarea id="m-text" rows="3"
       placeholder="Ein bis zwei Sätze — was passiert dort, für wen?"></textarea></label>
   </div>
-  <p><button id="m-senden" class="senden">Auf GitHub eintragen</button>
+  <label class="honigtopf" aria-hidden="true">Webseite
+    <input id="m-webseite" tabindex="-1" autocomplete="off"></label>
+  <p><button id="m-senden" class="senden">Veranstaltung melden</button>
      <span id="m-hinweis" class="melde-hinweis"></span></p>
+  <p class="klein">Gespeichert wird nur, was Sie hier eintragen. Jede Meldung
+     wird vor der Veröffentlichung geprüft.</p>
 </section>
 
 <footer id="fuss"></footer>
@@ -255,6 +264,11 @@ let EVENTS = [];
 const zustand = { suche: "", quelle: "", kategorie: "", sortierung: "datum",
                   tag: null, filter: new Set(["kommend"]) };
 const REPO = "JoanaBayraktar/gratis-in-freising";
+
+// Adresse der Meldestelle (Cloudflare Worker, siehe melden/worker.js).
+// Solange sie leer ist, führt das Formular über einen vorausgefüllten
+// GitHub-Eintrag — dann braucht die meldende Person aber ein GitHub-Konto.
+const MELDESTELLE = "";
 
 // --- Hilfen -----------------------------------------------------------------
 
@@ -562,40 +576,79 @@ document.getElementById("kalender").addEventListener("click", ereignis => {
 
 // --- Melden -----------------------------------------------------------------
 
-/** Baut einen vorausgefüllten GitHub-Eintrag.
+const wert = id => document.getElementById(id).value.trim();
 
-    Eine statische Seite kann nichts speichern, und das ist hier ein Vorteil:
-    Ohne eigenen Server gibt es kein Formular, das jemand mit Werbung
-    vollschreibt. Der Weg über GitHub kostet die meldende Person einen Klick
-    mehr und Sie behalten die Freigabe. */
-document.getElementById("m-senden").addEventListener("click", () => {
-  const wert = id => document.getElementById(id).value.trim();
+function meldung() {
+  return {
+    titel: wert("m-titel"),
+    wann: wert("m-datum") + (wert("m-zeit") ? `, ${wert("m-zeit")} Uhr` : ""),
+    wo: wert("m-ort"),
+    eintritt: document.getElementById("m-eintritt").selectedOptions[0].text,
+    link: wert("m-url"),
+    beschreibung: wert("m-text"),
+    webseite: wert("m-webseite"),   // Honigtopf, bleibt beim Menschen leer
+  };
+}
+
+/** Ohne Meldestelle bleibt nur der Umweg über ein vorausgefülltes Issue.
+    Der setzt ein GitHub-Konto voraus und ist deshalb die zweite Wahl. */
+function ueberGithub(daten) {
+  const zeilen = [
+    "### Titel", daten.titel, "",
+    "### Wann", daten.wann, "",
+    "### Wo", daten.wo || "_nicht angegeben_", "",
+    "### Eintritt", daten.eintritt, "",
+    "### Link", daten.link || "_keiner_", "",
+    "### Beschreibung", daten.beschreibung || "_keine_", "",
+  ];
+  window.open(`https://github.com/${REPO}/issues/new?` + new URLSearchParams({
+    title: `Veranstaltung: ${daten.titel}`,
+    body: zeilen.join("\n"),
+    labels: "meldung",
+  }), "_blank", "noopener");
+}
+
+document.getElementById("m-senden").addEventListener("click", async ereignis => {
+  const knopf = ereignis.currentTarget;
   const hinweis = document.getElementById("m-hinweis");
+  const daten = meldung();
 
-  if (!wert("m-titel") || !wert("m-datum")) {
+  if (!daten.titel || !wert("m-datum")) {
     hinweis.textContent = "Titel und Datum werden gebraucht.";
     return;
   }
   hinweis.textContent = "";
 
-  const zeilen = [
-    "### Titel", wert("m-titel"), "",
-    "### Wann", wert("m-datum") + (wert("m-zeit") ? `, ${wert("m-zeit")} Uhr` : ""), "",
-    "### Wo", wert("m-ort") || "_nicht angegeben_", "",
-    "### Eintritt", document.getElementById("m-eintritt").selectedOptions[0].text, "",
-    "### Link", wert("m-url") || "_keiner_", "",
-    "### Beschreibung", wert("m-text") || "_keine_", "",
-    "---", "Gemeldet über die Übersichtsseite.",
-  ];
+  if (!MELDESTELLE) { ueberGithub(daten); return; }
 
-  const adresse = `https://github.com/${REPO}/issues/new?`
-    + new URLSearchParams({
-        title: `Veranstaltung: ${wert("m-titel")} (${wert("m-datum")})`,
-        body: zeilen.join("\n"),
-        labels: "meldung",
-      });
-  window.open(adresse, "_blank", "noopener");
+  knopf.disabled = true;
+  knopf.textContent = "Wird gesendet …";
+  try {
+    const antwort = await fetch(MELDESTELLE, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(daten),
+    });
+    const ergebnis = await antwort.json().catch(() => ({}));
+    if (!antwort.ok) throw new Error(ergebnis.fehler || `Fehler ${antwort.status}`);
+
+    document.getElementById("melden").innerHTML =
+      `<h2>Danke!</h2><p>Die Meldung ist eingegangen. Sie erscheint hier,
+       sobald sie geprüft wurde — meist innerhalb eines Tages.</p>`;
+  } catch (fehler) {
+    // Der Weg über GitHub bleibt als Rückfalltür: Wer schon getippt hat, soll
+    // die Eingabe nicht verlieren, weil die Meldestelle gerade streikt.
+    hinweis.innerHTML = `Das hat nicht geklappt (${escape(fehler.message)}). `
+      + `<a href="#" id="m-umweg">Stattdessen über GitHub melden</a>`;
+    document.getElementById("m-umweg").addEventListener("click", e => {
+      e.preventDefault(); ueberGithub(daten);
+    });
+  } finally {
+    knopf.disabled = false;
+    knopf.textContent = "Veranstaltung melden";
+  }
 });
+
 
 // --- Bedienung --------------------------------------------------------------
 

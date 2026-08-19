@@ -8,6 +8,7 @@ auf GitHubs Servern — Ihr Rechner muss dafür nicht an sein.
 
 ```
 index.html               die Übersichtsseite (GitHub Pages)
+melden/worker.js         Meldestelle für das Formular (Cloudflare Worker)
 quellen.yml              Quellenliste  ← hier Quellen an- und abschalten
 SCHEMA.md                welche Felder ein Event hat und was sie bedeuten
 daten/
@@ -138,12 +139,7 @@ sticht die Zeitfilter aus, weil man ihn ja bewusst angeklickt hat.
 
 ### Veranstaltungen melden
 
-Unten auf der Seite steht ein Formular. Es speichert nichts — es öffnet einen
-vorausgefüllten Eintrag auf GitHub, den die meldende Person noch absenden muss.
-Das ist Absicht: Eine statische Seite hat keinen Server, den jemand mit Werbung
-vollschreiben kann, und Sie behalten die Freigabe.
-
-Der Weg einer Meldung:
+Unten auf der Seite steht ein Formular. Der Weg einer Meldung:
 
 1. Jemand füllt das Formular aus → Issue mit dem Etikett `meldung`
 2. Sie sehen es an. Stimmt es, hängen Sie das Etikett **`freigegeben`** dran
@@ -153,6 +149,47 @@ Der Weg einer Meldung:
 Ohne `freigegeben` passiert nichts, egal was im Issue steht. Übernommene
 Meldungen bekommen `manuell_bestaetigt: true` — Sie haben sie geprüft, also
 fasst der Sammellauf sie nicht mehr an.
+
+### Die Meldestelle einrichten
+
+Solange in `index.html` die Zeile `const MELDESTELLE = "";` leer ist, führt das
+Formular über einen vorausgefüllten GitHub-Eintrag — das setzt bei der
+meldenden Person ein GitHub-Konto voraus.
+
+Damit Meldungen direkt eingehen, braucht es eine kleine Zwischenstelle, die
+den GitHub-Token hält. Auf einer statischen Seite kann der Token nicht liegen:
+Er stünde im Quelltext und wäre für jeden lesbar. `melden/worker.js` ist diese
+Zwischenstelle, gedacht für Cloudflare Workers — kostenlos, kein Server.
+
+1. **Token erzeugen:** github.com → Settings → Developer settings →
+   Personal access tokens → **Fine-grained tokens** → Generate new token.
+   Repository access: **nur** `gratis-in-freising`. Permissions:
+   **Issues → Read and write**, sonst nichts. Laufzeit ruhig knapp wählen und
+   im Kalender notieren, wann er abläuft.
+2. **Worker anlegen:** dash.cloudflare.com → Workers & Pages → Create →
+   Start with Hello World. Den Inhalt von `melden/worker.js` einfügen, Deploy.
+3. **Variablen setzen** (Settings → Variables and Secrets), alle als *Secret*:
+
+   | Name | Wert |
+   |---|---|
+   | `GITHUB_TOKEN` | der Token aus Schritt 1 |
+   | `GITHUB_REPO` | `JoanaBayraktar/gratis-in-freising` |
+   | `ERLAUBTE_HERKUNFT` | `https://joanabayraktar.github.io` |
+
+4. **Adresse eintragen:** Die Worker-Adresse (`https://….workers.dev`) in
+   `index.html` bei `const MELDESTELLE` einsetzen und committen.
+
+Warum der Token so eng geschnitten wird: Die Adresse ist öffentlich, jeder
+kann darauf POSTen. Selbst wenn das jemand ausnutzt, entstehen daraus nur
+Issues — nichts, was ins Repository geschrieben wird, und nichts, was ohne Ihr
+`freigegeben` in Kalender oder Mail landet. Gegen einfache Bots hilft ein
+unsichtbares Feld im Formular; wird es ausgefüllt, verschwindet die Meldung
+lautlos.
+
+Wenn doch Spam ankommt, lässt sich **Cloudflare Turnstile** dazuschalten: Im
+Cloudflare-Dashboard eine Website hinzufügen, den Secret Key als
+`TURNSTILE_SECRET` hinterlegen — der Worker prüft ihn dann. Das Widget im
+Formular kommt in dem Fall noch dazu; sagen Sie Bescheid, dann baue ich es ein.
 
 Was gerade zur Freigabe wartet:
 <https://github.com/JoanaBayraktar/gratis-in-freising/issues?q=is%3Aopen+label%3Ameldung>

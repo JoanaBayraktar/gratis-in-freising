@@ -72,7 +72,9 @@ def abschnitte(text: str) -> dict:
     teile = re.split(r"^###\s+(.+?)\s*$", text or "", flags=re.M)
     for name, inhalt in zip(teile[1::2], teile[2::2]):
         # Alles ab einer Trennlinie ist Fussnote des Formulars, nicht Inhalt.
-        wert = re.split(r"^---\s*$", inhalt, flags=re.M)[0].strip()
+        # Drei Bindestriche trennen Inhalt von Fussnote. Gedankenstriche
+        # zaehlen mit: sie entstehen, wenn jemand die Zeile "verschoenert".
+        wert = re.split(r"^[-—–]{3,}\s*$", inhalt, flags=re.M)[0].strip()
         if wert.lower() in ("", "_no response_", "_none_", "_keine_", "_keiner_",
                             "_nicht angegeben_", "n/a"):
             continue
