@@ -37,6 +37,17 @@ jobs:
           MISTRAL_API_KEY: ${{ secrets.MISTRAL_API_KEY }}
         run: python scripts/sammeln.py
 
+      # Zweiter Blick des Modells, diesmal auf die fertige Liste statt auf
+      # einzelne Seiten: Dubletten ueber Quellen hinweg, widersprüchliche
+      # Eintrittsangaben, uneinheitliche Ortsnamen. Schlaegt der Schritt fehl,
+      # soll der Lauf trotzdem Kalender und Mail erzeugen — die Nachpruefung
+      # verbessert das Ergebnis, sie traegt es nicht.
+      - name: Liste nachpruefen
+        continue-on-error: true
+        env:
+          MISTRAL_API_KEY: ${{ secrets.MISTRAL_API_KEY }}
+        run: python scripts/nachpruefen.py
+
       - name: Kalender bauen
         run: python scripts/build_kalender.py
 

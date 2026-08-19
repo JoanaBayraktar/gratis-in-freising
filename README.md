@@ -18,9 +18,11 @@ ausgabe/
   PRUEFLISTE.md          dieselben Fälle als lesbare Liste
   SOCIAL-KWxx.md         Post-Entwürfe, entstehen freitags
   mail.html              die Tagesmail, wird täglich neu erzeugt
+  NACHPRUEFUNG.md        was der zweite Modellblick gefunden und getan hat
 scripts/
   sammeln.py             holt die Quellen, fragt das Modell, schreibt events.json
   build_kalender.py      baut die .ics-Dateien und die Prüfliste
+  nachpruefen.py         zweiter Modellblick auf die fertige Liste
   build_mail.py          baut die Tagesmail
   build_social.py        baut die Social-Entwürfe
   event_id.py            stabile ID für die Dublettenerkennung
@@ -80,6 +82,36 @@ Der Mailtext lässt sich jederzeit ohne Versand ansehen:
 ```
 
 Danach `ausgabe/mail.html` im Browser öffnen.
+
+## Die Nachprüfung
+
+Beim Sammeln sieht das Modell immer nur eine Seite. Dass dieselbe Veranstaltung
+beim Merkur schon steht, dass der Ort dort anders geschrieben wird oder dass
+eine Quelle sie gratis nennt und die andere nicht — das lässt sich erst
+beantworten, wenn alles beieinanderliegt.
+
+`nachpruefen.py` schickt deshalb nach dem Sammeln die fertige Liste noch einmal
+zum Modell, als Stichworte, ohne Webseiten. Das kostet rund 6.000 Tokens, also
+etwa 0,1 Cent. Drei Fragen mit drei verschiedenen Folgen:
+
+| Findet | Was passiert |
+|---|---|
+| Ortsname meint einen bekannten Ort | wird übernommen |
+| Dublette über Quellen hinweg | wird verschmolzen, **wenn** auch Adresse oder Ort übereinstimmen |
+| Widerspruch beim Eintritt | wird **nur gemeldet**, nie automatisch geändert |
+
+Die Abstufung ist Absicht. Ein Ortsname ist Anzeigetext, da kann nichts
+kaputtgehen. Eine falsch verschmolzene Veranstaltung dagegen ist weg, ohne dass
+es auffällt — deshalb braucht das Modellurteil dort ein zweites, hartes Merkmal.
+Und ob etwas Eintritt kostet, entscheidet der Beleg auf der Seite, nicht die
+Vermutung eines Modells.
+
+Alles Gefundene steht hinterher in `ausgabe/NACHPRUEFUNG.md`, auch das
+Übernommene. Ohne Änderungen, nur zum Ansehen:
+
+```bash
+MISTRAL_API_KEY=... ./venv/bin/python scripts/nachpruefen.py --nur-melden
+```
 
 ## Kalender abonnieren
 

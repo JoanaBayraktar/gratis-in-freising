@@ -125,6 +125,17 @@ zu der man sich anmelden muss, ist deshalb nicht ausgebucht.
 beschreibung: zwei bis drei Saetze, die jemandem erklaeren, was ihn dort
 erwartet — was passiert, fuer wen es gedacht ist, was das Besondere daran ist.
 Keine Wiederholung des Titels, keine Werbesprache, nur was im Text steht.
+
+dauertermin: true bei allem, was ueber mehrere Tage laeuft — Ausstellung,
+Programmreihe, Markt. Achtung, hier steckt eine Falle: Uebersichtsseiten fuehren
+eine laufende Ausstellung oft mit dem heutigen Datum, als waere sie ein
+Einzeltermin an diesem Tag. Sieh auf den Text, nicht auf die Datumszeile —
+"noch bis 30. September zu sehen" ist ein Dauertermin, auch wenn oben nur der
+heutige Tag steht. Trage `ende` dann auf den letzten Tag.
+
+besonderheit: nur bei Dauerterminen und nur, wenn an diesem Tag etwas
+stattfindet, das es an den anderen Tagen nicht gibt — Vernissage, Eroeffnung,
+eine angekuendigte Fuehrung, Finissage. Sonst null.
 """
 
 SICHERHEIT = """
@@ -195,6 +206,16 @@ EVENT_SCHEMA = {
             "drinnen", "draussen", "beides", None]},
         "anmeldung_noetig": {"type": "boolean"},
         "ausgebucht": {"type": "boolean"},
+        "dauertermin": {
+            "type": "boolean",
+            "description": "Laeuft die Veranstaltung ueber mehrere Tage "
+                           "(Ausstellung, Markt, Programmreihe), auch wenn die "
+                           "Seite sie nur mit dem heutigen Datum fuehrt?"},
+        "besonderheit": {
+            "type": ["string", "null"],
+            "description": "Falls Dauertermin: Gibt es an diesem Tag etwas, das "
+                           "es an den uebrigen Tagen nicht gibt — Vernissage, "
+                           "Eroeffnung, Fuehrung, Abschluss? Sonst null."},
         "anmeldung_url": TEXTFELD,
         "bild_url": TEXTFELD,
         "quelle_url": TEXTFELD,
@@ -213,6 +234,8 @@ EINSTUFUNG_SCHEMA = {
         "nummer": {"type": "integer"},
         "beschreibung": TEXTFELD,
         "ausgebucht": {"type": "boolean"},
+        "dauertermin": EVENT_SCHEMA["properties"]["dauertermin"],
+        "besonderheit": EVENT_SCHEMA["properties"]["besonderheit"],
         "kategorie": EVENT_SCHEMA["properties"]["kategorie"],
         "zielgruppe": EVENT_SCHEMA["properties"]["zielgruppe"],
         "eintritt": EVENT_SCHEMA["properties"]["eintritt"],
@@ -223,7 +246,8 @@ EINSTUFUNG_SCHEMA = {
 }
 
 
-def modell_fragen(system: str, inhalt: str, element_schema: dict) -> list:
+def modell_antwort(system: str, inhalt: str, schema: dict, name: str) -> dict:
+    """Ein Aufruf, ein JSON-Objekt nach dem uebergebenen Schema."""
     schluessel = os.environ.get("MISTRAL_API_KEY")
     if not schluessel:
         sys.exit("MISTRAL_API_KEY ist nicht gesetzt.")
@@ -237,14 +261,7 @@ def modell_fragen(system: str, inhalt: str, element_schema: dict) -> list:
         ],
         "response_format": {
             "type": "json_schema",
-            "json_schema": {
-                "name": "veranstaltungen",
-                "schema": {
-                    "type": "object",
-                    "properties": {"events": {"type": "array", "items": element_schema}},
-                    "required": ["events"],
-                },
-            },
+            "json_schema": {"name": name, "schema": schema},
         },
     }).encode("utf-8")
 
@@ -258,13 +275,23 @@ def modell_fragen(system: str, inhalt: str, element_schema: dict) -> list:
     except urllib.error.HTTPError as fehler:
         rumpf_text = fehler.read().decode("utf-8", errors="replace")
         raise urllib.error.HTTPError(
-            fehler.url, fehler.code, f"{fehler.reason}: {rumpf_text}", fehler.headers, None
-        ) from None
+            fehler.url, fehler.code, f"{fehler.reason}: {rumpf_text}",
+            fehler.headers, None) from None
 
     verbrauch = ergebnis.get("usage", {})
     print(f"    Tokens: {verbrauch.get('prompt_tokens', '?')} rein, "
           f"{verbrauch.get('completion_tokens', '?')} raus")
-    return json.loads(ergebnis["choices"][0]["message"]["content"]).get("events", [])
+    return json.loads(ergebnis["choices"][0]["message"]["content"])
+
+
+def modell_fragen(system: str, inhalt: str, element_schema: dict) -> list:
+    """Der haeufige Fall: eine Liste von Veranstaltungen zurueckbekommen."""
+    schema = {
+        "type": "object",
+        "properties": {"events": {"type": "array", "items": element_schema}},
+        "required": ["events"],
+    }
+    return modell_antwort(system, inhalt, schema, "veranstaltungen").get("events", [])
 
 
 # ---------------------------------------------------------------- Quellen
