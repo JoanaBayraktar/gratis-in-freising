@@ -31,12 +31,25 @@ def e(text) -> str:
     return html.escape(str(text or ""))
 
 
-def eintrag(ev: dict) -> str:
+def eintrag(ev: dict, tag) -> str:
     beginn = datetime.fromisoformat(ev["beginn"])
-    zeit = "ganztägig" if ev.get("ganztaegig") else beginn.strftime("%H:%M Uhr")
+    ende = datetime.fromisoformat(ev["ende"]) if ev.get("ende") else beginn
     ort = ev.get("ort_name") or "Ort siehe Quelle"
 
+    # Eine Ausstellung, die vor drei Tagen begonnen hat, faengt heute nicht um
+    # 10:00 an. Die Anfangszeit gilt nur am ersten Tag; danach zaehlt, wie lange
+    # sie noch laeuft.
+    if beginn.date() < tag:
+        zeit = "läuft noch"
+    elif ev.get("ganztaegig"):
+        zeit = "ganztägig"
+    else:
+        zeit = beginn.strftime("%H:%M Uhr")
+
     hinweis = ""
+    if ende.date() > tag:
+        hinweis = (f'<span style="color:#666;font-size:13px">bis '
+                   f'{ende.strftime("%d.%m.")}</span> ')
     if ev.get("eintritt") == "spende":
         hinweis = ('<span style="background:#fff3cd;padding:1px 6px;border-radius:3px;'
                    'font-size:13px">Spende erbeten</span> ')
@@ -59,11 +72,11 @@ def eintrag(ev: dict) -> str:
     )
 
 
-def tagesblock(ueberschrift: str, events: list, leertext: str) -> str:
+def tagesblock(ueberschrift: str, events: list, leertext: str, tag=None) -> str:
     if not events:
         return (f'<h2 style="font-size:17px;margin:24px 0 8px">{e(ueberschrift)}</h2>'
                 f'<p style="color:#888;margin:0">{e(leertext)}</p>')
-    zeilen = "".join(eintrag(ev) for ev in events)
+    zeilen = "".join(eintrag(ev, tag) for ev in events)
     return (f'<h2 style="font-size:17px;margin:24px 0 8px">{e(ueberschrift)}</h2>'
             f'<table style="border-collapse:collapse;width:100%">{zeilen}</table>')
 
@@ -92,7 +105,7 @@ def main() -> None:
 
     bloecke = [tagesblock(
         f"Heute — {WOCHENTAGE[heute.weekday()]}, {heute.strftime('%d.%m.%Y')}",
-        heute_events, "Heute nichts Kostenloses gefunden.")]
+        heute_events, "Heute nichts Kostenloses gefunden.", heute)]
 
     kommend = 0
     for versatz in range(1, 8):
@@ -102,7 +115,7 @@ def main() -> None:
         kommend += len(tages)
         if tages:
             bloecke.append(tagesblock(
-                f"{WOCHENTAGE[tag.weekday()]}, {tag.strftime('%d.%m.')}", tages, ""))
+                f"{WOCHENTAGE[tag.weekday()]}, {tag.strftime('%d.%m.')}", tages, "", tag))
 
     if kommend == 0:
         bloecke.append('<h2 style="font-size:17px;margin:24px 0 8px">Die nächsten '

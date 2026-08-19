@@ -107,6 +107,12 @@ Zwei haeufige Fehler, die du nicht machen darfst:
 eintritt_beleg: woertliches Zitat aus der Quelle, das die Einstufung traegt.
 Bei "unklar" ist null richtig. Erfinde niemals ein Zitat.
 
+Daraus folgt eine Regel, gegen die du nie verstossen darfst: Beleg und
+Einstufung muessen zusammenpassen. Findest du das Zitat "Eintritt frei", dann
+ist die Einstufung "frei" mit confidence "hoch" — nicht "unklar", nicht
+"mittel". "unklar" ist ausschliesslich dann richtig, wenn eintritt_beleg null
+ist, weil die Seite zum Preis schweigt.
+
 eintritt_confidence:
   hoch     steht woertlich da
   mittel   erschlossen, etwa "Vernissage" ohne Preisangabe
@@ -423,6 +429,44 @@ def schluessel(roh: dict) -> list:
     return kennungen
 
 
+# Formulierungen, die den Eintritt ohne Auslegung festlegen. Bewusst eng
+# gehalten: hier darf nichts stehen, das auch in einem Nebensatz vorkommen kann.
+BELEG_FREI = re.compile(
+    r"eintritt\s*(ist\s*)?frei|freier\s+eintritt|eintritt\s*:\s*frei"
+    r"|kostenlos|kostenfrei|ohne\s+eintritt|zutritt\s+frei", re.I)
+BELEG_SPENDE = re.compile(r"spende|hutkasse|hut\b|freiwilliger\s+beitrag", re.I)
+BELEG_PREIS = re.compile(r"\d[\d.,]*\s*(€|eur\b|euro)|(€|eur\b)\s*\d", re.I)
+
+
+def einstufung_pruefen(roh: dict) -> None:
+    """Beleg und Einstufung in Deckung bringen.
+
+    Das Modell zitiert oft korrekt "Eintritt frei" und stuft die Veranstaltung
+    trotzdem als "unklar" ein — die Zurueckhaltung, die wir ihm beigebracht
+    haben, schlaegt dann auf den eindeutigen Fall durch. Der Beleg ist die
+    haerteste Angabe, die wir haben: steht dort woertlich ein Preis oder ein
+    Gratis-Hinweis, entscheidet der und nicht das Urteil des Modells.
+
+    Bewusst nur in eine Richtung: eine Einstufung, die das Modell selbst
+    getroffen hat, wird nie zu "unklar" zurueckgestuft. Wir raeumen einen
+    Widerspruch auf, wir ueberstimmen kein Urteil.
+    """
+    beleg = roh.get("eintritt_beleg") or ""
+    if not beleg or roh.get("eintritt") not in (None, "unklar"):
+        return
+
+    # Preis zuerst: "Kinder frei, Erwachsene 8 EUR" ist kostenpflichtig.
+    if BELEG_PREIS.search(beleg):
+        roh["eintritt"] = "kostenpflichtig"
+    elif BELEG_SPENDE.search(beleg):
+        roh["eintritt"] = "spende"
+    elif BELEG_FREI.search(beleg):
+        roh["eintritt"] = "frei"
+    else:
+        return
+    roh["eintritt_confidence"] = "hoch"
+
+
 def zusammenfuehren(bestand: dict, gefunden: list, quelle: dict, heute: str) -> tuple:
     # Ein Event steht unter jedem seiner Schluessel im Verzeichnis, damit es
     # auch dann gefunden wird, wenn die neue Fassung nur einen davon teilt.
@@ -435,6 +479,8 @@ def zusammenfuehren(bestand: dict, gefunden: list, quelle: dict, heute: str) -> 
     for roh in gefunden:
         if not roh.get("titel") or not roh.get("beginn"):
             continue
+
+        einstufung_pruefen(roh)
 
         if quelle.get("eintritt_vorgabe"):
             # Nur fuer Seiten, auf denen per Definition alles kostenlos ist.

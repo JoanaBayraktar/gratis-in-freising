@@ -23,30 +23,8 @@ RRULE:FREQ=YEARLY;BYMONTH=10;BYDAY=-1SU
 END:STANDARD
 END:VTIMEZONE
 BEGIN:VEVENT
-UID:90f2fb9057f18163@gratis-freising
-DTSTAMP:20260819T095956Z
-DTSTART;TZID=Europe/Berlin:20260819T090000
-DTEND;TZID=Europe/Berlin:20260927T000000
-SUMMARY:[PRUEFEN] EIN LEBEN IN FARBEN – DIE MALERIN RUTH KOHLER
-LOCATION:Diözesanmuseum Freising — Domberg 21\, 85354 Freising
-DESCRIPTION:Ausstellung der international anerkannten Künstlerin Ruth Kohl
- er\, die sich in ihren Werken mit Farbe als Ausdruck von Emotionen und Eri
- nnerungen auseinandersetzt. Gezeigt wird ihr künstlerischer Werdegang von
-  Fresken über Glasfenster bis zur abstrakten Malerei.\n\nEintritt: Eintri
- tt UNKLAR — bitte pruefen\nBeleg: "8\,00 Euro"\nSicherheit: mittel\n\nVe
- ranstalter: Diözesanmuseum Freising\nKategorie: Kunst\nZielgruppe: Alle\n
- Drinnen/Draussen: drinnen\n\nQuelle: https://veranstaltungen.freising.de/f
- reising/ein-leben-in-farben-die-malerin-ruth-kohler-e757a5c3d33158cbab25d7
- 19172f48fa1.html\nAuch bei: https://veranstaltungen.merkur.de/freising/ein
- -leben-in-farben-die-malerin-ruth-kohler-e757a5c3d33158cbab25d719172f48fa1
- .html
-URL:https://veranstaltungen.freising.de/freising/ein-leben-in-farben-die-ma
- lerin-ruth-kohler-e757a5c3d33158cbab25d719172f48fa1.html
-CATEGORIES:Kunst
-END:VEVENT
-BEGIN:VEVENT
 UID:7c62dab1505ff73c@gratis-freising
-DTSTAMP:20260819T095956Z
+DTSTAMP:20260819T100720Z
 DTSTART;TZID=Europe/Berlin:20260819T093000
 DTEND;TZID=Europe/Berlin:20260819T113000
 SUMMARY:[PRUEFEN] Zwillings-Krabbelgruppe
@@ -63,55 +41,8 @@ URL:https://veranstaltungen.merkur.de/freising/zwillings-krabbelgruppe-e940
 CATEGORIES:Familie
 END:VEVENT
 BEGIN:VEVENT
-UID:ce0aa7f2a4646fa4@gratis-freising
-DTSTAMP:20260819T095956Z
-DTSTART;TZID=Europe/Berlin:20260819T100000
-DTEND;TZID=Europe/Berlin:20260822T180000
-SUMMARY:[PRUEFEN] Ausstellung Max Pfefferle "Alles nur Kleinigkeiten" in de
- r Stadtbibliothek Freising
-LOCATION:Stadtbibliothek — Weizengasse 3 (Zugang über Untere Hauptstraß
- e)\, 85354 Freising
-DESCRIPTION:Ausstellung des Künstlers Max Pfefferle\, der großformatige F
- otografien mit filigranen Acryl-Elementen kombiniert. Die Werke laden zum 
- Schmunzeln ein und verbinden digitale Fotografie mit handwerklicher Malere
- i.\n\nEintritt: Eintritt UNKLAR — bitte pruefen\nBeleg: "Eintritt frei"\
- nSicherheit: mittel\n\nVeranstalter: Stadtbibliothek Freising\, Nora Hopfe
- nmüller\nKategorie: Kunst\nZielgruppe: Alle\nDrinnen/Draussen: drinnen\n\
- nQuelle: https://veranstaltungen.freising.de/freising/ausstellung-max-pfef
- ferle-alles-nur-kleinigkeiten-in-der-stadtbibliothek-freising-e53afc4e6925
- e3b99f772794c59e4cd9f.html\nAuch bei: https://veranstaltungen.merkur.de/fr
- eising/ausstellung-max-pfefferle-alles-nur-kleinigkeiten-in-der-stadtbibli
- othek-freising-e53afc4e6925e3b99f772794c59e4cd9f.html
-URL:https://veranstaltungen.freising.de/freising/ausstellung-max-pfefferle-
- alles-nur-kleinigkeiten-in-der-stadtbibliothek-freising-e53afc4e6925e3b99f
- 772794c59e4cd9f.html
-CATEGORIES:Kunst
-END:VEVENT
-BEGIN:VEVENT
-UID:37abfa4825a64291@gratis-freising
-DTSTAMP:20260819T095956Z
-DTSTART;TZID=Europe/Berlin:20260819T140000
-DTEND;TZID=Europe/Berlin:20260819T190000
-SUMMARY:[PRUEFEN] SpielRäume
-LOCATION:Schafhof - Europäisches Kunstforum Oberbayern — Am Schafhof 1\,
-  85354 Freising
-DESCRIPTION:Tandemausstellung der Künstlerinnen Judit Lilla Molnár und Li
- na Zylla\, die im Rahmen des Residenzprogramms des Bezirks Oberbayern expe
- rimentelle Räume schaffen. Die Werke verfremden Alltagswahrnehmung und ve
- rwandeln sie in fiktive Erlebniswelten.\n\nEintritt: Eintritt UNKLAR — b
- itte pruefen\nBeleg: "Eintritt frei"\nSicherheit: mittel\n\nVeranstalter: 
- Schafhof - Europäisches Kunstforum Oberbayern\nKategorie: Kunst\nZielgrup
- pe: Alle\nDrinnen/Draussen: drinnen\n\nQuelle: https://veranstaltungen.fre
- ising.de/freising/spielraeume-e962a5c9f4f3a618a9bee56a76fb2b908.html\nAuch
-  bei: https://veranstaltungen.merkur.de/freising/spielraeume-e962a5c9f4f3a
- 618a9bee56a76fb2b908.html
-URL:https://veranstaltungen.freising.de/freising/spielraeume-e962a5c9f4f3a6
- 18a9bee56a76fb2b908.html
-CATEGORIES:Kunst
-END:VEVENT
-BEGIN:VEVENT
 UID:2cf3f35f5b46eb23@gratis-freising
-DTSTAMP:20260819T095956Z
+DTSTAMP:20260819T100720Z
 DTSTART;TZID=Europe/Berlin:20260819T140000
 DTEND;TZID=Europe/Berlin:20260819T160000
 SUMMARY:Gemeinsames Handarbeiten (Spende)
@@ -128,30 +59,8 @@ URL:https://veranstaltungen.merkur.de/freising/gemeinsames-handarbeiten-eb6
 CATEGORIES:Sonstiges
 END:VEVENT
 BEGIN:VEVENT
-UID:a14f53d918a66454@gratis-freising
-DTSTAMP:20260819T095956Z
-DTSTART;TZID=Europe/Berlin:20260819T150000
-DTEND;TZID=Europe/Berlin:20260819T160000
-SUMMARY:[PRUEFEN] Vorlesen für Kinder ab 5 Jahren
-LOCATION:Stadtbibliothek — Weizengasse 3 (Zugang über Untere Hauptstraß
- e)\, 85354 Freising
-DESCRIPTION:Interaktive Vorlesestunde für Kinder ab 5 Jahren mit dem Märc
- hen „Das Märchen von der Regentrude“. Eltern werden gebeten\, währen
- d der Veranstaltung in der Bibliothek zu bleiben.\n\nEintritt: Eintritt UN
- KLAR — bitte pruefen\nBeleg: "Eintritt frei"\nSicherheit: mittel\n\nVera
- nstalter: Stadtbibliothek Freising\, Auer Claudia\nKategorie: Kinderprogra
- mm\nZielgruppe: Kinder\nDrinnen/Draussen: drinnen\n\nQuelle: https://veran
- staltungen.freising.de/freising/vorlesen-fuer-kinder-ab-5-jahren-e61b37966
- 50edcc284e95079ae92c872b.html\nAuch bei: https://veranstaltungen.merkur.de
- /freising/vorlesen-fuer-kinder-ab-5-jahren-e61b3796650edcc284e95079ae92c87
- 2b.html
-URL:https://veranstaltungen.freising.de/freising/vorlesen-fuer-kinder-ab-5-
- jahren-e61b3796650edcc284e95079ae92c872b.html
-CATEGORIES:Kinderprogramm
-END:VEVENT
-BEGIN:VEVENT
 UID:2f8dd7195f78456e@gratis-freising
-DTSTAMP:20260819T095956Z
+DTSTAMP:20260819T100720Z
 DTSTART;TZID=Europe/Berlin:20260821T200000
 DTEND;TZID=Europe/Berlin:20260821T220000
 SUMMARY:Anonyme Alkoholiker
@@ -169,7 +78,7 @@ CATEGORIES:Sonstiges
 END:VEVENT
 BEGIN:VEVENT
 UID:c5e2d8b175557eb3@gratis-freising
-DTSTAMP:20260819T095956Z
+DTSTAMP:20260819T100720Z
 DTSTART;TZID=Europe/Berlin:20260822T070000
 DTEND;TZID=Europe/Berlin:20260822T090000
 SUMMARY:Wochenmarkt
@@ -186,7 +95,7 @@ CATEGORIES:Markt
 END:VEVENT
 BEGIN:VEVENT
 UID:cbb4c1fbee50595c@gratis-freising
-DTSTAMP:20260819T095956Z
+DTSTAMP:20260819T100720Z
 DTSTART;TZID=Europe/Berlin:20260921T183000
 DTEND;TZID=Europe/Berlin:20260921T203000
 SUMMARY:Nähcafé & Handwerksabend (Ende der Sommerpause!) (Spende)
@@ -204,7 +113,7 @@ CATEGORIES:Sonstiges
 END:VEVENT
 BEGIN:VEVENT
 UID:0b77632db79f9951@gratis-freising
-DTSTAMP:20260819T095956Z
+DTSTAMP:20260819T100720Z
 DTSTART;TZID=Europe/Berlin:20261003T200000
 DTEND;TZID=Europe/Berlin:20261003T200000
 SUMMARY:Abtanzparty zu Rock und Pop querbeet (Spende)
@@ -221,7 +130,7 @@ CATEGORIES:Musik
 END:VEVENT
 BEGIN:VEVENT
 UID:e043902a8dd775c9@gratis-freising
-DTSTAMP:20260819T095956Z
+DTSTAMP:20260819T100720Z
 DTSTART;TZID=Europe/Berlin:20261106T200000
 DTEND;TZID=Europe/Berlin:20261106T200000
 SUMMARY:Irish Night mit der Paul Daly Band (Folk/Irish) (Spende)
