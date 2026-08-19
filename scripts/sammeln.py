@@ -839,7 +839,11 @@ def aufraeumen(bestand: dict, heute: date, gelesen: set) -> None:
     for ev in bestand["events"]:
         if ev.get("manuell_bestaetigt") or ev.get("status") == "abgesagt":
             continue
-        if ev.get("beginn", "")[:10] < heute.isoformat():
+        # Nach dem ENDE, nicht nach dem Anfang: eine Ausstellung, die im Juli
+        # begann und bis September laeuft, ist heute nicht vergangen. Sie war
+        # es aber — und fiel damit aus Kalender und Mail.
+        letzter_tag = max((ev.get("ende") or "")[:10], (ev.get("beginn") or "")[:10])
+        if letzter_tag < heute.isoformat():
             ev["status"] = "vergangen"
         elif (ev.get("quelle_name") in gelesen
               and ev.get("zuletzt_gesehen", "9999") < grenze):

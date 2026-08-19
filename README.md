@@ -57,8 +57,18 @@ Danach läuft er täglich um 03:20 UTC, also 05:20 deutscher Sommerzeit.
 
 ## Die Tagesmail
 
-Nach jedem Sammellauf geht eine Mail raus: was heute läuft, dann Tag für Tag
-die kommenden sieben Tage. Enthalten sind nur Veranstaltungen mit `frei` oder
+Nach jedem Sammellauf geht eine Mail raus, in drei Abschnitten:
+
+**Heute** — die Einzeltermine des Tages, mit Uhrzeit, Ort und kurzer
+Beschreibung. Das ist, was man verpassen kann.
+
+**Läuft gerade** — mehrtägiges wie Ausstellungen, jedes **einmal** genannt
+statt an jedem seiner Tage. Statt der Anfangszeit steht dort die Restlaufzeit,
+sortiert nach Ende: was bald ausläuft, steht oben und wird in den letzten zwei
+Tagen farbig. Eine Ausstellung, die noch drei Monate zu sehen ist, eilt nicht
+und steht unten.
+
+**Die nächsten Tage** — Einzeltermine als knappe Liste, ohne Beschreibung. Enthalten sind nur Veranstaltungen mit `frei` oder
 `spende` — Spendenbasis ist sichtbar gekennzeichnet, weil das nicht dasselbe
 ist wie kostenlos. Unklare Fälle bleiben draußen und erscheinen nur als Zähler
 am Fuß der Mail, damit Sie sehen, wie viel in der Prüfliste liegt.

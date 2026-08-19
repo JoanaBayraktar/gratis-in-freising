@@ -233,7 +233,10 @@ def main() -> None:
     kommend = [
         ev
         for ev in daten["events"]
-        if ev.get("beginn", "")[:10] >= heute and ev.get("status") != "verschwunden"
+        # Mehrtaegiges zaehlt, solange es laeuft — nicht nur bis zu seinem
+        # Anfang. Sonst faellt jede laufende Ausstellung aus dem Kalender.
+        if max((ev.get("ende") or "")[:10], (ev.get("beginn") or "")[:10]) >= heute
+        and ev.get("status") != "verschwunden"
     ]
 
     gratis = [
