@@ -117,6 +117,14 @@ eintritt_confidence:
   hoch     steht woertlich da
   mittel   erschlossen, etwa "Vernissage" ohne Preisangabe
   niedrig  geraten
+
+ausgebucht: true nur, wenn die Seite es sagt — "ausgebucht", "ausverkauft",
+"keine Plaetze mehr", "nur noch Warteliste". Sonst false. Eine Veranstaltung,
+zu der man sich anmelden muss, ist deshalb nicht ausgebucht.
+
+beschreibung: zwei bis drei Saetze, die jemandem erklaeren, was ihn dort
+erwartet — was passiert, fuer wen es gedacht ist, was das Besondere daran ist.
+Keine Wiederholung des Titels, keine Werbesprache, nur was im Text steht.
 """
 
 SICHERHEIT = """
@@ -186,6 +194,7 @@ EVENT_SCHEMA = {
         "drinnen_draussen": {"type": ["string", "null"], "enum": [
             "drinnen", "draussen", "beides", None]},
         "anmeldung_noetig": {"type": "boolean"},
+        "ausgebucht": {"type": "boolean"},
         "anmeldung_url": TEXTFELD,
         "bild_url": TEXTFELD,
         "quelle_url": TEXTFELD,
@@ -203,6 +212,7 @@ EINSTUFUNG_SCHEMA = {
     "properties": {
         "nummer": {"type": "integer"},
         "beschreibung": TEXTFELD,
+        "ausgebucht": {"type": "boolean"},
         "kategorie": EVENT_SCHEMA["properties"]["kategorie"],
         "zielgruppe": EVENT_SCHEMA["properties"]["zielgruppe"],
         "eintritt": EVENT_SCHEMA["properties"]["eintritt"],
@@ -467,6 +477,22 @@ def einstufung_pruefen(roh: dict) -> None:
     roh["eintritt_confidence"] = "hoch"
 
 
+# Zweiter Weg neben dem Modellfeld: Veranstalter schreiben "ausgebucht" gern
+# in den Titel statt in den Text, und dort sieht die Einstufung leicht darueber
+# hinweg — "Fuehrung im Furtner (ausgebucht!)".
+AUSGEBUCHT = re.compile(
+    r"ausgebucht|ausverkauft|keine\s+(freien\s+)?pl[aä]tze|nur\s+noch\s+warteliste"
+    r"|warteliste|belegt\b", re.I)
+
+
+def ausgebucht_pruefen(roh: dict) -> None:
+    """Nur setzen, nie zuruecknehmen: findet der Text den Hinweis, gilt er."""
+    if roh.get("ausgebucht"):
+        return
+    text = f"{roh.get('titel') or ''} {roh.get('beschreibung') or ''}"
+    roh["ausgebucht"] = bool(AUSGEBUCHT.search(text))
+
+
 def zusammenfuehren(bestand: dict, gefunden: list, quelle: dict, heute: str) -> tuple:
     # Ein Event steht unter jedem seiner Schluessel im Verzeichnis, damit es
     # auch dann gefunden wird, wenn die neue Fassung nur einen davon teilt.
@@ -481,6 +507,7 @@ def zusammenfuehren(bestand: dict, gefunden: list, quelle: dict, heute: str) -> 
             continue
 
         einstufung_pruefen(roh)
+        ausgebucht_pruefen(roh)
 
         if quelle.get("eintritt_vorgabe"):
             # Nur fuer Seiten, auf denen per Definition alles kostenlos ist.

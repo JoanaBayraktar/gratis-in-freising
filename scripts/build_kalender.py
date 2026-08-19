@@ -153,6 +153,10 @@ def event_block(ev: dict, jetzt: str) -> list:
         titel = f"{titel} (Spende)"
     elif ev.get("eintritt") == "unklar":
         titel = f"[PRUEFEN] {titel}"
+    # Im Kalender bleibt Ausgebuchtes sichtbar — er ist zum Nachschlagen da,
+    # nicht zum Empfehlen. In der Mail faellt es weg.
+    if ev.get("ausgebucht"):
+        titel = f"[AUSGEBUCHT] {titel}"
     if ev.get("status") == "abgesagt":
         titel = f"ABGESAGT: {titel}"
 

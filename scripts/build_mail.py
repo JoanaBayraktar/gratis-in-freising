@@ -13,6 +13,7 @@ nichts inhaltlich — es sortiert und formatiert nur, was in events.json steht.
 import html
 import json
 import pathlib
+import re
 from datetime import datetime, timedelta
 
 BASIS = pathlib.Path(__file__).resolve().parent.parent
@@ -26,12 +27,57 @@ WOCHENTAGE = ["Montag", "Dienstag", "Mittwoch", "Donnerstag",
 # nicht in eine Mail, die suggeriert, es sei alles kostenlos.
 LABEL = {"frei": "Eintritt frei", "spende": "Spende erbeten"}
 
+# Ueber Stichwoerter statt ueber die Kategorieliste: die Quellen liefern eigene
+# Bezeichnungen ("EDV & Digitales", "Umwelt, Nachhaltigkeit und Verbraucher-
+# fragen"), die im Schema nicht vorgesehen sind. Wer zuerst passt, gewinnt —
+# die Reihenfolge ist deshalb Absicht.
+ICONS = [
+    ("kunst|ausstell|galerie|vernissage|kultur|brauchtum", "🎨"),
+    ("musik|konzert|chor|jazz|band", "🎵"),
+    ("kind|famili|jugend", "👪"),
+    ("sport|bewegung|gesundheit|wellness|yoga", "🏃"),
+    ("f[uü]hrung|besichtig|rundgang", "🧭"),
+    ("umwelt|natur|nachhaltig|garten", "🌱"),
+    ("edv|digital|computer|internet", "💻"),
+    ("sprach|deutsch|englisch", "🗣"),
+    ("markt|fest|flohmarkt", "🎪"),
+    ("handarbeit|n[aä]hen|n[aä]hcaf|stricken|repair|reparat|basteln"
+     "|werkstatt|handwerk", "🧵"),
+    ("selbsthilfe|beratung|anonyme|treff\\b|stammtisch", "🤝"),
+    ("vortrag|lesung|diskussion|seminar|workshop", "🎤"),
+]
+
+# Was in der Mail an Beschreibung hoechstens steht. "Heute" darf ausfuehrlich
+# sein, die Vorschau bleibt eine Liste — sonst scrollt man an den heutigen
+# Terminen vorbei, um die der naechsten Woche zu lesen.
+LAENGE_HEUTE = 320
+
+
+def icon(ev: dict) -> str:
+    text = f"{ev.get('kategorie') or ''} {ev.get('titel') or ''}".lower()
+    for muster, zeichen in ICONS:
+        if re.search(muster, text):
+            return zeichen
+    return "📌"
+
+
+def kuerzen(text: str, grenze: int) -> str:
+    """Am Satzende kuerzen, sonst am Wortende — nie mitten im Wort."""
+    text = " ".join((text or "").split())
+    if len(text) <= grenze:
+        return text
+    schnitt = text[:grenze]
+    satz = max(schnitt.rfind(". "), schnitt.rfind("! "), schnitt.rfind("? "))
+    if satz > grenze * 0.6:
+        return schnitt[:satz + 1]
+    return schnitt[:schnitt.rfind(" ")].rstrip(",;:") + " …"
+
 
 def e(text) -> str:
     return html.escape(str(text or ""))
 
 
-def eintrag(ev: dict, tag) -> str:
+def eintrag(ev: dict, tag, ausfuehrlich: bool = False) -> str:
     beginn = datetime.fromisoformat(ev["beginn"])
     ende = datetime.fromisoformat(ev["ende"]) if ev.get("ende") else beginn
     ort = ev.get("ort_name") or "Ort siehe Quelle"
@@ -61,22 +107,34 @@ def eintrag(ev: dict, tag) -> str:
         titel = f'<a href="{e(ev["quelle_url"])}" style="color:#1a5490;'\
                 f'text-decoration:none">{titel}</a>'
 
+    # Die Quelle steht als Text hinter dem Ort, nicht als Symbol: fuer
+    # "Merkur Veranstaltungen" gibt es kein Bildzeichen, das jemand errät.
+    herkunft = ev.get("quelle_name")
+    zweitzeile = e(ort) + (f' · {e(herkunft)}' if herkunft else "")
+
+    text = ""
+    if ausfuehrlich and ev.get("beschreibung"):
+        text = (f'<div style="color:#444;font-size:14px;margin-top:3px">'
+                f'{e(kuerzen(ev["beschreibung"], LAENGE_HEUTE))}</div>')
+
     return (
         '<tr>'
-        f'<td style="padding:6px 12px 6px 0;color:#666;white-space:nowrap;'
+        f'<td style="padding:8px 12px 8px 0;color:#666;white-space:nowrap;'
         f'vertical-align:top;font-variant-numeric:tabular-nums">{e(zeit)}</td>'
-        f'<td style="padding:6px 0">'
-        f'<strong>{titel}</strong><br>'
-        f'<span style="color:#666;font-size:14px">{e(ort)}</span> {hinweis}'
+        f'<td style="padding:8px 0;vertical-align:top">'
+        f'<strong>{icon(ev)} {titel}</strong><br>'
+        f'<span style="color:#666;font-size:14px">{zweitzeile}</span> {hinweis}'
+        f'{text}'
         f'</td></tr>'
     )
 
 
-def tagesblock(ueberschrift: str, events: list, leertext: str, tag=None) -> str:
+def tagesblock(ueberschrift: str, events: list, leertext: str, tag=None,
+               ausfuehrlich: bool = False) -> str:
     if not events:
         return (f'<h2 style="font-size:17px;margin:24px 0 8px">{e(ueberschrift)}</h2>'
                 f'<p style="color:#888;margin:0">{e(leertext)}</p>')
-    zeilen = "".join(eintrag(ev, tag) for ev in events)
+    zeilen = "".join(eintrag(ev, tag, ausfuehrlich) for ev in events)
     return (f'<h2 style="font-size:17px;margin:24px 0 8px">{e(ueberschrift)}</h2>'
             f'<table style="border-collapse:collapse;width:100%">{zeilen}</table>')
 
@@ -94,18 +152,28 @@ def main() -> None:
         ende = (ev.get("ende") or ev.get("beginn") or "")[:10]
         return beginn <= tag.isoformat() <= max(ende, beginn)
 
+    # Ausgebuchtes bleibt in den Daten und im Kalender, nur die Mail laesst es
+    # weg: sie ist eine Empfehlung, und was man nicht mehr besuchen kann,
+    # gehoert nicht empfohlen.
     passend = [ev for ev in daten["events"]
                if ev.get("status") == "aktiv"
                and ev.get("eintritt") in LABEL
+               and not ev.get("ausgebucht")
                and not (ev.get("eintritt") == "frei"
                         and ev.get("eintritt_confidence") == "niedrig")]
+
+    verborgen = sum(1 for ev in daten["events"]
+                    if ev.get("status") == "aktiv" and ev.get("ausgebucht")
+                    and ev.get("eintritt") in LABEL
+                    and heute.isoformat() <= (ev.get("beginn") or "")[:10]
+                    <= bis.isoformat())
 
     heute_events = sorted([ev for ev in passend if laeuft_an(ev, heute)],
                           key=lambda x: x["beginn"])
 
     bloecke = [tagesblock(
         f"Heute — {WOCHENTAGE[heute.weekday()]}, {heute.strftime('%d.%m.%Y')}",
-        heute_events, "Heute nichts Kostenloses gefunden.", heute)]
+        heute_events, "Heute nichts Kostenloses gefunden.", heute, True)]
 
     kommend = 0
     for versatz in range(1, 8):
@@ -128,9 +196,13 @@ def main() -> None:
                           or (ev.get("eintritt") == "frei"
                               and ev.get("eintritt_confidence") != "hoch")))
 
+    ausgeblendet = (f'{verborgen} ausgebucht und deshalb nicht gelistet · '
+                    if verborgen else "")
+
     fuss = (f'<hr style="border:none;border-top:1px solid #ddd;margin:28px 0 12px">'
             f'<p style="color:#888;font-size:13px;margin:0">'
             f'{len(heute_events)} heute · {kommend} in den nächsten 7 Tagen · '
+            f'{ausgeblendet}'
             f'{zu_pruefen} Fälle warten in der Prüfliste.<br>'
             f'Automatisch erzeugt aus daten/events.json. '
             f'Korrekturen gehören dorthin, nicht in diese Mail.</p>')

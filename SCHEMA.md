@@ -21,6 +21,7 @@ Alle Felder immer angeben. Was unbekannt ist, bekommt `null` — **nicht** raten
   "zielgruppe": "Alle",
   "drinnen_draussen": "draussen",
   "anmeldung_noetig": false,
+  "ausgebucht": false,
   "anmeldung_url": null,
   "bild_url": "https://…/foto.jpg",
   "quelle_url": "https://…/das-konkrete-event",
@@ -56,6 +57,23 @@ ganztägigen denselben Tag.
 
 Wichtig: „Anmeldung erforderlich" heißt **nicht** kostenpflichtig. Ein leeres
 `cost`-Feld in einer API heißt **nicht** gratis.
+
+Beleg und Einstufung müssen zusammenpassen. `einstufung_pruefen()` in
+`sammeln.py` setzt das durch: Steht im Beleg ein Betrag, gilt `kostenpflichtig`;
+steht dort „Eintritt frei" oder „kostenlos", gilt `frei` mit Sicherheit `hoch`.
+Das greift nur bei `unklar` — eine Einstufung, die das Modell selbst getroffen
+hat, wird nie überstimmt.
+
+**`ausgebucht`** — `true` nur, wenn die Quelle es sagt („ausgebucht",
+„ausverkauft", „nur noch Warteliste"). Anmeldepflicht allein genügt nicht.
+Neben dem Modellurteil greift eine Textprüfung auf Titel und Beschreibung,
+weil Veranstalter den Hinweis gern in den Titel schreiben.
+
+Folgen: Die Tagesmail lässt solche Termine weg und zählt sie nur im Fuß —
+sie ist eine Empfehlung, und was man nicht mehr besuchen kann, gehört nicht
+empfohlen. Im ICS-Kalender bleiben sie stehen, mit `[AUSGEBUCHT]` vor dem
+Titel; ein Kalender ist zum Nachschlagen da. Gelöscht wird nichts: Wird ein
+Platz wieder frei, ist die Veranstaltung noch da.
 
 **`eintritt_beleg`** — wörtliches Zitat aus der Quelle, das die Einstufung trägt.
 Bei `unklar` darf das `null` sein. Dieses Feld macht die Einstufung nachprüfbar,
