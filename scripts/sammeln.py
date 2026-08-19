@@ -349,6 +349,51 @@ def huelle_entfernen(seiten: list) -> list:
     ]
 
 
+def uebersichten_holen(quelle: dict) -> list:
+    """Die Uebersichtsseite und, falls sie blaettert, ihre Folgeseiten.
+
+    Der Stadtkalender zeigt zwoelf Termine pro Seite. Wer nur die erste liest,
+    sieht die naechsten Tage vollstaendig und danach nichts mehr — der
+    "Karaoke-Abend im Cafe Danoi" stand auf Seite 2 und fehlte deshalb in der
+    Mail. Solche Luecken faellt niemandem auf, weil die Mail gefuellt aussieht.
+
+    Weitergehangelt wird von Seite zu Seite: die Blaetterleiste der ersten
+    Seite verlinkt nur die zweite. `max_seiten` ist die Bremse — Detailseiten
+    kosten Tokens, und was in drei Wochen stattfindet, muss heute nicht in der
+    Mail stehen.
+    """
+    seiten = [(quelle["url"], holen(quelle["url"]))]
+    muster = quelle.get("blaetter_muster")
+    if not muster:
+        return seiten
+
+    grenze = quelle.get("max_seiten", 3)
+    eigener_host = urlparse(quelle["url"]).hostname
+    gesehen = {quelle["url"]}
+    offen = [seiten[0][1]]
+
+    while offen and len(seiten) < grenze:
+        for treffer in re.findall(r"""href=["']([^"'#]+)["']""", offen.pop(0)):
+            if len(seiten) >= grenze:
+                break
+            adresse = urljoin(quelle["url"], html.unescape(treffer))
+            if (urlparse(adresse).hostname != eigener_host
+                    or not re.search(muster, adresse) or adresse in gesehen):
+                continue
+            gesehen.add(adresse)
+            try:
+                inhalt = holen(adresse)
+            except Exception as fehler:
+                print(f"    Folgeseite uebersprungen ({type(fehler).__name__}): {adresse}")
+                continue
+            seiten.append((adresse, inhalt))
+            offen.append(inhalt)
+
+    if len(seiten) > 1:
+        print(f"    {len(seiten)} Uebersichtsseiten gelesen")
+    return seiten
+
+
 def detailseiten_holen(quelle: dict, uebersicht_html: str) -> list:
     """Den Detaillinks der Uebersichtsseite folgen.
 
@@ -379,7 +424,8 @@ def detailseiten_holen(quelle: dict, uebersicht_html: str) -> list:
 
 
 def text_lesen(quelle: dict) -> list:
-    uebersicht_html = holen(quelle["url"])
+    uebersichten = uebersichten_holen(quelle)
+    uebersicht_html = "\n".join(h for _, h in uebersichten)
     uebersicht = text_aus_html(uebersicht_html, quelle.get("max_zeichen", 40000))
     seiten = detailseiten_holen(quelle, uebersicht_html)
 
@@ -661,6 +707,126 @@ def zusammenfuehren(bestand: dict, gefunden: list, quelle: dict, heute: str) -> 
     return neu, geaendert
 
 
+def titel_normal(titel: str) -> str:
+    t = (titel or "").lower()
+    for a, b in (("ä", "ae"), ("ö", "oe"), ("ü", "ue"), ("ß", "ss")):
+        t = t.replace(a, b)
+    return re.sub(r"[^a-z0-9]+", "", t)
+
+
+def ort_woerter(name: str) -> set:
+    """Tragende Woerter eines Ortsnamens. Kurzes wie "am", "der" faellt weg."""
+    t = (name or "").lower()
+    for x, y in (("ä", "ae"), ("ö", "oe"), ("ü", "ue"), ("ß", "ss")):
+        t = t.replace(x, y)
+    return {w for w in re.findall(r"[a-z0-9]+", t) if len(w) >= 5}
+
+
+def tage(ev: dict) -> tuple:
+    beginn = (ev.get("beginn") or "")[:10]
+    ende = (ev.get("ende") or "")[:10]
+    return beginn, max(ende, beginn)
+
+
+def dieselbe_veranstaltung(a: dict, b: dict) -> bool:
+    """Zwei Eintraege, die die Schluessel nicht zusammengebracht haben.
+
+    Das kommt vor, wenn eine Uebersichtsseite den Titel kuerzt oder ein Portal
+    eine Ausstellung mit dem Zusatz der Reihe fuehrt: "SpielRaeume" gegen
+    "SpielRaeume - Remix 6", "Maerchen am Nachmittag" gegen "Maerchen am
+    Nachmittag - Eine Vorlesestunde fuer ...".
+
+    Zwei Bedingungen muessen zusammenkommen, und die zweite ist die wichtige:
+
+    Erstens muss ein Titel der Anfang des anderen sein. Zweitens muessen die
+    Termine zusammenpassen — und genau das trennt Dubletten von Reihen. Der
+    Furtner veranstaltet "Karaoke mit Stefan" am 30.10. und am 20.11.:
+    identischer Titel, verschiedene Abende, zwei Veranstaltungen. Wer nur auf
+    den Titel sieht, wirft eine ganze Reihe auf einen Termin zusammen.
+
+    Beim Datum gilt eine Asymmetrie, die auf den ersten Blick seltsam wirkt:
+    Ein Eintrag darf in einem zeitlich weiteren aufgehen, aber nur, wenn sein
+    Titel der KUERZERE ist. Ein laengerer Titel innerhalb desselben Zeitraums
+    beschreibt naemlich in aller Regel etwas Eigenes — die Fuehrung durch die
+    Ausstellung, das Gespraech mit dem Kuenstler. Der kuerzere Titel ist die
+    Ausstellung selbst, nur von einem Portal knapper gefuehrt.
+    """
+    ta, tb = titel_normal(a.get("titel")), titel_normal(b.get("titel"))
+    if len(min(ta, tb, key=len)) < 10:
+        return False
+    kurz, lang = (ta, tb) if len(ta) <= len(tb) else (tb, ta)
+    if not lang.startswith(kurz):
+        return False
+
+    # Der Ort darf nicht widersprechen. Die Namen weichen zwischen Portalen
+    # aber erheblich ab — "Schafhof Kunstforum" gegen "Schafhof — Europaeisches
+    # Kunstforum Oberbayern". Ein gemeinsames tragendes Wort genuegt deshalb;
+    # auf Uebereinstimmung zu bestehen hiesse, fast nie zu verschmelzen.
+    oa, ob = ort_woerter(a.get("ort_name")), ort_woerter(b.get("ort_name"))
+    if oa and ob and not oa & ob:
+        return False
+
+    (ab, ae), (bb, be) = tage(a), tage(b)
+    if ab == bb:
+        return True
+
+    knapper, weiter = (a, b) if len(ta) <= len(tb) else (b, a)
+    (kb, ke), (wb, we) = tage(knapper), tage(weiter)
+    return wb <= kb and ke <= we
+
+
+def entdoppeln(bestand: dict) -> int:
+    """Nachtraeglich verschmelzen, was die Schluessel nicht gefunden haben."""
+    events = bestand["events"]
+    weg = set()
+    for i, a in enumerate(events):
+        if i in weg:
+            continue
+        for j in range(i + 1, len(events)):
+            if j in weg or not dieselbe_veranstaltung(a, events[j]):
+                continue
+            b = events[j]
+            # Handbestaetigtes und der inhaltsreichere Eintrag gewinnen.
+            behalten, aufgeben = ((a, b) if (a.get("manuell_bestaetigt"),
+                                             guete(a), gehalt(a))
+                                  >= (b.get("manuell_bestaetigt"),
+                                      guete(b), gehalt(b)) else (b, a))
+            verschmelzen(behalten, aufgeben)
+            events[i] = behalten
+            a = behalten
+            weg.add(j)
+    if weg:
+        bestand["events"] = [e for k, e in enumerate(events) if k not in weg]
+    return len(weg)
+
+
+def gehalt(ev: dict) -> int:
+    return sum(1 for v in ev.values() if v not in (None, "", [], False))
+
+
+def verschmelzen(behalten: dict, aufgeben: dict) -> None:
+    """Der Zeitraum wird zur Vereinigung, Quellen werden gesammelt."""
+    b1, e1 = tage(behalten)
+    b2, e2 = tage(aufgeben)
+    if b2 < b1:
+        behalten["beginn"] = aufgeben["beginn"]
+    if max(e1, e2) > e1:
+        behalten["ende"] = aufgeben.get("ende")
+
+    weitere = behalten.setdefault("quellen_weitere", [])
+    for adresse in [aufgeben.get("quelle_url")] + (aufgeben.get("quellen_weitere") or []):
+        if adresse and adresse != behalten.get("quelle_url") and adresse not in weitere:
+            weitere.append(adresse)
+
+    for feld, wert in aufgeben.items():
+        if feld in ("id", "beginn", "ende", "quelle_url", "quelle_name",
+                    "quellen_weitere", *EINTRITT_FELDER):
+            continue
+        if behalten.get(feld) in (None, "", []) and wert not in (None, "", []):
+            behalten[feld] = wert
+    eintritt_uebernehmen(behalten, aufgeben)
+
+
 def aufraeumen(bestand: dict, heute: date, gelesen: set) -> None:
     """`gelesen` sind die Quellen, die in diesem Lauf erfolgreich antworteten.
 
@@ -732,6 +898,9 @@ def main() -> None:
         print(f"    {len(gefunden)} gefunden, {neu} neu, {geaendert} Felder aktualisiert")
         gesundheit_pruefen(status, quelle["name"], len(gefunden), "", heute_s)
 
+    doppelt = entdoppeln(bestand)
+    if doppelt:
+        print(f"  {doppelt} Dubletten nachtraeglich verschmolzen")
     aufraeumen(bestand, heute, gelesen)
     bestand["events"].sort(key=lambda e: e.get("beginn") or "")
     DATEN.write_text(json.dumps(bestand, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")

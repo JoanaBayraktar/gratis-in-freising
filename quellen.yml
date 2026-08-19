@@ -27,12 +27,26 @@ quellen:
     url: https://veranstaltungen.freising.de/freising/
     methode: text
     detail_muster: '-e[0-9a-f]{30,}\.html'
+    # Beide Portale zeigen zwoelf Termine je Seite und blaettern mit
+    # ?os=N. Ohne das fehlt alles ab dem dreizehnten Termin.
+    blaetter_muster: '[?&]os=[0-9]+'
+    max_seiten: 3
+    # Drei Seiten bringen mehr Detaillinks, als die Voreinstellung (30)
+    # zulaesst. Ohne das entstuende genau die Luecke wieder, nur weiter hinten.
+    max_details: 40
     aktiv: true
 
   - name: Merkur Veranstaltungen
     url: https://veranstaltungen.merkur.de/freising/?suche&datumspezial=abheute&kms=5
     methode: text
     detail_muster: '-e[0-9a-f]{30,}\.html'
+    # Beide Portale zeigen zwoelf Termine je Seite und blaettern mit
+    # ?os=N. Ohne das fehlt alles ab dem dreizehnten Termin.
+    blaetter_muster: '[?&]os=[0-9]+'
+    max_seiten: 3
+    # Drei Seiten bringen mehr Detaillinks, als die Voreinstellung (30)
+    # zulaesst. Ohne das entstuende genau die Luecke wieder, nur weiter hinten.
+    max_details: 40
     aktiv: true
 
   # ort_standard greift nur, wenn die Quelle selbst keinen Ort nennt. Sinnvoll
