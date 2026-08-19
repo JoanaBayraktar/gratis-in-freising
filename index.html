@@ -115,6 +115,60 @@ details.beleg div {
 }
 details.beleg a { color: var(--blau); word-break: break-all; }
 
+/* Kalender */
+#kalender { padding: 10px 0 4px; }
+.kal-kopf { display: flex; align-items: center; gap: 10px; margin-bottom: 6px; }
+.kal-kopf strong { font-size: 14px; min-width: 150px; }
+.kal-kopf button {
+  font: inherit; font-size: 15px; line-height: 1; cursor: pointer;
+  width: 28px; height: 28px; border-radius: 6px;
+  background: var(--grund); color: var(--text); border: 1px solid var(--linie);
+}
+.kal-gitter {
+  display: grid; grid-template-columns: repeat(7, 1fr); gap: 2px; max-width: 320px;
+}
+.kal-gitter .wt {
+  font-size: 11px; color: var(--leiser); text-align: center; padding-bottom: 2px;
+}
+.kal-tag {
+  font: inherit; font-size: 13px; cursor: pointer; padding: 5px 0; position: relative;
+  background: var(--grund); color: var(--text);
+  border: 1px solid transparent; border-radius: 6px;
+}
+.kal-tag:disabled { color: var(--leiser); opacity: .45; cursor: default; }
+.kal-tag.hat::after {
+  content: ""; position: absolute; left: 50%; bottom: 3px; transform: translateX(-50%);
+  width: 4px; height: 4px; border-radius: 50%; background: var(--blau);
+}
+.kal-tag.heute { border-color: var(--linie); font-weight: 700; }
+.kal-tag[aria-pressed="true"] { background: var(--blau); color: #fff; font-weight: 700; }
+.kal-tag[aria-pressed="true"]::after { background: #fff; }
+@media (prefers-color-scheme: dark) {
+  .kal-tag[aria-pressed="true"] { color: #10161c; }
+}
+
+/* Meldeformular */
+#melden { margin-top: 46px; padding: 20px; background: var(--kasten); border-radius: 10px; }
+#melden h2 { font-size: 18px; margin: 0 0 4px; }
+#melden p { margin: 0 0 12px; color: var(--leise); font-size: 14px; }
+.melde-gitter {
+  display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); gap: 10px;
+}
+.melde-gitter label { display: flex; flex-direction: column; gap: 3px;
+                      font-size: 13px; color: var(--leise); }
+.melde-gitter .breit { grid-column: 1 / -1; }
+.melde-gitter input, .melde-gitter textarea, .melde-gitter select {
+  font: inherit; font-size: 14px; padding: 7px 9px; color: var(--text);
+  background: var(--grund); border: 1px solid var(--linie); border-radius: 7px;
+  width: 100%; resize: vertical;
+}
+button.senden {
+  font: inherit; font-size: 14px; font-weight: 600; padding: 9px 16px; cursor: pointer;
+  background: var(--blau); color: #fff; border: none; border-radius: 8px;
+}
+@media (prefers-color-scheme: dark) { button.senden { color: #10161c; } }
+.melde-hinweis { font-size: 13px; color: var(--rot); margin-left: 10px; }
+
 .hinweis { color: var(--leiser); padding: 40px 0; text-align: center; }
 footer { margin-top: 40px; padding-top: 14px; border-top: 1px solid var(--linie);
          color: var(--leiser); font-size: 12.5px; }
@@ -136,6 +190,8 @@ footer a { color: var(--leiser); }
     <input type="search" id="suche" placeholder="Titel, Ort, Veranstalter, Kategorie …"
            autocomplete="off" aria-label="Suchen">
     <select id="quelle" aria-label="Quelle"><option value="">Alle Quellen</option></select>
+    <select id="kategorie" aria-label="Art der Veranstaltung">
+      <option value="">Jede Art</option></select>
     <select id="sortierung" aria-label="Sortierung">
       <option value="datum">nach Datum</option>
       <option value="titel">nach Titel</option>
@@ -148,11 +204,38 @@ footer a { color: var(--leiser); }
     <button class="filter" data-f="gratis" aria-pressed="false">Belegt gratis</button>
     <button class="filter" data-f="pruefen" aria-pressed="false">Nur vermutlich</button>
     <button class="filter" data-f="mitpreis" aria-pressed="false">Mit Eintritt</button>
+    <button class="filter" id="kalenderknopf" aria-pressed="false"
+            aria-controls="kalender">Tag wählen</button>
     <span class="zahl" id="zahl"></span>
   </div>
+  <div id="kalender" hidden></div>
 </div>
 
 <main id="liste"><p class="hinweis">Lade Daten …</p></main>
+
+<section id="melden">
+  <h2>Veranstaltung melden</h2>
+  <p>Etwas Kostenloses gefunden, das hier fehlt? Das Formular öffnet einen
+     vorausgefüllten Eintrag auf GitHub — dort noch auf „Submit" klicken.
+     Aufgenommen wird die Veranstaltung erst nach Freigabe.</p>
+  <div class="melde-gitter">
+    <label>Titel <input id="m-titel" required placeholder="Konzert im Lindenkeller"></label>
+    <label>Datum <input id="m-datum" type="date" required></label>
+    <label>Uhrzeit <input id="m-zeit" type="time"></label>
+    <label>Ort <input id="m-ort" placeholder="Lindenkeller, Veitsmüllerweg 2"></label>
+    <label>Eintritt
+      <select id="m-eintritt">
+        <option value="frei">Eintritt frei</option>
+        <option value="spende">Spende erbeten</option>
+        <option value="unklar">weiß ich nicht</option>
+      </select></label>
+    <label>Link zur Ankündigung <input id="m-url" type="url" placeholder="https://…"></label>
+    <label class="breit">Was ist das? <textarea id="m-text" rows="3"
+      placeholder="Ein bis zwei Sätze — was passiert dort, für wen?"></textarea></label>
+  </div>
+  <p><button id="m-senden" class="senden">Auf GitHub eintragen</button>
+     <span id="m-hinweis" class="melde-hinweis"></span></p>
+</section>
 
 <footer id="fuss"></footer>
 </div>
@@ -169,8 +252,9 @@ const fuss  = document.getElementById("fuss");
 const zahl  = document.getElementById("zahl");
 
 let EVENTS = [];
-const zustand = { suche: "", quelle: "", sortierung: "datum",
-                  filter: new Set(["kommend"]) };
+const zustand = { suche: "", quelle: "", kategorie: "", sortierung: "datum",
+                  tag: null, filter: new Set(["kommend"]) };
+const REPO = "JoanaBayraktar/gratis-in-freising";
 
 // --- Hilfen -----------------------------------------------------------------
 
@@ -245,8 +329,8 @@ function passt(ev) {
   if (!b) return false;
   const h = heute();
 
-  if (zustand.filter.has("kommend") && e < h) return false;
-  if (zustand.filter.has("woche")) {
+  if (!zustand.tag && zustand.filter.has("kommend") && e < h) return false;
+  if (!zustand.tag && zustand.filter.has("woche")) {
     const grenze = new Date(h); grenze.setDate(grenze.getDate() + 7);
     if (b > grenze || e < h) return false;
   }
@@ -254,6 +338,14 @@ function passt(ev) {
   if (zustand.filter.has("pruefen") && !zuPruefen(ev)) return false;
   if (zustand.filter.has("mitpreis") && anzeige(ev) !== "kosten") return false;
   if (zustand.quelle && ev.quelle_name !== zustand.quelle) return false;
+  if (zustand.kategorie && ev.kategorie !== zustand.kategorie) return false;
+
+  // Ein gewählter Tag schlägt die Zeitfilter: Wer den 12. September anklickt,
+  // will den 12. September sehen, auch wenn "7 Tage" noch gedrückt ist.
+  if (zustand.tag) {
+    const t = alsDatum(zustand.tag);
+    if (b > t || e < t) return false;
+  }
 
   if (zustand.suche) {
     const heu = [ev.titel, ev.ort_name, ev.ort_adresse, ev.veranstalter,
@@ -387,6 +479,124 @@ function zeichnen() {
   liste.innerHTML = html;
 }
 
+// --- Kalender ---------------------------------------------------------------
+
+let kalenderMonat = null;   // erster Tag des angezeigten Monats
+
+/** An welchen Tagen liegt überhaupt etwas? Mehrtägiges zählt an jedem Tag,
+    sonst hätte eine Ausstellung im Kalender nur einen einzigen Punkt. */
+function belegteTage() {
+  const menge = new Set();
+  for (const ev of EVENTS) {
+    const [b, e] = spanne(ev);
+    if (!b) continue;
+    for (const d = new Date(b); d <= e; d.setDate(d.getDate() + 1)) {
+      menge.add(schluesselTag(d));
+      if (menge.size > 5000) break;   // Notbremse gegen kaputte Enddaten
+    }
+  }
+  return menge;
+}
+
+const schluesselTag = d => `${d.getFullYear()}-${String(d.getMonth()+1).padStart(2,"0")}-${String(d.getDate()).padStart(2,"0")}`;
+
+function kalenderZeichnen() {
+  const kasten = document.getElementById("kalender");
+  if (kasten.hidden) return;
+
+  const h = heute();
+  if (!kalenderMonat) kalenderMonat = new Date(h.getFullYear(), h.getMonth(), 1);
+  const monat = kalenderMonat;
+  const belegt = belegteTage();
+
+  // Montag als erster Tag der Woche: Sonntag ist 0, muss ans Ende.
+  const ersterWochentag = (new Date(monat.getFullYear(), monat.getMonth(), 1).getDay() + 6) % 7;
+  const tageImMonat = new Date(monat.getFullYear(), monat.getMonth() + 1, 0).getDate();
+
+  let zellen = ["Mo","Di","Mi","Do","Fr","Sa","So"]
+    .map(w => `<div class="wt">${w}</div>`).join("");
+  zellen += "<div></div>".repeat(ersterWochentag);
+
+  for (let tag = 1; tag <= tageImMonat; tag++) {
+    const d = new Date(monat.getFullYear(), monat.getMonth(), tag);
+    const s = schluesselTag(d);
+    const klassen = ["kal-tag"];
+    if (belegt.has(s)) klassen.push("hat");
+    if (s === schluesselTag(h)) klassen.push("heute");
+    zellen += `<button class="${klassen.join(" ")}" data-tag="${s}"
+      aria-pressed="${zustand.tag === s ? "true" : "false"}"
+      ${belegt.has(s) ? "" : "disabled"}>${tag}</button>`;
+  }
+
+  kasten.innerHTML = `
+    <div class="kal-kopf">
+      <button data-schritt="-1" aria-label="Vorheriger Monat">‹</button>
+      <strong>${MONATE[monat.getMonth()]} ${monat.getFullYear()}</strong>
+      <button data-schritt="1" aria-label="Nächster Monat">›</button>
+      ${zustand.tag ? `<button data-schritt="0" style="width:auto;padding:0 10px">Tag lösen</button>` : ""}
+    </div>
+    <div class="kal-gitter">${zellen}</div>`;
+}
+
+document.getElementById("kalenderknopf").addEventListener("click", ereignis => {
+  const kasten = document.getElementById("kalender");
+  kasten.hidden = !kasten.hidden;
+  ereignis.currentTarget.setAttribute("aria-pressed", kasten.hidden ? "false" : "true");
+  kalenderZeichnen();
+});
+
+document.getElementById("kalender").addEventListener("click", ereignis => {
+  const schritt = ereignis.target.closest("[data-schritt]");
+  if (schritt) {
+    const n = Number(schritt.dataset.schritt);
+    if (n === 0) zustand.tag = null;
+    else kalenderMonat = new Date(kalenderMonat.getFullYear(), kalenderMonat.getMonth() + n, 1);
+    kalenderZeichnen(); zeichnen();
+    return;
+  }
+  const tag = ereignis.target.closest(".kal-tag");
+  if (!tag) return;
+  zustand.tag = zustand.tag === tag.dataset.tag ? null : tag.dataset.tag;
+  kalenderZeichnen(); zeichnen();
+});
+
+// --- Melden -----------------------------------------------------------------
+
+/** Baut einen vorausgefüllten GitHub-Eintrag.
+
+    Eine statische Seite kann nichts speichern, und das ist hier ein Vorteil:
+    Ohne eigenen Server gibt es kein Formular, das jemand mit Werbung
+    vollschreibt. Der Weg über GitHub kostet die meldende Person einen Klick
+    mehr und Sie behalten die Freigabe. */
+document.getElementById("m-senden").addEventListener("click", () => {
+  const wert = id => document.getElementById(id).value.trim();
+  const hinweis = document.getElementById("m-hinweis");
+
+  if (!wert("m-titel") || !wert("m-datum")) {
+    hinweis.textContent = "Titel und Datum werden gebraucht.";
+    return;
+  }
+  hinweis.textContent = "";
+
+  const zeilen = [
+    "### Titel", wert("m-titel"), "",
+    "### Wann", wert("m-datum") + (wert("m-zeit") ? `, ${wert("m-zeit")} Uhr` : ""), "",
+    "### Wo", wert("m-ort") || "_nicht angegeben_", "",
+    "### Eintritt", document.getElementById("m-eintritt").selectedOptions[0].text, "",
+    "### Link", wert("m-url") || "_keiner_", "",
+    "### Beschreibung", wert("m-text") || "_keine_", "",
+    "---", "Gemeldet über die Übersichtsseite.",
+  ];
+
+  const adresse = `https://github.com/${REPO}/issues/new?`
+    + new URLSearchParams({
+        title: `Veranstaltung: ${wert("m-titel")} (${wert("m-datum")})`,
+        body: zeilen.join("\n"),
+        labels: "meldung",
+      });
+  window.open(adresse, "_blank", "noopener");
+});
+
 // --- Bedienung --------------------------------------------------------------
 
 document.getElementById("suche").addEventListener("input", ereignis => {
@@ -395,6 +605,9 @@ document.getElementById("suche").addEventListener("input", ereignis => {
 });
 document.getElementById("quelle").addEventListener("change", ereignis => {
   zustand.quelle = ereignis.target.value; zeichnen();
+});
+document.getElementById("kategorie").addEventListener("change", ereignis => {
+  zustand.kategorie = ereignis.target.value; zeichnen();
 });
 document.getElementById("sortierung").addEventListener("change", ereignis => {
   zustand.sortierung = ereignis.target.value; zeichnen();
@@ -431,6 +644,15 @@ fetch("daten/events.json", { cache: "no-cache" })
         const o = document.createElement("option");
         o.value = o.textContent = name;
         auswahl.appendChild(o);
+      });
+
+    const arten = document.getElementById("kategorie");
+    [...new Set(EVENTS.map(ev => ev.kategorie).filter(Boolean))]
+      .sort((a, b) => a.localeCompare(b, "de"))
+      .forEach(name => {
+        const o = document.createElement("option");
+        o.value = o.textContent = name;
+        arten.appendChild(o);
       });
 
     const letzte = EVENTS.map(ev => ev.zuletzt_gesehen).filter(Boolean).sort().pop();

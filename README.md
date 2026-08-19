@@ -23,6 +23,7 @@ ausgabe/
 scripts/
   sammeln.py             holt die Quellen, fragt das Modell, schreibt events.json
   build_kalender.py      baut die .ics-Dateien und die Prüfliste
+  meldungen.py           übernimmt freigegebene Meldungen aus GitHub-Issues
   nachpruefen.py         zweiter Modellblick auf die fertige Liste
   build_mail.py          baut die Tagesmail
   build_social.py        baut die Social-Entwürfe
@@ -129,6 +130,32 @@ Suchen, nach Quelle filtern, nach Datum oder Titel sortieren.
 Die Seite liest `daten/events.json` direkt und hat keinen Bauschritt: Was der
 nächtliche Lauf schreibt, steht dort ohne weiteres Zutun. Sie lädt nichts aus
 dem Netz nach — keine Schriften, keine Bibliotheken.
+
+Zum Suchen gibt es drei Wege nebeneinander: das Suchfeld, die Auswahllisten
+für Quelle und Art der Veranstaltung, und einen kleinen Monatskalender hinter
+„Tag wählen". Tage ohne Veranstaltung sind dort ausgegraut; ein gewählter Tag
+sticht die Zeitfilter aus, weil man ihn ja bewusst angeklickt hat.
+
+### Veranstaltungen melden
+
+Unten auf der Seite steht ein Formular. Es speichert nichts — es öffnet einen
+vorausgefüllten Eintrag auf GitHub, den die meldende Person noch absenden muss.
+Das ist Absicht: Eine statische Seite hat keinen Server, den jemand mit Werbung
+vollschreiben kann, und Sie behalten die Freigabe.
+
+Der Weg einer Meldung:
+
+1. Jemand füllt das Formular aus → Issue mit dem Etikett `meldung`
+2. Sie sehen es an. Stimmt es, hängen Sie das Etikett **`freigegeben`** dran
+3. Der nächste nächtliche Lauf übernimmt es, schließt das Issue und
+   kommentiert es
+
+Ohne `freigegeben` passiert nichts, egal was im Issue steht. Übernommene
+Meldungen bekommen `manuell_bestaetigt: true` — Sie haben sie geprüft, also
+fasst der Sammellauf sie nicht mehr an.
+
+Was gerade zur Freigabe wartet:
+<https://github.com/JoanaBayraktar/gratis-in-freising/issues?q=is%3Aopen+label%3Ameldung>
 
 Lokal ansehen (ein Server ist nötig, `file://` darf die JSON nicht laden):
 

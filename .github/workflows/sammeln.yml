@@ -11,6 +11,8 @@ on:
 
 permissions:
   contents: write
+  # Meldungen kommentieren und schliessen
+  issues: write
 
 concurrency:
   group: sammeln
@@ -36,6 +38,15 @@ jobs:
         env:
           MISTRAL_API_KEY: ${{ secrets.MISTRAL_API_KEY }}
         run: python scripts/sammeln.py
+
+      # Was Sie auf GitHub freigegeben haben, kommt vor der Nachpruefung rein
+      # — dann wird es beim Ortsabgleich gleich mitgesehen.
+      - name: Freigegebene Meldungen uebernehmen
+        continue-on-error: true
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_REPOSITORY: ${{ github.repository }}
+        run: python scripts/meldungen.py
 
       # Zweiter Blick des Modells, diesmal auf die fertige Liste statt auf
       # einzelne Seiten: Dubletten ueber Quellen hinweg, widersprüchliche

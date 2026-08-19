@@ -1,0 +1,55 @@
+name: Veranstaltung melden
+description: Eine kostenlose Veranstaltung in Freising vorschlagen
+title: "Veranstaltung: "
+labels: ["meldung"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Danke fürs Melden. Die Veranstaltung erscheint erst in Kalender und
+        Mail, wenn sie freigegeben wurde — dafür bekommt dieser Eintrag das
+        Etikett `freigegeben`.
+
+        Die Überschriften unten werden maschinell ausgewertet. Bitte nichts
+        umbenennen und die Felder einzeln ausfüllen.
+  - type: input
+    id: titel
+    attributes:
+      label: Titel
+      placeholder: Konzert im Lindenkeller
+    validations:
+      required: true
+  - type: input
+    id: wann
+    attributes:
+      label: Wann
+      description: Datum als JJJJ-MM-TT, Uhrzeit wenn bekannt.
+      placeholder: 2026-09-12, 19:30 Uhr
+    validations:
+      required: true
+  - type: input
+    id: wo
+    attributes:
+      label: Wo
+      placeholder: Lindenkeller, Veitsmüllerweg 2
+  - type: dropdown
+    id: eintritt
+    attributes:
+      label: Eintritt
+      options:
+        - Eintritt frei
+        - Spende erbeten
+        - weiß ich nicht
+    validations:
+      required: true
+  - type: input
+    id: link
+    attributes:
+      label: Link
+      description: Seite mit der Ankündigung, falls es eine gibt.
+      placeholder: https://…
+  - type: textarea
+    id: beschreibung
+    attributes:
+      label: Beschreibung
+      placeholder: Ein bis zwei Sätze — was passiert dort, für wen?
