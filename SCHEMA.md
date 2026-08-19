@@ -64,6 +64,18 @@ steht dort „Eintritt frei" oder „kostenlos", gilt `frei` mit Sicherheit `hoc
 Das greift nur bei `unklar` — eine Einstufung, die das Modell selbst getroffen
 hat, wird nie überstimmt.
 
+**`eintritt_confidence`** — `hoch` heißt: steht wörtlich in der Quelle. Ohne
+`eintritt_beleg` kann das nicht stimmen, deshalb stuft `einstufung_pruefen()`
+solche Fälle auf `mittel` zurück. `unklar` mit `hoch` ist ebenfalls ein
+Widerspruch — sicher zu sein, dass man nichts weiß, ist keine Sicherheit über
+den Eintritt; das wird zu `niedrig`.
+
+**`ort_name`** — eine Schreibweise je Ort. Die Tabelle `orte:` in `quellen.yml`
+ordnet Varianten einer Fassung zu; erkannt wird über die tragenden Wörter, wobei
+„Freising", „Stadt", „Innenstadt" und ähnliche nicht zählen. Ohne diese
+Ausnahmeliste gälte „Stadtbibliothek Freising" als derselbe Ort wie
+„Marienplatz Freising".
+
 **`ausgebucht`** — `true` nur, wenn die Quelle es sagt („ausgebucht",
 „ausverkauft", „nur noch Warteliste"). Anmeldepflicht allein genügt nicht.
 Neben dem Modellurteil greift eine Textprüfung auf Titel und Beschreibung,
@@ -84,10 +96,6 @@ greift die Hausregel `eintritt_wenn_unklar` einer Quelle (etwa „im Furtner ist
 der Eintritt frei, wenn nichts anderes dabeisteht"). Der Text sagt das
 ausdrücklich, damit im Kalender unterscheidbar bleibt, was belegt und was
 unterstellt ist. Eine ausgewiesene Preisangabe schlägt die Hausregel immer.
-
-**`eintritt_confidence`** — `hoch` (steht wörtlich da) · `mittel` (erschlossen,
-z. B. Vernissage ist üblicherweise frei) · `niedrig` (geraten).
-Nur `frei` + `hoch` landet automatisch im öffentlichen Kalender.
 
 **`kategorie`** — einer von: `Musik`, `Kunst`, `Familie`, `Vortrag`, `Markt`,
 `Sport`, `Fest`, `Sonstiges`

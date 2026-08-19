@@ -1,3 +1,25 @@
+# Was nie eine Veranstaltung ist. Die Aggregatoren fuehren auch Dauerangebote
+# und Marktstaende als Termin. Ein Wochenmarkt findet jede Woche statt, kostet
+# nichts und ist trotzdem nichts, worauf man jemanden hinweist — er verstopft
+# die Mail und verdraengt das, was tatsaechlich einmalig ist.
+# Die Muster werden gegen den Titel geprueft, Gross- und Kleinschreibung egal.
+ignorieren:
+  - wochenmarkt
+  - bauernmarkt
+  - christkindlmarkt-?stand
+
+# Eine Schreibweise je Ort. Links steht, was in Kalender und Mail erscheint;
+# darunter die Varianten, an denen der Ort erkannt wird. Erkannt wird ueber die
+# tragenden Woerter, "Freising" und aehnliche Fuellwoerter zaehlen nicht mit.
+orte:
+  Schafhof — Europäisches Künstlerhaus:
+    - Schafhof Kunstforum
+    - Schafhof — Europäisches Kunstforum Oberbayern
+  Stadtbibliothek Freising:
+    - Stadtbibliothek
+  Furtnerbräu:
+    - Furtner Freising
+
 # Quellen fuer den naechtlichen Sammellauf.
 #
 # Diese Datei koennen Sie direkt auf github.com bearbeiten: Datei oeffnen,

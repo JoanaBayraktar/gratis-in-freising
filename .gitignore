@@ -11,3 +11,6 @@ __pycache__/
 
 # Rechnerspezifische Claude-Code-Einstellungen
 .claude/settings.local.json
+
+# Gespeichertes HTML aus scripts/test.py
+scripts/test_seite.html

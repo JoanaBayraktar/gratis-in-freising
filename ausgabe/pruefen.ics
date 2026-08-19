@@ -23,8 +23,96 @@ RRULE:FREQ=YEARLY;BYMONTH=10;BYDAY=-1SU
 END:STANDARD
 END:VTIMEZONE
 BEGIN:VEVENT
+UID:7c62dab1505ff73c@gratis-freising
+DTSTAMP:20260819T121104Z
+DTSTART;TZID=Europe/Berlin:20260819T093000
+DTEND;TZID=Europe/Berlin:20260819T110000
+SUMMARY:Zwillings-Krabbelgruppe
+LOCATION:Epiphanias-Zentrum — Katharina-Mair-Straße 19\, 85356 Freising
+DESCRIPTION:Treffpunkt für Eltern mit Zwillingen\, Babys und Kleinkindern 
+ ab Krabbelalter. Jeden 1. und 3. Mittwoch im Monat von 9:30 bis 11 Uhr. Le
+ itung: Benita von Fritsch\, Anmeldung erforderlich.\n\nEintritt: Eintritt 
+ frei\nSicherheit: mittel\n\nKategorie: Familie\nZielgruppe: Kinder\nDrinne
+ n/Draussen: drinnen\nAnmeldung noetig: ja — siehe Quelle\n\nQuelle: http
+ s://veranstaltungen.merkur.de/freising/zwillings-krabbelgruppe-e940437dc64
+ af40f2d1829b2001e77dd2.html
+URL:https://veranstaltungen.merkur.de/freising/zwillings-krabbelgruppe-e940
+ 437dc64af40f2d1829b2001e77dd2.html
+CATEGORIES:Familie
+END:VEVENT
+BEGIN:VEVENT
+UID:0b8750db9f962483@gratis-freising
+DTSTAMP:20260819T121104Z
+DTSTART;TZID=Europe/Berlin:20260820T193000
+DTEND;TZID=Europe/Berlin:20260820T210000
+SUMMARY:Kreuzbund SHG Bahnhofstraße
+LOCATION:Caritas-Zentrum Freising — Bahnhofstr. 20\, 85356 Freising
+DESCRIPTION:Selbsthilfegruppe für Betroffene und Angehörige. Offenes Ange
+ bot jeden Donnerstag von 19:30 bis 21 Uhr. Kontakt: Michael Kraml\, 08168/
+ 1460.\n\nEintritt: Eintritt frei\nSicherheit: mittel\n\nVeranstalter: Mich
+ ael Kraml\nKategorie: Rat und Hilfe\nZielgruppe: Alle\nDrinnen/Draussen: d
+ rinnen\n\nQuelle: https://veranstaltungen.merkur.de/freising/kreuzbund-shg
+ -bahnhofstrasse-ec0093f7bfcf96906ff24eb4ce9eea60e.html
+URL:https://veranstaltungen.merkur.de/freising/kreuzbund-shg-bahnhofstrasse
+ -ec0093f7bfcf96906ff24eb4ce9eea60e.html
+CATEGORIES:Rat und Hilfe
+END:VEVENT
+BEGIN:VEVENT
+UID:53f1c56a9e6f9c8d@gratis-freising
+DTSTAMP:20260819T121104Z
+DTSTART;TZID=Europe/Berlin:20260820T200000
+DTEND;TZID=Europe/Berlin:20260820T220000
+SUMMARY:Anonyme Alkoholiker
+LOCATION:Paul-Gerhardt-Haus — General-von-Stein-Straße 22\, 85356 Freisi
+ ng
+DESCRIPTION:Regelmäßiges Treffen der Selbsthilfegruppe für Betroffene un
+ d Angehörige. Jeden Donnerstag und Freitag um 20 Uhr im Paul-Gerhardt-Hau
+ s. Offenes Angebot für alle Interessierten.\n\nEintritt: Eintritt frei\nS
+ icherheit: mittel\n\nKategorie: Rat und Hilfe\nZielgruppe: Alle\nDrinnen/D
+ raussen: drinnen\n\nQuelle: https://veranstaltungen.merkur.de/freising/ano
+ nyme-alkoholiker-e3ae9b93c79a784e9e0d9eba917314af3.html
+URL:https://veranstaltungen.merkur.de/freising/anonyme-alkoholiker-e3ae9b93
+ c79a784e9e0d9eba917314af3.html
+CATEGORIES:Rat und Hilfe
+END:VEVENT
+BEGIN:VEVENT
+UID:678505c327ef381e@gratis-freising
+DTSTAMP:20260819T121104Z
+DTSTART;TZID=Europe/Berlin:20260820T200000
+DTEND;TZID=Europe/Berlin:20260820T220000
+SUMMARY:Probe der Kantorei
+LOCATION:Evang. Gemeindehaus Christi Himmelfahrt — Martin-Luther-Str. 10\
+ , 85356 Freising
+DESCRIPTION:Probe des Kirchenchors Kantorei. Alle Interessierten sind willk
+ ommen. Leitung: Maria Heidecker\, Kontakt über maria.heidecker@elkb.de.\n
+ \nEintritt: Eintritt frei\nSicherheit: mittel\n\nKategorie: Sonstiges\nZie
+ lgruppe: Alle\nDrinnen/Draussen: drinnen\n\nQuelle: https://veranstaltunge
+ n.merkur.de/freising/probe-der-kantorei-ef6138cb4952290182f49706f76359ddc.
+ html
+URL:https://veranstaltungen.merkur.de/freising/probe-der-kantorei-ef6138cb4
+ 952290182f49706f76359ddc.html
+CATEGORIES:Sonstiges
+END:VEVENT
+BEGIN:VEVENT
+UID:a92f8503b655cdde@gratis-freising
+DTSTAMP:20260819T121104Z
+DTSTART;TZID=Europe/Berlin:20260821T110000
+DTEND;TZID=Europe/Berlin:20260821T130000
+SUMMARY:Senioren-Netzwerk Frieda & Ben
+LOCATION:dASAMa Dialograum im Asamgebäude — 85356 Freising
+DESCRIPTION:Regelmäßiges Treffen des Senioren-Netzwerks im Dialograum des
+  Asamgebäudes. Jeden Freitag von 11 bis 13 Uhr. Informationen zu Aktivit
+ ten und Austausch für Mitglieder und Interessierte.\n\nEintritt: Eintrit
+ t frei\nSicherheit: mittel\n\nKategorie: Sonstiges\nZielgruppe: Senioren\n
+ Drinnen/Draussen: drinnen\n\nQuelle: https://veranstaltungen.merkur.de/fre
+ ising/senioren-netzwerk-frieda-ben-e4f72cabf4ae7eae9d11d7b204fe8e52b.html
+URL:https://veranstaltungen.merkur.de/freising/senioren-netzwerk-frieda-ben
+ -e4f72cabf4ae7eae9d11d7b204fe8e52b.html
+CATEGORIES:Sonstiges
+END:VEVENT
+BEGIN:VEVENT
 UID:2f8dd7195f78456e@gratis-freising
-DTSTAMP:20260819T115636Z
+DTSTAMP:20260819T121104Z
 DTSTART;TZID=Europe/Berlin:20260821T200000
 DTEND;TZID=Europe/Berlin:20260821T213000
 SUMMARY:Anonyme Alkoholiker
@@ -41,26 +129,8 @@ URL:https://veranstaltungen.merkur.de/freising/anonyme-alkoholiker-e3ae9b93
 CATEGORIES:Sonstiges
 END:VEVENT
 BEGIN:VEVENT
-UID:c5e2d8b175557eb3@gratis-freising
-DTSTAMP:20260819T115636Z
-DTSTART;TZID=Europe/Berlin:20260822T070000
-DTEND;TZID=Europe/Berlin:20260822T130000
-SUMMARY:Wochenmarkt
-LOCATION:Marienplatz Freising — Marienplatz 1\, 85354 Freising
-DESCRIPTION:Ein traditioneller Wochenmarkt auf dem Marienplatz mit frischen
-  regionalen Produkten\, Blumen und handwerklichen Erzeugnissen. Ideal für
-  einen Einkaufsbummel oder ein Frühstück in der Stadt.\n\nEintritt: Eint
- ritt frei\nBeleg: "keine Angabe zu Eintrittspreisen"\nSicherheit: mittel\n
- \nKategorie: Markt\nZielgruppe: Alle\nDrinnen/Draussen: draussen\n\nQuelle
- : https://veranstaltungen.merkur.de/freising/wochenmarkt-e4ea65bd0fb311d62
- e7b0c01da7197bac.html
-URL:https://veranstaltungen.merkur.de/freising/wochenmarkt-e4ea65bd0fb311d6
- 2e7b0c01da7197bac.html
-CATEGORIES:Markt
-END:VEVENT
-BEGIN:VEVENT
 UID:cf9869fdabf80146@gratis-freising
-DTSTAMP:20260819T115636Z
+DTSTAMP:20260819T121104Z
 DTSTART;TZID=Europe/Berlin:20260822T180000
 DTEND;TZID=Europe/Berlin:20260822T200000
 SUMMARY:[PRUEFEN] König-Ludwig-Verein
@@ -68,9 +138,9 @@ LOCATION:85356 Freising
 DESCRIPTION:Sommerfest des König-Ludwig-Vereins für Mitglieder mit Partne
  r. Um 18 Uhr beim Vorsitzenden Martin Wiesheu. Geschirr\, Besteck und Glä
  ser sind mitzubringen.\n\nEintritt: Eintritt UNKLAR — bitte pruefen\nSic
- herheit: hoch\n\nKategorie: Feste/Bälle/Tanz\nZielgruppe: Alle\nDrinnen/D
- raussen: unklar\n\nQuelle: https://veranstaltungen.merkur.de/freising/koen
- ig-ludwig-verein-ee3f84f419caa41de2b8b0ae7a23bf5b3.html
+ herheit: niedrig\n\nKategorie: Feste/Bälle/Tanz\nZielgruppe: Alle\nDrinne
+ n/Draussen: unklar\n\nQuelle: https://veranstaltungen.merkur.de/freising/k
+ oenig-ludwig-verein-ee3f84f419caa41de2b8b0ae7a23bf5b3.html
 URL:https://veranstaltungen.merkur.de/freising/koenig-ludwig-verein-ee3f84f
  419caa41de2b8b0ae7a23bf5b3.html
 CATEGORIES:Feste/Bälle/Tanz

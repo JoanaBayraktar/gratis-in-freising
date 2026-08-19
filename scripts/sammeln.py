@@ -514,6 +514,20 @@ def einstufung_pruefen(roh: dict) -> None:
         roh["eintritt_confidence"] = "niedrig"
 
     beleg = roh.get("eintritt_beleg") or ""
+
+    # "hoch" heisst laut Regelwerk: steht woertlich da. Ohne Zitat kann das
+    # nicht stimmen. Diese Faelle sind es, die dieselbe Veranstaltung einmal
+    # als gesichert gratis und einmal als ungeklaert erscheinen lassen —
+    # je nachdem, ob das Modell gerade ein Zitat mitgeliefert hat.
+    if (not beleg and roh.get("eintritt") in ("frei", "spende")
+            and roh.get("eintritt_confidence") == "hoch"):
+        roh["eintritt_confidence"] = "mittel"
+
+    # "unklar" und "hoch" schliessen einander aus: sicher zu sein, dass man
+    # nichts weiss, ist keine Sicherheit ueber den Eintritt.
+    if roh.get("eintritt") == "unklar" and roh.get("eintritt_confidence") == "hoch":
+        roh["eintritt_confidence"] = "niedrig"
+
     if not beleg or roh.get("eintritt") not in (None, "unklar"):
         return
 
@@ -604,6 +618,15 @@ def ende_uebernehmen(alt: dict, roh: dict) -> int:
     return 1
 
 
+# Werden in main() aus quellen.yml gefuellt.
+IGNORIEREN = []
+ORTE = {}
+
+
+def ignorieren(roh: dict) -> bool:
+    return any(m.search(roh.get("titel") or "") for m in IGNORIEREN)
+
+
 def zusammenfuehren(bestand: dict, gefunden: list, quelle: dict, heute: str) -> tuple:
     # Ein Event steht unter jedem seiner Schluessel im Verzeichnis, damit es
     # auch dann gefunden wird, wenn die neue Fassung nur einen davon teilt.
@@ -617,6 +640,10 @@ def zusammenfuehren(bestand: dict, gefunden: list, quelle: dict, heute: str) -> 
         if not roh.get("titel") or not roh.get("beginn"):
             continue
 
+        if ignorieren(roh):
+            continue
+
+        roh["ort_name"] = ort_vereinheitlichen(roh.get("ort_name"), ORTE)
         einstufung_pruefen(roh)
         ausgebucht_pruefen(roh)
 
@@ -714,12 +741,44 @@ def titel_normal(titel: str) -> str:
     return re.sub(r"[^a-z0-9]+", "", t)
 
 
+# Woerter, die in Freisinger Ortsangaben stehen, ohne einen Ort zu bezeichnen.
+# Ohne diese Liste gilt "Stadtbibliothek Freising" als derselbe Ort wie
+# "Marienplatz Freising" — beide enthalten ja "freising". Damit waere die
+# Ortspruefung in der Dublettenerkennung wirkungslos.
+ORT_FUELLWOERTER = {"freising", "stadt", "oberbayern", "bayern", "deutschland",
+                    "treffpunkt", "innenstadt", "altstadt", "zentrum"}
+
+
 def ort_woerter(name: str) -> set:
-    """Tragende Woerter eines Ortsnamens. Kurzes wie "am", "der" faellt weg."""
+    """Tragende Woerter eines Ortsnamens."""
     t = (name or "").lower()
     for x, y in (("ä", "ae"), ("ö", "oe"), ("ü", "ue"), ("ß", "ss")):
         t = t.replace(x, y)
-    return {w for w in re.findall(r"[a-z0-9]+", t) if len(w) >= 5}
+    return {w for w in re.findall(r"[a-z0-9]+", t)
+            if len(w) >= 5 and w not in ORT_FUELLWOERTER}
+
+
+def ort_vereinheitlichen(name: str, tabelle: dict) -> str:
+    """Eine Schreibweise je Ort, damit Kalender und Mail nicht schwanken.
+
+    Die Portale nennen denselben Ort verschieden — "Schafhof Kunstforum" und
+    "Schafhof — Europaeisches Kuenstlerhaus Oberbayern". Fuer den Lesenden ist
+    das dasselbe Haus, fuer jeden Textvergleich sind es zwei.
+
+    Die Tabelle steht in quellen.yml und ist von Hand gepflegt. Automatisch die
+    haeufigste Schreibweise zu waehlen waere verlockend, aber sie kippt, sobald
+    ein Portal seine Termine anders zaehlt — dann aendert sich der Ortsname im
+    Kalender ohne Zutun.
+    """
+    if not name:
+        return name
+    sauber = re.sub(r"\s+", " ", name).replace(" - ", " — ").strip(" ,;—-")
+    woerter = ort_woerter(sauber)
+    for richtig, varianten in tabelle.items():
+        for variante in [richtig, *varianten]:
+            if ort_woerter(variante) and ort_woerter(variante) <= woerter:
+                return richtig
+    return sauber
 
 
 def tage(ev: dict) -> tuple:
@@ -770,9 +829,28 @@ def dieselbe_veranstaltung(a: dict, b: dict) -> bool:
     if ab == bb:
         return True
 
+    (ab, ae), (bb, be) = tage(a), tage(b)
+
+    if ta == tb:
+        # Gleicher Titel: Die Aggregatoren fuehren einen mehrtaegigen Termin
+        # auf jeder Tagesseite erneut, jedesmal mit dem jeweiligen Tag als
+        # Anfang und demselben Ende — "Sport im Park" ab 19., ab 20., ab 21.,
+        # jeweils bis 31. Liegt der eine Zeitraum ganz im anderen, ist es
+        # derselbe Termin. Getrennte Termine wie "Karaoke mit Stefan" am 30.10.
+        # und am 20.11. beruehren sich nicht und bleiben zwei.
+        return (ab <= bb and be <= ae) or (bb <= ab and ae <= be)
+
     knapper, weiter = (a, b) if len(ta) <= len(tb) else (b, a)
     (kb, ke), (wb, we) = tage(knapper), tage(weiter)
-    return wb <= kb and ke <= we
+    if wb <= kb and ke <= we:
+        return True
+
+    # Zwei Portale fuehren dieselbe Ausstellung mit verschiedenen Zeitraeumen,
+    # die sich ueberschneiden, ohne dass einer im anderen laege. Das darf nur
+    # gelten, wenn BEIDE mehrtaegig sind: ein eintaegiger Eintrag mit dem
+    # laengeren Titel ist die Fuehrung oder das Kuenstlergespraech innerhalb
+    # der Ausstellung — und damit etwas Eigenes.
+    return kb < ke and wb < we and kb <= we and wb <= ke
 
 
 def entdoppeln(bestand: dict) -> int:
@@ -872,7 +950,11 @@ def gesundheit_pruefen(status: dict, name: str, anzahl: int, fehler: str, heute:
 # ---------------------------------------------------------------- Ablauf
 
 def main() -> None:
-    quellen = yaml.safe_load(QUELLEN.read_text(encoding="utf-8"))["quellen"]
+    konfig = yaml.safe_load(QUELLEN.read_text(encoding="utf-8"))
+    quellen = konfig["quellen"]
+    global IGNORIEREN, ORTE
+    IGNORIEREN = [re.compile(m, re.I) for m in konfig.get("ignorieren") or []]
+    ORTE = konfig.get("orte") or {}
     if len(sys.argv) > 1:
         quellen = [q for q in quellen if q["name"] == sys.argv[1]]
         if not quellen:
