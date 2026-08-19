@@ -14,6 +14,8 @@ import html
 import json
 import pathlib
 import re
+
+from regeln import IN_DIE_MAIL, zu_pruefen
 from datetime import datetime, timedelta
 
 BASIS = pathlib.Path(__file__).resolve().parent.parent
@@ -23,8 +25,6 @@ AUSGABE = BASIS / "ausgabe"
 WOCHENTAGE = ["Montag", "Dienstag", "Mittwoch", "Donnerstag",
               "Freitag", "Samstag", "Sonntag"]
 
-# Nur diese beiden kommen in die Mail. "unklar" gehoert in die Pruefliste,
-# nicht in eine Mail, die suggeriert, es sei alles kostenlos.
 LABEL = {"frei": "Eintritt frei", "spende": "Spende erbeten"}
 
 # Ueber Stichwoerter statt ueber die Kategorieliste: die Quellen liefern eigene
@@ -155,16 +155,18 @@ def main() -> None:
     # Ausgebuchtes bleibt in den Daten und im Kalender, nur die Mail laesst es
     # weg: sie ist eine Empfehlung, und was man nicht mehr besuchen kann,
     # gehoert nicht empfohlen.
+    # Genau das Gegenstueck zum Block "Noch zu pruefen": was hier oben steht,
+    # taucht dort nicht auf und umgekehrt. Derselbe Termin einmal als gratis
+    # und einmal als ungeklaert wuerde beides entwerten.
     passend = [ev for ev in daten["events"]
                if ev.get("status") == "aktiv"
-               and ev.get("eintritt") in LABEL
+               and ev.get("eintritt") in IN_DIE_MAIL
                and not ev.get("ausgebucht")
-               and not (ev.get("eintritt") == "frei"
-                        and ev.get("eintritt_confidence") == "niedrig")]
+               and not zu_pruefen(ev)]
 
     verborgen = sum(1 for ev in daten["events"]
                     if ev.get("status") == "aktiv" and ev.get("ausgebucht")
-                    and ev.get("eintritt") in LABEL
+                    and ev.get("eintritt") in IN_DIE_MAIL
                     and heute.isoformat() <= (ev.get("beginn") or "")[:10]
                     <= bis.isoformat())
 
@@ -189,12 +191,34 @@ def main() -> None:
         bloecke.append('<h2 style="font-size:17px;margin:24px 0 8px">Die nächsten '
                        '7 Tage</h2><p style="color:#888;margin:0">Nichts eingetragen.</p>')
 
-    zu_pruefen = sum(1 for ev in daten["events"]
-                     if ev.get("status") == "aktiv"
-                     and ev.get("beginn", "")[:10] >= heute.isoformat()
-                     and (ev.get("eintritt") == "unklar"
-                          or (ev.get("eintritt") == "frei"
-                              and ev.get("eintritt_confidence") != "hoch")))
+    # Prueffaelle der naechsten sieben Tage — die weiter entfernten haben Zeit
+    # und wuerden die Mail nur laenger machen.
+    offen = sorted(
+        [ev for ev in daten["events"]
+         if ev.get("status") == "aktiv" and zu_pruefen(ev)
+         and heute.isoformat() <= (ev.get("beginn") or "")[:10] <= bis.isoformat()],
+        key=lambda x: x["beginn"])
+
+    if offen:
+        zeilen = []
+        for ev in offen:
+            wann = datetime.fromisoformat(ev["beginn"]).strftime("%d.%m.")
+            grund = (f'Beleg: „{kuerzen(ev["eintritt_beleg"], 80)}"'
+                     if ev.get("eintritt_beleg")
+                     else "kein Hinweis zum Eintritt auf der Seite")
+            titel = e(ev["titel"])
+            if ev.get("quelle_url"):
+                titel = (f'<a href="{e(ev["quelle_url"])}" style="color:#1a5490">'
+                         f'{titel}</a>')
+            zeilen.append(
+                f'<li style="margin-bottom:6px">{e(wann)} · {titel}<br>'
+                f'<span style="color:#777;font-size:13px">{e(grund)}</span></li>')
+        bloecke.append(
+            '<h2 style="font-size:17px;margin:28px 0 8px">Noch zu prüfen</h2>'
+            '<p style="color:#777;font-size:13px;margin:0 0 8px">Hier ist nicht '
+            'gesichert, dass der Eintritt frei ist — deshalb stehen diese Termine '
+            'oben nicht mit. Der Link führt zur Quelle.</p>'
+            f'<ul style="margin:0;padding-left:20px">{"".join(zeilen)}</ul>')
 
     ausgeblendet = (f'{verborgen} ausgebucht und deshalb nicht gelistet · '
                     if verborgen else "")
@@ -203,7 +227,7 @@ def main() -> None:
             f'<p style="color:#888;font-size:13px;margin:0">'
             f'{len(heute_events)} heute · {kommend} in den nächsten 7 Tagen · '
             f'{ausgeblendet}'
-            f'{zu_pruefen} Fälle warten in der Prüfliste.<br>'
+            f'{len(offen)} zu prüfen.<br>'
             f'Automatisch erzeugt aus daten/events.json. '
             f'Korrekturen gehören dorthin, nicht in diese Mail.</p>')
 
@@ -223,7 +247,7 @@ def main() -> None:
     (AUSGABE / "mail.html").write_text(seite, encoding="utf-8")
     (AUSGABE / "mail-betreff").write_text(betreff, encoding="utf-8")
     print(f"{betreff}\n  {len(heute_events)} heute, {kommend} in 7 Tagen, "
-          f"{zu_pruefen} zu pruefen")
+          f"{len(offen)} zu pruefen, {verborgen} ausgebucht")
 
 
 if __name__ == "__main__":

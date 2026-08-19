@@ -15,6 +15,8 @@ import json
 import pathlib
 from datetime import datetime, timedelta, timezone
 
+from regeln import zu_pruefen
+
 BASIS = pathlib.Path(__file__).resolve().parent.parent
 DATEN = BASIS / "daten" / "events.json"
 AUSGABE = BASIS / "ausgabe"
@@ -239,7 +241,7 @@ def main() -> None:
         for ev in kommend
         if ev.get("eintritt") == "frei" and ev.get("eintritt_confidence") == "hoch"
     ]
-    pruefen = [ev for ev in kommend if ev not in gratis and ev.get("eintritt") != "kostenpflichtig"]
+    pruefen = [ev for ev in kommend if zu_pruefen(ev)]
 
     kalender_schreiben(AUSGABE / "gratis-freising.ics", "Gratis in Freising", gratis)
     kalender_schreiben(AUSGABE / "pruefen.ics", "Gratis in Freising — zu pruefen", pruefen)

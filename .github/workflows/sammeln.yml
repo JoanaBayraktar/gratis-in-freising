@@ -21,6 +21,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+        with:
+          # Voller Verlauf: auf einer flachen Kopie schlaegt das Nachziehen
+          # per rebase fehl, das der Push-Schritt unten braucht.
+          fetch-depth: 0
 
       - uses: actions/setup-python@v5
         with:
@@ -71,7 +75,28 @@ jobs:
           git add daten ausgabe
           if git diff --staged --quiet; then
             echo "Nichts geaendert."
-          else
-            git commit -m "Sammellauf $(date +%F)"
-            git push
+            exit 0
           fi
+          git commit -m "Sammellauf $(date +%F)"
+
+          # Der Lauf dauert Minuten. Wird in dieser Zeit etwas ins Repo
+          # geschoben — eine Korrektur in events.json, eine geaenderte
+          # quellen.yml —, weist GitHub den Push zurueck. Also neu aufsetzen
+          # und noch einmal versuchen, statt den ganzen Lauf zu verlieren.
+          for versuch in 1 2 3; do
+            if git push; then
+              exit 0
+            fi
+            echo "Push abgelehnt (Versuch $versuch). Hole den Stand nach."
+            if ! git pull --rebase origin main; then
+              # Konflikt in den Daten: hier faengt Automatik an zu raten.
+              # Lieber laut scheitern — der naechste Lauf baut die Ausgabe
+              # ohnehin neu, verloren geht nichts als dieser eine Commit.
+              git rebase --abort || true
+              echo "::error::Konflikt beim Nachziehen. Bitte einmal von Hand ansehen."
+              exit 1
+            fi
+            sleep 5
+          done
+          echo "::error::Push nach drei Versuchen nicht durchgekommen."
+          exit 1
