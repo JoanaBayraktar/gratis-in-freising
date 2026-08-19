@@ -2,6 +2,7 @@
   "Stadtkalender Freising": {
     "verlauf": [
       12,
+      12,
       12
     ],
     "fehlversuche": 0,
@@ -10,7 +11,8 @@
   "Merkur Veranstaltungen": {
     "verlauf": [
       10,
-      10
+      10,
+      9
     ],
     "fehlversuche": 0,
     "letzter_erfolg": "2026-08-19"
@@ -18,6 +20,7 @@
   "Schafhof Kunstforum": {
     "verlauf": [
       9,
+      4,
       4
     ],
     "fehlversuche": 0,
@@ -25,6 +28,7 @@
   },
   "Furtner Freising": {
     "verlauf": [
+      23,
       23,
       23
     ],
@@ -34,6 +38,7 @@
   "Einfach selber machen": {
     "verlauf": [
       1,
+      1,
       1
     ],
     "fehlversuche": 0,
@@ -42,7 +47,8 @@
   "vhs Freising — kostenfrei": {
     "verlauf": [
       40,
-      40
+      40,
+      36
     ],
     "fehlversuche": 0,
     "letzter_erfolg": "2026-08-19"
