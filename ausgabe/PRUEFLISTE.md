@@ -12,17 +12,10 @@ Eintrag nicht mehr an.
 - **Beleg:** _kein Hinweis im Text gefunden_
 - **Quelle:** https://veranstaltungen.merkur.de/freising/zwillings-krabbelgruppe-e940437dc64af40f2d1829b2001e77dd2.html
 
-## Vorlesen für Kinder ab 5 Jahren
-- **Wann:** 19.08.2026 15:00
-- **Wo:** Stadtbibliothek Freising
-- **Eingestuft als:** `frei` (Sicherheit: mittel)
-- **Beleg:** keine Angabe zu Eintrittspreisen
-- **Quelle:** https://veranstaltungen.freising.de/freising/vorlesen-fuer-kinder-ab-5-jahren-e61b3796650edcc284e95079ae92c872b.html
-
 ## Anonyme Alkoholiker
 - **Wann:** 21.08.2026 20:00
 - **Wo:** Paul-Gerhardt-Haus
-- **Eingestuft als:** `frei` (Sicherheit: niedrig)
+- **Eingestuft als:** `frei` (Sicherheit: mittel)
 - **Beleg:** _kein Hinweis im Text gefunden_
 - **Quelle:** https://veranstaltungen.merkur.de/freising/anonyme-alkoholiker-e3ae9b93c79a784e9e0d9eba917314af3.html
 

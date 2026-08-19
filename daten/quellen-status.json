@@ -3,6 +3,7 @@
     "verlauf": [
       12,
       12,
+      12,
       12
     ],
     "fehlversuche": 0,
@@ -12,7 +13,8 @@
     "verlauf": [
       10,
       10,
-      9
+      9,
+      10
     ],
     "fehlversuche": 0,
     "letzter_erfolg": "2026-08-19"
@@ -21,6 +23,7 @@
     "verlauf": [
       9,
       4,
+      4,
       4
     ],
     "fehlversuche": 0,
@@ -28,6 +31,7 @@
   },
   "Furtner Freising": {
     "verlauf": [
+      23,
       23,
       23,
       23
@@ -39,6 +43,7 @@
     "verlauf": [
       1,
       1,
+      1,
       1
     ],
     "fehlversuche": 0,
@@ -48,6 +53,7 @@
     "verlauf": [
       40,
       40,
+      36,
       36
     ],
     "fehlversuche": 0,

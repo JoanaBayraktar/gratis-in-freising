@@ -24,7 +24,7 @@ END:STANDARD
 END:VTIMEZONE
 BEGIN:VEVENT
 UID:7c62dab1505ff73c@gratis-freising
-DTSTAMP:20260819T111713Z
+DTSTAMP:20260819T112219Z
 DTSTART;TZID=Europe/Berlin:20260819T093000
 DTEND;TZID=Europe/Berlin:20260819T110000
 SUMMARY:[PRUEFEN] Zwillings-Krabbelgruppe
@@ -41,59 +41,37 @@ URL:https://veranstaltungen.merkur.de/freising/zwillings-krabbelgruppe-e940
 CATEGORIES:Familie
 END:VEVENT
 BEGIN:VEVENT
-UID:a14f53d918a66454@gratis-freising
-DTSTAMP:20260819T111713Z
-DTSTART;TZID=Europe/Berlin:20260819T150000
-DTEND;TZID=Europe/Berlin:20260819T160000
-SUMMARY:Vorlesen für Kinder ab 5 Jahren
-LOCATION:Stadtbibliothek Freising — Weizengasse 3 (Zugang über Untere Ha
- uptstraße)\, 85354 Freising
-DESCRIPTION:Ein Märchenstunden-Event für Kinder ab 5 Jahren. Das klassisc
- he Märchen „Das Märchen von der Regentrude“ wird lebendig erzählt u
- nd entführt die kleinen Zuhörer in eine unterirdische Welt voller Abente
- uer.\n\nEintritt: Eintritt frei\nBeleg: "keine Angabe zu Eintrittspreisen"
- \nSicherheit: mittel\n\nVeranstalter: Stadtbibliothek Freising\, Auer Clau
- dia\nKategorie: Kinderprogramm\nZielgruppe: Kinder\nDrinnen/Draussen: drin
- nen\n\nQuelle: https://veranstaltungen.freising.de/freising/vorlesen-fuer-
- kinder-ab-5-jahren-e61b3796650edcc284e95079ae92c872b.html\nAuch bei: https
- ://veranstaltungen.merkur.de/freising/vorlesen-fuer-kinder-ab-5-jahren-e61
- b3796650edcc284e95079ae92c872b.html
-URL:https://veranstaltungen.freising.de/freising/vorlesen-fuer-kinder-ab-5-
- jahren-e61b3796650edcc284e95079ae92c872b.html
-CATEGORIES:Kinderprogramm
-END:VEVENT
-BEGIN:VEVENT
 UID:2f8dd7195f78456e@gratis-freising
-DTSTAMP:20260819T111713Z
+DTSTAMP:20260819T112219Z
 DTSTART;TZID=Europe/Berlin:20260821T200000
-DTEND;TZID=Europe/Berlin:20260821T220000
+DTEND;TZID=Europe/Berlin:20260821T213000
 SUMMARY:Anonyme Alkoholiker
 LOCATION:Paul-Gerhardt-Haus — General-von-Stein-Straße 22\, 85356 Freisi
  ng
-DESCRIPTION:Regelmäßiges Treffen der Selbsthilfegruppe Anonyme Alkoholike
- r. Offenes Angebot für Betroffene und Interessierte jeden Donnerstag und 
- Freitag um 20 Uhr.\n\nEintritt: Eintritt frei\nSicherheit: niedrig\n\nKate
- gorie: Sonstiges\nZielgruppe: Erwachsene\nDrinnen/Draussen: drinnen\n\nQue
- lle: https://veranstaltungen.merkur.de/freising/anonyme-alkoholiker-e3ae9b
- 93c79a784e9e0d9eba917314af3.html
+DESCRIPTION:Ein regelmäßiges Treffen der Anonymen Alkoholiker für Betrof
+ fene und Interessierte. Das Angebot ist kostenlos und anonym. Keine Anmeld
+ ung erforderlich.\n\nEintritt: Eintritt frei\nSicherheit: mittel\n\nKatego
+ rie: Sonstiges\nZielgruppe: Erwachsene\nDrinnen/Draussen: drinnen\n\nQuell
+ e: https://veranstaltungen.merkur.de/freising/anonyme-alkoholiker-e3ae9b93
+ c79a784e9e0d9eba917314af3.html
 URL:https://veranstaltungen.merkur.de/freising/anonyme-alkoholiker-e3ae9b93
  c79a784e9e0d9eba917314af3.html
 CATEGORIES:Sonstiges
 END:VEVENT
 BEGIN:VEVENT
 UID:c5e2d8b175557eb3@gratis-freising
-DTSTAMP:20260819T111713Z
+DTSTAMP:20260819T112219Z
 DTSTART;TZID=Europe/Berlin:20260822T070000
 DTEND;TZID=Europe/Berlin:20260822T130000
 SUMMARY:Wochenmarkt
 LOCATION:Marienplatz Freising — Marienplatz 1\, 85354 Freising
 DESCRIPTION:Ein traditioneller Wochenmarkt auf dem Marienplatz mit frischen
-  Lebensmitteln\, regionalen Produkten und handwerklichen Erzeugnissen. Jed
- en Mittwoch und Samstag von 7 bis 13 Uhr.\n\nEintritt: Eintritt frei\nBele
- g: "keine Angabe zu Eintrittspreisen"\nSicherheit: mittel\n\nKategorie: Ma
- rkt\nZielgruppe: Alle\nDrinnen/Draussen: draussen\n\nQuelle: https://veran
- staltungen.merkur.de/freising/wochenmarkt-e4ea65bd0fb311d62e7b0c01da7197ba
- c.html
+  regionalen Produkten\, Blumen und handwerklichen Erzeugnissen. Ideal für
+  einen Einkaufsbummel oder ein Frühstück in der Stadt.\n\nEintritt: Eint
+ ritt frei\nBeleg: "keine Angabe zu Eintrittspreisen"\nSicherheit: mittel\n
+ \nKategorie: Markt\nZielgruppe: Alle\nDrinnen/Draussen: draussen\n\nQuelle
+ : https://veranstaltungen.merkur.de/freising/wochenmarkt-e4ea65bd0fb311d62
+ e7b0c01da7197bac.html
 URL:https://veranstaltungen.merkur.de/freising/wochenmarkt-e4ea65bd0fb311d6
  2e7b0c01da7197bac.html
 CATEGORIES:Markt
