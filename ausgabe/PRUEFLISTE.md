@@ -12,12 +12,12 @@ Eintrag nicht mehr an.
 - **Beleg:** _kein Hinweis im Text gefunden_
 - **Quelle:** https://www.tum.de/aktuelles/veranstaltungen/terminuebersicht?tx_solr%5Bfilter%5D%5B0%5D=location%3AFreising
 
-## Zwillings-Krabbelgruppe
-- **Wann:** 19.08.2026 09:30
-- **Wo:** Epiphanias-Zentrum
-- **Angezeigt als:** vermutlich kostenfrei — Quelle nennt `frei` (Sicherheit: mittel)
+## Gesundheitlich riskante Fehlinformationen von Influencern
+- **Wann:** 20.08.2026 17:00
+- **Wo:** —
+- **Angezeigt als:** vermutlich kostenfrei — Quelle nennt `frei` (Sicherheit: niedrig)
 - **Beleg:** _kein Hinweis im Text gefunden_
-- **Quelle:** https://veranstaltungen.merkur.de/freising/zwillings-krabbelgruppe-e940437dc64af40f2d1829b2001e77dd2.html
+- **Quelle:** https://veranstaltungen.merkur.de/freising/gesundheitlich-riskante-fehlinformationen-von-influencern-e942c44821d76a4fe3627d39a838642da.html
 
 ## Kreuzbund SHG Bahnhofstraße
 - **Wann:** 20.08.2026 19:30
@@ -54,6 +54,20 @@ Eintrag nicht mehr an.
 - **Beleg:** _kein Hinweis im Text gefunden_
 - **Quelle:** https://veranstaltungen.merkur.de/freising/anonyme-alkoholiker-e3ae9b93c79a784e9e0d9eba917314af3.html
 
+## Sauna-Sommerpause
+- **Wann:** 22.08.2026 00:00
+- **Wo:** Kneippgarten Freising
+- **Angezeigt als:** vermutlich kostenfrei — Quelle nennt `unklar` (Sicherheit: niedrig)
+- **Beleg:** _kein Hinweis im Text gefunden_
+- **Quelle:** https://veranstaltungen.merkur.de/freising/sauna-sommerpause-e65c8a94e2f8c29083a73af76b53f02cc.html
+
+## Krisendienst Psychiatrie Oberbayern
+- **Wann:** 22.08.2026 00:00
+- **Wo:** —
+- **Angezeigt als:** vermutlich kostenfrei — Quelle nennt `frei` (Sicherheit: niedrig)
+- **Beleg:** _kein Hinweis im Text gefunden_
+- **Quelle:** https://veranstaltungen.merkur.de/freising/krisendienst-psychiatrie-oberbayern-e41465f1273dfbd319759a89437962570.html
+
 ## König-Ludwig-Verein
 - **Wann:** 22.08.2026 18:00
 - **Wo:** Privatwohnung des Vorsitzenden Martin Wiesheu
@@ -70,7 +84,7 @@ Eintrag nicht mehr an.
 
 ## Nachhaltige Materialnutzung von Baumrinde
 - **Wann:** 29.09.2026 19:00
-- **Wo:** —
+- **Wo:** TUM@Freising
 - **Angezeigt als:** vermutlich kostenfrei — Quelle nennt `frei` (Sicherheit: mittel)
 - **Beleg:** _kein Hinweis im Text gefunden_
 - **Quelle:** https://www.tum.de/aktuelles/veranstaltungen/terminuebersicht?tx_solr%5Bfilter%5D%5B0%5D=location%3AFreising
@@ -84,7 +98,7 @@ Eintrag nicht mehr an.
 
 ## Pflanzenschutz im Wandel
 - **Wann:** 07.10.2026 08:30
-- **Wo:** —
+- **Wo:** Freising
 - **Angezeigt als:** vermutlich kostenfrei — Quelle nennt `unklar` (Sicherheit: niedrig)
 - **Beleg:** _kein Hinweis im Text gefunden_
 - **Quelle:** https://www.tum.de/aktuelles/veranstaltungen/terminuebersicht?tx_solr%5Bfilter%5D%5B0%5D=location%3AFreising

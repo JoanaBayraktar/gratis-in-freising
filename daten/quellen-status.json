@@ -8,10 +8,11 @@
       23,
       24,
       24,
-      24
+      24,
+      22
     ],
     "fehlversuche": 0,
-    "letzter_erfolg": "2026-08-19"
+    "letzter_erfolg": "2026-08-20"
   },
   "Merkur Veranstaltungen": {
     "verlauf": [
@@ -22,10 +23,11 @@
       22,
       30,
       17,
-      18
+      18,
+      25
     ],
     "fehlversuche": 0,
-    "letzter_erfolg": "2026-08-19"
+    "letzter_erfolg": "2026-08-20"
   },
   "Schafhof Kunstforum": {
     "verlauf": [
@@ -36,10 +38,11 @@
       4,
       4,
       4,
+      4,
       4
     ],
     "fehlversuche": 0,
-    "letzter_erfolg": "2026-08-19"
+    "letzter_erfolg": "2026-08-20"
   },
   "Furtner Freising": {
     "verlauf": [
@@ -50,10 +53,11 @@
       23,
       23,
       23,
+      23,
       23
     ],
     "fehlversuche": 0,
-    "letzter_erfolg": "2026-08-19"
+    "letzter_erfolg": "2026-08-20"
   },
   "Einfach selber machen": {
     "verlauf": [
@@ -64,10 +68,11 @@
       1,
       1,
       1,
+      1,
       1
     ],
     "fehlversuche": 0,
-    "letzter_erfolg": "2026-08-19"
+    "letzter_erfolg": "2026-08-20"
   },
   "vhs Freising — kostenfrei": {
     "verlauf": [
@@ -78,37 +83,42 @@
       36,
       40,
       36,
+      40,
       40
     ],
     "fehlversuche": 0,
-    "letzter_erfolg": "2026-08-19"
+    "letzter_erfolg": "2026-08-20"
   },
   "Modern Studio": {
     "verlauf": [
+      3,
       3
     ],
     "fehlversuche": 0,
-    "letzter_erfolg": "2026-08-19"
+    "letzter_erfolg": "2026-08-20"
   },
   "DAV Freising — Vortraege": {
     "verlauf": [
-      3
+      3,
+      0
     ],
     "fehlversuche": 0,
-    "letzter_erfolg": "2026-08-19"
+    "letzter_erfolg": "2026-08-20"
   },
   "3Klang Musik": {
     "verlauf": [
+      2,
       2
     ],
     "fehlversuche": 0,
-    "letzter_erfolg": "2026-08-19"
+    "letzter_erfolg": "2026-08-20"
   },
   "TUM Freising": {
     "verlauf": [
-      11
+      11,
+      5
     ],
     "fehlversuche": 0,
-    "letzter_erfolg": "2026-08-19"
+    "letzter_erfolg": "2026-08-20"
   }
 }
