@@ -9,10 +9,11 @@
       24,
       24,
       24,
-      22
+      22,
+      25
     ],
     "fehlversuche": 0,
-    "letzter_erfolg": "2026-08-20"
+    "letzter_erfolg": "2026-08-21"
   },
   "Merkur Veranstaltungen": {
     "verlauf": [
@@ -24,10 +25,11 @@
       30,
       17,
       18,
-      25
+      25,
+      16
     ],
     "fehlversuche": 0,
-    "letzter_erfolg": "2026-08-20"
+    "letzter_erfolg": "2026-08-21"
   },
   "Schafhof Kunstforum": {
     "verlauf": [
@@ -39,10 +41,11 @@
       4,
       4,
       4,
+      4,
       4
     ],
     "fehlversuche": 0,
-    "letzter_erfolg": "2026-08-20"
+    "letzter_erfolg": "2026-08-21"
   },
   "Furtner Freising": {
     "verlauf": [
@@ -54,10 +57,11 @@
       23,
       23,
       23,
+      23,
       23
     ],
     "fehlversuche": 0,
-    "letzter_erfolg": "2026-08-20"
+    "letzter_erfolg": "2026-08-21"
   },
   "Einfach selber machen": {
     "verlauf": [
@@ -69,10 +73,11 @@
       1,
       1,
       1,
+      1,
       1
     ],
     "fehlversuche": 0,
-    "letzter_erfolg": "2026-08-20"
+    "letzter_erfolg": "2026-08-21"
   },
   "vhs Freising — kostenfrei": {
     "verlauf": [
@@ -84,41 +89,46 @@
       40,
       36,
       40,
+      40,
       40
     ],
     "fehlversuche": 0,
-    "letzter_erfolg": "2026-08-20"
+    "letzter_erfolg": "2026-08-21"
   },
   "Modern Studio": {
     "verlauf": [
       3,
+      3,
       3
     ],
     "fehlversuche": 0,
-    "letzter_erfolg": "2026-08-20"
+    "letzter_erfolg": "2026-08-21"
   },
   "DAV Freising — Vortraege": {
     "verlauf": [
       3,
+      0,
       0
     ],
     "fehlversuche": 0,
-    "letzter_erfolg": "2026-08-20"
+    "letzter_erfolg": "2026-08-21"
   },
   "3Klang Musik": {
     "verlauf": [
       2,
+      2,
       2
     ],
     "fehlversuche": 0,
-    "letzter_erfolg": "2026-08-20"
+    "letzter_erfolg": "2026-08-21"
   },
   "TUM Freising": {
     "verlauf": [
       11,
-      5
+      5,
+      11
     ],
     "fehlversuche": 0,
-    "letzter_erfolg": "2026-08-20"
+    "letzter_erfolg": "2026-08-21"
   }
 }

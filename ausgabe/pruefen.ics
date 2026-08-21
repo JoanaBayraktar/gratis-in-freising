@@ -24,114 +24,62 @@ END:STANDARD
 END:VTIMEZONE
 BEGIN:VEVENT
 UID:9dbb539d76866b10@gratis-freising
-DTSTAMP:20260820T040601Z
+DTSTAMP:20260821T040850Z
 DTSTART;VALUE=DATE:20260518
 DTEND;VALUE=DATE:20261019
 SUMMARY:TUM tanzt! (vermutlich frei)
 LOCATION:München\, Garching\, Freising
-DESCRIPTION:Das Tanzfestival der TUM bietet Workshops\, Performances und Di
- skussionsrunden für alle Interessierten. Mitmachangebote und künstlerisc
- he Beiträge laden zum Mitwirken und Staunen ein.\n\nEintritt: vermutlich 
- kostenfrei (Quelle nennt: frei)\nSicherheit: mittel\n\nVeranstalter: TUM\n
- Kategorie: Kunst\nZielgruppe: Alle\nDrinnen/Draussen: beides\n\nQuelle: ht
- tps://www.tum.de/aktuelles/veranstaltungen/terminuebersicht?tx_solr%5Bfilt
- er%5D%5B0%5D=location%3AFreising
+DESCRIPTION:Die Veranstaltungsreihe lädt zum Mitmachen\, Diskutieren und E
+ rleben von Tanz ein. Workshops\, Performances und offene Trainings richten
+  sich an alle Altersgruppen und Erfahrungsstufen. Ein besonderes Highlight
+  für die TUM-Community und die Öffentlichkeit.\n\nEintritt: vermutlich k
+ ostenfrei (Quelle nennt: frei)\nSicherheit: mittel\n\nVeranstalter: TUM\nK
+ ategorie: Kunst\nZielgruppe: Alle\nDrinnen/Draussen: beides\n\nQuelle: htt
+ ps://www.tum.de/aktuelles/veranstaltungen/terminuebersicht?tx_solr%5Bfilte
+ r%5D%5B0%5D=location%3AFreising
 URL:https://www.tum.de/aktuelles/veranstaltungen/terminuebersicht?tx_solr%5
  Bfilter%5D%5B0%5D=location%3AFreising
 CATEGORIES:Kunst
 END:VEVENT
 BEGIN:VEVENT
-UID:6dbf2b5bfbe54acd@gratis-freising
-DTSTAMP:20260820T040601Z
-DTSTART;TZID=Europe/Berlin:20260820T170000
-DTEND;TZID=Europe/Berlin:20260820T180000
-SUMMARY:Gesundheitlich riskante Fehlinformationen von Influencern (vermutli
- ch frei)
+UID:d3f1593b06c13a99@gratis-freising
+DTSTAMP:20260821T040850Z
+DTSTART;VALUE=DATE:20260821
+DTEND;VALUE=DATE:20260822
+SUMMARY:Interkultureller Preis (vermutlich frei)
 LOCATION:
-DESCRIPTION:Virtuelles Expertengespräch über Teams zum Thema gesundheitli
- che Fehlinformationen in sozialen Medien. Ziel ist die Aufklärung über R
- isiken und seriöse Informationsquellen.\n\nEintritt: vermutlich kostenfre
- i (Quelle nennt: frei)\nSicherheit: niedrig\n\nKategorie: Vortrag\nZielgru
- ppe: Erwachsene\nDrinnen/Draussen: drinnen\n\nQuelle: https://veranstaltun
- gen.merkur.de/freising/gesundheitlich-riskante-fehlinformationen-von-influ
- encern-e942c44821d76a4fe3627d39a838642da.html
-URL:https://veranstaltungen.merkur.de/freising/gesundheitlich-riskante-fehl
- informationen-von-influencern-e942c44821d76a4fe3627d39a838642da.html
-CATEGORIES:Vortrag
-END:VEVENT
-BEGIN:VEVENT
-UID:0b8750db9f962483@gratis-freising
-DTSTAMP:20260820T040601Z
-DTSTART;TZID=Europe/Berlin:20260820T193000
-DTEND;TZID=Europe/Berlin:20260820T210000
-SUMMARY:Kreuzbund SHG Bahnhofstraße (vermutlich frei)
-LOCATION:Caritas-Zentrum Freising — Bahnhofstr. 20\, 85356 Freising
-DESCRIPTION:Selbsthilfegruppe für Betroffene und Angehörige. Ein geschüt
- zter Rahmen zum Austausch und zur gegenseitigen Unterstützung.\n\nEintrit
- t: vermutlich kostenfrei (Quelle nennt: frei)\nSicherheit: mittel\n\nVeran
- stalter: Michael Kraml\nKategorie: Rat und Hilfe\nZielgruppe: Alle\nDrinne
- n/Draussen: drinnen\n\nQuelle: https://veranstaltungen.merkur.de/freising/
- kreuzbund-shg-bahnhofstrasse-ec0093f7bfcf96906ff24eb4ce9eea60e.html
-URL:https://veranstaltungen.merkur.de/freising/kreuzbund-shg-bahnhofstrasse
- -ec0093f7bfcf96906ff24eb4ce9eea60e.html
-CATEGORIES:Rat und Hilfe
-END:VEVENT
-BEGIN:VEVENT
-UID:53f1c56a9e6f9c8d@gratis-freising
-DTSTAMP:20260820T040601Z
-DTSTART;TZID=Europe/Berlin:20260820T200000
-DTEND;TZID=Europe/Berlin:20260820T210000
-SUMMARY:Anonyme Alkoholiker (vermutlich frei)
-LOCATION:Paul-Gerhardt-Haus — General-von-Stein-Straße 22\, 85356 Freisi
- ng
-DESCRIPTION:Regelmäßiges Treffen der Selbsthilfegruppe für Betroffene un
- d Angehörige. Ein geschützter Rahmen zum Austausch und zur gegenseitigen
-  Unterstützung.\n\nEintritt: vermutlich kostenfrei (Quelle nennt: frei)\n
- Sicherheit: mittel\n\nKategorie: Sonstiges\nZielgruppe: Alle\nDrinnen/Drau
- ssen: drinnen\n\nQuelle: https://veranstaltungen.merkur.de/freising/anonym
- e-alkoholiker-e3ae9b93c79a784e9e0d9eba917314af3.html
-URL:https://veranstaltungen.merkur.de/freising/anonyme-alkoholiker-e3ae9b93
- c79a784e9e0d9eba917314af3.html
-CATEGORIES:Sonstiges
-END:VEVENT
-BEGIN:VEVENT
-UID:678505c327ef381e@gratis-freising
-DTSTAMP:20260820T040601Z
-DTSTART;TZID=Europe/Berlin:20260820T200000
-DTEND;TZID=Europe/Berlin:20260820T220000
-SUMMARY:Probe der Kantorei (vermutlich frei)
-LOCATION:Evang. Gemeindehaus Christi Himmelfahrt — Martin-Luther-Str. 10\
- , 85356 Freising
-DESCRIPTION:Offene Probe des Kirchenchors\, bei der alle Interessierten wil
- lkommen sind. Gelegenheit\, die Arbeit des Chors kennenzulernen oder selbs
- t mitzusingen.\n\nEintritt: vermutlich kostenfrei (Quelle nennt: frei)\nSi
- cherheit: mittel\n\nKategorie: Sonstiges\nZielgruppe: Alle\nDrinnen/Drauss
- en: drinnen\n\nQuelle: https://veranstaltungen.merkur.de/freising/probe-de
- r-kantorei-ef6138cb4952290182f49706f76359ddc.html
-URL:https://veranstaltungen.merkur.de/freising/probe-der-kantorei-ef6138cb4
- 952290182f49706f76359ddc.html
+DESCRIPTION:Die Stadt Freising verleiht den Interkulturellen Preis für her
+ ausragende Verdienste um Integration und Vielfalt in der Region. Die Veran
+ staltung würdigt Personen oder Initiativen\, die sich besonders für ein 
+ weltoffenes Freising einsetzen.\n\nEintritt: vermutlich kostenfrei (Quelle
+  nennt: unklar)\nSicherheit: niedrig\n\nKategorie: Sonstiges\nZielgruppe: 
+ Alle\n\nQuelle: https://veranstaltungen.freising.de/freising/
+URL:https://veranstaltungen.freising.de/freising/
 CATEGORIES:Sonstiges
 END:VEVENT
 BEGIN:VEVENT
 UID:a92f8503b655cdde@gratis-freising
-DTSTAMP:20260820T040601Z
+DTSTAMP:20260821T040850Z
 DTSTART;TZID=Europe/Berlin:20260821T110000
 DTEND;TZID=Europe/Berlin:20260821T130000
 SUMMARY:Senioren-Netzwerk Frieda & Ben (vermutlich frei)
 LOCATION:dASAMa Dialograum im Asamgebäude — 85356 Freising
-DESCRIPTION:Regelmäßiges Treffen des Vereins zur Information über Aktivi
- täten und Austausch. Offenes Angebot für Mitglieder und Interessierte.\n
- \nEintritt: vermutlich kostenfrei (Quelle nennt: frei)\nSicherheit: mittel
- \n\nKategorie: Sonstiges\nZielgruppe: Senioren\nDrinnen/Draussen: drinnen\
- n\nQuelle: https://veranstaltungen.merkur.de/freising/senioren-netzwerk-fr
- ieda-ben-e4f72cabf4ae7eae9d11d7b204fe8e52b.html
+DESCRIPTION:Regelmäßiges Treffen des Senioren-Netzwerks zur Information 
+ ber Aktivitäten und Austausch. Offenes Angebot für Mitglieder und Inter
+ essierte jeden Freitag.\n\nEintritt: vermutlich kostenfrei (Quelle nennt: 
+ frei)\nSicherheit: mittel\n\nVeranstalter: Verein Frieda & Ben\nKategorie:
+  Sonstiges\nZielgruppe: Senioren\nDrinnen/Draussen: drinnen\n\nQuelle: htt
+ ps://veranstaltungen.merkur.de/freising/senioren-netzwerk-frieda-ben-e4f72
+ cabf4ae7eae9d11d7b204fe8e52b.html\nAuch bei: https://veranstaltungen.merku
+ r.de/freising/senioren-netzwerk-frieda-ben-e4f72cabf4ae7eae9d11d7b204fe8e5
+ 2f.html
 URL:https://veranstaltungen.merkur.de/freising/senioren-netzwerk-frieda-ben
  -e4f72cabf4ae7eae9d11d7b204fe8e52b.html
 CATEGORIES:Sonstiges
 END:VEVENT
 BEGIN:VEVENT
 UID:2f8dd7195f78456e@gratis-freising
-DTSTAMP:20260820T040601Z
+DTSTAMP:20260821T040850Z
 DTSTART;TZID=Europe/Berlin:20260821T200000
 DTEND;TZID=Europe/Berlin:20260821T213000
 SUMMARY:Anonyme Alkoholiker (vermutlich frei)
@@ -149,7 +97,7 @@ CATEGORIES:Sonstiges
 END:VEVENT
 BEGIN:VEVENT
 UID:d2b3c21197115322@gratis-freising
-DTSTAMP:20260820T040601Z
+DTSTAMP:20260821T040850Z
 DTSTART;VALUE=DATE:20260822
 DTEND;VALUE=DATE:20260917
 SUMMARY:Sauna-Sommerpause (vermutlich frei)
@@ -166,7 +114,7 @@ CATEGORIES:Sonstiges
 END:VEVENT
 BEGIN:VEVENT
 UID:642658f04d784d8f@gratis-freising
-DTSTAMP:20260820T040601Z
+DTSTAMP:20260821T040850Z
 DTSTART;VALUE=DATE:20260822
 DTEND;VALUE=DATE:20260823
 SUMMARY:Krisendienst Psychiatrie Oberbayern (vermutlich frei)
@@ -183,7 +131,7 @@ CATEGORIES:Rat und Hilfe
 END:VEVENT
 BEGIN:VEVENT
 UID:cf9869fdabf80146@gratis-freising
-DTSTAMP:20260820T040601Z
+DTSTAMP:20260821T040850Z
 DTSTART;TZID=Europe/Berlin:20260822T180000
 DTEND;TZID=Europe/Berlin:20260822T220000
 SUMMARY:König-Ludwig-Verein (vermutlich frei)
@@ -199,8 +147,27 @@ URL:https://veranstaltungen.merkur.de/freising/koenig-ludwig-verein-ee3f84f
 CATEGORIES:Feste/Bälle/Tanz
 END:VEVENT
 BEGIN:VEVENT
+UID:4689da62f25a166e@gratis-freising
+DTSTAMP:20260821T040850Z
+DTSTART;VALUE=DATE:20260823
+DTEND;VALUE=DATE:20260824
+SUMMARY:Landratsamt sucht Pflegefamilien (vermutlich frei)
+LOCATION:85356 Freising
+DESCRIPTION:Information über die Suche nach Pflegefamilien für Kinder und
+  Jugendliche in Notlagen. Ein digitaler Infoabend bietet Einblicke in das 
+ Thema und die Möglichkeit\, sich zu engagieren.\n\nEintritt: vermutlich k
+ ostenfrei (Quelle nennt: frei)\nSicherheit: niedrig\n\nVeranstalter: Landr
+ atsamt Freising\nKategorie: Rat und Hilfe\nZielgruppe: Alle\nDrinnen/Draus
+ sen: beides\nAnmeldung noetig: ja — siehe Quelle\n\nQuelle: https://vera
+ nstaltungen.merkur.de/freising/landratsamt-sucht-pflegefamilien-e381cd7cff
+ c281ded1893a8353bb39ae4.html
+URL:https://veranstaltungen.merkur.de/freising/landratsamt-sucht-pflegefami
+ lien-e381cd7cffc281ded1893a8353bb39ae4.html
+CATEGORIES:Rat und Hilfe
+END:VEVENT
+BEGIN:VEVENT
 UID:a753c7385e31a4c3@gratis-freising
-DTSTAMP:20260820T040601Z
+DTSTAMP:20260821T040850Z
 DTSTART;TZID=Europe/Berlin:20260827T193000
 DTEND;TZID=Europe/Berlin:20260827T210000
 SUMMARY:Kreuzbund SHG Bahnhofstraße (vermutlich frei)
@@ -218,92 +185,74 @@ CATEGORIES:Rat und Hilfe
 END:VEVENT
 BEGIN:VEVENT
 UID:28b673010504d740@gratis-freising
-DTSTAMP:20260820T040601Z
+DTSTAMP:20260821T040850Z
 DTSTART;TZID=Europe/Berlin:20260929T190000
 DTEND;TZID=Europe/Berlin:20260929T203000
 SUMMARY:Nachhaltige Materialnutzung von Baumrinde (vermutlich frei)
-LOCATION:TUM@Freising — Freising
-DESCRIPTION:Vortrag von Michaela Eder zur nachhaltigen Nutzung von Baumrind
- e als Ressource. Im Anschluss besteht die Möglichkeit zur Diskussion mit 
- der Referentin. Die Veranstaltung ist Teil der Reihe TUM@Freising und rich
- tet sich an die Öffentlichkeit.\n\nEintritt: vermutlich kostenfrei (Quell
- e nennt: frei)\nSicherheit: mittel\n\nVeranstalter: TUM\nKategorie: Vortra
- g\nZielgruppe: Alle\nDrinnen/Draussen: drinnen\n\nQuelle: https://www.tum.
- de/aktuelles/veranstaltungen/terminuebersicht?tx_solr%5Bfilter%5D%5B0%5D=l
- ocation%3AFreising
+LOCATION:TUM Campus Freising — Freising
+DESCRIPTION:Michaela Eder hält einen Vortrag über innovative Ansätze zur
+  nachhaltigen Nutzung von Baumrinde in der Materialforschung. Im Anschluss
+  gibt es Raum für Diskussion und Austausch. Geeignet für Fachpublikum un
+ d Interessierte an Nachhaltigkeitsthemen.\n\nEintritt: vermutlich kostenfr
+ ei (Quelle nennt: frei)\nSicherheit: mittel\n\nVeranstalter: TUM@Freising\
+ nKategorie: Vortrag\nZielgruppe: Alle\nDrinnen/Draussen: drinnen\n\nQuelle
+ : https://www.tum.de/aktuelles/veranstaltungen/terminuebersicht?tx_solr%5B
+ filter%5D%5B0%5D=location%3AFreising
 URL:https://www.tum.de/aktuelles/veranstaltungen/terminuebersicht?tx_solr%5
  Bfilter%5D%5B0%5D=location%3AFreising
 CATEGORIES:Vortrag
 END:VEVENT
 BEGIN:VEVENT
 UID:7658e605275a5d7e@gratis-freising
-DTSTAMP:20260820T040601Z
+DTSTAMP:20260821T040850Z
 DTSTART;TZID=Europe/Berlin:20261002T180000
 DTEND;TZID=Europe/Berlin:20261002T235900
 SUMMARY:Die Demokratie feiern – gemeinsam in Freising (vermutlich frei)
 LOCATION:
-DESCRIPTION:Ein Abend voller Begegnungen\, bei dem Demokratie durch Gesprä
- che\, Kunst\, Musik\, Theater und Mitmachaktionen erlebbar wird. Über 50 
- Vereine\, Organisationen und Schulen gestalten gemeinsam ein Programm für
-  Austausch und Dialog.\n\nEintritt: vermutlich kostenfrei (Quelle nennt: f
- rei)\nSicherheit: niedrig\n\nVeranstalter: Treffpunkt Ehrenamt der Stadt F
- reising\nKategorie: Fest\nZielgruppe: Alle\nDrinnen/Draussen: beides\n\nQu
- elle: https://www.3klang-musik.de/freising.html
+DESCRIPTION:Die Lange Nacht der Demokratie lädt mit Gesprächen\, Kunst\, 
+ Musik\, Theater und Mitmachaktionen zum Mitmachen und Austausch ein. Über
+  50 Vereine und Organisationen gestalten diesen Abend als Ort der Begegnun
+ g und des Dialogs.\n\nEintritt: vermutlich kostenfrei (Quelle nennt: frei)
+ \nSicherheit: niedrig\n\nVeranstalter: Treffpunkt Ehrenamt der Stadt Freis
+ ing\nKategorie: Fest\nZielgruppe: Alle\nDrinnen/Draussen: beides\n\nQuelle
+ : https://www.3klang-musik.de/freising.html
 URL:https://www.3klang-musik.de/freising.html
 CATEGORIES:Fest
 END:VEVENT
 BEGIN:VEVENT
-UID:e78da288fec00c43@gratis-freising
-DTSTAMP:20260820T040601Z
-DTSTART;TZID=Europe/Berlin:20261007T083000
-DTEND;TZID=Europe/Berlin:20261007T173000
-SUMMARY:Pflanzenschutz im Wandel (vermutlich frei)
-LOCATION:Freising — Freising
-DESCRIPTION:Fachtagung mit führenden Expert:innen zum Thema nachhaltiger P
- flanzenschutz. Es werden aktuelle Herausforderungen und Lösungsansätze d
- iskutiert. Die Veranstaltung richtet sich an Fachpublikum und Interessiert
- e.\n\nEintritt: vermutlich kostenfrei (Quelle nennt: unklar)\nSicherheit: 
- niedrig\n\nVeranstalter: TUM\nKategorie: Vortrag\nZielgruppe: Fachpublikum
- \nDrinnen/Draussen: drinnen\nAnmeldung noetig: ja — https://www.tum.de/a
- ktuelles/veranstaltungen/terminuebersicht?tx_solr%5Bfilter%5D%5B0%5D=locat
- ion%3AFreising\n\nQuelle: https://www.tum.de/aktuelles/veranstaltungen/ter
- minuebersicht?tx_solr%5Bfilter%5D%5B0%5D=location%3AFreising
-URL:https://www.tum.de/aktuelles/veranstaltungen/terminuebersicht?tx_solr%5
- Bfilter%5D%5B0%5D=location%3AFreising
-CATEGORIES:Vortrag
-END:VEVENT
-BEGIN:VEVENT
 UID:2f244d9db195425f@gratis-freising
-DTSTAMP:20260820T040601Z
+DTSTAMP:20260821T040850Z
 DTSTART;TZID=Europe/Berlin:20261029T190000
 DTEND;TZID=Europe/Berlin:20261029T203000
 SUMMARY:Netzwerke in der Bioinformatik (vermutlich frei)
-LOCATION:Freising
-DESCRIPTION:Vortrag von Markus List über die Bedeutung von Netzwerken in d
- er Bioinformatik. Im Anschluss gibt es Raum für Fragen und Diskussion. Di
- e Veranstaltung ist Teil der Reihe TUM@Freising und richtet sich an die Ö
- ffentlichkeit.\n\nEintritt: vermutlich kostenfrei (Quelle nennt: frei)\nSi
- cherheit: mittel\n\nVeranstalter: TUM\nKategorie: Vortrag\nZielgruppe: All
- e\nDrinnen/Draussen: drinnen\n\nQuelle: https://www.tum.de/aktuelles/veran
- staltungen/terminuebersicht?tx_solr%5Bfilter%5D%5B0%5D=location%3AFreising
+LOCATION:TUM Campus Freising — Freising
+DESCRIPTION:Markus List referiert über die Bedeutung von Netzwerken in der
+  Bioinformatik und aktuelle Forschungsprojekte. Der Vortrag richtet sich a
+ n Wissenschaftler\, Studierende und Interessierte an interdisziplinärer F
+ orschung.\n\nEintritt: vermutlich kostenfrei (Quelle nennt: frei)\nSicherh
+ eit: mittel\n\nVeranstalter: TUM@Freising\nKategorie: Vortrag\nZielgruppe:
+  Fachpublikum\nDrinnen/Draussen: drinnen\n\nQuelle: https://www.tum.de/akt
+ uelles/veranstaltungen/terminuebersicht?tx_solr%5Bfilter%5D%5B0%5D=locatio
+ n%3AFreising
 URL:https://www.tum.de/aktuelles/veranstaltungen/terminuebersicht?tx_solr%5
  Bfilter%5D%5B0%5D=location%3AFreising
 CATEGORIES:Vortrag
 END:VEVENT
 BEGIN:VEVENT
 UID:80b56d9422c44a00@gratis-freising
-DTSTAMP:20260820T040601Z
+DTSTAMP:20260821T040850Z
 DTSTART;TZID=Europe/Berlin:20261124T190000
 DTEND;TZID=Europe/Berlin:20261124T203000
 SUMMARY:Der Fettversteher kehrt zurück (vermutlich frei)
-LOCATION:Freising
-DESCRIPTION:Vortrag von Alexander Bartelt über die Rolle von Fetten im Sto
- ffwechsel und ihre Bedeutung für die Gesundheit. Die Veranstaltung ist Te
- il der Reihe TUM@Freising und richtet sich an die Öffentlichkeit.\n\nEint
- ritt: vermutlich kostenfrei (Quelle nennt: frei)\nSicherheit: mittel\n\nVe
- ranstalter: TUM\nKategorie: Vortrag\nZielgruppe: Alle\nDrinnen/Draussen: d
- rinnen\n\nQuelle: https://www.tum.de/aktuelles/veranstaltungen/terminueber
- sicht?tx_solr%5Bfilter%5D%5B0%5D=location%3AFreising
+LOCATION:TUM Campus Freising — Freising
+DESCRIPTION:Alexander Bartelt präsentiert neueste Erkenntnisse aus der Fet
+ tstoffwechselforschung und erklärt\, wie Fettgewebe den Körper beeinflus
+ st. Ein spannender Vortrag für Mediziner\, Biologen und gesundheitsintere
+ ssierte Laien.\n\nEintritt: vermutlich kostenfrei (Quelle nennt: frei)\nSi
+ cherheit: mittel\n\nVeranstalter: TUM@Freising\nKategorie: Vortrag\nZielgr
+ uppe: Alle\nDrinnen/Draussen: drinnen\n\nQuelle: https://www.tum.de/aktuel
+ les/veranstaltungen/terminuebersicht?tx_solr%5Bfilter%5D%5B0%5D=location%3
+ AFreising
 URL:https://www.tum.de/aktuelles/veranstaltungen/terminuebersicht?tx_solr%5
  Bfilter%5D%5B0%5D=location%3AFreising
 CATEGORIES:Vortrag

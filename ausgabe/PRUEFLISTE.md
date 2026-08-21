@@ -12,33 +12,12 @@ Eintrag nicht mehr an.
 - **Beleg:** _kein Hinweis im Text gefunden_
 - **Quelle:** https://www.tum.de/aktuelles/veranstaltungen/terminuebersicht?tx_solr%5Bfilter%5D%5B0%5D=location%3AFreising
 
-## Gesundheitlich riskante Fehlinformationen von Influencern
-- **Wann:** 20.08.2026 17:00
+## Interkultureller Preis
+- **Wann:** 21.08.2026 00:00
 - **Wo:** —
-- **Angezeigt als:** vermutlich kostenfrei — Quelle nennt `frei` (Sicherheit: niedrig)
+- **Angezeigt als:** vermutlich kostenfrei — Quelle nennt `unklar` (Sicherheit: niedrig)
 - **Beleg:** _kein Hinweis im Text gefunden_
-- **Quelle:** https://veranstaltungen.merkur.de/freising/gesundheitlich-riskante-fehlinformationen-von-influencern-e942c44821d76a4fe3627d39a838642da.html
-
-## Kreuzbund SHG Bahnhofstraße
-- **Wann:** 20.08.2026 19:30
-- **Wo:** Caritas-Zentrum Freising
-- **Angezeigt als:** vermutlich kostenfrei — Quelle nennt `frei` (Sicherheit: mittel)
-- **Beleg:** _kein Hinweis im Text gefunden_
-- **Quelle:** https://veranstaltungen.merkur.de/freising/kreuzbund-shg-bahnhofstrasse-ec0093f7bfcf96906ff24eb4ce9eea60e.html
-
-## Anonyme Alkoholiker
-- **Wann:** 20.08.2026 20:00
-- **Wo:** Paul-Gerhardt-Haus
-- **Angezeigt als:** vermutlich kostenfrei — Quelle nennt `frei` (Sicherheit: mittel)
-- **Beleg:** _kein Hinweis im Text gefunden_
-- **Quelle:** https://veranstaltungen.merkur.de/freising/anonyme-alkoholiker-e3ae9b93c79a784e9e0d9eba917314af3.html
-
-## Probe der Kantorei
-- **Wann:** 20.08.2026 20:00
-- **Wo:** Evang. Gemeindehaus Christi Himmelfahrt
-- **Angezeigt als:** vermutlich kostenfrei — Quelle nennt `frei` (Sicherheit: mittel)
-- **Beleg:** _kein Hinweis im Text gefunden_
-- **Quelle:** https://veranstaltungen.merkur.de/freising/probe-der-kantorei-ef6138cb4952290182f49706f76359ddc.html
+- **Quelle:** https://veranstaltungen.freising.de/freising/
 
 ## Senioren-Netzwerk Frieda & Ben
 - **Wann:** 21.08.2026 11:00
@@ -75,6 +54,13 @@ Eintrag nicht mehr an.
 - **Beleg:** _kein Hinweis im Text gefunden_
 - **Quelle:** https://veranstaltungen.merkur.de/freising/koenig-ludwig-verein-ee3f84f419caa41de2b8b0ae7a23bf5b3.html
 
+## Landratsamt sucht Pflegefamilien
+- **Wann:** 23.08.2026 00:00
+- **Wo:** —
+- **Angezeigt als:** vermutlich kostenfrei — Quelle nennt `frei` (Sicherheit: niedrig)
+- **Beleg:** _kein Hinweis im Text gefunden_
+- **Quelle:** https://veranstaltungen.merkur.de/freising/landratsamt-sucht-pflegefamilien-e381cd7cffc281ded1893a8353bb39ae4.html
+
 ## Kreuzbund SHG Bahnhofstraße
 - **Wann:** 27.08.2026 19:30
 - **Wo:** Caritas-Zentrum Freising
@@ -84,7 +70,7 @@ Eintrag nicht mehr an.
 
 ## Nachhaltige Materialnutzung von Baumrinde
 - **Wann:** 29.09.2026 19:00
-- **Wo:** TUM@Freising
+- **Wo:** TUM Campus Freising
 - **Angezeigt als:** vermutlich kostenfrei — Quelle nennt `frei` (Sicherheit: mittel)
 - **Beleg:** _kein Hinweis im Text gefunden_
 - **Quelle:** https://www.tum.de/aktuelles/veranstaltungen/terminuebersicht?tx_solr%5Bfilter%5D%5B0%5D=location%3AFreising
@@ -96,23 +82,16 @@ Eintrag nicht mehr an.
 - **Beleg:** _kein Hinweis im Text gefunden_
 - **Quelle:** https://www.3klang-musik.de/freising.html
 
-## Pflanzenschutz im Wandel
-- **Wann:** 07.10.2026 08:30
-- **Wo:** Freising
-- **Angezeigt als:** vermutlich kostenfrei — Quelle nennt `unklar` (Sicherheit: niedrig)
-- **Beleg:** _kein Hinweis im Text gefunden_
-- **Quelle:** https://www.tum.de/aktuelles/veranstaltungen/terminuebersicht?tx_solr%5Bfilter%5D%5B0%5D=location%3AFreising
-
 ## Netzwerke in der Bioinformatik
 - **Wann:** 29.10.2026 19:00
-- **Wo:** Freising
+- **Wo:** TUM Campus Freising
 - **Angezeigt als:** vermutlich kostenfrei — Quelle nennt `frei` (Sicherheit: mittel)
 - **Beleg:** _kein Hinweis im Text gefunden_
 - **Quelle:** https://www.tum.de/aktuelles/veranstaltungen/terminuebersicht?tx_solr%5Bfilter%5D%5B0%5D=location%3AFreising
 
 ## Der Fettversteher kehrt zurück
 - **Wann:** 24.11.2026 19:00
-- **Wo:** Freising
+- **Wo:** TUM Campus Freising
 - **Angezeigt als:** vermutlich kostenfrei — Quelle nennt `frei` (Sicherheit: mittel)
 - **Beleg:** _kein Hinweis im Text gefunden_
 - **Quelle:** https://www.tum.de/aktuelles/veranstaltungen/terminuebersicht?tx_solr%5Bfilter%5D%5B0%5D=location%3AFreising
