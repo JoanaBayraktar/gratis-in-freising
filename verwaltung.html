@@ -6,173 +6,464 @@
 <meta name="robots" content="noindex, nofollow">
 <title>Verwaltung — Gratis in Freising</title>
 <style>
-/* Farben und Grundlagen wie auf der oeffentlichen Seite, damit beide
-   zusammengehoeren. Dichter gesetzt: hier zaehlt Uebersicht, nicht Ruhe. */
+/* ============================================================
+   Schriftbild: Monospace.
+   ------------------------------------------------------------
+   Nicht als Kostuem fuer "technisch", sondern weil diese Seite fast nur
+   aus Daten besteht: Datum, Uhrzeit, Zeitraeume, Zaehler, Kennungen. In
+   einer Festbreitenschrift stehen die Ziffern untereinander, und eine
+   Spalte laesst sich senkrecht lesen statt Zeile fuer Zeile.
+
+   Keine Schriftdatei im Repo, keine externe Quelle: Das Projekt hat sich
+   festgelegt, nichts nachzuladen. Die Kette beginnt mit ui-monospace, was
+   auf dem Mac SF Mono bedeutet — eine Schrift mit eigenem Charakter, kein
+   Notbehelf. Wer eine unverwechselbare Hausschrift will, muesste eine
+   woff2-Datei mit ins Repo legen; das waere moeglich, aber eine eigene
+   Entscheidung.
+   ============================================================ */
 :root {
-  --grund: #ffffff; --text: #1c1c1c; --leise: #6b6b6b; --leiser: #8a8a8a;
-  --linie: #e4e4e4; --kasten: #f7f7f5; --blau: #1a5490; --blau-hell: #e8f0f7;
-  --gruen: #1e6b3a; --gruen-hell: #e6f4ea; --gelb: #7a5b00; --gelb-hell: #fff3cd;
-  --rot: #a8471a; --rot-hell: #fbeae1;
+  /* Vier Schriftgrade im Abstand von je rund 1,25: 12 fuer Beiwerk,
+     15 fuer Fliesstext und Bedienung, 19 fuer den Overlay-Titel,
+     24 fuer den Seitentitel. Den Platz, den der groessere Fliesstext
+     kostet, holt die abgeschaffte Status-Spalte wieder herein. */
+  --mono: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas,
+          "Liberation Mono", "Courier New", monospace;
+
+  /* Zwei Farben tragen die Seite: #3b91db und Schwarz. Der Rest ist Grau.
+     #3b91db erreicht auf Weiss nur 3,36:1 — genug fuer Flaechen und Rahmen
+     (noetig sind 3,0), nicht fuer kleine Schrift (noetig sind 4,5). Deshalb
+     drei Abstufungen statt einer. */
+  --haupt: #3b91db;        /* Marke: Flaechen, Kanten, aktive Zustaende */
+  --haupt-text: #1e66a4;   /* Links und kleine Schrift auf Hell — 6,0:1 */
+  --haupt-satt: #2376be;   /* gefuellte Knoepfe, weisse Schrift — 4,8:1 */
+  --haupt-hell: #e9f1fa; --haupt-rand: #b9d7f0;
+
+  --grund: #ffffff; --text: #0d0d0d; --leise: #5c6166; --leiser: #6f747a;
+  --linie: #e3e5e8; --linie-satt: #cfd3d8; --kasten: #f6f7f9;
+  --gruen: #16653a; --gruen-hell: #e4f3ea; --gelb: #6f5300; --gelb-hell: #fdf1cf;
+  --rot: #9c4218; --rot-hell: #fae8de;
+
+  /* Abstaende auf einer Viererbasis. Rhythmus entsteht aus dem Sprung
+     zwischen eng und weit, nicht aus einem Wert ueberall. */
+  --s1: 4px; --s2: 8px; --s3: 12px; --s4: 20px; --s5: 32px; --s6: 52px;
+
+  /* Zwei Stufen statt einer: Ein Klappmenue schwebt zwei Millimeter ueber
+     der Seite, ein Overlay steht davor. Derselbe weiche Schleier unter
+     beiden liesse das kleine Menue haltlos wirken. */
+  --schatten-klein: 0 4px 12px -3px rgba(13,13,13,.18), 0 1px 3px rgba(13,13,13,.10);
+  --schatten-gross: 0 24px 48px -12px rgba(13,13,13,.30), 0 6px 16px -6px rgba(13,13,13,.14);
+  --schwung: cubic-bezier(.16, 1, .3, 1);
 }
 @media (prefers-color-scheme: dark) {
   :root {
-    --grund: #16181a; --text: #e8e8e6; --leise: #a0a4a8; --leiser: #7d8288;
-    --linie: #2c3034; --kasten: #1e2124; --blau: #7fb3e0; --blau-hell: #1b2b3a;
-    --gruen: #7fd6a0; --gruen-hell: #16301f; --gelb: #e0c069; --gelb-hell: #332b12;
-    --rot: #e5a179; --rot-hell: #33211a;
+    --haupt: #3b91db; --haupt-text: #7eb6e7; --haupt-satt: #3b91db;
+    --haupt-hell: #14293c; --haupt-rand: #29506f;
+    --grund: #121417; --text: #eceeef; --leise: #9ba1a7; --leiser:#939aa1;
+    --linie: #272b30; --linie-satt: #363b41; --kasten: #191c20;
+    --gruen: #7fd6a0; --gruen-hell: #14301e; --gelb: #e2c26b; --gelb-hell: #322a11;
+    --rot: #e7a37b; --rot-hell: #32211a;
+    --schatten-klein: 0 4px 12px -3px rgba(0,0,0,.6), 0 1px 3px rgba(0,0,0,.5);
+    --schatten-gross: 0 24px 48px -12px rgba(0,0,0,.75), 0 6px 16px -6px rgba(0,0,0,.5);
   }
 }
+
 * { box-sizing: border-box; }
+html { color-scheme: light dark; }
 body {
   margin: 0; background: var(--grund); color: var(--text);
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-  line-height: 1.45; font-size: 14px; -webkit-text-size-adjust: 100%;
+  font-family: var(--mono); font-size: 15px; line-height: 1.5;
+  font-variant-numeric: tabular-nums; -webkit-text-size-adjust: 100%;
+  -webkit-font-smoothing: antialiased;
 }
-.huelle { max-width: 1400px; margin: 0 auto; padding: 18px 16px 80px; }
-a { color: var(--blau); }
 
-header { display: flex; align-items: baseline; gap: 12px; flex-wrap: wrap; }
-header h1 { font-size: 20px; margin: 0; letter-spacing: -.01em; }
-header .weg { margin-left: auto; font-size: 13px; }
-
-/* Anmeldung */
-.tuer {
-  margin: 14px 0; padding: 12px 14px; border: 1px solid var(--linie);
-  border-radius: 9px; background: var(--kasten);
-  display: flex; gap: 8px; align-items: center; flex-wrap: wrap;
+/* Was der Browser selbst zeichnet, gehoert auch zum Entwurf. Auswahl,
+   Schreibmarke, Bildlaufleisten und Fokusringe kommen sonst aus keinem
+   System — sie sind das Erste, woran man sieht, dass eine Seite
+   zusammengesetzt statt gebaut wurde. */
+::selection { background: var(--haupt); color: #fff; }
+@media (prefers-color-scheme: dark) { ::selection { color: #0b1218; } }
+:root { accent-color: var(--haupt); scrollbar-color: var(--linie-satt) transparent; }
+::-webkit-scrollbar { width: 11px; height: 11px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb {
+  background: var(--linie-satt); border-radius: 99px;
+  border: 3px solid var(--grund);
 }
-.tuer.offen { background: var(--gruen-hell); border-color: transparent; }
-.tuer .hinweis { color: var(--leise); font-size: 13px; }
+::-webkit-scrollbar-thumb:hover { background: var(--leiser); }
+:focus-visible { outline: 2px solid var(--haupt); outline-offset: 2px; border-radius: 3px; }
+a { color: var(--haupt-text); text-underline-offset: 3px; text-decoration-thickness: 1px; }
 
-input, select, textarea, button {
-  font: inherit; color: var(--text); background: var(--grund);
-  border: 1px solid var(--linie); border-radius: 7px; padding: 6px 9px;
+.huelle { max-width: 1440px; margin: 0 auto; padding: 20px 18px 96px; }
+
+/* ------------------------------------------------------------------
+   Kopfleiste. Links wer und woher, rechts was man tun kann. Die beiden
+   Knoepfe, die als Einzige Daten veraendern, stehen dauerhaft an
+   derselben Stelle — nicht zwischen Filtern, mit denen man nichts
+   kaputtmachen kann.
+   ------------------------------------------------------------------ */
+.leiste {
+  display: flex; align-items: flex-end; gap: var(--s4) var(--s5);
+  flex-wrap: wrap; padding-bottom: var(--s4);
+  border-bottom: 1px solid var(--linie);
 }
-textarea { width: 100%; resize: vertical; min-height: 62px; }
-button { cursor: pointer; }
-button.wichtig { background: var(--blau); border-color: var(--blau); color: #fff; font-weight: 600; }
-button.wichtig:disabled { opacity: .45; cursor: default; }
-button.leise { color: var(--leise); }
-button.gefahr { color: var(--rot); border-color: var(--rot-hell); }
+.wer { display: flex; flex-direction: column; gap: 2px; min-width: 0; }
+.wer h1 { font-size: 24px; margin: 0; font-weight: 700; letter-spacing: -.035em; }
+.wer h1 b { color: var(--haupt); font-weight: 400; margin: 0 2px; }
+.wer .stand { color: var(--leiser); font-size: 12px; }
+.wer .weg { font-size: 12px; }
 
-/* Steuerung */
+.tun { display: flex; align-items: center; gap: var(--s2); margin-left: auto; flex-wrap: wrap; }
+.tun input[type=password] { width: 168px; }
+
+/* Die Anmeldung ist ein Zustand, kein Abschnitt. Angemeldet schrumpft sie
+   auf einen Punkt und ein Wort — sie wird einmal benutzt und danach nie
+   wieder angesehen. */
+.zustand {
+  display: inline-flex; align-items: center; gap: 7px;
+  font-size: 12px; color: var(--leiser); white-space: nowrap;
+}
+.zustand::before {
+  content: ""; width: 7px; height: 7px; border-radius: 99px;
+  background: var(--linie-satt); flex: none;
+}
+#tuer.offen .zustand { color: var(--haupt-text); }
+#tuer.offen .zustand::before { background: var(--haupt); }
+
+/* Reiter */
+.reiter { display: flex; gap: 0; border-bottom: 1px solid var(--linie); }
+.reiter button {
+  border: none; background: none; border-radius: 0;
+  padding: var(--s3) var(--s4) 10px 0; margin-right: var(--s4);
+  color: var(--leise); font-weight: 700; font-size: 15px;
+  border-bottom: 2px solid transparent; margin-bottom: -1px;
+}
+.reiter button:hover { color: var(--text); }
+.reiter button[aria-selected="true"] { color: var(--text); border-bottom-color: var(--haupt); }
+.reiter .anzahl { font-weight: 400; color: var(--leiser); margin-left: 7px; }
+.reiter button[aria-selected="true"] .anzahl { color: var(--haupt-text); }
+
+/* Reiter und Filter bilden einen Block und bleiben zusammen oben stehen.
+   Die Filterzeile ist bewusst zurueckgenommen: Sie grenzt nur ein, sie
+   entscheidet nichts. */
+.navi { position: sticky; top: 0; z-index: 6; background: var(--grund); margin-top: var(--s5); }
 .steuerung {
-  position: sticky; top: 0; z-index: 6; background: var(--grund);
-  padding: 10px 0; border-bottom: 1px solid var(--linie);
-  display: flex; gap: 7px; align-items: center; flex-wrap: wrap;
+  padding: var(--s3) 0; display: flex; gap: var(--s1) var(--s2);
+  align-items: center; flex-wrap: wrap; border-bottom: 1px solid var(--linie);
 }
-.steuerung input[type=search] { flex: 1 1 200px; min-width: 0; }
-.zahl { color: var(--leiser); font-size: 13px; margin-left: auto; white-space: nowrap; }
-button.filter {
-  font-size: 13px; padding: 5px 11px; border-radius: 999px; color: var(--leise);
-}
+.steuerung input[type=search] { flex: 1 1 180px; min-width: 0; }
+.steuerung select, .steuerung input[type=search] { font-size: 12px; padding: 5px 8px; }
+.trenner { width: 1px; align-self: stretch; background: var(--linie); margin: 0 var(--s1); }
+.zahl { color: var(--leiser); font-size: 12px; margin-left: auto; white-space: nowrap; }
+button.filter { font-size: 12px; padding: 5px 10px; border-radius: 99px; color: var(--leise); }
 button.filter[aria-pressed="true"] {
-  background: var(--blau); border-color: var(--blau); color: #fff; font-weight: 600;
+  background: var(--haupt); border-color: var(--haupt); color: #fff; font-weight: 700;
 }
-@media (prefers-color-scheme: dark) {
-  button.filter[aria-pressed="true"] { color: #10161c; }
-}
+@media (prefers-color-scheme: dark) { button.filter[aria-pressed="true"] { color: #0b1218; } }
 
 /* Tabelle */
-table { width: 100%; border-collapse: collapse; margin-top: 4px; }
+table { width: 100%; border-collapse: collapse; margin-top: 2px; }
 th {
-  text-align: left; font-size: 11px; text-transform: uppercase; letter-spacing: .06em;
-  color: var(--leiser); font-weight: 600; padding: 8px 8px 6px; white-space: nowrap;
-  border-bottom: 1px solid var(--linie); position: sticky; top: 46px;
-  background: var(--grund); z-index: 4; cursor: pointer; user-select: none;
+  text-align: left; font-size: 12px; color: var(--leiser); font-weight: 700;
+  padding: var(--s3) var(--s2) 7px; white-space: nowrap;
+  border-bottom: 1px solid var(--linie);
+  /* Der Wert kommt aus der gemessenen Hoehe des Navigationsblocks; eine
+     geratene Zahl waere beim ersten Umbruch falsch. */
+  position: sticky; top: var(--kopfhoehe, 92px); background: var(--grund); z-index: 4;
+  cursor: pointer; user-select: none;
 }
-th .pfeil { color: var(--blau); }
-td { padding: 7px 8px; border-bottom: 1px solid var(--linie); vertical-align: top; }
+th:last-child { cursor: default; }
+th:hover { color: var(--text); }
+th .pfeil { color: var(--haupt); }
+td { padding: var(--s3) var(--s2); border-bottom: 1px solid var(--linie); vertical-align: top; }
+
+/* Monatsgliederung. 117 Zeilen am Stueck sind eine Wand; nach Monaten
+   gebrochen wird daraus etwas, das man ueberfliegen kann. Sie erscheint
+   nur bei Sortierung nach Datum — bei jeder anderen Reihenfolge waere sie
+   eine Behauptung ueber eine Ordnung, die es nicht gibt. */
+tr.monat td {
+  padding: var(--s5) 0 var(--s2); border-bottom: 2px solid var(--text);
+  font-size: 12px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase;
+}
+tr.monat:first-child td { padding-top: var(--s3); }
+tr.monat .wieviele { float: right; font-weight: 400; letter-spacing: 0;
+                     text-transform: none; color: var(--leiser); }
+tbody tr.monat:hover { background: none; }
 tbody tr:hover { background: var(--kasten); }
 tr.aus td { opacity: .42; }
-tr.aus td .titel { text-decoration: line-through; }
-td.datum { white-space: nowrap; font-variant-numeric: tabular-nums; color: var(--leise); font-size: 13px; }
-td.titel-zelle { min-width: 220px; }
-.titel { font-weight: 600; }
-.unter { color: var(--leiser); font-size: 12px; margin-top: 1px; }
-td.knopf-zelle { text-align: right; white-space: nowrap; }
-td.knopf-zelle button { padding: 3px 8px; font-size: 12px; }
+tr.aus .titel { text-decoration: line-through; }
+
+/* Dauertermin und Einzeltermin unterscheiden sich durch ein gezeichnetes
+   Zeichen vor dem Datum: eine Strecke mit zwei Enden gegen einen einzelnen
+   Punkt. Das Symbol sagt, was der Unterschied ist, statt ihn nur zu
+   markieren — und es bleibt lesbar, wenn jemand Farben nicht unterscheiden
+   kann. */
+/* Symbol und Datum stehen nebeneinander, auch wenn der Zeitraum umbricht:
+   sonst rutscht das Symbol auf eine eigene Zeile und zeigt auf nichts. */
+.datumzeile { display: flex; align-items: flex-start; gap: 7px; }
+.art { flex: none; padding-top: 1px; }
+.art svg { display: block; width: 14px; height: 14px; }
+.art.dauer svg { color: var(--haupt); }
+.art.einzel svg { color: var(--leiser); }
+tr.dauer td.datum .wann { color: var(--haupt-text); }
+
+/* Der Zeitraum darf umbrechen. Mit nowrap beansprucht die Spalte 181 Pixel,
+   und die Tabelle wird breiter als das Fenster — die Seite wuerde seitlich
+   scrollen, was sie nie soll. Umgebrochen liest sich der Zeitraum ohnehin
+   eher besser. */
+td.datum { color: var(--leise); font-size: 15px; }
+td.datum .wann { display: inline; }
+td.titel-zelle { min-width: 158px; }
+.titel { font-weight: 700; letter-spacing: -.01em; }
+.unter { color: var(--leiser); font-size: 12px; margin-top: 2px; }
 
 .marke {
-  display: inline-block; font-size: 11px; font-weight: 600; padding: 1px 7px;
-  border-radius: 999px; background: var(--kasten); color: var(--leise); white-space: nowrap;
+  display: inline-block; font-size: 12px; font-weight: 700; padding: 1px 6px;
+  border-radius: 4px; background: var(--kasten); color: var(--leise); white-space: nowrap;
 }
 .marke.frei { background: var(--gruen-hell); color: var(--gruen); }
 .marke.spende { background: var(--gelb-hell); color: var(--gelb); }
-.marke.vermutlich { background: var(--kasten); color: var(--leise); box-shadow: inset 0 0 0 1px var(--linie); }
+.marke.vermutlich { background: transparent; color: var(--leise); box-shadow: inset 0 0 0 1px var(--linie-satt); }
 .marke.kosten { background: var(--kasten); color: var(--leise); }
-.marke.eigen { background: var(--blau-hell); color: var(--blau); }
+.marke.eigen { background: var(--haupt-hell); color: var(--haupt-text); }
 .marke.korrigiert { background: var(--gelb-hell); color: var(--gelb); }
 .marke.versteckt { background: var(--rot-hell); color: var(--rot); }
+.marken { display: flex; flex-wrap: wrap; gap: var(--s1); margin-top: 5px; }
 
-/* Bearbeitungszeile */
-tr.werkbank td { background: var(--kasten); padding: 14px 12px; }
-.felder { display: grid; grid-template-columns: repeat(auto-fit, minmax(190px, 1fr)); gap: 10px 14px; }
-.feld { display: flex; flex-direction: column; gap: 3px; }
-.feld > span { font-size: 11px; text-transform: uppercase; letter-spacing: .05em; color: var(--leiser); }
+/* In der Tabelle darf die Einstufung umbrechen. "vermutlich kostenfrei"
+   sind in Festbreitenschrift rund 165 Pixel, die sonst die ganze Tabelle
+   breiter machen als das Fenster. Der Wortlaut bleibt — er kommt aus
+   regeln.py und muss ueberall derselbe sein. */
+td.eintritt-zelle .marke { white-space: normal; }
+
+/* Drei-Punkte-Menü.
+   Die Spalte klebt am rechten Rand. Zwischen etwa 760 und 1100 Pixeln ist
+   die Tabelle breiter als das Fenster; ohne diese Verankerung stuende
+   ausgerechnet der Knopf, ueber den jede Aktion laeuft, ausserhalb des
+   sichtbaren Bereichs. */
+td.menue-zelle, th:last-child {
+  position: sticky; right: 0; text-align: right; width: 40px;
+  background: var(--grund);
+}
+tbody tr:hover td.menue-zelle { background: var(--kasten); }
+button.punkte {
+  border: 1px solid transparent; background: none; padding: 4px;
+  border-radius: 5px; color: var(--leiser); line-height: 0;
+}
+button.punkte svg { width: 15px; height: 15px; display: block; }
+button.punkte:hover { background: var(--kasten); border-color: var(--linie-satt); color: var(--text); }
+button.punkte[aria-expanded="true"] {
+  background: var(--haupt-hell); border-color: var(--haupt-rand); color: var(--haupt-text);
+}
+#menue {
+  position: absolute; z-index: 20; min-width: 210px; padding: 4px;
+  background: var(--grund); border: 1px solid var(--linie-satt);
+  border-radius: 8px; box-shadow: var(--schatten-klein);
+  animation: aufklappen .16s var(--schwung);
+}
+#menue[hidden] { display: none; }
+#menue button {
+  display: block; width: 100%; text-align: left; border: 1px solid transparent;
+  background: none; padding: 7px 9px; border-radius: 5px; font-size: 15px;
+}
+#menue button:hover { background: var(--kasten); border-color: transparent; }
+#menue hr { border: none; border-top: 1px solid var(--linie); margin: 4px 2px; }
+@keyframes aufklappen { from { opacity: 0; transform: translateY(-4px); } }
+
+/* Overlay. Der eine gestaltete Moment der Seite: Der Kasten kommt aus der
+   Tiefe nach vorn und der Hintergrund tritt zurueck. Sonst bewegt sich
+   nichts — verstreute Effekte wuerden diesen einen entwerten. */
+dialog {
+  border: none; border-radius: 12px; padding: 0; color: var(--text);
+  background: var(--grund); box-shadow: var(--schatten-gross);
+  width: min(900px, 94vw); max-height: 90vh;
+}
+dialog[open] { animation: hervor .34s var(--schwung); }
+dialog[open]::backdrop { animation: verdunkeln .34s var(--schwung); }
+dialog::backdrop { background: rgba(9,11,13,.5); backdrop-filter: blur(3px); }
+@keyframes hervor {
+  from { opacity: 0; transform: scale(.965) translateY(10px); filter: blur(3px); }
+}
+@keyframes verdunkeln { from { opacity: 0; backdrop-filter: blur(0); } }
+@media (prefers-reduced-motion: reduce) {
+  dialog[open], dialog[open]::backdrop, #menue { animation: none; }
+  * { transition-duration: .01ms !important; }
+}
+dialog .kopf {
+  padding: 14px 20px; border-bottom: 1px solid var(--linie);
+  display: flex; align-items: baseline; gap: 10px; flex-wrap: wrap;
+  position: sticky; top: 0; background: var(--grund); border-radius: 12px 12px 0 0;
+}
+dialog .kopf h2 { margin: 0; font-size: 19px; font-weight: 700; letter-spacing: -.01em; }
+dialog .kopf .quelle { color: var(--leiser); font-size: 12px; margin-left: auto; }
+dialog .rumpf { padding: 18px 20px; overflow-y: auto; max-height: calc(90vh - 124px); }
+dialog .fuss {
+  padding: 12px 20px; border-top: 1px solid var(--linie);
+  display: flex; gap: 8px; align-items: center; flex-wrap: wrap;
+  position: sticky; bottom: 0; background: var(--grund); border-radius: 0 0 12px 12px;
+}
+dialog .fuss .hinweis { color: var(--leiser); font-size: 12px; flex: 1 1 200px; }
+.felder { display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); gap: 13px 16px; }
+.feld { display: flex; flex-direction: column; gap: 4px; }
+.feld > span { font-size: 12px; color: var(--leiser); font-weight: 700; }
 .feld.breit { grid-column: 1 / -1; }
-.feld.geaendert > span::after { content: " geändert"; color: var(--gelb); }
-.werkzeuge { display: flex; gap: 8px; margin-top: 12px; align-items: center; flex-wrap: wrap; }
+.feld.geaendert > span::after {
+  content: "geändert"; color: var(--gelb); background: var(--gelb-hell);
+  border-radius: 4px; padding: 0 5px; margin-left: 6px; font-size: 12px; font-weight: 700;
+}
 
-.fuss { margin-top: 26px; color: var(--leiser); font-size: 12px; }
-.meldung { padding: 9px 12px; border-radius: 8px; margin: 10px 0; font-size: 13px; }
-.meldung.gut { background: var(--gruen-hell); color: var(--gruen); }
+.fuss-text { margin-top: 28px; color: var(--leiser); font-size: 12px; max-width: 68ch; line-height: 1.65; }
+.fuss-text code { color: var(--leise); }
+.meldung { padding: 9px 12px; border-radius: 7px; margin: 10px 0; font-size: 15px; }
+.meldung.gut { background: var(--haupt-hell); color: var(--haupt-text); }
 .meldung.schlecht { background: var(--rot-hell); color: var(--rot); }
-.leer { padding: 34px 0; text-align: center; color: var(--leiser); }
+.leer { padding: 40px 0; text-align: center; color: var(--leiser); }
+
+/* ------------------------------------------------------------
+   Handy. Der interne Bereich wird ausdruecklich auch unterwegs
+   benutzt, deshalb keine Tabelle zum Querscrollen, sondern
+   gestapelte Bloecke: Titel oben, darunter Datum und Einstufung,
+   die Punkte oben rechts an fester Stelle.
+   ------------------------------------------------------------ */
+/* Umschaltpunkt gemessen, nicht geraten: Die Tabelle braucht bei 15px
+   Fliesstext mindestens 918 Pixel. Darunter wird gestapelt — sonst laeuft
+   sie seitlich hinaus, und genau der Knopf, ueber den jede Aktion geht,
+   steht ausserhalb des Bildes. */
+@media (max-width: 960px) {
+  .huelle { padding: 14px 12px 80px; }
+  thead { display: none; }
+  table, tbody, tr, td { display: block; }
+  tr {
+    position: relative; padding: 12px 44px 12px 0;
+    border-bottom: 1px solid var(--linie);
+    display: flex; flex-wrap: wrap; align-items: baseline; gap: 3px 10px;
+  }
+  td { border: none; padding: 0; }
+  td.titel-zelle { flex: 1 1 100%; min-width: 0; }
+  td.datum { order: 2; font-size: 12px; }
+  td.kat-zelle, td.eintritt-zelle { order: 3; }
+  td.kat-zelle { color: var(--leiser); font-size: 12px; }
+  td.quelle-zelle { order: 4; flex: 0 1 auto; }
+  td.menue-zelle, th:last-child {
+    position: absolute; top: 8px; right: 0; width: auto; background: none;
+  }
+  .leiste { align-items: stretch; gap: var(--s3); padding-bottom: var(--s3); }
+  .wer h1 { font-size: 19px; }
+  .tun { margin-left: 0; }
+  .tun input[type=password] { flex: 1 1 120px; width: auto; }
+  #neu, #speichern { flex: 1 1 auto; }
+  .navi { margin-top: var(--s4); }
+  .steuerung { gap: var(--s1); padding: var(--s2) 0; }
+  .trenner { display: none; }
+  tr.monat td { padding: var(--s4) 0 var(--s1); }
+  .steuerung input[type=search] { flex: 1 1 100%; }
+  .reiter button { flex: 1; padding: 9px 6px; text-align: center; font-size: 15px; }
+  .zahl { margin-left: 0; flex: 1 1 100%; white-space: normal; line-height: 1.4; }
+  dialog { width: 100vw; max-width: 100vw; max-height: 100vh; height: 100vh; border-radius: 0; }
+  dialog .kopf, dialog .fuss { border-radius: 0; }
+  dialog .rumpf { max-height: calc(100vh - 120px); }
+  .felder { grid-template-columns: 1fr; }
+}
 </style>
 </head>
 <body>
+
+<!-- Gezeichnete Symbole, ein Strichgewicht, aus dem Textfluss genommen.
+     Unicode-Zeichen wie "⋯" oder Emoji waeren hier ein Notbehelf: Sie
+     wechseln je nach Betriebssystem Form, Gewicht und Groesse. -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <!-- Kalendersymbole nach Font Awesome Free v7 (CC BY 4.0, Fonticons Inc.,
+       https://fontawesome.com/license/free). Der Rahmen ist bei beiden
+       derselbe; nur die Fuellung sagt, worum es geht: ein breiter Balken
+       fuer einen Zeitraum, ein einzelnes Feld fuer den einen Tag. Zwei
+       Zeichen aus einem System statt zweier fremder. -->
+  <symbol id="i-spanne" viewBox="0 0 640 640">
+    <path fill="currentColor" fill-rule="evenodd" d="M224 64C241.7 64 256 78.3 256 96L256 128L384 128L384 96C384 78.3 398.3 64 416 64C433.7 64 448 78.3 448 96L448 128L480 128C515.3 128 544 156.7 544 192L544 480C544 515.3 515.3 544 480 544L160 544C124.7 544 96 515.3 96 480L96 192C96 156.7 124.7 128 160 128L192 128L192 96C192 78.3 206.3 64 224 64zM224 320C206.3 320 192 334.3 192 352L192 416C192 433.7 206.3 448 224 448L416 448C433.7 448 448 433.7 448 416L448 352C448 334.3 433.7 320 416 320L224 320z"/>
+  </symbol>
+  <symbol id="i-punkt" viewBox="0 0 640 640">
+    <path fill="currentColor" fill-rule="evenodd" d="M224 64C241.7 64 256 78.3 256 96L256 128L384 128L384 96C384 78.3 398.3 64 416 64C433.7 64 448 78.3 448 96L448 128L480 128C515.3 128 544 156.7 544 192L544 480C544 515.3 515.3 544 480 544L160 544C124.7 544 96 515.3 96 480L96 192C96 156.7 124.7 128 160 128L192 128L192 96C192 78.3 206.3 64 224 64zM292 336L348 336A20 20 0 0 1 368 356L368 412A20 20 0 0 1 348 432L292 432A20 20 0 0 1 272 412L272 356A20 20 0 0 1 292 336z"/>
+  </symbol>
+  <symbol id="i-mehr" viewBox="0 0 16 16" fill="currentColor">
+    <circle cx="8" cy="3.2" r="1.45"/><circle cx="8" cy="8" r="1.45"/>
+    <circle cx="8" cy="12.8" r="1.45"/>
+  </symbol>
+</svg>
+
 <div class="huelle">
 
-<header>
-  <h1>Verwaltung</h1>
-  <span class="hinweis" id="stand"></span>
-  <span class="weg"><a href="index.html">← zur öffentlichen Übersicht</a></span>
+<header class="leiste">
+  <div class="wer">
+    <h1>Gratis in Freising<b>/</b>Verwaltung</h1>
+    <span class="stand" id="stand"></span>
+    <a class="weg" href="index.html">← zur öffentlichen Übersicht</a>
+  </div>
+  <div class="tun" id="tuer">
+    <span class="zustand" id="tuer-text">nur Ansicht</span>
+    <input type="password" id="passwort" placeholder="Passwort" autocomplete="current-password">
+    <button id="anmelden">Anmelden</button>
+    <button id="neu" class="wichtig" disabled>+ Neuer Termin</button>
+    <button id="speichern" class="wichtig" disabled>Speichern</button>
+  </div>
 </header>
-
-<div class="tuer" id="tuer">
-  <input type="password" id="passwort" placeholder="Passwort" autocomplete="current-password" style="flex:0 1 240px">
-  <button class="wichtig" id="anmelden">Anmelden</button>
-  <span class="hinweis" id="tuer-text">Ohne Anmeldung nur zum Ansehen.</span>
-</div>
 
 <div id="meldung"></div>
 
-<div class="steuerung">
-  <input type="search" id="suche" placeholder="Suchen …">
-  <select id="quelle"><option value="">Alle Quellen</option></select>
-  <select id="kategorie"><option value="">Alle Arten</option></select>
-  <select id="eintritt">
-    <option value="">Jeder Eintritt</option>
-    <option value="frei">Eintritt frei</option>
-    <option value="spende">Spende</option>
-    <option value="vermutlich">vermutlich kostenfrei</option>
-    <option value="kosten">kostenpflichtig</option>
-  </select>
-  <button class="filter" id="f-kommend" aria-pressed="true">Ab heute</button>
-  <button class="filter" id="f-eigen" aria-pressed="false">Eigene</button>
-  <button class="filter" id="f-korr" aria-pressed="false">Korrigiert</button>
-  <button class="filter" id="f-aus" aria-pressed="false">Ausgeblendet</button>
-  <button id="neu" class="wichtig" disabled>+ Neuer Termin</button>
-  <button id="speichern" class="wichtig" disabled>Speichern</button>
-  <span class="zahl" id="zahl"></span>
+<div class="navi">
+  <div class="reiter" role="tablist">
+    <button role="tab" data-reiter="alle" aria-selected="true">Alle<span class="anzahl" id="n-alle"></span></button>
+    <button role="tab" data-reiter="einzel" aria-selected="false">Einzeltermine<span class="anzahl" id="n-einzel"></span></button>
+    <button role="tab" data-reiter="dauer" aria-selected="false">Dauertermine<span class="anzahl" id="n-dauer"></span></button>
+  </div>
+  <div class="steuerung">
+    <input type="search" id="suche" placeholder="Suchen …">
+    <select id="quelle"><option value="">Alle Quellen</option></select>
+    <select id="kategorie"><option value="">Alle Kategorien</option></select>
+    <select id="eintritt">
+      <option value="">Jeder Eintritt</option>
+      <option value="frei">Eintritt frei</option>
+      <option value="spende">Spende</option>
+      <option value="vermutlich">vermutlich kostenfrei</option>
+      <option value="kosten">kostenpflichtig</option>
+    </select>
+    <span class="trenner"></span>
+    <button class="filter" id="f-kommend" aria-pressed="true">Ab heute</button>
+    <button class="filter" id="f-eigen" aria-pressed="false">Eigene</button>
+    <button class="filter" id="f-korr" aria-pressed="false">Korrigiert</button>
+    <button class="filter" id="f-aus" aria-pressed="false">Ausgeblendet</button>
+    <span class="zahl" id="zahl"></span>
+  </div>
 </div>
 
 <table>
   <thead><tr>
     <th data-sortier="beginn">Datum</th>
     <th data-sortier="titel">Titel / Ort</th>
-    <th data-sortier="kategorie">Art</th>
+    <th data-sortier="kategorie">Kategorie</th>
     <th data-sortier="eintritt">Eintritt</th>
     <th data-sortier="quelle_name">Quelle</th>
-    <th>Status</th>
     <th></th>
   </tr></thead>
   <tbody id="rumpf"></tbody>
 </table>
 <div class="leer" id="leer" hidden>Nichts gefunden.</div>
 
-<p class="fuss">
+<div id="menue" hidden role="menu"></div>
+
+<dialog id="werkbank">
+  <form method="dialog">
+    <div class="kopf">
+      <h2 id="wb-titel">Bearbeiten</h2>
+      <span class="quelle" id="wb-quelle"></span>
+    </div>
+    <div class="rumpf"><div class="felder" id="wb-felder"></div></div>
+    <div class="fuss">
+      <button type="button" class="wichtig" id="wb-uebernehmen">Übernehmen</button>
+      <button type="button" id="wb-abbrechen">Abbrechen</button>
+      <span class="hinweis" id="wb-hinweis"></span>
+    </div>
+  </form>
+</dialog>
+
+<p class="fuss-text">
   Eingriffe stehen in <code>daten/verwaltung.json</code>, getrennt von
   <code>daten/events.json</code>, das dem Sammellauf gehört. Kalender und
   Tagesmail übernehmen sie beim nächsten nächtlichen Lauf; diese Seite und die
@@ -195,7 +486,8 @@ const KORRIGIERBAR = ["titel", "beginn", "ende", "ganztaegig", "ort_name",
 let ROH = [];            // was die Quellen liefern
 let V = structuredClone(LEER);
 let SHA = null, PASSWORT = null, SCHMUTZIG = false;
-let OFFEN = null;        // welche Zeile gerade aufgeklappt ist
+let REITER = "alle";     // alle | einzel | dauer
+let BEARBEITET = null;   // ID des Termins im Overlay
 let SORT = { feld: "beginn", ab: true };
 
 const $ = (w) => document.querySelector(w);
@@ -248,7 +540,7 @@ function normalisieren(t) {
   t = String(t ?? "").toLowerCase();
   for (const [u, e] of Object.entries(UMLAUTE)) t = t.split(u).join(e);
   t = t.normalize("NFKD").replace(/[̀-ͯ]/g, "");
-  return [...t].filter((c) => /[a-z0-9]/i.test(c) || /\p{L}|\p{N}/u.test(c)).join("");
+  return [...t].filter((c) => /\p{L}|\p{N}/u.test(c)).join("");
 }
 async function eventId(titel, datum, ort) {
   const roh = `${normalisieren(titel)}|${String(datum ?? "").slice(0, 10)}|${normalisieren(ort)}`;
@@ -260,7 +552,8 @@ async function eventId(titel, datum, ort) {
 function melde(text, gut = true) {
   $("#meldung").innerHTML = text
     ? `<div class="meldung ${gut ? "gut" : "schlecht"}">${esc(text)}</div>` : "";
-  if (text && gut) setTimeout(() => { if ($("#meldung").textContent === text) $("#meldung").innerHTML = ""; }, 6000);
+  if (text && gut) setTimeout(() => {
+    if ($("#meldung").textContent.trim() === text) $("#meldung").innerHTML = ""; }, 6000);
 }
 function datumText(ev) {
   const a = (ev.beginn || "").slice(0, 10), b = (ev.ende || "").slice(0, 10);
@@ -270,10 +563,16 @@ function datumText(ev) {
   if (zeit === "00:00") zeit = "";
   const tag = a ? a.slice(8, 10) + "." + a.slice(5, 7) + "." + a.slice(0, 4) : "—";
   const bis = b && b !== a ? ` – ${b.slice(8, 10)}.${b.slice(5, 7)}.` : "";
+  // Die Uhrzeit unter das Datum, nicht daneben: In einer Zeile zwingt sie
+  // die Spalte auf die volle Breite von "18.05.2026 – 18.10. 10:00", und
+  // die Tabelle wird damit breiter als das Fenster.
   return tag + bis + (zeit ? `<div class="unter">${zeit} Uhr</div>` : "");
 }
 
 function passt(ev) {
+  if (REITER === "einzel" && ev.dauertermin) return false;
+  if (REITER === "dauer" && !ev.dauertermin) return false;
+
   const s = $("#suche").value.trim().toLowerCase();
   if (s && ![ev.titel, ev.ort_name, ev.beschreibung, ev.veranstalter, ev.quelle_name]
         .some((f) => String(f ?? "").toLowerCase().includes(s))) return false;
@@ -304,36 +603,77 @@ function zeichnen() {
 
   const rumpf = $("#rumpf");
   rumpf.innerHTML = "";
+
+  // Wie viele Termine je Monat? Wird in der Monatszeile mitgeschrieben,
+  // damit man die Groesse eines Abschnitts sieht, bevor man ihn liest.
+  const proMonat = {};
   for (const ev of sicht) {
+    const m = (ev.beginn || "").slice(0, 7);
+    if (m) proMonat[m] = (proMonat[m] || 0) + 1;
+  }
+  const MONATE = ["Januar", "Februar", "März", "April", "Mai", "Juni", "Juli",
+                  "August", "September", "Oktober", "November", "Dezember"];
+  let letzterMonat = null;
+
+  for (const ev of sicht) {
+    // Nur bei Sortierung nach Datum: Sonst behauptete die Gliederung eine
+    // Ordnung, nach der gar nicht sortiert wird.
+    const monat = (ev.beginn || "").slice(0, 7);
+    if (SORT.feld === "beginn" && monat && monat !== letzterMonat) {
+      letzterMonat = monat;
+      const kopf = document.createElement("tr");
+      kopf.className = "monat";
+      const name = `${MONATE[+monat.slice(5, 7) - 1]} ${monat.slice(0, 4)}`;
+      kopf.innerHTML = `<td colspan="6">${esc(name)}`
+        + `<span class="wieviele">${proMonat[monat]}</span></td>`;
+      rumpf.appendChild(kopf);
+    }
+
     const zeile = document.createElement("tr");
-    if (ev._versteckt) zeile.className = "aus";
+    zeile.className = [ev.dauertermin ? "dauer" : "", ev._versteckt ? "aus" : ""]
+                        .filter(Boolean).join(" ");
     const a = anzeige(ev);
     const marken = [
       ev._eigen ? '<span class="marke eigen">eigen</span>' : "",
       ev._korrigiert ? '<span class="marke korrigiert">korrigiert</span>' : "",
       ev._versteckt ? '<span class="marke versteckt">ausgeblendet</span>' : "",
       ev.ausgebucht ? '<span class="marke">ausgebucht</span>' : "",
-      ev.dauertermin ? '<span class="marke">Dauertermin</span>' : "",
     ].filter(Boolean).join(" ");
+    const art = ev.dauertermin
+      ? '<span class="art dauer" title="Dauertermin"><svg><use href="#i-spanne"/></svg></span>'
+      : '<span class="art einzel" title="Einzeltermin"><svg><use href="#i-punkt"/></svg></span>';
     zeile.innerHTML = `
-      <td class="datum">${datumText(ev)}</td>
+      <td class="datum"><div class="datumzeile">${art}<span class="wann">${datumText(ev)}</span></div></td>
       <td class="titel-zelle">
         <div class="titel">${esc(ev.titel)}</div>
         <div class="unter">${esc(ev.ort_name || "Ort unbekannt")}</div>
+        ${marken ? `<div class="marken">${marken}</div>` : ""}
       </td>
-      <td>${esc(ev.kategorie || "—")}</td>
-      <td><span class="marke ${a}">${BESCHRIFTUNG[a]}</span></td>
-      <td class="unter">${ev.quelle_url
+      <td class="kat-zelle">${esc(ev.kategorie || "—")}</td>
+      <td class="eintritt-zelle"><span class="marke ${a}">${BESCHRIFTUNG[a]}</span></td>
+      <td class="quelle-zelle unter">${ev.quelle_url
           ? `<a href="${esc(ev.quelle_url)}" target="_blank" rel="noopener">${esc(ev.quelle_name || "Quelle")}</a>`
           : esc(ev.quelle_name || "—")}</td>
-      <td>${marken || "—"}</td>
-      <td class="knopf-zelle">
-        <button data-tun="bearbeiten" data-id="${esc(ev.id)}">Bearbeiten</button>
+      <td class="menue-zelle">
+        <button class="punkte" data-menue="${esc(ev.id)}" aria-haspopup="menu"
+                aria-expanded="false" aria-label="Mehr zu ${esc(ev.titel)}">
+          <svg><use href="#i-mehr"/></svg></button>
       </td>`;
     rumpf.appendChild(zeile);
-    if (OFFEN === ev.id) rumpf.appendChild(werkbank(ev));
   }
   $("#leer").hidden = sicht.length > 0;
+
+  // Reiterzahlen zaehlen alles ausser dem Reiter selbst mit, damit sichtbar
+  // bleibt, was hinter den anderen liegt.
+  const ohneReiter = (pruef) => {
+    const merk = REITER; REITER = "alle";
+    const n = alle.filter((e) => passt(e) && pruef(e)).length;
+    REITER = merk; return n;
+  };
+  $("#n-alle").textContent = ohneReiter(() => true);
+  $("#n-einzel").textContent = ohneReiter((e) => !e.dauertermin);
+  $("#n-dauer").textContent = ohneReiter((e) => e.dauertermin);
+
   $("#zahl").textContent =
     `${sicht.length} von ${alle.length} · ${V.eigene.length} eigene · `
     + `${Object.keys(V.korrekturen).length} korrigiert · `
@@ -342,21 +682,53 @@ function zeichnen() {
   $("#speichern").textContent = SCHMUTZIG ? "Speichern *" : "Speichern";
 }
 
+/* --- Drei-Punkte-Menü -------------------------------------------- */
+function menueSchliessen() {
+  $("#menue").hidden = true;
+  for (const k of document.querySelectorAll(".punkte[aria-expanded='true']"))
+    k.setAttribute("aria-expanded", "false");
+}
+function menueOeffnen(knopf, id) {
+  const ev = zusammenfuehren().find((e) => e.id === id);
+  if (!ev) return;
+  const eintraege = [
+    `<button data-tun="bearbeiten" data-id="${esc(id)}">Bearbeiten …</button>`,
+    ev._korrigiert
+      ? `<button data-tun="zuruecksetzen" data-id="${esc(id)}">Korrektur verwerfen</button>` : "",
+    "<hr>",
+    ev._versteckt
+      ? `<button data-tun="zeigen" data-id="${esc(id)}">Wieder einblenden</button>`
+      : `<button data-tun="verstecken" data-id="${esc(id)}">Ausblenden …</button>`,
+    ev._eigen
+      ? `<button class="gefahr" data-tun="loeschen" data-id="${esc(id)}">Endgültig löschen …</button>` : "",
+  ].filter(Boolean).join("");
+  const m = $("#menue");
+  m.innerHTML = eintraege;
+  m.hidden = false;
+  const k = knopf.getBoundingClientRect();
+  // Nach links ausrichten, damit das Menü am rechten Rand nicht hinausläuft.
+  m.style.top = `${window.scrollY + k.bottom + 4}px`;
+  m.style.left = `${window.scrollX + Math.max(8, k.right - m.offsetWidth)}px`;
+  knopf.setAttribute("aria-expanded", "true");
+  m.querySelector("button")?.focus();
+}
+
+/* --- Overlay ------------------------------------------------------ */
 const FELDER = [
   ["titel", "Titel", "text"], ["beginn", "Beginn", "datetime-local"],
   ["ende", "Ende", "datetime-local"], ["ort_name", "Ort", "text"],
-  ["kategorie", "Art", "text"], ["veranstalter", "Veranstalter", "text"],
+  ["kategorie", "Kategorie", "text"], ["veranstalter", "Veranstalter", "text"],
   ["eintritt", "Eintritt", "auswahl"], ["ganztaegig", "Ganztägig", "ja"],
   ["dauertermin", "Dauertermin", "ja"], ["ausgebucht", "Ausgebucht", "ja"],
   ["quelle_url", "Link", "text"], ["beschreibung", "Beschreibung", "lang"],
 ];
 const EINTRITTSWERTE = ["frei", "spende", "kostenpflichtig", "unklar"];
 
-function werkbank(ev) {
-  const zeile = document.createElement("tr");
-  zeile.className = "werkbank";
-  const roh = ROH.find((r) => r.id === ev.id);
-  const korr = V.korrekturen[ev.id] || {};
+function werkbankOeffnen(id) {
+  const ev = zusammenfuehren().find((e) => e.id === id);
+  if (!ev) return;
+  BEARBEITET = id;
+  const korr = V.korrekturen[id] || {};
 
   const eingabe = (feld, art) => {
     const wert = ev[feld];
@@ -373,34 +745,22 @@ function werkbank(ev) {
     return `<input type="text" ${n} value="${esc(wert || "")}">`;
   };
 
-  zeile.innerHTML = `<td colspan="7">
-    <div class="felder">
-      ${FELDER.map(([feld, name, art]) => `
-        <div class="feld ${art === "lang" ? "breit" : ""} ${feld in korr ? "geaendert" : ""}">
-          <span>${name}</span>${eingabe(feld, art)}
-        </div>`).join("")}
-    </div>
-    <div class="werkzeuge">
-      <button class="wichtig" data-tun="uebernehmen" data-id="${esc(ev.id)}">Übernehmen</button>
-      <button data-tun="zu" >Abbrechen</button>
-      ${ev._versteckt
-        ? `<button data-tun="zeigen" data-id="${esc(ev.id)}">Wieder einblenden</button>`
-        : `<button class="gefahr" data-tun="verstecken" data-id="${esc(ev.id)}">Ausblenden</button>`}
-      ${ev._korrigiert
-        ? `<button class="leise" data-tun="zuruecksetzen" data-id="${esc(ev.id)}">Korrektur verwerfen</button>` : ""}
-      ${ev._eigen
-        ? `<button class="gefahr" data-tun="loeschen" data-id="${esc(ev.id)}">Endgültig löschen</button>` : ""}
-      <span class="hinweis" style="color:var(--leiser);font-size:12px">
-        ${ev._eigen ? "Eigener Termin — Änderungen gehen direkt hinein."
-                    : "Geänderte Felder werden als Korrektur gespeichert; der Rest kommt weiter aus der Quelle."}</span>
-    </div></td>`;
-  return zeile;
+  $("#wb-titel").textContent = ev._eigen ? "Eigener Termin" : "Termin korrigieren";
+  $("#wb-quelle").textContent = ev.quelle_name || "";
+  $("#wb-hinweis").textContent = ev._eigen
+    ? "Änderungen gehen direkt in den Termin."
+    : "Nur geänderte Felder werden als Korrektur gespeichert; der Rest kommt weiter aus der Quelle.";
+  $("#wb-felder").innerHTML = FELDER.map(([feld, name, art]) => `
+    <div class="feld ${art === "lang" ? "breit" : ""} ${feld in korr ? "geaendert" : ""}">
+      <span>${name}</span>${eingabe(feld, art)}
+    </div>`).join("");
+  $("#werkbank").showModal();
+  $("#wb-felder input")?.focus();
 }
 
-/* --- Änderungen einsammeln --------------------------------------- */
 function ausWerkbank() {
   const werte = {};
-  for (const el of document.querySelectorAll(".werkbank [data-feld]")) {
+  for (const el of document.querySelectorAll("#wb-felder [data-feld]")) {
     const feld = el.dataset.feld;
     let w = el.value;
     if (el.tagName === "SELECT" && (w === "ja" || w === "nein")) w = (w === "ja");
@@ -428,21 +788,22 @@ async function uebernehmen(id) {
         delete V.ausgeblendet[eigen.id];
       }
       eigen.id = neueId;
-      if (OFFEN === id) OFFEN = neueId;
     }
   } else {
     const roh = ROH.find((r) => r.id === id);
     const korr = {};
     for (const [feld, wert] of Object.entries(werte)) {
       const alt = roh ? roh[feld] ?? null : null;
-      // Nur echte Abweichungen festhalten. Sonst stuende bald bei jedem
+      // Nur echte Abweichungen festhalten. Sonst stünde bald bei jedem
       // angesehenen Termin eine Korrektur, die nichts korrigiert.
       if (JSON.stringify(wert) !== JSON.stringify(alt)) korr[feld] = wert;
     }
     if (Object.keys(korr).length) V.korrekturen[id] = korr;
     else delete V.korrekturen[id];
   }
-  SCHMUTZIG = true; OFFEN = null; zeichnen();
+  SCHMUTZIG = true; BEARBEITET = null;
+  $("#werkbank").close();
+  zeichnen();
 }
 
 /* --- Speichern ---------------------------------------------------- */
@@ -464,7 +825,7 @@ async function anmelden() {
     if (d.inhalt) V = { ...structuredClone(LEER), ...d.inhalt };
     SHA = d.sha;
     $("#tuer").classList.add("offen");
-    $("#tuer-text").textContent = "Angemeldet. Änderungen werden erst beim Speichern übertragen.";
+    $("#tuer-text").textContent = "angemeldet";
     $("#passwort").hidden = true; $("#anmelden").hidden = true;
     $("#neu").disabled = false;
     melde("Angemeldet.");
@@ -496,25 +857,41 @@ async function speichern() {
 
 /* --- Ereignisse --------------------------------------------------- */
 document.addEventListener("click", async (e) => {
-  const k = e.target.closest("button[data-tun]");
-  if (!k) return;
-  const { tun, id } = k.dataset;
-  if (tun === "bearbeiten") { OFFEN = OFFEN === id ? null : id; zeichnen(); }
-  else if (tun === "zu") { OFFEN = null; zeichnen(); }
-  else if (tun === "uebernehmen") await uebernehmen(id);
-  else if (tun === "verstecken") {
-    const grund = prompt("Warum ausblenden? (z. B. Mittagskarte, Dublette)") ?? "";
-    V.ausgeblendet[id] = { grund, wann: new Date().toISOString().slice(0, 10) };
-    SCHMUTZIG = true; OFFEN = null; zeichnen();
+  const punkte = e.target.closest("button.punkte");
+  if (punkte) {
+    const auf = punkte.getAttribute("aria-expanded") === "true";
+    menueSchliessen();
+    if (!auf) menueOeffnen(punkte, punkte.dataset.menue);
+    return;
   }
-  else if (tun === "zeigen") { delete V.ausgeblendet[id]; SCHMUTZIG = true; OFFEN = null; zeichnen(); }
-  else if (tun === "zuruecksetzen") { delete V.korrekturen[id]; SCHMUTZIG = true; OFFEN = null; zeichnen(); }
+  const k = e.target.closest("#menue button[data-tun]");
+  if (!k) { if (!e.target.closest("#menue")) menueSchliessen(); return; }
+
+  const { tun, id } = k.dataset;
+  menueSchliessen();
+  if (tun === "bearbeiten") werkbankOeffnen(id);
+  else if (tun === "verstecken") {
+    const grund = prompt("Warum ausblenden? (z. B. Mittagskarte, Dublette)");
+    if (grund === null) return;
+    V.ausgeblendet[id] = { grund, wann: new Date().toISOString().slice(0, 10) };
+    SCHMUTZIG = true; zeichnen();
+  }
+  else if (tun === "zeigen") { delete V.ausgeblendet[id]; SCHMUTZIG = true; zeichnen(); }
+  else if (tun === "zuruecksetzen") { delete V.korrekturen[id]; SCHMUTZIG = true; zeichnen(); }
   else if (tun === "loeschen") {
     if (!confirm("Diesen selbst angelegten Termin endgültig löschen?")) return;
     V.eigene = V.eigene.filter((x) => x.id !== id);
-    delete V.ausgeblendet[id]; SCHMUTZIG = true; OFFEN = null; zeichnen();
+    delete V.ausgeblendet[id]; SCHMUTZIG = true; zeichnen();
   }
 });
+document.addEventListener("keydown", (e) => { if (e.key === "Escape") menueSchliessen(); });
+// Beim Scrollen bleibt das Menü offen: Es ist am Dokument verankert, nicht
+// am Fenster, und wandert mit seiner Zeile mit. Beim Ändern der Fenstergröße
+// stimmt die Verankerung nicht mehr — dann zu.
+window.addEventListener("resize", menueSchliessen);
+
+$("#wb-uebernehmen").addEventListener("click", () => uebernehmen(BEARBEITET));
+$("#wb-abbrechen").addEventListener("click", () => { BEARBEITET = null; $("#werkbank").close(); });
 
 $("#neu").addEventListener("click", async () => {
   const heute = new Date().toISOString().slice(0, 10);
@@ -530,23 +907,34 @@ $("#neu").addEventListener("click", async () => {
     eintritt_confidence: "hoch", social_text: null, status: "aktiv",
     zuerst_gesehen: heute, zuletzt_gesehen: heute, manuell_bestaetigt: true,
   };
-  V.eigene.push(ev); SCHMUTZIG = true; OFFEN = ev.id;
-  // Damit der neue Termin nicht sofort durch einen aktiven Filter verschwindet.
+  V.eigene.push(ev); SCHMUTZIG = true;
+  // Damit der neue Termin nicht sofort hinter einem Reiter oder Filter
+  // verschwindet, bevor er überhaupt bearbeitet wurde.
+  REITER = "alle";
+  for (const r of document.querySelectorAll(".reiter button"))
+    r.setAttribute("aria-selected", r.dataset.reiter === "alle" ? "true" : "false");
   for (const w of ["#f-eigen", "#f-korr", "#f-aus"]) $(w).setAttribute("aria-pressed", "false");
   $("#suche").value = "";
   zeichnen();
-  document.querySelector(".werkbank input")?.focus();
+  werkbankOeffnen(ev.id);
 });
 
 $("#anmelden").addEventListener("click", anmelden);
 $("#passwort").addEventListener("keydown", (e) => { if (e.key === "Enter") anmelden(); });
 $("#speichern").addEventListener("click", speichern);
 for (const w of ["#suche", "#quelle", "#kategorie", "#eintritt"])
-  $(w).addEventListener("input", () => { OFFEN = null; zeichnen(); });
+  $(w).addEventListener("input", zeichnen);
 for (const w of ["#f-kommend", "#f-eigen", "#f-korr", "#f-aus"])
   $(w).addEventListener("click", () => {
     const k = $(w); k.setAttribute("aria-pressed", k.getAttribute("aria-pressed") !== "true");
-    OFFEN = null; zeichnen();
+    zeichnen();
+  });
+for (const r of document.querySelectorAll(".reiter button"))
+  r.addEventListener("click", () => {
+    REITER = r.dataset.reiter;
+    for (const x of document.querySelectorAll(".reiter button"))
+      x.setAttribute("aria-selected", x === r ? "true" : "false");
+    zeichnen();
   });
 for (const th of document.querySelectorAll("th[data-sortier]"))
   th.addEventListener("click", () => {
@@ -557,6 +945,12 @@ for (const th of document.querySelectorAll("th[data-sortier]"))
     th.innerHTML += ` <span class="pfeil">${SORT.ab ? "▲" : "▼"}</span>`;
     zeichnen();
   });
+
+// Der Tabellenkopf klebt unter dem Navigationsblock. Dessen Hoehe haengt
+// davon ab, ob die Filterzeile umbricht — also messen statt raten.
+const navi = document.querySelector(".navi");
+new ResizeObserver(() => document.documentElement.style
+  .setProperty("--kopfhoehe", navi.offsetHeight + "px")).observe(navi);
 
 window.addEventListener("beforeunload", (e) => {
   if (SCHMUTZIG) { e.preventDefault(); e.returnValue = ""; }
@@ -581,7 +975,7 @@ Promise.all([
   zeichnen();
 }).catch((f) => {
   $("#rumpf").innerHTML =
-    `<tr><td colspan="7">Die Daten ließen sich nicht laden (${esc(f.message)}).</td></tr>`;
+    `<tr><td colspan="6">Die Daten ließen sich nicht laden (${esc(f.message)}).</td></tr>`;
 });
 </script>
 </body>
