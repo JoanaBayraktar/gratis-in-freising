@@ -1,0 +1,19 @@
+name: Instagram-Probe 3 (Wegwerf)
+on:
+  workflow_dispatch:
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install playwright && python -m playwright install --with-deps chromium
+      - run: python3 probe3.py
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: ig-daten
+          path: ig_roh.json
+          if-no-files-found: warn
