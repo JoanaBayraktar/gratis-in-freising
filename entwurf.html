@@ -1,0 +1,463 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Grunddesign — Gratis in Freising</title>
+<style>
+/* ============================================================
+   GRUNDDESIGN
+   ------------------------------------------------------------
+   Drei Farben, klar verteilt statt gleichmaessig gemischt:
+
+     Schwarz  traegt die Navigation. Sie ist immer da und soll
+              zurueckstehen — eine Kante, kein Mitspieler.
+     Weiss    ist die Arbeitsflaeche. Dort stehen die Daten,
+              und dort ist Platz.
+     Blau     erscheint nur, wo etwas aktiv ist oder gerade
+              geschieht. Sparsamkeit ist der Grund, warum es
+              wirkt: Waere die halbe Seite blau, hiesse Blau
+              nichts mehr.
+
+   Festbreitenschrift, weil die Anwendung fast nur aus Datum,
+   Zeitraum, Betrag und Zaehler besteht.
+   ============================================================ */
+:root {
+  --mono: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas,
+          "Liberation Mono", "Courier New", monospace;
+
+  --haupt: #3b91db;        /* Marke: Flaechen, Kanten, aktive Zustaende */
+  --haupt-text: #1e66a4;   /* Links und kleine Schrift auf Hell — 6,0:1 */
+  --haupt-satt: #2376be;   /* gefuellte Knoepfe, weisse Schrift — 4,8:1 */
+  --haupt-hell: #e9f1fa; --haupt-rand: #b9d7f0;
+
+  --grund: #ffffff; --text: #0d0d0d; --leise: #5c6166; --leiser: #6f747a;
+  --linie: #e3e5e8; --linie-satt: #cfd3d8; --kasten: #f6f7f9;
+
+  /* Die Schiene. Eigene Werte, weil sie auf Schwarz lebt und die
+     Graustufen der Arbeitsflaeche dort nicht lesbar waeren. */
+  --schiene: #0d0d0d; --schiene-text: #f2f3f4; --schiene-leise: #9198a0;
+  --schiene-linie: #262a2e; --schiene-aktiv: #1a1d21;
+
+  --gruen: #16653a; --gruen-hell: #e4f3ea; --gelb: #6f5300; --gelb-hell: #fdf1cf;
+  --rot: #9c4218; --rot-hell: #fae8de;
+
+  --s1: 4px; --s2: 8px; --s3: 12px; --s4: 20px; --s5: 32px; --s6: 52px;
+  --schatten-klein: 0 4px 12px -3px rgba(13,13,13,.18), 0 1px 3px rgba(13,13,13,.10);
+  --schatten-gross: 0 24px 48px -12px rgba(13,13,13,.30), 0 6px 16px -6px rgba(13,13,13,.14);
+  --schwung: cubic-bezier(.16, 1, .3, 1);
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --haupt: #3b91db; --haupt-text: #7eb6e7; --haupt-satt: #3b91db;
+    --haupt-hell: #14293c; --haupt-rand: #29506f;
+    --grund: #121417; --text: #eceeef; --leise: #9ba1a7; --leiser: #939aa1;
+    --linie: #272b30; --linie-satt: #363b41; --kasten: #191c20;
+    --schiene: #08090a; --schiene-text: #eceeef; --schiene-leise: #868d95;
+    --schiene-linie: #1e2226; --schiene-aktiv: #16191d;
+    --gruen: #7fd6a0; --gruen-hell: #14301e; --gelb: #e2c26b; --gelb-hell: #322a11;
+    --rot: #e7a37b; --rot-hell: #32211a;
+    --schatten-klein: 0 4px 12px -3px rgba(0,0,0,.6), 0 1px 3px rgba(0,0,0,.5);
+    --schatten-gross: 0 24px 48px -12px rgba(0,0,0,.75), 0 6px 16px -6px rgba(0,0,0,.5);
+  }
+}
+
+* { box-sizing: border-box; }
+html { color-scheme: light dark; }
+body {
+  margin: 0; background: var(--grund); color: var(--text);
+  font-family: var(--mono); font-size: 15px; line-height: 1.5;
+  font-variant-numeric: tabular-nums; -webkit-font-smoothing: antialiased;
+}
+::selection { background: var(--haupt); color: #fff; }
+:root { accent-color: var(--haupt); scrollbar-color: var(--linie-satt) transparent; }
+::-webkit-scrollbar { width: 11px; height: 11px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: var(--linie-satt); border-radius: 99px;
+                            border: 3px solid var(--grund); }
+:focus-visible { outline: 2px solid var(--haupt); outline-offset: 2px; border-radius: 3px; }
+a { color: var(--haupt-text); text-underline-offset: 3px; }
+
+/* ---------- Gerüst ---------- */
+.app { display: grid; grid-template-columns: 236px 1fr; min-height: 100vh; }
+
+/* ---------- Schiene ---------- */
+.schiene {
+  background: var(--schiene); color: var(--schiene-text);
+  display: flex; flex-direction: column; position: sticky; top: 0;
+  height: 100vh; padding: var(--s4) 0;
+}
+.schiene .marke { padding: 0 var(--s4) var(--s4); }
+.schiene .marke b { display: block; font-size: 15px; font-weight: 700; letter-spacing: -.03em; }
+.schiene .marke span { display: block; font-size: 12px; color: var(--schiene-leise); margin-top: 2px; }
+
+.schiene nav { display: flex; flex-direction: column; gap: 1px; padding: 0 var(--s2); }
+.schiene .gruppe {
+  font-size: 12px; color: var(--schiene-leise); padding: var(--s4) var(--s3) var(--s2);
+  letter-spacing: .04em;
+}
+.schiene a.punkt {
+  display: flex; align-items: center; gap: var(--s3);
+  padding: 9px var(--s3); border-radius: 7px; text-decoration: none;
+  color: var(--schiene-leise); font-size: 15px;
+  /* Der aktive Zustand traegt Blau als Kante, nicht als Flaeche: Eine
+     ausgefuellte blaue Zeile in einer schwarzen Schiene wuerde lauter
+     schreien als der Inhalt daneben. */
+  border-left: 2px solid transparent; border-radius: 0 7px 7px 0;
+}
+.schiene a.punkt:hover { background: var(--schiene-aktiv); color: var(--schiene-text); }
+.schiene a.punkt[aria-current="page"] {
+  background: var(--schiene-aktiv); color: #fff; border-left-color: var(--haupt); font-weight: 700;
+}
+.schiene a.punkt svg { width: 16px; height: 16px; flex: none; opacity: .85; }
+.schiene a.punkt[aria-current="page"] svg { opacity: 1; color: var(--haupt); }
+.schiene a.punkt .zaehler {
+  margin-left: auto; font-size: 12px; color: var(--schiene-leise);
+}
+.schiene a.punkt .zaehler.wach {
+  background: var(--haupt); color: #08090a; font-weight: 700;
+  border-radius: 99px; padding: 0 6px;
+}
+
+.schiene .fuss {
+  margin-top: auto; padding: var(--s4) var(--s4) 0; border-top: 1px solid var(--schiene-linie);
+  display: flex; align-items: center; gap: var(--s3); font-size: 12px;
+}
+.schiene .fuss .kreis {
+  width: 26px; height: 26px; border-radius: 99px; flex: none;
+  background: var(--haupt); color: #08090a;
+  display: grid; place-items: center; font-weight: 700; font-size: 12px;
+}
+.schiene .fuss b { display: block; font-weight: 700; color: var(--schiene-text); }
+.schiene .fuss span { color: var(--schiene-leise); }
+
+/* ---------- Arbeitsfläche ---------- */
+.flaeche { min-width: 0; display: flex; flex-direction: column; }
+.seitenkopf {
+  padding: var(--s5) var(--s5) var(--s4);
+  display: flex; align-items: flex-end; gap: var(--s4) var(--s5); flex-wrap: wrap;
+  border-bottom: 1px solid var(--linie);
+}
+.seitenkopf h1 { font-size: 24px; margin: 0; font-weight: 700; letter-spacing: -.035em; }
+.seitenkopf .beiwerk { color: var(--leiser); font-size: 12px; margin-top: 3px; }
+.seitenkopf .tun { margin-left: auto; display: flex; gap: var(--s2); align-items: center; }
+.inhalt { padding: 0 var(--s5) var(--s6); flex: 1; }
+
+/* ---------- Bauteile ---------- */
+input, select, textarea, button {
+  font: inherit; font-family: var(--mono); color: var(--text);
+  background: var(--grund); border: 1px solid var(--linie-satt);
+  border-radius: 5px; padding: 6px 9px;
+}
+input::placeholder { color: var(--leiser); }
+button { cursor: pointer; transition: background .12s, border-color .12s, color .12s; }
+button:hover { border-color: var(--leiser); }
+button.wichtig { background: var(--haupt-satt); border-color: var(--haupt-satt);
+                 color: #fff; font-weight: 700; }
+button.wichtig:hover { background: var(--haupt-text); border-color: var(--haupt-text); }
+@media (prefers-color-scheme: dark) { button.wichtig { color: #0b1218; } }
+
+.marke-chip {
+  display: inline-block; font-size: 12px; font-weight: 700; padding: 1px 6px;
+  border-radius: 4px; background: var(--kasten); color: var(--leise); white-space: nowrap;
+}
+.marke-chip.frei { background: var(--gruen-hell); color: var(--gruen); }
+.marke-chip.spende { background: var(--gelb-hell); color: var(--gelb); }
+.marke-chip.vermutlich { background: transparent; color: var(--leise);
+                         box-shadow: inset 0 0 0 1px var(--linie-satt); }
+.marke-chip.blau { background: var(--haupt-hell); color: var(--haupt-text); }
+
+/* Steuerzeile über der Liste — zurückgenommen, sie grenzt nur ein. */
+.steuerung {
+  position: sticky; top: 0; z-index: 5; background: var(--grund);
+  padding: var(--s3) 0; display: flex; gap: var(--s2); align-items: center;
+  flex-wrap: wrap; border-bottom: 1px solid var(--linie);
+}
+.steuerung input[type=search] { flex: 1 1 200px; min-width: 0; }
+.steuerung select, .steuerung input[type=search] { font-size: 12px; padding: 5px 8px; }
+.zahl { color: var(--leiser); font-size: 12px; margin-left: auto; }
+
+/* Tabelle */
+table { width: 100%; border-collapse: collapse; }
+th {
+  text-align: left; font-size: 12px; color: var(--leiser); font-weight: 700;
+  padding: var(--s3) var(--s2) 7px; border-bottom: 1px solid var(--linie); white-space: nowrap;
+}
+td { padding: var(--s3) var(--s2); border-bottom: 1px solid var(--linie); vertical-align: top; }
+tbody tr:hover { background: var(--kasten); }
+tr.monat td {
+  padding: var(--s5) 0 var(--s2); border-bottom: 2px solid var(--text);
+  font-size: 12px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase;
+}
+tr.monat:first-child td { padding-top: var(--s3); }
+tr.monat .wieviele { float: right; font-weight: 400; letter-spacing: 0;
+                     text-transform: none; color: var(--leiser); }
+tbody tr.monat:hover { background: none; }
+td.datum { color: var(--leise); font-size: 12px; }
+.datumzeile { display: flex; align-items: flex-start; gap: 7px; }
+.art { flex: none; padding-top: 1px; }
+.art svg { display: block; width: 14px; height: 14px; }
+.art.dauer svg { color: var(--haupt); }
+.art.einzel svg { color: var(--leiser); }
+tr.dauer td.datum .wann { color: var(--haupt-text); }
+.titel { font-weight: 700; letter-spacing: -.01em; }
+.unter { color: var(--leiser); font-size: 12px; margin-top: 2px; }
+td.menue-zelle { text-align: right; width: 40px; }
+button.punkte { border: 1px solid transparent; background: none; padding: 4px;
+                border-radius: 5px; color: var(--leiser); line-height: 0; }
+button.punkte svg { width: 15px; height: 15px; display: block; }
+button.punkte:hover { background: var(--kasten); border-color: var(--linie-satt); color: var(--text); }
+
+/* Noch nicht entworfene Bereiche sagen das, statt etwas vorzutäuschen. */
+.offen {
+  margin-top: var(--s5); padding: var(--s5); border: 1px dashed var(--linie-satt);
+  border-radius: 10px; color: var(--leise); max-width: 62ch;
+}
+.offen h2 { margin: 0 0 var(--s2); font-size: 19px; letter-spacing: -.02em; color: var(--text); }
+.offen p { margin: 0 0 var(--s2); }
+.offen ul { margin: var(--s2) 0 0; padding-left: 1.2em; }
+.offen li { margin-bottom: 3px; }
+
+.hinweisband {
+  background: var(--haupt-hell); color: var(--haupt-text); font-size: 12px;
+  padding: var(--s2) var(--s5); border-bottom: 1px solid var(--haupt-rand);
+}
+
+@media (max-width: 900px) {
+  .app { grid-template-columns: 1fr; }
+  .schiene {
+    position: static; height: auto; flex-direction: row; align-items: center;
+    overflow-x: auto; padding: var(--s2) var(--s3); gap: var(--s3);
+  }
+  .schiene .marke {
+    padding: 0 var(--s3) 0 0; border-right: 1px solid var(--schiene-linie);
+    flex: none;
+  }
+  /* Der Markenname bleibt einzeilig — dreizeilig umgebrochen wirkt er wie
+     ein Fehler, nicht wie eine Marke. */
+  .schiene .marke b { white-space: nowrap; font-size: 13px; }
+  .schiene .marke span { display: none; }
+  .schiene nav { flex-direction: row; padding: 0; }
+  .schiene .gruppe, .schiene .fuss { display: none; }
+  .schiene a.punkt { border-left: none; border-bottom: 2px solid transparent;
+                     border-radius: 7px; white-space: nowrap; }
+  .schiene a.punkt[aria-current="page"] { border-left: none; border-bottom-color: var(--haupt); }
+  .seitenkopf, .inhalt, .hinweisband { padding-left: var(--s4); padding-right: var(--s4); }
+  .seitenkopf { padding-top: var(--s4); padding-bottom: var(--s3); }
+  .seitenkopf .tun { margin-left: 0; }
+
+  /* Keine Tabelle zum Querscrollen: gestapelte Bloecke. Titel oben,
+     darunter Datum, Kategorie und Einstufung in einer Zeile, das
+     Punktemenue an fester Stelle oben rechts. */
+  thead { display: none; }
+  table, tbody, tr, td { display: block; }
+  tbody tr:not(.monat) {
+    position: relative; padding: var(--s3) 40px var(--s3) 0;
+    border-bottom: 1px solid var(--linie);
+    display: flex; flex-wrap: wrap; align-items: baseline; gap: 3px var(--s3);
+  }
+  tbody td { border: none; padding: 0; }
+  tbody tr:not(.monat) td:nth-child(2) { flex: 1 1 100%; min-width: 0; }
+  tbody tr:not(.monat) td:nth-child(1) { order: 2; }
+  tbody tr:not(.monat) td:nth-child(3) { order: 3; color: var(--leiser); font-size: 12px; }
+  tbody tr:not(.monat) td:nth-child(4) { order: 4; }
+  tbody tr:not(.monat) td:nth-child(5) { order: 5; }
+  tbody tr:not(.monat) td.menue-zelle { position: absolute; top: 10px; right: 0; width: auto; }
+  tr.monat td { padding: var(--s4) 0 var(--s1); }
+}
+</style>
+</head>
+<body>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <!-- Kalendersymbole nach Font Awesome Free v7 (CC BY 4.0, Fonticons Inc.,
+       https://fontawesome.com/license/free). -->
+  <symbol id="i-spanne" viewBox="0 0 640 640"><path fill="currentColor" fill-rule="evenodd" d="M224 64C241.7 64 256 78.3 256 96L256 128L384 128L384 96C384 78.3 398.3 64 416 64C433.7 64 448 78.3 448 96L448 128L480 128C515.3 128 544 156.7 544 192L544 480C544 515.3 515.3 544 480 544L160 544C124.7 544 96 515.3 96 480L96 192C96 156.7 124.7 128 160 128L192 128L192 96C192 78.3 206.3 64 224 64zM224 320C206.3 320 192 334.3 192 352L192 416C192 433.7 206.3 448 224 448L416 448C433.7 448 448 433.7 448 416L448 352C448 334.3 433.7 320 416 320L224 320z"/></symbol>
+  <symbol id="i-punkt" viewBox="0 0 640 640"><path fill="currentColor" fill-rule="evenodd" d="M224 64C241.7 64 256 78.3 256 96L256 128L384 128L384 96C384 78.3 398.3 64 416 64C433.7 64 448 78.3 448 96L448 128L480 128C515.3 128 544 156.7 544 192L544 480C544 515.3 515.3 544 480 544L160 544C124.7 544 96 515.3 96 480L96 192C96 156.7 124.7 128 160 128L192 128L192 96C192 78.3 206.3 64 224 64zM292 336L348 336A20 20 0 0 1 368 356L368 412A20 20 0 0 1 348 432L292 432A20 20 0 0 1 272 412L272 356A20 20 0 0 1 292 336z"/></symbol>
+  <symbol id="i-mehr" viewBox="0 0 16 16" fill="currentColor">
+    <circle cx="8" cy="3.2" r="1.45"/><circle cx="8" cy="8" r="1.45"/><circle cx="8" cy="12.8" r="1.45"/>
+  </symbol>
+  <!-- Navigationssymbole: eine Strichstaerke, ein Raster, selbst gezeichnet. -->
+  <symbol id="n-liste" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round">
+    <path d="M7 5h9M7 10h9M7 15h9M3.6 5h.01M3.6 10h.01M3.6 15h.01"/></symbol>
+  <symbol id="n-pruefen" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M4 10.5l3.4 3.4L16 5.4"/></symbol>
+  <symbol id="n-heute" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round">
+    <rect x="3.2" y="4.4" width="13.6" height="12.4" rx="2"/><path d="M3.2 8.4h13.6M6.8 2.8v3M13.2 2.8v3"/></symbol>
+  <symbol id="n-social" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M3.4 16.6V8.2M8.4 16.6V4.4M13.4 16.6v-5.8"/></symbol>
+  <symbol id="n-werbung" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M4 7.6h3l6-3.4v11.6l-6-3.4H4a1.4 1.4 0 0 1-1.4-1.4V9a1.4 1.4 0 0 1 1.4-1.4zM16 8.2a2.6 2.6 0 0 1 0 3.6"/></symbol>
+  <symbol id="n-rechnung" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M4.6 2.8h10.8v14.4l-2.2-1.4-2.2 1.4-2.2-1.4-2.2 1.4-2-1.4V2.8zM7.6 6.8h4.8M7.6 10.2h4.8"/></symbol>
+  <symbol id="n-leute" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+    <circle cx="8" cy="7" r="2.8"/><path d="M2.8 16.4a5.2 5.2 0 0 1 10.4 0M14 4.6a2.6 2.6 0 0 1 0 4.8M15.4 16.4a4.4 4.4 0 0 0-1.6-3.4"/></symbol>
+  <symbol id="n-quellen" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+    <ellipse cx="10" cy="5" rx="6.2" ry="2.4"/><path d="M3.8 5v10c0 1.3 2.8 2.4 6.2 2.4s6.2-1.1 6.2-2.4V5M3.8 10c0 1.3 2.8 2.4 6.2 2.4s6.2-1.1 6.2-2.4"/></symbol>
+</svg>
+
+<div class="app">
+
+  <aside class="schiene">
+    <div class="marke">
+      <b>Gratis in Freising</b>
+      <span>Verwaltung</span>
+    </div>
+
+    <nav>
+      <a class="punkt" href="#" aria-current="page"><svg><use href="#n-liste"/></svg>Termine
+        <span class="zaehler" id="z-termine"></span></a>
+      <a class="punkt" href="#"><svg><use href="#n-pruefen"/></svg>Zu prüfen
+        <span class="zaehler wach" id="z-pruefen"></span></a>
+      <a class="punkt" href="#"><svg><use href="#n-heute"/></svg>Einreichungen
+        <span class="zaehler">0</span></a>
+      <a class="punkt" href="#"><svg><use href="#n-quellen"/></svg>Quellen
+        <span class="zaehler" id="z-quellen"></span></a>
+
+      <div class="gruppe">Später</div>
+      <a class="punkt" href="#"><svg><use href="#n-social"/></svg>Social</a>
+      <a class="punkt" href="#"><svg><use href="#n-werbung"/></svg>Werbekunden</a>
+      <a class="punkt" href="#"><svg><use href="#n-rechnung"/></svg>Rechnungen</a>
+      <a class="punkt" href="#"><svg><use href="#n-leute"/></svg>Nutzer</a>
+    </nav>
+
+    <div class="fuss">
+      <span class="kreis">J</span>
+      <span><b>Joana</b><span>angemeldet</span></span>
+    </div>
+  </aside>
+
+  <div class="flaeche">
+    <div class="hinweisband">
+      Grunddesign — Gerüst, Farben, Schrift und Bauteile. Die Terminliste läuft
+      mit echten Daten; die Bereiche unter „Später“ sind noch nicht entworfen.
+    </div>
+
+    <header class="seitenkopf">
+      <div>
+        <h1>Termine</h1>
+        <div class="beiwerk" id="stand"></div>
+      </div>
+      <div class="tun">
+        <button>Exportieren</button>
+        <button class="wichtig">+ Neuer Termin</button>
+      </div>
+    </header>
+
+    <div class="inhalt">
+      <div class="steuerung">
+        <input type="search" placeholder="Suchen …">
+        <select><option>Alle Quellen</option></select>
+        <select><option>Alle Kategorien</option></select>
+        <select><option>Jeder Eintritt</option></select>
+        <span class="zahl" id="zahl"></span>
+      </div>
+
+      <table>
+        <thead><tr>
+          <th>Datum</th><th>Titel / Ort</th><th>Kategorie</th>
+          <th>Eintritt</th><th>Quelle</th><th></th>
+        </tr></thead>
+        <tbody id="rumpf"></tbody>
+      </table>
+
+      <div class="offen">
+        <h2>Was hier noch fehlt</h2>
+        <p>Das Gerüst steht: Schiene, Kopf, Fläche, Bauteile. Darauf lassen
+           sich die übrigen Bildschirme setzen, ohne dass sich die Grundlage
+           noch einmal ändert.</p>
+        <ul>
+          <li>Einreichungen mit Freigabe und Ablehnungsgrund</li>
+          <li>Detailansicht eines Termins</li>
+          <li>Social-Planung als Monatskalender</li>
+          <li>Werbekunden, Kampagnen, Rechnungen</li>
+          <li>Nutzer und Rollen</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+const esc = (t) => String(t ?? "").replace(/[&<>"']/g,
+  (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
+
+function anzeige(ev) {
+  if (ev.manuell_bestaetigt)
+    return { frei: "frei", spende: "spende", kostenpflichtig: "kosten" }[ev.eintritt] || "vermutlich";
+  if (ev.eintritt === "kostenpflichtig") return "kosten";
+  if ((ev.eintritt === "frei" || ev.eintritt === "spende") && ev.eintritt_confidence === "hoch")
+    return ev.eintritt === "frei" ? "frei" : "spende";
+  return "vermutlich";
+}
+const BESCHRIFTUNG = { frei: "Eintritt frei", spende: "Spende erbeten",
+                       vermutlich: "vermutlich kostenfrei", kosten: "kostenpflichtig" };
+const MONATE = ["Januar","Februar","März","April","Mai","Juni","Juli",
+                "August","September","Oktober","November","Dezember"];
+
+function datumText(ev) {
+  const a = (ev.beginn || "").slice(0, 10), b = (ev.ende || "").slice(0, 10);
+  let zeit = ev.ganztaegig ? "" : (ev.beginn || "").slice(11, 16);
+  if (zeit === "00:00") zeit = "";
+  const tag = a ? a.slice(8,10) + "." + a.slice(5,7) + "." + a.slice(0,4) : "—";
+  const bis = b && b !== a ? ` – ${b.slice(8,10)}.${b.slice(5,7)}.` : "";
+  return tag + bis + (zeit ? `<div class="unter">${zeit} Uhr</div>` : "");
+}
+
+fetch("daten/events.json", { cache: "no-cache" }).then(a => a.json()).then(d => {
+  const heute = new Date().toISOString().slice(0, 10);
+  const alle = (d.events || []).filter(e => e && e.titel && e.beginn);
+  const ev = alle
+    .filter(e => ((e.ende || e.beginn || "").slice(0,10)) >= heute)
+    .sort((a, b) => (a.beginn || "") < (b.beginn || "") ? -1 : 1);
+
+  const gesehen = alle.map(e => e.zuletzt_gesehen).filter(Boolean).sort();
+  document.getElementById("stand").textContent =
+    `${alle.length} Termine insgesamt · Sammellauf ${gesehen.at(-1) || "unbekannt"}`;
+  document.getElementById("zahl").textContent = `${ev.length} ab heute`;
+  document.getElementById("z-termine").textContent = ev.length;
+  document.getElementById("z-pruefen").textContent =
+    ev.filter(e => anzeige(e) === "vermutlich").length;
+  document.getElementById("z-quellen").textContent =
+    new Set(alle.map(e => e.quelle_name).filter(Boolean)).size;
+
+  const proMonat = {};
+  for (const e of ev) { const m = (e.beginn||"").slice(0,7); if (m) proMonat[m] = (proMonat[m]||0)+1; }
+
+  const rumpf = document.getElementById("rumpf");
+  let letzter = null;
+  for (const e of ev.slice(0, 40)) {
+    const m = (e.beginn || "").slice(0, 7);
+    if (m && m !== letzter) {
+      letzter = m;
+      const kopf = document.createElement("tr");
+      kopf.className = "monat";
+      kopf.innerHTML = `<td colspan="6">${MONATE[+m.slice(5,7)-1]} ${m.slice(0,4)}`
+                     + `<span class="wieviele">${proMonat[m]}</span></td>`;
+      rumpf.appendChild(kopf);
+    }
+    const a = anzeige(e);
+    const art = e.dauertermin
+      ? '<span class="art dauer" title="Dauertermin"><svg><use href="#i-spanne"/></svg></span>'
+      : '<span class="art einzel" title="Einzeltermin"><svg><use href="#i-punkt"/></svg></span>';
+    const tr = document.createElement("tr");
+    if (e.dauertermin) tr.className = "dauer";
+    tr.innerHTML = `
+      <td class="datum"><div class="datumzeile">${art}<span class="wann">${datumText(e)}</span></div></td>
+      <td><div class="titel">${esc(e.titel)}</div>
+          <div class="unter">${esc(e.ort_name || "Ort unbekannt")}</div></td>
+      <td>${esc(e.kategorie || "—")}</td>
+      <td><span class="marke-chip ${a}">${BESCHRIFTUNG[a]}</span></td>
+      <td class="unter">${esc(e.quelle_name || "—")}</td>
+      <td class="menue-zelle"><button class="punkte" aria-label="Mehr">
+        <svg><use href="#i-mehr"/></svg></button></td>`;
+    rumpf.appendChild(tr);
+  }
+}).catch(f => {
+  document.getElementById("rumpf").innerHTML =
+    `<tr><td colspan="6">Daten nicht ladbar (${esc(f.message)}).</td></tr>`;
+});
+</script>
+</body>
+</html>
