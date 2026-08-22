@@ -9,29 +9,8 @@ Eintrag nicht mehr an.
 - **Wann:** 18.05.2026 00:00
 - **Wo:** München, Garching, Freising
 - **Angezeigt als:** vermutlich kostenfrei — Quelle nennt `frei` (Sicherheit: mittel)
-- **Beleg:** _kein Hinweis im Text gefunden_
+- **Beleg:** TUM tanzt! geht 2026 in die zweite Runde. Mit vielen Angeboten zum Mitmachen, Diskutieren und Erleben.
 - **Quelle:** https://www.tum.de/aktuelles/veranstaltungen/terminuebersicht?tx_solr%5Bfilter%5D%5B0%5D=location%3AFreising
-
-## Interkultureller Preis
-- **Wann:** 21.08.2026 00:00
-- **Wo:** —
-- **Angezeigt als:** vermutlich kostenfrei — Quelle nennt `unklar` (Sicherheit: niedrig)
-- **Beleg:** _kein Hinweis im Text gefunden_
-- **Quelle:** https://veranstaltungen.freising.de/freising/
-
-## Senioren-Netzwerk Frieda & Ben
-- **Wann:** 21.08.2026 11:00
-- **Wo:** dASAMa Dialograum im Asamgebäude
-- **Angezeigt als:** vermutlich kostenfrei — Quelle nennt `frei` (Sicherheit: mittel)
-- **Beleg:** _kein Hinweis im Text gefunden_
-- **Quelle:** https://veranstaltungen.merkur.de/freising/senioren-netzwerk-frieda-ben-e4f72cabf4ae7eae9d11d7b204fe8e52b.html
-
-## Anonyme Alkoholiker
-- **Wann:** 21.08.2026 20:00
-- **Wo:** Paul-Gerhardt-Haus
-- **Angezeigt als:** vermutlich kostenfrei — Quelle nennt `frei` (Sicherheit: mittel)
-- **Beleg:** _kein Hinweis im Text gefunden_
-- **Quelle:** https://veranstaltungen.merkur.de/freising/anonyme-alkoholiker-e3ae9b93c79a784e9e0d9eba917314af3.html
 
 ## Sauna-Sommerpause
 - **Wann:** 22.08.2026 00:00
@@ -47,6 +26,13 @@ Eintrag nicht mehr an.
 - **Beleg:** _kein Hinweis im Text gefunden_
 - **Quelle:** https://veranstaltungen.merkur.de/freising/krisendienst-psychiatrie-oberbayern-e41465f1273dfbd319759a89437962570.html
 
+## Wegen der Volksfestaufbaus
+- **Wann:** 22.08.2026 00:00
+- **Wo:** Luitpoldanlage Freising
+- **Angezeigt als:** vermutlich kostenfrei — Quelle nennt `unklar` (Sicherheit: niedrig)
+- **Beleg:** _kein Hinweis im Text gefunden_
+- **Quelle:** https://veranstaltungen.merkur.de/freising/wegen-der-volksfestaufbaus-e0cdc8c806c2ce4cd61c54a43661f86ad.html
+
 ## König-Ludwig-Verein
 - **Wann:** 22.08.2026 18:00
 - **Wo:** Privatwohnung des Vorsitzenden Martin Wiesheu
@@ -61,6 +47,34 @@ Eintrag nicht mehr an.
 - **Beleg:** _kein Hinweis im Text gefunden_
 - **Quelle:** https://veranstaltungen.merkur.de/freising/landratsamt-sucht-pflegefamilien-e381cd7cffc281ded1893a8353bb39ae4.html
 
+## Hubertia-Schützen
+- **Wann:** 23.08.2026 11:00
+- **Wo:** —
+- **Angezeigt als:** vermutlich kostenfrei — Quelle nennt `unklar` (Sicherheit: niedrig)
+- **Beleg:** _kein Hinweis im Text gefunden_
+- **Quelle:** https://veranstaltungen.merkur.de/freising/hubertia-schuetzen-eb55646269a001f40f80e166ce2b9e2db.html
+
+## DIMU
+- **Wann:** 23.08.2026 13:30
+- **Wo:** Diözesanmuseum
+- **Angezeigt als:** vermutlich kostenfrei — Quelle nennt `unklar` (Sicherheit: niedrig)
+- **Beleg:** _kein Hinweis im Text gefunden_
+- **Quelle:** https://veranstaltungen.merkur.de/freising/dimu-ebb352caa00c8dd3be60a1c0ca9a7ace8.html
+
+## Spieleabend
+- **Wann:** 24.08.2026 17:00
+- **Wo:** Stadtbibliothek Freising
+- **Angezeigt als:** vermutlich kostenfrei — Quelle nennt `unklar` (Sicherheit: niedrig)
+- **Beleg:** _kein Hinweis im Text gefunden_
+- **Quelle:** https://veranstaltungen.merkur.de/freising/spieleabend-e4fe19a685dbf72bf77d469b7ab5b0d4e.html
+
+## Evang.-Luth. Gemeinde: Friedensgebet
+- **Wann:** 24.08.2026 19:00
+- **Wo:** Christi-Himmelfahrts-Kirche
+- **Angezeigt als:** vermutlich kostenfrei — Quelle nennt `unklar` (Sicherheit: niedrig)
+- **Beleg:** _kein Hinweis im Text gefunden_
+- **Quelle:** https://veranstaltungen.merkur.de/freising/evang-luth-gemeinde-ea1d7004c1dda0a7b6d41acb0f877117b.html
+
 ## Kreuzbund SHG Bahnhofstraße
 - **Wann:** 27.08.2026 19:30
 - **Wo:** Caritas-Zentrum Freising
@@ -68,30 +82,9 @@ Eintrag nicht mehr an.
 - **Beleg:** _kein Hinweis im Text gefunden_
 - **Quelle:** https://veranstaltungen.merkur.de/freising/kreuzbund-shg-bahnhofstrasse-ec0093f7bfcf96906ff24eb4ce9eea60e.html
 
-## Nachhaltige Materialnutzung von Baumrinde
-- **Wann:** 29.09.2026 19:00
-- **Wo:** TUM Campus Freising
-- **Angezeigt als:** vermutlich kostenfrei — Quelle nennt `frei` (Sicherheit: mittel)
-- **Beleg:** _kein Hinweis im Text gefunden_
-- **Quelle:** https://www.tum.de/aktuelles/veranstaltungen/terminuebersicht?tx_solr%5Bfilter%5D%5B0%5D=location%3AFreising
-
 ## Die Demokratie feiern – gemeinsam in Freising
 - **Wann:** 02.10.2026 18:00
 - **Wo:** —
 - **Angezeigt als:** vermutlich kostenfrei — Quelle nennt `frei` (Sicherheit: niedrig)
 - **Beleg:** _kein Hinweis im Text gefunden_
 - **Quelle:** https://www.3klang-musik.de/freising.html
-
-## Netzwerke in der Bioinformatik
-- **Wann:** 29.10.2026 19:00
-- **Wo:** TUM Campus Freising
-- **Angezeigt als:** vermutlich kostenfrei — Quelle nennt `frei` (Sicherheit: mittel)
-- **Beleg:** _kein Hinweis im Text gefunden_
-- **Quelle:** https://www.tum.de/aktuelles/veranstaltungen/terminuebersicht?tx_solr%5Bfilter%5D%5B0%5D=location%3AFreising
-
-## Der Fettversteher kehrt zurück
-- **Wann:** 24.11.2026 19:00
-- **Wo:** TUM Campus Freising
-- **Angezeigt als:** vermutlich kostenfrei — Quelle nennt `frei` (Sicherheit: mittel)
-- **Beleg:** _kein Hinweis im Text gefunden_
-- **Quelle:** https://www.tum.de/aktuelles/veranstaltungen/terminuebersicht?tx_solr%5Bfilter%5D%5B0%5D=location%3AFreising

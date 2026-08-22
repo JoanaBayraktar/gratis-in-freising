@@ -4,20 +4,19 @@
       12,
       12,
       12,
-      12,
       23,
       24,
       24,
       24,
       22,
-      25
+      25,
+      24
     ],
     "fehlversuche": 0,
-    "letzter_erfolg": "2026-08-21"
+    "letzter_erfolg": "2026-08-22"
   },
   "Merkur Veranstaltungen": {
     "verlauf": [
-      10,
       10,
       9,
       10,
@@ -26,14 +25,15 @@
       17,
       18,
       25,
-      16
+      16,
+      27
     ],
     "fehlversuche": 0,
-    "letzter_erfolg": "2026-08-21"
+    "letzter_erfolg": "2026-08-22"
   },
   "Schafhof Kunstforum": {
     "verlauf": [
-      9,
+      4,
       4,
       4,
       4,
@@ -45,7 +45,7 @@
       4
     ],
     "fehlversuche": 0,
-    "letzter_erfolg": "2026-08-21"
+    "letzter_erfolg": "2026-08-22"
   },
   "Furtner Freising": {
     "verlauf": [
@@ -61,7 +61,7 @@
       23
     ],
     "fehlversuche": 0,
-    "letzter_erfolg": "2026-08-21"
+    "letzter_erfolg": "2026-08-22"
   },
   "Einfach selber machen": {
     "verlauf": [
@@ -77,58 +77,62 @@
       1
     ],
     "fehlversuche": 0,
-    "letzter_erfolg": "2026-08-21"
+    "letzter_erfolg": "2026-08-22"
   },
   "vhs Freising — kostenfrei": {
     "verlauf": [
       40,
-      40,
       36,
       36,
       36,
       40,
       36,
+      40,
       40,
       40,
       40
     ],
     "fehlversuche": 0,
-    "letzter_erfolg": "2026-08-21"
+    "letzter_erfolg": "2026-08-22"
   },
   "Modern Studio": {
     "verlauf": [
       3,
       3,
+      3,
       3
     ],
     "fehlversuche": 0,
-    "letzter_erfolg": "2026-08-21"
+    "letzter_erfolg": "2026-08-22"
   },
   "DAV Freising — Vortraege": {
     "verlauf": [
       3,
       0,
+      0,
       0
     ],
     "fehlversuche": 0,
-    "letzter_erfolg": "2026-08-21"
+    "letzter_erfolg": "2026-08-22"
   },
   "3Klang Musik": {
     "verlauf": [
       2,
       2,
+      2,
       2
     ],
     "fehlversuche": 0,
-    "letzter_erfolg": "2026-08-21"
+    "letzter_erfolg": "2026-08-22"
   },
   "TUM Freising": {
     "verlauf": [
       11,
       5,
-      11
+      11,
+      7
     ],
     "fehlversuche": 0,
-    "letzter_erfolg": "2026-08-21"
+    "letzter_erfolg": "2026-08-22"
   }
 }

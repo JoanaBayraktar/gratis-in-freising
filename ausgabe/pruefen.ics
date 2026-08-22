@@ -24,150 +24,183 @@ END:STANDARD
 END:VTIMEZONE
 BEGIN:VEVENT
 UID:9dbb539d76866b10@gratis-freising
-DTSTAMP:20260821T040850Z
+DTSTAMP:20260822T040251Z
 DTSTART;VALUE=DATE:20260518
 DTEND;VALUE=DATE:20261019
 SUMMARY:TUM tanzt! (vermutlich frei)
 LOCATION:München\, Garching\, Freising
-DESCRIPTION:Die Veranstaltungsreihe lädt zum Mitmachen\, Diskutieren und E
- rleben von Tanz ein. Workshops\, Performances und offene Trainings richten
-  sich an alle Altersgruppen und Erfahrungsstufen. Ein besonderes Highlight
-  für die TUM-Community und die Öffentlichkeit.\n\nEintritt: vermutlich k
- ostenfrei (Quelle nennt: frei)\nSicherheit: mittel\n\nVeranstalter: TUM\nK
- ategorie: Kunst\nZielgruppe: Alle\nDrinnen/Draussen: beides\n\nQuelle: htt
- ps://www.tum.de/aktuelles/veranstaltungen/terminuebersicht?tx_solr%5Bfilte
- r%5D%5B0%5D=location%3AFreising
+DESCRIPTION:Das Tanzfestival der TUM bietet Workshops\, Performances und of
+ fene Tanzflächen für alle Interessierten. Es verbindet Bewegung\, Wissen
+ schaft und Gemeinschaftserlebnis in einer einzigartigen Mischung.\n\nEintr
+ itt: vermutlich kostenfrei (Quelle nennt: frei)\nBeleg: "TUM tanzt! geht 2
+ 026 in die zweite Runde. Mit vielen Angeboten zum Mitmachen\, Diskutieren 
+ und Erleben."\nSicherheit: mittel\n\nVeranstalter: TUM\nKategorie: Kunst\n
+ Zielgruppe: Alle\nDrinnen/Draussen: beides\n\nQuelle: https://www.tum.de/a
+ ktuelles/veranstaltungen/terminuebersicht?tx_solr%5Bfilter%5D%5B0%5D=locat
+ ion%3AFreising
 URL:https://www.tum.de/aktuelles/veranstaltungen/terminuebersicht?tx_solr%5
  Bfilter%5D%5B0%5D=location%3AFreising
 CATEGORIES:Kunst
 END:VEVENT
 BEGIN:VEVENT
-UID:d3f1593b06c13a99@gratis-freising
-DTSTAMP:20260821T040850Z
-DTSTART;VALUE=DATE:20260821
-DTEND;VALUE=DATE:20260822
-SUMMARY:Interkultureller Preis (vermutlich frei)
-LOCATION:
-DESCRIPTION:Die Stadt Freising verleiht den Interkulturellen Preis für her
- ausragende Verdienste um Integration und Vielfalt in der Region. Die Veran
- staltung würdigt Personen oder Initiativen\, die sich besonders für ein 
- weltoffenes Freising einsetzen.\n\nEintritt: vermutlich kostenfrei (Quelle
-  nennt: unklar)\nSicherheit: niedrig\n\nKategorie: Sonstiges\nZielgruppe: 
- Alle\n\nQuelle: https://veranstaltungen.freising.de/freising/
-URL:https://veranstaltungen.freising.de/freising/
-CATEGORIES:Sonstiges
-END:VEVENT
-BEGIN:VEVENT
-UID:a92f8503b655cdde@gratis-freising
-DTSTAMP:20260821T040850Z
-DTSTART;TZID=Europe/Berlin:20260821T110000
-DTEND;TZID=Europe/Berlin:20260821T130000
-SUMMARY:Senioren-Netzwerk Frieda & Ben (vermutlich frei)
-LOCATION:dASAMa Dialograum im Asamgebäude — 85356 Freising
-DESCRIPTION:Regelmäßiges Treffen des Senioren-Netzwerks zur Information 
- ber Aktivitäten und Austausch. Offenes Angebot für Mitglieder und Inter
- essierte jeden Freitag.\n\nEintritt: vermutlich kostenfrei (Quelle nennt: 
- frei)\nSicherheit: mittel\n\nVeranstalter: Verein Frieda & Ben\nKategorie:
-  Sonstiges\nZielgruppe: Senioren\nDrinnen/Draussen: drinnen\n\nQuelle: htt
- ps://veranstaltungen.merkur.de/freising/senioren-netzwerk-frieda-ben-e4f72
- cabf4ae7eae9d11d7b204fe8e52b.html\nAuch bei: https://veranstaltungen.merku
- r.de/freising/senioren-netzwerk-frieda-ben-e4f72cabf4ae7eae9d11d7b204fe8e5
- 2f.html
-URL:https://veranstaltungen.merkur.de/freising/senioren-netzwerk-frieda-ben
- -e4f72cabf4ae7eae9d11d7b204fe8e52b.html
-CATEGORIES:Sonstiges
-END:VEVENT
-BEGIN:VEVENT
-UID:2f8dd7195f78456e@gratis-freising
-DTSTAMP:20260821T040850Z
-DTSTART;TZID=Europe/Berlin:20260821T200000
-DTEND;TZID=Europe/Berlin:20260821T213000
-SUMMARY:Anonyme Alkoholiker (vermutlich frei)
-LOCATION:Paul-Gerhardt-Haus — General-von-Stein-Straße 22\, 85356 Freisi
- ng
-DESCRIPTION:Ein regelmäßiges Treffen der Anonymen Alkoholiker für Betrof
- fene und Interessierte. Das Angebot ist kostenlos und anonym. Keine Anmeld
- ung erforderlich.\n\nEintritt: vermutlich kostenfrei (Quelle nennt: frei)\
- nSicherheit: mittel\n\nKategorie: Sonstiges\nZielgruppe: Erwachsene\nDrinn
- en/Draussen: drinnen\n\nQuelle: https://veranstaltungen.merkur.de/freising
- /anonyme-alkoholiker-e3ae9b93c79a784e9e0d9eba917314af3.html
-URL:https://veranstaltungen.merkur.de/freising/anonyme-alkoholiker-e3ae9b93
- c79a784e9e0d9eba917314af3.html
-CATEGORIES:Sonstiges
-END:VEVENT
-BEGIN:VEVENT
 UID:d2b3c21197115322@gratis-freising
-DTSTAMP:20260821T040850Z
+DTSTAMP:20260822T040251Z
 DTSTART;VALUE=DATE:20260822
 DTEND;VALUE=DATE:20260917
 SUMMARY:Sauna-Sommerpause (vermutlich frei)
-LOCATION:Kneippgarten Freising — Am Kneippgarten 10\, 85356 Freising
-DESCRIPTION:Information zur vorübergehenden Schließung der Sauna im Kneip
- pgarten Freising. Keine regulären Öffnungszeiten während der Sommerpaus
- e.\n\nEintritt: vermutlich kostenfrei (Quelle nennt: unklar)\nSicherheit: 
- niedrig\n\nKategorie: Sonstiges\nZielgruppe: Alle\nDrinnen/Draussen: drinn
- en\n\nQuelle: https://veranstaltungen.merkur.de/freising/sauna-sommerpause
- -e65c8a94e2f8c29083a73af76b53f02cc.html
+LOCATION:Kneippgarten Freising — Am Kneippgarten 10
+DESCRIPTION:Die Sauna im Kneippgarten Freising bleibt aufgrund der Sommerpa
+ use bis Mitte September geschlossen. Ein idealer Zeitpunkt für eine Ausze
+ it oder um die Natur zu genießen.\n\nEintritt: vermutlich kostenfrei (Que
+ lle nennt: unklar)\nSicherheit: niedrig\n\nKategorie: Sonstiges\nZielgrupp
+ e: Alle\nDrinnen/Draussen: drinnen\n\nQuelle: https://veranstaltungen.merk
+ ur.de/freising/sauna-sommerpause-e65c8a94e2f8c29083a73af76b53f02cc.html
 URL:https://veranstaltungen.merkur.de/freising/sauna-sommerpause-e65c8a94e2
  f8c29083a73af76b53f02cc.html
 CATEGORIES:Sonstiges
 END:VEVENT
 BEGIN:VEVENT
 UID:642658f04d784d8f@gratis-freising
-DTSTAMP:20260821T040850Z
+DTSTAMP:20260822T040251Z
 DTSTART;VALUE=DATE:20260822
 DTEND;VALUE=DATE:20260823
 SUMMARY:Krisendienst Psychiatrie Oberbayern (vermutlich frei)
-LOCATION:
-DESCRIPTION:Rund um die Uhr erreichbarer Krisendienst für psychische Notf
- lle. Beratung und Unterstützung in 120 Sprachen durch Dolmetscher.\n\nEi
- ntritt: vermutlich kostenfrei (Quelle nennt: frei)\nSicherheit: niedrig\n\
- nKategorie: Rat und Hilfe\nZielgruppe: Alle\n\nQuelle: https://veranstaltu
- ngen.merkur.de/freising/krisendienst-psychiatrie-oberbayern-e41465f1273dfb
- d319759a89437962570.html
+LOCATION:85356 Freising
+DESCRIPTION:Der Krisendienst Psychiatrie Oberbayern ist rund um die Uhr err
+ eichbar und bietet Unterstützung in akuten Krisensituationen. Auch Dolmet
+ scher in über 120 Sprachen sind verfügbar.\n\nEintritt: vermutlich koste
+ nfrei (Quelle nennt: frei)\nSicherheit: niedrig\n\nKategorie: Rat und Hilf
+ e\nZielgruppe: Alle\n\nQuelle: https://veranstaltungen.merkur.de/freising/
+ krisendienst-psychiatrie-oberbayern-e41465f1273dfbd319759a89437962570.html
 URL:https://veranstaltungen.merkur.de/freising/krisendienst-psychiatrie-obe
  rbayern-e41465f1273dfbd319759a89437962570.html
 CATEGORIES:Rat und Hilfe
 END:VEVENT
 BEGIN:VEVENT
+UID:48279425c53d34b6@gratis-freising
+DTSTAMP:20260822T040251Z
+DTSTART;VALUE=DATE:20260822
+DTEND;VALUE=DATE:20260823
+SUMMARY:Wegen der Volksfestaufbaus (vermutlich frei)
+LOCATION:Luitpoldanlage Freising — Luitpoldstraße 1
+DESCRIPTION:Aufgrund des Volksfestaufbaus ist in der Luitpoldanlage kein Pa
+ rken möglich. Die Maßnahme gilt ab dem 17. August und betrifft mehrere T
+ age.\n\nEintritt: vermutlich kostenfrei (Quelle nennt: unklar)\nSicherheit
+ : niedrig\n\nKategorie: Sonstiges\nZielgruppe: Alle\nDrinnen/Draussen: dra
+ ussen\n\nQuelle: https://veranstaltungen.merkur.de/freising/wegen-der-volk
+ sfestaufbaus-e0cdc8c806c2ce4cd61c54a43661f86ad.html
+URL:https://veranstaltungen.merkur.de/freising/wegen-der-volksfestaufbaus-e
+ 0cdc8c806c2ce4cd61c54a43661f86ad.html
+CATEGORIES:Sonstiges
+END:VEVENT
+BEGIN:VEVENT
 UID:cf9869fdabf80146@gratis-freising
-DTSTAMP:20260821T040850Z
+DTSTAMP:20260822T040251Z
 DTSTART;TZID=Europe/Berlin:20260822T180000
 DTEND;TZID=Europe/Berlin:20260822T220000
 SUMMARY:König-Ludwig-Verein (vermutlich frei)
 LOCATION:Privatwohnung des Vorsitzenden Martin Wiesheu — 85356 Freising
-DESCRIPTION:Sommerfest des Vereins für Mitglieder und deren Partner. Ein g
- eselliger Abend mit Musik und Gesprächen.\n\nEintritt: vermutlich kostenf
- rei (Quelle nennt: unklar)\nSicherheit: mittel\n\nKategorie: Feste/Bälle/
- Tanz\nZielgruppe: Alle\nDrinnen/Draussen: drinnen\n\nQuelle: https://veran
- staltungen.merkur.de/freising/koenig-ludwig-verein-ee3f84f419caa41de2b8b0a
- e7a23bf5b3.html
+DESCRIPTION:Ein Sommerfest des König-Ludwig-Vereins für Mitglieder mit Pa
+ rtnern. Es wird um Mitnahme von Geschirr\, Besteck und Gläsern gebeten.\n
+ \nEintritt: vermutlich kostenfrei (Quelle nennt: unklar)\nSicherheit: mitt
+ el\n\nKategorie: Feste/Bälle/Tanz\nZielgruppe: Alle\nDrinnen/Draussen: dr
+ innen\n\nQuelle: https://veranstaltungen.merkur.de/freising/koenig-ludwig-
+ verein-ee3f84f419caa41de2b8b0ae7a23bf5b3.html
 URL:https://veranstaltungen.merkur.de/freising/koenig-ludwig-verein-ee3f84f
  419caa41de2b8b0ae7a23bf5b3.html
 CATEGORIES:Feste/Bälle/Tanz
 END:VEVENT
 BEGIN:VEVENT
 UID:4689da62f25a166e@gratis-freising
-DTSTAMP:20260821T040850Z
+DTSTAMP:20260822T040251Z
 DTSTART;VALUE=DATE:20260823
 DTEND;VALUE=DATE:20260824
 SUMMARY:Landratsamt sucht Pflegefamilien (vermutlich frei)
 LOCATION:85356 Freising
-DESCRIPTION:Information über die Suche nach Pflegefamilien für Kinder und
-  Jugendliche in Notlagen. Ein digitaler Infoabend bietet Einblicke in das 
- Thema und die Möglichkeit\, sich zu engagieren.\n\nEintritt: vermutlich k
- ostenfrei (Quelle nennt: frei)\nSicherheit: niedrig\n\nVeranstalter: Landr
- atsamt Freising\nKategorie: Rat und Hilfe\nZielgruppe: Alle\nDrinnen/Draus
- sen: beides\nAnmeldung noetig: ja — siehe Quelle\n\nQuelle: https://vera
- nstaltungen.merkur.de/freising/landratsamt-sucht-pflegefamilien-e381cd7cff
- c281ded1893a8353bb39ae4.html
+DESCRIPTION:Das Landratsamt sucht dringend Pflegefamilien\, die im Notfall 
+ einspringen können. Es werden regelmäßig Infoabende angeboten\, zu dene
+ n man sich anmelden kann.\n\nEintritt: vermutlich kostenfrei (Quelle nennt
+ : frei)\nSicherheit: niedrig\n\nVeranstalter: Landratsamt Freising\nKatego
+ rie: Sonstiges\nZielgruppe: Alle\nDrinnen/Draussen: beides\nAnmeldung noet
+ ig: ja — siehe Quelle\n\nQuelle: https://veranstaltungen.merkur.de/freis
+ ing/landratsamt-sucht-pflegefamilien-e381cd7cffc281ded1893a8353bb39ae4.htm
+ l
 URL:https://veranstaltungen.merkur.de/freising/landratsamt-sucht-pflegefami
  lien-e381cd7cffc281ded1893a8353bb39ae4.html
-CATEGORIES:Rat und Hilfe
+CATEGORIES:Sonstiges
+END:VEVENT
+BEGIN:VEVENT
+UID:a1e7b5c9ce8b0b5b@gratis-freising
+DTSTAMP:20260822T040251Z
+DTSTART;TZID=Europe/Berlin:20260823T110000
+DTEND;TZID=Europe/Berlin:20260823T130000
+SUMMARY:Hubertia-Schützen (vermutlich frei)
+LOCATION:85356 Freising
+DESCRIPTION:Ein Radausflug der Hubertia-Schützen mit Start am Maibaum in A
+ ttaching. Ein geselliger Ausflug für Mitglieder und Gäste.\n\nEintritt: 
+ vermutlich kostenfrei (Quelle nennt: unklar)\nSicherheit: niedrig\n\nKateg
+ orie: Sonstiges\nZielgruppe: Alle\nDrinnen/Draussen: draussen\n\nQuelle: h
+ ttps://veranstaltungen.merkur.de/freising/hubertia-schuetzen-eb55646269a00
+ 1f40f80e166ce2b9e2db.html
+URL:https://veranstaltungen.merkur.de/freising/hubertia-schuetzen-eb5564626
+ 9a001f40f80e166ce2b9e2db.html
+CATEGORIES:Sonstiges
+END:VEVENT
+BEGIN:VEVENT
+UID:135cfb2b409bb5bc@gratis-freising
+DTSTAMP:20260822T040251Z
+DTSTART;TZID=Europe/Berlin:20260823T133000
+DTEND;TZID=Europe/Berlin:20260823T163000
+SUMMARY:DIMU (vermutlich frei)
+LOCATION:Diözesanmuseum — Domberg 21
+DESCRIPTION:Ein kreatives Kinderprogramm im Diözesanmuseum mit Werkstattar
+ beit. Eine Anmeldung ist nicht erforderlich\, nähere Infos gibt es im Onl
+ inekalender.\n\nEintritt: vermutlich kostenfrei (Quelle nennt: unklar)\nSi
+ cherheit: niedrig\n\nKategorie: Kinderprogramm\nZielgruppe: Kinder\nDrinne
+ n/Draussen: drinnen\n\nQuelle: https://veranstaltungen.merkur.de/freising/
+ dimu-ebb352caa00c8dd3be60a1c0ca9a7ace8.html
+URL:https://veranstaltungen.merkur.de/freising/dimu-ebb352caa00c8dd3be60a1c
+ 0ca9a7ace8.html
+CATEGORIES:Kinderprogramm
+END:VEVENT
+BEGIN:VEVENT
+UID:798917347ae98442@gratis-freising
+DTSTAMP:20260822T040251Z
+DTSTART;TZID=Europe/Berlin:20260824T170000
+DTEND;TZID=Europe/Berlin:20260824T200000
+SUMMARY:Spieleabend (vermutlich frei)
+LOCATION:Stadtbibliothek Freising — Weizengasse 3
+DESCRIPTION:Ein geselliger Spieleabend für alle Generationen in der Stadtb
+ ibliothek. Es wird um Anmeldung gebeten\, um die Planung zu erleichtern.\n
+ \nEintritt: vermutlich kostenfrei (Quelle nennt: unklar)\nSicherheit: nied
+ rig\n\nKategorie: Geselligkeit/Spiele/Treffen\nZielgruppe: Alle\nDrinnen/D
+ raussen: drinnen\nAnmeldung noetig: ja — siehe Quelle\n\nQuelle: https:/
+ /veranstaltungen.merkur.de/freising/spieleabend-e4fe19a685dbf72bf77d469b7a
+ b5b0d4e.html
+URL:https://veranstaltungen.merkur.de/freising/spieleabend-e4fe19a685dbf72b
+ f77d469b7ab5b0d4e.html
+CATEGORIES:Geselligkeit/Spiele/Treffen
+END:VEVENT
+BEGIN:VEVENT
+UID:8a049f29f080fc2e@gratis-freising
+DTSTAMP:20260822T040251Z
+DTSTART;TZID=Europe/Berlin:20260824T190000
+DTEND;TZID=Europe/Berlin:20260824T210000
+SUMMARY:Evang.-Luth. Gemeinde: Friedensgebet (vermutlich frei)
+LOCATION:Christi-Himmelfahrts-Kirche — Saarstraße 2
+DESCRIPTION:Ein gemeinsames Friedensgebet für alle Religionen und National
+ itäten jeden Montag in der Christi-Himmelfahrts-Kirche.\n\nEintritt: verm
+ utlich kostenfrei (Quelle nennt: unklar)\nSicherheit: niedrig\n\nKategorie
+ : Religion\nZielgruppe: Alle\nDrinnen/Draussen: drinnen\n\nQuelle: https:/
+ /veranstaltungen.merkur.de/freising/evang-luth-gemeinde-ea1d7004c1dda0a7b6
+ d41acb0f877117b.html
+URL:https://veranstaltungen.merkur.de/freising/evang-luth-gemeinde-ea1d7004
+ c1dda0a7b6d41acb0f877117b.html
+CATEGORIES:Religion
 END:VEVENT
 BEGIN:VEVENT
 UID:a753c7385e31a4c3@gratis-freising
-DTSTAMP:20260821T040850Z
+DTSTAMP:20260822T040251Z
 DTSTART;TZID=Europe/Berlin:20260827T193000
 DTEND;TZID=Europe/Berlin:20260827T210000
 SUMMARY:Kreuzbund SHG Bahnhofstraße (vermutlich frei)
@@ -184,77 +217,20 @@ URL:https://veranstaltungen.merkur.de/freising/kreuzbund-shg-bahnhofstrasse
 CATEGORIES:Rat und Hilfe
 END:VEVENT
 BEGIN:VEVENT
-UID:28b673010504d740@gratis-freising
-DTSTAMP:20260821T040850Z
-DTSTART;TZID=Europe/Berlin:20260929T190000
-DTEND;TZID=Europe/Berlin:20260929T203000
-SUMMARY:Nachhaltige Materialnutzung von Baumrinde (vermutlich frei)
-LOCATION:TUM Campus Freising — Freising
-DESCRIPTION:Michaela Eder hält einen Vortrag über innovative Ansätze zur
-  nachhaltigen Nutzung von Baumrinde in der Materialforschung. Im Anschluss
-  gibt es Raum für Diskussion und Austausch. Geeignet für Fachpublikum un
- d Interessierte an Nachhaltigkeitsthemen.\n\nEintritt: vermutlich kostenfr
- ei (Quelle nennt: frei)\nSicherheit: mittel\n\nVeranstalter: TUM@Freising\
- nKategorie: Vortrag\nZielgruppe: Alle\nDrinnen/Draussen: drinnen\n\nQuelle
- : https://www.tum.de/aktuelles/veranstaltungen/terminuebersicht?tx_solr%5B
- filter%5D%5B0%5D=location%3AFreising
-URL:https://www.tum.de/aktuelles/veranstaltungen/terminuebersicht?tx_solr%5
- Bfilter%5D%5B0%5D=location%3AFreising
-CATEGORIES:Vortrag
-END:VEVENT
-BEGIN:VEVENT
 UID:7658e605275a5d7e@gratis-freising
-DTSTAMP:20260821T040850Z
+DTSTAMP:20260822T040251Z
 DTSTART;TZID=Europe/Berlin:20261002T180000
 DTEND;TZID=Europe/Berlin:20261002T235900
 SUMMARY:Die Demokratie feiern – gemeinsam in Freising (vermutlich frei)
 LOCATION:
 DESCRIPTION:Die Lange Nacht der Demokratie lädt mit Gesprächen\, Kunst\, 
  Musik\, Theater und Mitmachaktionen zum Mitmachen und Austausch ein. Über
-  50 Vereine und Organisationen gestalten diesen Abend als Ort der Begegnun
- g und des Dialogs.\n\nEintritt: vermutlich kostenfrei (Quelle nennt: frei)
- \nSicherheit: niedrig\n\nVeranstalter: Treffpunkt Ehrenamt der Stadt Freis
- ing\nKategorie: Fest\nZielgruppe: Alle\nDrinnen/Draussen: beides\n\nQuelle
- : https://www.3klang-musik.de/freising.html
+  50 Vereine und Organisationen gestalten einen Abend des Dialogs und der B
+ egegnung in Freising.\n\nEintritt: vermutlich kostenfrei (Quelle nennt: fr
+ ei)\nSicherheit: niedrig\n\nVeranstalter: Treffpunkt Ehrenamt der Stadt Fr
+ eising\nKategorie: Vortrag\nZielgruppe: Alle\nDrinnen/Draussen: beides\n\n
+ Quelle: https://www.3klang-musik.de/freising.html
 URL:https://www.3klang-musik.de/freising.html
-CATEGORIES:Fest
-END:VEVENT
-BEGIN:VEVENT
-UID:2f244d9db195425f@gratis-freising
-DTSTAMP:20260821T040850Z
-DTSTART;TZID=Europe/Berlin:20261029T190000
-DTEND;TZID=Europe/Berlin:20261029T203000
-SUMMARY:Netzwerke in der Bioinformatik (vermutlich frei)
-LOCATION:TUM Campus Freising — Freising
-DESCRIPTION:Markus List referiert über die Bedeutung von Netzwerken in der
-  Bioinformatik und aktuelle Forschungsprojekte. Der Vortrag richtet sich a
- n Wissenschaftler\, Studierende und Interessierte an interdisziplinärer F
- orschung.\n\nEintritt: vermutlich kostenfrei (Quelle nennt: frei)\nSicherh
- eit: mittel\n\nVeranstalter: TUM@Freising\nKategorie: Vortrag\nZielgruppe:
-  Fachpublikum\nDrinnen/Draussen: drinnen\n\nQuelle: https://www.tum.de/akt
- uelles/veranstaltungen/terminuebersicht?tx_solr%5Bfilter%5D%5B0%5D=locatio
- n%3AFreising
-URL:https://www.tum.de/aktuelles/veranstaltungen/terminuebersicht?tx_solr%5
- Bfilter%5D%5B0%5D=location%3AFreising
-CATEGORIES:Vortrag
-END:VEVENT
-BEGIN:VEVENT
-UID:80b56d9422c44a00@gratis-freising
-DTSTAMP:20260821T040850Z
-DTSTART;TZID=Europe/Berlin:20261124T190000
-DTEND;TZID=Europe/Berlin:20261124T203000
-SUMMARY:Der Fettversteher kehrt zurück (vermutlich frei)
-LOCATION:TUM Campus Freising — Freising
-DESCRIPTION:Alexander Bartelt präsentiert neueste Erkenntnisse aus der Fet
- tstoffwechselforschung und erklärt\, wie Fettgewebe den Körper beeinflus
- st. Ein spannender Vortrag für Mediziner\, Biologen und gesundheitsintere
- ssierte Laien.\n\nEintritt: vermutlich kostenfrei (Quelle nennt: frei)\nSi
- cherheit: mittel\n\nVeranstalter: TUM@Freising\nKategorie: Vortrag\nZielgr
- uppe: Alle\nDrinnen/Draussen: drinnen\n\nQuelle: https://www.tum.de/aktuel
- les/veranstaltungen/terminuebersicht?tx_solr%5Bfilter%5D%5B0%5D=location%3
- AFreising
-URL:https://www.tum.de/aktuelles/veranstaltungen/terminuebersicht?tx_solr%5
- Bfilter%5D%5B0%5D=location%3AFreising
 CATEGORIES:Vortrag
 END:VEVENT
 END:VCALENDAR
