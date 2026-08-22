@@ -683,13 +683,57 @@ document.getElementById("filter").addEventListener("click", ereignis => {
 
 // --- Laden ------------------------------------------------------------------
 
-fetch("daten/events.json", { cache: "no-cache" })
-  .then(antwort => {
+/* Eingriffe von Hand aus dem internen Bereich anwenden — ausblenden,
+   korrigieren, eigene anhaengen, in dieser Reihenfolge. Dieselben drei
+   Schritte macht scripts/verwaltung.py fuer Kalender und Tagesmail; hier
+   stehen sie noch einmal, damit eine Aenderung sofort sichtbar ist und nicht
+   erst nach dem naechsten naechtlichen Lauf. Wer dort etwas aendert, muss
+   hier nachziehen. */
+const KORRIGIERBAR = ["titel", "beginn", "ende", "ganztaegig", "ort_name",
+  "ort_adresse", "veranstalter", "beschreibung", "kategorie", "zielgruppe",
+  "besonderheit", "eintritt", "dauertermin", "ausgebucht", "anmeldung_noetig",
+  "quelle_url", "status"];
+
+function verwaltungAnwenden(events, v) {
+  const versteckt = (v && v.ausgeblendet) || {};
+  const korrekturen = (v && v.korrekturen) || {};
+  const eigene = (v && v.eigene) || [];
+
+  const liste = [];
+  for (const ev of events) {
+    if (versteckt[ev.id]) continue;
+    const k = korrekturen[ev.id];
+    if (!k) { liste.push(ev); continue; }
+    const e = { ...ev };
+    for (const feld of KORRIGIERBAR) if (feld in k) e[feld] = k[feld];
+    // Nur eine ausdrueckliche Preiskorrektur hebt die Einstufung von
+    // "vermutlich kostenfrei" auf "Eintritt frei" — ein berichtigter Ort
+    // ist keine Preispruefung.
+    if ("eintritt" in k) e.manuell_bestaetigt = true;
+    liste.push(e);
+  }
+  const da = new Set(liste.map(e => e.id));
+  for (const ev of eigene) {
+    if (versteckt[ev.id] || da.has(ev.id)) continue;
+    liste.push({ ...ev, manuell_bestaetigt: true });
+  }
+  return liste;
+}
+
+Promise.all([
+  fetch("daten/events.json", { cache: "no-cache" }).then(antwort => {
     if (!antwort.ok) throw new Error(`HTTP ${antwort.status}`);
     return antwort.json();
-  })
-  .then(daten => {
-    EVENTS = (daten.events || []).filter(ev => ev && ev.titel && ev.beginn);
+  }),
+  // Fehlt die Verwaltungsdatei oder ist sie kaputt, zeigt die Seite eben nur
+  // das Gesammelte. Ein Eingriff, der nicht ankommt, ist aergerlich; eine
+  // leere Seite waere schlimmer.
+  fetch("daten/verwaltung.json", { cache: "no-cache" })
+    .then(a => (a.ok ? a.json() : null)).catch(() => null),
+])
+  .then(([daten, verwaltung]) => {
+    EVENTS = verwaltungAnwenden(
+      (daten.events || []).filter(ev => ev && ev.titel && ev.beginn), verwaltung);
 
     const auswahl = document.getElementById("quelle");
     [...new Set(EVENTS.map(ev => ev.quelle_name).filter(Boolean))].sort()

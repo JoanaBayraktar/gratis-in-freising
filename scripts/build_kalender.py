@@ -16,6 +16,7 @@ import pathlib
 from datetime import datetime, timedelta, timezone
 
 from regeln import BESCHRIFTUNG, FREI, KOSTEN, SPENDE, VERMUTLICH, anzeige
+from verwaltung import anwenden
 
 BASIS = pathlib.Path(__file__).resolve().parent.parent
 DATEN = BASIS / "daten" / "events.json"
@@ -226,6 +227,9 @@ def pruefliste_schreiben(pfad: pathlib.Path, events: list) -> None:
 
 def main() -> None:
     daten = json.loads(DATEN.read_text(encoding="utf-8"))
+    # Was Sie im internen Bereich eingetragen haben, liegt getrennt und
+    # wird erst hier daruebergelegt — siehe scripts/verwaltung.py.
+    daten["events"] = anwenden(daten["events"])
     AUSGABE.mkdir(exist_ok=True)
 
     heute = datetime.now().date().isoformat()

@@ -8,12 +8,14 @@ auf GitHubs Servern — Ihr Rechner muss dafür nicht an sein.
 
 ```
 index.html               die Übersichtsseite (GitHub Pages)
+verwaltung.html          der interne Bereich: eintragen, korrigieren, ausblenden
 melden/worker.js         Meldestelle für das Formular (Cloudflare Worker)
 quellen.yml              Quellenliste  ← hier Quellen an- und abschalten
 SCHEMA.md                welche Felder ein Event hat und was sie bedeuten
 daten/
   events.json            die Datenablage — das ist die Wahrheit
   quellen-status.json    Gesundheit je Quelle: Fehlversuche, Trefferverlauf
+  verwaltung.json        Ihre Eingriffe von Hand — der Sammellauf fasst sie nie an
 ausgabe/
   gratis-freising.ics    gesicherte Gratis-Events → abonnieren
   pruefen.ics            unklare Fälle → wöchentlich sichten
@@ -29,12 +31,17 @@ scripts/
   build_mail.py          baut die Tagesmail
   build_social.py        baut die Social-Entwürfe
   event_id.py            stabile ID für die Dublettenerkennung
+  verwaltung.py          legt Ihre Eingriffe über das Gesammelte
 .github/workflows/       der nächtliche Ablauf
 ```
 
 Wichtig zu verstehen: **`daten/events.json` ist die Quelle, alles unter `ausgabe/`
 wird daraus neu erzeugt.** Änderungen direkt in einer `.ics`-Datei sind beim
-nächsten Lauf weg. Korrekturen gehören in die JSON-Datei.
+nächsten Lauf weg.
+
+Und events.json selbst gehört dem Sammellauf — auch dort von Hand geänderte
+Werte hält er nicht unbedingt. Korrekturen gehören deshalb in
+`daten/verwaltung.json`, am bequemsten über `verwaltung.html`.
 
 ## Einrichtung
 
@@ -124,6 +131,9 @@ MISTRAL_API_KEY=... ./venv/bin/python scripts/nachpruefen.py --nur-melden
 
 ## Die Übersichtsseite
 
+Für das Eintragen und Korrigieren von Hand gibt es `verwaltung.html` —
+siehe „Der interne Bereich" weiter unten.
+
 `index.html` zeigt alle gesammelten Veranstaltungen im Browser — mit Datum,
 Ort, Quelle samt Link, Eintrittseinstufung und dem Belegzitat unter „Details".
 Suchen, nach Quelle filtern, nach Datum oder Titel sortieren.
@@ -200,7 +210,90 @@ Lokal ansehen (ein Server ist nötig, `file://` darf die JSON nicht laden):
 ./venv/bin/python -m http.server 8765
 ```
 
-Dann http://localhost:8765 öffnen.
+Dann http://localhost:8765 öffnen — der interne Bereich liegt daneben unter
+http://localhost:8765/verwaltung.html.
+
+## Der interne Bereich
+
+`verwaltung.html` ist die Arbeitsoberfläche: eine dichte Tabelle über alle
+Termine, sortierbar nach jeder Spalte, mit Suche und Filtern nach Quelle, Art
+und Eintritt. Dort lassen sich drei Dinge tun — eigene Termine anlegen,
+gesammelte korrigieren, und Unsinn ausblenden.
+
+### Was er nicht ist
+
+Er verbirgt nichts. Das Repository ist öffentlich, `daten/events.json` liegt
+für jeden lesbar auf GitHub, und eine Seite auf GitHub Pages hat keinen
+Server, der ein Passwort prüfen könnte. Wer die Adresse kennt, sieht die
+Tabelle — dieselben Daten, die auch auf der öffentlichen Seite stehen, nur
+dichter gesetzt. Das Passwort schützt nicht das Lesen, sondern **das
+Schreiben**. Wer nicht angemeldet ist, kann nur schauen.
+
+### Wo die Eingriffe landen
+
+In `daten/verwaltung.json`, getrennt von `daten/events.json`. Das ist der
+ganze Trick: events.json gehört dem Sammellauf, der sie jede Nacht neu
+schreibt. Alles, was von Hand darin stünde, wäre beim nächsten Lauf
+Verhandlungssache — genau so hat eine Nachprüfung schon einmal 13 Termine
+gelöscht. Der Sammellauf kennt die Verwaltungsdatei nicht und kann sie
+deshalb auch nicht kaputtmachen.
+
+Drei Arten von Eingriff, angewandt in dieser Reihenfolge:
+
+| | Wirkung |
+|---|---|
+| **ausgeblendet** | fliegt raus, egal was die Quelle sagt — Mittagskarten, Dubletten, Wochenmarkt |
+| **korrekturen** | einzelne Felder werden überschrieben; der Rest kommt weiter aus der Quelle und bleibt aktuell |
+| **eigene** | vollständige Termine, die keine Quelle hat |
+
+Korrigiert wird feldweise, nicht der ganze Termin: Wenn Sie den Ort
+richtigstellen und die Quelle morgen eine bessere Beschreibung liefert, kommt
+die Beschreibung an und Ihr Ort bleibt.
+
+**Eine Ausnahme, die wichtig ist:** Nur wenn Sie ausdrücklich das Feld
+*Eintritt* ändern, gilt der Preis als von Ihnen geprüft und die Anzeige
+springt von „vermutlich kostenfrei" auf „Eintritt frei". Ein berichtigter
+Ortsname tut das nicht. Sonst genügte ein Tippfehler, um aus einer Vermutung
+eine Zusage zu machen — und bei fälschlich „frei" steht jemand vor der Kasse.
+
+### Wann Änderungen sichtbar werden
+
+Die öffentliche Übersicht und der interne Bereich wenden die Eingriffe **beim
+Laden** an, also sofort. Kalender und Tagesmail entstehen im nächtlichen Lauf
+und übernehmen sie erst dann.
+
+Dieselben drei Schritte stehen deshalb zweimal da: in `scripts/verwaltung.py`
+für Mail und Kalender, und in JavaScript in `index.html` und
+`verwaltung.html`. Wer an einer Stelle etwas ändert, muss an den anderen
+nachziehen. Dass beide dasselbe tun, lässt sich prüfen, indem man dieselbe
+Liste durch beide schickt und die Ergebnisse vergleicht.
+
+### Einrichtung
+
+Der interne Bereich braucht den Worker aus `melden/worker.js` — er hält den
+GitHub-Token, den die Seite nicht haben darf. Zusätzlich zur Einrichtung
+unter „Veranstaltungen melden":
+
+1. Der Token braucht jetzt **Contents: Read and write** neben Issues: Write.
+2. Im Cloudflare-Dashboard eine weitere Variable **`VERWALTUNG_PASSWORT`**
+   anlegen, als Secret. Nehmen Sie ein langes, zufälliges Passwort — es ist
+   das Einzige zwischen dem Internet und der Verwaltungsdatei.
+3. Die Worker-Adresse in `verwaltung.html` bei `const MELDESTELLE` eintragen,
+   dieselbe wie in `index.html`.
+
+Der Worker schreibt **ausschließlich** `daten/verwaltung.json`; der Pfad steht
+hart im Code. Selbst wer das Passwort hätte, könnte damit nichts anderes im
+Repository anfassen — keine Workflows, keine anderen Dateien, nichts löschen.
+Bei falschem Passwort wartet er eine halbe Sekunde, was systematisches
+Durchprobieren unbezahlbar macht.
+
+### Wenn zwei gleichzeitig schreiben
+
+Die Seite merkt sich beim Anmelden den Stand der Datei und schickt ihn beim
+Speichern mit. Hat sich inzwischen etwas geändert — etwa weil der nächtliche
+Lauf dazwischenkam —, lehnt GitHub ab und die Seite sagt es Ihnen, statt die
+fremde Änderung stillschweigend zu überschreiben. Dann neu laden und noch
+einmal eintragen.
 
 ## Kalender abonnieren
 

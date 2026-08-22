@@ -1,0 +1,588 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Verwaltung — Gratis in Freising</title>
+<style>
+/* Farben und Grundlagen wie auf der oeffentlichen Seite, damit beide
+   zusammengehoeren. Dichter gesetzt: hier zaehlt Uebersicht, nicht Ruhe. */
+:root {
+  --grund: #ffffff; --text: #1c1c1c; --leise: #6b6b6b; --leiser: #8a8a8a;
+  --linie: #e4e4e4; --kasten: #f7f7f5; --blau: #1a5490; --blau-hell: #e8f0f7;
+  --gruen: #1e6b3a; --gruen-hell: #e6f4ea; --gelb: #7a5b00; --gelb-hell: #fff3cd;
+  --rot: #a8471a; --rot-hell: #fbeae1;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --grund: #16181a; --text: #e8e8e6; --leise: #a0a4a8; --leiser: #7d8288;
+    --linie: #2c3034; --kasten: #1e2124; --blau: #7fb3e0; --blau-hell: #1b2b3a;
+    --gruen: #7fd6a0; --gruen-hell: #16301f; --gelb: #e0c069; --gelb-hell: #332b12;
+    --rot: #e5a179; --rot-hell: #33211a;
+  }
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0; background: var(--grund); color: var(--text);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  line-height: 1.45; font-size: 14px; -webkit-text-size-adjust: 100%;
+}
+.huelle { max-width: 1400px; margin: 0 auto; padding: 18px 16px 80px; }
+a { color: var(--blau); }
+
+header { display: flex; align-items: baseline; gap: 12px; flex-wrap: wrap; }
+header h1 { font-size: 20px; margin: 0; letter-spacing: -.01em; }
+header .weg { margin-left: auto; font-size: 13px; }
+
+/* Anmeldung */
+.tuer {
+  margin: 14px 0; padding: 12px 14px; border: 1px solid var(--linie);
+  border-radius: 9px; background: var(--kasten);
+  display: flex; gap: 8px; align-items: center; flex-wrap: wrap;
+}
+.tuer.offen { background: var(--gruen-hell); border-color: transparent; }
+.tuer .hinweis { color: var(--leise); font-size: 13px; }
+
+input, select, textarea, button {
+  font: inherit; color: var(--text); background: var(--grund);
+  border: 1px solid var(--linie); border-radius: 7px; padding: 6px 9px;
+}
+textarea { width: 100%; resize: vertical; min-height: 62px; }
+button { cursor: pointer; }
+button.wichtig { background: var(--blau); border-color: var(--blau); color: #fff; font-weight: 600; }
+button.wichtig:disabled { opacity: .45; cursor: default; }
+button.leise { color: var(--leise); }
+button.gefahr { color: var(--rot); border-color: var(--rot-hell); }
+
+/* Steuerung */
+.steuerung {
+  position: sticky; top: 0; z-index: 6; background: var(--grund);
+  padding: 10px 0; border-bottom: 1px solid var(--linie);
+  display: flex; gap: 7px; align-items: center; flex-wrap: wrap;
+}
+.steuerung input[type=search] { flex: 1 1 200px; min-width: 0; }
+.zahl { color: var(--leiser); font-size: 13px; margin-left: auto; white-space: nowrap; }
+button.filter {
+  font-size: 13px; padding: 5px 11px; border-radius: 999px; color: var(--leise);
+}
+button.filter[aria-pressed="true"] {
+  background: var(--blau); border-color: var(--blau); color: #fff; font-weight: 600;
+}
+@media (prefers-color-scheme: dark) {
+  button.filter[aria-pressed="true"] { color: #10161c; }
+}
+
+/* Tabelle */
+table { width: 100%; border-collapse: collapse; margin-top: 4px; }
+th {
+  text-align: left; font-size: 11px; text-transform: uppercase; letter-spacing: .06em;
+  color: var(--leiser); font-weight: 600; padding: 8px 8px 6px; white-space: nowrap;
+  border-bottom: 1px solid var(--linie); position: sticky; top: 46px;
+  background: var(--grund); z-index: 4; cursor: pointer; user-select: none;
+}
+th .pfeil { color: var(--blau); }
+td { padding: 7px 8px; border-bottom: 1px solid var(--linie); vertical-align: top; }
+tbody tr:hover { background: var(--kasten); }
+tr.aus td { opacity: .42; }
+tr.aus td .titel { text-decoration: line-through; }
+td.datum { white-space: nowrap; font-variant-numeric: tabular-nums; color: var(--leise); font-size: 13px; }
+td.titel-zelle { min-width: 220px; }
+.titel { font-weight: 600; }
+.unter { color: var(--leiser); font-size: 12px; margin-top: 1px; }
+td.knopf-zelle { text-align: right; white-space: nowrap; }
+td.knopf-zelle button { padding: 3px 8px; font-size: 12px; }
+
+.marke {
+  display: inline-block; font-size: 11px; font-weight: 600; padding: 1px 7px;
+  border-radius: 999px; background: var(--kasten); color: var(--leise); white-space: nowrap;
+}
+.marke.frei { background: var(--gruen-hell); color: var(--gruen); }
+.marke.spende { background: var(--gelb-hell); color: var(--gelb); }
+.marke.vermutlich { background: var(--kasten); color: var(--leise); box-shadow: inset 0 0 0 1px var(--linie); }
+.marke.kosten { background: var(--kasten); color: var(--leise); }
+.marke.eigen { background: var(--blau-hell); color: var(--blau); }
+.marke.korrigiert { background: var(--gelb-hell); color: var(--gelb); }
+.marke.versteckt { background: var(--rot-hell); color: var(--rot); }
+
+/* Bearbeitungszeile */
+tr.werkbank td { background: var(--kasten); padding: 14px 12px; }
+.felder { display: grid; grid-template-columns: repeat(auto-fit, minmax(190px, 1fr)); gap: 10px 14px; }
+.feld { display: flex; flex-direction: column; gap: 3px; }
+.feld > span { font-size: 11px; text-transform: uppercase; letter-spacing: .05em; color: var(--leiser); }
+.feld.breit { grid-column: 1 / -1; }
+.feld.geaendert > span::after { content: " geändert"; color: var(--gelb); }
+.werkzeuge { display: flex; gap: 8px; margin-top: 12px; align-items: center; flex-wrap: wrap; }
+
+.fuss { margin-top: 26px; color: var(--leiser); font-size: 12px; }
+.meldung { padding: 9px 12px; border-radius: 8px; margin: 10px 0; font-size: 13px; }
+.meldung.gut { background: var(--gruen-hell); color: var(--gruen); }
+.meldung.schlecht { background: var(--rot-hell); color: var(--rot); }
+.leer { padding: 34px 0; text-align: center; color: var(--leiser); }
+</style>
+</head>
+<body>
+<div class="huelle">
+
+<header>
+  <h1>Verwaltung</h1>
+  <span class="hinweis" id="stand"></span>
+  <span class="weg"><a href="index.html">← zur öffentlichen Übersicht</a></span>
+</header>
+
+<div class="tuer" id="tuer">
+  <input type="password" id="passwort" placeholder="Passwort" autocomplete="current-password" style="flex:0 1 240px">
+  <button class="wichtig" id="anmelden">Anmelden</button>
+  <span class="hinweis" id="tuer-text">Ohne Anmeldung nur zum Ansehen.</span>
+</div>
+
+<div id="meldung"></div>
+
+<div class="steuerung">
+  <input type="search" id="suche" placeholder="Suchen …">
+  <select id="quelle"><option value="">Alle Quellen</option></select>
+  <select id="kategorie"><option value="">Alle Arten</option></select>
+  <select id="eintritt">
+    <option value="">Jeder Eintritt</option>
+    <option value="frei">Eintritt frei</option>
+    <option value="spende">Spende</option>
+    <option value="vermutlich">vermutlich kostenfrei</option>
+    <option value="kosten">kostenpflichtig</option>
+  </select>
+  <button class="filter" id="f-kommend" aria-pressed="true">Ab heute</button>
+  <button class="filter" id="f-eigen" aria-pressed="false">Eigene</button>
+  <button class="filter" id="f-korr" aria-pressed="false">Korrigiert</button>
+  <button class="filter" id="f-aus" aria-pressed="false">Ausgeblendet</button>
+  <button id="neu" class="wichtig" disabled>+ Neuer Termin</button>
+  <button id="speichern" class="wichtig" disabled>Speichern</button>
+  <span class="zahl" id="zahl"></span>
+</div>
+
+<table>
+  <thead><tr>
+    <th data-sortier="beginn">Datum</th>
+    <th data-sortier="titel">Titel / Ort</th>
+    <th data-sortier="kategorie">Art</th>
+    <th data-sortier="eintritt">Eintritt</th>
+    <th data-sortier="quelle_name">Quelle</th>
+    <th>Status</th>
+    <th></th>
+  </tr></thead>
+  <tbody id="rumpf"></tbody>
+</table>
+<div class="leer" id="leer" hidden>Nichts gefunden.</div>
+
+<p class="fuss">
+  Eingriffe stehen in <code>daten/verwaltung.json</code>, getrennt von
+  <code>daten/events.json</code>, das dem Sammellauf gehört. Kalender und
+  Tagesmail übernehmen sie beim nächsten nächtlichen Lauf; diese Seite und die
+  öffentliche Übersicht zeigen sie sofort.
+</p>
+
+</div>
+<script>
+/* ================================================================
+   Die Meldestelle — dieselbe Adresse wie in index.html.
+   ================================================================ */
+const MELDESTELLE = "";
+
+const LEER = { stand: null, eigene: [], korrekturen: {}, ausgeblendet: {} };
+const KORRIGIERBAR = ["titel", "beginn", "ende", "ganztaegig", "ort_name",
+  "ort_adresse", "veranstalter", "beschreibung", "kategorie", "zielgruppe",
+  "besonderheit", "eintritt", "dauertermin", "ausgebucht", "anmeldung_noetig",
+  "quelle_url", "status"];
+
+let ROH = [];            // was die Quellen liefern
+let V = structuredClone(LEER);
+let SHA = null, PASSWORT = null, SCHMUTZIG = false;
+let OFFEN = null;        // welche Zeile gerade aufgeklappt ist
+let SORT = { feld: "beginn", ab: true };
+
+const $ = (w) => document.querySelector(w);
+const esc = (t) => String(t ?? "").replace(/[&<>"']/g,
+  (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
+
+/* --- Regeln, deckungsgleich mit scripts/regeln.py ---------------- */
+function anzeige(ev) {
+  if (ev.manuell_bestaetigt)
+    return { frei: "frei", spende: "spende", kostenpflichtig: "kosten" }[ev.eintritt] || "vermutlich";
+  if (ev.eintritt === "kostenpflichtig") return "kosten";
+  if ((ev.eintritt === "frei" || ev.eintritt === "spende") && ev.eintritt_confidence === "hoch")
+    return ev.eintritt === "frei" ? "frei" : "spende";
+  return "vermutlich";
+}
+const BESCHRIFTUNG = { frei: "Eintritt frei", spende: "Spende erbeten",
+                       vermutlich: "vermutlich kostenfrei", kosten: "kostenpflichtig" };
+
+/* --- Verwaltung anwenden, deckungsgleich mit scripts/verwaltung.py -
+   Ausblenden, korrigieren, eigene anhängen — in dieser Reihenfolge.
+   Anders als dort wird hier nichts entfernt: Ausgeblendetes bleibt in der
+   Liste und wird markiert, sonst könnten Sie es nie zurückholen. ---- */
+function zusammenfuehren() {
+  const liste = ROH.map((ev) => {
+    const k = V.korrekturen[ev.id];
+    let e = ev;
+    if (k) {
+      e = { ...ev };
+      for (const feld of KORRIGIERBAR) if (feld in k) e[feld] = k[feld];
+      // Nur eine ausdrückliche Preiskorrektur macht aus "vermutlich
+      // kostenfrei" ein "Eintritt frei" — siehe scripts/verwaltung.py.
+      if ("eintritt" in k) e.manuell_bestaetigt = true;
+      e._korrigiert = true;
+    }
+    if (V.ausgeblendet[ev.id]) e = { ...e, _versteckt: true };
+    return e;
+  });
+  const da = new Set(liste.map((e) => e.id));
+  for (const ev of V.eigene) {
+    if (da.has(ev.id)) continue;
+    liste.push({ ...ev, manuell_bestaetigt: true, _eigen: true,
+                 _versteckt: !!V.ausgeblendet[ev.id] });
+  }
+  return liste;
+}
+
+/* --- ID wie scripts/event_id.py --------------------------------- */
+const UMLAUTE = { "ä": "ae", "ö": "oe", "ü": "ue", "ß": "ss" };
+function normalisieren(t) {
+  t = String(t ?? "").toLowerCase();
+  for (const [u, e] of Object.entries(UMLAUTE)) t = t.split(u).join(e);
+  t = t.normalize("NFKD").replace(/[̀-ͯ]/g, "");
+  return [...t].filter((c) => /[a-z0-9]/i.test(c) || /\p{L}|\p{N}/u.test(c)).join("");
+}
+async function eventId(titel, datum, ort) {
+  const roh = `${normalisieren(titel)}|${String(datum ?? "").slice(0, 10)}|${normalisieren(ort)}`;
+  const h = await crypto.subtle.digest("SHA-1", new TextEncoder().encode(roh));
+  return [...new Uint8Array(h)].map((b) => b.toString(16).padStart(2, "0")).join("").slice(0, 16);
+}
+
+/* --- Anzeige ----------------------------------------------------- */
+function melde(text, gut = true) {
+  $("#meldung").innerHTML = text
+    ? `<div class="meldung ${gut ? "gut" : "schlecht"}">${esc(text)}</div>` : "";
+  if (text && gut) setTimeout(() => { if ($("#meldung").textContent === text) $("#meldung").innerHTML = ""; }, 6000);
+}
+function datumText(ev) {
+  const a = (ev.beginn || "").slice(0, 10), b = (ev.ende || "").slice(0, 10);
+  // "00:00" ist keine Uhrzeit, sondern eine fehlende — Quellen setzen sie,
+  // wenn auf der Seite keine stand. Als Angabe wäre sie eine Falschaussage.
+  let zeit = ev.ganztaegig ? "" : (ev.beginn || "").slice(11, 16);
+  if (zeit === "00:00") zeit = "";
+  const tag = a ? a.slice(8, 10) + "." + a.slice(5, 7) + "." + a.slice(0, 4) : "—";
+  const bis = b && b !== a ? ` – ${b.slice(8, 10)}.${b.slice(5, 7)}.` : "";
+  return tag + bis + (zeit ? `<div class="unter">${zeit} Uhr</div>` : "");
+}
+
+function passt(ev) {
+  const s = $("#suche").value.trim().toLowerCase();
+  if (s && ![ev.titel, ev.ort_name, ev.beschreibung, ev.veranstalter, ev.quelle_name]
+        .some((f) => String(f ?? "").toLowerCase().includes(s))) return false;
+  if ($("#quelle").value && ev.quelle_name !== $("#quelle").value) return false;
+  if ($("#kategorie").value && ev.kategorie !== $("#kategorie").value) return false;
+  if ($("#eintritt").value && anzeige(ev) !== $("#eintritt").value) return false;
+
+  const an = (w) => $(w).getAttribute("aria-pressed") === "true";
+  if (an("#f-eigen") && !ev._eigen) return false;
+  if (an("#f-korr") && !ev._korrigiert) return false;
+  if (an("#f-aus") && !ev._versteckt) return false;
+  if (an("#f-kommend")) {
+    const heute = new Date().toISOString().slice(0, 10);
+    const letzter = ((ev.ende || ev.beginn || "").slice(0, 10)) || "0000";
+    if (letzter < heute) return false;
+  }
+  return true;
+}
+
+function zeichnen() {
+  const alle = zusammenfuehren();
+  const sicht = alle.filter(passt).sort((a, b) => {
+    const f = SORT.feld;
+    const x = String((f === "eintritt" ? anzeige(a) : a[f]) ?? "");
+    const y = String((f === "eintritt" ? anzeige(b) : b[f]) ?? "");
+    return (x < y ? -1 : x > y ? 1 : 0) * (SORT.ab ? 1 : -1);
+  });
+
+  const rumpf = $("#rumpf");
+  rumpf.innerHTML = "";
+  for (const ev of sicht) {
+    const zeile = document.createElement("tr");
+    if (ev._versteckt) zeile.className = "aus";
+    const a = anzeige(ev);
+    const marken = [
+      ev._eigen ? '<span class="marke eigen">eigen</span>' : "",
+      ev._korrigiert ? '<span class="marke korrigiert">korrigiert</span>' : "",
+      ev._versteckt ? '<span class="marke versteckt">ausgeblendet</span>' : "",
+      ev.ausgebucht ? '<span class="marke">ausgebucht</span>' : "",
+      ev.dauertermin ? '<span class="marke">Dauertermin</span>' : "",
+    ].filter(Boolean).join(" ");
+    zeile.innerHTML = `
+      <td class="datum">${datumText(ev)}</td>
+      <td class="titel-zelle">
+        <div class="titel">${esc(ev.titel)}</div>
+        <div class="unter">${esc(ev.ort_name || "Ort unbekannt")}</div>
+      </td>
+      <td>${esc(ev.kategorie || "—")}</td>
+      <td><span class="marke ${a}">${BESCHRIFTUNG[a]}</span></td>
+      <td class="unter">${ev.quelle_url
+          ? `<a href="${esc(ev.quelle_url)}" target="_blank" rel="noopener">${esc(ev.quelle_name || "Quelle")}</a>`
+          : esc(ev.quelle_name || "—")}</td>
+      <td>${marken || "—"}</td>
+      <td class="knopf-zelle">
+        <button data-tun="bearbeiten" data-id="${esc(ev.id)}">Bearbeiten</button>
+      </td>`;
+    rumpf.appendChild(zeile);
+    if (OFFEN === ev.id) rumpf.appendChild(werkbank(ev));
+  }
+  $("#leer").hidden = sicht.length > 0;
+  $("#zahl").textContent =
+    `${sicht.length} von ${alle.length} · ${V.eigene.length} eigene · `
+    + `${Object.keys(V.korrekturen).length} korrigiert · `
+    + `${Object.keys(V.ausgeblendet).length} ausgeblendet`;
+  $("#speichern").disabled = !SCHMUTZIG || !PASSWORT;
+  $("#speichern").textContent = SCHMUTZIG ? "Speichern *" : "Speichern";
+}
+
+const FELDER = [
+  ["titel", "Titel", "text"], ["beginn", "Beginn", "datetime-local"],
+  ["ende", "Ende", "datetime-local"], ["ort_name", "Ort", "text"],
+  ["kategorie", "Art", "text"], ["veranstalter", "Veranstalter", "text"],
+  ["eintritt", "Eintritt", "auswahl"], ["ganztaegig", "Ganztägig", "ja"],
+  ["dauertermin", "Dauertermin", "ja"], ["ausgebucht", "Ausgebucht", "ja"],
+  ["quelle_url", "Link", "text"], ["beschreibung", "Beschreibung", "lang"],
+];
+const EINTRITTSWERTE = ["frei", "spende", "kostenpflichtig", "unklar"];
+
+function werkbank(ev) {
+  const zeile = document.createElement("tr");
+  zeile.className = "werkbank";
+  const roh = ROH.find((r) => r.id === ev.id);
+  const korr = V.korrekturen[ev.id] || {};
+
+  const eingabe = (feld, art) => {
+    const wert = ev[feld];
+    const n = `data-feld="${feld}"`;
+    if (art === "ja")
+      return `<select ${n}><option value="nein"${!wert ? " selected" : ""}>nein</option>`
+           + `<option value="ja"${wert ? " selected" : ""}>ja</option></select>`;
+    if (art === "auswahl")
+      return `<select ${n}>` + EINTRITTSWERTE.map((w) =>
+        `<option value="${w}"${wert === w ? " selected" : ""}>${w}</option>`).join("") + "</select>";
+    if (art === "lang") return `<textarea ${n}>${esc(wert || "")}</textarea>`;
+    if (art === "datetime-local")
+      return `<input type="datetime-local" ${n} value="${esc((wert || "").slice(0, 16))}">`;
+    return `<input type="text" ${n} value="${esc(wert || "")}">`;
+  };
+
+  zeile.innerHTML = `<td colspan="7">
+    <div class="felder">
+      ${FELDER.map(([feld, name, art]) => `
+        <div class="feld ${art === "lang" ? "breit" : ""} ${feld in korr ? "geaendert" : ""}">
+          <span>${name}</span>${eingabe(feld, art)}
+        </div>`).join("")}
+    </div>
+    <div class="werkzeuge">
+      <button class="wichtig" data-tun="uebernehmen" data-id="${esc(ev.id)}">Übernehmen</button>
+      <button data-tun="zu" >Abbrechen</button>
+      ${ev._versteckt
+        ? `<button data-tun="zeigen" data-id="${esc(ev.id)}">Wieder einblenden</button>`
+        : `<button class="gefahr" data-tun="verstecken" data-id="${esc(ev.id)}">Ausblenden</button>`}
+      ${ev._korrigiert
+        ? `<button class="leise" data-tun="zuruecksetzen" data-id="${esc(ev.id)}">Korrektur verwerfen</button>` : ""}
+      ${ev._eigen
+        ? `<button class="gefahr" data-tun="loeschen" data-id="${esc(ev.id)}">Endgültig löschen</button>` : ""}
+      <span class="hinweis" style="color:var(--leiser);font-size:12px">
+        ${ev._eigen ? "Eigener Termin — Änderungen gehen direkt hinein."
+                    : "Geänderte Felder werden als Korrektur gespeichert; der Rest kommt weiter aus der Quelle."}</span>
+    </div></td>`;
+  return zeile;
+}
+
+/* --- Änderungen einsammeln --------------------------------------- */
+function ausWerkbank() {
+  const werte = {};
+  for (const el of document.querySelectorAll(".werkbank [data-feld]")) {
+    const feld = el.dataset.feld;
+    let w = el.value;
+    if (el.tagName === "SELECT" && (w === "ja" || w === "nein")) w = (w === "ja");
+    else if (el.type === "datetime-local") w = w ? w + ":00" : null;
+    else if (typeof w === "string") { w = w.trim(); if (w === "") w = null; }
+    werte[feld] = w;
+  }
+  return werte;
+}
+
+async function uebernehmen(id) {
+  const werte = ausWerkbank();
+  const eigen = V.eigene.find((e) => e.id === id);
+  if (eigen) {
+    Object.assign(eigen, werte);
+    // Die ID muss aus Titel, Datum und Ort folgen — genau so rechnet sie der
+    // Sammellauf aus (scripts/event_id.py). Bliebe die vom Anlegen stehen,
+    // wäre sie nach der ersten Umbenennung eine andere als die, die eine
+    // Quelle für dieselbe Veranstaltung erzeugt, und beide stünden im
+    // Kalender nebeneinander.
+    const neueId = await eventId(eigen.titel, eigen.beginn, eigen.ort_name || "");
+    if (neueId !== eigen.id) {
+      if (V.ausgeblendet[eigen.id]) {
+        V.ausgeblendet[neueId] = V.ausgeblendet[eigen.id];
+        delete V.ausgeblendet[eigen.id];
+      }
+      eigen.id = neueId;
+      if (OFFEN === id) OFFEN = neueId;
+    }
+  } else {
+    const roh = ROH.find((r) => r.id === id);
+    const korr = {};
+    for (const [feld, wert] of Object.entries(werte)) {
+      const alt = roh ? roh[feld] ?? null : null;
+      // Nur echte Abweichungen festhalten. Sonst stuende bald bei jedem
+      // angesehenen Termin eine Korrektur, die nichts korrigiert.
+      if (JSON.stringify(wert) !== JSON.stringify(alt)) korr[feld] = wert;
+    }
+    if (Object.keys(korr).length) V.korrekturen[id] = korr;
+    else delete V.korrekturen[id];
+  }
+  SCHMUTZIG = true; OFFEN = null; zeichnen();
+}
+
+/* --- Speichern ---------------------------------------------------- */
+async function anWorker(nutzlast) {
+  if (!MELDESTELLE) throw new Error("Keine Meldestelle eingetragen (const MELDESTELLE in verwaltung.html).");
+  const a = await fetch(MELDESTELLE.replace(/\/+$/, "") + "/verwaltung", {
+    method: "POST", headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({ passwort: PASSWORT, ...nutzlast }),
+  });
+  const d = await a.json().catch(() => ({}));
+  if (!a.ok) { const f = new Error(d.fehler || `HTTP ${a.status}`); f.status = a.status; throw f; }
+  return d;
+}
+
+async function anmelden() {
+  PASSWORT = $("#passwort").value;
+  try {
+    const d = await anWorker({ aktion: "lesen" });
+    if (d.inhalt) V = { ...structuredClone(LEER), ...d.inhalt };
+    SHA = d.sha;
+    $("#tuer").classList.add("offen");
+    $("#tuer-text").textContent = "Angemeldet. Änderungen werden erst beim Speichern übertragen.";
+    $("#passwort").hidden = true; $("#anmelden").hidden = true;
+    $("#neu").disabled = false;
+    melde("Angemeldet.");
+    zeichnen();
+  } catch (f) {
+    PASSWORT = null;
+    melde(f.status === 401 ? "Passwort falsch." : "Anmeldung fehlgeschlagen: " + f.message, false);
+  }
+}
+
+async function speichern() {
+  V.stand = new Date().toISOString().slice(0, 19);
+  try {
+    const d = await anWorker({ aktion: "schreiben", inhalt: {
+      stand: V.stand, eigene: V.eigene,
+      korrekturen: V.korrekturen, ausgeblendet: V.ausgeblendet }, sha: SHA });
+    SHA = d.sha; SCHMUTZIG = false;
+    melde("Gespeichert. Die öffentliche Übersicht zeigt es sofort, "
+        + "Kalender und Mail beim nächsten nächtlichen Lauf.");
+    zeichnen();
+  } catch (f) {
+    if (f.status === 409)
+      melde("Jemand — vermutlich der nächtliche Lauf — hat die Datei inzwischen "
+          + "geändert. Bitte die Seite neu laden; Ihre Änderungen gehen dabei "
+          + "verloren, deshalb vorher notieren.", false);
+    else melde("Nicht gespeichert: " + f.message, false);
+  }
+}
+
+/* --- Ereignisse --------------------------------------------------- */
+document.addEventListener("click", async (e) => {
+  const k = e.target.closest("button[data-tun]");
+  if (!k) return;
+  const { tun, id } = k.dataset;
+  if (tun === "bearbeiten") { OFFEN = OFFEN === id ? null : id; zeichnen(); }
+  else if (tun === "zu") { OFFEN = null; zeichnen(); }
+  else if (tun === "uebernehmen") await uebernehmen(id);
+  else if (tun === "verstecken") {
+    const grund = prompt("Warum ausblenden? (z. B. Mittagskarte, Dublette)") ?? "";
+    V.ausgeblendet[id] = { grund, wann: new Date().toISOString().slice(0, 10) };
+    SCHMUTZIG = true; OFFEN = null; zeichnen();
+  }
+  else if (tun === "zeigen") { delete V.ausgeblendet[id]; SCHMUTZIG = true; OFFEN = null; zeichnen(); }
+  else if (tun === "zuruecksetzen") { delete V.korrekturen[id]; SCHMUTZIG = true; OFFEN = null; zeichnen(); }
+  else if (tun === "loeschen") {
+    if (!confirm("Diesen selbst angelegten Termin endgültig löschen?")) return;
+    V.eigene = V.eigene.filter((x) => x.id !== id);
+    delete V.ausgeblendet[id]; SCHMUTZIG = true; OFFEN = null; zeichnen();
+  }
+});
+
+$("#neu").addEventListener("click", async () => {
+  const heute = new Date().toISOString().slice(0, 10);
+  const ev = {
+    id: await eventId("Neuer Termin", heute, ""),
+    titel: "Neuer Termin", beginn: heute + "T19:00:00", ende: heute + "T19:00:00",
+    ganztaegig: false, ort_name: null, ort_adresse: null, veranstalter: null,
+    beschreibung: null, kategorie: "Sonstiges", zielgruppe: "Alle",
+    drinnen_draussen: null, anmeldung_noetig: false, ausgebucht: false,
+    dauertermin: false, besonderheit: null, anmeldung_url: null, bild_url: null,
+    quelle_url: null, quellen_weitere: [], quelle_name: "Von Hand",
+    eintritt: "frei", eintritt_beleg: "Von Hand eingetragen.",
+    eintritt_confidence: "hoch", social_text: null, status: "aktiv",
+    zuerst_gesehen: heute, zuletzt_gesehen: heute, manuell_bestaetigt: true,
+  };
+  V.eigene.push(ev); SCHMUTZIG = true; OFFEN = ev.id;
+  // Damit der neue Termin nicht sofort durch einen aktiven Filter verschwindet.
+  for (const w of ["#f-eigen", "#f-korr", "#f-aus"]) $(w).setAttribute("aria-pressed", "false");
+  $("#suche").value = "";
+  zeichnen();
+  document.querySelector(".werkbank input")?.focus();
+});
+
+$("#anmelden").addEventListener("click", anmelden);
+$("#passwort").addEventListener("keydown", (e) => { if (e.key === "Enter") anmelden(); });
+$("#speichern").addEventListener("click", speichern);
+for (const w of ["#suche", "#quelle", "#kategorie", "#eintritt"])
+  $(w).addEventListener("input", () => { OFFEN = null; zeichnen(); });
+for (const w of ["#f-kommend", "#f-eigen", "#f-korr", "#f-aus"])
+  $(w).addEventListener("click", () => {
+    const k = $(w); k.setAttribute("aria-pressed", k.getAttribute("aria-pressed") !== "true");
+    OFFEN = null; zeichnen();
+  });
+for (const th of document.querySelectorAll("th[data-sortier]"))
+  th.addEventListener("click", () => {
+    const f = th.dataset.sortier;
+    SORT = { feld: f, ab: SORT.feld === f ? !SORT.ab : true };
+    for (const x of document.querySelectorAll("th[data-sortier]"))
+      x.innerHTML = x.innerHTML.replace(/ <span class="pfeil">[▲▼]<\/span>/, "");
+    th.innerHTML += ` <span class="pfeil">${SORT.ab ? "▲" : "▼"}</span>`;
+    zeichnen();
+  });
+
+window.addEventListener("beforeunload", (e) => {
+  if (SCHMUTZIG) { e.preventDefault(); e.returnValue = ""; }
+});
+
+/* --- Start -------------------------------------------------------- */
+Promise.all([
+  fetch("daten/events.json", { cache: "no-cache" }).then((a) => a.json()),
+  fetch("daten/verwaltung.json", { cache: "no-cache" })
+    .then((a) => (a.ok ? a.json() : structuredClone(LEER)))
+    .catch(() => structuredClone(LEER)),
+]).then(([daten, verw]) => {
+  ROH = daten.events || [];
+  V = { ...structuredClone(LEER), ...verw };
+  // events.json führt kein Laufdatum; das jüngste `zuletzt_gesehen` sagt dasselbe.
+  const gesehen = ROH.map((e) => e.zuletzt_gesehen).filter(Boolean).sort();
+  $("#stand").textContent = `${ROH.length} Termine · Sammellauf ${gesehen.at(-1) || "unbekannt"}`;
+  for (const [w, feld] of [["#quelle", "quelle_name"], ["#kategorie", "kategorie"]]) {
+    for (const wert of [...new Set(ROH.map((e) => e[feld]).filter(Boolean))].sort())
+      $(w).insertAdjacentHTML("beforeend", `<option>${esc(wert)}</option>`);
+  }
+  zeichnen();
+}).catch((f) => {
+  $("#rumpf").innerHTML =
+    `<tr><td colspan="7">Die Daten ließen sich nicht laden (${esc(f.message)}).</td></tr>`;
+});
+</script>
+</body>
+</html>
