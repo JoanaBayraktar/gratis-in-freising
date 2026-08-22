@@ -1,40 +1,45 @@
-"""Wegwerf: Was steht im Fehlerkoerper der 400er?"""
-import json, time
+"""Wegwerf: Andere Wege zu den Beitraegen der fuenf betroffenen Accounts."""
+import json, re, time
 from playwright.sync_api import sync_playwright
 
-NAMEN = ["genussgarten.freising", "goldmarie.freising", "schafhof_art_forum",
-         "gasthof_lerner_", "lindenkeller.freising"]
+TEST = ["genussgarten.freising", "schafhof_art_forum", "lindenkeller.freising"]
 
-HOLEN = """async (name) => {
-    const r = await fetch(`/api/v1/users/web_profile_info/?username=${name}`,
-                          {headers: {"X-IG-App-ID": "936619743392459"}});
-    const txt = await r.text();
-    return {status: r.status, koerper: txt.slice(0, 400)};
-}"""
-
-# Zweiter Versuch ueber eine andere Schnittstelle: Nutzer-ID per Suche
-SUCHE = """async (name) => {
-    const r = await fetch(`/web/search/topsearch/?context=blended&query=${name}`,
-                          {headers: {"X-IG-App-ID": "936619743392459"}});
-    if (!r.ok) return `HTTP ${r.status}`;
-    const j = await r.json();
-    return (j.users||[]).slice(0,3).map(u =>
-        `${u.user.username} (privat=${u.user.is_private}, verifiziert=${u.user.is_verified})`);
-}"""
+def sicher(fn, *a):
+    try: return fn(*a)
+    except Exception as e: return f"FEHLER {type(e).__name__}: {str(e)[:120]}"
 
 with sync_playwright() as p:
     b = p.chromium.launch()
-    ctx = b.new_context(locale="de-DE",
+    ctx = b.new_context(locale="de-DE", viewport={"width":1280,"height":2400},
         user_agent=("Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 "
                     "(KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"))
     s = ctx.new_page()
     s.goto("https://www.instagram.com/", wait_until="domcontentloaded", timeout=45000)
-    s.wait_for_timeout(3000)
-    for n in NAMEN:
-        e = s.evaluate(HOLEN, n)
-        print(f"--- {n}: status={e['status']}")
-        print(f"    koerper: {e['koerper'][:250]}")
+    s.wait_for_timeout(4000)
+    print("Cookies nach Startseite:", sorted(c["name"] for c in ctx.cookies()))
+
+    for name in TEST:
+        print(f"\n{'='*60}\n{name}\n{'='*60}")
+
+        # A) Profilseite MIT Cookies rendern
+        def profil():
+            r = s.goto(f"https://www.instagram.com/{name}/",
+                       wait_until="domcontentloaded", timeout=45000)
+            s.wait_for_timeout(6000)
+            txt = re.sub(r"\s+", " ", s.inner_text("body")).strip()
+            codes = s.evaluate("""() => [...new Set([...document.querySelectorAll('a[href*="/p/"]')]
+                .map(a => (a.getAttribute('href').match(/\\/p\\/([^/]+)/)||[])[1]).filter(Boolean))]""")
+            return (f"status={r.status if r else '—'} url={s.url[:70]} "
+                    f"text={len(txt)}Z codes={codes[:6]}")
+        print("A) Profilseite:", sicher(profil))
+
+        # B) Beitrags-Einbettung (liefert Bildtext ohne Anmeldung)
+        def einbettung(code):
+            r = s.goto(f"https://www.instagram.com/p/{code}/embed/captioned/",
+                       wait_until="domcontentloaded", timeout=45000)
+            s.wait_for_timeout(2500)
+            txt = re.sub(r"\s+", " ", s.inner_text("body")).strip()
+            return f"status={r.status if r else '—'} text={len(txt)}Z >>> {txt[:200]}"
+        print("B) Einbettung:", sicher(einbettung, "DcL7ISqDeLB"))
         time.sleep(3)
-        print(f"    suche:   {s.evaluate(SUCHE, n)}")
-        time.sleep(4)
     b.close()
