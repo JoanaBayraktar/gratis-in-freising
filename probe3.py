@@ -1,29 +1,40 @@
-"""Wegwerf: Warum antworten fuenf Accounts mit 400? Existieren sie, sind sie privat?"""
-import json, re, time, urllib.request, urllib.error
+"""Wegwerf: Was steht im Fehlerkoerper der 400er?"""
+import json, time
+from playwright.sync_api import sync_playwright
 
-NAMEN = ["genussgarten.freising", "goldmarie.freising", "galerie_am_lindenkeller",
-         "gasthof_lerner_", "cafebar_am_schlueter", "schafhof_art_forum",
-         "lindenkeller.freising"]
+NAMEN = ["genussgarten.freising", "goldmarie.freising", "schafhof_art_forum",
+         "gasthof_lerner_", "lindenkeller.freising"]
 
-# Instagram liefert Crawlern (Facebook, Google) Metadaten statt der App-Huelle.
-BOT = {"User-Agent": "facebookexternalhit/1.1 (+http://www.facebook.com/externalhit_uatext.php)"}
+HOLEN = """async (name) => {
+    const r = await fetch(`/api/v1/users/web_profile_info/?username=${name}`,
+                          {headers: {"X-IG-App-ID": "936619743392459"}});
+    const txt = await r.text();
+    return {status: r.status, koerper: txt.slice(0, 400)};
+}"""
 
-def metadaten(name):
-    url = f"https://www.instagram.com/{name}/"
-    try:
-        with urllib.request.urlopen(urllib.request.Request(url, headers=BOT), timeout=25) as r:
-            t = r.read().decode("utf-8", "replace")
-            status = r.status
-    except urllib.error.HTTPError as e:
-        return f"HTTP {e.code}", "", ""
-    except Exception as e:
-        return type(e).__name__, "", ""
-    titel = re.search(r'<meta property="og:title" content="([^"]*)"', t)
-    besch = re.search(r'<meta property="og:description" content="([^"]*)"', t)
-    return f"{status}", (titel.group(1) if titel else "—"), (besch.group(1) if besch else "—")
+# Zweiter Versuch ueber eine andere Schnittstelle: Nutzer-ID per Suche
+SUCHE = """async (name) => {
+    const r = await fetch(`/web/search/topsearch/?context=blended&query=${name}`,
+                          {headers: {"X-IG-App-ID": "936619743392459"}});
+    if (!r.ok) return `HTTP ${r.status}`;
+    const j = await r.json();
+    return (j.users||[]).slice(0,3).map(u =>
+        `${u.user.username} (privat=${u.user.is_private}, verifiziert=${u.user.is_verified})`);
+}"""
 
-for n in NAMEN:
-    st, titel, besch = metadaten(n)
-    print(f"{n:26s} {st:8s} titel={titel[:60]!r}")
-    print(f"{'':26s}          besch={besch[:150]!r}")
-    time.sleep(3)
+with sync_playwright() as p:
+    b = p.chromium.launch()
+    ctx = b.new_context(locale="de-DE",
+        user_agent=("Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 "
+                    "(KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"))
+    s = ctx.new_page()
+    s.goto("https://www.instagram.com/", wait_until="domcontentloaded", timeout=45000)
+    s.wait_for_timeout(3000)
+    for n in NAMEN:
+        e = s.evaluate(HOLEN, n)
+        print(f"--- {n}: status={e['status']}")
+        print(f"    koerper: {e['koerper'][:250]}")
+        time.sleep(3)
+        print(f"    suche:   {s.evaluate(SUCHE, n)}")
+        time.sleep(4)
+    b.close()
