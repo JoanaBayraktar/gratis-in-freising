@@ -3,21 +3,20 @@
     "verlauf": [
       12,
       12,
-      12,
       23,
       24,
       24,
       24,
       22,
       25,
+      24,
       24
     ],
     "fehlversuche": 0,
-    "letzter_erfolg": "2026-08-22"
+    "letzter_erfolg": "2026-08-23"
   },
   "Merkur Veranstaltungen": {
     "verlauf": [
-      10,
       9,
       10,
       22,
@@ -26,10 +25,11 @@
       18,
       25,
       16,
-      27
+      27,
+      12
     ],
     "fehlversuche": 0,
-    "letzter_erfolg": "2026-08-22"
+    "letzter_erfolg": "2026-08-23"
   },
   "Schafhof Kunstforum": {
     "verlauf": [
@@ -45,7 +45,7 @@
       4
     ],
     "fehlversuche": 0,
-    "letzter_erfolg": "2026-08-22"
+    "letzter_erfolg": "2026-08-23"
   },
   "Furtner Freising": {
     "verlauf": [
@@ -58,10 +58,10 @@
       23,
       23,
       23,
-      23
+      22
     ],
     "fehlversuche": 0,
-    "letzter_erfolg": "2026-08-22"
+    "letzter_erfolg": "2026-08-23"
   },
   "Einfach selber machen": {
     "verlauf": [
@@ -77,62 +77,66 @@
       1
     ],
     "fehlversuche": 0,
-    "letzter_erfolg": "2026-08-22"
+    "letzter_erfolg": "2026-08-23"
   },
   "vhs Freising — kostenfrei": {
     "verlauf": [
-      40,
       36,
       36,
       36,
       40,
       36,
+      40,
       40,
       40,
       40,
       40
     ],
     "fehlversuche": 0,
-    "letzter_erfolg": "2026-08-22"
+    "letzter_erfolg": "2026-08-23"
   },
   "Modern Studio": {
     "verlauf": [
       3,
       3,
       3,
+      3,
       3
     ],
     "fehlversuche": 0,
-    "letzter_erfolg": "2026-08-22"
+    "letzter_erfolg": "2026-08-23"
   },
   "DAV Freising — Vortraege": {
     "verlauf": [
       3,
       0,
       0,
+      0,
       0
     ],
     "fehlversuche": 0,
-    "letzter_erfolg": "2026-08-22"
+    "letzter_erfolg": "2026-08-23"
   },
   "3Klang Musik": {
     "verlauf": [
       2,
       2,
       2,
+      2,
       2
     ],
     "fehlversuche": 0,
-    "letzter_erfolg": "2026-08-22"
+    "letzter_erfolg": "2026-08-23"
   },
   "TUM Freising": {
     "verlauf": [
       11,
       5,
       11,
+      7,
       7
     ],
     "fehlversuche": 0,
-    "letzter_erfolg": "2026-08-22"
+    "letzter_erfolg": "2026-08-23"
   }
 }

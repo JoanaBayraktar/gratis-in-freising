@@ -19,37 +19,9 @@ Eintrag nicht mehr an.
 - **Beleg:** _kein Hinweis im Text gefunden_
 - **Quelle:** https://veranstaltungen.merkur.de/freising/sauna-sommerpause-e65c8a94e2f8c29083a73af76b53f02cc.html
 
-## Krisendienst Psychiatrie Oberbayern
-- **Wann:** 22.08.2026 00:00
-- **Wo:** —
-- **Angezeigt als:** vermutlich kostenfrei — Quelle nennt `frei` (Sicherheit: niedrig)
-- **Beleg:** _kein Hinweis im Text gefunden_
-- **Quelle:** https://veranstaltungen.merkur.de/freising/krisendienst-psychiatrie-oberbayern-e41465f1273dfbd319759a89437962570.html
-
-## Wegen der Volksfestaufbaus
-- **Wann:** 22.08.2026 00:00
-- **Wo:** Luitpoldanlage Freising
-- **Angezeigt als:** vermutlich kostenfrei — Quelle nennt `unklar` (Sicherheit: niedrig)
-- **Beleg:** _kein Hinweis im Text gefunden_
-- **Quelle:** https://veranstaltungen.merkur.de/freising/wegen-der-volksfestaufbaus-e0cdc8c806c2ce4cd61c54a43661f86ad.html
-
-## König-Ludwig-Verein
-- **Wann:** 22.08.2026 18:00
-- **Wo:** Privatwohnung des Vorsitzenden Martin Wiesheu
-- **Angezeigt als:** vermutlich kostenfrei — Quelle nennt `unklar` (Sicherheit: mittel)
-- **Beleg:** _kein Hinweis im Text gefunden_
-- **Quelle:** https://veranstaltungen.merkur.de/freising/koenig-ludwig-verein-ee3f84f419caa41de2b8b0ae7a23bf5b3.html
-
-## Landratsamt sucht Pflegefamilien
-- **Wann:** 23.08.2026 00:00
-- **Wo:** —
-- **Angezeigt als:** vermutlich kostenfrei — Quelle nennt `frei` (Sicherheit: niedrig)
-- **Beleg:** _kein Hinweis im Text gefunden_
-- **Quelle:** https://veranstaltungen.merkur.de/freising/landratsamt-sucht-pflegefamilien-e381cd7cffc281ded1893a8353bb39ae4.html
-
 ## Hubertia-Schützen
 - **Wann:** 23.08.2026 11:00
-- **Wo:** —
+- **Wo:** Maibaum Attaching
 - **Angezeigt als:** vermutlich kostenfrei — Quelle nennt `unklar` (Sicherheit: niedrig)
 - **Beleg:** _kein Hinweis im Text gefunden_
 - **Quelle:** https://veranstaltungen.merkur.de/freising/hubertia-schuetzen-eb55646269a001f40f80e166ce2b9e2db.html
@@ -75,12 +47,33 @@ Eintrag nicht mehr an.
 - **Beleg:** _kein Hinweis im Text gefunden_
 - **Quelle:** https://veranstaltungen.merkur.de/freising/evang-luth-gemeinde-ea1d7004c1dda0a7b6d41acb0f877117b.html
 
+## Caritas Singkreis für Senioren
+- **Wann:** 25.08.2026 15:00
+- **Wo:** Caritas-Zentrum Freising
+- **Angezeigt als:** vermutlich kostenfrei — Quelle nennt `unklar` (Sicherheit: niedrig)
+- **Beleg:** _kein Hinweis im Text gefunden_
+- **Quelle:** https://veranstaltungen.merkur.de/freising/caritas-singkreis-fuer-senioren-ea60a436886dcbb638705ab622be2083e.html
+
+## Gospelchor
+- **Wann:** 25.08.2026 19:30
+- **Wo:** Evang. Gemeindehaus Christi Himmelfahrt
+- **Angezeigt als:** vermutlich kostenfrei — Quelle nennt `unklar` (Sicherheit: niedrig)
+- **Beleg:** _kein Hinweis im Text gefunden_
+- **Quelle:** https://veranstaltungen.merkur.de/freising/gospelchor-ea0726ac0a1b51ad1893ba13cfbf72914.html
+
 ## Kreuzbund SHG Bahnhofstraße
 - **Wann:** 27.08.2026 19:30
 - **Wo:** Caritas-Zentrum Freising
 - **Angezeigt als:** vermutlich kostenfrei — Quelle nennt `frei` (Sicherheit: mittel)
 - **Beleg:** _kein Hinweis im Text gefunden_
 - **Quelle:** https://veranstaltungen.merkur.de/freising/kreuzbund-shg-bahnhofstrasse-ec0093f7bfcf96906ff24eb4ce9eea60e.html
+
+## Bücherflohmarkt der Stadtbibliothek
+- **Wann:** 05.09.2026 10:00
+- **Wo:** Stadtbibliothek Freising
+- **Angezeigt als:** vermutlich kostenfrei — Quelle nennt `spende` (Sicherheit: mittel)
+- **Beleg:** freiwillige Zahlung in die „Flohmarktkasse“
+- **Quelle:** https://veranstaltungen.freising.de/freising/buecherflohmarkt-der-stadtbibliothek-e0b6607a5d3a60fffb870bd10536bf2da.html
 
 ## Die Demokratie feiern – gemeinsam in Freising
 - **Wann:** 02.10.2026 18:00
