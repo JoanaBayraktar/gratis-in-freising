@@ -24,27 +24,26 @@ END:STANDARD
 END:VTIMEZONE
 BEGIN:VEVENT
 UID:9dbb539d76866b10@gratis-freising
-DTSTAMP:20260823T040906Z
+DTSTAMP:20260824T041255Z
 DTSTART;VALUE=DATE:20260518
 DTEND;VALUE=DATE:20261019
 SUMMARY:TUM tanzt! (vermutlich frei)
 LOCATION:München\, Garching\, Freising
-DESCRIPTION:Die Veranstaltungsreihe lädt zum Mitmachen\, Diskutieren und E
- rleben ein. Es gibt Workshops\, Performances und offene Angebote für alle
-  Interessierten\, die Bewegung und Kunst verbinden möchten.\n\nEintritt: 
- vermutlich kostenfrei (Quelle nennt: frei)\nBeleg: "TUM tanzt! geht 2026 i
- n die zweite Runde. Mit vielen Angeboten zum Mitmachen\, Diskutieren und E
- rleben."\nSicherheit: mittel\n\nVeranstalter: TUM\nKategorie: Kunst\nZielg
- ruppe: Alle\nDrinnen/Draussen: beides\n\nQuelle: https://www.tum.de/aktuel
- les/veranstaltungen/terminuebersicht?tx_solr%5Bfilter%5D%5B0%5D=location%3
- AFreising
+DESCRIPTION:Die Initiative bietet vielfältige Angebote zum Mitmachen\, Dis
+ kutieren und Erleben von Tanz. Ziel ist es\, Bewegung und Kreativität in 
+ den Hochschulalltag zu integrieren.\n\nEintritt: vermutlich kostenfrei (Qu
+ elle nennt: frei)\nBeleg: "TUM tanzt! geht 2026 in die zweite Runde. Mit v
+ ielen Angeboten zum Mitmachen\, Diskutieren und Erleben."\nSicherheit: mit
+ tel\n\nVeranstalter: TUM\nKategorie: Kunst\nZielgruppe: Alle\nDrinnen/Drau
+ ssen: beides\n\nQuelle: https://www.tum.de/aktuelles/veranstaltungen/termi
+ nuebersicht?tx_solr%5Bfilter%5D%5B0%5D=location%3AFreising
 URL:https://www.tum.de/aktuelles/veranstaltungen/terminuebersicht?tx_solr%5
  Bfilter%5D%5B0%5D=location%3AFreising
 CATEGORIES:Kunst
 END:VEVENT
 BEGIN:VEVENT
 UID:d2b3c21197115322@gratis-freising
-DTSTAMP:20260823T040906Z
+DTSTAMP:20260824T041255Z
 DTSTART;VALUE=DATE:20260822
 DTEND;VALUE=DATE:20260917
 SUMMARY:Sauna-Sommerpause (vermutlich frei)
@@ -60,115 +59,78 @@ URL:https://veranstaltungen.merkur.de/freising/sauna-sommerpause-e65c8a94e2
 CATEGORIES:Sonstiges
 END:VEVENT
 BEGIN:VEVENT
-UID:a1e7b5c9ce8b0b5b@gratis-freising
-DTSTAMP:20260823T040906Z
-DTSTART;TZID=Europe/Berlin:20260823T110000
-DTEND;TZID=Europe/Berlin:20260823T110000
-SUMMARY:Hubertia-Schützen (vermutlich frei)
-LOCATION:Maibaum Attaching — 85356 Freising
-DESCRIPTION:Ein gemütlicher Radausflug führt zur Attachinger Biergarten. 
- Start ist um 11 Uhr am Maibaum Attaching. Ein idealer Ausflug für alle\, 
- die die Natur und Geselligkeit genießen möchten.\n\nEintritt: vermutlich
-  kostenfrei (Quelle nennt: unklar)\nSicherheit: niedrig\n\nKategorie: Sons
- tiges\nZielgruppe: Alle\nDrinnen/Draussen: draussen\n\nQuelle: https://ver
- anstaltungen.merkur.de/freising/hubertia-schuetzen-eb55646269a001f40f80e16
- 6ce2b9e2db.html
-URL:https://veranstaltungen.merkur.de/freising/hubertia-schuetzen-eb5564626
- 9a001f40f80e166ce2b9e2db.html
-CATEGORIES:Sonstiges
-END:VEVENT
-BEGIN:VEVENT
-UID:135cfb2b409bb5bc@gratis-freising
-DTSTAMP:20260823T040906Z
-DTSTART;TZID=Europe/Berlin:20260823T133000
-DTEND;TZID=Europe/Berlin:20260823T163000
-SUMMARY:DIMU (vermutlich frei)
-LOCATION:Diözesanmuseum — Domberg 21\, 85354 Freising
-DESCRIPTION:Kreativwerkstatt im Diözesanmuseum für Kinder und Familien. O
- hne Anmeldung können kleine Künstler kreativ werden und ihre Ideen umset
- zen.\n\nEintritt: vermutlich kostenfrei (Quelle nennt: unklar)\nSicherheit
- : niedrig\n\nVeranstalter: Diözesanmuseum Freising\nKategorie: Kinderprog
- ramm\nZielgruppe: Kinder\nDrinnen/Draussen: drinnen\n\nQuelle: https://ver
- anstaltungen.merkur.de/freising/dimu-ebb352caa00c8dd3be60a1c0ca9a7ace8.htm
- l
-URL:https://veranstaltungen.merkur.de/freising/dimu-ebb352caa00c8dd3be60a1c
- 0ca9a7ace8.html
-CATEGORIES:Kinderprogramm
-END:VEVENT
-BEGIN:VEVENT
-UID:798917347ae98442@gratis-freising
-DTSTAMP:20260823T040906Z
-DTSTART;TZID=Europe/Berlin:20260824T170000
-DTEND;TZID=Europe/Berlin:20260824T200000
-SUMMARY:Spieleabend (vermutlich frei)
-LOCATION:Stadtbibliothek Freising — Weizengasse 3
-DESCRIPTION:Ein geselliger Spieleabend für alle Generationen in der Stadtb
- ibliothek. Es wird um Anmeldung gebeten\, um die Planung zu erleichtern.\n
- \nEintritt: vermutlich kostenfrei (Quelle nennt: unklar)\nSicherheit: nied
- rig\n\nKategorie: Geselligkeit/Spiele/Treffen\nZielgruppe: Alle\nDrinnen/D
- raussen: drinnen\nAnmeldung noetig: ja — siehe Quelle\n\nQuelle: https:/
- /veranstaltungen.merkur.de/freising/spieleabend-e4fe19a685dbf72bf77d469b7a
- b5b0d4e.html
-URL:https://veranstaltungen.merkur.de/freising/spieleabend-e4fe19a685dbf72b
- f77d469b7ab5b0d4e.html
-CATEGORIES:Geselligkeit/Spiele/Treffen
-END:VEVENT
-BEGIN:VEVENT
 UID:8a049f29f080fc2e@gratis-freising
-DTSTAMP:20260823T040906Z
+DTSTAMP:20260824T041255Z
 DTSTART;TZID=Europe/Berlin:20260824T190000
-DTEND;TZID=Europe/Berlin:20260824T210000
+DTEND;TZID=Europe/Berlin:20260824T190000
 SUMMARY:Evang.-Luth. Gemeinde: Friedensgebet (vermutlich frei)
 LOCATION:Christi-Himmelfahrts-Kirche — Saarstraße 2
 DESCRIPTION:Ein gemeinsames Friedensgebet für alle Religionen und National
- itäten jeden Montag in der Christi-Himmelfahrts-Kirche.\n\nEintritt: verm
- utlich kostenfrei (Quelle nennt: unklar)\nSicherheit: niedrig\n\nKategorie
- : Religion\nZielgruppe: Alle\nDrinnen/Draussen: drinnen\n\nQuelle: https:/
- /veranstaltungen.merkur.de/freising/evang-luth-gemeinde-ea1d7004c1dda0a7b6
- d41acb0f877117b.html
+ itäten. Die Veranstaltung findet wöchentlich statt und bietet Raum für 
+ Besinnung und Gemeinschaft.\n\nEintritt: vermutlich kostenfrei (Quelle nen
+ nt: frei)\nSicherheit: mittel\n\nKategorie: Religion\nZielgruppe: Alle\nDr
+ innen/Draussen: drinnen\n\nQuelle: https://veranstaltungen.merkur.de/freis
+ ing/evang-luth-gemeinde-ea1d7004c1dda0a7b6d41acb0f877117b.html
 URL:https://veranstaltungen.merkur.de/freising/evang-luth-gemeinde-ea1d7004
  c1dda0a7b6d41acb0f877117b.html
 CATEGORIES:Religion
 END:VEVENT
 BEGIN:VEVENT
 UID:0e0e7541ac1e1d4c@gratis-freising
-DTSTAMP:20260823T040906Z
+DTSTAMP:20260824T041255Z
 DTSTART;TZID=Europe/Berlin:20260825T150000
 DTEND;TZID=Europe/Berlin:20260825T160000
 SUMMARY:Caritas Singkreis für Senioren (vermutlich frei)
-LOCATION:Caritas-Zentrum Freising — Bahnhofstraße 20\, 85354 Freising
-DESCRIPTION:Ein geselliger Singkreis für Senioren mit Volksliedern und Wan
- derliedern. Ohne Anmeldung können alle Interessierten teilnehmen und geme
- insam singen.\n\nEintritt: vermutlich kostenfrei (Quelle nennt: unklar)\nS
- icherheit: niedrig\n\nKategorie: Geselligkeit/Spiele/Treffen\nZielgruppe: 
- Senioren\nDrinnen/Draussen: drinnen\n\nQuelle: https://veranstaltungen.mer
- kur.de/freising/caritas-singkreis-fuer-senioren-ea60a436886dcbb638705ab622
- be2083e.html
+LOCATION:Caritas-Zentrum Freising — Bahnhofstr. 20
+DESCRIPTION:Ein Singkreis für Senioren\, der jeden zweiten und vierten Die
+ nstag im Monat stattfindet. Ohne Anmeldung können Teilnehmer gemeinsam Li
+ eder singen und sich austauschen.\n\nEintritt: vermutlich kostenfrei (Quel
+ le nennt: unklar)\nSicherheit: niedrig\n\nKategorie: Musik\nZielgruppe: Se
+ nioren\nDrinnen/Draussen: drinnen\n\nQuelle: https://veranstaltungen.merku
+ r.de/freising/caritas-singkreis-fuer-senioren-ea60a436886dcbb638705ab622be
+ 2083e.html
 URL:https://veranstaltungen.merkur.de/freising/caritas-singkreis-fuer-senio
  ren-ea60a436886dcbb638705ab622be2083e.html
-CATEGORIES:Geselligkeit/Spiele/Treffen
+CATEGORIES:Musik
+END:VEVENT
+BEGIN:VEVENT
+UID:3cbc3de5e69a8bdb@gratis-freising
+DTSTAMP:20260824T041255Z
+DTSTART;TZID=Europe/Berlin:20260825T150000
+DTEND;TZID=Europe/Berlin:20260825T160000
+SUMMARY:Musik liegt in der Luft (vermutlich frei)
+LOCATION:Caritas-Zentrum Freising — Bahnhofstr. 20
+DESCRIPTION:Ein geselliger Singkreis für Senioren mit Volks- und Wanderlie
+ dern. Die Veranstaltung findet jeden zweiten und vierten Dienstag im Monat
+  statt und fördert Gemeinschaft und Freude am gemeinsamen Singen.\n\nEint
+ ritt: vermutlich kostenfrei (Quelle nennt: unklar)\nSicherheit: niedrig\n\
+ nKategorie: Musik\nZielgruppe: Senioren\nDrinnen/Draussen: drinnen\n\nQuel
+ le: https://veranstaltungen.merkur.de/freising/musik-liegt-in-der-luft-e2e
+ 28d8f710c98d240fd03dec9f9fe7bf.html
+URL:https://veranstaltungen.merkur.de/freising/musik-liegt-in-der-luft-e2e2
+ 8d8f710c98d240fd03dec9f9fe7bf.html
+CATEGORIES:Musik
 END:VEVENT
 BEGIN:VEVENT
 UID:f61628dc600c2802@gratis-freising
-DTSTAMP:20260823T040906Z
+DTSTAMP:20260824T041255Z
 DTSTART;TZID=Europe/Berlin:20260825T193000
 DTEND;TZID=Europe/Berlin:20260825T193000
 SUMMARY:Gospelchor (vermutlich frei)
-LOCATION:Evang. Gemeindehaus Christi Himmelfahrt — Martin-Luther-Str. 10\
- , 85356 Freising
-DESCRIPTION:Ein Konzert des Gospelchors mit spiritueller Musik und mitreiß
- enden Klängen. Ein Abend voller Energie und Gemeinschaft.\n\nEintritt: ve
- rmutlich kostenfrei (Quelle nennt: unklar)\nSicherheit: niedrig\n\nKategor
- ie: Konzert\nZielgruppe: Alle\nDrinnen/Draussen: drinnen\n\nQuelle: https:
- //veranstaltungen.merkur.de/freising/gospelchor-ea0726ac0a1b51ad1893ba13cf
- bf72914.html
+LOCATION:Evang. Gemeindehaus Christi Himmelfahrt — Martin-Luther-Str. 10
+DESCRIPTION:Ein Chorabend mit Gospels und spiritueller Musik. Die Veranstal
+ tung findet regelmäßig statt und lädt zum Mitsingen oder Zuhören ein. 
+ Infos gibt es bei der Chorleiterin.\n\nEintritt: vermutlich kostenfrei (Qu
+ elle nennt: unklar)\nSicherheit: niedrig\n\nKategorie: Musik\nZielgruppe: 
+ Alle\nDrinnen/Draussen: drinnen\n\nQuelle: https://veranstaltungen.merkur.
+ de/freising/gospelchor-ea0726ac0a1b51ad1893ba13cfbf72914.html
 URL:https://veranstaltungen.merkur.de/freising/gospelchor-ea0726ac0a1b51ad1
  893ba13cfbf72914.html
-CATEGORIES:Konzert
+CATEGORIES:Musik
 END:VEVENT
 BEGIN:VEVENT
 UID:a753c7385e31a4c3@gratis-freising
-DTSTAMP:20260823T040906Z
+DTSTAMP:20260824T041255Z
 DTSTART;TZID=Europe/Berlin:20260827T193000
 DTEND;TZID=Europe/Berlin:20260827T210000
 SUMMARY:Kreuzbund SHG Bahnhofstraße (vermutlich frei)
@@ -185,28 +147,8 @@ URL:https://veranstaltungen.merkur.de/freising/kreuzbund-shg-bahnhofstrasse
 CATEGORIES:Rat und Hilfe
 END:VEVENT
 BEGIN:VEVENT
-UID:2762193782ba4f12@gratis-freising
-DTSTAMP:20260823T040906Z
-DTSTART;TZID=Europe/Berlin:20260905T100000
-DTEND;TZID=Europe/Berlin:20260905T140000
-SUMMARY:Bücherflohmarkt der Stadtbibliothek (vermutlich frei)
-LOCATION:Stadtbibliothek Freising — Weizengasse 3
-DESCRIPTION:Der monatliche Bücherflohmarkt bietet eine große Auswahl an g
- ebrauchten Büchern\, CDs\, DVDs und Spielen. Bei schlechtem Wetter findet
-  die Veranstaltung im Veranstaltungsraum der Bibliothek statt. Der Erlös 
- geht in die „Flohmarktkasse“.\n\nEintritt: vermutlich kostenfrei (Quel
- le nennt: spende)\nBeleg: "freiwillige Zahlung in die „Flohmarktkasse“
- "\nSicherheit: mittel\n\nVeranstalter: Stadtbibliothek Freising\nKategorie
- : Markt\nZielgruppe: Alle\n\nQuelle: https://veranstaltungen.freising.de/f
- reising/buecherflohmarkt-der-stadtbibliothek-e0b6607a5d3a60fffb870bd10536b
- f2da.html
-URL:https://veranstaltungen.freising.de/freising/buecherflohmarkt-der-stadt
- bibliothek-e0b6607a5d3a60fffb870bd10536bf2da.html
-CATEGORIES:Markt
-END:VEVENT
-BEGIN:VEVENT
 UID:7658e605275a5d7e@gratis-freising
-DTSTAMP:20260823T040906Z
+DTSTAMP:20260824T041255Z
 DTSTART;TZID=Europe/Berlin:20261002T180000
 DTEND;TZID=Europe/Berlin:20261002T235900
 SUMMARY:Die Demokratie feiern – gemeinsam in Freising (vermutlich frei)
