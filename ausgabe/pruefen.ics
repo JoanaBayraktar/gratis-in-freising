@@ -24,26 +24,26 @@ END:STANDARD
 END:VTIMEZONE
 BEGIN:VEVENT
 UID:9dbb539d76866b10@gratis-freising
-DTSTAMP:20260824T041255Z
+DTSTAMP:20260825T040752Z
 DTSTART;VALUE=DATE:20260518
 DTEND;VALUE=DATE:20261019
 SUMMARY:TUM tanzt! (vermutlich frei)
-LOCATION:München\, Garching\, Freising
-DESCRIPTION:Die Initiative bietet vielfältige Angebote zum Mitmachen\, Dis
- kutieren und Erleben von Tanz. Ziel ist es\, Bewegung und Kreativität in 
- den Hochschulalltag zu integrieren.\n\nEintritt: vermutlich kostenfrei (Qu
- elle nennt: frei)\nBeleg: "TUM tanzt! geht 2026 in die zweite Runde. Mit v
- ielen Angeboten zum Mitmachen\, Diskutieren und Erleben."\nSicherheit: mit
- tel\n\nVeranstalter: TUM\nKategorie: Kunst\nZielgruppe: Alle\nDrinnen/Drau
- ssen: beides\n\nQuelle: https://www.tum.de/aktuelles/veranstaltungen/termi
- nuebersicht?tx_solr%5Bfilter%5D%5B0%5D=location%3AFreising
+LOCATION:TUM (München\, Garching\, Freising)
+DESCRIPTION:Das Tanzfestival der TUM bietet Workshops\, Performances und Di
+ skussionsrunden für alle Altersgruppen. Ein kreativer Austausch über Bew
+ egung und Kunst steht im Mittelpunkt.\n\nEintritt: vermutlich kostenfrei (
+ Quelle nennt: frei)\nBeleg: "TUM tanzt! geht 2026 in die zweite Runde. Mit
+  vielen Angeboten zum Mitmachen\, Diskutieren und Erleben."\nSicherheit: m
+ ittel\n\nVeranstalter: TUM\nKategorie: Kunst\nZielgruppe: Alle\nDrinnen/Dr
+ aussen: beides\n\nQuelle: https://www.tum.de/aktuelles/veranstaltungen/ter
+ minuebersicht?tx_solr%5Bfilter%5D%5B0%5D=location%3AFreising
 URL:https://www.tum.de/aktuelles/veranstaltungen/terminuebersicht?tx_solr%5
  Bfilter%5D%5B0%5D=location%3AFreising
 CATEGORIES:Kunst
 END:VEVENT
 BEGIN:VEVENT
 UID:d2b3c21197115322@gratis-freising
-DTSTAMP:20260824T041255Z
+DTSTAMP:20260825T040752Z
 DTSTART;VALUE=DATE:20260822
 DTEND;VALUE=DATE:20260917
 SUMMARY:Sauna-Sommerpause (vermutlich frei)
@@ -59,78 +59,147 @@ URL:https://veranstaltungen.merkur.de/freising/sauna-sommerpause-e65c8a94e2
 CATEGORIES:Sonstiges
 END:VEVENT
 BEGIN:VEVENT
-UID:8a049f29f080fc2e@gratis-freising
-DTSTAMP:20260824T041255Z
-DTSTART;TZID=Europe/Berlin:20260824T190000
-DTEND;TZID=Europe/Berlin:20260824T190000
-SUMMARY:Evang.-Luth. Gemeinde: Friedensgebet (vermutlich frei)
-LOCATION:Christi-Himmelfahrts-Kirche — Saarstraße 2
-DESCRIPTION:Ein gemeinsames Friedensgebet für alle Religionen und National
- itäten. Die Veranstaltung findet wöchentlich statt und bietet Raum für 
- Besinnung und Gemeinschaft.\n\nEintritt: vermutlich kostenfrei (Quelle nen
- nt: frei)\nSicherheit: mittel\n\nKategorie: Religion\nZielgruppe: Alle\nDr
- innen/Draussen: drinnen\n\nQuelle: https://veranstaltungen.merkur.de/freis
- ing/evang-luth-gemeinde-ea1d7004c1dda0a7b6d41acb0f877117b.html
-URL:https://veranstaltungen.merkur.de/freising/evang-luth-gemeinde-ea1d7004
- c1dda0a7b6d41acb0f877117b.html
-CATEGORIES:Religion
+UID:098b51d483430017@gratis-freising
+DTSTAMP:20260825T040752Z
+DTSTART;VALUE=DATE:20260825
+DTEND;VALUE=DATE:20260928
+SUMMARY:Archetypen männlicher Grenzüberschreitung (vermutlich frei)
+LOCATION:Galerie am Lindenkeller — Veitsmüllerweg\, 85354 Freising
+DESCRIPTION:Ausstellung der Künstlerin Denise Mankowski in der Galerie am 
+ Lindenkeller. Gezeigt werden Werke zum Thema männlicher Grenzüberschreit
+ ung.\n\nEintritt: vermutlich kostenfrei (Quelle nennt: unklar)\nSicherheit
+ : niedrig\n\nKategorie: Kunst\nZielgruppe: Alle\nDrinnen/Draussen: drinnen
+ \n\nQuelle: https://veranstaltungen.merkur.de/freising/archetypen-maennlic
+ her-grenzueberschreitung-e184f7b19ce85ba7696afcbd77c161681.html
+URL:https://veranstaltungen.merkur.de/freising/archetypen-maennlicher-grenz
+ ueberschreitung-e184f7b19ce85ba7696afcbd77c161681.html
+CATEGORIES:Kunst
 END:VEVENT
 BEGIN:VEVENT
 UID:0e0e7541ac1e1d4c@gratis-freising
-DTSTAMP:20260824T041255Z
+DTSTAMP:20260825T040752Z
 DTSTART;TZID=Europe/Berlin:20260825T150000
 DTEND;TZID=Europe/Berlin:20260825T160000
 SUMMARY:Caritas Singkreis für Senioren (vermutlich frei)
-LOCATION:Caritas-Zentrum Freising — Bahnhofstr. 20
-DESCRIPTION:Ein Singkreis für Senioren\, der jeden zweiten und vierten Die
- nstag im Monat stattfindet. Ohne Anmeldung können Teilnehmer gemeinsam Li
- eder singen und sich austauschen.\n\nEintritt: vermutlich kostenfrei (Quel
- le nennt: unklar)\nSicherheit: niedrig\n\nKategorie: Musik\nZielgruppe: Se
- nioren\nDrinnen/Draussen: drinnen\n\nQuelle: https://veranstaltungen.merku
- r.de/freising/caritas-singkreis-fuer-senioren-ea60a436886dcbb638705ab622be
- 2083e.html
+LOCATION:Caritas-Zentrum Freising — Bahnhofstraße 20\, 85356 Freising
+DESCRIPTION:Geselliger Singkreis für Senioren mit Volksliedern und Gemeins
+ chaftsgefühl. Ohne Anmeldung zugänglich\, findet jeden Dienstag von 15 b
+ is 16 Uhr statt.\n\nEintritt: vermutlich kostenfrei (Quelle nennt: unklar)
+ \nSicherheit: niedrig\n\nKategorie: Geselligkeit/Spiele/Treffen\nZielgrupp
+ e: Senioren\nDrinnen/Draussen: drinnen\n\nQuelle: https://veranstaltungen.
+ merkur.de/freising/caritas-singkreis-fuer-senioren-ea60a436886dcbb638705ab
+ 622be2083e.html
 URL:https://veranstaltungen.merkur.de/freising/caritas-singkreis-fuer-senio
  ren-ea60a436886dcbb638705ab622be2083e.html
-CATEGORIES:Musik
+CATEGORIES:Geselligkeit/Spiele/Treffen
 END:VEVENT
 BEGIN:VEVENT
 UID:3cbc3de5e69a8bdb@gratis-freising
-DTSTAMP:20260824T041255Z
+DTSTAMP:20260825T040752Z
 DTSTART;TZID=Europe/Berlin:20260825T150000
 DTEND;TZID=Europe/Berlin:20260825T160000
 SUMMARY:Musik liegt in der Luft (vermutlich frei)
-LOCATION:Caritas-Zentrum Freising — Bahnhofstr. 20
-DESCRIPTION:Ein geselliger Singkreis für Senioren mit Volks- und Wanderlie
- dern. Die Veranstaltung findet jeden zweiten und vierten Dienstag im Monat
-  statt und fördert Gemeinschaft und Freude am gemeinsamen Singen.\n\nEint
- ritt: vermutlich kostenfrei (Quelle nennt: unklar)\nSicherheit: niedrig\n\
- nKategorie: Musik\nZielgruppe: Senioren\nDrinnen/Draussen: drinnen\n\nQuel
- le: https://veranstaltungen.merkur.de/freising/musik-liegt-in-der-luft-e2e
- 28d8f710c98d240fd03dec9f9fe7bf.html
+LOCATION:Caritas-Zentrum Freising — Bahnhofstr. 20\, 85356 Freising
+DESCRIPTION:Geselliger Singkreis für Senioren mit Volks- und Wanderliedern
+ . Ohne Anmeldung zugänglich\, findet jeden 2. und 4. Dienstag im Monat st
+ att.\n\nEintritt: vermutlich kostenfrei (Quelle nennt: unklar)\nSicherheit
+ : niedrig\n\nKategorie: Musik\nZielgruppe: Senioren\nDrinnen/Draussen: dri
+ nnen\n\nQuelle: https://veranstaltungen.merkur.de/freising/musik-liegt-in-
+ der-luft-e2e28d8f710c98d240fd03dec9f9fe7bf.html
 URL:https://veranstaltungen.merkur.de/freising/musik-liegt-in-der-luft-e2e2
  8d8f710c98d240fd03dec9f9fe7bf.html
 CATEGORIES:Musik
 END:VEVENT
 BEGIN:VEVENT
+UID:58b702d49eecff9b@gratis-freising
+DTSTAMP:20260825T040752Z
+DTSTART;TZID=Europe/Berlin:20260825T150000
+DTEND;TZID=Europe/Berlin:20260825T170000
+SUMMARY:Kneippverein (vermutlich frei)
+LOCATION:Kneippgarten Freising — Am Kneippgarten 10\, 85356 Freising
+DESCRIPTION:Öffnungszeiten der Sauna: Dienstag bis Freitag 15–21 Uhr\, S
+ amstag 10–21 Uhr. Ein Ort zur Entspannung und Gesundheitsförderung.\n\n
+ Eintritt: vermutlich kostenfrei (Quelle nennt: unklar)\nSicherheit: niedri
+ g\n\nKategorie: Sonstiges\nZielgruppe: Alle\nDrinnen/Draussen: beides\n\nQ
+ uelle: https://veranstaltungen.merkur.de/freising/kneippverein-e901e949f1f
+ a936c675bf34aec8feecaf.html
+URL:https://veranstaltungen.merkur.de/freising/kneippverein-e901e949f1fa936
+ c675bf34aec8feecaf.html
+CATEGORIES:Sonstiges
+END:VEVENT
+BEGIN:VEVENT
 UID:f61628dc600c2802@gratis-freising
-DTSTAMP:20260824T041255Z
+DTSTAMP:20260825T040752Z
 DTSTART;TZID=Europe/Berlin:20260825T193000
 DTEND;TZID=Europe/Berlin:20260825T193000
 SUMMARY:Gospelchor (vermutlich frei)
-LOCATION:Evang. Gemeindehaus Christi Himmelfahrt — Martin-Luther-Str. 10
-DESCRIPTION:Ein Chorabend mit Gospels und spiritueller Musik. Die Veranstal
- tung findet regelmäßig statt und lädt zum Mitsingen oder Zuhören ein. 
- Infos gibt es bei der Chorleiterin.\n\nEintritt: vermutlich kostenfrei (Qu
- elle nennt: unklar)\nSicherheit: niedrig\n\nKategorie: Musik\nZielgruppe: 
- Alle\nDrinnen/Draussen: drinnen\n\nQuelle: https://veranstaltungen.merkur.
- de/freising/gospelchor-ea0726ac0a1b51ad1893ba13cfbf72914.html
+LOCATION:Evang. Gemeindehaus Christi Himmelfahrt — Martin-Luther-Str. 10\
+ , 85356 Freising
+DESCRIPTION:Regelmäßige Chorprobe des Gospelchors unter Leitung von Maria
+  Heidecker. Interessierte sind willkommen\, eine Anmeldung ist nicht erfor
+ derlich.\n\nEintritt: vermutlich kostenfrei (Quelle nennt: unklar)\nSicher
+ heit: niedrig\n\nKategorie: Musik\nZielgruppe: Alle\nDrinnen/Draussen: dri
+ nnen\n\nQuelle: https://veranstaltungen.merkur.de/freising/gospelchor-ea07
+ 26ac0a1b51ad1893ba13cfbf72914.html
 URL:https://veranstaltungen.merkur.de/freising/gospelchor-ea0726ac0a1b51ad1
  893ba13cfbf72914.html
 CATEGORIES:Musik
 END:VEVENT
 BEGIN:VEVENT
+UID:09541170f6a9c818@gratis-freising
+DTSTAMP:20260825T040752Z
+DTSTART;TZID=Europe/Berlin:20260826T180000
+DTEND;TZID=Europe/Berlin:20260826T200000
+SUMMARY:Agenda-Gruppe Menschen mit Behinderung (vermutlich frei)
+LOCATION:dASAMa — Marienplatz 7\, 85356 Freising
+DESCRIPTION:Treffen der Agenda-Gruppe für Menschen mit Behinderung. Themen
+  wie Sportwoche und Volksfest stehen auf der Agenda. Interessierte sind wi
+ llkommen.\n\nEintritt: vermutlich kostenfrei (Quelle nennt: unklar)\nSiche
+ rheit: niedrig\n\nKategorie: Sonstiges\nZielgruppe: Alle\nDrinnen/Draussen
+ : drinnen\n\nQuelle: https://veranstaltungen.merkur.de/freising/agenda-gru
+ ppe-menschen-mit-behinderung-efccaaa409efb131bec82f48bd461909c.html
+URL:https://veranstaltungen.merkur.de/freising/agenda-gruppe-menschen-mit-b
+ ehinderung-efccaaa409efb131bec82f48bd461909c.html
+CATEGORIES:Sonstiges
+END:VEVENT
+BEGIN:VEVENT
+UID:e8b636f3388003d5@gratis-freising
+DTSTAMP:20260825T040752Z
+DTSTART;TZID=Europe/Berlin:20260826T183000
+DTEND;TZID=Europe/Berlin:20260826T203000
+SUMMARY:Gemeindegebet (vermutlich frei)
+LOCATION:Pfarrkirche St. Lantpert — Kepserstraße 2\, 85356 Freising
+DESCRIPTION:Gemeindegebet für die verstorbenen Angehörigen der Stadtkirch
+ e. Besonders gedacht wird der Menschen\, die seit dem 27. Juli bestattet w
+ urden.\n\nEintritt: vermutlich kostenfrei (Quelle nennt: unklar)\nSicherhe
+ it: niedrig\n\nKategorie: Religion\nZielgruppe: Alle\nDrinnen/Draussen: dr
+ innen\n\nQuelle: https://veranstaltungen.merkur.de/freising/gemeindegebet-
+ e86050ec3c9870e0d0725e0956b53ec81.html
+URL:https://veranstaltungen.merkur.de/freising/gemeindegebet-e86050ec3c9870
+ e0d0725e0956b53ec81.html
+CATEGORIES:Religion
+END:VEVENT
+BEGIN:VEVENT
+UID:c15638eba10335c2@gratis-freising
+DTSTAMP:20260825T040752Z
+DTSTART;TZID=Europe/Berlin:20260827T110000
+DTEND;TZID=Europe/Berlin:20260827T130000
+SUMMARY:Führung Altstadt-Weihenstephan (vermutlich frei)
+LOCATION:Marienplatz Freising — Marienplatz 1\, 85356 Freising
+DESCRIPTION:Führung durch die Altstadt und zum Weihenstephaner Berg. Treff
+ punkt ist die Touristinfo im Asam. Eine Anmeldung ist erforderlich.\n\nEin
+ tritt: vermutlich kostenfrei (Quelle nennt: unklar)\nSicherheit: niedrig\n
+ \nKategorie: Führung/Besichtigung\nZielgruppe: Alle\nDrinnen/Draussen: dr
+ aussen\nAnmeldung noetig: ja — siehe Quelle\n\nQuelle: https://veranstal
+ tungen.merkur.de/freising/fuehrung-altstadt-weihenstephan-e7a9f0580d4810f8
+ 73886e08d7430e909.html
+URL:https://veranstaltungen.merkur.de/freising/fuehrung-altstadt-weihenstep
+ han-e7a9f0580d4810f873886e08d7430e909.html
+CATEGORIES:Führung/Besichtigung
+END:VEVENT
+BEGIN:VEVENT
 UID:a753c7385e31a4c3@gratis-freising
-DTSTAMP:20260824T041255Z
+DTSTAMP:20260825T040752Z
 DTSTART;TZID=Europe/Berlin:20260827T193000
 DTEND;TZID=Europe/Berlin:20260827T210000
 SUMMARY:Kreuzbund SHG Bahnhofstraße (vermutlich frei)
@@ -147,19 +216,37 @@ URL:https://veranstaltungen.merkur.de/freising/kreuzbund-shg-bahnhofstrasse
 CATEGORIES:Rat und Hilfe
 END:VEVENT
 BEGIN:VEVENT
+UID:dcd2cb19e2523b3a@gratis-freising
+DTSTAMP:20260825T040752Z
+DTSTART;TZID=Europe/Berlin:20260827T200000
+DTEND;TZID=Europe/Berlin:20260827T220000
+SUMMARY:Probe der Kantorei (vermutlich frei)
+LOCATION:Evang. Gemeindehaus Christi Himmelfahrt — Martin-Luther-Str. 10\
+ , 85356 Freising
+DESCRIPTION:Regelmäßige Probe des Kantorei unter Leitung von Maria Heidec
+ ker. Alle Interessierten sind willkommen\, eine Anmeldung ist nicht erford
+ erlich.\n\nEintritt: vermutlich kostenfrei (Quelle nennt: unklar)\nSicherh
+ eit: niedrig\n\nKategorie: Sonstiges\nZielgruppe: Alle\nDrinnen/Draussen: 
+ drinnen\n\nQuelle: https://veranstaltungen.merkur.de/freising/probe-der-ka
+ ntorei-e89291b43e72793f8276dd559aad045be.html
+URL:https://veranstaltungen.merkur.de/freising/probe-der-kantorei-e89291b43
+ e72793f8276dd559aad045be.html
+CATEGORIES:Sonstiges
+END:VEVENT
+BEGIN:VEVENT
 UID:7658e605275a5d7e@gratis-freising
-DTSTAMP:20260824T041255Z
+DTSTAMP:20260825T040752Z
 DTSTART;TZID=Europe/Berlin:20261002T180000
 DTEND;TZID=Europe/Berlin:20261002T235900
 SUMMARY:Die Demokratie feiern – gemeinsam in Freising (vermutlich frei)
 LOCATION:
 DESCRIPTION:Die Lange Nacht der Demokratie lädt mit Gesprächen\, Kunst\, 
  Musik\, Theater und Mitmachaktionen zum Mitmachen und Austausch ein. Über
-  50 Vereine\, Organisationen und Schulen gestalten gemeinsam ein abwechslu
- ngsreiches Programm für alle Altersgruppen.\n\nEintritt: vermutlich koste
- nfrei (Quelle nennt: frei)\nSicherheit: niedrig\n\nVeranstalter: Treffpunk
- t Ehrenamt der Stadt Freising\nKategorie: Fest\nZielgruppe: Alle\nDrinnen/
- Draussen: beides\n\nQuelle: https://www.3klang-musik.de/freising.html
+  50 Vereine und Organisationen gestalten einen Abend der Begegnung und des
+  Dialogs.\n\nEintritt: vermutlich kostenfrei (Quelle nennt: frei)\nSicherh
+ eit: niedrig\n\nVeranstalter: Treffpunkt Ehrenamt der Stadt Freising\nKate
+ gorie: Fest\nZielgruppe: Alle\nDrinnen/Draussen: beides\n\nQuelle: https:/
+ /www.3klang-musik.de/freising.html
 URL:https://www.3klang-musik.de/freising.html
 CATEGORIES:Fest
 END:VEVENT

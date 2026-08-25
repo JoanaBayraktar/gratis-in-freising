@@ -1,7 +1,6 @@
 {
   "Stadtkalender Freising": {
     "verlauf": [
-      12,
       23,
       24,
       24,
@@ -10,14 +9,14 @@
       25,
       24,
       24,
+      24,
       24
     ],
     "fehlversuche": 0,
-    "letzter_erfolg": "2026-08-24"
+    "letzter_erfolg": "2026-08-25"
   },
   "Merkur Veranstaltungen": {
     "verlauf": [
-      10,
       22,
       30,
       17,
@@ -26,10 +25,11 @@
       16,
       27,
       12,
-      10
+      10,
+      18
     ],
     "fehlversuche": 0,
-    "letzter_erfolg": "2026-08-24"
+    "letzter_erfolg": "2026-08-25"
   },
   "Schafhof Kunstforum": {
     "verlauf": [
@@ -45,7 +45,7 @@
       4
     ],
     "fehlversuche": 0,
-    "letzter_erfolg": "2026-08-24"
+    "letzter_erfolg": "2026-08-25"
   },
   "Furtner Freising": {
     "verlauf": [
@@ -56,12 +56,12 @@
       23,
       23,
       23,
-      23,
       22,
+      21,
       21
     ],
     "fehlversuche": 0,
-    "letzter_erfolg": "2026-08-24"
+    "letzter_erfolg": "2026-08-25"
   },
   "Einfach selber machen": {
     "verlauf": [
@@ -77,14 +77,14 @@
       1
     ],
     "fehlversuche": 0,
-    "letzter_erfolg": "2026-08-24"
+    "letzter_erfolg": "2026-08-25"
   },
   "vhs Freising — kostenfrei": {
     "verlauf": [
       36,
-      36,
       40,
       36,
+      40,
       40,
       40,
       40,
@@ -93,7 +93,7 @@
       40
     ],
     "fehlversuche": 0,
-    "letzter_erfolg": "2026-08-24"
+    "letzter_erfolg": "2026-08-25"
   },
   "Modern Studio": {
     "verlauf": [
@@ -102,10 +102,11 @@
       3,
       3,
       3,
+      3,
       3
     ],
     "fehlversuche": 0,
-    "letzter_erfolg": "2026-08-24"
+    "letzter_erfolg": "2026-08-25"
   },
   "DAV Freising — Vortraege": {
     "verlauf": [
@@ -114,10 +115,11 @@
       0,
       0,
       0,
+      3,
       3
     ],
     "fehlversuche": 0,
-    "letzter_erfolg": "2026-08-24"
+    "letzter_erfolg": "2026-08-25"
   },
   "3Klang Musik": {
     "verlauf": [
@@ -126,10 +128,11 @@
       2,
       2,
       2,
-      1
+      1,
+      2
     ],
     "fehlversuche": 0,
-    "letzter_erfolg": "2026-08-24"
+    "letzter_erfolg": "2026-08-25"
   },
   "TUM Freising": {
     "verlauf": [
@@ -138,9 +141,10 @@
       11,
       7,
       7,
-      7
+      7,
+      10
     ],
     "fehlversuche": 0,
-    "letzter_erfolg": "2026-08-24"
+    "letzter_erfolg": "2026-08-25"
   }
 }
