@@ -26,20 +26,6 @@ Eintrag nicht mehr an.
 - **Beleg:** _kein Hinweis im Text gefunden_
 - **Quelle:** https://veranstaltungen.merkur.de/freising/archetypen-maennlicher-grenzueberschreitung-e184f7b19ce85ba7696afcbd77c161681.html
 
-## Agenda-Gruppe Menschen mit Behinderung
-- **Wann:** 26.08.2026 18:00
-- **Wo:** dASAMa
-- **Angezeigt als:** vermutlich kostenfrei — Quelle nennt `unklar` (Sicherheit: niedrig)
-- **Beleg:** _kein Hinweis im Text gefunden_
-- **Quelle:** https://veranstaltungen.merkur.de/freising/agenda-gruppe-menschen-mit-behinderung-efccaaa409efb131bec82f48bd461909c.html
-
-## Gemeindegebet
-- **Wann:** 26.08.2026 18:30
-- **Wo:** Pfarrkirche St. Lantpert
-- **Angezeigt als:** vermutlich kostenfrei — Quelle nennt `unklar` (Sicherheit: niedrig)
-- **Beleg:** _kein Hinweis im Text gefunden_
-- **Quelle:** https://veranstaltungen.merkur.de/freising/gemeindegebet-e86050ec3c9870e0d0725e0956b53ec81.html
-
 ## Kreuzbund SHG Bahnhofstraße
 - **Wann:** 27.08.2026 19:30
 - **Wo:** Caritas-Zentrum Freising
@@ -49,7 +35,7 @@ Eintrag nicht mehr an.
 
 ## Probe der Kantorei
 - **Wann:** 27.08.2026 20:00
-- **Wo:** Evang. Gemeindehaus Christi Himmelfahrt
+- **Wo:** Evangelisches Gemeindehaus Christi Himmelfahrt
 - **Angezeigt als:** vermutlich kostenfrei — Quelle nennt `frei` (Sicherheit: mittel)
 - **Beleg:** _kein Hinweis im Text gefunden_
 - **Quelle:** https://veranstaltungen.merkur.de/freising/probe-der-kantorei-e89291b43e72793f8276dd559aad045be.html
@@ -68,9 +54,23 @@ Eintrag nicht mehr an.
 - **Beleg:** _kein Hinweis im Text gefunden_
 - **Quelle:** https://veranstaltungen.merkur.de/freising/senioren-netzwerk-frieda-ben-e1bdbd1c5c5437951883c1e13ddf4ffe2.html
 
+## Krisendienst Psychiatrie Oberbayern
+- **Wann:** 29.08.2026 00:00
+- **Wo:** —
+- **Angezeigt als:** vermutlich kostenfrei — Quelle nennt `frei` (Sicherheit: mittel)
+- **Beleg:** _kein Hinweis im Text gefunden_
+- **Quelle:** https://veranstaltungen.merkur.de/freising/krisendienst-psychiatrie-oberbayern-e66fb69f5d88622719d55d6f39ca707d6.html
+
 ## Die Demokratie feiern – gemeinsam in Freising
 - **Wann:** 02.10.2026 18:00
 - **Wo:** —
 - **Angezeigt als:** vermutlich kostenfrei — Quelle nennt `frei` (Sicherheit: niedrig)
 - **Beleg:** _kein Hinweis im Text gefunden_
+- **Quelle:** https://www.3klang-musik.de/freising.html
+
+## Lange Nacht der Demokratie in Freising
+- **Wann:** 02.10.2026 18:00
+- **Wo:** —
+- **Angezeigt als:** vermutlich kostenfrei — Quelle nennt `frei` (Sicherheit: mittel)
+- **Beleg:** Demokratie lebt vom Mitmachen, vom Zuhören und vom Austausch. Sie zeigt sich nicht nur bei Wahlen, sondern überall dort, wo Menschen Verantwortung übernehmen und ihr Zusammenleben aktiv gestalten.
 - **Quelle:** https://www.3klang-musik.de/freising.html

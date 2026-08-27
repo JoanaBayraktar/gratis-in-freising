@@ -24,26 +24,27 @@ END:STANDARD
 END:VTIMEZONE
 BEGIN:VEVENT
 UID:9dbb539d76866b10@gratis-freising
-DTSTAMP:20260826T041238Z
+DTSTAMP:20260827T142154Z
 DTSTART;VALUE=DATE:20260518
 DTEND;VALUE=DATE:20261019
 SUMMARY:TUM tanzt! (vermutlich frei)
 LOCATION:München\, Garching\, Freising
-DESCRIPTION:Die zweite Auflage des Tanzfestivals bietet Mitmachangebote\, D
- iskussionsrunden und Performances für alle Interessierten. Ziel ist es\, 
- Bewegung und Wissenschaft kreativ zu verbinden.\n\nEintritt: vermutlich ko
- stenfrei (Quelle nennt: frei)\nBeleg: "TUM tanzt! geht 2026 in die zweite 
- Runde. Mit vielen Angeboten zum Mitmachen\, Diskutieren und Erleben."\nSic
- herheit: mittel\n\nVeranstalter: TUM\nKategorie: Kunst\nZielgruppe: Alle\n
- Drinnen/Draussen: beides\n\nQuelle: https://www.tum.de/aktuelles/veranstal
- tungen/terminuebersicht?tx_solr%5Bfilter%5D%5B0%5D=location%3AFreising
+DESCRIPTION:Die Initiative lädt zu vielfältigen Tanzangeboten ein\, die z
+ um Mitmachen\, Diskutieren und Erleben einladen. Teilnehmende aller Alters
+ gruppen und Vorkenntnisse sind willkommen.\n\nEintritt: vermutlich kostenf
+ rei (Quelle nennt: frei)\nBeleg: "TUM tanzt! geht 2026 in die zweite Runde
+ . Mit vielen Angeboten zum Mitmachen\, Diskutieren und Erleben."\nSicherhe
+ it: mittel\n\nVeranstalter: Technische Universität München\nKategorie: K
+ unst\nZielgruppe: Alle\nDrinnen/Draussen: beides\n\nQuelle: https://www.tu
+ m.de/aktuelles/veranstaltungen/terminuebersicht?tx_solr%5Bfilter%5D%5B0%5D
+ =location%3AFreising
 URL:https://www.tum.de/aktuelles/veranstaltungen/terminuebersicht?tx_solr%5
  Bfilter%5D%5B0%5D=location%3AFreising
 CATEGORIES:Kunst
 END:VEVENT
 BEGIN:VEVENT
 UID:fd46da4d10d8931d@gratis-freising
-DTSTAMP:20260826T041238Z
+DTSTAMP:20260827T142154Z
 DTSTART;VALUE=DATE:20260703
 DTEND;VALUE=DATE:20261001
 SUMMARY:SpielRäume - Remix 6
@@ -85,9 +86,37 @@ DESCRIPTION:Zwei Künstlerinnen aus dem Residenzprogramm entwickeln gemeins
  ising/spielraeume-e3853aefd9b7e5868f13d9a0a60f68d27.html\nAuch bei: https:
  //veranstaltungen.merkur.de/freising/spielraeume-e0474baa35c5523daf57e141d
  e963cde2.html\nAuch bei: https://veranstaltungen.merkur.de/freising/spielr
- aeume-ed6fa99907fa4fdc381b4721d6204e7ea.html\nBild: https://veranstaltunge
- n.freising.de/media/2026/08/spielraeume-e962a5c9f4f3a618a9bee56a76fb2b908.
- jpg
+ aeume-ed6fa99907fa4fdc381b4721d6204e7ea.html\nAuch bei: https://veranstalt
+ ungen.freising.de/freising/spielraeume-e0474baa35c5523daf57e141de963cde2.h
+ tml\nBild: https://veranstaltungen.freising.de/media/2026/08/spielraeume-e
+ 962a5c9f4f3a618a9bee56a76fb2b908.jpg
+URL:https://www.schafhof-kunstforum.de/Aktuell/Veranstaltungskalender/Spiel
+ R%C3%A4ume-Remix-6.php?object=tx\,3432.13&ModID=11&FID=3957.55.1&NavID=261
+ 5.43&La=1&kat=2615.7%2C2615.25%2C2615.16%2C2615.18%2C2615.4%2C2615.20%2C26
+ 15.28%2C2615.27%2C2615.19%2C2615.26%2C2615.21%2C2615.22%2C2615.14%2C2615.6
+ 8&max=25
+CATEGORIES:Kunst
+END:VEVENT
+BEGIN:VEVENT
+UID:af4d2c37273cea34@gratis-freising
+DTSTAMP:20260827T142154Z
+DTSTART;VALUE=DATE:20260703
+DTEND;VALUE=DATE:20260907
+SUMMARY:Ausstellung SpielRäume - Remix 6
+LOCATION:Schafhof — Europäisches Künstlerhaus — Am Schafhof 1\, 85354
+  Freising
+DESCRIPTION:Tandemausstellung mit zwei Künstlerinnen\, die gemeinsam eine 
+ Ausstellung erarbeiten. Die ungarische Künstlerin Judit Lilla Molnar und 
+ die bayerische Künstlerin Lina Zylla präsentieren ihre Werke im Rahmen d
+ es europäischen Kunstaustauschs.\n\nEintritt: Eintritt frei (Quelle nennt
+ : frei)\nBeleg: "Der Eintritt in die Ausstellung und zu den Begleitprogram
+ men ist kostenlos."\nSicherheit: hoch\n\nVeranstalter: Schafhof Kunstforum
+ \nKategorie: Kunst\nZielgruppe: Alle\nDrinnen/Draussen: drinnen\n\nQuelle:
+  https://www.schafhof-kunstforum.de/Aktuell/Veranstaltungskalender/SpielR%
+ C3%A4ume-Remix-6.php?object=tx\,3432.13&ModID=11&FID=3957.55.1&NavID=2615.
+ 43&La=1&kat=2615.7%2C2615.25%2C2615.16%2C2615.18%2C2615.4%2C2615.20%2C2615
+ .28%2C2615.27%2C2615.19%2C2615.26%2C2615.21%2C2615.22%2C2615.14%2C2615.68&
+ max=25
 URL:https://www.schafhof-kunstforum.de/Aktuell/Veranstaltungskalender/Spiel
  R%C3%A4ume-Remix-6.php?object=tx\,3432.13&ModID=11&FID=3957.55.1&NavID=261
  5.43&La=1&kat=2615.7%2C2615.25%2C2615.16%2C2615.18%2C2615.4%2C2615.20%2C26
@@ -97,50 +126,55 @@ CATEGORIES:Kunst
 END:VEVENT
 BEGIN:VEVENT
 UID:c79262615ff510e8@gratis-freising
-DTSTAMP:20260826T041238Z
+DTSTAMP:20260827T142154Z
 DTSTART;VALUE=DATE:20260803
 DTEND;VALUE=DATE:20260901
-SUMMARY:Sport im Park
-LOCATION:Savoyer Au Freising — 85356 Freising
-DESCRIPTION:Ein kostenloses Sportprogramm unter freiem Himmel für alle Alt
- ersgruppen und Fitnesslevel. Von Yoga bis Faustball – für jeden ist etw
- as dabei. Ideal für alle\, die aktiv bleiben möchten.\n\nEintritt: Eintr
- itt frei (Quelle nennt: frei)\nBeleg: "kostenfreies Sportprogramm"\nSicher
- heit: hoch\n\nVeranstalter: Sportamt der Stadt Freising\nKategorie: Sport/
- Freizeit\nZielgruppe: Alle\nDrinnen/Draussen: draussen\n\nQuelle: https://
- veranstaltungen.freising.de/freising/sport-im-park-ea0f15bb66dd52857585eba
- e2e6526e03.html\nAuch bei: https://veranstaltungen.merkur.de/freising/spor
+SUMMARY:Sport im Park 2026
+LOCATION:Savoyer Au Freising — Savoyer Au\, 85356 Freising
+DESCRIPTION:Die Stadt Freising bietet im August 2026 ein kostenfreies\, vie
+ lfältiges Sportprogramm unter freiem Himmel in der Savoyer Au an. Über 7
+ 0 Kurse für alle Alters- und Fitnesslevels stehen zur Auswahl\, darunter 
+ auch ein spezielles Angebot für Seniorinnen und Senioren. Eine Anmeldung 
+ ist nicht erforderlich.\n\nEintritt: Eintritt frei (Quelle nennt: frei)\nB
+ eleg: "kostenfreies Sportprogramm"\nSicherheit: hoch\n\nVeranstalter: Spor
+ tamt der Stadt Freising\nKategorie: Sport\nZielgruppe: Alle\nDrinnen/Draus
+ sen: draussen\n\nQuelle: https://veranstaltungen.freising.de/freising/spor
  t-im-park-ea0f15bb66dd52857585ebae2e6526e03.html\nAuch bei: https://verans
- taltungen.freising.de/freising/sport-im-park-e036b3ada027550a81d6bcc5a944c
- b6b5.html\nAuch bei: https://veranstaltungen.merkur.de/freising/sport-im-p
+ taltungen.merkur.de/freising/sport-im-park-ea0f15bb66dd52857585ebae2e6526e
+ 03.html\nAuch bei: https://veranstaltungen.freising.de/freising/sport-im-p
  ark-e036b3ada027550a81d6bcc5a944cb6b5.html\nAuch bei: https://veranstaltun
- gen.merkur.de/freising/sport-im-park-ec761661a7f1604e1e7695e8b27ffcec9.htm
- l\nAuch bei: https://veranstaltungen.merkur.de/freising/sport-im-park-e6ab
- 311ca87a5ed32aa5f91c62d59d42b.html\nAuch bei: https://veranstaltungen.merk
- ur.de/freising/sport-im-park-e3eaffacfb856d8f9958c33f56df8a60f.html\nAuch 
- bei: https://veranstaltungen.merkur.de/freising/sport-im-park-eaf42a985708
- af5077ceea3c9c8796407.html\nAuch bei: https://veranstaltungen.freising.de/
- freising/sport-im-park-ec761661a7f1604e1e7695e8b27ffcec9.html\nAuch bei: h
- ttps://veranstaltungen.freising.de/freising/sport-im-park-e3eaffacfb856d8f
- 9958c33f56df8a60f.html\nAuch bei: https://veranstaltungen.merkur.de/freisi
- ng/sport-im-park-ef129f34ee1fd357cb467c4faa23095e0.html\nAuch bei: https:/
- /veranstaltungen.freising.de/freising/sport-im-park-e7888b619e58bfbb95b9b9
- 3d774f6b114.html\nAuch bei: https://veranstaltungen.merkur.de/freising/spo
+ gen.merkur.de/freising/sport-im-park-e036b3ada027550a81d6bcc5a944cb6b5.htm
+ l\nAuch bei: https://veranstaltungen.merkur.de/freising/sport-im-park-ec76
+ 1661a7f1604e1e7695e8b27ffcec9.html\nAuch bei: https://veranstaltungen.merk
+ ur.de/freising/sport-im-park-e6ab311ca87a5ed32aa5f91c62d59d42b.html\nAuch 
+ bei: https://veranstaltungen.merkur.de/freising/sport-im-park-e3eaffacfb85
+ 6d8f9958c33f56df8a60f.html\nAuch bei: https://veranstaltungen.merkur.de/fr
+ eising/sport-im-park-eaf42a985708af5077ceea3c9c8796407.html\nAuch bei: htt
+ ps://veranstaltungen.freising.de/freising/sport-im-park-ec761661a7f1604e1e
+ 7695e8b27ffcec9.html\nAuch bei: https://veranstaltungen.freising.de/freisi
+ ng/sport-im-park-e3eaffacfb856d8f9958c33f56df8a60f.html\nAuch bei: https:/
+ /veranstaltungen.merkur.de/freising/sport-im-park-ef129f34ee1fd357cb467c4f
+ aa23095e0.html\nAuch bei: https://veranstaltungen.freising.de/freising/spo
  rt-im-park-e7888b619e58bfbb95b9b93d774f6b114.html\nAuch bei: https://veran
- staltungen.merkur.de/freising/sport-im-park-e7614a39cde0e8ab745d108c0a499a
- 2a2.html\nAuch bei: https://veranstaltungen.freising.de/freising/sport-im-
- park-e2bc2c8257f798d1589b6652fe773adda.html\nAuch bei: https://veranstaltu
- ngen.merkur.de/freising/sport-im-park-e2bc2c8257f798d1589b6652fe773adda.ht
- ml\nAuch bei: https://veranstaltungen.merkur.de/freising/sport-im-park-eb2
- adf1989276923c71f325afa157fa57.html\nAuch bei: https://veranstaltungen.mer
- kur.de/freising/sport-im-park-eb4e236220cc64be9713294d4343b6171.html
+ staltungen.merkur.de/freising/sport-im-park-e7888b619e58bfbb95b9b93d774f6b
+ 114.html\nAuch bei: https://veranstaltungen.merkur.de/freising/sport-im-pa
+ rk-e7614a39cde0e8ab745d108c0a499a2a2.html\nAuch bei: https://veranstaltung
+ en.freising.de/freising/sport-im-park-e2bc2c8257f798d1589b6652fe773adda.ht
+ ml\nAuch bei: https://veranstaltungen.merkur.de/freising/sport-im-park-e2b
+ c2c8257f798d1589b6652fe773adda.html\nAuch bei: https://veranstaltungen.mer
+ kur.de/freising/sport-im-park-eb2adf1989276923c71f325afa157fa57.html\nAuch
+  bei: https://veranstaltungen.merkur.de/freising/sport-im-park-eb4e236220c
+ c64be9713294d4343b6171.html\nAuch bei: https://veranstaltungen.freising.de
+ /freising/sport-im-park-eb2adf1989276923c71f325afa157fa57.html\nAuch bei: 
+ https://veranstaltungen.merkur.de/freising/sport-im-park-edb71dd40bb1609b7
+ 9e72c36657b3a298.html
 URL:https://veranstaltungen.freising.de/freising/sport-im-park-ea0f15bb66dd
  52857585ebae2e6526e03.html
-CATEGORIES:Sport/Freizeit
+CATEGORIES:Sport
 END:VEVENT
 BEGIN:VEVENT
 UID:d2b3c21197115322@gratis-freising
-DTSTAMP:20260826T041238Z
+DTSTAMP:20260827T142154Z
 DTSTART;VALUE=DATE:20260822
 DTEND;VALUE=DATE:20260917
 SUMMARY:Sauna-Sommerpause (vermutlich frei)
@@ -150,14 +184,16 @@ DESCRIPTION:Die Sauna im Kneippgarten Freising bleibt aufgrund der Sommerpa
  it oder um die Natur zu genießen.\n\nEintritt: vermutlich kostenfrei (Que
  lle nennt: unklar)\nSicherheit: niedrig\n\nKategorie: Sonstiges\nZielgrupp
  e: Alle\nDrinnen/Draussen: drinnen\n\nQuelle: https://veranstaltungen.merk
- ur.de/freising/sauna-sommerpause-e65c8a94e2f8c29083a73af76b53f02cc.html
+ ur.de/freising/sauna-sommerpause-e65c8a94e2f8c29083a73af76b53f02cc.html\nA
+ uch bei: https://veranstaltungen.merkur.de/freising/sauna-sommerpause-eb2e
+ 4c496310e0dcf38004dd2df28cee8.html
 URL:https://veranstaltungen.merkur.de/freising/sauna-sommerpause-e65c8a94e2
  f8c29083a73af76b53f02cc.html
 CATEGORIES:Sonstiges
 END:VEVENT
 BEGIN:VEVENT
 UID:4689da62f25a166e@gratis-freising
-DTSTAMP:20260826T041238Z
+DTSTAMP:20260827T142154Z
 DTSTART;VALUE=DATE:20260823
 DTEND;VALUE=DATE:20260923
 SUMMARY:Landratsamt sucht Pflegefamilien
@@ -176,7 +212,7 @@ CATEGORIES:Sonstiges
 END:VEVENT
 BEGIN:VEVENT
 UID:098b51d483430017@gratis-freising
-DTSTAMP:20260826T041238Z
+DTSTAMP:20260827T142154Z
 DTSTART;VALUE=DATE:20260825
 DTEND;VALUE=DATE:20260928
 SUMMARY:Archetypen männlicher Grenzüberschreitung (vermutlich frei)
@@ -192,304 +228,255 @@ URL:https://veranstaltungen.merkur.de/freising/archetypen-maennlicher-grenz
 CATEGORIES:Kunst
 END:VEVENT
 BEGIN:VEVENT
-UID:4458743b962e6b7c@gratis-freising
-DTSTAMP:20260826T041238Z
-DTSTART;TZID=Europe/Berlin:20260826T140000
-DTEND;TZID=Europe/Berlin:20260826T160000
-SUMMARY:Gemeinsames Handarbeiten (Spende)
-LOCATION:Neustifter Pfarrheim — 85356 Freising
-DESCRIPTION:Ein regelmäßiges Treffen zum gemeinsamen Handarbeiten im Neus
- tifter Pfarrheim. Der Verkauf der entstandenen Werke dient einem guten Zwe
- ck. Ohne Anmeldung möglich.\n\nEintritt: Spende erbeten (Quelle nennt: sp
- ende)\nBeleg: "Verkauf für einen guten Zweck"\nSicherheit: hoch\n\nKatego
- rie: Sonstiges\nZielgruppe: Alle\nDrinnen/Draussen: drinnen\n\nQuelle: htt
- ps://veranstaltungen.merkur.de/freising/gemeinsames-handarbeiten-eec2a6bd9
- f3554ac8df7644ee8f127e4b.html
-URL:https://veranstaltungen.merkur.de/freising/gemeinsames-handarbeiten-eec
- 2a6bd9f3554ac8df7644ee8f127e4b.html
-CATEGORIES:Sonstiges
-END:VEVENT
-BEGIN:VEVENT
-UID:09541170f6a9c818@gratis-freising
-DTSTAMP:20260826T041238Z
-DTSTART;TZID=Europe/Berlin:20260826T180000
-DTEND;TZID=Europe/Berlin:20260826T200000
-SUMMARY:Agenda-Gruppe Menschen mit Behinderung (vermutlich frei)
-LOCATION:dASAMa — Marienplatz 7\, 85356 Freising
-DESCRIPTION:Treffen der Agenda-Gruppe für Menschen mit Behinderung. Themen
-  wie Sportwoche und Volksfest stehen auf der Agenda. Interessierte sind wi
- llkommen.\n\nEintritt: vermutlich kostenfrei (Quelle nennt: unklar)\nSiche
- rheit: niedrig\n\nKategorie: Sonstiges\nZielgruppe: Alle\nDrinnen/Draussen
- : drinnen\n\nQuelle: https://veranstaltungen.merkur.de/freising/agenda-gru
- ppe-menschen-mit-behinderung-efccaaa409efb131bec82f48bd461909c.html
-URL:https://veranstaltungen.merkur.de/freising/agenda-gruppe-menschen-mit-b
- ehinderung-efccaaa409efb131bec82f48bd461909c.html
-CATEGORIES:Sonstiges
-END:VEVENT
-BEGIN:VEVENT
-UID:e8b636f3388003d5@gratis-freising
-DTSTAMP:20260826T041238Z
-DTSTART;TZID=Europe/Berlin:20260826T183000
-DTEND;TZID=Europe/Berlin:20260826T203000
-SUMMARY:Gemeindegebet (vermutlich frei)
-LOCATION:Pfarrkirche St. Lantpert — Kepserstraße 2\, 85356 Freising
-DESCRIPTION:Gemeindegebet für die verstorbenen Angehörigen der Stadtkirch
- e. Besonders gedacht wird der Menschen\, die seit dem 27. Juli bestattet w
- urden.\n\nEintritt: vermutlich kostenfrei (Quelle nennt: unklar)\nSicherhe
- it: niedrig\n\nKategorie: Religion\nZielgruppe: Alle\nDrinnen/Draussen: dr
- innen\n\nQuelle: https://veranstaltungen.merkur.de/freising/gemeindegebet-
- e86050ec3c9870e0d0725e0956b53ec81.html
-URL:https://veranstaltungen.merkur.de/freising/gemeindegebet-e86050ec3c9870
- e0d0725e0956b53ec81.html
-CATEGORIES:Religion
-END:VEVENT
-BEGIN:VEVENT
-UID:0e426d250c0370ae@gratis-freising
-DTSTAMP:20260826T041238Z
-DTSTART;TZID=Europe/Berlin:20260826T193000
-DTEND;TZID=Europe/Berlin:20260826T220000
-SUMMARY:Vladislav Cojocaru (Akkordeon)
-LOCATION:MON´s Garden — Ziegelgasse 7\, 85356 Freising
-DESCRIPTION:Ein Konzert des Akkordeonvirtuosen Vladislav Cojocaru\, der vie
- tnamesische Klänge mit klassischer Akkordeonmusik verbindet. Dazu gibt es
-  feine vietnamesische Gerichte. Bei schlechtem Wetter findet die Veranstal
- tung im Restaurant statt.\n\nEintritt: Eintritt frei (Quelle nennt: frei)\
- nBeleg: "Eintritt frei!"\nSicherheit: hoch\n\nVeranstalter: 3klang gGmbH\n
- Kategorie: Musik\nZielgruppe: Alle\nDrinnen/Draussen: beides\nAnmeldung no
- etig: ja — tel:08161/9894600\n\nQuelle: https://veranstaltungen.freising
- .de/freising/vladislav-cojocaru-akkordeon-ef6200addb9fa8f7be2691add5e57753
- 2.html\nAuch bei: https://www.3klang-musik.de/freising.html\nAuch bei: htt
- ps://veranstaltungen.merkur.de/freising/vladislav-cojocaru-akkordeon-e6c73
- 0619790b9e8b6cb95af131b12271.html\nBild: https://veranstaltungen.freising.
- de/media/2026/08/vladislav-cojocaru-akkordeon-ef6200addb9fa8f7be2691add5e5
- 77532.jpg
-URL:https://veranstaltungen.freising.de/freising/vladislav-cojocaru-akkorde
- on-ef6200addb9fa8f7be2691add5e577532.html
-CATEGORIES:Musik
-END:VEVENT
-BEGIN:VEVENT
 UID:5e251f775b7627c8@gratis-freising
-DTSTAMP:20260826T041238Z
+DTSTAMP:20260827T142154Z
 DTSTART;TZID=Europe/Berlin:20260827T153000
 DTEND;TZID=Europe/Berlin:20260827T173000
 SUMMARY:Vorlesen an besonderen Orten
-LOCATION:Traktorspielplatz — Kammergasse 14\, 85354 Freising
-DESCRIPTION:Vorlesestunde für Kinder am Traktorspielplatz. Ehrenamtliche V
- orleserinnen und Vorleser präsentieren spannende Geschichten unter freiem
-  Himmel. Bei Regen fällt die Veranstaltung aus.\n\nEintritt: Eintritt fre
- i (Quelle nennt: frei)\nBeleg: "Kostenlos"\nSicherheit: hoch\n\nVeranstalt
- er: Stadtbibliothek Freising\nKategorie: Kinderprogramm\nZielgruppe: Kinde
- r\nDrinnen/Draussen: draussen\n\nQuelle: https://veranstaltungen.freising.
- de/freising/vorlesen-an-besonderen-orten-ec94dc2222e373215f56b78e85448153a
- .html\nAuch bei: https://veranstaltungen.merkur.de/freising/vorlesen-an-be
- sonderen-orten-ec94dc2222e373215f56b78e85448153a.html\nBild: https://veran
- staltungen.freising.de/media/2026/08/vorlesen-an-besonderen-orten-ec94dc22
- 22e373215f56b78e85448153a.jpg
+LOCATION:Traktorspielplatz — Kammergasse 14\, 85356 Freising
+DESCRIPTION:Die Stadtbibliothek lädt Kinder zu einer Vorlesestunde unter f
+ reiem Himmel auf dem Traktorspielplatz ein. Ehrenamtliche Vorleserinnen un
+ d Vorleser präsentieren spannende Geschichten und fördern so Wortschatz\
+ , Konzentration und Fantasie. Bei Regen fällt die Veranstaltung aus.\n\nE
+ intritt: Eintritt frei (Quelle nennt: frei)\nBeleg: "Eintritt frei"\nSiche
+ rheit: hoch\n\nVeranstalter: Stadtbibliothek Freising\nKategorie: Kinderpr
+ ogramm\nZielgruppe: Kinder\nDrinnen/Draussen: draussen\n\nQuelle: https://
+ veranstaltungen.freising.de/freising/vorlesen-an-besonderen-orten-ec94dc22
+ 22e373215f56b78e85448153a.html\nAuch bei: https://veranstaltungen.merkur.d
+ e/freising/vorlesen-an-besonderen-orten-ec94dc2222e373215f56b78e85448153a.
+ html\nBild: https://veranstaltungen.freising.de/media/2026/08/vorlesen-an-
+ besonderen-orten-ec94dc2222e373215f56b78e85448153a.jpg
 URL:https://veranstaltungen.freising.de/freising/vorlesen-an-besonderen-ort
  en-ec94dc2222e373215f56b78e85448153a.html
 CATEGORIES:Kinderprogramm
 END:VEVENT
 BEGIN:VEVENT
 UID:bf384c4892841cdd@gratis-freising
-DTSTAMP:20260826T041238Z
+DTSTAMP:20260827T142154Z
 DTSTART;TZID=Europe/Berlin:20260827T153000
 DTEND;TZID=Europe/Berlin:20260827T173000
 SUMMARY:Lesen an besonderen Orten
 LOCATION:Traktorspielplatz — Kammergasse 14\, 85354 Freising
-DESCRIPTION:Vorlesestunde für Kinder am Traktorspielplatz. Ehrenamtliche V
- orleserinnen und Vorleser präsentieren spannende Geschichten unter freiem
-  Himmel. Bei Regen fällt die Veranstaltung aus.\n\nEintritt: Eintritt fre
- i (Quelle nennt: frei)\nBeleg: "Kostenlos"\nSicherheit: hoch\n\nVeranstalt
- er: Stadtbibliothek Freising\nKategorie: Kinderprogramm\nZielgruppe: Kinde
- r\nDrinnen/Draussen: draussen\n\nQuelle: https://veranstaltungen.merkur.de
- /freising/lesen-an-besonderen-orten-e003ad080da2d04b03398d7c28276b2e4.html
+DESCRIPTION:Ein kostenloses Leseangebot für Kinder\, das an ungewöhnliche
+ n Orten stattfindet. Hier wird gemeinsam gelesen und Geschichten erlebt\, 
+ ohne dass eine Anmeldung erforderlich ist.\n\nEintritt: Eintritt frei (Que
+ lle nennt: frei)\nBeleg: "Kostenlos\, ohne Anmeldung"\nSicherheit: hoch\n\
+ nVeranstalter: Stadtbibliothek Freising\nKategorie: Kinderprogramm\nZielgr
+ uppe: Kinder\nDrinnen/Draussen: draussen\n\nQuelle: https://veranstaltunge
+ n.merkur.de/freising/lesen-an-besonderen-orten-e003ad080da2d04b03398d7c282
+ 76b2e4.html
 URL:https://veranstaltungen.merkur.de/freising/lesen-an-besonderen-orten-e0
  03ad080da2d04b03398d7c28276b2e4.html
 CATEGORIES:Kinderprogramm
 END:VEVENT
 BEGIN:VEVENT
 UID:6d3553a91a60420d@gratis-freising
-DTSTAMP:20260826T041238Z
+DTSTAMP:20260827T142154Z
 DTSTART;TZID=Europe/Berlin:20260827T183000
 DTEND;TZID=Europe/Berlin:20260827T220000
 SUMMARY:Gay-Stammtisch Freising
-LOCATION:Restaurant Et Cetera — Hauptstraße 54
-DESCRIPTION:Regelmäßiges Treffen zum geselligen Austausch und gemeinsamen
-  Unternehmungen. Jungs und Männer jeden Alters sind willkommen. Alle zwei
-  Wochen donnerstags.\n\nEintritt: Eintritt frei (Quelle nennt: frei)\nBele
- g: "Eintritt frei"\nSicherheit: hoch\n\nVeranstalter: gaystammtisch-freisi
- ng@gmx.de\nKategorie: Geselligkeit/Spiele/Treffen\nZielgruppe: Alle\nDrinn
- en/Draussen: drinnen\n\nQuelle: https://veranstaltungen.freising.de/freisi
- ng/gay-stammtisch-freising-e745411e40bff6db417012828cacce1db.html\nAuch be
- i: https://veranstaltungen.merkur.de/freising/gay-stammtisch-freising-e745
- 411e40bff6db417012828cacce1db.html\nBild: https://veranstaltungen.freising
- .de/media/2026/08/gay-stammtisch-freising-e745411e40bff6db417012828cacce1d
- b.jpg
+LOCATION:Restaurant Et Cetera — Hauptstraße 54\, 85356 Freising
+DESCRIPTION:Seit über 25 Jahren trifft sich der Gay-Stammtisch in Freising
+  zum geselligen Austausch und gemeinsamen Unternehmungen. Jungs und Männe
+ r jeden Alters sind willkommen. Der Stammtisch findet alle zwei Wochen don
+ nerstags in der Gaststätte Et Cetera statt.\n\nEintritt: Eintritt frei (Q
+ uelle nennt: frei)\nBeleg: "Eintritt frei"\nSicherheit: hoch\n\nVeranstalt
+ er: gaystammtisch-freising@gmx.de\nKategorie: Geselligkeit/Spiele/Treffen\
+ nZielgruppe: Alle\nDrinnen/Draussen: drinnen\n\nQuelle: https://veranstalt
+ ungen.freising.de/freising/gay-stammtisch-freising-e745411e40bff6db4170128
+ 28cacce1db.html\nAuch bei: https://veranstaltungen.merkur.de/freising/gay-
+ stammtisch-freising-e745411e40bff6db417012828cacce1db.html\nAuch bei: http
+ s://veranstaltungen.merkur.de/freising/gay-stammtisch-e7d4a8311dda62293c24
+ 7bdc9d8ef1f59.html\nBild: https://veranstaltungen.freising.de/media/2026/0
+ 8/gay-stammtisch-freising-e745411e40bff6db417012828cacce1db.jpg
 URL:https://veranstaltungen.freising.de/freising/gay-stammtisch-freising-e7
  45411e40bff6db417012828cacce1db.html
 CATEGORIES:Geselligkeit/Spiele/Treffen
 END:VEVENT
 BEGIN:VEVENT
 UID:a753c7385e31a4c3@gratis-freising
-DTSTAMP:20260826T041238Z
+DTSTAMP:20260827T142154Z
 DTSTART;TZID=Europe/Berlin:20260827T193000
 DTEND;TZID=Europe/Berlin:20260827T210000
 SUMMARY:Kreuzbund SHG Bahnhofstraße (vermutlich frei)
-LOCATION:Caritas-Zentrum Freising — Bahnhofstr. 20
-DESCRIPTION:Selbsthilfegruppe für Betroffene und Angehörige. Ein geschüt
- zter Rahmen zum Austausch und zur gegenseitigen Unterstützung.\n\nEintrit
- t: vermutlich kostenfrei (Quelle nennt: frei)\nSicherheit: mittel\n\nVeran
- stalter: Michael Kraml\nKategorie: Rat und Hilfe\nZielgruppe: Alle\nDrinne
- n/Draussen: drinnen\n\nQuelle: https://veranstaltungen.merkur.de/freising/
- kreuzbund-shg-bahnhofstrasse-ec0093f7bfcf96906ff24eb4ce9eea60e.html\nAuch 
- bei: https://veranstaltungen.merkur.de/freising/kreuzbund-shg-bahnhofstras
- se-ed5217e93fe1127b8030c410f3e40fa8f.html
+LOCATION:Caritas-Zentrum Freising — Bahnhofstraße 20\, 85356 Freising
+DESCRIPTION:Eine Selbsthilfegruppe für Betroffene und Angehörige\, die si
+ ch in vertraulicher Atmosphäre über Suchtproblematiken austauschen. Die 
+ Gruppe bietet Unterstützung und Gemeinschaft.\n\nEintritt: vermutlich kos
+ tenfrei (Quelle nennt: frei)\nSicherheit: mittel\n\nVeranstalter: Michael 
+ Kraml\nKategorie: Rat und Hilfe\nZielgruppe: Alle\nDrinnen/Draussen: drinn
+ en\n\nQuelle: https://veranstaltungen.merkur.de/freising/kreuzbund-shg-bah
+ nhofstrasse-ec0093f7bfcf96906ff24eb4ce9eea60e.html\nAuch bei: https://vera
+ nstaltungen.merkur.de/freising/kreuzbund-shg-bahnhofstrasse-ed5217e93fe112
+ 7b8030c410f3e40fa8f.html
 URL:https://veranstaltungen.merkur.de/freising/kreuzbund-shg-bahnhofstrasse
  -ec0093f7bfcf96906ff24eb4ce9eea60e.html
 CATEGORIES:Rat und Hilfe
 END:VEVENT
 BEGIN:VEVENT
 UID:dcd2cb19e2523b3a@gratis-freising
-DTSTAMP:20260826T041238Z
+DTSTAMP:20260827T142154Z
 DTSTART;TZID=Europe/Berlin:20260827T200000
 DTEND;TZID=Europe/Berlin:20260827T220000
 SUMMARY:Probe der Kantorei (vermutlich frei)
-LOCATION:Evang. Gemeindehaus Christi Himmelfahrt — Martin-Luther-Str. 10\
- , 85356 Freising
-DESCRIPTION:Probe des Kirchenchors Kantorei. Alle Interessierten sind willk
- ommen\, eine Anmeldung ist nicht erforderlich.\n\nEintritt: vermutlich kos
- tenfrei (Quelle nennt: frei)\nSicherheit: mittel\n\nKategorie: Musik\nZiel
- gruppe: Alle\nDrinnen/Draussen: drinnen\n\nQuelle: https://veranstaltungen
- .merkur.de/freising/probe-der-kantorei-e89291b43e72793f8276dd559aad045be.h
- tml
+LOCATION:Evangelisches Gemeindehaus Christi Himmelfahrt — Martin-Luther-S
+ traße 10\, 85356 Freising
+DESCRIPTION:Offene Probe des Kirchenchors\, bei der alle Interessierten wil
+ lkommen sind. Geprobt wird gemeinsam an musikalischen Stücken\, die spät
+ er in Gottesdiensten oder Konzerten aufgeführt werden.\n\nEintritt: vermu
+ tlich kostenfrei (Quelle nennt: frei)\nSicherheit: mittel\n\nKategorie: So
+ nstiges\nZielgruppe: Alle\nDrinnen/Draussen: drinnen\n\nQuelle: https://ve
+ ranstaltungen.merkur.de/freising/probe-der-kantorei-e89291b43e72793f8276dd
+ 559aad045be.html
 URL:https://veranstaltungen.merkur.de/freising/probe-der-kantorei-e89291b43
  e72793f8276dd559aad045be.html
-CATEGORIES:Musik
+CATEGORIES:Sonstiges
 END:VEVENT
 BEGIN:VEVENT
 UID:80a1dbca13bde2ce@gratis-freising
-DTSTAMP:20260826T041238Z
+DTSTAMP:20260827T142154Z
 DTSTART;TZID=Europe/Berlin:20260827T200000
 DTEND;TZID=Europe/Berlin:20260827T220000
 SUMMARY:Anonyme Alkoholiker (vermutlich frei)
 LOCATION:Paul-Gerhardt-Haus — General-von-Stein-Straße 22\, 85356 Freisi
  ng
-DESCRIPTION:Regelmäßiges Treffen der Selbsthilfegruppe Anonyme Alkoholike
- r. Offenes Angebot für Betroffene und Interessierte jeden Donnerstag und 
- Freitag.\n\nEintritt: vermutlich kostenfrei (Quelle nennt: frei)\nSicherhe
- it: mittel\n\nKategorie: Sonstiges\nZielgruppe: Alle\nDrinnen/Draussen: dr
- innen\n\nQuelle: https://veranstaltungen.merkur.de/freising/anonyme-alkoho
- liker-edc37286ed90a0d0b1f53cadae0387b29.html
+DESCRIPTION:Regelmäßiges Treffen der Selbsthilfegruppe für Betroffene un
+ d Angehörige. Ein offener Austausch in vertraulicher Atmosphäre\, der Un
+ terstützung und Gemeinschaft bietet.\n\nEintritt: vermutlich kostenfrei (
+ Quelle nennt: frei)\nSicherheit: mittel\n\nKategorie: Sonstiges\nZielgrupp
+ e: Alle\nDrinnen/Draussen: drinnen\n\nQuelle: https://veranstaltungen.merk
+ ur.de/freising/anonyme-alkoholiker-edc37286ed90a0d0b1f53cadae0387b29.html
 URL:https://veranstaltungen.merkur.de/freising/anonyme-alkoholiker-edc37286
  ed90a0d0b1f53cadae0387b29.html
 CATEGORIES:Sonstiges
 END:VEVENT
 BEGIN:VEVENT
 UID:ff2f44b2ba90a264@gratis-freising
-DTSTAMP:20260826T041238Z
+DTSTAMP:20260827T142154Z
 DTSTART;TZID=Europe/Berlin:20260828T090000
 DTEND;TZID=Europe/Berlin:20260828T120000
 SUMMARY:Erst-Hilfe-Kurs für Kids!
-LOCATION:Stadtbibliothek Freising — Weizengasse 3 (Zugang über Untere Ha
- uptstraße)
+LOCATION:Stadtbibliothek Freising — Weizengasse 3\, 85356 Freising
 DESCRIPTION:Ein spezieller Erste-Hilfe-Kurs für Kinder zwischen 8 und 11 J
- ahren. Die Teilnehmenden lernen altersgerecht\, Gefahren einzuschätzen un
- d grundlegende Maßnahmen der Ersten Hilfe anzuwenden. Plätze sind begren
- zt\, Anmeldung erforderlich.\n\nEintritt: Eintritt frei (Quelle nennt: fre
- i)\nBeleg: "Eintritt frei"\nSicherheit: hoch\n\nVeranstalter: Stadtbibliot
- hek Freising\nKategorie: Kinderprogramm\nZielgruppe: Kinder\nDrinnen/Draus
- sen: drinnen\nAnmeldung noetig: ja — siehe Quelle\n\nQuelle: https://ver
- anstaltungen.freising.de/freising/erst-hilfe-kurs-fuer-kids-e5f5f2ce107cf9
- 920b45778139bae2f52.html\nAuch bei: https://veranstaltungen.merkur.de/frei
- sing/erst-hilfe-kurs-fuer-kids-e5f5f2ce107cf9920b45778139bae2f52.html\nBil
- d: https://veranstaltungen.freising.de/media/2026/08/erst-hilfe-kurs-fuer-
- kids-e5f5f2ce107cf9920b45778139bae2f52.jpg
+ ahren. Die Teilnehmer lernen spielerisch\, Gefahren einzuschätzen\, Notru
+ fe abzusetzen und grundlegende Erste-Hilfe-Maßnahmen anzuwenden. Eine ver
+ bindliche Anmeldung ist erforderlich.\n\nEintritt: Eintritt frei (Quelle n
+ ennt: frei)\nBeleg: "Eintritt frei"\nSicherheit: hoch\n\nVeranstalter: Sta
+ dtbibliothek Freising\nKategorie: Kinderprogramm\nZielgruppe: Kinder\nDrin
+ nen/Draussen: drinnen\nAnmeldung noetig: ja — siehe Quelle\n\nQuelle: ht
+ tps://veranstaltungen.freising.de/freising/erst-hilfe-kurs-fuer-kids-e5f5f
+ 2ce107cf9920b45778139bae2f52.html\nAuch bei: https://veranstaltungen.merku
+ r.de/freising/erst-hilfe-kurs-fuer-kids-e5f5f2ce107cf9920b45778139bae2f52.
+ html\nBild: https://veranstaltungen.freising.de/media/2026/08/erst-hilfe-k
+ urs-fuer-kids-e5f5f2ce107cf9920b45778139bae2f52.jpg
 URL:https://veranstaltungen.freising.de/freising/erst-hilfe-kurs-fuer-kids-
  e5f5f2ce107cf9920b45778139bae2f52.html
 CATEGORIES:Kinderprogramm
 END:VEVENT
 BEGIN:VEVENT
 UID:d99b5b790034eec9@gratis-freising
-DTSTAMP:20260826T041238Z
+DTSTAMP:20260827T142154Z
 DTSTART;TZID=Europe/Berlin:20260828T110000
 DTEND;TZID=Europe/Berlin:20260828T130000
 SUMMARY:Senioren-Netzwerk Frieda & Ben (vermutlich frei)
 LOCATION:dASAMa Dialograum im Asamgebäude — 85356 Freising
-DESCRIPTION:Regelmäßiges Treffen des Senioren-Netzwerks zur Information 
- ber Aktivitäten und Austausch. Jeden Freitag von 11 bis 13 Uhr.\n\nEintr
- itt: vermutlich kostenfrei (Quelle nennt: frei)\nSicherheit: mittel\n\nKat
- egorie: Sonstiges\nZielgruppe: Senioren\n\nQuelle: https://veranstaltungen
- .merkur.de/freising/senioren-netzwerk-frieda-ben-e1bdbd1c5c5437951883c1e13
- ddf4ffe2.html
+DESCRIPTION:Ein regelmäßiges Treffen des Senioren-Netzwerks\, bei dem Mit
+ glieder und Interessierte über Aktivitäten und Themen informiert werden.
+  Ein offener Austausch in gemütlicher Runde steht im Mittelpunkt.\n\nEint
+ ritt: vermutlich kostenfrei (Quelle nennt: frei)\nSicherheit: mittel\n\nKa
+ tegorie: Sonstiges\nZielgruppe: Senioren\n\nQuelle: https://veranstaltunge
+ n.merkur.de/freising/senioren-netzwerk-frieda-ben-e1bdbd1c5c5437951883c1e1
+ 3ddf4ffe2.html
 URL:https://veranstaltungen.merkur.de/freising/senioren-netzwerk-frieda-ben
  -e1bdbd1c5c5437951883c1e13ddf4ffe2.html
 CATEGORIES:Sonstiges
 END:VEVENT
 BEGIN:VEVENT
 UID:d0ad0c688d5be80d@gratis-freising
-DTSTAMP:20260826T041238Z
+DTSTAMP:20260827T142154Z
 DTSTART;TZID=Europe/Berlin:20260828T150000
 DTEND;TZID=Europe/Berlin:20260828T160000
 SUMMARY:Mach MINT: Vorlesen und Experimentieren
-LOCATION:Stadtbibliothek Freising — Weizengasse 3 (Zugang über Untere Ha
- uptstraße)
-DESCRIPTION:Ein interaktives Programm für Kinder von 5 bis 7 Jahren\, das 
- Vorlesen und einfache Experimente kombiniert. Die Kinder lernen spielerisc
- h\, wie eine Uhr funktioniert und wie Menschen früher die Zeit gemessen h
- aben.\n\nEintritt: Eintritt frei (Quelle nennt: frei)\nBeleg: "Eintritt fr
- ei"\nSicherheit: hoch\n\nVeranstalter: Stadtbibliothek Freising\nKategorie
- : Kinderprogramm\nZielgruppe: Kinder\nDrinnen/Draussen: drinnen\nAnmeldung
-  noetig: ja — siehe Quelle\n\nQuelle: https://veranstaltungen.freising.d
- e/freising/mach-mint-vorlesen-und-experimentieren-ece42c9076110cdb903e3620
- 9cf63e884.html\nAuch bei: https://veranstaltungen.merkur.de/freising/mach-
- mint-vorlesen-und-experimentieren-ece42c9076110cdb903e36209cf63e884.html\n
- Bild: https://veranstaltungen.freising.de/media/2026/08/mach-mint-vorlesen
- -und-experimentieren-ece42c9076110cdb903e36209cf63e884.jpg
+LOCATION:Stadtbibliothek Freising — Weizengasse 3\, 85356 Freising
+DESCRIPTION:Ein Mitmach-Angebot für Kinder zwischen 5 und 7 Jahren\, das V
+ orlesen und Experimente kombiniert. Die Teilnehmer entdecken spielerisch d
+ ie Geheimnisse der Zeit und lernen\, wie man sie messen kann. Eine verbind
+ liche Anmeldung ist erforderlich.\n\nEintritt: Eintritt frei (Quelle nennt
+ : frei)\nBeleg: "Eintritt frei"\nSicherheit: hoch\n\nVeranstalter: Stadtbi
+ bliothek Freising\nKategorie: Kinderprogramm\nZielgruppe: Kinder\nDrinnen/
+ Draussen: drinnen\nAnmeldung noetig: ja — siehe Quelle\n\nQuelle: https:
+ //veranstaltungen.freising.de/freising/mach-mint-vorlesen-und-experimentie
+ ren-ece42c9076110cdb903e36209cf63e884.html\nAuch bei: https://veranstaltun
+ gen.merkur.de/freising/mach-mint-vorlesen-und-experimentieren-ece42c907611
+ 0cdb903e36209cf63e884.html\nBild: https://veranstaltungen.freising.de/medi
+ a/2026/08/mach-mint-vorlesen-und-experimentieren-ece42c9076110cdb903e36209
+ cf63e884.jpg
 URL:https://veranstaltungen.freising.de/freising/mach-mint-vorlesen-und-exp
  erimentieren-ece42c9076110cdb903e36209cf63e884.html
 CATEGORIES:Kinderprogramm
 END:VEVENT
 BEGIN:VEVENT
+UID:da000446f2911bbd@gratis-freising
+DTSTAMP:20260827T142154Z
+DTSTART;VALUE=DATE:20260829
+DTEND;VALUE=DATE:20260830
+SUMMARY:Krisendienst Psychiatrie Oberbayern (vermutlich frei)
+LOCATION:85356 Freising
+DESCRIPTION:Ein rund um die Uhr erreichbarer Krisendienst für psychische N
+ otfälle. Der Dienst ist auch mit Dolmetschern in über 120 Sprachen verf
+ gbar und bietet schnelle Hilfe in akuten Situationen.\n\nEintritt: vermut
+ lich kostenfrei (Quelle nennt: frei)\nSicherheit: mittel\n\nKategorie: Rat
+  und Hilfe\nZielgruppe: Alle\n\nQuelle: https://veranstaltungen.merkur.de/
+ freising/krisendienst-psychiatrie-oberbayern-e66fb69f5d88622719d55d6f39ca7
+ 07d6.html
+URL:https://veranstaltungen.merkur.de/freising/krisendienst-psychiatrie-obe
+ rbayern-e66fb69f5d88622719d55d6f39ca707d6.html
+CATEGORIES:Rat und Hilfe
+END:VEVENT
+BEGIN:VEVENT
 UID:5a9cbf78114b0ddd@gratis-freising
-DTSTAMP:20260826T041238Z
+DTSTAMP:20260827T142154Z
 DTSTART;TZID=Europe/Berlin:20260829T090000
 DTEND;TZID=Europe/Berlin:20260829T140000
-SUMMARY:Flohmarkt auf der Sauwiese
-LOCATION:Parkplatz Sauwiese — Weihenstephaner Berg 4\, 85354 Freising
-DESCRIPTION:Ein beliebter Flohmarkt auf einem schattigen Parkplatz am Weihe
- nstephaner Berg. Hier finden Besucherinnen und Besucher eine große Auswah
- l an gebrauchten Artikeln und können stöbern und handeln.\n\nEintritt: E
- intritt frei (Quelle nennt: frei)\nBeleg: "Eintritt frei"\nSicherheit: hoc
- h\n\nVeranstalter: Martin Felsl\nKategorie: Flohmarkt\nZielgruppe: Alle\nD
- rinnen/Draussen: draussen\n\nQuelle: https://veranstaltungen.freising.de/f
- reising/flohmarkt-auf-der-sauwiese-eac372b88e8250c692ab1643677542115.html
+SUMMARY:Flohmarkt "auf der Sauwiese"
+LOCATION:Parkplatz Sauwiese in Freising-Weihenstephan — Weihenstephaner B
+ erg 4\, 85354 Freising
+DESCRIPTION:Ein beliebter Flohmarkt für Hobbytrödler auf dem Parkplatz Sa
+ uwiese. Besucher können stöbern\, handeln und neue Schätze entdecken. D
+ er Aufbau beginnt bereits ab 8 Uhr\, die Platzvergabe erfolgt vor Ort.\n\n
+ Eintritt: Eintritt frei (Quelle nennt: frei)\nBeleg: "Eintritt frei"\nSich
+ erheit: hoch\n\nVeranstalter: Freizeitsportverein Weihenstephan\nKategorie
+ : Markt\nZielgruppe: Alle\nDrinnen/Draussen: draussen\n\nQuelle: https://v
+ eranstaltungen.freising.de/freising/flohmarkt-auf-der-sauwiese-eac372b88e8
+ 250c692ab1643677542115.html\nAuch bei: https://veranstaltungen.merkur.de/f
+ reising/flohmarkt-auf-der-sauwiese-e176607d29022eea987611adb466ba2ac.html
 URL:https://veranstaltungen.freising.de/freising/flohmarkt-auf-der-sauwiese
  -eac372b88e8250c692ab1643677542115.html
-CATEGORIES:Flohmarkt
+CATEGORIES:Markt
 END:VEVENT
 BEGIN:VEVENT
 UID:54b29e28c6519623@gratis-freising
-DTSTAMP:20260826T041238Z
+DTSTAMP:20260827T142154Z
 DTSTART;TZID=Europe/Berlin:20260829T120000
 DTEND;TZID=Europe/Berlin:20260829T170000
 SUMMARY:Führung im Furtner
 LOCATION:Furtnerbräu — Obere Hauptstr. 42\, 85354 Freising
-DESCRIPTION:Bei dieser kostenlosen Führung wird das frühere Hotel und die
-  Brauerei Furtnerbräu erkundet. Es gibt Einblicke in die Geschichte des H
- auses und Zukunftspläne werden vorgestellt. Die Führung ist auf 26 Perso
- nen begrenzt und dauert etwa 90 Minuten. Treffpunkt ist vor dem Furtner.\n
- \nEintritt: Eintritt frei (Quelle nennt: frei)\nBeleg: "Die Führungen sin
- d kostenlos."\nSicherheit: hoch\n\nKategorie: Vortrag\nZielgruppe: Alle\n\
- nQuelle: https://www.furtner-freising.de/veranstaltung/fuehrung-im-furtner
- -29-08-12/\nBild: https://www.furtner-freising.de/wp-content/uploads/2026/
- 05/IMG_0427-scaled-e1780229657814.jpg
+DESCRIPTION:Eine kostenlose Führung durch das ehemalige Hotel und die Brau
+ erei Furtnerbräu. Dabei wird die Geschichte des Hauses erläutert und es 
+ gibt Einblicke in die Zukunftspläne. Geeignet für alle Interessierten\, 
+ die mehr über den Ort erfahren möchten. Treffpunkt ist vor dem Furtner.\
+ n\nEintritt: Eintritt frei (Quelle nennt: frei)\nBeleg: "Die Führungen si
+ nd kostenlos."\nSicherheit: hoch\n\nKategorie: Vortrag\nZielgruppe: Alle\n
+ \nQuelle: https://www.furtner-freising.de/veranstaltung/fuehrung-im-furtne
+ r-29-08-12/\nBild: https://www.furtner-freising.de/wp-content/uploads/2026
+ /05/IMG_0427-scaled-e1780229657814.jpg
 URL:https://www.furtner-freising.de/veranstaltung/fuehrung-im-furtner-29-08
  -12/
 CATEGORIES:Vortrag
 END:VEVENT
 BEGIN:VEVENT
 UID:3913e1fa20280f0a@gratis-freising
-DTSTAMP:20260826T041238Z
+DTSTAMP:20260827T142154Z
 DTSTART;TZID=Europe/Berlin:20260830T140000
 DTEND;TZID=Europe/Berlin:20260830T170000
 SUMMARY:Führung im Furtner
@@ -509,65 +496,66 @@ CATEGORIES:Vortrag
 END:VEVENT
 BEGIN:VEVENT
 UID:4864a26e1e8aab3c@gratis-freising
-DTSTAMP:20260826T041238Z
+DTSTAMP:20260827T142154Z
 DTSTART;TZID=Europe/Berlin:20260901T190000
 DTEND;TZID=Europe/Berlin:20260901T220000
 SUMMARY:Bier & Stricken
 LOCATION:Furtnerbräu — Obere Hauptstraße 42\, 85356 Freising
 DESCRIPTION:Ein geselliger Abend zum Stricken\, Häkeln und Lachen. Anfäng
- er und Profis\, Jung und Junggebliebene sind willkommen. Die Gruppe trifft
-  sich wöchentlich in wechselnden Lokalen.\n\nEintritt: Eintritt frei (Que
- lle nennt: frei)\nBeleg: "Eintritt frei"\nSicherheit: hoch\n\nVeranstalter
- : stammtisch-freising-nadelt@gmx.de\nKategorie: Geselligkeit/Spiele/Treffe
- n\nZielgruppe: Alle\nDrinnen/Draussen: drinnen\n\nQuelle: https://veransta
- ltungen.freising.de/freising/bier-stricken-e5ccd5860335305ff4cdf603b759070
- a1.html
+ er und Profis\, Jung und Alt sind willkommen. Die Gruppe trifft sich wöch
+ entlich in verschiedenen Lokalen in Freising.\n\nEintritt: Eintritt frei (
+ Quelle nennt: frei)\nBeleg: "Eintritt frei"\nSicherheit: hoch\n\nVeranstal
+ ter: stammtisch-freising-nadelt@gmx.de\nKategorie: Geselligkeit/Spiele/Tre
+ ffen\nZielgruppe: Alle\nDrinnen/Draussen: drinnen\n\nQuelle: https://veran
+ staltungen.freising.de/freising/bier-stricken-e5ccd5860335305ff4cdf603b759
+ 070a1.html
 URL:https://veranstaltungen.freising.de/freising/bier-stricken-e5ccd5860335
  305ff4cdf603b759070a1.html
 CATEGORIES:Geselligkeit/Spiele/Treffen
 END:VEVENT
 BEGIN:VEVENT
 UID:9d43e59286a576af@gratis-freising
-DTSTAMP:20260826T041238Z
+DTSTAMP:20260827T142154Z
 DTSTART;TZID=Europe/Berlin:20260902T150000
 DTEND;TZID=Europe/Berlin:20260902T160000
-SUMMARY:Vorlesestunde für Kinder von 5-8 Jahren
+SUMMARY:Vorlesestunde für Kinder von 5–8 Jahren
 LOCATION:Stadtbibliothek Freising — Weizengasse 3 (Zugang über Untere Ha
  uptstraße)\, 85356 Freising
-DESCRIPTION:Gudrun Kirchhof liest Geschichten vor\, die von berühmten Auto
- ren speziell für Kinder geschrieben wurden. Die Vorlesestunde fördert di
- e Fantasie und den Wortschatz der jungen Zuhörerinnen und Zuhörer.\n\nEi
- ntritt: Eintritt frei (Quelle nennt: frei)\nBeleg: "Eintritt frei"\nSicher
- heit: hoch\n\nVeranstalter: Stadtbibliothek Freising\nKategorie: Kinderpro
- gramm\nZielgruppe: Kinder\nDrinnen/Draussen: drinnen\n\nQuelle: https://ve
- ranstaltungen.freising.de/freising/vorlesestunde-fuer-kinder-von-5-8-jahre
- n-edf31c20d9e96243f8fbef5a3b921263a.html
+DESCRIPTION:Die Vorleserin Gudrun Kirchhof präsentiert Geschichten von bek
+ annten Autoren\, die speziell für Kinder geschrieben oder adaptiert wurde
+ n. Die einstündige Lesung fördert die Fantasie und das Leseverständnis 
+ der jungen Zuhörer.\n\nEintritt: Eintritt frei (Quelle nennt: frei)\nBele
+ g: "Eintritt frei"\nSicherheit: hoch\n\nVeranstalter: Stadtbibliothek Frei
+ sing\nKategorie: Kinderprogramm\nZielgruppe: Kinder\nDrinnen/Draussen: dri
+ nnen\n\nQuelle: https://veranstaltungen.freising.de/freising/vorlesestunde
+ -fuer-kinder-von-5-8-jahren-edf31c20d9e96243f8fbef5a3b921263a.html
 URL:https://veranstaltungen.freising.de/freising/vorlesestunde-fuer-kinder-
  von-5-8-jahren-edf31c20d9e96243f8fbef5a3b921263a.html
 CATEGORIES:Kinderprogramm
 END:VEVENT
 BEGIN:VEVENT
 UID:2c88db5822e85013@gratis-freising
-DTSTAMP:20260826T041238Z
+DTSTAMP:20260827T142154Z
 DTSTART;TZID=Europe/Berlin:20260903T183000
 DTEND;TZID=Europe/Berlin:20260903T200000
 SUMMARY:Ausstellung "Feder&Friends": Lebensfreude und Leichtigkeit
-LOCATION:Altes Gefängnis — Brennergasse 1\, 85356 Freising
+LOCATION:Altes Gefängnis — Brennergasse 1\, 85386 Freising
 DESCRIPTION:Die Künstlerinnenvereinigung „Die Feder & Friends“ präsen
- tiert Malerei\, Druckgrafik\, Skulpturen und Installationen voller Farbe u
- nd positiver Energie. Die Ausstellung steht unter dem Motto „Lebensfreud
- e und Leichtigkeit“.\n\nEintritt: Eintritt frei (Quelle nennt: frei)\nBe
- leg: "Eintritt frei"\nSicherheit: hoch\n\nVeranstalter: Verena Endl\nKateg
- orie: Kunst\nZielgruppe: Alle\nDrinnen/Draussen: drinnen\n\nQuelle: https:
- //veranstaltungen.freising.de/freising/ausstellung-federfriends-lebensfreu
- de-und-leichtigkeit-ef1b10a39f435ec0468021135c8194c73.html
+ tiert unter dem Motto „Lebensfreude und Leichtigkeit“ Werke von sieben
+  Künstlerinnen. Gezeigt werden Malerei\, Druckgrafik\, Skulpturen und Ins
+ tallationen voller Farbe und positiver Energie.\n\nEintritt: Eintritt frei
+  (Quelle nennt: frei)\nBeleg: "Eintritt frei"\nSicherheit: hoch\n\nVeranst
+ alter: Verena Endl\nKategorie: Kunst\nZielgruppe: Alle\nDrinnen/Draussen: 
+ drinnen\n\nQuelle: https://veranstaltungen.freising.de/freising/ausstellun
+ g-federfriends-lebensfreude-und-leichtigkeit-ef1b10a39f435ec0468021135c819
+ 4c73.html
 URL:https://veranstaltungen.freising.de/freising/ausstellung-federfriends-l
  ebensfreude-und-leichtigkeit-ef1b10a39f435ec0468021135c8194c73.html
 CATEGORIES:Kunst
 END:VEVENT
 BEGIN:VEVENT
 UID:d6adab0bb0db2255@gratis-freising
-DTSTAMP:20260826T041238Z
+DTSTAMP:20260827T142154Z
 DTSTART;TZID=Europe/Berlin:20260904T170000
 DTEND;TZID=Europe/Berlin:20260913T235959
 SUMMARY:Volksfest Freising 2026
@@ -587,64 +575,64 @@ CATEGORIES:Fest
 END:VEVENT
 BEGIN:VEVENT
 UID:2762193782ba4f12@gratis-freising
-DTSTAMP:20260826T041238Z
+DTSTAMP:20260827T142154Z
 DTSTART;TZID=Europe/Berlin:20260905T100000
 DTEND;TZID=Europe/Berlin:20260905T140000
 SUMMARY:Bücherflohmarkt der Stadtbibliothek
 LOCATION:Stadtbibliothek Freising — Weizengasse 3\, 85356 Freising
-DESCRIPTION:Ein monatlich stattfindender Bücherflohmarkt mit gebrauchten B
- üchern\, CDs\, DVDs und Spielen. Die Einnahmen kommen der „Flohmarktkas
- se“ zugute. Bei schlechtem Wetter findet der Flohmarkt im Veranstaltungs
- raum der Bibliothek statt.\n\nEintritt: Eintritt frei (Quelle nennt: frei)
- \nBeleg: "Eintritt frei"\nSicherheit: hoch\n\nVeranstalter: Stadtbibliothe
- k Freising\nKategorie: Flohmarkt\nZielgruppe: Alle\nDrinnen/Draussen: drin
- nen\n\nQuelle: https://veranstaltungen.freising.de/freising/buecherflohmar
- kt-der-stadtbibliothek-e0b6607a5d3a60fffb870bd10536bf2da.html
+DESCRIPTION:Ein monatlich stattfindender Bücherflohmarkt auf dem Hof der S
+ tadtbibliothek. Neben Büchern werden auch CDs\, DVDs und Spiele angeboten
+ \, die gegen eine freiwillige Zahlung in die Flohmarktkasse erworben werde
+ n können. Bei schlechtem Wetter findet der Flohmarkt im Veranstaltungsrau
+ m im 2. Stock statt.\n\nEintritt: Eintritt frei (Quelle nennt: frei)\nBele
+ g: "Eintritt frei"\nSicherheit: hoch\n\nVeranstalter: Stadtbibliothek Frei
+ sing\nKategorie: Flohmarkt\nZielgruppe: Alle\nDrinnen/Draussen: beides\n\n
+ Quelle: https://veranstaltungen.freising.de/freising/buecherflohmarkt-der-
+ stadtbibliothek-e0b6607a5d3a60fffb870bd10536bf2da.html
 URL:https://veranstaltungen.freising.de/freising/buecherflohmarkt-der-stadt
  bibliothek-e0b6607a5d3a60fffb870bd10536bf2da.html
 CATEGORIES:Flohmarkt
 END:VEVENT
 BEGIN:VEVENT
 UID:da502ca9e5bf8e52@gratis-freising
-DTSTAMP:20260826T041238Z
+DTSTAMP:20260827T142154Z
 DTSTART;TZID=Europe/Berlin:20260906T100000
 DTEND;TZID=Europe/Berlin:20260906T113000
 SUMMARY:Öffentliche Führung im Staudensichtungsgarten
 LOCATION:Sichtungsgarten Weihenstephan — Am Staudengarten 7\, 85356 Freis
  ing
-DESCRIPTION:Eine öffentliche Führung durch den Staudensichtungsgarten\, d
- er eine große Auswahl an Stauden\, Gehölzen und saisonalen Pflanzungen p
- räsentiert. Die Führung bietet Einblicke in botanische Besonderheiten\, 
- Blühaspekte und die historische Gestaltung der Gartenanlage.\n\nEintritt:
-  Eintritt frei (Quelle nennt: frei)\nBeleg: "Eintritt frei"\nSicherheit: h
- och\n\nVeranstalter: Weihenstephaner Gärten\nKategorie: Führung/Besichti
- gung\nZielgruppe: Alle\nDrinnen/Draussen: draussen\n\nQuelle: https://vera
- nstaltungen.freising.de/freising/oeffentliche-fuehrung-im-staudensichtungs
- garten-e6b8ef10abf7a4756d27664f5c2652aff.html
+DESCRIPTION:Jeden ersten Sonntag im Monat laden die Weihenstephaner Gärten
+  zu öffentlichen Führungen durch den Sichtungsgarten ein. Besucher erhal
+ ten spannende Einblicke in die Vielfalt der Pflanzenwelt\, botanische Beso
+ nderheiten und die historische Gestaltung der traditionsreichen Gartenanla
+ ge.\n\nEintritt: Eintritt frei (Quelle nennt: frei)\nBeleg: "Eintritt frei
+ "\nSicherheit: hoch\n\nVeranstalter: Weihenstephaner Gärten\nKategorie: F
+ ührung/Besichtigung\nZielgruppe: Alle\nDrinnen/Draussen: draussen\n\nQuel
+ le: https://veranstaltungen.freising.de/freising/oeffentliche-fuehrung-im-
+ staudensichtungsgarten-e6b8ef10abf7a4756d27664f5c2652aff.html
 URL:https://veranstaltungen.freising.de/freising/oeffentliche-fuehrung-im-s
  taudensichtungsgarten-e6b8ef10abf7a4756d27664f5c2652aff.html
 CATEGORIES:Führung/Besichtigung
 END:VEVENT
 BEGIN:VEVENT
 UID:0a62c5e61810ae3e@gratis-freising
-DTSTAMP:20260826T041238Z
+DTSTAMP:20260827T142154Z
 DTSTART;TZID=Europe/Berlin:20260906T160000
 DTEND;TZID=Europe/Berlin:20260906T170000
 SUMMARY:Finissage SpielRäume - Remix 6
 LOCATION:Schafhof — Europäisches Künstlerhaus — Am Schafhof 1\, 85354
   Freising
-DESCRIPTION:Abschluss der Ausstellung mit einer Führung durch die Künstle
- rinnen Judit Lilla Molnár und Lina Zylla sowie der Kuratorin Isabel Oberl
- änder. Die Veranstaltung findet hybrid auf Deutsch und Englisch statt und
-  bietet die Möglichkeit\, die Werke im Gespräch mit den Macher:innen ken
- nenzulernen.\n\nEintritt: Eintritt frei (Quelle nennt: frei)\nBeleg: "Eint
- ritt frei und ohne vorherige Anmeldung"\nSicherheit: hoch\n\nVeranstalter:
-  Schafhof Kunstforum\nKategorie: Kunst\nZielgruppe: Alle\nDrinnen/Draussen
- : drinnen\n\nQuelle: https://www.schafhof-kunstforum.de/Aktuell/Veranstalt
- ungskalender/Finissage-SpielR%C3%A4ume.php?object=tx\,3432.13&ModID=11&FID
- =3957.64.1&NavID=2615.43&La=1&kat=2615.7%2C2615.25%2C2615.16%2C2615.18%2C2
- 615.4%2C2615.20%2C2615.28%2C2615.27%2C2615.19%2C2615.26%2C2615.21%2C2615.2
- 2%2C2615.14%2C2615.68&max=25
+DESCRIPTION:Abschlussführung durch die Ausstellung mit den Künstlerinnen 
+ Judit Lilla Molnár und Lina Zylla sowie der Kuratorin Isabel Oberländer.
+  Die Veranstaltung findet hybrid auf Deutsch und Englisch statt.\n\nEintri
+ tt: Eintritt frei (Quelle nennt: frei)\nBeleg: "Eintritt frei und ohne vor
+ herige Anmeldung"\nSicherheit: hoch\n\nVeranstalter: Schafhof Kunstforum\n
+ Kategorie: Kunst\nZielgruppe: Alle\nDrinnen/Draussen: drinnen\n\nQuelle: h
+ ttps://www.schafhof-kunstforum.de/Aktuell/Veranstaltungskalender/Finissage
+ -SpielR%C3%A4ume.php?object=tx\,3432.13&ModID=11&FID=3957.64.1&NavID=2615.
+ 43&La=1&kat=2615.7%2C2615.25%2C2615.16%2C2615.18%2C2615.4%2C2615.20%2C2615
+ .28%2C2615.27%2C2615.19%2C2615.26%2C2615.21%2C2615.22%2C2615.14%2C2615.68&
+ max=25
 URL:https://www.schafhof-kunstforum.de/Aktuell/Veranstaltungskalender/Finis
  sage-SpielR%C3%A4ume.php?object=tx\,3432.13&ModID=11&FID=3957.64.1&NavID=2
  615.43&La=1&kat=2615.7%2C2615.25%2C2615.16%2C2615.18%2C2615.4%2C2615.20%2C
@@ -654,28 +642,29 @@ CATEGORIES:Kunst
 END:VEVENT
 BEGIN:VEVENT
 UID:e10b9e714a6b7ff0@gratis-freising
-DTSTAMP:20260826T041238Z
+DTSTAMP:20260827T142154Z
 DTSTART;TZID=Europe/Berlin:20260908T153000
 DTEND;TZID=Europe/Berlin:20260908T160000
 SUMMARY:Gemütliche Vorleserunden für Kinder ab 3 Jahre
 LOCATION:Stadtbibliothek Freising — Weizengasse 3 (Zugang über Untere Ha
  uptstraße)\, 85356 Freising
-DESCRIPTION:Eine Vorlesestunde für Kinder ab 3 Jahren mit dem Bilderbuchki
- no „Der schaurige Schusch“. Die Geschichte zeigt\, dass man vor Fremde
- n keine Angst haben muss und es sich lohnt\, neue Freunde zu finden. Elter
- n werden gebeten\, während des Vorlesens in der Bibliothek zu bleiben.\n\
- nEintritt: Eintritt frei (Quelle nennt: frei)\nBeleg: "Eintritt frei"\nSic
- herheit: hoch\n\nVeranstalter: Stadtbibliothek Freising\nKategorie: Kinder
- programm\nZielgruppe: Kinder\nDrinnen/Draussen: drinnen\n\nQuelle: https:/
- /veranstaltungen.freising.de/freising/gemuetliche-vorleserunden-fuer-kinde
- r-ab-3-jahre-e91fd9bef3ca71433366067d9ee23b620.html
+DESCRIPTION:Die Vorleserin Hermann Grassl erzählt die lustige Geschichte 
+ Der schaurige Schusch“ als Bilderbuchkino. Die interaktive Lesung zeig
+ t\, dass man vor Fremden keine Angst haben muss und neue Freundschaften be
+ reichernd sein können. Eltern werden gebeten\, während der Vorlesung in 
+ der Bibliothek zu bleiben.\n\nEintritt: Eintritt frei (Quelle nennt: frei)
+ \nBeleg: "Eintritt frei"\nSicherheit: hoch\n\nVeranstalter: Stadtbibliothe
+ k Freising\nKategorie: Kinderprogramm\nZielgruppe: Kinder\nDrinnen/Drausse
+ n: drinnen\n\nQuelle: https://veranstaltungen.freising.de/freising/gemuetl
+ iche-vorleserunden-fuer-kinder-ab-3-jahre-e91fd9bef3ca71433366067d9ee23b62
+ 0.html
 URL:https://veranstaltungen.freising.de/freising/gemuetliche-vorleserunden-
  fuer-kinder-ab-3-jahre-e91fd9bef3ca71433366067d9ee23b620.html
 CATEGORIES:Kinderprogramm
 END:VEVENT
 BEGIN:VEVENT
 UID:ce684230f13e3a30@gratis-freising
-DTSTAMP:20260826T041238Z
+DTSTAMP:20260827T142154Z
 DTSTART;TZID=Europe/Berlin:20260910T190000
 DTEND;TZID=Europe/Berlin:20260910T190000
 SUMMARY:Was hat mein Konsum mit der Klimakrise zu tun? - ONLINE
@@ -695,47 +684,45 @@ CATEGORIES:Vortrag
 END:VEVENT
 BEGIN:VEVENT
 UID:dcfe6c6a86e14cb0@gratis-freising
-DTSTAMP:20260826T041238Z
+DTSTAMP:20260827T142154Z
 DTSTART;TZID=Europe/Berlin:20260912T150000
 DTEND;TZID=Europe/Berlin:20260912T180000
 SUMMARY:Repair Café
 LOCATION:Freising Vötting — Bachstraße 8\, Vötting
 DESCRIPTION:Bei diesem Repair Café können defekte Geräte\, Fahrräder od
- er Elektronik gemeinsam repariert werden. Ehrenamtliche helfen dabei\, die
-  Lebensdauer von Gegenständen zu verlängern. Dazu gibt es Kaffee\, Kuche
- n und eine gemütliche Atmosphäre.\n\nEintritt: Eintritt frei (Quelle nen
- nt: frei)\nBeleg: "Kategorieseite „vhs Freising — kostenfrei“"\nSich
- erheit: hoch\n\nVeranstalter: Freischenk e.V. in Kooperation mit vhs Freis
- ing\nKategorie: Sonstiges\nZielgruppe: Alle\nDrinnen/Draussen: drinnen\n\n
- Quelle: https://www.vhs-freising.org/p/fachbereiche/vhs-kostenfrei-633-CAT
- -KAT332
+ er Handys repariert werden. Ehrenamtliche helfen dabei\, die Lebensdauer v
+ on Gegenständen zu verlängern. Kaffee und Kuchen sorgen für eine gemüt
+ liche Atmosphäre.\n\nEintritt: Eintritt frei (Quelle nennt: frei)\nBeleg:
+  "Kategorieseite „vhs Freising — kostenfrei“"\nSicherheit: hoch\n\nV
+ eranstalter: Freischenk e.V. in Kooperation mit vhs Freising\nKategorie: S
+ onstiges\nZielgruppe: Alle\nDrinnen/Draussen: drinnen\n\nQuelle: https://w
+ ww.vhs-freising.org/p/fachbereiche/vhs-kostenfrei-633-CAT-KAT332
 URL:https://www.vhs-freising.org/p/fachbereiche/vhs-kostenfrei-633-CAT-KAT3
  32
 CATEGORIES:Sonstiges
 END:VEVENT
 BEGIN:VEVENT
 UID:3a36e84d70a80ed9@gratis-freising
-DTSTAMP:20260826T041238Z
+DTSTAMP:20260827T142154Z
 DTSTART;TZID=Europe/Berlin:20260916T143000
 DTEND;TZID=Europe/Berlin:20260916T143000
 SUMMARY:Silver Surfer: Nachhaltigkeit und Ordnung – Digitale Grundreinigu
  ng für das Smartphone
 LOCATION:Freising — Freising
-DESCRIPTION:Dieser Kurs zeigt\, wie man Speicherplatz auf dem Smartphone fr
- eigibt\, Duplikate bei Fotos findet und Apps im Hintergrund einschränkt. 
- Ziel ist es\, das Gerät effizienter zu nutzen und die Akkulaufzeit zu ver
- längern.\n\nEintritt: Eintritt frei (Quelle nennt: frei)\nBeleg: "Kategor
- ieseite „vhs Freising — kostenfrei“"\nSicherheit: hoch\n\nVeranstalt
- er: vhs Freising\nKategorie: Vortrag\nZielgruppe: Senioren\nDrinnen/Drauss
- en: drinnen\n\nQuelle: https://www.vhs-freising.org/p/fachbereiche/vhs-kos
- tenfrei-633-CAT-KAT332
+DESCRIPTION:Der Kurs zeigt\, wie man Speicherplatz freigibt\, Duplikate bei
+  Fotos findet und Apps im Hintergrund einschränkt. Ziel ist es\, das Smar
+ tphone effizienter und umweltfreundlicher zu nutzen.\n\nEintritt: Eintritt
+  frei (Quelle nennt: frei)\nBeleg: "Kategorieseite „vhs Freising — kos
+ tenfrei“"\nSicherheit: hoch\n\nVeranstalter: vhs Freising\nKategorie: Vo
+ rtrag\nZielgruppe: Senioren\nDrinnen/Draussen: drinnen\n\nQuelle: https://
+ www.vhs-freising.org/p/fachbereiche/vhs-kostenfrei-633-CAT-KAT332
 URL:https://www.vhs-freising.org/p/fachbereiche/vhs-kostenfrei-633-CAT-KAT3
  32
 CATEGORIES:Vortrag
 END:VEVENT
 BEGIN:VEVENT
 UID:110213f67c0d3ee8@gratis-freising
-DTSTAMP:20260826T041238Z
+DTSTAMP:20260827T142154Z
 DTSTART;TZID=Europe/Berlin:20260916T180000
 DTEND;TZID=Europe/Berlin:20260916T180000
 SUMMARY:Deutsche Einheit: Totaler Umbruch: Stasi\, Neonazi\, Neuanfang - ON
@@ -756,42 +743,41 @@ CATEGORIES:Vortrag
 END:VEVENT
 BEGIN:VEVENT
 UID:c10b3a88c42d5954@gratis-freising
-DTSTAMP:20260826T041238Z
+DTSTAMP:20260827T142154Z
 DTSTART;TZID=Europe/Berlin:20260917T190000
 DTEND;TZID=Europe/Berlin:20260917T210000
 SUMMARY:Bilder für die Demokratie – Ausstellungseröffnung
 LOCATION:Altes Gefängnis Freising — Brennergasse 1 • 85354 Freising
-DESCRIPTION:Die Eröffnung einer Ausstellung mit Graphic Novels und Collage
- n\, die an das Scheitern staatlicher Verantwortung erinnern und die Bedeut
- ung von Demokratie und Mitmenschlichkeit betonen. Schülerprojekte zeigen 
- eine Groß-Collage und eine Installation zum Thema Vielfalt und Freiheit.\
- n\nEintritt: Eintritt frei (Quelle nennt: frei)\nBeleg: "Eintritt frei"\nS
- icherheit: hoch\n\nVeranstalter: Modern Studio Freising e. V.\nKategorie: 
- Kunst\nZielgruppe: Alle\nDrinnen/Draussen: drinnen\n\nQuelle: https://mode
- rn-studio.de/termine/
+DESCRIPTION:Die Ausstellung zeigt Graphic Novels und Collagen\, die an das 
+ Scheitern staatlicher Verantwortung erinnern und die Bedeutung von Mitmens
+ chlichkeit betonen. Schülerprojekte thematisieren Demokratie als gemeinsa
+ me Aufgabe und präsentieren eine Groß-Collage sowie eine Installation zu
+ r Vielfalt und Freiheit.\n\nEintritt: Eintritt frei (Quelle nennt: frei)\n
+ Beleg: "Eintritt frei"\nSicherheit: hoch\n\nVeranstalter: Modern Studio Fr
+ eising e. V.\nKategorie: Kunst\nZielgruppe: Alle\nDrinnen/Draussen: drinne
+ n\n\nQuelle: https://modern-studio.de/termine/
 URL:https://modern-studio.de/termine/
 CATEGORIES:Kunst
 END:VEVENT
 BEGIN:VEVENT
 UID:40f3a7435b1f2a2d@gratis-freising
-DTSTAMP:20260826T041238Z
+DTSTAMP:20260827T142154Z
 DTSTART;TZID=Europe/Berlin:20260918T190000
 DTEND;TZID=Europe/Berlin:20260918T210000
 SUMMARY:Vernissage Artists in Motion
 LOCATION:Schafhof — Europäisches Künstlerhaus — Am Schafhof 1\, 85354
   Freising
-DESCRIPTION:Eröffnung der Ausstellung 'Artists in Motion' mit Kunstschaffe
- nden aus fünf europäischen Ländern. Die interdisziplinären Werke zum T
- hema 'Spiel und Zufall' werden vorgestellt und laden zum Dialog über euro
- päische Kultur und Zusammenarbeit ein.\n\nEintritt: Eintritt frei (Quelle
-  nennt: frei)\nBeleg: "Der Eintritt in die Ausstellung und zu den Begleitp
- rogrammen ist kostenlos."\nSicherheit: hoch\n\nVeranstalter: Artists in Mo
- tion / Schafhof Kunstforum\nKategorie: Kunst\nZielgruppe: Alle\nDrinnen/Dr
- aussen: drinnen\n\nQuelle: https://www.schafhof-kunstforum.de/Aktuell/Vera
- nstaltungskalender/Artists-in-Motion.php?object=tx\,3432.13&ModID=11&FID=3
- 957.58.1&NavID=2615.43&La=1&kat=2615.7%2C2615.25%2C2615.16%2C2615.18%2C261
- 5.4%2C2615.20%2C2615.28%2C2615.27%2C2615.19%2C2615.26%2C2615.21%2C2615.22%
- 2C2615.14%2C2615.68&max=25
+DESCRIPTION:Eröffnung der Ausstellung mit Künstler:innen aus Belgien\, De
+ utschland\, Frankreich\, Italien und Schottland. Shuttle-Service vom Bahnh
+ of Freising wird angeboten. Die Ausstellung widmet sich dem Jahresthema 'S
+ piel und Zufall'.\n\nEintritt: Eintritt frei (Quelle nennt: frei)\nBeleg: 
+ "Der Eintritt in die Ausstellung und zu den Begleitprogrammen ist kostenlo
+ s."\nSicherheit: hoch\n\nVeranstalter: Schafhof Kunstforum\nKategorie: Kun
+ st\nZielgruppe: Alle\nDrinnen/Draussen: drinnen\n\nQuelle: https://www.sch
+ afhof-kunstforum.de/Aktuell/Veranstaltungskalender/Artists-in-Motion.php?o
+ bject=tx\,3432.13&ModID=11&FID=3957.58.1&NavID=2615.43&La=1&kat=2615.7%2C2
+ 615.25%2C2615.16%2C2615.18%2C2615.4%2C2615.20%2C2615.28%2C2615.27%2C2615.1
+ 9%2C2615.26%2C2615.21%2C2615.22%2C2615.14%2C2615.68&max=25
 URL:https://www.schafhof-kunstforum.de/Aktuell/Veranstaltungskalender/Artis
  ts-in-Motion.php?object=tx\,3432.13&ModID=11&FID=3957.58.1&NavID=2615.43&L
  a=1&kat=2615.7%2C2615.25%2C2615.16%2C2615.18%2C2615.4%2C2615.20%2C2615.28%
@@ -801,24 +787,24 @@ CATEGORIES:Kunst
 END:VEVENT
 BEGIN:VEVENT
 UID:a1afb8cd35e7c8f6@gratis-freising
-DTSTAMP:20260826T041238Z
+DTSTAMP:20260827T142154Z
 DTSTART;TZID=Europe/Berlin:20260918T190000
 DTEND;TZID=Europe/Berlin:20260918T210000
 SUMMARY:Vernissage Maotik: ZufallsBlüten
 LOCATION:Schafhof — Europäisches Künstlerhaus — Am Schafhof 1\, 85354
   Freising
-DESCRIPTION:Eröffnung der Ausstellung 'ZufallsBlüten' mit dem französisc
- hen Digitalkünstler MAOTIK. Die interaktive Installation 'Bloom' wird vor
- gestellt und lädt zum Ausprobieren ein. Ein spannender Einstieg in die Ve
- rbindung von Kunst\, Technologie und Zufall.\n\nEintritt: Eintritt frei (Q
- uelle nennt: frei)\nBeleg: "Der Eintritt in die Ausstellung und zu den Beg
- leitprogrammen ist kostenlos."\nSicherheit: hoch\n\nVeranstalter: Schafhof
-  Kunstforum\nKategorie: Kunst\nZielgruppe: Alle\nDrinnen/Draussen: drinnen
- \n\nQuelle: https://www.schafhof-kunstforum.de/Aktuell/Veranstaltungskalen
- der/Maotik-ZufallsBl%C3%BCten.php?object=tx\,3432.13&ModID=11&FID=3957.59.
- 1&NavID=2615.43&La=1&kat=2615.7%2C2615.25%2C2615.16%2C2615.18%2C2615.4%2C2
- 615.20%2C2615.28%2C2615.27%2C2615.19%2C2615.26%2C2615.21%2C2615.22%2C2615.
- 14%2C2615.68&max=25
+DESCRIPTION:Eröffnung der interaktiven Installation 'Bloom' des französis
+ chen Digitalkünstlers MAOTIK. Die Arbeit reagiert auf Bewegungen des Publ
+ ikums und erzeugt digitale Blumen mit Klangkompositionen. Shuttle-Service 
+ vom Bahnhof Freising wird angeboten.\n\nEintritt: Eintritt frei (Quelle ne
+ nnt: frei)\nBeleg: "Der Eintritt in die Ausstellung und zu den Begleitprog
+ rammen ist kostenlos."\nSicherheit: hoch\n\nVeranstalter: Schafhof Kunstfo
+ rum\nKategorie: Kunst\nZielgruppe: Alle\nDrinnen/Draussen: drinnen\n\nQuel
+ le: https://www.schafhof-kunstforum.de/Aktuell/Veranstaltungskalender/Maot
+ ik-ZufallsBl%C3%BCten.php?object=tx\,3432.13&ModID=11&FID=3957.59.1&NavID=
+ 2615.43&La=1&kat=2615.7%2C2615.25%2C2615.16%2C2615.18%2C2615.4%2C2615.20%2
+ C2615.28%2C2615.27%2C2615.19%2C2615.26%2C2615.21%2C2615.22%2C2615.14%2C261
+ 5.68&max=25
 URL:https://www.schafhof-kunstforum.de/Aktuell/Veranstaltungskalender/Maoti
  k-ZufallsBl%C3%BCten.php?object=tx\,3432.13&ModID=11&FID=3957.59.1&NavID=2
  615.43&La=1&kat=2615.7%2C2615.25%2C2615.16%2C2615.18%2C2615.4%2C2615.20%2C
@@ -828,7 +814,7 @@ CATEGORIES:Kunst
 END:VEVENT
 BEGIN:VEVENT
 UID:80d5dfbb945b413f@gratis-freising
-DTSTAMP:20260826T041238Z
+DTSTAMP:20260827T142154Z
 DTSTART;VALUE=DATE:20260919
 DTEND;VALUE=DATE:20261130
 SUMMARY:Maotik: ZufallsBlüten
@@ -864,7 +850,7 @@ CATEGORIES:Kunst
 END:VEVENT
 BEGIN:VEVENT
 UID:011804391f6f3bfd@gratis-freising
-DTSTAMP:20260826T041238Z
+DTSTAMP:20260827T142154Z
 DTSTART;VALUE=DATE:20260919
 DTEND;VALUE=DATE:20261130
 SUMMARY:Artists in Motion
@@ -891,69 +877,122 @@ URL:https://www.schafhof-kunstforum.de/Aktuell/Veranstaltungskalender/Artis
 CATEGORIES:Kunst
 END:VEVENT
 BEGIN:VEVENT
+UID:09c26f37a06c81b7@gratis-freising
+DTSTAMP:20260827T142154Z
+DTSTART;VALUE=DATE:20260919
+DTEND;VALUE=DATE:20261130
+SUMMARY:Ausstellung Artists in Motion
+LOCATION:Schafhof — Europäisches Künstlerhaus — Am Schafhof 1\, 85354
+  Freising
+DESCRIPTION:Kunstschaffende aus fünf europäischen Ländern präsentieren 
+ interdisziplinäre Werke zum Jahresthema 'Spiel und Zufall'. Gezeigt werde
+ n Malerei\, Fotografie\, Skulptur\, interaktive Installationen und Konzept
+ kunst.\n\nEintritt: Eintritt frei (Quelle nennt: frei)\nBeleg: "Der Eintri
+ tt in die Ausstellung und zu den Begleitprogrammen ist kostenlos."\nSicher
+ heit: hoch\n\nVeranstalter: Schafhof Kunstforum\nKategorie: Kunst\nZielgru
+ ppe: Alle\nDrinnen/Draussen: drinnen\n\nQuelle: https://www.schafhof-kunst
+ forum.de/Aktuell/Veranstaltungskalender/Artists-in-Motion.php?object=tx\,3
+ 432.13&ModID=11&FID=3957.58.1&NavID=2615.43&La=1&kat=2615.7%2C2615.25%2C26
+ 15.16%2C2615.18%2C2615.4%2C2615.20%2C2615.28%2C2615.27%2C2615.19%2C2615.26
+ %2C2615.21%2C2615.22%2C2615.14%2C2615.68&max=25
+URL:https://www.schafhof-kunstforum.de/Aktuell/Veranstaltungskalender/Artis
+ ts-in-Motion.php?object=tx\,3432.13&ModID=11&FID=3957.58.1&NavID=2615.43&L
+ a=1&kat=2615.7%2C2615.25%2C2615.16%2C2615.18%2C2615.4%2C2615.20%2C2615.28%
+ 2C2615.27%2C2615.19%2C2615.26%2C2615.21%2C2615.22%2C2615.14%2C2615.68&max=
+ 25
+CATEGORIES:Kunst
+END:VEVENT
+BEGIN:VEVENT
+UID:c0693b3213e24c2a@gratis-freising
+DTSTAMP:20260827T142154Z
+DTSTART;VALUE=DATE:20260919
+DTEND;VALUE=DATE:20261130
+SUMMARY:Ausstellung Maotik: ZufallsBlüten
+LOCATION:Schafhof — Europäisches Künstlerhaus — Am Schafhof 1\, 85354
+  Freising
+DESCRIPTION:Interaktive Installation des französischen Digitalkünstlers M
+ AOTIK. Das Publikum erzeugt durch Handbewegungen digitale Blumen und Klang
+ kompositionen. Die Arbeit untersucht menschliche Bewegungsabläufe und neu
+ e Interaktionsformen mit Computern.\n\nEintritt: Eintritt frei (Quelle nen
+ nt: frei)\nBeleg: "Der Eintritt in die Ausstellung und zu den Begleitprogr
+ ammen ist kostenlos."\nSicherheit: hoch\n\nVeranstalter: Schafhof Kunstfor
+ um\nKategorie: Kunst\nZielgruppe: Alle\nDrinnen/Draussen: drinnen\n\nQuell
+ e: https://www.schafhof-kunstforum.de/Aktuell/Veranstaltungskalender/Maoti
+ k-ZufallsBl%C3%BCten.php?object=tx\,3432.13&ModID=11&FID=3957.59.1&NavID=2
+ 615.43&La=1&kat=2615.7%2C2615.25%2C2615.16%2C2615.18%2C2615.4%2C2615.20%2C
+ 2615.28%2C2615.27%2C2615.19%2C2615.26%2C2615.21%2C2615.22%2C2615.14%2C2615
+ .68&max=25
+URL:https://www.schafhof-kunstforum.de/Aktuell/Veranstaltungskalender/Maoti
+ k-ZufallsBl%C3%BCten.php?object=tx\,3432.13&ModID=11&FID=3957.59.1&NavID=2
+ 615.43&La=1&kat=2615.7%2C2615.25%2C2615.16%2C2615.18%2C2615.4%2C2615.20%2C
+ 2615.28%2C2615.27%2C2615.19%2C2615.26%2C2615.21%2C2615.22%2C2615.14%2C2615
+ .68&max=25
+CATEGORIES:Kunst
+END:VEVENT
+BEGIN:VEVENT
 UID:9ed21aa6b711c641@gratis-freising
-DTSTAMP:20260826T041238Z
+DTSTAMP:20260827T142154Z
 DTSTART;TZID=Europe/Berlin:20260920T140000
 DTEND;TZID=Europe/Berlin:20260920T170000
 SUMMARY:Zukunftswälder im Klimawandel gestalten
 LOCATION:Weltwald Freising (Treffpunkt Wanderparkplatz\, Parkplatz P1) — 
  Treffpunkt Wanderparkplatz\, Parkplatz P1
-DESCRIPTION:Die Führung zeigt\, wie Wälder durch gezielte Baumartenwahl u
- nd Pflege an den Klimawandel angepasst werden können. Anhand konkreter Be
- ispiele im Weltwald Freising werden Strategien für klimaresiliente Wälde
- r diskutiert.\n\nEintritt: Eintritt frei (Quelle nennt: frei)\nBeleg: "Kat
- egorieseite „vhs Freising — kostenfrei“"\nSicherheit: hoch\n\nVerans
- talter: vhs Freising in Kooperation mit der Bayerischen Landesanstalt für
-  Wald- und Forstwirtschaft\nKategorie: Vortrag\nZielgruppe: Alle\nDrinnen/
- Draussen: draussen\n\nQuelle: https://www.vhs-freising.org/p/fachbereiche/
- vhs-kostenfrei-633-CAT-KAT332
+DESCRIPTION:Die Führung erklärt\, wie Wälder durch gezielte Baumartenwah
+ l und Pflege an den Klimawandel angepasst werden können. Anhand konkreter
+  Beispiele im Weltwald Freising werden praktische Maßnahmen zur Schaffung
+  klimaresistenter Wälder vorgestellt.\n\nEintritt: Eintritt frei (Quelle 
+ nennt: frei)\nBeleg: "Kategorieseite „vhs Freising — kostenfrei“"\nS
+ icherheit: hoch\n\nVeranstalter: vhs Freising in Kooperation mit der Bayer
+ ischen Landesanstalt für Wald- und Forstwirtschaft\nKategorie: Vortrag\nZ
+ ielgruppe: Alle\nDrinnen/Draussen: draussen\n\nQuelle: https://www.vhs-fre
+ ising.org/p/fachbereiche/vhs-kostenfrei-633-CAT-KAT332
 URL:https://www.vhs-freising.org/p/fachbereiche/vhs-kostenfrei-633-CAT-KAT3
  32
 CATEGORIES:Vortrag
 END:VEVENT
 BEGIN:VEVENT
 UID:ffc543cbe9def476@gratis-freising
-DTSTAMP:20260826T041238Z
+DTSTAMP:20260827T142154Z
 DTSTART;TZID=Europe/Berlin:20260920T140000
 DTEND;TZID=Europe/Berlin:20260920T160000
 SUMMARY:Taiso im Asien-Garten
 LOCATION:Weltwald Freising (Treffpunkt Wanderparkplatz\, Parkplatz P1) — 
  Treffpunkt Wanderparkplatz\, Parkplatz P1
 DESCRIPTION:Taiso ist eine traditionelle japanische Bewegungsform zur Stär
- kung von Körper und Geist. Der Workshop im Asien-Garten umfasst Übungen 
- zur Mobilisation\, Kräftigung und Entspannung\, die fitnessorientiert und
-  gesundheitsfördernd durchgeführt werden.\n\nEintritt: Eintritt frei (Qu
- elle nennt: frei)\nBeleg: "Kategorieseite „vhs Freising — kostenfrei
- "\nSicherheit: hoch\n\nVeranstalter: vhs Freising in Kooperation mit dem 
- Förderverein Weltwald & Erlebnispfad Freising e.V.\nKategorie: Sport\nZie
- lgruppe: Alle\nDrinnen/Draussen: draussen\n\nQuelle: https://www.vhs-freis
- ing.org/p/fachbereiche/vhs-kostenfrei-633-CAT-KAT332
+ kung von Körper und Geist. Der Kurs bietet Übungen zur Mobilisation\, Kr
+ äftigung und Entspannung im Asien-Garten des Weltwaldes Freising.\n\nEint
+ ritt: Eintritt frei (Quelle nennt: frei)\nBeleg: "Kategorieseite „vhs Fr
+ eising — kostenfrei“"\nSicherheit: hoch\n\nVeranstalter: vhs Freising 
+ in Kooperation mit dem Förderverein Weltwald & Erlebnispfad Freising e.V.
+ \nKategorie: Sport\nZielgruppe: Alle\nDrinnen/Draussen: draussen\n\nQuelle
+ : https://www.vhs-freising.org/p/fachbereiche/vhs-kostenfrei-633-CAT-KAT33
+ 2
 URL:https://www.vhs-freising.org/p/fachbereiche/vhs-kostenfrei-633-CAT-KAT3
  32
 CATEGORIES:Sport
 END:VEVENT
 BEGIN:VEVENT
 UID:cbb4c1fbee50595c@gratis-freising
-DTSTAMP:20260826T041238Z
+DTSTAMP:20260827T142154Z
 DTSTART;TZID=Europe/Berlin:20260921T183000
 DTEND;TZID=Europe/Berlin:20260921T203000
 SUMMARY:Nähcafé & Handwerksabend (Ende der Sommerpause!) (Spende)
 LOCATION:Offene Werkstatt Freising — Schwalbenweg 1\, 85356 Freising
 DESCRIPTION:Ein offener Näh- und Handwerksabend\, bei dem gemeinsam genäh
- t\, gehäkelt\, gestrickt oder gebastelt wird. Geeignet für alle Interess
- ierten\, unabhängig von Mitgliedschaft. Es wird um eine kleine Spende geb
- eten\, um die Unkosten zu decken.\n\nEintritt: Spende erbeten (Quelle nenn
- t: spende)\nBeleg: "Wir freuen uns über eine kleine Spende bei Nichtmitgl
- iedern\, um die Unkosten zu decken."\nSicherheit: hoch\n\nKategorie: Sonst
- iges\nZielgruppe: Alle\n\nQuelle: https://einfach-selber-machen.org/event/
- naehcafe-handwerksabend-ende-der-sommerpause/
+ t\, gehäkelt\, gestrickt oder gebastelt wird. Jede*r ist willkommen\, auc
+ h ohne Mitgliedschaft. Es wird um eine kleine Spende gebeten\, um die Unko
+ sten zu decken.\n\nEintritt: Spende erbeten (Quelle nennt: spende)\nBeleg:
+  "Wir freuen uns über eine kleine Spende bei Nichtmitgliedern\, um die Un
+ kosten zu decken."\nSicherheit: hoch\n\nKategorie: Sonstiges\nZielgruppe: 
+ Alle\n\nQuelle: https://einfach-selber-machen.org/event/naehcafe-handwerks
+ abend-ende-der-sommerpause/
 URL:https://einfach-selber-machen.org/event/naehcafe-handwerksabend-ende-de
  r-sommerpause/
 CATEGORIES:Sonstiges
 END:VEVENT
 BEGIN:VEVENT
 UID:a81174779f313800@gratis-freising
-DTSTAMP:20260826T041238Z
+DTSTAMP:20260827T142154Z
 DTSTART;TZID=Europe/Berlin:20260923T173000
 DTEND;TZID=Europe/Berlin:20260923T173000
 SUMMARY:Sprachberatung Deutsch offenes Programm
@@ -972,79 +1011,79 @@ CATEGORIES:Vortrag
 END:VEVENT
 BEGIN:VEVENT
 UID:f467232611ec18ec@gratis-freising
-DTSTAMP:20260826T041238Z
+DTSTAMP:20260827T142154Z
 DTSTART;TZID=Europe/Berlin:20260923T173000
 DTEND;TZID=Europe/Berlin:20260923T173000
 SUMMARY:Sprachberatung Spanisch
 LOCATION:Freising — Freising
-DESCRIPTION:Die kostenlose Beratung unterstützt bei der Einschätzung der 
- Spanischkenntnisse und der Auswahl des passenden Kurses. Ein schriftlicher
-  Einstufungstest kann vorab durchgeführt werden.\n\nEintritt: Eintritt fr
- ei (Quelle nennt: frei)\nBeleg: "Kategorieseite „vhs Freising — kosten
- frei“"\nSicherheit: hoch\n\nVeranstalter: vhs Freising\nKategorie: Vortr
- ag\nZielgruppe: Alle\nDrinnen/Draussen: drinnen\n\nQuelle: https://www.vhs
- -freising.org/p/fachbereiche/vhs-kostenfrei-633-CAT-KAT332
+DESCRIPTION:Die kostenlose Sprachberatung unterstützt Teilnehmende dabei\,
+  den passenden Spanischkurs zu finden. Ein Einstufungstest kann vorab onli
+ ne durchgeführt werden.\n\nEintritt: Eintritt frei (Quelle nennt: frei)\n
+ Beleg: "Kategorieseite „vhs Freising — kostenfrei“"\nSicherheit: hoc
+ h\n\nVeranstalter: vhs Freising\nKategorie: Vortrag\nZielgruppe: Alle\nDri
+ nnen/Draussen: drinnen\n\nQuelle: https://www.vhs-freising.org/p/fachberei
+ che/vhs-kostenfrei-633-CAT-KAT332
 URL:https://www.vhs-freising.org/p/fachbereiche/vhs-kostenfrei-633-CAT-KAT3
  32
 CATEGORIES:Vortrag
 END:VEVENT
 BEGIN:VEVENT
 UID:4312a858474d5c68@gratis-freising
-DTSTAMP:20260826T041238Z
+DTSTAMP:20260827T142154Z
 DTSTART;TZID=Europe/Berlin:20260923T173000
 DTEND;TZID=Europe/Berlin:20260923T173000
 SUMMARY:Sprachberatung Französisch
 LOCATION:Freising
-DESCRIPTION:Die kostenlose Beratung hilft bei der Einschätzung der Franzö
- sischkenntnisse und der Kursauswahl. Ein schriftlicher Einstufungstest kan
- n vorab durchgeführt werden.\n\nEintritt: Eintritt frei (Quelle nennt: fr
- ei)\nBeleg: "Kategorieseite „vhs Freising — kostenfrei“"\nSicherheit
- : hoch\n\nVeranstalter: vhs Freising\nKategorie: Vortrag\nZielgruppe: Alle
- \nDrinnen/Draussen: drinnen\n\nQuelle: https://www.vhs-freising.org/p/fach
- bereiche/vhs-kostenfrei-633-CAT-KAT332
+DESCRIPTION:Die kostenlose Sprachberatung hilft Teilnehmenden\, den passend
+ en Französischkurs zu finden. Ein Einstufungstest kann vorab online durch
+ geführt werden.\n\nEintritt: Eintritt frei (Quelle nennt: frei)\nBeleg: "
+ Kategorieseite „vhs Freising — kostenfrei“"\nSicherheit: hoch\n\nVer
+ anstalter: vhs Freising\nKategorie: Vortrag\nZielgruppe: Alle\nDrinnen/Dra
+ ussen: drinnen\n\nQuelle: https://www.vhs-freising.org/p/fachbereiche/vhs-
+ kostenfrei-633-CAT-KAT332
 URL:https://www.vhs-freising.org/p/fachbereiche/vhs-kostenfrei-633-CAT-KAT3
  32
 CATEGORIES:Vortrag
 END:VEVENT
 BEGIN:VEVENT
 UID:47c76688bf9a468e@gratis-freising
-DTSTAMP:20260826T041238Z
+DTSTAMP:20260827T142154Z
 DTSTART;TZID=Europe/Berlin:20260923T173000
 DTEND;TZID=Europe/Berlin:20260923T173000
 SUMMARY:Sprachberatung Italienisch
 LOCATION:Freising
-DESCRIPTION:Die kostenlose Beratung unterstützt bei der Einschätzung der 
- Italienischkenntnisse und der Auswahl des passenden Kurses. Ein schriftlic
- her Einstufungstest kann vorab durchgeführt werden.\n\nEintritt: Eintritt
-  frei (Quelle nennt: frei)\nBeleg: "Kategorieseite „vhs Freising — kos
- tenfrei“"\nSicherheit: hoch\n\nVeranstalter: vhs Freising\nKategorie: Vo
- rtrag\nZielgruppe: Alle\nDrinnen/Draussen: drinnen\n\nQuelle: https://www.
- vhs-freising.org/p/fachbereiche/vhs-kostenfrei-633-CAT-KAT332
+DESCRIPTION:Die kostenlose Sprachberatung unterstützt Teilnehmende dabei\,
+  den passenden Italienischkurs zu finden. Ein Einstufungstest kann vorab o
+ nline durchgeführt werden.\n\nEintritt: Eintritt frei (Quelle nennt: frei
+ )\nBeleg: "Kategorieseite „vhs Freising — kostenfrei“"\nSicherheit: 
+ hoch\n\nVeranstalter: vhs Freising\nKategorie: Vortrag\nZielgruppe: Alle\n
+ Drinnen/Draussen: drinnen\n\nQuelle: https://www.vhs-freising.org/p/fachbe
+ reiche/vhs-kostenfrei-633-CAT-KAT332
 URL:https://www.vhs-freising.org/p/fachbereiche/vhs-kostenfrei-633-CAT-KAT3
  32
 CATEGORIES:Vortrag
 END:VEVENT
 BEGIN:VEVENT
 UID:308fb82d41e1c0b9@gratis-freising
-DTSTAMP:20260826T041238Z
+DTSTAMP:20260827T142154Z
 DTSTART;TZID=Europe/Berlin:20260923T173000
 DTEND;TZID=Europe/Berlin:20260923T173000
 SUMMARY:Sprachberatung Englisch
 LOCATION:Freising
-DESCRIPTION:Die kostenlose Beratung hilft bei der Einschätzung der Englisc
- hkenntnisse und der Kursauswahl. Ein schriftlicher Einstufungstest kann vo
- rab durchgeführt werden.\n\nEintritt: Eintritt frei (Quelle nennt: frei)\
- nBeleg: "Kategorieseite „vhs Freising — kostenfrei“"\nSicherheit: ho
- ch\n\nVeranstalter: vhs Freising\nKategorie: Vortrag\nZielgruppe: Alle\nDr
- innen/Draussen: drinnen\n\nQuelle: https://www.vhs-freising.org/p/fachbere
- iche/vhs-kostenfrei-633-CAT-KAT332
+DESCRIPTION:Die kostenlose Sprachberatung hilft Teilnehmenden\, den passend
+ en Englischkurs zu finden. Ein Einstufungstest kann vorab online durchgef
+ hrt werden.\n\nEintritt: Eintritt frei (Quelle nennt: frei)\nBeleg: "Kate
+ gorieseite „vhs Freising — kostenfrei“"\nSicherheit: hoch\n\nVeranst
+ alter: vhs Freising\nKategorie: Vortrag\nZielgruppe: Alle\nDrinnen/Drausse
+ n: drinnen\n\nQuelle: https://www.vhs-freising.org/p/fachbereiche/vhs-kost
+ enfrei-633-CAT-KAT332
 URL:https://www.vhs-freising.org/p/fachbereiche/vhs-kostenfrei-633-CAT-KAT3
  32
 CATEGORIES:Vortrag
 END:VEVENT
 BEGIN:VEVENT
 UID:3beb7cc1cdde00c2@gratis-freising
-DTSTAMP:20260826T041238Z
+DTSTAMP:20260827T142154Z
 DTSTART;TZID=Europe/Berlin:20260923T183000
 DTEND;TZID=Europe/Berlin:20260923T183000
 SUMMARY:Genussvoll und bewusst – Essen ab der Lebensmitte - Vortrag
@@ -1063,7 +1102,7 @@ CATEGORIES:Vortrag
 END:VEVENT
 BEGIN:VEVENT
 UID:0d8102481a969e57@gratis-freising
-DTSTAMP:20260826T041238Z
+DTSTAMP:20260827T142154Z
 DTSTART;TZID=Europe/Berlin:20260924T193000
 DTEND;TZID=Europe/Berlin:20260924T213000
 SUMMARY:Fotostammtisch
@@ -1081,7 +1120,7 @@ CATEGORIES:Sonstiges
 END:VEVENT
 BEGIN:VEVENT
 UID:c8297e476b9502b1@gratis-freising
-DTSTAMP:20260826T041238Z
+DTSTAMP:20260827T142154Z
 DTSTART;TZID=Europe/Berlin:20260927T150000
 DTEND;TZID=Europe/Berlin:20260927T150000
 SUMMARY:Märchen am Nachmittag - Eine Vorlesestunde für Kinder ab 4 Jahren
@@ -1102,105 +1141,103 @@ CATEGORIES:Familie
 END:VEVENT
 BEGIN:VEVENT
 UID:861e386e561f2121@gratis-freising
-DTSTAMP:20260826T041238Z
+DTSTAMP:20260827T142154Z
 DTSTART;TZID=Europe/Berlin:20260928T180000
 DTEND;TZID=Europe/Berlin:20260928T200000
 SUMMARY:Trauma im Kontext von Flucht und Migration
 LOCATION:Freising
-DESCRIPTION:Der Vortrag vermittelt Grundwissen zu Trauma bei geflüchteten 
- Menschen und gibt praktische Impulse für einen traumasensiblen Umgang in 
- Beratung und Ehrenamt. Ziel ist es\, Sicherheit und Unterstützung im Allt
- ag zu fördern.\n\nEintritt: Eintritt frei (Quelle nennt: frei)\nBeleg: "K
- ategorieseite „vhs Freising — kostenfrei“"\nSicherheit: hoch\n\nVera
- nstalter: vhs Freising in Kooperation mit dem Diakonischen Werk Freising e
- .V.\nKategorie: Vortrag\nZielgruppe: Erwachsene\nDrinnen/Draussen: drinnen
- \n\nQuelle: https://www.vhs-freising.org/p/fachbereiche/vhs-kostenfrei-633
- -CAT-KAT332
+DESCRIPTION:Der Vortrag vermittelt grundlegendes Wissen zu Trauma im Kontex
+ t von Flucht und Migration. Praktische Impulse für einen traumasensiblen 
+ Umgang in Beratung und Ehrenamt werden gegeben.\n\nEintritt: Eintritt frei
+  (Quelle nennt: frei)\nBeleg: "Kategorieseite „vhs Freising — kostenfr
+ ei“"\nSicherheit: hoch\n\nVeranstalter: vhs Freising in Kooperation mit 
+ dem Diakonischen Werk Freising e.V.\nKategorie: Vortrag\nZielgruppe: Erwac
+ hsene\nDrinnen/Draussen: drinnen\n\nQuelle: https://www.vhs-freising.org/p
+ /fachbereiche/vhs-kostenfrei-633-CAT-KAT332
 URL:https://www.vhs-freising.org/p/fachbereiche/vhs-kostenfrei-633-CAT-KAT3
  32
 CATEGORIES:Vortrag
 END:VEVENT
 BEGIN:VEVENT
 UID:cf02d86d392f3001@gratis-freising
-DTSTAMP:20260826T041238Z
+DTSTAMP:20260827T142154Z
 DTSTART;TZID=Europe/Berlin:20260929T180000
 DTEND;TZID=Europe/Berlin:20260929T180000
 SUMMARY:Resilienz und Selbstfürsorge – Vortrag für Ehrenamtliche im Asy
  lbereich
 LOCATION:Freising
-DESCRIPTION:Der Vortrag thematisiert Resilienz und gibt praktische Strategi
- en zur Bewältigung von Belastungen im Ehrenamt. Diskutiert werden Schutzf
- aktoren und Übungen\, die Kraft und Stabilität im Alltag stärken.\n\nEi
- ntritt: Eintritt frei (Quelle nennt: frei)\nBeleg: "Kategorieseite „vhs 
- Freising — kostenfrei“"\nSicherheit: hoch\n\nVeranstalter: vhs Freisin
- g in Kooperation mit dem Diakonischen Werk Freising e.V.\nKategorie: Vortr
- ag\nZielgruppe: Erwachsene\nDrinnen/Draussen: drinnen\n\nQuelle: https://w
- ww.vhs-freising.org/p/fachbereiche/vhs-kostenfrei-633-CAT-KAT332
+DESCRIPTION:Der Vortrag thematisiert\, was Resilienz bedeutet und wie man m
+ it Belastungen im Ehrenamt umgehen kann. Praktische Strategien zur Selbstf
+ ürsorge werden vorgestellt.\n\nEintritt: Eintritt frei (Quelle nennt: fre
+ i)\nBeleg: "Kategorieseite „vhs Freising — kostenfrei“"\nSicherheit:
+  hoch\n\nVeranstalter: vhs Freising in Kooperation mit dem Diakonischen We
+ rk Freising e.V.\nKategorie: Vortrag\nZielgruppe: Erwachsene\nDrinnen/Drau
+ ssen: drinnen\n\nQuelle: https://www.vhs-freising.org/p/fachbereiche/vhs-k
+ ostenfrei-633-CAT-KAT332
 URL:https://www.vhs-freising.org/p/fachbereiche/vhs-kostenfrei-633-CAT-KAT3
  32
 CATEGORIES:Vortrag
 END:VEVENT
 BEGIN:VEVENT
 UID:28b673010504d740@gratis-freising
-DTSTAMP:20260826T041238Z
+DTSTAMP:20260827T142154Z
 DTSTART;TZID=Europe/Berlin:20260929T190000
 DTEND;TZID=Europe/Berlin:20260929T203000
 SUMMARY:Nachhaltige Materialnutzung von Baumrinde
 LOCATION:TUM@Freising — Freising
 DESCRIPTION:Michaela Eder hält einen Vortrag über innovative Nutzungsmög
- lichkeiten von Baumrinde als nachhaltigen Rohstoff. Im Anschluss besteht d
- ie Möglichkeit zur Diskussion.\n\nEintritt: Eintritt frei (Quelle nennt: 
+ lichkeiten von Baumrinde als nachhaltigen Rohstoff. Im Anschluss gibt es R
+ aum für Diskussion und Fragen.\n\nEintritt: Eintritt frei (Quelle nennt: 
  frei)\nBeleg: "Kommen Sie zum Vortrag von Michaela Eder bei TUM@Freising u
- nd diskutieren Sie mit!"\nSicherheit: hoch\n\nVeranstalter: TUM\nKategorie
- : Vortrag\nZielgruppe: Alle\nDrinnen/Draussen: drinnen\n\nQuelle: https://
- www.tum.de/aktuelles/veranstaltungen/terminuebersicht?tx_solr%5Bfilter%5D%
- 5B0%5D=location%3AFreising
+ nd diskutieren Sie mit!"\nSicherheit: hoch\n\nVeranstalter: TUM@Freising\n
+ Kategorie: Vortrag\nZielgruppe: Alle\nDrinnen/Draussen: drinnen\n\nQuelle:
+  https://www.tum.de/aktuelles/veranstaltungen/terminuebersicht?tx_solr%5Bf
+ ilter%5D%5B0%5D=location%3AFreising
 URL:https://www.tum.de/aktuelles/veranstaltungen/terminuebersicht?tx_solr%5
  Bfilter%5D%5B0%5D=location%3AFreising
 CATEGORIES:Vortrag
 END:VEVENT
 BEGIN:VEVENT
 UID:489a21ba93c0b94e@gratis-freising
-DTSTAMP:20260826T041238Z
+DTSTAMP:20260827T142154Z
 DTSTART;TZID=Europe/Berlin:20261001T180000
 DTEND;TZID=Europe/Berlin:20261001T200000
 SUMMARY:Überblick über die Reform des gemeinsamen europäischen Asylsyste
  ms
 LOCATION:Freising
 DESCRIPTION:Das Seminar gibt einen Überblick über die Reform des Gemeinsa
- men Europäischen Asylsystems\, die 2026 in Kraft tritt. Behandelt werden 
- rechtliche und verfahrensbezogene Aspekte sowie die Auswirkungen auf die A
- sylsozialarbeit vor Ort.\n\nEintritt: Eintritt frei (Quelle nennt: frei)\n
- Beleg: "Kategorieseite „vhs Freising — kostenfrei“"\nSicherheit: hoc
- h\n\nVeranstalter: vhs Freising in Kooperation mit dem Diakonischen Werk F
- reising e.V.\nKategorie: Vortrag\nZielgruppe: Erwachsene\nDrinnen/Draussen
- : drinnen\n\nQuelle: https://www.vhs-freising.org/p/fachbereiche/vhs-koste
- nfrei-633-CAT-KAT332
+ men Europäischen Asylsystems\, die 2026 in Kraft tritt. Rechtliche und ve
+ rfahrensbezogene Aspekte werden behandelt.\n\nEintritt: Eintritt frei (Que
+ lle nennt: frei)\nBeleg: "Kategorieseite „vhs Freising — kostenfrei“
+ "\nSicherheit: hoch\n\nVeranstalter: vhs Freising in Kooperation mit dem D
+ iakonischen Werk Freising e.V.\nKategorie: Vortrag\nZielgruppe: Erwachsene
+ \nDrinnen/Draussen: drinnen\n\nQuelle: https://www.vhs-freising.org/p/fach
+ bereiche/vhs-kostenfrei-633-CAT-KAT332
 URL:https://www.vhs-freising.org/p/fachbereiche/vhs-kostenfrei-633-CAT-KAT3
  32
 CATEGORIES:Vortrag
 END:VEVENT
 BEGIN:VEVENT
 UID:ca52569c933936bb@gratis-freising
-DTSTAMP:20260826T041238Z
+DTSTAMP:20260827T142154Z
 DTSTART;TZID=Europe/Berlin:20261002T110000
 DTEND;TZID=Europe/Berlin:20261002T230000
 SUMMARY:Lange Nacht der Demokratie Freising
-LOCATION:Freisinger Innenstadt — Freisinger Innenstadt
-DESCRIPTION:Ein Fest der Demokratie mit über 50 Vereinen\, Organisationen 
- und Schulen. Das Programm umfasst Gespräche\, Kunst\, Musik\, Theater und
-  Mitmachaktionen\, die Demokratie als lebendige Gemeinschaft erlebbar mach
- en. Das Modern Studio Freising präsentiert dabei eine Ausstellung mit Gra
- phic Novels und Schülerprojekten.\n\nEintritt: Eintritt frei (Quelle nenn
- t: frei)\nBeleg: "Eintritt frei"\nSicherheit: hoch\n\nVeranstalter: Treffp
- unkt Ehrenamt der Stadt Freising\nKategorie: Fest\nZielgruppe: Alle\nDrinn
- en/Draussen: beides\n\nQuelle: https://modern-studio.de/termine/
+LOCATION:Modern Studio Freising — Freisinger Innenstadt
+DESCRIPTION:Ein vielfältiges Programm mit Gesprächen\, Kunst\, Musik\, Th
+ eater und Mitmachaktionen feiert Demokratie als lebendige Gemeinschaft. Ü
+ ber 50 Vereine\, Schulen und Organisationen gestalten gemeinsam einen Aben
+ d der Begegnung und des Austauschs in der Freisinger Innenstadt.\n\nEintri
+ tt: Eintritt frei (Quelle nennt: frei)\nBeleg: "Eintritt frei"\nSicherheit
+ : hoch\n\nVeranstalter: Treffpunkt Ehrenamt der Stadt Freising\nKategorie:
+  Fest\nZielgruppe: Alle\nDrinnen/Draussen: beides\n\nQuelle: https://moder
+ n-studio.de/termine/
 URL:https://modern-studio.de/termine/
 CATEGORIES:Fest
 END:VEVENT
 BEGIN:VEVENT
 UID:7658e605275a5d7e@gratis-freising
-DTSTAMP:20260826T041238Z
+DTSTAMP:20260827T142154Z
 DTSTART;TZID=Europe/Berlin:20261002T180000
 DTEND;TZID=Europe/Berlin:20261002T235900
 SUMMARY:Die Demokratie feiern – gemeinsam in Freising (vermutlich frei)
@@ -1216,8 +1253,29 @@ URL:https://www.3klang-musik.de/freising.html
 CATEGORIES:Fest
 END:VEVENT
 BEGIN:VEVENT
+UID:ebb437d687706e2c@gratis-freising
+DTSTAMP:20260827T142154Z
+DTSTART;TZID=Europe/Berlin:20261002T180000
+DTEND;TZID=Europe/Berlin:20261002T235900
+SUMMARY:Lange Nacht der Demokratie in Freising (vermutlich frei)
+LOCATION:
+DESCRIPTION:Ein Abend voller Demokratie zum Mitmachen: Gespräche\, Kunst\,
+  Musik und Theater zeigen\, wie Bürger:innen ihr Zusammenleben aktiv gest
+ alten können. Über 50 Vereine\, Organisationen und Schulen laden zu Bege
+ gnungen und Austausch ein. 3klang beteiligt sich mit musikalischen Beiträ
+ gen.\n\nEintritt: vermutlich kostenfrei (Quelle nennt: frei)\nBeleg: "Demo
+ kratie lebt vom Mitmachen\, vom Zuhören und vom Austausch. Sie zeigt sich
+  nicht nur bei Wahlen\, sondern überall dort\, wo Menschen Verantwortung 
+ übernehmen und ihr Zusammenleben aktiv gestalten."\nSicherheit: mittel\n\
+ nVeranstalter: Treffpunkt Ehrenamt der Stadt Freising (mit Beteiligung von
+  3klang gGmbH)\nKategorie: Fest\nZielgruppe: Alle\nDrinnen/Draussen: beide
+ s\n\nQuelle: https://www.3klang-musik.de/freising.html
+URL:https://www.3klang-musik.de/freising.html
+CATEGORIES:Fest
+END:VEVENT
+BEGIN:VEVENT
 UID:6b6fa389cf525b2a@gratis-freising
-DTSTAMP:20260826T041238Z
+DTSTAMP:20260827T142154Z
 DTSTART;TZID=Europe/Berlin:20261002T200000
 DTEND;TZID=Europe/Berlin:20261002T210000
 SUMMARY:Demokratie und Allgemeine Wehrpflicht
@@ -1235,7 +1293,7 @@ CATEGORIES:Vortrag
 END:VEVENT
 BEGIN:VEVENT
 UID:20044b56805c60e9@gratis-freising
-DTSTAMP:20260826T041238Z
+DTSTAMP:20260827T142154Z
 DTSTART;TZID=Europe/Berlin:20261002T200000
 DTEND;TZID=Europe/Berlin:20261002T230000
 SUMMARY:FLUID – eine Videoprojektion
@@ -1252,80 +1310,132 @@ CATEGORIES:Kunst
 END:VEVENT
 BEGIN:VEVENT
 UID:2b8c39813ea51720@gratis-freising
-DTSTAMP:20260826T041238Z
+DTSTAMP:20260827T142154Z
 DTSTART;TZID=Europe/Berlin:20261002T200000
 DTEND;TZID=Europe/Berlin:20261002T230000
 SUMMARY:FLUID – Videoprojektion zur Demokratie
 LOCATION:Stauberhaus — Marienplatz • 85354 Freising
-DESCRIPTION:Eine Videoprojektion mit gezeichneten Animationsfilmen\, die ve
- rschiedene Perspektiven auf Demokratie zeigen. Die Filme regen dazu an\, d
- as Bestehende zu hinterfragen und demokratische Kraft zu stärken.\n\nEint
- ritt: Eintritt frei (Quelle nennt: frei)\nBeleg: "Eintritt frei"\nSicherhe
- it: hoch\n\nVeranstalter: Modern Studio Freising e. V. / Camerloher Gymnas
- ium\nKategorie: Kunst\nZielgruppe: Alle\nDrinnen/Draussen: drinnen\n\nQuel
- le: https://modern-studio.de/termine/
+DESCRIPTION:Gezeichnete Animationsfilme werfen unterschiedliche Blicke auf 
+ Demokratie und zeigen\, wie demokratische Kraft durch neue Perspektiven ge
+ stärkt werden kann. Die Projektion lädt zum Nachdenken über gesellschaf
+ tliche Prozesse ein.\n\nEintritt: Eintritt frei (Quelle nennt: frei)\nBele
+ g: "Eintritt frei"\nSicherheit: hoch\n\nVeranstalter: Modern Studio Freisi
+ ng e. V. / Camerloher Gymnasium\nKategorie: Kunst\nZielgruppe: Alle\nDrinn
+ en/Draussen: drinnen\n\nQuelle: https://modern-studio.de/termine/
 URL:https://modern-studio.de/termine/
 CATEGORIES:Kunst
 END:VEVENT
 BEGIN:VEVENT
+UID:e3fe6bd8aa47dd7a@gratis-freising
+DTSTAMP:20260827T142154Z
+DTSTART;TZID=Europe/Berlin:20261003T150000
+DTEND;TZID=Europe/Berlin:20261003T160000
+SUMMARY:Vierjahreszeitenführung | Herbst
+LOCATION:Schafhof — Europäisches Künstlerhaus — Am Schafhof 1\, 85354
+  Freising
+DESCRIPTION:Führung durch Geschichte\, Gebäude und Garten des Schafhofs. 
+ Eine Stadtführerin erzählt von der über 200-jährigen Geschichte vom k
+ niglichen Schafstall bis zum Europäischen Kunstforum. Barrierefreier Zug
+ ang ist gewährleistet.\n\nEintritt: Eintritt frei (Quelle nennt: frei)\nB
+ eleg: "Teilnahme frei"\nSicherheit: hoch\n\nVeranstalter: Schafhof Kunstfo
+ rum\nKategorie: Vortrag\nZielgruppe: Alle\nDrinnen/Draussen: beides\n\nQue
+ lle: https://www.schafhof-kunstforum.de/Aktuell/Veranstaltungskalender/Vie
+ rjahreszeitenf%C3%BChrung-Herbst.php?object=tx\,3432.13&ModID=11&FID=2615.
+ 583.1&NavID=2615.43&La=1&kat=2615.7%2C2615.25%2C2615.16%2C2615.18%2C2615.4
+ %2C2615.20%2C2615.28%2C2615.27%2C2615.19%2C2615.26%2C2615.21%2C2615.22%2C2
+ 615.14%2C2615.68&max=25
+URL:https://www.schafhof-kunstforum.de/Aktuell/Veranstaltungskalender/Vierj
+ ahreszeitenf%C3%BChrung-Herbst.php?object=tx\,3432.13&ModID=11&FID=2615.58
+ 3.1&NavID=2615.43&La=1&kat=2615.7%2C2615.25%2C2615.16%2C2615.18%2C2615.4%2
+ C2615.20%2C2615.28%2C2615.27%2C2615.19%2C2615.26%2C2615.21%2C2615.22%2C261
+ 5.14%2C2615.68&max=25
+CATEGORIES:Vortrag
+END:VEVENT
+BEGIN:VEVENT
+UID:d0726a264d061091@gratis-freising
+DTSTAMP:20260827T142154Z
+DTSTART;TZID=Europe/Berlin:20261003T160000
+DTEND;TZID=Europe/Berlin:20261003T170000
+SUMMARY:treffpunkt+kunst | Ausstellungsführung
+LOCATION:Schafhof — Europäisches Künstlerhaus — Am Schafhof 1\, 85354
+  Freising
+DESCRIPTION:Regelmäßige Führung zu den aktuellen Ausstellungen im Kunstf
+ orum. Alexandra M. Hoffmann führt durch die Ausstellungen 'Artists in Mot
+ ion' und 'ZufallsBlüten'. Die Teilnahme ist kostenlos.\n\nEintritt: Eintr
+ itt frei (Quelle nennt: frei)\nBeleg: "Die Teilnahme an der Führung ist k
+ ostenlos."\nSicherheit: hoch\n\nVeranstalter: Schafhof Kunstforum\nKategor
+ ie: Kunst\nZielgruppe: Alle\nDrinnen/Draussen: drinnen\n\nQuelle: https://
+ www.schafhof-kunstforum.de/Aktuell/Veranstaltungskalender/treffpunkt-kunst
+ -Ausstellungsf%C3%BChrung.php?object=tx\,3432.13&ModID=11&FID=3957.47.1&Na
+ vID=2615.43&La=1&kat=2615.7%2C2615.25%2C2615.16%2C2615.18%2C2615.4%2C2615.
+ 20%2C2615.28%2C2615.27%2C2615.19%2C2615.26%2C2615.21%2C2615.22%2C2615.14%2
+ C2615.68&max=25
+URL:https://www.schafhof-kunstforum.de/Aktuell/Veranstaltungskalender/treff
+ punkt-kunst-Ausstellungsf%C3%BChrung.php?object=tx\,3432.13&ModID=11&FID=3
+ 957.47.1&NavID=2615.43&La=1&kat=2615.7%2C2615.25%2C2615.16%2C2615.18%2C261
+ 5.4%2C2615.20%2C2615.28%2C2615.27%2C2615.19%2C2615.26%2C2615.21%2C2615.22%
+ 2C2615.14%2C2615.68&max=25
+CATEGORIES:Kunst
+END:VEVENT
+BEGIN:VEVENT
 UID:0b77632db79f9951@gratis-freising
-DTSTAMP:20260826T041238Z
+DTSTAMP:20260827T142154Z
 DTSTART;TZID=Europe/Berlin:20261003T200000
 DTEND;TZID=Europe/Berlin:20261003T200000
 SUMMARY:Abtanzparty zu Rock und Pop querbeet (Spende)
 LOCATION:Furtnerbräu — Obere Hauptstr. 42\, 85354 Freising
-DESCRIPTION:Tanzveranstaltung mit DJ-Team Martin und Uli im Jagdzimmer. Mus
- ikrichtung ist Rock und Pop querbeet. Es wird um Spenden gebeten.\n\nEintr
- itt: Spende erbeten (Quelle nennt: spende)\nBeleg: "Um Spenden wird gebete
- n!"\nSicherheit: hoch\n\nKategorie: Musik\nZielgruppe: Alle\n\nQuelle: htt
- ps://www.furtner-freising.de/veranstaltung/abtanzparty-zu-rock-und-pop-que
- rbeet-2/\nBild: https://www.furtner-freising.de/wp-content/uploads/2026/03
- /63526380cc266_1666343808.jpg
+DESCRIPTION:Eine Tanzparty mit Rock- und Popmusik\, die von einem bewährte
+ n DJ-Team moderiert wird. Ideal für alle\, die sich nach einem geselligen
+  Abend mit Musik und Tanz sehnen. Musikrichtung ist Rock und Pop querbeet.
+ \n\nEintritt: Spende erbeten (Quelle nennt: spende)\nBeleg: "Um Spenden wi
+ rd gebeten!"\nSicherheit: hoch\n\nKategorie: Musik\nZielgruppe: Alle\n\nQu
+ elle: https://www.furtner-freising.de/veranstaltung/abtanzparty-zu-rock-un
+ d-pop-querbeet-2/\nBild: https://www.furtner-freising.de/wp-content/upload
+ s/2026/03/63526380cc266_1666343808.jpg
 URL:https://www.furtner-freising.de/veranstaltung/abtanzparty-zu-rock-und-p
  op-querbeet-2/
 CATEGORIES:Musik
 END:VEVENT
 BEGIN:VEVENT
 UID:ca4d9d225887207f@gratis-freising
-DTSTAMP:20260826T041238Z
+DTSTAMP:20260827T142154Z
 DTSTART;TZID=Europe/Berlin:20261004T140000
 DTEND;TZID=Europe/Berlin:20261004T160000
 SUMMARY:Ausflugsreise in die Welt der Bäume
 LOCATION:Kranzberg
-DESCRIPTION:Die Führung durch den Weltwald zeigt exotische Baumarten wie A
- merikanische Tulpenbäume oder Japanische Schirmtannen. Es werden Geschich
- ten aus fernen Waldregionen und Hintergrundwissen zur Entstehung des Weltw
- aldes vermittelt.\n\nEintritt: Eintritt frei (Quelle nennt: frei)\nBeleg: 
- "Kategorieseite „vhs Freising — kostenfrei“"\nSicherheit: hoch\n\nVe
- ranstalter: vhs Freising in Kooperation mit dem Förderverein Weltwald & E
- rlebnispfad Freising e.V.\nKategorie: Vortrag\nZielgruppe: Alle\nDrinnen/D
- raussen: draussen\n\nQuelle: https://www.vhs-freising.org/p/fachbereiche/v
- hs-kostenfrei-633-CAT-KAT332
+DESCRIPTION:Die Führung durch den Weltwald zeigt exotische Baumarten aus v
+ erschiedenen Kontinenten. Geschichten und Hintergrundwissen zur Entstehung
+  des Weltwaldes werden vermittelt.\n\nEintritt: Eintritt frei (Quelle nenn
+ t: frei)\nBeleg: "Kategorieseite „vhs Freising — kostenfrei“"\nSiche
+ rheit: hoch\n\nVeranstalter: vhs Freising in Kooperation mit dem Förderve
+ rein Weltwald & Erlebnispfad Freising e.V.\nKategorie: Vortrag\nZielgruppe
+ : Alle\nDrinnen/Draussen: draussen\n\nQuelle: https://www.vhs-freising.org
+ /p/fachbereiche/vhs-kostenfrei-633-CAT-KAT332
 URL:https://www.vhs-freising.org/p/fachbereiche/vhs-kostenfrei-633-CAT-KAT3
  32
 CATEGORIES:Vortrag
 END:VEVENT
 BEGIN:VEVENT
 UID:4b6cd509cc841cfe@gratis-freising
-DTSTAMP:20260826T041238Z
+DTSTAMP:20260827T142154Z
 DTSTART;TZID=Europe/Berlin:20261007T080000
 DTEND;TZID=Europe/Berlin:20261007T170000
-SUMMARY:Forró – Tanzabend (Spende)
+SUMMARY:Forró – Tanzabend
 LOCATION:Furtnerbräu — Obere Hauptstr. 42\, 85354 Freising
-DESCRIPTION:Traditioneller brasilianischer Paartanz Forró mit Schnupperwor
- kshop und anschließendem Open Dance. Der Workshop von 20:00 bis 20:30 Uhr
-  bietet eine Einführung\, danach kann bis zum Ende der Veranstaltung geta
- nzt werden. Eintritt frei\, Spende erwünscht.\n\nEintritt: Spende erbeten
-  (Quelle nennt: spende)\nBeleg: "Eintritt frei! Spende erwünscht!"\nSiche
- rheit: hoch\n\nKategorie: Sport\nZielgruppe: Alle\n\nQuelle: https://www.f
- urtner-freising.de/veranstaltung/forro-tazabend/\nBild: https://www.furtne
- r-freising.de/wp-content/uploads/2026/03/67719793aa1be_1735497619.jpg
+DESCRIPTION:Ein Tanzabend mit dem traditionellen brasilianischen Paartanz F
+ orró. Es gibt einen Schnupperworkshop von 20:00 bis 20:30 Uhr\, danach Op
+ en Dance. Der Eintritt ist frei\, Spenden sind erwünscht. Perfekt für al
+ le\, die neue Tanzstile ausprobieren möchten.\n\nEintritt: Eintritt frei 
+ (Quelle nennt: frei)\nBeleg: "Eintritt frei! Spende erwünscht!"\nSicherhe
+ it: hoch\n\nKategorie: Sport\nZielgruppe: Alle\n\nQuelle: https://www.furt
+ ner-freising.de/veranstaltung/forro-tazabend/\nBild: https://www.furtner-f
+ reising.de/wp-content/uploads/2026/03/67719793aa1be_1735497619.jpg
 URL:https://www.furtner-freising.de/veranstaltung/forro-tazabend/
 CATEGORIES:Sport
 END:VEVENT
 BEGIN:VEVENT
 UID:8c47a55920e891d7@gratis-freising
-DTSTAMP:20260826T041238Z
+DTSTAMP:20260827T142154Z
 DTSTART;TZID=Europe/Berlin:20261007T183000
 DTEND;TZID=Europe/Berlin:20261007T183000
 SUMMARY:Genussvoll essen\, das Herz stärken - Vortrag
@@ -1345,7 +1455,7 @@ CATEGORIES:Vortrag
 END:VEVENT
 BEGIN:VEVENT
 UID:7f2368e0236d0128@gratis-freising
-DTSTAMP:20260826T041238Z
+DTSTAMP:20260827T142154Z
 DTSTART;TZID=Europe/Berlin:20261008T180000
 DTEND;TZID=Europe/Berlin:20261008T180000
 SUMMARY:Deutsche Einheit: Eure Einheit\, unsere Einheit – an wen erinnern
@@ -1367,108 +1477,107 @@ CATEGORIES:Vortrag
 END:VEVENT
 BEGIN:VEVENT
 UID:364cf4902c07b053@gratis-freising
-DTSTAMP:20260826T041238Z
+DTSTAMP:20260827T142154Z
 DTSTART;TZID=Europe/Berlin:20261009T203000
 DTEND;TZID=Europe/Berlin:20261009T203000
 SUMMARY:Konzert: Snowface Norado
 LOCATION:Furtnerbräu — Obere Hauptstr. 42\, 85354 Freising
-DESCRIPTION:Konzert des Duos Snowface Norado\, Gewinner des Uferlos Song Sl
- am. Sie spielen Songs über absurde Situationen und alltägliche Widerspr
- che mit Bass\, Beats und elektronischen Sounds. Live wird gesungen\, gesp
- ielt und getanzt.\n\nEintritt: Eintritt frei (Quelle nennt: frei)\nBeleg: 
- "Keine Preisangabe auf der Seite. Annahme laut quellen.yml: bei „Furtner
-  Freising“ gilt dann „frei“."\nSicherheit: hoch\n\nKategorie: Musik\
- nZielgruppe: Alle\n\nQuelle: https://www.furtner-freising.de/veranstaltung
- /konzert-snowface-norado/\nBild: https://www.furtner-freising.de/wp-conten
- t/uploads/2026/07/Snowface-Norado-2026.jpg-scaled.jpg
+DESCRIPTION:Ein Konzert des Duos Snowface Norado\, die Gewinner des Uferlos
+  Song Slam. Sie präsentieren Songs über absurde Situationen und alltägl
+ iche Widersprüche mit elektronischen Sounds und trockenem Humor. Ein ener
+ giegeladener Abend mit viel Leidenschaft.\n\nEintritt: Eintritt frei (Quel
+ le nennt: frei)\nBeleg: "Keine Preisangabe auf der Seite. Annahme laut que
+ llen.yml: bei „Furtner Freising“ gilt dann „frei“."\nSicherheit: h
+ och\n\nKategorie: Musik\nZielgruppe: Alle\n\nQuelle: https://www.furtner-f
+ reising.de/veranstaltung/konzert-snowface-norado/\nBild: https://www.furtn
+ er-freising.de/wp-content/uploads/2026/07/Snowface-Norado-2026.jpg-scaled.
+ jpg
 URL:https://www.furtner-freising.de/veranstaltung/konzert-snowface-norado/
 CATEGORIES:Musik
 END:VEVENT
 BEGIN:VEVENT
 UID:ed0e570d8cb8c8a1@gratis-freising
-DTSTAMP:20260826T041238Z
+DTSTAMP:20260827T142154Z
 DTSTART;TZID=Europe/Berlin:20261010T140000
 DTEND;TZID=Europe/Berlin:20261010T160000
 SUMMARY:Waldbaden in den 'Rocky Mountains'
 LOCATION:Kranzberg
-DESCRIPTION:Das Waldbaden nach japanischem Vorbild lädt zum Eintauchen in 
- die Atmosphäre des Waldes ein. Im Fokus stehen das Wahrnehmen von Düften
- \, Geräuschen und Lichtspielen in den Baumkronen. Die Führung findet im 
- Bereich exotischer nordamerikanischer Bäume statt.\n\nEintritt: Eintritt 
- frei (Quelle nennt: frei)\nBeleg: "Kategorieseite „vhs Freising — kost
- enfrei“"\nSicherheit: hoch\n\nVeranstalter: vhs Freising in Kooperation 
- mit dem Förderverein Weltwald und Erlebnispfad Freising e.V.\nKategorie: 
- Sport\nZielgruppe: Alle\nDrinnen/Draussen: draussen\nAnmeldung noetig: ja 
- — siehe Quelle\n\nQuelle: https://www.vhs-freising.org/p/fachbereiche/vh
- s-kostenfrei-633-CAT-KAT332
+DESCRIPTION:Das Waldbaden nach japanischem Vorbild lädt dazu ein\, die Atm
+ osphäre des Waldes mit allen Sinnen zu erleben. Die Führung konzentriert
+  sich auf exotische Bäume Nordamerikas.\n\nEintritt: Eintritt frei (Quell
+ e nennt: frei)\nBeleg: "Kategorieseite „vhs Freising — kostenfrei“"\
+ nSicherheit: hoch\n\nVeranstalter: vhs Freising in Kooperation mit dem Fö
+ rderverein Weltwald und Erlebnispfad Freising e.V.\nKategorie: Sport\nZiel
+ gruppe: Alle\nDrinnen/Draussen: draussen\nAnmeldung noetig: ja — siehe Q
+ uelle\n\nQuelle: https://www.vhs-freising.org/p/fachbereiche/vhs-kostenfre
+ i-633-CAT-KAT332
 URL:https://www.vhs-freising.org/p/fachbereiche/vhs-kostenfrei-633-CAT-KAT3
  32
 CATEGORIES:Sport
 END:VEVENT
 BEGIN:VEVENT
 UID:f4e070cce81835a8@gratis-freising
-DTSTAMP:20260826T041238Z
+DTSTAMP:20260827T142154Z
 DTSTART;TZID=Europe/Berlin:20261010T150000
 DTEND;TZID=Europe/Berlin:20261010T180000
 SUMMARY:Repair Café
 LOCATION:Freising Vötting — Bachstraße 8\, Vötting
 DESCRIPTION:Bei diesem Repair Café können defekte Geräte\, Fahrräder od
- er Elektronik gemeinsam repariert werden. Ehrenamtliche helfen dabei\, die
-  Lebensdauer von Gegenständen zu verlängern. Dazu gibt es Kaffee\, Kuche
- n und eine gemütliche Atmosphäre.\n\nEintritt: Eintritt frei (Quelle nen
- nt: frei)\nBeleg: "Kategorieseite „vhs Freising — kostenfrei“"\nSich
- erheit: hoch\n\nVeranstalter: Freischenk e.V. in Kooperation mit vhs Freis
- ing\nKategorie: Sonstiges\nZielgruppe: Alle\nDrinnen/Draussen: drinnen\n\n
- Quelle: https://www.vhs-freising.org/p/fachbereiche/vhs-kostenfrei-633-CAT
- -KAT332\nAuch bei: https://www.vhs-freising.org/p/fachbereiche/vhs-kostenf
- rei-633-CAT-KAT32
+ er Handys repariert werden. Ehrenamtliche helfen dabei\, die Lebensdauer v
+ on Gegenständen zu verlängern. Kaffee und Kuchen sorgen für eine gemüt
+ liche Atmosphäre.\n\nEintritt: Eintritt frei (Quelle nennt: frei)\nBeleg:
+  "Kategorieseite „vhs Freising — kostenfrei“"\nSicherheit: hoch\n\nV
+ eranstalter: Freischenk e.V. in Kooperation mit vhs Freising\nKategorie: S
+ onstiges\nZielgruppe: Alle\nDrinnen/Draussen: drinnen\n\nQuelle: https://w
+ ww.vhs-freising.org/p/fachbereiche/vhs-kostenfrei-633-CAT-KAT332\nAuch bei
+ : https://www.vhs-freising.org/p/fachbereiche/vhs-kostenfrei-633-CAT-KAT32
 URL:https://www.vhs-freising.org/p/fachbereiche/vhs-kostenfrei-633-CAT-KAT3
  32
 CATEGORIES:Sonstiges
 END:VEVENT
 BEGIN:VEVENT
 UID:3df59eecf0ed4c75@gratis-freising
-DTSTAMP:20260826T041238Z
+DTSTAMP:20260827T142154Z
 DTSTART;TZID=Europe/Berlin:20261014T143000
 DTEND;TZID=Europe/Berlin:20261014T143000
 SUMMARY:Silver Surfer: KI-Kreativwerkstatt – Bilder und Texte 'zaubern'
 LOCATION:Freising
-DESCRIPTION:Der Kurs zeigt\, wie mit KI-Bild- und Textgeneratoren eigene Bi
- lder aus Beschreibungen erstellt und Texte optimiert werden können. Prakt
- ische Übungen vermitteln den Umgang mit Tools wie Microsoft Designer oder
-  Gemini.\n\nEintritt: Eintritt frei (Quelle nennt: frei)\nBeleg: "Kategori
- eseite „vhs Freising — kostenfrei“"\nSicherheit: hoch\n\nVeranstalte
- r: vhs Freising\nKategorie: Vortrag\nZielgruppe: Senioren\nDrinnen/Drausse
- n: drinnen\n\nQuelle: https://www.vhs-freising.org/p/fachbereiche/vhs-kost
- enfrei-633-CAT-KAT332\nAuch bei: https://www.vhs-freising.org/p/fachbereic
- he/vhs-kostenfrei-633-CAT-KAT32
+DESCRIPTION:Der Kurs zeigt\, wie man mit KI-Bild- und Textgeneratoren eigen
+ e Bilder aus Beschreibungen erstellt und Texte optimiert. Praktische Übun
+ gen stehen im Mittelpunkt.\n\nEintritt: Eintritt frei (Quelle nennt: frei)
+ \nBeleg: "Kategorieseite „vhs Freising — kostenfrei“"\nSicherheit: h
+ och\n\nVeranstalter: vhs Freising\nKategorie: Vortrag\nZielgruppe: Seniore
+ n\nDrinnen/Draussen: drinnen\n\nQuelle: https://www.vhs-freising.org/p/fac
+ hbereiche/vhs-kostenfrei-633-CAT-KAT332\nAuch bei: https://www.vhs-freisin
+ g.org/p/fachbereiche/vhs-kostenfrei-633-CAT-KAT32
 URL:https://www.vhs-freising.org/p/fachbereiche/vhs-kostenfrei-633-CAT-KAT3
  32
 CATEGORIES:Vortrag
 END:VEVENT
 BEGIN:VEVENT
 UID:0770731093222651@gratis-freising
-DTSTAMP:20260826T041238Z
+DTSTAMP:20260827T142154Z
 DTSTART;TZID=Europe/Berlin:20261016T200000
 DTEND;TZID=Europe/Berlin:20261016T200000
 SUMMARY:Konzert: Legendary Food Packers (Rock-Coverband)
 LOCATION:Furtnerbräu — Obere Hauptstr. 42\, 85354 Freising
-DESCRIPTION:Rock-Coverband bestehend aus Mitarbeiter:innen des Weihenstepha
- ner Bierbraulehrstuhls. Sie spielen eine Mischung aus Rock\, Punkrock & Al
- ternative mit modernen Einflüssen und deutschen Texten. Energiegeladen un
- d vielseitig.\n\nEintritt: Eintritt frei (Quelle nennt: frei)\nBeleg: "Kei
- ne Preisangabe auf der Seite. Annahme laut quellen.yml: bei „Furtner Fre
- ising“ gilt dann „frei“."\nSicherheit: hoch\n\nKategorie: Musik\nZie
- lgruppe: Alle\n\nQuelle: https://www.furtner-freising.de/veranstaltung/kon
- zert-legendary-food-packers-rock-coverband/\nBild: https://www.furtner-fre
- ising.de/wp-content/uploads/2026/03/6948f4b917e59_1766388921.jpg
+DESCRIPTION:Ein Konzert der Band Legendary Food Packers\, die aus Mitarbeit
+ er:innen des Weihenstephaner Bierbraulehrstuhls besteht. Sie spielen eine 
+ Mischung aus Rock\, Punkrock und Alternative mit deutschen Texten. Ein ene
+ rgiegeladener Abend zum Abfeiern!\n\nEintritt: Eintritt frei (Quelle nennt
+ : frei)\nBeleg: "Keine Preisangabe auf der Seite. Annahme laut quellen.yml
+ : bei „Furtner Freising“ gilt dann „frei“."\nSicherheit: hoch\n\nK
+ ategorie: Musik\nZielgruppe: Alle\n\nQuelle: https://www.furtner-freising.
+ de/veranstaltung/konzert-legendary-food-packers-rock-coverband/\nBild: htt
+ ps://www.furtner-freising.de/wp-content/uploads/2026/03/6948f4b917e59_1766
+ 388921.jpg
 URL:https://www.furtner-freising.de/veranstaltung/konzert-legendary-food-pa
  ckers-rock-coverband/
 CATEGORIES:Musik
 END:VEVENT
 BEGIN:VEVENT
 UID:232a7c38f94035f0@gratis-freising
-DTSTAMP:20260826T041238Z
+DTSTAMP:20260827T142154Z
 DTSTART;TZID=Europe/Berlin:20261017T130000
 DTEND;TZID=Europe/Berlin:20261017T130000
 SUMMARY:Naturnahe Flächenpflege mit Augenmaß – Balance zwischen Ästhet
@@ -1488,7 +1597,7 @@ CATEGORIES:Vortrag
 END:VEVENT
 BEGIN:VEVENT
 UID:37faf818b2b4d9e4@gratis-freising
-DTSTAMP:20260826T041238Z
+DTSTAMP:20260827T142154Z
 DTSTART;TZID=Europe/Berlin:20261020T183000
 DTEND;TZID=Europe/Berlin:20261020T183000
 SUMMARY:Wem kann ich mein Geld anvertrauen? Anlageberatung von KI\, Robo-Ad
@@ -1509,7 +1618,7 @@ CATEGORIES:Vortrag
 END:VEVENT
 BEGIN:VEVENT
 UID:3ff230bced861408@gratis-freising
-DTSTAMP:20260826T041238Z
+DTSTAMP:20260827T142154Z
 DTSTART;TZID=Europe/Berlin:20261020T183000
 DTEND;TZID=Europe/Berlin:20261020T203000
 SUMMARY:Wem kann ich mein Geld anvertrauen? Anlageberatung von KI\, Robo-Ad
@@ -1530,45 +1639,45 @@ CATEGORIES:Vortrag
 END:VEVENT
 BEGIN:VEVENT
 UID:b0428f55254e7726@gratis-freising
-DTSTAMP:20260826T041238Z
+DTSTAMP:20260827T142154Z
 DTSTART;TZID=Europe/Berlin:20261020T193000
 DTEND;TZID=Europe/Berlin:20261020T210000
 SUMMARY:Philosophische Gesprächsrunde 'Das gelungene Leben'
 LOCATION:Stadtbibliothek Freising — Stadtbibliothek
 DESCRIPTION:Die Gesprächsrunde widmet sich der Frage\, was ein gelungenes 
- Leben ausmacht. Im Fokus stehen Gesundheit\, mentale Stärke und die Bedeu
- tung von Philosophie für ein erfülltes Leben. Alle Interessierten sind e
- ingeladen\, sich einzubringen.\n\nEintritt: Eintritt frei (Quelle nennt: f
- rei)\nBeleg: "Kategorieseite „vhs Freising — kostenfrei“"\nSicherhei
- t: hoch\n\nVeranstalter: vhs Freising in Kooperation mit der Stadtbiblioth
- ek Freising und Sapere Audio\nKategorie: Vortrag\nZielgruppe: Alle\nDrinne
- n/Draussen: drinnen\n\nQuelle: https://www.vhs-freising.org/p/fachbereiche
- /vhs-kostenfrei-633-CAT-KAT332\nAuch bei: https://www.vhs-freising.org/p/f
- achbereiche/vhs-kostenfrei-633-CAT-KAT32
+ Leben ausmacht. Es wird über Gesundheit\, mentale Stärke und philosophis
+ che Ansätze diskutiert.\n\nEintritt: Eintritt frei (Quelle nennt: frei)\n
+ Beleg: "Kategorieseite „vhs Freising — kostenfrei“"\nSicherheit: hoc
+ h\n\nVeranstalter: vhs Freising in Kooperation mit der Stadtbibliothek Fre
+ ising und Sapere Audio\nKategorie: Vortrag\nZielgruppe: Alle\nDrinnen/Drau
+ ssen: drinnen\n\nQuelle: https://www.vhs-freising.org/p/fachbereiche/vhs-k
+ ostenfrei-633-CAT-KAT332\nAuch bei: https://www.vhs-freising.org/p/fachber
+ eiche/vhs-kostenfrei-633-CAT-KAT32
 URL:https://www.vhs-freising.org/p/fachbereiche/vhs-kostenfrei-633-CAT-KAT3
  32
 CATEGORIES:Vortrag
 END:VEVENT
 BEGIN:VEVENT
 UID:a2351ea57857617e@gratis-freising
-DTSTAMP:20260826T041238Z
+DTSTAMP:20260827T142154Z
 DTSTART;TZID=Europe/Berlin:20261020T200000
 DTEND;TZID=Europe/Berlin:20261020T200000
-SUMMARY:Boogie Woogie (Spende)
+SUMMARY:Boogie Woogie
 LOCATION:Furtnerbräu — Obere Hauptstr. 42\, 85354 Freising
-DESCRIPTION:Boogie-Woogie-Tanzabend mit Schnupperworkshop von 20:00 bis 20:
- 30 Uhr und anschließendem Open Dance ab 20:30 Uhr. Eintritt frei\, Spende
-  erwünscht.\n\nEintritt: Spende erbeten (Quelle nennt: spende)\nBeleg: "E
- intritt frei! Spende erwünscht!"\nSicherheit: hoch\n\nKategorie: Sport\nZ
- ielgruppe: Alle\n\nQuelle: https://www.furtner-freising.de/veranstaltung/b
- oogie-woogie/\nBild: https://www.furtner-freising.de/wp-content/uploads/20
- 26/03/6982f10e2a39f_1770189070.jpg
+DESCRIPTION:Ein Boogie-Woogie-Abend mit einem Schnupper-Workshop von 20:00 
+ bis 20:30 Uhr und anschließendem Open Dance ab 20:30. Der Eintritt ist fr
+ ei\, Spenden sind erwünscht. Ideal für alle\, die diesen Tanzstil auspro
+ bieren möchten.\n\nEintritt: Eintritt frei (Quelle nennt: frei)\nBeleg: "
+ Eintritt frei! Spende erwünscht!"\nSicherheit: hoch\n\nKategorie: Musik\n
+ Zielgruppe: Alle\n\nQuelle: https://www.furtner-freising.de/veranstaltung/
+ boogie-woogie/\nBild: https://www.furtner-freising.de/wp-content/uploads/2
+ 026/03/6982f10e2a39f_1770189070.jpg
 URL:https://www.furtner-freising.de/veranstaltung/boogie-woogie/
-CATEGORIES:Sport
+CATEGORIES:Musik
 END:VEVENT
 BEGIN:VEVENT
 UID:116037abfbc43f0e@gratis-freising
-DTSTAMP:20260826T041238Z
+DTSTAMP:20260827T142154Z
 DTSTART;TZID=Europe/Berlin:20261021T183000
 DTEND;TZID=Europe/Berlin:20261021T183000
 SUMMARY:Knochenstark essen – mitten im Leben! - Vortrag
@@ -1589,7 +1698,7 @@ CATEGORIES:Vortrag
 END:VEVENT
 BEGIN:VEVENT
 UID:0787c67a7120e06d@gratis-freising
-DTSTAMP:20260826T041238Z
+DTSTAMP:20260827T142154Z
 DTSTART;TZID=Europe/Berlin:20261022T193000
 DTEND;TZID=Europe/Berlin:20261022T213000
 SUMMARY:Fotostammtisch
@@ -1609,97 +1718,100 @@ CATEGORIES:Sonstiges
 END:VEVENT
 BEGIN:VEVENT
 UID:8d153a3878670fca@gratis-freising
-DTSTAMP:20260826T041238Z
+DTSTAMP:20260827T142154Z
 DTSTART;TZID=Europe/Berlin:20261023T193000
 DTEND;TZID=Europe/Berlin:20261023T193000
 SUMMARY:Kneipensingen
 LOCATION:Furtnerbräu — Obere Hauptstr. 42\, 85354 Freising
-DESCRIPTION:Mitsingkonzert in der Kneipe\, bei dem die ganze Kneipe gemeins
- am mit Elli\, Tina und Mojo singt. Es wird empfohlen\, früh zu kommen\, d
- a es schnell voll wird.\n\nEintritt: Eintritt frei (Quelle nennt: frei)\nB
- eleg: "Keine Preisangabe auf der Seite. Annahme laut quellen.yml: bei „F
- urtner Freising“ gilt dann „frei“."\nSicherheit: hoch\n\nKategorie: 
- Musik\nZielgruppe: Alle\n\nQuelle: https://www.furtner-freising.de/veranst
- altung/kneipensingen/\nBild: https://www.furtner-freising.de/wp-content/up
- loads/2026/04/IMG_4448.jpg
+DESCRIPTION:Ein Mitsingkonzert in der Kneipe\, bei dem die ganze Kneipe gem
+ einsam mit Elli\, Tina und Mojo singt. Ein geselliger Abend für alle\, di
+ e Lust auf gemeinsames Singen haben. Es wird empfohlen\, früh zu kommen\,
+  da es schnell voll wird.\n\nEintritt: Eintritt frei (Quelle nennt: frei)\
+ nBeleg: "Keine Preisangabe auf der Seite. Annahme laut quellen.yml: bei 
+ Furtner Freising“ gilt dann „frei“."\nSicherheit: hoch\n\nKategorie
+ : Musik\nZielgruppe: Alle\n\nQuelle: https://www.furtner-freising.de/veran
+ staltung/kneipensingen/\nBild: https://www.furtner-freising.de/wp-content/
+ uploads/2026/04/IMG_4448.jpg
 URL:https://www.furtner-freising.de/veranstaltung/kneipensingen/
 CATEGORIES:Musik
 END:VEVENT
 BEGIN:VEVENT
 UID:8cc40edf8ccab802@gratis-freising
-DTSTAMP:20260826T041238Z
+DTSTAMP:20260827T142154Z
 DTSTART;TZID=Europe/Berlin:20261028T200000
 DTEND;TZID=Europe/Berlin:20261028T200000
-SUMMARY:Open Latin Abend (Spende)
+SUMMARY:Open Latin Abend
 LOCATION:Furtnerbräu — Obere Hauptstr. 42\, 85354 Freising
-DESCRIPTION:Offener Tanzabend mit Salsa und Bachata. Jeder ist willkommen\,
-  unabhängig von Vorkenntnissen. Eintritt frei\, Spende erwünscht.\n\nEin
- tritt: Spende erbeten (Quelle nennt: spende)\nBeleg: "Eintritt frei! Spend
- e ist erwünscht!"\nSicherheit: hoch\n\nKategorie: Sport\nZielgruppe: Alle
- \n\nQuelle: https://www.furtner-freising.de/veranstaltung/latino-abend/\nB
- ild: https://www.furtner-freising.de/wp-content/uploads/2026/03/67719793aa
- 1be_1735497619.jpg
+DESCRIPTION:Ein offener Lateinabend mit Salsa und Bachata. Jeder ist willko
+ mmen\, egal ob Anfänger oder Fortgeschrittener. Der Eintritt ist frei\, S
+ penden sind erwünscht. Ein geselliger Abend für alle\, die Lateinamerika
+ nische Tänze ausprobieren möchten.\n\nEintritt: Eintritt frei (Quelle ne
+ nnt: frei)\nBeleg: "Eintritt frei! Spende ist erwünscht!"\nSicherheit: ho
+ ch\n\nKategorie: Sport\nZielgruppe: Alle\n\nQuelle: https://www.furtner-fr
+ eising.de/veranstaltung/latino-abend/\nBild: https://www.furtner-freising.
+ de/wp-content/uploads/2026/03/67719793aa1be_1735497619.jpg
 URL:https://www.furtner-freising.de/veranstaltung/latino-abend/
 CATEGORIES:Sport
 END:VEVENT
 BEGIN:VEVENT
 UID:2f244d9db195425f@gratis-freising
-DTSTAMP:20260826T041238Z
+DTSTAMP:20260827T142154Z
 DTSTART;TZID=Europe/Berlin:20261029T190000
 DTEND;TZID=Europe/Berlin:20261029T203000
 SUMMARY:Netzwerke in der Bioinformatik
 LOCATION:TUM@Freising — Freising
 DESCRIPTION:Markus List referiert über die Bedeutung von Netzwerken in der
-  Bioinformatik und zeigt aktuelle Forschungsansätze auf. Im Anschluss ist
-  eine Diskussion geplant.\n\nEintritt: Eintritt frei (Quelle nennt: frei)\
- nBeleg: "Kommen Sie zum Vortrag von Markus List bei TUM@Freising und disku
- tieren Sie mit!"\nSicherheit: hoch\n\nVeranstalter: TUM\nKategorie: Vortra
- g\nZielgruppe: Fachpublikum\nDrinnen/Draussen: drinnen\n\nQuelle: https://
- www.tum.de/aktuelles/veranstaltungen/terminuebersicht?tx_solr%5Bfilter%5D%
- 5B0%5D=location%3AFreising
+  Bioinformatik und aktuelle Forschungsansätze. Im Anschluss ist eine Disk
+ ussion vorgesehen.\n\nEintritt: Eintritt frei (Quelle nennt: frei)\nBeleg:
+  "Kommen Sie zum Vortrag von Markus List bei TUM@Freising und diskutieren 
+ Sie mit!"\nSicherheit: hoch\n\nVeranstalter: TUM@Freising\nKategorie: Vort
+ rag\nZielgruppe: Fachpublikum\nDrinnen/Draussen: drinnen\n\nQuelle: https:
+ //www.tum.de/aktuelles/veranstaltungen/terminuebersicht?tx_solr%5Bfilter%5
+ D%5B0%5D=location%3AFreising
 URL:https://www.tum.de/aktuelles/veranstaltungen/terminuebersicht?tx_solr%5
  Bfilter%5D%5B0%5D=location%3AFreising
 CATEGORIES:Vortrag
 END:VEVENT
 BEGIN:VEVENT
 UID:c42dd10155846937@gratis-freising
-DTSTAMP:20260826T041238Z
+DTSTAMP:20260827T142154Z
 DTSTART;TZID=Europe/Berlin:20261030T200000
 DTEND;TZID=Europe/Berlin:20261030T200000
 SUMMARY:Karaoke mit Stefan
 LOCATION:Furtnerbräu — Obere Hauptstr. 42\, 85354 Freising
-DESCRIPTION:Karaoke-Abend mit Stefan. Gäste können selbst Lieder singen o
- der mitsingen.\n\nEintritt: Eintritt frei (Quelle nennt: frei)\nBeleg: "Ke
- ine Preisangabe auf der Seite. Annahme laut quellen.yml: bei „Furtner Fr
- eising“ gilt dann „frei“."\nSicherheit: hoch\n\nKategorie: Musik\nZi
- elgruppe: Alle\n\nQuelle: https://www.furtner-freising.de/veranstaltung/ka
- raoke-mit-stefan/\nBild: https://www.furtner-freising.de/wp-content/upload
- s/2026/03/664b49167b0ca_1716209942.jpg
+DESCRIPTION:Ein Karaoke-Abend mit Stefan. Ein geselliger Abend\, bei dem je
+ der selbst singen kann. Perfekt für alle\, die ihre Stimme erklingen lass
+ en möchten.\n\nEintritt: Eintritt frei (Quelle nennt: frei)\nBeleg: "Kein
+ e Preisangabe auf der Seite. Annahme laut quellen.yml: bei „Furtner Frei
+ sing“ gilt dann „frei“."\nSicherheit: hoch\n\nKategorie: Musik\nZiel
+ gruppe: Alle\n\nQuelle: https://www.furtner-freising.de/veranstaltung/kara
+ oke-mit-stefan/\nBild: https://www.furtner-freising.de/wp-content/uploads/
+ 2026/03/664b49167b0ca_1716209942.jpg
 URL:https://www.furtner-freising.de/veranstaltung/karaoke-mit-stefan/
 CATEGORIES:Musik
 END:VEVENT
 BEGIN:VEVENT
 UID:47abf858cf9014cb@gratis-freising
-DTSTAMP:20260826T041238Z
+DTSTAMP:20260827T142154Z
 DTSTART;TZID=Europe/Berlin:20261104T200000
 DTEND;TZID=Europe/Berlin:20261104T200000
-SUMMARY:Forró – Tanzabend (Spende)
+SUMMARY:Forró – Tanzabend
 LOCATION:Furtnerbräu — Obere Hauptstr. 42\, 85354 Freising
-DESCRIPTION:Traditioneller brasilianischer Paartanz Forró mit Schnupperwor
- kshop und anschließendem Open Dance. Der Workshop von 20:00 bis 20:30 Uhr
-  bietet eine Einführung\, danach kann bis zum Ende der Veranstaltung geta
- nzt werden. Eintritt frei\, Spende erwünscht.\n\nEintritt: Spende erbeten
-  (Quelle nennt: spende)\nBeleg: "Eintritt frei! Spende erwünscht!"\nSiche
- rheit: hoch\n\nKategorie: Sport\nZielgruppe: Alle\n\nQuelle: https://www.f
- urtner-freising.de/veranstaltung/1511/\nAuch bei: https://www.furtner-frei
- sing.de/veranstaltung/forro-tanzabend/\nBild: https://www.furtner-freising
- .de/wp-content/uploads/2026/03/6982f10e2a39f_1770189070.jpg
+DESCRIPTION:Ein Tanzabend mit dem traditionellen brasilianischen Paartanz F
+ orró. Es gibt einen Schnupperworkshop von 20:00 bis 20:30 Uhr\, danach Op
+ en Dance. Der Eintritt ist frei\, Spenden sind erwünscht. Perfekt für al
+ le\, die neue Tanzstile ausprobieren möchten.\n\nEintritt: Eintritt frei 
+ (Quelle nennt: frei)\nBeleg: "Eintritt frei! Spende erwünscht!"\nSicherhe
+ it: hoch\n\nKategorie: Sport\nZielgruppe: Alle\n\nQuelle: https://www.furt
+ ner-freising.de/veranstaltung/1511/\nAuch bei: https://www.furtner-freisin
+ g.de/veranstaltung/forro-tanzabend/\nBild: https://www.furtner-freising.de
+ /wp-content/uploads/2026/03/6982f10e2a39f_1770189070.jpg
 URL:https://www.furtner-freising.de/veranstaltung/1511/
 CATEGORIES:Sport
 END:VEVENT
 BEGIN:VEVENT
 UID:2913ad5e45cc0bfc@gratis-freising
-DTSTAMP:20260826T041238Z
+DTSTAMP:20260827T142154Z
 DTSTART;TZID=Europe/Berlin:20261105T183000
 DTEND;TZID=Europe/Berlin:20261105T183000
 SUMMARY:Nahrungsergänzungsmittel – (Un)Sinn im Alter? - Vortrag
@@ -1719,28 +1831,28 @@ CATEGORIES:Vortrag
 END:VEVENT
 BEGIN:VEVENT
 UID:e043902a8dd775c9@gratis-freising
-DTSTAMP:20260826T041238Z
+DTSTAMP:20260827T142154Z
 DTSTART;TZID=Europe/Berlin:20261106T200000
 DTEND;TZID=Europe/Berlin:20261106T200000
 SUMMARY:Irish Night mit der Paul Daly Band (Folk/Irish) (Spende)
 LOCATION:Furtnerbräu — Obere Hauptstr. 42\, 85354 Freising
-DESCRIPTION:Folk- und Irish-Musikabend mit der Paul Daly Band. Die Band spi
- elt irische Folk-Musik mit internationaler Besetzung und hat bereits mehre
- re CDs veröffentlicht. Eintritt frei\, Spenden werden erbeten.\n\nEintrit
- t: Spende erbeten (Quelle nennt: spende)\nBeleg: "Eintritt frei! Um Spende
- n wird gebeten."\nSicherheit: hoch\n\nKategorie: Musik\nZielgruppe: Alle\n
- \nQuelle: https://www.furtner-freising.de/veranstaltung/irish-night-mit-de
- r-paul-daly-band-folk-irish/\nAuch bei: https://www.furtner-freising.de/ve
- ranstaltung/abtanzparty-zu-rock-und-pop-querbeet/\nBild: https://www.furtn
- er-freising.de/wp-content/uploads/2026/03/688cab650c4d6_1754049381-scaled.
- jpg
+DESCRIPTION:Ein Folk- und Irish-Abend mit der Paul Daly Band. Die Band spie
+ lt irische Folk-Musik mit einem internationalen Ensemble. Ein geselliger A
+ bend für alle\, die irische Musik und Kultur lieben. Der Eintritt ist fre
+ i\, Spenden sind erwünscht.\n\nEintritt: Spende erbeten (Quelle nennt: sp
+ ende)\nBeleg: "Eintritt frei! Um Spenden wird gebeten."\nSicherheit: hoch\
+ n\nKategorie: Musik\nZielgruppe: Alle\n\nQuelle: https://www.furtner-freis
+ ing.de/veranstaltung/irish-night-mit-der-paul-daly-band-folk-irish/\nAuch 
+ bei: https://www.furtner-freising.de/veranstaltung/abtanzparty-zu-rock-und
+ -pop-querbeet/\nBild: https://www.furtner-freising.de/wp-content/uploads/2
+ 026/03/688cab650c4d6_1754049381-scaled.jpg
 URL:https://www.furtner-freising.de/veranstaltung/irish-night-mit-der-paul-
  daly-band-folk-irish/
 CATEGORIES:Musik
 END:VEVENT
 BEGIN:VEVENT
 UID:0a744a35879edb13@gratis-freising
-DTSTAMP:20260826T041238Z
+DTSTAMP:20260827T142154Z
 DTSTART;TZID=Europe/Berlin:20261110T180000
 DTEND;TZID=Europe/Berlin:20261110T180000
 SUMMARY:Deutsche Einheit: Jungsein in Demokratie und Diktatur - ONLINE
@@ -1761,7 +1873,7 @@ CATEGORIES:Vortrag
 END:VEVENT
 BEGIN:VEVENT
 UID:623b0f25a2cbe060@gratis-freising
-DTSTAMP:20260826T041238Z
+DTSTAMP:20260827T142154Z
 DTSTART;TZID=Europe/Berlin:20261110T190000
 DTEND;TZID=Europe/Berlin:20261110T190000
 SUMMARY:Schimmel vermeiden und beseitigen: Wie heize und lüfte ich richtig
@@ -1782,27 +1894,26 @@ CATEGORIES:Vortrag
 END:VEVENT
 BEGIN:VEVENT
 UID:752752ab83957e20@gratis-freising
-DTSTAMP:20260826T041238Z
+DTSTAMP:20260827T142154Z
 DTSTART;TZID=Europe/Berlin:20261114T150000
 DTEND;TZID=Europe/Berlin:20261114T180000
 SUMMARY:Repair Café
 LOCATION:Freising Vötting — Bachstraße 8\, Vötting
 DESCRIPTION:Bei diesem Repair Café können defekte Geräte\, Fahrräder od
- er Elektronik gemeinsam repariert werden. Ehrenamtliche helfen dabei\, die
-  Lebensdauer von Gegenständen zu verlängern. Dazu gibt es Kaffee\, Kuche
- n und eine gemütliche Atmosphäre.\n\nEintritt: Eintritt frei (Quelle nen
- nt: frei)\nBeleg: "Kategorieseite „vhs Freising — kostenfrei“"\nSich
- erheit: hoch\n\nVeranstalter: Freischenk e.V. in Kooperation mit vhs Freis
- ing\nKategorie: Sonstiges\nZielgruppe: Alle\nDrinnen/Draussen: drinnen\n\n
- Quelle: https://www.vhs-freising.org/p/fachbereiche/vhs-kostenfrei-633-CAT
- -KAT332
+ er Handys repariert werden. Ehrenamtliche helfen dabei\, die Lebensdauer v
+ on Gegenständen zu verlängern. Kaffee und Kuchen sorgen für eine gemüt
+ liche Atmosphäre.\n\nEintritt: Eintritt frei (Quelle nennt: frei)\nBeleg:
+  "Kategorieseite „vhs Freising — kostenfrei“"\nSicherheit: hoch\n\nV
+ eranstalter: Freischenk e.V. in Kooperation mit vhs Freising\nKategorie: S
+ onstiges\nZielgruppe: Alle\nDrinnen/Draussen: drinnen\n\nQuelle: https://w
+ ww.vhs-freising.org/p/fachbereiche/vhs-kostenfrei-633-CAT-KAT332
 URL:https://www.vhs-freising.org/p/fachbereiche/vhs-kostenfrei-633-CAT-KAT3
  32
 CATEGORIES:Sonstiges
 END:VEVENT
 BEGIN:VEVENT
 UID:84b1f7747aa182c1@gratis-freising
-DTSTAMP:20260826T041238Z
+DTSTAMP:20260827T142154Z
 DTSTART;TZID=Europe/Berlin:20261117T183000
 DTEND;TZID=Europe/Berlin:20261117T183000
 SUMMARY:Grün und Rendite? Investieren mit Gewissen - ONLINE
@@ -1822,43 +1933,43 @@ CATEGORIES:Vortrag
 END:VEVENT
 BEGIN:VEVENT
 UID:409f77971e2c072a@gratis-freising
-DTSTAMP:20260826T041238Z
+DTSTAMP:20260827T142154Z
 DTSTART;TZID=Europe/Berlin:20261117T200000
 DTEND;TZID=Europe/Berlin:20261117T200000
-SUMMARY:Boogie Woogie (Spende)
+SUMMARY:Boogie Woogie
 LOCATION:Furtnerbräu — Obere Hauptstr. 42\, 85354 Freising
-DESCRIPTION:Boogie-Woogie-Tanzabend mit Schnupperworkshop von 20:00 bis 20:
- 30 Uhr und anschließendem Open Dance ab 20:30 Uhr. Eintritt frei\, Spende
-  erwünscht.\n\nEintritt: Spende erbeten (Quelle nennt: spende)\nBeleg: "E
- intritt frei! Spende erwünscht!"\nSicherheit: hoch\n\nKategorie: Sport\nZ
- ielgruppe: Alle\n\nQuelle: https://www.furtner-freising.de/veranstaltung/b
- oogie-woogie/\nBild: https://www.furtner-freising.de/wp-content/uploads/20
- 26/03/6982f10e2a39f_1770189070.jpg
+DESCRIPTION:Ein Boogie-Woogie-Abend mit einem Schnupper-Workshop von 20:00 
+ bis 20:30 Uhr und anschließendem Open Dance ab 20:30. Der Eintritt ist fr
+ ei\, Spenden sind erwünscht. Ideal für alle\, die diesen Tanzstil auspro
+ bieren möchten.\n\nEintritt: Eintritt frei (Quelle nennt: frei)\nBeleg: "
+ Eintritt frei! Spende erwünscht!"\nSicherheit: hoch\n\nKategorie: Musik\n
+ Zielgruppe: Alle\n\nQuelle: https://www.furtner-freising.de/veranstaltung/
+ boogie-woogie/\nBild: https://www.furtner-freising.de/wp-content/uploads/2
+ 026/03/6982f10e2a39f_1770189070.jpg
 URL:https://www.furtner-freising.de/veranstaltung/boogie-woogie/
-CATEGORIES:Sport
+CATEGORIES:Musik
 END:VEVENT
 BEGIN:VEVENT
 UID:24a9a71e47ef9fb6@gratis-freising
-DTSTAMP:20260826T041238Z
+DTSTAMP:20260827T142154Z
 DTSTART;TZID=Europe/Berlin:20261118T143000
 DTEND;TZID=Europe/Berlin:20261118T143000
 SUMMARY:Silver Surfer: Google Maps 2026 – Die Welt in 3D und KI-Planung
 LOCATION:Freising
-DESCRIPTION:Der Kurs zeigt die neuen Funktionen von Google Maps wie Immersi
- ve View\, KI-Suche mit Gemini und Live View Fußgängernavigation. Ziel is
- t es\, die Möglichkeiten der digitalen Navigation besser zu nutzen.\n\nEi
- ntritt: Eintritt frei (Quelle nennt: frei)\nBeleg: "Kategorieseite „vhs 
- Freising — kostenfrei“"\nSicherheit: hoch\n\nVeranstalter: vhs Freisin
- g\nKategorie: Vortrag\nZielgruppe: Senioren\nDrinnen/Draussen: drinnen\n\n
- Quelle: https://www.vhs-freising.org/p/fachbereiche/vhs-kostenfrei-633-CAT
- -KAT332
+DESCRIPTION:Der Kurs zeigt die neuen Funktionen von Google Maps\, darunter 
+ 3D-Ansichten\, KI-Suche und Live View Fußgängernavigation. Praktische Ü
+ bungen stehen im Mittelpunkt.\n\nEintritt: Eintritt frei (Quelle nennt: fr
+ ei)\nBeleg: "Kategorieseite „vhs Freising — kostenfrei“"\nSicherheit
+ : hoch\n\nVeranstalter: vhs Freising\nKategorie: Vortrag\nZielgruppe: Seni
+ oren\nDrinnen/Draussen: drinnen\n\nQuelle: https://www.vhs-freising.org/p/
+ fachbereiche/vhs-kostenfrei-633-CAT-KAT332
 URL:https://www.vhs-freising.org/p/fachbereiche/vhs-kostenfrei-633-CAT-KAT3
  32
 CATEGORIES:Vortrag
 END:VEVENT
 BEGIN:VEVENT
 UID:079f71542ddb361a@gratis-freising
-DTSTAMP:20260826T041238Z
+DTSTAMP:20260827T142154Z
 DTSTART;TZID=Europe/Berlin:20261119T193000
 DTEND;TZID=Europe/Berlin:20261119T213000
 SUMMARY:Fotostammtisch
@@ -1878,117 +1989,121 @@ CATEGORIES:Sonstiges
 END:VEVENT
 BEGIN:VEVENT
 UID:b2e0f4b8e099c2ae@gratis-freising
-DTSTAMP:20260826T041238Z
+DTSTAMP:20260827T142154Z
 DTSTART;TZID=Europe/Berlin:20261120T200000
 DTEND;TZID=Europe/Berlin:20261120T200000
 SUMMARY:Karaoke mit Stefan
 LOCATION:Furtnerbräu — Obere Hauptstr. 42\, 85354 Freising
-DESCRIPTION:Karaoke-Abend mit Stefan. Gäste können selbst Lieder singen o
- der mitsingen.\n\nEintritt: Eintritt frei (Quelle nennt: frei)\nBeleg: "Ke
- ine Preisangabe auf der Seite. Annahme laut quellen.yml: bei „Furtner Fr
- eising“ gilt dann „frei“."\nSicherheit: hoch\n\nKategorie: Musik\nZi
- elgruppe: Alle\n\nQuelle: https://www.furtner-freising.de/veranstaltung/ka
- raoke-mit-stefan/\nBild: https://www.furtner-freising.de/wp-content/upload
- s/2026/03/664b49167b0ca_1716209942.jpg
+DESCRIPTION:Ein Karaoke-Abend mit Stefan. Ein geselliger Abend\, bei dem je
+ der selbst singen kann. Perfekt für alle\, die ihre Stimme erklingen lass
+ en möchten.\n\nEintritt: Eintritt frei (Quelle nennt: frei)\nBeleg: "Kein
+ e Preisangabe auf der Seite. Annahme laut quellen.yml: bei „Furtner Frei
+ sing“ gilt dann „frei“."\nSicherheit: hoch\n\nKategorie: Musik\nZiel
+ gruppe: Alle\n\nQuelle: https://www.furtner-freising.de/veranstaltung/kara
+ oke-mit-stefan/\nBild: https://www.furtner-freising.de/wp-content/uploads/
+ 2026/03/664b49167b0ca_1716209942.jpg
 URL:https://www.furtner-freising.de/veranstaltung/karaoke-mit-stefan/
 CATEGORIES:Musik
 END:VEVENT
 BEGIN:VEVENT
 UID:80b56d9422c44a00@gratis-freising
-DTSTAMP:20260826T041238Z
+DTSTAMP:20260827T142154Z
 DTSTART;TZID=Europe/Berlin:20261124T190000
 DTEND;TZID=Europe/Berlin:20261124T203000
 SUMMARY:Der Fettversteher kehrt zurück
 LOCATION:TUM@Freising — Freising
 DESCRIPTION:Alexander Bartelt referiert über die Rolle von Fetten im mensc
- hlichen Körper und aktuelle Forschungsergebnisse. Der Vortrag richtet sic
- h an ein breites Publikum.\n\nEintritt: Eintritt frei (Quelle nennt: frei)
- \nBeleg: "Kommen Sie zum Vortrag von Alexander Bartelt bei TUM@Freising un
- d diskutieren Sie mit!"\nSicherheit: hoch\n\nVeranstalter: TUM\nKategorie:
-  Vortrag\nZielgruppe: Alle\nDrinnen/Draussen: drinnen\n\nQuelle: https://w
- ww.tum.de/aktuelles/veranstaltungen/terminuebersicht?tx_solr%5Bfilter%5D%5
- B0%5D=location%3AFreising
+ hlichen Körper und aktuelle Forschungsergebnisse. Die Veranstaltung ist f
+ ür alle Interessierten offen.\n\nEintritt: Eintritt frei (Quelle nennt: f
+ rei)\nBeleg: "Kommen Sie zum Vortrag von Alexander Bartelt bei TUM@Freisin
+ g und diskutieren Sie mit!"\nSicherheit: hoch\n\nVeranstalter: TUM@Freisin
+ g\nKategorie: Vortrag\nZielgruppe: Alle\nDrinnen/Draussen: drinnen\n\nQuel
+ le: https://www.tum.de/aktuelles/veranstaltungen/terminuebersicht?tx_solr%
+ 5Bfilter%5D%5B0%5D=location%3AFreising
 URL:https://www.tum.de/aktuelles/veranstaltungen/terminuebersicht?tx_solr%5
  Bfilter%5D%5B0%5D=location%3AFreising
 CATEGORIES:Vortrag
 END:VEVENT
 BEGIN:VEVENT
 UID:0bf217239527b66c@gratis-freising
-DTSTAMP:20260826T041238Z
+DTSTAMP:20260827T142154Z
 DTSTART;TZID=Europe/Berlin:20261125T200000
 DTEND;TZID=Europe/Berlin:20261125T200000
-SUMMARY:Open Latin Abend (Spende)
+SUMMARY:Open Latin Abend
 LOCATION:Furtnerbräu — Obere Hauptstr. 42\, 85354 Freising
-DESCRIPTION:Offener Tanzabend mit Salsa und Bachata. Jeder ist willkommen\,
-  unabhängig von Vorkenntnissen. Eintritt frei\, Spende erwünscht.\n\nEin
- tritt: Spende erbeten (Quelle nennt: spende)\nBeleg: "Eintritt frei! Spend
- e ist erwünscht!"\nSicherheit: hoch\n\nKategorie: Sport\nZielgruppe: Alle
- \n\nQuelle: https://www.furtner-freising.de/veranstaltung/open-latin-abend
- /\nBild: https://www.furtner-freising.de/wp-content/uploads/2026/03/6982f1
- 0e2a39f_1770189070.jpg
+DESCRIPTION:Ein offener Lateinabend mit Salsa und Bachata. Jeder ist willko
+ mmen\, egal ob Anfänger oder Fortgeschrittener. Der Eintritt ist frei\, S
+ penden sind erwünscht. Ein geselliger Abend für alle\, die Lateinamerika
+ nische Tänze ausprobieren möchten.\n\nEintritt: Eintritt frei (Quelle ne
+ nnt: frei)\nBeleg: "Eintritt frei! Spende ist erwünscht!"\nSicherheit: ho
+ ch\n\nKategorie: Sport\nZielgruppe: Alle\n\nQuelle: https://www.furtner-fr
+ eising.de/veranstaltung/open-latin-abend/\nBild: https://www.furtner-freis
+ ing.de/wp-content/uploads/2026/03/6982f10e2a39f_1770189070.jpg
 URL:https://www.furtner-freising.de/veranstaltung/open-latin-abend/
 CATEGORIES:Sport
 END:VEVENT
 BEGIN:VEVENT
 UID:4f4f7d9118262d80@gratis-freising
-DTSTAMP:20260826T041238Z
+DTSTAMP:20260827T142154Z
 DTSTART;TZID=Europe/Berlin:20261202T080000
 DTEND;TZID=Europe/Berlin:20261202T170000
-SUMMARY:Forró – Tanzabend (Spende)
+SUMMARY:Forró – Tanzabend
 LOCATION:Furtnerbräu — Obere Hauptstr. 42\, 85354 Freising
-DESCRIPTION:Traditioneller brasilianischer Paartanz Forró mit Schnupperwor
- kshop und anschließendem Open Dance. Der Workshop von 20:00 bis 20:30 Uhr
-  bietet eine Einführung\, danach kann bis zum Ende der Veranstaltung geta
- nzt werden. Eintritt frei\, Spende erwünscht.\n\nEintritt: Spende erbeten
-  (Quelle nennt: spende)\nBeleg: "Eintritt frei! Spende erwünscht!"\nSiche
- rheit: hoch\n\nKategorie: Sport\nZielgruppe: Alle\n\nQuelle: https://www.f
- urtner-freising.de/veranstaltung/forro-tanzabend/
+DESCRIPTION:Ein Tanzabend mit dem traditionellen brasilianischen Paartanz F
+ orró. Es gibt einen Schnupperworkshop von 20:00 bis 20:30 Uhr\, danach Op
+ en Dance. Der Eintritt ist frei\, Spenden sind erwünscht. Perfekt für al
+ le\, die neue Tanzstile ausprobieren möchten.\n\nEintritt: Eintritt frei 
+ (Quelle nennt: frei)\nBeleg: "Eintritt frei! Spende erwünscht!"\nSicherhe
+ it: hoch\n\nKategorie: Sport\nZielgruppe: Alle\n\nQuelle: https://www.furt
+ ner-freising.de/veranstaltung/forro-tanzabend/
 URL:https://www.furtner-freising.de/veranstaltung/forro-tanzabend/
 CATEGORIES:Sport
 END:VEVENT
 BEGIN:VEVENT
 UID:ee477e5da391da09@gratis-freising
-DTSTAMP:20260826T041238Z
+DTSTAMP:20260827T142154Z
 DTSTART;TZID=Europe/Berlin:20261205T200000
 DTEND;TZID=Europe/Berlin:20261205T200000
 SUMMARY:Abtanzparty zu Rock und Pop querbeet
 LOCATION:Furtnerbräu — Obere Hauptstr. 42\, 85354 Freising
-DESCRIPTION:Tanzveranstaltung mit DJ-Team Martin und Uli. Musikrichtung ist
-  Rock und Pop querbeet.\n\nEintritt: Eintritt frei (Quelle nennt: frei)\nB
- eleg: "Keine Preisangabe auf der Seite. Annahme laut quellen.yml: bei „F
- urtner Freising“ gilt dann „frei“."\nSicherheit: hoch\n\nKategorie: 
- Musik\nZielgruppe: Alle\n\nQuelle: https://www.furtner-freising.de/veranst
- altung/abtanzparty-zu-rock-und-pop-querbeet/\nBild: https://www.furtner-fr
- eising.de/wp-content/uploads/2026/03/63526380cc266_1666343808.jpg
+DESCRIPTION:Eine Tanzparty mit Rock- und Popmusik\, die von einem DJ-Team m
+ oderiert wird. Musikrichtung ist Rock und Pop querbeet. Ein geselliger Abe
+ nd für alle\, die sich nach Musik und Tanz sehnen.\n\nEintritt: Eintritt 
+ frei (Quelle nennt: frei)\nBeleg: "Keine Preisangabe auf der Seite. Annahm
+ e laut quellen.yml: bei „Furtner Freising“ gilt dann „frei“."\nSic
+ herheit: hoch\n\nKategorie: Musik\nZielgruppe: Alle\n\nQuelle: https://www
+ .furtner-freising.de/veranstaltung/abtanzparty-zu-rock-und-pop-querbeet/\n
+ Bild: https://www.furtner-freising.de/wp-content/uploads/2026/03/63526380c
+ c266_1666343808.jpg
 URL:https://www.furtner-freising.de/veranstaltung/abtanzparty-zu-rock-und-p
  op-querbeet/
 CATEGORIES:Musik
 END:VEVENT
 BEGIN:VEVENT
 UID:6bd952803544b4d1@gratis-freising
-DTSTAMP:20260826T041238Z
+DTSTAMP:20260827T142154Z
 DTSTART;TZID=Europe/Berlin:20261206T150000
 DTEND;TZID=Europe/Berlin:20261206T170000
 SUMMARY:Sankt Nikolaus im Weltwald
-LOCATION:Weltwald Freising (Treffpunkt Wanderparkplatz\, Parkplatz P1) — 
- Treffpunkt: Zentralpavillon im Weltwald\, nahe bei der Waldkirche Oberberg
- hausen
-DESCRIPTION:Ein besonderer Nachmittag in der Vorweihnachtszeit mit dem Niko
- laus und Krampus. Es gibt einen kleinen Markt mit weihnachtlichen Holzkuns
- twerken\, exotischen Nadelbaumzweigen und Kinderpunsch. Ein Erlebnis für 
- Groß und Klein.\n\nEintritt: Eintritt frei (Quelle nennt: frei)\nBeleg: "
- Kategorieseite „vhs Freising — kostenfrei“"\nSicherheit: hoch\n\nVer
- anstalter: vhs Freising in Kooperation mit dem Förderverein Weltwald und 
- Erlebnispfad Freising e.V. und Mittelschule Zolling\nKategorie: Fest\nZiel
- gruppe: Familien\nDrinnen/Draussen: draussen\n\nQuelle: https://www.vhs-fr
- eising.org/p/fachbereiche/vhs-kostenfrei-633-CAT-KAT332
+LOCATION:Treffpunkt: Zentralpavillon im Weltwald\, nahe bei der Waldkirche 
+ Oberberghausen — Treffpunkt: Zentralpavillon im Weltwald\, nahe bei der 
+ Waldkirche Oberberghausen
+DESCRIPTION:Ein besonderer Nachmittag in der Vorweihnachtszeit mit Vorleses
+ tunde\, weihnachtlichem Markt und exotischen Nadelbaumzweigen. Der Nikolau
+ s und der Krampus sind ebenfalls zu Gast.\n\nEintritt: Eintritt frei (Quel
+ le nennt: frei)\nBeleg: "Kategorieseite „vhs Freising — kostenfrei“"
+ \nSicherheit: hoch\n\nVeranstalter: vhs Freising in Kooperation mit dem F
+ rderverein Weltwald und Erlebnispfad Freising e.V. und Mittelschule Zolli
+ ng\nKategorie: Fest\nZielgruppe: Familien\nDrinnen/Draussen: draussen\n\nQ
+ uelle: https://www.vhs-freising.org/p/fachbereiche/vhs-kostenfrei-633-CAT-
+ KAT332
 URL:https://www.vhs-freising.org/p/fachbereiche/vhs-kostenfrei-633-CAT-KAT3
  32
 CATEGORIES:Fest
 END:VEVENT
 BEGIN:VEVENT
 UID:a0e775cc011915ca@gratis-freising
-DTSTAMP:20260826T041238Z
+DTSTAMP:20260827T142154Z
 DTSTART;TZID=Europe/Berlin:20261207T190000
 DTEND;TZID=Europe/Berlin:20261207T190000
 SUMMARY:Solarstrom selbst erzeugen mit PV-Kleinstanlagen - ONLINE
@@ -2009,7 +2124,7 @@ CATEGORIES:Vortrag
 END:VEVENT
 BEGIN:VEVENT
 UID:635ef2072c914c18@gratis-freising
-DTSTAMP:20260826T041238Z
+DTSTAMP:20260827T142154Z
 DTSTART;TZID=Europe/Berlin:20261208T183000
 DTEND;TZID=Europe/Berlin:20261208T183000
 SUMMARY:Demografie vs. Geldbeutel: Warum wir über die Rente sprechen sollt
@@ -2030,24 +2145,23 @@ CATEGORIES:Vortrag
 END:VEVENT
 BEGIN:VEVENT
 UID:619fbcdba1cbbbf6@gratis-freising
-DTSTAMP:20260826T041238Z
+DTSTAMP:20260827T142154Z
 DTSTART;TZID=Europe/Berlin:20261211T190000
 DTEND;TZID=Europe/Berlin:20261211T210000
 SUMMARY:Vernissage Charly-Ann Cobdak: MaschinenSpiel
 LOCATION:Schafhof — Europäisches Künstlerhaus — Am Schafhof 1\, 85354
   Freising
-DESCRIPTION:Eröffnung der Ausstellung 'MaschinenSpiel' mit der Münchner K
- ünstlerin Charly-Ann Cobdak. Ihre kinetischen Maschinen laden zum Staunen
-  und Nachdenken über das zweckfreie Spiel ein. Ein spannender Einstieg in
-  die Verbindung von Kunst und Philosophie.\n\nEintritt: Eintritt frei (Que
- lle nennt: frei)\nBeleg: "Der Eintritt in die Ausstellung und zu den Begle
- itprogrammen ist kostenlos."\nSicherheit: hoch\n\nVeranstalter: Schafhof K
- unstforum\nKategorie: Kunst\nZielgruppe: Alle\nDrinnen/Draussen: drinnen\n
- \nQuelle: https://www.schafhof-kunstforum.de/Aktuell/Veranstaltungskalende
- r/Charly-Ann-Cobdak-MaschinenSpiel.php?object=tx\,3432.13&ModID=11&FID=395
- 7.60.1&NavID=2615.43&La=1&kat=2615.7%2C2615.25%2C2615.16%2C2615.18%2C2615.
- 4%2C2615.20%2C2615.28%2C2615.27%2C2615.19%2C2615.26%2C2615.21%2C2615.22%2C
- 2615.14%2C2615.68&max=25
+DESCRIPTION:Eröffnung der Ausstellung mit kinetischen Maschinen der Künst
+ lerin Charly-Ann Cobdak. Die Werke thematisieren zweckfreies Spiel und Fan
+ tasie. Shuttle-Service vom Bahnhof Freising wird angeboten.\n\nEintritt: E
+ intritt frei (Quelle nennt: frei)\nBeleg: "Der Eintritt in die Ausstellung
+  und zu den Begleitprogrammen ist kostenlos."\nSicherheit: hoch\n\nVeranst
+ alter: Schafhof Kunstforum\nKategorie: Kunst\nZielgruppe: Alle\nDrinnen/Dr
+ aussen: drinnen\n\nQuelle: https://www.schafhof-kunstforum.de/Aktuell/Vera
+ nstaltungskalender/Charly-Ann-Cobdak-MaschinenSpiel.php?object=tx\,3432.13
+ &ModID=11&FID=3957.60.1&NavID=2615.43&La=1&kat=2615.7%2C2615.25%2C2615.16%
+ 2C2615.18%2C2615.4%2C2615.20%2C2615.28%2C2615.27%2C2615.19%2C2615.26%2C261
+ 5.21%2C2615.22%2C2615.14%2C2615.68&max=25
 URL:https://www.schafhof-kunstforum.de/Aktuell/Veranstaltungskalender/Charl
  y-Ann-Cobdak-MaschinenSpiel.php?object=tx\,3432.13&ModID=11&FID=3957.60.1&
  NavID=2615.43&La=1&kat=2615.7%2C2615.25%2C2615.16%2C2615.18%2C2615.4%2C261
@@ -2057,7 +2171,7 @@ CATEGORIES:Kunst
 END:VEVENT
 BEGIN:VEVENT
 UID:d024ca4fc3269f7c@gratis-freising
-DTSTAMP:20260826T041238Z
+DTSTAMP:20260827T142154Z
 DTSTART;VALUE=DATE:20261212
 DTEND;VALUE=DATE:20270301
 SUMMARY:Charly-Ann Cobdak: MaschinenSpiel
@@ -2083,41 +2197,67 @@ URL:https://www.schafhof-kunstforum.de/Aktuell/Veranstaltungskalender/Charl
 CATEGORIES:Kunst
 END:VEVENT
 BEGIN:VEVENT
+UID:0d13b49c0e7807ea@gratis-freising
+DTSTAMP:20260827T142154Z
+DTSTART;VALUE=DATE:20261212
+DTEND;VALUE=DATE:20270301
+SUMMARY:Ausstellung Charly-Ann Cobdak: MaschinenSpiel
+LOCATION:Schafhof — Europäisches Künstlerhaus — Am Schafhof 1\, 85354
+  Freising
+DESCRIPTION:Kinetische Maschinen der Künstlerin Charly-Ann Cobdak\, die zw
+ eckfreies Spiel und Fantasie thematisieren. Die Werke sind als Spiegel uns
+ eres Lebens und unserer Träume konzipiert.\n\nEintritt: Eintritt frei (Qu
+ elle nennt: frei)\nBeleg: "Der Eintritt in die Ausstellung und zu den Begl
+ eitprogrammen ist kostenlos."\nSicherheit: hoch\n\nVeranstalter: Schafhof 
+ Kunstforum\nKategorie: Kunst\nZielgruppe: Alle\nDrinnen/Draussen: drinnen\
+ n\nQuelle: https://www.schafhof-kunstforum.de/Aktuell/Veranstaltungskalend
+ er/Charly-Ann-Cobdak-MaschinenSpiel.php?object=tx\,3432.13&ModID=11&FID=39
+ 57.60.1&NavID=2615.43&La=1&kat=2615.7%2C2615.25%2C2615.16%2C2615.18%2C2615
+ .4%2C2615.20%2C2615.28%2C2615.27%2C2615.19%2C2615.26%2C2615.21%2C2615.22%2
+ C2615.14%2C2615.68&max=25
+URL:https://www.schafhof-kunstforum.de/Aktuell/Veranstaltungskalender/Charl
+ y-Ann-Cobdak-MaschinenSpiel.php?object=tx\,3432.13&ModID=11&FID=3957.60.1&
+ NavID=2615.43&La=1&kat=2615.7%2C2615.25%2C2615.16%2C2615.18%2C2615.4%2C261
+ 5.20%2C2615.28%2C2615.27%2C2615.19%2C2615.26%2C2615.21%2C2615.22%2C2615.14
+ %2C2615.68&max=25
+CATEGORIES:Kunst
+END:VEVENT
+BEGIN:VEVENT
 UID:eb82fc87c5d18335@gratis-freising
-DTSTAMP:20260826T041238Z
+DTSTAMP:20260827T142154Z
 DTSTART;TZID=Europe/Berlin:20261212T150000
 DTEND;TZID=Europe/Berlin:20261212T180000
 SUMMARY:Repair Café
 LOCATION:Freising Vötting — Bachstraße 8\, Vötting
 DESCRIPTION:Bei diesem Repair Café können defekte Geräte\, Fahrräder od
- er Elektronik gemeinsam repariert werden. Ehrenamtliche helfen dabei\, die
-  Lebensdauer von Gegenständen zu verlängern. Dazu gibt es Kaffee\, Kuche
- n und eine gemütliche Atmosphäre.\n\nEintritt: Eintritt frei (Quelle nen
- nt: frei)\nBeleg: "Kategorieseite „vhs Freising — kostenfrei“"\nSich
- erheit: hoch\n\nVeranstalter: Freischenk e.V. in Kooperation mit vhs Freis
- ing\nKategorie: Sonstiges\nZielgruppe: Alle\nDrinnen/Draussen: drinnen\n\n
- Quelle: https://www.vhs-freising.org/p/fachbereiche/vhs-kostenfrei-633-CAT
- -KAT332
+ er Handys repariert werden. Ehrenamtliche helfen dabei\, die Lebensdauer v
+ on Gegenständen zu verlängern. Kaffee und Kuchen sorgen für eine gemüt
+ liche Atmosphäre.\n\nEintritt: Eintritt frei (Quelle nennt: frei)\nBeleg:
+  "Kategorieseite „vhs Freising — kostenfrei“"\nSicherheit: hoch\n\nV
+ eranstalter: Freischenk e.V. in Kooperation mit vhs Freising\nKategorie: S
+ onstiges\nZielgruppe: Alle\nDrinnen/Draussen: drinnen\n\nQuelle: https://w
+ ww.vhs-freising.org/p/fachbereiche/vhs-kostenfrei-633-CAT-KAT332
 URL:https://www.vhs-freising.org/p/fachbereiche/vhs-kostenfrei-633-CAT-KAT3
  32
 CATEGORIES:Sonstiges
 END:VEVENT
 BEGIN:VEVENT
 UID:0076af3e2a40bcc6@gratis-freising
-DTSTAMP:20260826T041238Z
+DTSTAMP:20260827T142154Z
 DTSTART;TZID=Europe/Berlin:20261217T200000
 DTEND;TZID=Europe/Berlin:20261217T200000
 SUMMARY:Weihnachtliches Kneipensingen
 LOCATION:Furtnerbräu — Obere Hauptstr. 42\, 85354 Freising
-DESCRIPTION:Weihnachtliches Mitsingkonzert in der Kneipe mit Elli\, Tina un
- d Johannes. Es wird weihnachtliche Musik gespielt und gemeinsam gesungen. 
- Reservierungen sind nicht möglich.\n\nEintritt: Eintritt frei (Quelle nen
- nt: frei)\nBeleg: "Keine Preisangabe auf der Seite. Annahme laut quellen.y
- ml: bei „Furtner Freising“ gilt dann „frei“."\nSicherheit: hoch\n\
- nKategorie: Musik\nZielgruppe: Alle\n\nQuelle: https://www.furtner-freisin
- g.de/veranstaltung/weihnachtliches-kneipensingen/\nAuch bei: https://www.f
- urtner-freising.de/veranstaltung/open-latin-abend/\nBild: https://www.furt
- ner-freising.de/wp-content/uploads/2026/04/IMG_4448.jpg
+DESCRIPTION:Ein weihnachtliches Kneipensingen mit Livemusik. Die ganze Knei
+ pe singt gemeinsam\, unterstützt von Elli\, Tina und Johannes. Ein gesell
+ iger Abend für alle\, die weihnachtliche Lieder gemeinsam singen möchten
+ .\n\nEintritt: Eintritt frei (Quelle nennt: frei)\nBeleg: "Keine Preisanga
+ be auf der Seite. Annahme laut quellen.yml: bei „Furtner Freising“ gil
+ t dann „frei“."\nSicherheit: hoch\n\nKategorie: Musik\nZielgruppe: All
+ e\n\nQuelle: https://www.furtner-freising.de/veranstaltung/weihnachtliches
+ -kneipensingen/\nAuch bei: https://www.furtner-freising.de/veranstaltung/o
+ pen-latin-abend/\nBild: https://www.furtner-freising.de/wp-content/uploads
+ /2026/04/IMG_4448.jpg
 URL:https://www.furtner-freising.de/veranstaltung/weihnachtliches-kneipensi
  ngen/
 CATEGORIES:Musik
