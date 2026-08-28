@@ -26,27 +26,6 @@ Eintrag nicht mehr an.
 - **Beleg:** _kein Hinweis im Text gefunden_
 - **Quelle:** https://veranstaltungen.merkur.de/freising/archetypen-maennlicher-grenzueberschreitung-e184f7b19ce85ba7696afcbd77c161681.html
 
-## Kreuzbund SHG Bahnhofstraße
-- **Wann:** 27.08.2026 19:30
-- **Wo:** Caritas-Zentrum Freising
-- **Angezeigt als:** vermutlich kostenfrei — Quelle nennt `frei` (Sicherheit: mittel)
-- **Beleg:** _kein Hinweis im Text gefunden_
-- **Quelle:** https://veranstaltungen.merkur.de/freising/kreuzbund-shg-bahnhofstrasse-ec0093f7bfcf96906ff24eb4ce9eea60e.html
-
-## Probe der Kantorei
-- **Wann:** 27.08.2026 20:00
-- **Wo:** Evangelisches Gemeindehaus Christi Himmelfahrt
-- **Angezeigt als:** vermutlich kostenfrei — Quelle nennt `frei` (Sicherheit: mittel)
-- **Beleg:** _kein Hinweis im Text gefunden_
-- **Quelle:** https://veranstaltungen.merkur.de/freising/probe-der-kantorei-e89291b43e72793f8276dd559aad045be.html
-
-## Anonyme Alkoholiker
-- **Wann:** 27.08.2026 20:00
-- **Wo:** Paul-Gerhardt-Haus
-- **Angezeigt als:** vermutlich kostenfrei — Quelle nennt `frei` (Sicherheit: mittel)
-- **Beleg:** _kein Hinweis im Text gefunden_
-- **Quelle:** https://veranstaltungen.merkur.de/freising/anonyme-alkoholiker-edc37286ed90a0d0b1f53cadae0387b29.html
-
 ## Senioren-Netzwerk Frieda & Ben
 - **Wann:** 28.08.2026 11:00
 - **Wo:** dASAMa Dialograum im Asamgebäude
@@ -74,3 +53,10 @@ Eintrag nicht mehr an.
 - **Angezeigt als:** vermutlich kostenfrei — Quelle nennt `frei` (Sicherheit: mittel)
 - **Beleg:** Demokratie lebt vom Mitmachen, vom Zuhören und vom Austausch. Sie zeigt sich nicht nur bei Wahlen, sondern überall dort, wo Menschen Verantwortung übernehmen und ihr Zusammenleben aktiv gestalten.
 - **Quelle:** https://www.3klang-musik.de/freising.html
+
+## Radl-Repair Café
+- **Wann:** 17.10.2026 15:00
+- **Wo:** Offene Werkstatt Freising
+- **Angezeigt als:** vermutlich kostenfrei — Quelle nennt `spende` (Sicherheit: mittel)
+- **Beleg:** _kein Hinweis im Text gefunden_
+- **Quelle:** https://einfach-selber-machen.org/event/radl-repair-cafe/
