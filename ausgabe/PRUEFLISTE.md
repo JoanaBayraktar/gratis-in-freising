@@ -26,19 +26,19 @@ Eintrag nicht mehr an.
 - **Beleg:** _kein Hinweis im Text gefunden_
 - **Quelle:** https://veranstaltungen.merkur.de/freising/archetypen-maennlicher-grenzueberschreitung-e184f7b19ce85ba7696afcbd77c161681.html
 
-## Senioren-Netzwerk Frieda & Ben
-- **Wann:** 28.08.2026 11:00
-- **Wo:** dASAMa Dialograum im Asamgebäude
-- **Angezeigt als:** vermutlich kostenfrei — Quelle nennt `frei` (Sicherheit: mittel)
-- **Beleg:** _kein Hinweis im Text gefunden_
-- **Quelle:** https://veranstaltungen.merkur.de/freising/senioren-netzwerk-frieda-ben-e1bdbd1c5c5437951883c1e13ddf4ffe2.html
-
-## Krisendienst Psychiatrie Oberbayern
-- **Wann:** 29.08.2026 00:00
+## Jagdgenossenschaft Freising Nord und Süd
+- **Wann:** 30.08.2026 12:00
 - **Wo:** —
-- **Angezeigt als:** vermutlich kostenfrei — Quelle nennt `frei` (Sicherheit: mittel)
+- **Angezeigt als:** vermutlich kostenfrei — Quelle nennt `unklar` (Sicherheit: niedrig)
 - **Beleg:** _kein Hinweis im Text gefunden_
-- **Quelle:** https://veranstaltungen.merkur.de/freising/krisendienst-psychiatrie-oberbayern-e66fb69f5d88622719d55d6f39ca707d6.html
+- **Quelle:** https://veranstaltungen.merkur.de/freising/jagdgenossenschaft-freising-nord-und-sued-e7b078f63ab9784b800a24df64bf7a0f1.html
+
+## DIMU
+- **Wann:** 30.08.2026 13:30
+- **Wo:** Diözesanmuseum
+- **Angezeigt als:** vermutlich kostenfrei — Quelle nennt `unklar` (Sicherheit: niedrig)
+- **Beleg:** _kein Hinweis im Text gefunden_
+- **Quelle:** https://veranstaltungen.merkur.de/freising/dimu-eda2e8f872aa106dbb4e871f4cf5f7bd8.html
 
 ## Die Demokratie feiern – gemeinsam in Freising
 - **Wann:** 02.10.2026 18:00
