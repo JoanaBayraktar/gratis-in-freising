@@ -26,19 +26,40 @@ Eintrag nicht mehr an.
 - **Beleg:** _kein Hinweis im Text gefunden_
 - **Quelle:** https://veranstaltungen.merkur.de/freising/archetypen-maennlicher-grenzueberschreitung-e184f7b19ce85ba7696afcbd77c161681.html
 
+## Naturfreundehaus: Weißwurstfrühschoppen
+- **Wann:** 30.08.2026 10:00
+- **Wo:** Naturfreundehaus Hangenham
+- **Angezeigt als:** vermutlich kostenfrei — Quelle nennt `unklar` (Sicherheit: niedrig)
+- **Beleg:** _kein Hinweis im Text gefunden_
+- **Quelle:** https://veranstaltungen.merkur.de/freising/naturfreundehaus-ed7f64d68fb8d4e7bd57f03618bd6478e.html
+
 ## Jagdgenossenschaft Freising Nord und Süd
 - **Wann:** 30.08.2026 12:00
-- **Wo:** —
+- **Wo:** Anton Frankl
 - **Angezeigt als:** vermutlich kostenfrei — Quelle nennt `unklar` (Sicherheit: niedrig)
 - **Beleg:** _kein Hinweis im Text gefunden_
 - **Quelle:** https://veranstaltungen.merkur.de/freising/jagdgenossenschaft-freising-nord-und-sued-e7b078f63ab9784b800a24df64bf7a0f1.html
 
 ## DIMU
 - **Wann:** 30.08.2026 13:30
-- **Wo:** Diözesanmuseum
+- **Wo:** Diözesanmuseum Freising
 - **Angezeigt als:** vermutlich kostenfrei — Quelle nennt `unklar` (Sicherheit: niedrig)
 - **Beleg:** _kein Hinweis im Text gefunden_
 - **Quelle:** https://veranstaltungen.merkur.de/freising/dimu-eda2e8f872aa106dbb4e871f4cf5f7bd8.html
+
+## 2 für 1
+- **Wann:** 01.09.2026 00:00
+- **Wo:** Diözesanmuseum Freising
+- **Angezeigt als:** vermutlich kostenfrei — Quelle nennt `unklar` (Sicherheit: mittel)
+- **Beleg:** _kein Hinweis im Text gefunden_
+- **Quelle:** https://veranstaltungen.merkur.de/freising/2-fuer-1-e545930429b5528e089647fd3c7aa6de8.html
+
+## Gospelchor
+- **Wann:** 01.09.2026 19:30
+- **Wo:** Evang. Gemeindehaus Christi Himmelfahrt
+- **Angezeigt als:** vermutlich kostenfrei — Quelle nennt `unklar` (Sicherheit: niedrig)
+- **Beleg:** _kein Hinweis im Text gefunden_
+- **Quelle:** https://veranstaltungen.merkur.de/freising/gospelchor-ee33665b70ae8b7d61dd52ee22a56a4d8.html
 
 ## Die Demokratie feiern – gemeinsam in Freising
 - **Wann:** 02.10.2026 18:00
@@ -57,6 +78,27 @@ Eintrag nicht mehr an.
 ## Radl-Repair Café
 - **Wann:** 17.10.2026 15:00
 - **Wo:** Offene Werkstatt Freising
-- **Angezeigt als:** vermutlich kostenfrei — Quelle nennt `spende` (Sicherheit: mittel)
+- **Angezeigt als:** vermutlich kostenfrei — Quelle nennt `frei` (Sicherheit: mittel)
 - **Beleg:** _kein Hinweis im Text gefunden_
 - **Quelle:** https://einfach-selber-machen.org/event/radl-repair-cafe/
+
+## Werkstatt für Jugendliche *ausgebucht*
+- **Wann:** 03.11.2026 00:00
+- **Wo:** Offene Werkstatt Freising
+- **Angezeigt als:** vermutlich kostenfrei — Quelle nennt `unklar` (Sicherheit: niedrig)
+- **Beleg:** _kein Hinweis im Text gefunden_
+- **Quelle:** https://einfach-selber-machen.org/event/werkstatt-fuer-jugendliche-ausgebucht/
+
+## Holzwerken für Einsteiger*innen
+- **Wann:** 21.11.2026 09:00
+- **Wo:** Offene Werkstatt Freising
+- **Angezeigt als:** vermutlich kostenfrei — Quelle nennt `unklar` (Sicherheit: niedrig)
+- **Beleg:** _kein Hinweis im Text gefunden_
+- **Quelle:** https://einfach-selber-machen.org/event/holzwerken-fuer-einsteiger/
+
+## Holzwerken für Einsteiger*innen
+- **Wann:** 05.12.2026 09:00
+- **Wo:** Offene Werkstatt Freising
+- **Angezeigt als:** vermutlich kostenfrei — Quelle nennt `unklar` (Sicherheit: niedrig)
+- **Beleg:** _kein Hinweis im Text gefunden_
+- **Quelle:** https://einfach-selber-machen.org/event/holzwerken-fuer-einsteigerinnen/

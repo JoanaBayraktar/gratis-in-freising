@@ -24,7 +24,7 @@ END:STANDARD
 END:VTIMEZONE
 BEGIN:VEVENT
 UID:9dbb539d76866b10@gratis-freising
-DTSTAMP:20260829T101345Z
+DTSTAMP:20260830T092300Z
 DTSTART;VALUE=DATE:20260518
 DTEND;VALUE=DATE:20261019
 SUMMARY:TUM tanzt! (vermutlich frei)
@@ -44,7 +44,7 @@ CATEGORIES:Kunst
 END:VEVENT
 BEGIN:VEVENT
 UID:d2b3c21197115322@gratis-freising
-DTSTAMP:20260829T101345Z
+DTSTAMP:20260830T092300Z
 DTSTART;VALUE=DATE:20260822
 DTEND;VALUE=DATE:20260917
 SUMMARY:Sauna-Sommerpause (vermutlich frei)
@@ -63,7 +63,7 @@ CATEGORIES:Sonstiges
 END:VEVENT
 BEGIN:VEVENT
 UID:098b51d483430017@gratis-freising
-DTSTAMP:20260829T101345Z
+DTSTAMP:20260830T092300Z
 DTSTART;VALUE=DATE:20260825
 DTEND;VALUE=DATE:20260928
 SUMMARY:Archetypen männlicher Grenzüberschreitung (vermutlich frei)
@@ -79,41 +79,95 @@ URL:https://veranstaltungen.merkur.de/freising/archetypen-maennlicher-grenz
 CATEGORIES:Kunst
 END:VEVENT
 BEGIN:VEVENT
+UID:4dda802a32da3757@gratis-freising
+DTSTAMP:20260830T092300Z
+DTSTART;TZID=Europe/Berlin:20260830T100000
+DTEND;TZID=Europe/Berlin:20260830T100000
+SUMMARY:Naturfreundehaus: Weißwurstfrühschoppen (vermutlich frei)
+LOCATION:Naturfreundehaus Hangenham
+DESCRIPTION:Ein geselliger Frühschoppen mit Weißwurst und Getränken im N
+ aturfreundehaus Hangenham. Offenes Angebot für alle Besucher.\n\nEintritt
+ : vermutlich kostenfrei (Quelle nennt: unklar)\nSicherheit: niedrig\n\nKat
+ egorie: Geselligkeit/Spiele/Treffen\nZielgruppe: Alle\nDrinnen/Draussen: b
+ eides\n\nQuelle: https://veranstaltungen.merkur.de/freising/naturfreundeha
+ us-ed7f64d68fb8d4e7bd57f03618bd6478e.html
+URL:https://veranstaltungen.merkur.de/freising/naturfreundehaus-ed7f64d68fb
+ 8d4e7bd57f03618bd6478e.html
+CATEGORIES:Geselligkeit/Spiele/Treffen
+END:VEVENT
+BEGIN:VEVENT
 UID:9c0556c0f005381c@gratis-freising
-DTSTAMP:20260829T101345Z
+DTSTAMP:20260830T092300Z
 DTSTART;TZID=Europe/Berlin:20260830T120000
 DTEND;TZID=Europe/Berlin:20260830T120000
 SUMMARY:Jagdgenossenschaft Freising Nord und Süd (vermutlich frei)
-LOCATION:Pförrerausweg 1\, Lerchenfeld\, 85356 Freising
+LOCATION:Anton Frankl — Pförrerausweg 1\, Lerchenfeld
 DESCRIPTION:Ein Sommerfest für Jagdgenossen und deren Frauen mit gemütlic
- hem Beisammensein. Geschirr und Gläser sind selbst mitzubringen.\n\nEintr
- itt: vermutlich kostenfrei (Quelle nennt: unklar)\nSicherheit: niedrig\n\n
- Kategorie: Feste/Bälle/Tanz\nZielgruppe: Erwachsene\n\nQuelle: https://ve
- ranstaltungen.merkur.de/freising/jagdgenossenschaft-freising-nord-und-sued
- -e7b078f63ab9784b800a24df64bf7a0f1.html
+ hem Beisammensein. Gäste werden gebeten\, eigenes Geschirr und Gläser mi
+ tzubringen.\n\nEintritt: vermutlich kostenfrei (Quelle nennt: unklar)\nSic
+ herheit: niedrig\n\nKategorie: Fest\nZielgruppe: Erwachsene\nDrinnen/Draus
+ sen: draussen\n\nQuelle: https://veranstaltungen.merkur.de/freising/jagdge
+ nossenschaft-freising-nord-und-sued-e7b078f63ab9784b800a24df64bf7a0f1.html
 URL:https://veranstaltungen.merkur.de/freising/jagdgenossenschaft-freising-
  nord-und-sued-e7b078f63ab9784b800a24df64bf7a0f1.html
-CATEGORIES:Feste/Bälle/Tanz
+CATEGORIES:Fest
 END:VEVENT
 BEGIN:VEVENT
 UID:51edb88ce4cf0c96@gratis-freising
-DTSTAMP:20260829T101345Z
+DTSTAMP:20260830T092300Z
 DTSTART;TZID=Europe/Berlin:20260830T133000
 DTEND;TZID=Europe/Berlin:20260830T163000
 SUMMARY:DIMU (vermutlich frei)
-LOCATION:Diözesanmuseum — Domberg 21\, 85354 Freising
-DESCRIPTION:Eine Werkstatt im Diözesanmuseum für Kinder ohne Anmeldung. K
- reatives Gestalten und Entdecken stehen im Mittelpunkt.\n\nEintritt: vermu
- tlich kostenfrei (Quelle nennt: unklar)\nSicherheit: niedrig\n\nKategorie:
-  Kinderprogramm\nZielgruppe: Kinder\n\nQuelle: https://veranstaltungen.mer
- kur.de/freising/dimu-eda2e8f872aa106dbb4e871f4cf5f7bd8.html
+LOCATION:Diözesanmuseum Freising — Domberg 21
+DESCRIPTION:Eine kreative Werkstatt im Diözesanmuseum für Kinder und Fami
+ lien ohne Anmeldung. Hier können Besucher selbst aktiv werden und kreativ
+  tätig sein.\n\nEintritt: vermutlich kostenfrei (Quelle nennt: unklar)\nS
+ icherheit: niedrig\n\nVeranstalter: Diözesanmuseum Freising\nKategorie: K
+ inderprogramm\nZielgruppe: Kinder\nDrinnen/Draussen: drinnen\n\nQuelle: ht
+ tps://veranstaltungen.merkur.de/freising/dimu-eda2e8f872aa106dbb4e871f4cf5
+ f7bd8.html
 URL:https://veranstaltungen.merkur.de/freising/dimu-eda2e8f872aa106dbb4e871
  f4cf5f7bd8.html
 CATEGORIES:Kinderprogramm
 END:VEVENT
 BEGIN:VEVENT
+UID:c8c722a240349e40@gratis-freising
+DTSTAMP:20260830T092300Z
+DTSTART;VALUE=DATE:20260901
+DTEND;VALUE=DATE:20261001
+SUMMARY:2 für 1 (vermutlich frei)
+LOCATION:Diözesanmuseum Freising — Domberg 21
+DESCRIPTION:Eine Sonderaktion im Diözesanmuseum: Bei Besuch zu zweit zahlt
+  nur eine Person den Eintritt. Auch Einzelbesucher können von der Aktion 
+ profitieren\, indem sie sich an der Kasse mit einem anderen Einzelbesucher
+  zusammenschließen.\n\nEintritt: vermutlich kostenfrei (Quelle nennt: unk
+ lar)\nSicherheit: mittel\n\nKategorie: Führung/Besichtigung\nZielgruppe: 
+ Alle\nDrinnen/Draussen: drinnen\n\nQuelle: https://veranstaltungen.merkur.
+ de/freising/2-fuer-1-e545930429b5528e089647fd3c7aa6de8.html
+URL:https://veranstaltungen.merkur.de/freising/2-fuer-1-e545930429b5528e089
+ 647fd3c7aa6de8.html
+CATEGORIES:Führung/Besichtigung
+END:VEVENT
+BEGIN:VEVENT
+UID:907f397d34576549@gratis-freising
+DTSTAMP:20260830T092300Z
+DTSTART;TZID=Europe/Berlin:20260901T193000
+DTEND;TZID=Europe/Berlin:20260901T193000
+SUMMARY:Gospelchor (vermutlich frei)
+LOCATION:Evang. Gemeindehaus Christi Himmelfahrt — Martin-Luther-Str. 10
+DESCRIPTION:Ein Chorabend mit Gospels und spiritueller Musik. Der Gospelcho
+ r lädt zum Mitsingen und Zuhören ein. Neue Sängerinnen und Sänger sind
+  willkommen.\n\nEintritt: vermutlich kostenfrei (Quelle nennt: unklar)\nSi
+ cherheit: niedrig\n\nKategorie: Musik\nZielgruppe: Alle\nDrinnen/Draussen:
+  drinnen\n\nQuelle: https://veranstaltungen.merkur.de/freising/gospelchor-
+ ee33665b70ae8b7d61dd52ee22a56a4d8.html
+URL:https://veranstaltungen.merkur.de/freising/gospelchor-ee33665b70ae8b7d6
+ 1dd52ee22a56a4d8.html
+CATEGORIES:Musik
+END:VEVENT
+BEGIN:VEVENT
 UID:7658e605275a5d7e@gratis-freising
-DTSTAMP:20260829T101345Z
+DTSTAMP:20260830T092300Z
 DTSTART;TZID=Europe/Berlin:20261002T180000
 DTEND;TZID=Europe/Berlin:20261002T235900
 SUMMARY:Die Demokratie feiern – gemeinsam in Freising (vermutlich frei)
@@ -130,39 +184,95 @@ CATEGORIES:Fest
 END:VEVENT
 BEGIN:VEVENT
 UID:ebb437d687706e2c@gratis-freising
-DTSTAMP:20260829T101345Z
+DTSTAMP:20260830T092300Z
 DTSTART;TZID=Europe/Berlin:20261002T180000
 DTEND;TZID=Europe/Berlin:20261002T235959
 SUMMARY:Lange Nacht der Demokratie in Freising (vermutlich frei)
 LOCATION:
-DESCRIPTION:Ein Abend voller Mitmachaktionen\, Kunst\, Musik und Theater\, 
- der Demokratie als lebendigen Prozess erlebbar macht. Über 50 Vereine\, O
- rganisationen und Schulen gestalten ein Programm für Begegnung und Dialog
-  in Freising.\n\nEintritt: vermutlich kostenfrei (Quelle nennt: frei)\nBel
- eg: "Demokratie lebt vom Mitmachen\, vom Zuhören und vom Austausch. Sie z
- eigt sich nicht nur bei Wahlen\, sondern überall dort\, wo Menschen Veran
- twortung übernehmen und ihr Zusammenleben aktiv gestalten."\nSicherheit: 
- mittel\n\nVeranstalter: Treffpunkt Ehrenamt der Stadt Freising (mit Beteil
- igung von 3klang gGmbH)\nKategorie: Fest\nZielgruppe: Alle\nDrinnen/Drauss
- en: beides\n\nQuelle: https://www.3klang-musik.de/freising.html
+DESCRIPTION:Ein Abend voller Demokratie zum Mitmachen: Gespräche\, Kunst\,
+  Musik und Theater laden zum Austausch und zur Begegnung ein. Über 50 Ver
+ eine\, Organisationen und Schulen gestalten gemeinsam ein Programm für al
+ le Generationen.\n\nEintritt: vermutlich kostenfrei (Quelle nennt: frei)\n
+ Beleg: "Demokratie lebt vom Mitmachen\, vom Zuhören und vom Austausch. Si
+ e zeigt sich nicht nur bei Wahlen\, sondern überall dort\, wo Menschen Ve
+ rantwortung übernehmen und ihr Zusammenleben aktiv gestalten."\nSicherhei
+ t: mittel\n\nVeranstalter: Treffpunkt Ehrenamt der Stadt Freising (u.a. mi
+ t 3klang gGmbH)\nKategorie: Fest\nZielgruppe: Alle\nDrinnen/Draussen: beid
+ es\n\nQuelle: https://www.3klang-musik.de/freising.html
 URL:https://www.3klang-musik.de/freising.html
 CATEGORIES:Fest
 END:VEVENT
 BEGIN:VEVENT
 UID:65bb11a7f5eb8520@gratis-freising
-DTSTAMP:20260829T101345Z
+DTSTAMP:20260830T092300Z
 DTSTART;TZID=Europe/Berlin:20261017T150000
 DTEND;TZID=Europe/Berlin:20261017T170000
 SUMMARY:Radl-Repair Café (vermutlich frei)
 LOCATION:Offene Werkstatt Freising — Schwalbenweg 1\, 85356\, Freising
-DESCRIPTION:Ein offenes Repair-Café für Fahrräder\, bei dem Teilnehmende
-  gemeinsam mit ehrenamtlichen Helfern kleine Reparaturen oder Wartungsarbe
- iten durchführen können. Es stehen Werkzeuge und Ersatzteile zur Verfüg
- ung. Der Eintritt ist frei\, Spenden sind willkommen.\n\nEintritt: vermutl
- ich kostenfrei (Quelle nennt: spende)\nSicherheit: mittel\n\nKategorie: So
- nstiges\nZielgruppe: Alle\n\nQuelle: https://einfach-selber-machen.org/eve
- nt/radl-repair-cafe/
+DESCRIPTION:Ein offenes Repair-Café für Fahrräder\, bei dem gemeinsam kl
+ eine Reparaturen und Pflegearbeiten durchgeführt werden. Teilnehmende kö
+ nnen ihr Fahrrad mitbringen und unter Anleitung selbst reparieren oder Hil
+ fe erhalten. Eine vorherige Anmeldung per Mail oder Social Media wird empf
+ ohlen.\n\nEintritt: vermutlich kostenfrei (Quelle nennt: frei)\nSicherheit
+ : mittel\n\nKategorie: Sonstiges\nZielgruppe: Alle\n\nQuelle: https://einf
+ ach-selber-machen.org/event/radl-repair-cafe/
 URL:https://einfach-selber-machen.org/event/radl-repair-cafe/
+CATEGORIES:Sonstiges
+END:VEVENT
+BEGIN:VEVENT
+UID:4967f298af8ce4e8@gratis-freising
+DTSTAMP:20260830T092300Z
+DTSTART;VALUE=DATE:20261103
+DTEND;VALUE=DATE:20261104
+SUMMARY:[AUSGEBUCHT] Werkstatt für Jugendliche *ausgebucht* (vermutlich fr
+ ei)
+LOCATION:Offene Werkstatt Freising — Schwalbenweg 1\, 85356\, Freising
+DESCRIPTION:Ein Workshop für Jugendliche\, bei dem gemeinsam eine Lampe ge
+ baut wird. Ziel ist es\, handwerkliche Fähigkeiten in den Bereichen Elekt
+ rik\, Holzhandwerk und Kreativität zu fördern. Die Teilnehmenden lernen 
+ Werkstattabläufe und den Umgang mit Werkzeugen kennen.\n\nEintritt: vermu
+ tlich kostenfrei (Quelle nennt: unklar)\nSicherheit: niedrig\n\nKategorie:
+  Familie\nZielgruppe: Jugendliche\n\nQuelle: https://einfach-selber-machen
+ .org/event/werkstatt-fuer-jugendliche-ausgebucht/
+URL:https://einfach-selber-machen.org/event/werkstatt-fuer-jugendliche-ausg
+ ebucht/
+CATEGORIES:Familie
+END:VEVENT
+BEGIN:VEVENT
+UID:afbec4c70d42c16c@gratis-freising
+DTSTAMP:20260830T092300Z
+DTSTART;TZID=Europe/Berlin:20261121T090000
+DTEND;TZID=Europe/Berlin:20261121T160000
+SUMMARY:Holzwerken für Einsteiger*innen (vermutlich frei)
+LOCATION:Offene Werkstatt Freising — Schwalbenweg 1\, 85356\, Freising
+DESCRIPTION:Ein offener Abend für alle\, die Unterstützung bei Holzprojek
+ ten benötigen – vom ersten bis zum fortgeschrittenen Projekt. Betreuend
+ e Personen helfen bei der Umsetzung\, erklären Techniken und Werkzeuge un
+ d stehen für Fragen zur Verfügung. Nur für Mitglieder und ehemalige Tei
+ lnehmerinnen der Schreinern-für-Frauen-Kurse.\n\nEintritt: vermutlich kos
+ tenfrei (Quelle nennt: unklar)\nSicherheit: niedrig\n\nKategorie: Sonstige
+ s\nZielgruppe: Erwachsene\n\nQuelle: https://einfach-selber-machen.org/eve
+ nt/holzwerken-fuer-einsteiger/
+URL:https://einfach-selber-machen.org/event/holzwerken-fuer-einsteiger/
+CATEGORIES:Sonstiges
+END:VEVENT
+BEGIN:VEVENT
+UID:57463acfa527e414@gratis-freising
+DTSTAMP:20260830T092300Z
+DTSTART;TZID=Europe/Berlin:20261205T090000
+DTEND;TZID=Europe/Berlin:20261205T160000
+SUMMARY:Holzwerken für Einsteiger*innen (vermutlich frei)
+LOCATION:Offene Werkstatt Freising — Schwalbenweg 1\, 85356\, Freising
+DESCRIPTION:Ein offener Abend für alle\, die Unterstützung bei Holzprojek
+ ten benötigen – vom ersten bis zum fortgeschrittenen Projekt. Betreuend
+ e Personen helfen bei der Umsetzung\, erklären Techniken und Werkzeuge un
+ d stehen für Fragen zur Verfügung. Nur für Mitglieder und ehemalige Tei
+ lnehmerinnen der Schreinern-für-Frauen-Kurse.\n\nEintritt: vermutlich kos
+ tenfrei (Quelle nennt: unklar)\nSicherheit: niedrig\n\nKategorie: Sonstige
+ s\nZielgruppe: Erwachsene\n\nQuelle: https://einfach-selber-machen.org/eve
+ nt/holzwerken-fuer-einsteigerinnen/
+URL:https://einfach-selber-machen.org/event/holzwerken-fuer-einsteigerinnen
+ /
 CATEGORIES:Sonstiges
 END:VEVENT
 END:VCALENDAR
