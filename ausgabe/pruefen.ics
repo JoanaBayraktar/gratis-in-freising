@@ -24,7 +24,7 @@ END:STANDARD
 END:VTIMEZONE
 BEGIN:VEVENT
 UID:9dbb539d76866b10@gratis-freising
-DTSTAMP:20260830T092300Z
+DTSTAMP:20260831T095559Z
 DTSTART;VALUE=DATE:20260518
 DTEND;VALUE=DATE:20261019
 SUMMARY:TUM tanzt! (vermutlich frei)
@@ -44,7 +44,7 @@ CATEGORIES:Kunst
 END:VEVENT
 BEGIN:VEVENT
 UID:d2b3c21197115322@gratis-freising
-DTSTAMP:20260830T092300Z
+DTSTAMP:20260831T095559Z
 DTSTART;VALUE=DATE:20260822
 DTEND;VALUE=DATE:20260917
 SUMMARY:Sauna-Sommerpause (vermutlich frei)
@@ -63,7 +63,7 @@ CATEGORIES:Sonstiges
 END:VEVENT
 BEGIN:VEVENT
 UID:098b51d483430017@gratis-freising
-DTSTAMP:20260830T092300Z
+DTSTAMP:20260831T095559Z
 DTSTART;VALUE=DATE:20260825
 DTEND;VALUE=DATE:20260928
 SUMMARY:Archetypen männlicher Grenzüberschreitung (vermutlich frei)
@@ -79,95 +79,143 @@ URL:https://veranstaltungen.merkur.de/freising/archetypen-maennlicher-grenz
 CATEGORIES:Kunst
 END:VEVENT
 BEGIN:VEVENT
-UID:4dda802a32da3757@gratis-freising
-DTSTAMP:20260830T092300Z
-DTSTART;TZID=Europe/Berlin:20260830T100000
-DTEND;TZID=Europe/Berlin:20260830T100000
-SUMMARY:Naturfreundehaus: Weißwurstfrühschoppen (vermutlich frei)
-LOCATION:Naturfreundehaus Hangenham
-DESCRIPTION:Ein geselliger Frühschoppen mit Weißwurst und Getränken im N
- aturfreundehaus Hangenham. Offenes Angebot für alle Besucher.\n\nEintritt
- : vermutlich kostenfrei (Quelle nennt: unklar)\nSicherheit: niedrig\n\nKat
- egorie: Geselligkeit/Spiele/Treffen\nZielgruppe: Alle\nDrinnen/Draussen: b
- eides\n\nQuelle: https://veranstaltungen.merkur.de/freising/naturfreundeha
- us-ed7f64d68fb8d4e7bd57f03618bd6478e.html
-URL:https://veranstaltungen.merkur.de/freising/naturfreundehaus-ed7f64d68fb
- 8d4e7bd57f03618bd6478e.html
-CATEGORIES:Geselligkeit/Spiele/Treffen
+UID:230977a7b828abe9@gratis-freising
+DTSTAMP:20260831T095559Z
+DTSTART;VALUE=DATE:20260831
+DTEND;VALUE=DATE:20260912
+SUMMARY:Busumleitungen (vermutlich frei)
+LOCATION:85356 Freising
+DESCRIPTION:Wegen Bauarbeiten in der Falkenstraße und Moosstraße werden d
+ ie Buslinien 643\, 653 und 654 umgeleitet. Betroffene Haltestellen entfall
+ en ersatzlos oder werden durch Ersatzhaltestellen bedient.\n\nEintritt: ve
+ rmutlich kostenfrei (Quelle nennt: unklar)\nSicherheit: niedrig\n\nKategor
+ ie: Sonstiges\nZielgruppe: Alle\n\nQuelle: https://veranstaltungen.merkur.
+ de/freising/busumleitungen-e0a84c8ffb66e751f99eec2079161e181.html
+URL:https://veranstaltungen.merkur.de/freising/busumleitungen-e0a84c8ffb66e
+ 751f99eec2079161e181.html
+CATEGORIES:Sonstiges
 END:VEVENT
 BEGIN:VEVENT
-UID:9c0556c0f005381c@gratis-freising
-DTSTAMP:20260830T092300Z
-DTSTART;TZID=Europe/Berlin:20260830T120000
-DTEND;TZID=Europe/Berlin:20260830T120000
-SUMMARY:Jagdgenossenschaft Freising Nord und Süd (vermutlich frei)
-LOCATION:Anton Frankl — Pförrerausweg 1\, Lerchenfeld
-DESCRIPTION:Ein Sommerfest für Jagdgenossen und deren Frauen mit gemütlic
- hem Beisammensein. Gäste werden gebeten\, eigenes Geschirr und Gläser mi
- tzubringen.\n\nEintritt: vermutlich kostenfrei (Quelle nennt: unklar)\nSic
- herheit: niedrig\n\nKategorie: Fest\nZielgruppe: Erwachsene\nDrinnen/Draus
- sen: draussen\n\nQuelle: https://veranstaltungen.merkur.de/freising/jagdge
- nossenschaft-freising-nord-und-sued-e7b078f63ab9784b800a24df64bf7a0f1.html
-URL:https://veranstaltungen.merkur.de/freising/jagdgenossenschaft-freising-
- nord-und-sued-e7b078f63ab9784b800a24df64bf7a0f1.html
-CATEGORIES:Fest
+UID:518af2c284ed7269@gratis-freising
+DTSTAMP:20260831T095559Z
+DTSTART;VALUE=DATE:20260831
+DTEND;VALUE=DATE:20260912
+SUMMARY:Vollsperrung der Falkenstraße (vermutlich frei)
+LOCATION:85356 Freising
+DESCRIPTION:Die Falkenstraße ist wegen Reparaturarbeiten bis zum 11. Septe
+ mber voll gesperrt. Es handelt sich um eine reine Verkehrseinschränkung o
+ hne öffentliche Veranstaltung.\n\nEintritt: vermutlich kostenfrei (Quelle
+  nennt: unklar)\nSicherheit: niedrig\n\nKategorie: Sonstiges\nZielgruppe: 
+ Alle\n\nQuelle: https://veranstaltungen.merkur.de/freising/vollsperrung-de
+ r-falkenstrasse-ef950279a28b8839418b1eca47f842b9a.html
+URL:https://veranstaltungen.merkur.de/freising/vollsperrung-der-falkenstras
+ se-ef950279a28b8839418b1eca47f842b9a.html
+CATEGORIES:Sonstiges
 END:VEVENT
 BEGIN:VEVENT
-UID:51edb88ce4cf0c96@gratis-freising
-DTSTAMP:20260830T092300Z
-DTSTART;TZID=Europe/Berlin:20260830T133000
-DTEND;TZID=Europe/Berlin:20260830T163000
-SUMMARY:DIMU (vermutlich frei)
-LOCATION:Diözesanmuseum Freising — Domberg 21
-DESCRIPTION:Eine kreative Werkstatt im Diözesanmuseum für Kinder und Fami
- lien ohne Anmeldung. Hier können Besucher selbst aktiv werden und kreativ
-  tätig sein.\n\nEintritt: vermutlich kostenfrei (Quelle nennt: unklar)\nS
- icherheit: niedrig\n\nVeranstalter: Diözesanmuseum Freising\nKategorie: K
- inderprogramm\nZielgruppe: Kinder\nDrinnen/Draussen: drinnen\n\nQuelle: ht
- tps://veranstaltungen.merkur.de/freising/dimu-eda2e8f872aa106dbb4e871f4cf5
- f7bd8.html
-URL:https://veranstaltungen.merkur.de/freising/dimu-eda2e8f872aa106dbb4e871
- f4cf5f7bd8.html
-CATEGORIES:Kinderprogramm
+UID:9f70c92ead91439a@gratis-freising
+DTSTAMP:20260831T095559Z
+DTSTART;VALUE=DATE:20260831
+DTEND;VALUE=DATE:20260905
+SUMMARY:Das Hospizbüro (vermutlich frei)
+LOCATION:Hospizgruppe — Mainburger Straße 1\, 85354 Freising
+DESCRIPTION:Das Hospizbüro ist bis einschließlich 4. September geschlosse
+ n. In dringenden Fällen steht ein Bereitschaftstelefon zur Verfügung.\n\
+ nEintritt: vermutlich kostenfrei (Quelle nennt: unklar)\nSicherheit: niedr
+ ig\n\nKategorie: Sonstiges\nZielgruppe: Alle\n\nQuelle: https://veranstalt
+ ungen.merkur.de/freising/das-hospizbuero-e72ebad5c5bc83f0a6066ce744f183556
+ .html
+URL:https://veranstaltungen.merkur.de/freising/das-hospizbuero-e72ebad5c5bc
+ 83f0a6066ce744f183556.html
+CATEGORIES:Sonstiges
 END:VEVENT
 BEGIN:VEVENT
-UID:c8c722a240349e40@gratis-freising
-DTSTAMP:20260830T092300Z
-DTSTART;VALUE=DATE:20260901
-DTEND;VALUE=DATE:20261001
-SUMMARY:2 für 1 (vermutlich frei)
-LOCATION:Diözesanmuseum Freising — Domberg 21
-DESCRIPTION:Eine Sonderaktion im Diözesanmuseum: Bei Besuch zu zweit zahlt
-  nur eine Person den Eintritt. Auch Einzelbesucher können von der Aktion 
- profitieren\, indem sie sich an der Kasse mit einem anderen Einzelbesucher
-  zusammenschließen.\n\nEintritt: vermutlich kostenfrei (Quelle nennt: unk
- lar)\nSicherheit: mittel\n\nKategorie: Führung/Besichtigung\nZielgruppe: 
- Alle\nDrinnen/Draussen: drinnen\n\nQuelle: https://veranstaltungen.merkur.
- de/freising/2-fuer-1-e545930429b5528e089647fd3c7aa6de8.html
-URL:https://veranstaltungen.merkur.de/freising/2-fuer-1-e545930429b5528e089
- 647fd3c7aa6de8.html
-CATEGORIES:Führung/Besichtigung
+UID:cdc5fc2a889194ab@gratis-freising
+DTSTAMP:20260831T095559Z
+DTSTART;VALUE=DATE:20260831
+DTEND;VALUE=DATE:20260903
+SUMMARY:Die Führerscheinstelle (vermutlich frei)
+LOCATION:Landratsamt — Landshuter Straße 31\, 85356 Freising
+DESCRIPTION:Die Führerscheinstelle ist bis Mittwoch geschlossen. Persönli
+ che Vorsprachen sind nicht möglich. Für Notfälle wird ein Notdienst ein
+ gerichtet.\n\nEintritt: vermutlich kostenfrei (Quelle nennt: unklar)\nSich
+ erheit: niedrig\n\nKategorie: Sonstiges\nZielgruppe: Alle\n\nQuelle: https
+ ://veranstaltungen.merkur.de/freising/die-fuehrerscheinstelle-e86a07cfc451
+ 68712584cb32d9d901a7c.html
+URL:https://veranstaltungen.merkur.de/freising/die-fuehrerscheinstelle-e86a
+ 07cfc45168712584cb32d9d901a7c.html
+CATEGORIES:Sonstiges
+END:VEVENT
+BEGIN:VEVENT
+UID:2671edc6a3b339b2@gratis-freising
+DTSTAMP:20260831T095559Z
+DTSTART;TZID=Europe/Berlin:20260831T100000
+DTEND;TZID=Europe/Berlin:20260831T120000
+SUMMARY:Diakonisches Werk (vermutlich frei)
+LOCATION:Diakonisches Werk — 85354 Freising
+DESCRIPTION:Soziale Beratung bei Lebensproblemen. Die Beratung findet von 1
+ 0 bis 12 Uhr oder nach Vereinbarung statt.\n\nEintritt: vermutlich kostenf
+ rei (Quelle nennt: unklar)\nSicherheit: niedrig\n\nKategorie: Rat und Hilf
+ e\nZielgruppe: Alle\nDrinnen/Draussen: drinnen\n\nQuelle: https://veransta
+ ltungen.merkur.de/freising/diakonisches-werk-e3f079053ad9182cb1302f63c6c34
+ 8675.html
+URL:https://veranstaltungen.merkur.de/freising/diakonisches-werk-e3f079053a
+ d9182cb1302f63c6c348675.html
+CATEGORIES:Rat und Hilfe
+END:VEVENT
+BEGIN:VEVENT
+UID:388a5c59f9476487@gratis-freising
+DTSTAMP:20260831T095559Z
+DTSTART;TZID=Europe/Berlin:20260831T190000
+DTEND;TZID=Europe/Berlin:20260831T190000
+SUMMARY:Evang.-Luth. Gemeinde: Friedensgebet (vermutlich frei)
+LOCATION:Christi-Himmelfahrts-Kirche — Saarstraße 2\, 85354 Freising
+DESCRIPTION:Ein Friedensgebet für alle Religionen und Nationalitäten\, da
+ s jeden Montag stattfindet.\n\nEintritt: vermutlich kostenfrei (Quelle nen
+ nt: unklar)\nSicherheit: niedrig\n\nKategorie: Religion\nZielgruppe: Alle\
+ nDrinnen/Draussen: drinnen\n\nQuelle: https://veranstaltungen.merkur.de/fr
+ eising/evang-luth-gemeinde-e97d0b9051abf245be272f54c6ffa2572.html
+URL:https://veranstaltungen.merkur.de/freising/evang-luth-gemeinde-e97d0b90
+ 51abf245be272f54c6ffa2572.html
+CATEGORIES:Religion
 END:VEVENT
 BEGIN:VEVENT
 UID:907f397d34576549@gratis-freising
-DTSTAMP:20260830T092300Z
+DTSTAMP:20260831T095559Z
 DTSTART;TZID=Europe/Berlin:20260901T193000
 DTEND;TZID=Europe/Berlin:20260901T193000
 SUMMARY:Gospelchor (vermutlich frei)
-LOCATION:Evang. Gemeindehaus Christi Himmelfahrt — Martin-Luther-Str. 10
-DESCRIPTION:Ein Chorabend mit Gospels und spiritueller Musik. Der Gospelcho
- r lädt zum Mitsingen und Zuhören ein. Neue Sängerinnen und Sänger sind
-  willkommen.\n\nEintritt: vermutlich kostenfrei (Quelle nennt: unklar)\nSi
- cherheit: niedrig\n\nKategorie: Musik\nZielgruppe: Alle\nDrinnen/Draussen:
-  drinnen\n\nQuelle: https://veranstaltungen.merkur.de/freising/gospelchor-
- ee33665b70ae8b7d61dd52ee22a56a4d8.html
+LOCATION:Evang. Gemeindehaus Christi Himmelfahrt — Martin-Luther-Str. 10\
+ , 85356 Freising
+DESCRIPTION:Ein Gospelchor trifft sich wöchentlich zur Probe. Interessiert
+ e sind willkommen.\n\nEintritt: vermutlich kostenfrei (Quelle nennt: unkla
+ r)\nSicherheit: niedrig\n\nKategorie: Musik\nZielgruppe: Alle\nDrinnen/Dra
+ ussen: drinnen\n\nQuelle: https://veranstaltungen.merkur.de/freising/gospe
+ lchor-ee33665b70ae8b7d61dd52ee22a56a4d8.html
 URL:https://veranstaltungen.merkur.de/freising/gospelchor-ee33665b70ae8b7d6
  1dd52ee22a56a4d8.html
 CATEGORIES:Musik
 END:VEVENT
 BEGIN:VEVENT
+UID:7cf48310ee3a7522@gratis-freising
+DTSTAMP:20260831T095559Z
+DTSTART;TZID=Europe/Berlin:20260902T193000
+DTEND;TZID=Europe/Berlin:20260902T193000
+SUMMARY:LBV-Vortrag (vermutlich frei)
+LOCATION:Haus der Vereine — Major-Braun-Weg 12\, 85356 Freising
+DESCRIPTION:Ein Vortrag von Clemens Krafft über die Zugbewegungen und Entw
+ icklungen der oberbayerischen Weißstorchpopulation.\n\nEintritt: vermutli
+ ch kostenfrei (Quelle nennt: unklar)\nSicherheit: niedrig\n\nKategorie: Vo
+ rtrag\nZielgruppe: Alle\nDrinnen/Draussen: drinnen\n\nQuelle: https://vera
+ nstaltungen.merkur.de/freising/lbv-vortrag-e0666cb605e1479c93e966028f1a7c7
+ fb.html
+URL:https://veranstaltungen.merkur.de/freising/lbv-vortrag-e0666cb605e1479c
+ 93e966028f1a7c7fb.html
+CATEGORIES:Vortrag
+END:VEVENT
+BEGIN:VEVENT
 UID:7658e605275a5d7e@gratis-freising
-DTSTAMP:20260830T092300Z
+DTSTAMP:20260831T095559Z
 DTSTART;TZID=Europe/Berlin:20261002T180000
 DTEND;TZID=Europe/Berlin:20261002T235900
 SUMMARY:Die Demokratie feiern – gemeinsam in Freising (vermutlich frei)
@@ -184,27 +232,25 @@ CATEGORIES:Fest
 END:VEVENT
 BEGIN:VEVENT
 UID:ebb437d687706e2c@gratis-freising
-DTSTAMP:20260830T092300Z
+DTSTAMP:20260831T095559Z
 DTSTART;TZID=Europe/Berlin:20261002T180000
 DTEND;TZID=Europe/Berlin:20261002T235959
 SUMMARY:Lange Nacht der Demokratie in Freising (vermutlich frei)
 LOCATION:
 DESCRIPTION:Ein Abend voller Demokratie zum Mitmachen: Gespräche\, Kunst\,
-  Musik und Theater laden zum Austausch und zur Begegnung ein. Über 50 Ver
- eine\, Organisationen und Schulen gestalten gemeinsam ein Programm für al
- le Generationen.\n\nEintritt: vermutlich kostenfrei (Quelle nennt: frei)\n
- Beleg: "Demokratie lebt vom Mitmachen\, vom Zuhören und vom Austausch. Si
- e zeigt sich nicht nur bei Wahlen\, sondern überall dort\, wo Menschen Ve
- rantwortung übernehmen und ihr Zusammenleben aktiv gestalten."\nSicherhei
- t: mittel\n\nVeranstalter: Treffpunkt Ehrenamt der Stadt Freising (u.a. mi
- t 3klang gGmbH)\nKategorie: Fest\nZielgruppe: Alle\nDrinnen/Draussen: beid
- es\n\nQuelle: https://www.3klang-musik.de/freising.html
+  Musik und Theater zeigen\, wie Bürger:innen ihr Zusammenleben aktiv gest
+ alten können. Über 50 Vereine und Organisationen laden zu Begegnungen un
+ d Austausch ein.\n\nEintritt: vermutlich kostenfrei (Quelle nennt: frei)\n
+ Beleg: "Demokratie lebt vom Mitmachen\, vom Zuhören und vom Austausch."\n
+ Sicherheit: mittel\n\nVeranstalter: Treffpunkt Ehrenamt der Stadt Freising
+  (u.a. mit 3klang gGmbH)\nKategorie: Fest\nZielgruppe: Alle\nDrinnen/Draus
+ sen: beides\n\nQuelle: https://www.3klang-musik.de/freising.html
 URL:https://www.3klang-musik.de/freising.html
 CATEGORIES:Fest
 END:VEVENT
 BEGIN:VEVENT
 UID:65bb11a7f5eb8520@gratis-freising
-DTSTAMP:20260830T092300Z
+DTSTAMP:20260831T095559Z
 DTSTART;TZID=Europe/Berlin:20261017T150000
 DTEND;TZID=Europe/Berlin:20261017T170000
 SUMMARY:Radl-Repair Café (vermutlich frei)
@@ -221,7 +267,7 @@ CATEGORIES:Sonstiges
 END:VEVENT
 BEGIN:VEVENT
 UID:4967f298af8ce4e8@gratis-freising
-DTSTAMP:20260830T092300Z
+DTSTAMP:20260831T095559Z
 DTSTART;VALUE=DATE:20261103
 DTEND;VALUE=DATE:20261104
 SUMMARY:[AUSGEBUCHT] Werkstatt für Jugendliche *ausgebucht* (vermutlich fr
@@ -240,7 +286,7 @@ CATEGORIES:Familie
 END:VEVENT
 BEGIN:VEVENT
 UID:afbec4c70d42c16c@gratis-freising
-DTSTAMP:20260830T092300Z
+DTSTAMP:20260831T095559Z
 DTSTART;TZID=Europe/Berlin:20261121T090000
 DTEND;TZID=Europe/Berlin:20261121T160000
 SUMMARY:Holzwerken für Einsteiger*innen (vermutlich frei)
@@ -258,7 +304,7 @@ CATEGORIES:Sonstiges
 END:VEVENT
 BEGIN:VEVENT
 UID:57463acfa527e414@gratis-freising
-DTSTAMP:20260830T092300Z
+DTSTAMP:20260831T095559Z
 DTSTART;TZID=Europe/Berlin:20261205T090000
 DTEND;TZID=Europe/Berlin:20261205T160000
 SUMMARY:Holzwerken für Einsteiger*innen (vermutlich frei)
