@@ -1,4 +1,4 @@
-# Nachprüfung 31.08.2026 09:55
+# Nachprüfung 01.09.2026 08:46
 
 120 kommende Veranstaltungen geprüft.
 
@@ -7,53 +7,67 @@
 Nur gemeldet, nichts davon wurde zusammengelegt. Das Modell hält wiederkehrende Reihen für Dubletten, auch wenn die Termine verschieden sind — prüfen Sie selbst, bevor Sie etwas ändern.
 
 - 'curiocity Pop-up Science Center' + 'curiocity Pop-up Science Center'
-  Dieselben Veranstaltungen mit identischem Ort, Eintritt und Quelle, aber unterschiedlichen Zeiträumen. Es handelt sich um zwei separate Durchführungen des 'curiocity Pop-up Science Center'.
-- '2 für 1' + '2 für 1'
-  Dieselben Veranstaltungen mit identischem Ort ('Diözesanmuseum' bzw. 'Diözesanmuseum Freising'), Eintritt und Quelle, aber unterschiedlichen Zeiträumen. Es handelt sich um zwei separate Durchführungen des '2 für 1'-Angebots.
+  Dieselben Veranstaltungen 'curiocity Pop-up Science Center' mit identischem Eintrittspreis und Ort, aber leicht unterschiedlichen Zeiträumen. Da es sich um eine laufende Ausstellung handelt, sind die leicht abweichenden Zeiträume als separate Veranstaltungen zu werten.
+- 'Öffentlicher Altstadtrundgang 2026' + 'Altstadtrundgang'
+  Zwei Einträge für 'Altstadtrundgang'/'Öffentlicher Altstadtrundgang' mit identischem Datum, Ort und Eintrittspreis. Vermutlich handelt es sich um dieselbe Veranstaltung, die von zwei verschiedenen Quellen unterschiedlich benannt wurde.
+- 'Lange Nacht der Demokratie in Freising' + 'Demokratie und Allgemeine Wehrpflicht'
+  Zwei Einträge für 'Lange Nacht der Demokratie' mit identischem Datum und Eintrittspreis, aber unterschiedlichen Quellen. Vermutlich handelt es sich um dieselbe Veranstaltung.
 - 'FLUID – eine Videoprojektion' + 'FLUID – Videoprojektion zur Demokratie'
-  Dieselben Veranstaltungen mit identischem Ort ('Stauberhaus'), Eintritt und Quelle, aber unterschiedlichen Titeln ('FLUID – eine Videoprojektion' vs. 'FLUID – Videoprojektion zur Demokratie'). Es handelt sich um dieselbe Veranstaltung.
+  Zwei Einträge für 'FLUID – Videoprojektion' mit identischem Datum, Ort und Eintrittspreis, aber leicht unterschiedlichen Titeln. Vermutlich handelt es sich um dieselbe Veranstaltung.
 - 'Wem kann ich mein Geld anvertrauen? Anlageberatung von KI, Robo-Advisors und Finfluencern im Check - ONLINE' + 'Wem kann ich mein Geld anvertrauen? Anlageberatung von KI, Robo-Advisors und Finfluencern - ONLINE'
-  Dieselben Veranstaltungen mit identischem Ort ('Live Online'), Eintritt und Quelle, aber unterschiedlichen Titeln ('Wem kann ich mein Geld anvertrauen? Anlageberatung von KI, Robo-Advisors und Finfluencern im Check - ONLINE' vs. 'Wem kann ich mein Geld anvertrauen? Anlageberatung von KI, Robo-Advisors und Finfluencern - ONLINE'). Es handelt sich um dieselbe Veranstaltung.
+  Zwei Einträge für denselben Online-Vortrag 'Wem kann ich mein Geld anvertrauen?' mit identischem Datum und Eintrittspreis, aber unterschiedlichen Quellen. Vermutlich handelt es sich um dieselbe Veranstaltung.
 
 ## Widersprüche beim Eintritt
 
 Diese Fälle werden **nicht** automatisch geändert — der Beleg auf der Seite entscheidet, nicht die Vermutung des Modells.
 
 - **Öffentlicher Altstadtrundgang 2026** (2026-09-03)
-  eingestuft als `kostenpflichtig`, vermutet `kostenpflichtig` — Ein öffentlicher Altstadtrundgang ist üblicherweise eine kostenlose Stadtführung, die von der Stadt oder Vereinen angeboten wird. Die Angabe einer Gebühr von 10 € (ermäßigt 7 €) widerspricht der üblichen Praxis.
+  eingestuft als `kostenpflichtig`, vermutet `kostenpflichtig` — Ein Stadtrundgang ist üblicherweise eine kostenpflichtige Führung, daher passt die Einstufung.
   https://veranstaltungen.freising.de/freising/oeffentlicher-altstadtrundgang-2026-e85dd0014c03e1a22ff1f14e390e38cea.html
-- **Öffentlicher Stadtrundgang - Von der Altstadt nach Weihenstephan** (2026-09-05)
-  eingestuft als `kostenpflichtig`, vermutet `kostenpflichtig` — Ein öffentlicher Stadtrundgang ist üblicherweise eine kostenlose Stadtführung, die von der Stadt oder Vereinen angeboten wird. Die Angabe einer Gebühr von 10 € (ermäßigt 7 €) widerspricht der üblichen Praxis.
-  https://veranstaltungen.freising.de/freising/oeffentlicher-stadtrundgang-von-der-altstadt-nach-weihenstephan-e3ad24d4246b8e5291d12d6276e8aba0f.html
-- **Öffentlicher Stadtrundgang - Auf den Spuren alter Freisinger Braustätten** (2026-09-10)
-  eingestuft als `kostenpflichtig`, vermutet `kostenpflichtig` — Ein öffentlicher Stadtrundgang ist üblicherweise eine kostenlose Stadtführung, die von der Stadt oder Vereinen angeboten wird. Die Angabe einer Gebühr von 10 € (ermäßigt 7 €) widerspricht der üblichen Praxis.
-  https://veranstaltungen.freising.de/freising/oeffentlicher-stadtrundgang-auf-den-spuren-alter-freisinger-braustaetten-e71314029ea00f8f1b31f982974f01143.html
-- **Kulinarische Führung** (2026-09-11)
-  eingestuft als `kostenpflichtig`, vermutet `kostenpflichtig` — Eine 'Kulinarische Führung' durch die Altstadt ist üblicherweise eine kostenlose oder sehr günstige Stadtführung mit kulinarischen Elementen. Die Angabe von 40 € pro Person ist ungewöhnlich hoch und widerspricht der üblichen Praxis.
-  https://veranstaltungen.freising.de/freising/kulinarische-fuehrung-e3a5f390033831f6051bf109f812686e6.html
-- **City Tour in English** (2026-09-12)
-  eingestuft als `kostenpflichtig`, vermutet `kostenpflichtig` — Eine 'City Tour in English' ist üblicherweise eine kostenlose oder sehr günstige Stadtführung für Touristen. Die Angabe von 10 € pro Person (ermäßigt 7 €) ist ungewöhnlich hoch und widerspricht der üblichen Praxis.
-  https://veranstaltungen.freising.de/freising/city-tour-in-english-e10ee8beb195be0a4288936c6145b7e7d.html
+- **Altstadtrundgang** (2026-09-03)
+  eingestuft als `kostenpflichtig`, vermutet `kostenpflichtig` — Ein Stadtrundgang ist üblicherweise eine kostenpflichtige Führung, daher passt die Einstufung.
+  https://veranstaltungen.merkur.de/freising/altstadtrundgang-e9990e7116ff83561d0b1586c1a9499c3.html
+- **Volksfest Freising 2026** (2026-09-04)
+  eingestuft als `frei`, vermutet `frei` — Ein Volksfest ist üblicherweise ein kostenfreies Ereignis, daher passt die Einstufung.
+  https://veranstaltungen.freising.de/freising/volksfest-freising-2026-ee28d5ce8f923eb3763e27fa85135531c.html
+- **Bücherflohmarkt der Stadtbibliothek** (2026-09-05)
+  eingestuft als `spende`, vermutet `spende` — Ein Bücherflohmarkt ist üblicherweise eine Spendenaktion, daher passt die Einstufung.
+  https://veranstaltungen.freising.de/freising/buecherflohmarkt-der-stadtbibliothek-e0b6607a5d3a60fffb870bd10536bf2da.html
 - **Repair Café** (2026-09-12)
-  eingestuft als `frei`, vermutet `frei` — Ein 'Repair Café' ist üblicherweise eine kostenlose Veranstaltung, bei der Teilnehmer ihre defekten Gegenstände reparieren lassen können. Die Angabe 'frei (hoch)' ist korrekt, aber die Einstufung als 'unklar' in der Quelle ist widersprüchlich.
+  eingestuft als `frei`, vermutet `frei` — Ein Repair Café ist üblicherweise ein kostenfreies Angebot, daher passt die Einstufung.
   https://www.vhs-freising.org/p/fachbereiche/vhs-kostenfrei-633-CAT-KAT332
-- **Karin Schreiber und Klaus Weighart: „Vom Alter und von der Schönheit“** (2026-09-18)
-  eingestuft als `kostenpflichtig`, vermutet `frei` — Eine Lesung oder Vortrag in der Stadtbibliothek ist üblicherweise eine kostenlose Veranstaltung. Die Angabe von 10 € Eintritt ist ungewöhnlich und widerspricht der üblichen Praxis.
-  https://veranstaltungen.freising.de/freising/karin-schreiber-und-klaus-weighart-vom-alter-und-von-die-schoenheit-e191e17a5fb6210b468fdb24ddada83b7.html
-- **NEU: Nachtwächter Kilian und der Geschichtskundige** (2026-09-18)
-  eingestuft als `kostenpflichtig`, vermutet `kostenpflichtig` — Ein 'Nachtwächter'-Angebot ist üblicherweise eine kostenlose oder sehr günstige Stadtführung. Die Angabe von 19 € pro Person ist ungewöhnlich hoch und widerspricht der üblichen Praxis.
-  https://veranstaltungen.freising.de/freising/neu-nachtwaechter-kilian-und-der-geschichtskundige-e4e91a39bfa0f29f95a62f1954956b771.html
-- **Pflanzenschutz im Wandel** (2026-10-07)
-  eingestuft als `kostenpflichtig`, vermutet `frei` — Ein Vortrag an der TUM Freising zu 'Pflanzenschutz im Wandel' ist üblicherweise eine kostenlose Veranstaltung für Studierende und die Öffentlichkeit. Die Angabe 'kostenpflichtig (hoch)' ist widersprüchlich.
-  https://www.tum.de/aktuelles/veranstaltungen/terminuebersicht?tx_solr%5Bfilter%5D%5B0%5D=location%3AFreising
+- **Taiso im Asien-Garten** (2026-09-20)
+  eingestuft als `spende`, vermutet `spende` — Ein Taiso-Kurs im Rahmen einer Spendenaktion ist üblich, daher passt die Einstufung.
+  https://veranstaltungen.freising.de/freising/taiso-im-asien-garten-e2f5c4887c93e8c8634d2f141d79b93ef.html
+- **Abtanzparty zu Rock und Pop querbeet** (2026-10-03)
+  eingestuft als `spende`, vermutet `spende` — Eine Abtanzparty mit Spendenaufruf ist üblich, daher passt die Einstufung.
+  https://www.furtner-freising.de/veranstaltung/abtanzparty-zu-rock-und-pop-querbeet-2/
+- **Forró – Tanzabend** (2026-10-07)
+  eingestuft als `frei`, vermutet `frei` — Ein Tanzabend mit Spendenaufruf ist üblich, aber der Eintritt selbst ist frei, daher passt die Einstufung.
+  https://www.furtner-freising.de/veranstaltung/forro-tazabend/
 - **Feierabendbühne – Comedy, Poetry slam, Musik** (2026-10-08)
-  eingestuft als `kostenpflichtig`, vermutet `frei` — Eine 'Feierabendbühne' mit Comedy, Poetry Slam und Musik ist üblicherweise eine kostenlose oder sehr günstige Veranstaltung in einer Kneipe. Die Angabe von 5 € Eintritt ist ungewöhnlich und widerspricht der üblichen Praxis.
+  eingestuft als `kostenpflichtig`, vermutet `kostenpflichtig` — Eine Comedy- und Musikveranstaltung in einer Brauerei ist üblicherweise kostenpflichtig, daher passt die Einstufung.
   https://www.furtner-freising.de/veranstaltung/feierabendbuehne-comedy-poetry-slam-musik/
-- **Feierabendbühne – Comedy, Poetry slam, Musik** (2026-11-12)
-  eingestuft als `kostenpflichtig`, vermutet `frei` — Eine 'Feierabendbühne' mit Comedy, Poetry Slam und Musik ist üblicherweise eine kostenlose oder sehr günstige Veranstaltung in einer Kneipe. Die Angabe von 5 € Eintritt ist ungewöhnlich und widerspricht der üblichen Praxis.
-  https://www.furtner-freising.de/veranstaltung/feierabendbuehne-comedy-poetry-slam-musik/
+- **Konzert: Snowface Norado** (2026-10-09)
+  eingestuft als `frei`, vermutet `frei` — Ein Konzert in einer Brauerei ist üblicherweise kostenpflichtig, aber hier wird kein Eintrittspreis genannt, daher wird 'frei' vermutet.
+  https://www.furtner-freising.de/veranstaltung/konzert-snowface-norado/
+- **Konzert: Legendary Food Packers (Rock-Coverband)** (2026-10-16)
+  eingestuft als `frei`, vermutet `frei` — Ein Konzert in einer Brauerei ist üblicherweise kostenpflichtig, aber hier wird kein Eintrittspreis genannt, daher wird 'frei' vermutet.
+  https://www.furtner-freising.de/veranstaltung/konzert-legendary-food-packers-rock-coverband/
+- **Boogie Woogie** (2026-10-20)
+  eingestuft als `frei`, vermutet `frei` — Ein Tanzabend mit Spendenaufruf ist üblich, aber der Eintritt selbst ist frei, daher passt die Einstufung.
+  https://www.furtner-freising.de/veranstaltung/boogie-woogie/
+- **Kneipensingen** (2026-10-23)
+  eingestuft als `frei`, vermutet `frei` — Ein Kneipensingen ist üblicherweise ein kostenfreies Angebot, daher passt die Einstufung.
+  https://www.furtner-freising.de/veranstaltung/kneipensingen/
+- **Open Latin Abend** (2026-10-28)
+  eingestuft als `frei`, vermutet `frei` — Ein Open Latin Abend mit Spendenaufruf ist üblich, aber der Eintritt selbst ist frei, daher passt die Einstufung.
+  https://www.furtner-freising.de/veranstaltung/latino-abend/
+- **Karaoke mit Stefan** (2026-10-30)
+  eingestuft als `frei`, vermutet `frei` — Ein Karaoke-Abend ist üblicherweise ein kostenfreies Angebot, daher passt die Einstufung.
+  https://www.furtner-freising.de/veranstaltung/karaoke-mit-stefan/
 
 ## Orte vereinheitlicht
 
-- 'Diözesanmuseum' → 'Diözesanmuseum Freising' (2 für 1)
+- 'St. Georg Haus, großer Saal' → 'St. Georg Haus' (Demokratie und Allgemeine Wehrpflicht)
 

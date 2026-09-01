@@ -54,26 +54,33 @@ Eintrag nicht mehr an.
 - **Beleg:** _kein Hinweis im Text gefunden_
 - **Quelle:** https://veranstaltungen.merkur.de/freising/die-fuehrerscheinstelle-e86a07cfc45168712584cb32d9d901a7c.html
 
-## Diakonisches Werk
-- **Wann:** 31.08.2026 10:00
-- **Wo:** Diakonisches Werk
-- **Angezeigt als:** vermutlich kostenfrei — Quelle nennt `unklar` (Sicherheit: niedrig)
-- **Beleg:** _kein Hinweis im Text gefunden_
-- **Quelle:** https://veranstaltungen.merkur.de/freising/diakonisches-werk-e3f079053ad9182cb1302f63c6c348675.html
-
-## Evang.-Luth. Gemeinde: Friedensgebet
-- **Wann:** 31.08.2026 19:00
-- **Wo:** Christi-Himmelfahrts-Kirche
-- **Angezeigt als:** vermutlich kostenfrei — Quelle nennt `unklar` (Sicherheit: niedrig)
-- **Beleg:** _kein Hinweis im Text gefunden_
-- **Quelle:** https://veranstaltungen.merkur.de/freising/evang-luth-gemeinde-e97d0b9051abf245be272f54c6ffa2572.html
-
 ## Gospelchor
 - **Wann:** 01.09.2026 19:30
 - **Wo:** Evang. Gemeindehaus Christi Himmelfahrt
 - **Angezeigt als:** vermutlich kostenfrei — Quelle nennt `unklar` (Sicherheit: niedrig)
 - **Beleg:** _kein Hinweis im Text gefunden_
 - **Quelle:** https://veranstaltungen.merkur.de/freising/gospelchor-ee33665b70ae8b7d61dd52ee22a56a4d8.html
+
+## Zwillings-Krabbelgruppe
+- **Wann:** 02.09.2026 09:30
+- **Wo:** Epiphanias-Zentrum
+- **Angezeigt als:** vermutlich kostenfrei — Quelle nennt `unklar` (Sicherheit: niedrig)
+- **Beleg:** _kein Hinweis im Text gefunden_
+- **Quelle:** https://veranstaltungen.merkur.de/freising/zwillings-krabbelgruppe-e082b3ea2730ea925943a9ed532bb8fcf.html
+
+## Gemeinsames Handarbeiten
+- **Wann:** 02.09.2026 14:00
+- **Wo:** Neustifter Pfarrheim
+- **Angezeigt als:** vermutlich kostenfrei — Quelle nennt `unklar` (Sicherheit: niedrig)
+- **Beleg:** _kein Hinweis im Text gefunden_
+- **Quelle:** https://veranstaltungen.merkur.de/freising/gemeinsames-handarbeiten-ecae158052e6cdbdde6a1ee6793c46927.html
+
+## Verein Freisinger Wärmestube MenschSein
+- **Wann:** 02.09.2026 15:00
+- **Wo:** dASAMa Begegnungsraum
+- **Angezeigt als:** vermutlich kostenfrei — Quelle nennt `unklar` (Sicherheit: niedrig)
+- **Beleg:** _kein Hinweis im Text gefunden_
+- **Quelle:** https://veranstaltungen.merkur.de/freising/verein-freisinger-waermestube-menschsein-e6574aa28b484e871fc2ee2f301102232.html
 
 ## LBV-Vortrag
 - **Wann:** 02.09.2026 19:30
@@ -82,18 +89,53 @@ Eintrag nicht mehr an.
 - **Beleg:** _kein Hinweis im Text gefunden_
 - **Quelle:** https://veranstaltungen.merkur.de/freising/lbv-vortrag-e0666cb605e1479c93e966028f1a7c7fb.html
 
+## Die Projektgruppe Bauen Wohnen Verkehr
+- **Wann:** 03.09.2026 19:00
+- **Wo:** Rathaus Freising
+- **Angezeigt als:** vermutlich kostenfrei — Quelle nennt `unklar` (Sicherheit: niedrig)
+- **Beleg:** _kein Hinweis im Text gefunden_
+- **Quelle:** https://veranstaltungen.merkur.de/freising/die-projektgruppe-bauen-wohnen-verkehr-e985bb6bba78d5f090e4705f2829d9bb7.html
+
+## Probe der Kantorei
+- **Wann:** 03.09.2026 20:00
+- **Wo:** Evang. Gemeindehaus Christi Himmelfahrt
+- **Angezeigt als:** vermutlich kostenfrei — Quelle nennt `unklar` (Sicherheit: niedrig)
+- **Beleg:** _kein Hinweis im Text gefunden_
+- **Quelle:** https://veranstaltungen.merkur.de/freising/probe-der-kantorei-edb71525c56857492537ddbf30936d3c0.html
+
+## Anonyme Alkoholiker
+- **Wann:** 03.09.2026 20:00
+- **Wo:** Paul-Gerhardt-Haus
+- **Angezeigt als:** vermutlich kostenfrei — Quelle nennt `unklar` (Sicherheit: niedrig)
+- **Beleg:** _kein Hinweis im Text gefunden_
+- **Quelle:** https://veranstaltungen.merkur.de/freising/anonyme-alkoholiker-ead83f9b1925d6c6b3e0cc1c610c2f264.html
+
+## Phoenix
+- **Wann:** 04.09.2026 09:00
+- **Wo:** dASAMa
+- **Angezeigt als:** vermutlich kostenfrei — Quelle nennt `unklar` (Sicherheit: niedrig)
+- **Beleg:** _kein Hinweis im Text gefunden_
+- **Quelle:** https://veranstaltungen.merkur.de/freising/phoenix-e1856e3cf5c53ce772ca83d29b05fc0e6.html
+
+## Volksfest
+- **Wann:** 04.09.2026 15:00
+- **Wo:** Luitpoldanlage Freising
+- **Angezeigt als:** vermutlich kostenfrei — Quelle nennt `unklar` (Sicherheit: niedrig)
+- **Beleg:** _kein Hinweis im Text gefunden_
+- **Quelle:** https://veranstaltungen.merkur.de/freising/volksfest-ee7d9fe6367718b3c353f98c0581ec507.html
+
+## Korbinian 2026
+- **Wann:** 20.09.2026 10:30
+- **Wo:** Domberg und Innenstadt Freising
+- **Angezeigt als:** vermutlich kostenfrei — Quelle nennt `frei` (Sicherheit: mittel)
+- **Beleg:** _kein Hinweis im Text gefunden_
+- **Quelle:** https://veranstaltungen.freising.de/freising/korbinian-2026-e5b8d30ffd0e7a6b2a05e38c0666b240d.html
+
 ## Die Demokratie feiern – gemeinsam in Freising
 - **Wann:** 02.10.2026 18:00
 - **Wo:** —
 - **Angezeigt als:** vermutlich kostenfrei — Quelle nennt `frei` (Sicherheit: niedrig)
 - **Beleg:** _kein Hinweis im Text gefunden_
-- **Quelle:** https://www.3klang-musik.de/freising.html
-
-## Lange Nacht der Demokratie in Freising
-- **Wann:** 02.10.2026 18:00
-- **Wo:** —
-- **Angezeigt als:** vermutlich kostenfrei — Quelle nennt `frei` (Sicherheit: mittel)
-- **Beleg:** Demokratie lebt vom Mitmachen, vom Zuhören und vom Austausch.
 - **Quelle:** https://www.3klang-musik.de/freising.html
 
 ## Radl-Repair Café
