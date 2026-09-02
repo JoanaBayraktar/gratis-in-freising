@@ -6,18 +6,17 @@
       24,
       24,
       24,
-      24,
       23,
       23,
       33,
-      36
+      36,
+      35
     ],
     "fehlversuche": 0,
-    "letzter_erfolg": "2026-09-01"
+    "letzter_erfolg": "2026-09-02"
   },
   "Merkur Veranstaltungen": {
     "verlauf": [
-      12,
       10,
       18,
       24,
@@ -26,10 +25,11 @@
       20,
       14,
       17,
-      19
+      19,
+      28
     ],
     "fehlversuche": 0,
-    "letzter_erfolg": "2026-09-01"
+    "letzter_erfolg": "2026-09-02"
   },
   "Schafhof Kunstforum": {
     "verlauf": [
@@ -44,13 +44,12 @@
       12,
       8
     ],
-    "fehlversuche": 1,
+    "fehlversuche": 2,
     "letzter_erfolg": "2026-08-31",
-    "letzter_fehler": "2026-09-01: HTTPError: HTTP Error 429: Too Many Requests: {\"object\":\"error\",\"message\":\"Rate limit exceeded\",\"type\":\"rate_limited\",\"param\":null,\"code\":\"1300\",\"raw_status_code\":429}"
+    "letzter_fehler": "2026-09-02: HTTPError: HTTP Error 429: Too Many Requests: {\"object\":\"error\",\"message\":\"Rate limit exceeded\",\"type\":\"rate_limited\",\"param\":null,\"code\":\"1300\",\"raw_status_code\":429}"
   },
   "Furtner Freising": {
     "verlauf": [
-      23,
       22,
       21,
       21,
@@ -59,10 +58,11 @@
       20,
       20,
       19,
-      19
+      19,
+      22
     ],
-    "fehlversuche": 1,
-    "letzter_erfolg": "2026-08-31",
+    "fehlversuche": 0,
+    "letzter_erfolg": "2026-09-02",
     "letzter_fehler": "2026-09-01: HTTPError: HTTP Error 429: Too Many Requests: {\"object\":\"error\",\"message\":\"Rate limit exceeded\",\"type\":\"rate_limited\",\"param\":null,\"code\":\"1300\",\"raw_status_code\":429}"
   },
   "Einfach selber machen": {
@@ -72,14 +72,14 @@
       1,
       1,
       1,
-      1,
       2,
       2,
       6,
+      6,
       6
     ],
-    "fehlversuche": 1,
-    "letzter_erfolg": "2026-08-31",
+    "fehlversuche": 0,
+    "letzter_erfolg": "2026-09-02",
     "letzter_fehler": "2026-09-01: HTTPError: HTTP Error 429: Too Many Requests: {\"object\":\"error\",\"message\":\"Rate limit exceeded\",\"type\":\"rate_limited\",\"param\":null,\"code\":\"1300\",\"raw_status_code\":429}"
   },
   "vhs Freising — kostenfrei": {
@@ -92,52 +92,52 @@
       40,
       40,
       40,
-      40,
-      36
+      36,
+      40
     ],
-    "fehlversuche": 1,
-    "letzter_erfolg": "2026-08-31",
+    "fehlversuche": 0,
+    "letzter_erfolg": "2026-09-02",
     "letzter_fehler": "2026-09-01: HTTPError: HTTP Error 429: Too Many Requests: {\"object\":\"error\",\"message\":\"Rate limit exceeded\",\"type\":\"rate_limited\",\"param\":null,\"code\":\"1300\",\"raw_status_code\":429}"
   },
   "Modern Studio": {
     "verlauf": [
       3,
       3,
-      3,
       4,
       4,
       4,
       3,
       4,
       3,
-      5
+      5,
+      4
     ],
     "fehlversuche": 0,
-    "letzter_erfolg": "2026-09-01"
+    "letzter_erfolg": "2026-09-02"
   },
   "DAV Freising — Vortraege": {
     "verlauf": [
       0,
-      0,
       3,
       3,
       0,
       0,
+      3,
       3,
       3,
       3,
       3
     ],
     "fehlversuche": 0,
-    "letzter_erfolg": "2026-09-01",
+    "letzter_erfolg": "2026-09-02",
     "letzter_fehler": "2026-08-28: TimeoutError: The read operation timed out"
   },
   "3Klang Musik": {
     "verlauf": [
       2,
-      2,
       1,
       2,
+      1,
       1,
       1,
       1,
@@ -146,12 +146,11 @@
       1
     ],
     "fehlversuche": 0,
-    "letzter_erfolg": "2026-09-01",
+    "letzter_erfolg": "2026-09-02",
     "letzter_fehler": "2026-08-26: TimeoutError: The read operation timed out"
   },
   "TUM Freising": {
     "verlauf": [
-      7,
       7,
       10,
       11,
@@ -160,9 +159,10 @@
       4,
       4,
       4,
-      4
+      4,
+      9
     ],
     "fehlversuche": 0,
-    "letzter_erfolg": "2026-09-01"
+    "letzter_erfolg": "2026-09-02"
   }
 }

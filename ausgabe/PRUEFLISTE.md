@@ -54,13 +54,6 @@ Eintrag nicht mehr an.
 - **Beleg:** _kein Hinweis im Text gefunden_
 - **Quelle:** https://veranstaltungen.merkur.de/freising/die-fuehrerscheinstelle-e86a07cfc45168712584cb32d9d901a7c.html
 
-## Gospelchor
-- **Wann:** 01.09.2026 19:30
-- **Wo:** Evang. Gemeindehaus Christi Himmelfahrt
-- **Angezeigt als:** vermutlich kostenfrei — Quelle nennt `unklar` (Sicherheit: niedrig)
-- **Beleg:** _kein Hinweis im Text gefunden_
-- **Quelle:** https://veranstaltungen.merkur.de/freising/gospelchor-ee33665b70ae8b7d61dd52ee22a56a4d8.html
-
 ## Zwillings-Krabbelgruppe
 - **Wann:** 02.09.2026 09:30
 - **Wo:** Epiphanias-Zentrum
@@ -68,16 +61,16 @@ Eintrag nicht mehr an.
 - **Beleg:** _kein Hinweis im Text gefunden_
 - **Quelle:** https://veranstaltungen.merkur.de/freising/zwillings-krabbelgruppe-e082b3ea2730ea925943a9ed532bb8fcf.html
 
-## Gemeinsames Handarbeiten
-- **Wann:** 02.09.2026 14:00
-- **Wo:** Neustifter Pfarrheim
+## Seniorentreff Lerchenfeld
+- **Wann:** 02.09.2026 13:00
+- **Wo:** Pfarrheim St. Lantpert
 - **Angezeigt als:** vermutlich kostenfrei — Quelle nennt `unklar` (Sicherheit: niedrig)
 - **Beleg:** _kein Hinweis im Text gefunden_
-- **Quelle:** https://veranstaltungen.merkur.de/freising/gemeinsames-handarbeiten-ecae158052e6cdbdde6a1ee6793c46927.html
+- **Quelle:** https://veranstaltungen.merkur.de/freising/seniorentreff-lerchenfeld-e71a73e5207b3b9f54212b9572b6c35d6.html
 
 ## Verein Freisinger Wärmestube MenschSein
 - **Wann:** 02.09.2026 15:00
-- **Wo:** dASAMa Begegnungsraum
+- **Wo:** Begegnungsraum dASAMa (Asamhof)
 - **Angezeigt als:** vermutlich kostenfrei — Quelle nennt `unklar` (Sicherheit: niedrig)
 - **Beleg:** _kein Hinweis im Text gefunden_
 - **Quelle:** https://veranstaltungen.merkur.de/freising/verein-freisinger-waermestube-menschsein-e6574aa28b484e871fc2ee2f301102232.html
@@ -117,19 +110,19 @@ Eintrag nicht mehr an.
 - **Beleg:** _kein Hinweis im Text gefunden_
 - **Quelle:** https://veranstaltungen.merkur.de/freising/phoenix-e1856e3cf5c53ce772ca83d29b05fc0e6.html
 
+## Senioren-Netzwerk Frieda & Ben
+- **Wann:** 04.09.2026 11:00
+- **Wo:** dASAMa Dialograum im Asamgebäude
+- **Angezeigt als:** vermutlich kostenfrei — Quelle nennt `unklar` (Sicherheit: niedrig)
+- **Beleg:** _kein Hinweis im Text gefunden_
+- **Quelle:** https://veranstaltungen.merkur.de/freising/senioren-netzwerk-frieda-ben-e11cd141ea5fbf58a6c1115d52f79b7d4.html
+
 ## Volksfest
 - **Wann:** 04.09.2026 15:00
 - **Wo:** Luitpoldanlage Freising
 - **Angezeigt als:** vermutlich kostenfrei — Quelle nennt `unklar` (Sicherheit: niedrig)
 - **Beleg:** _kein Hinweis im Text gefunden_
 - **Quelle:** https://veranstaltungen.merkur.de/freising/volksfest-ee7d9fe6367718b3c353f98c0581ec507.html
-
-## Korbinian 2026
-- **Wann:** 20.09.2026 10:30
-- **Wo:** Domberg und Innenstadt Freising
-- **Angezeigt als:** vermutlich kostenfrei — Quelle nennt `frei` (Sicherheit: mittel)
-- **Beleg:** _kein Hinweis im Text gefunden_
-- **Quelle:** https://veranstaltungen.freising.de/freising/korbinian-2026-e5b8d30ffd0e7a6b2a05e38c0666b240d.html
 
 ## Die Demokratie feiern – gemeinsam in Freising
 - **Wann:** 02.10.2026 18:00
