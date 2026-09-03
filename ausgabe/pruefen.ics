@@ -24,7 +24,7 @@ END:STANDARD
 END:VTIMEZONE
 BEGIN:VEVENT
 UID:9dbb539d76866b10@gratis-freising
-DTSTAMP:20260902T080238Z
+DTSTAMP:20260903T081003Z
 DTSTART;VALUE=DATE:20260518
 DTEND;VALUE=DATE:20261019
 SUMMARY:TUM tanzt! (vermutlich frei)
@@ -44,7 +44,7 @@ CATEGORIES:Kunst
 END:VEVENT
 BEGIN:VEVENT
 UID:d2b3c21197115322@gratis-freising
-DTSTAMP:20260902T080238Z
+DTSTAMP:20260903T081003Z
 DTSTART;VALUE=DATE:20260822
 DTEND;VALUE=DATE:20260917
 SUMMARY:Sauna-Sommerpause (vermutlich frei)
@@ -63,7 +63,7 @@ CATEGORIES:Sonstiges
 END:VEVENT
 BEGIN:VEVENT
 UID:098b51d483430017@gratis-freising
-DTSTAMP:20260902T080238Z
+DTSTAMP:20260903T081003Z
 DTSTART;VALUE=DATE:20260825
 DTEND;VALUE=DATE:20260928
 SUMMARY:Archetypen männlicher Grenzüberschreitung (vermutlich frei)
@@ -80,7 +80,7 @@ CATEGORIES:Kunst
 END:VEVENT
 BEGIN:VEVENT
 UID:230977a7b828abe9@gratis-freising
-DTSTAMP:20260902T080238Z
+DTSTAMP:20260903T081003Z
 DTSTART;VALUE=DATE:20260831
 DTEND;VALUE=DATE:20260912
 SUMMARY:Busumleitungen (vermutlich frei)
@@ -97,7 +97,7 @@ CATEGORIES:Sonstiges
 END:VEVENT
 BEGIN:VEVENT
 UID:518af2c284ed7269@gratis-freising
-DTSTAMP:20260902T080238Z
+DTSTAMP:20260903T081003Z
 DTSTART;VALUE=DATE:20260831
 DTEND;VALUE=DATE:20260912
 SUMMARY:Vollsperrung der Falkenstraße (vermutlich frei)
@@ -114,7 +114,7 @@ CATEGORIES:Sonstiges
 END:VEVENT
 BEGIN:VEVENT
 UID:9f70c92ead91439a@gratis-freising
-DTSTAMP:20260902T080238Z
+DTSTAMP:20260903T081003Z
 DTSTART;VALUE=DATE:20260831
 DTEND;VALUE=DATE:20260905
 SUMMARY:Das Hospizbüro (vermutlich frei)
@@ -130,95 +130,8 @@ URL:https://veranstaltungen.merkur.de/freising/das-hospizbuero-e72ebad5c5bc
 CATEGORIES:Sonstiges
 END:VEVENT
 BEGIN:VEVENT
-UID:cdc5fc2a889194ab@gratis-freising
-DTSTAMP:20260902T080238Z
-DTSTART;VALUE=DATE:20260831
-DTEND;VALUE=DATE:20260903
-SUMMARY:Die Führerscheinstelle (vermutlich frei)
-LOCATION:Landratsamt — Landshuter Straße 31\, 85356 Freising
-DESCRIPTION:Die Führerscheinstelle ist bis Mittwoch geschlossen. Persönli
- che Vorsprachen sind nicht möglich. Für Notfälle wird ein Notdienst ein
- gerichtet.\n\nEintritt: vermutlich kostenfrei (Quelle nennt: unklar)\nSich
- erheit: niedrig\n\nKategorie: Sonstiges\nZielgruppe: Alle\n\nQuelle: https
- ://veranstaltungen.merkur.de/freising/die-fuehrerscheinstelle-e86a07cfc451
- 68712584cb32d9d901a7c.html
-URL:https://veranstaltungen.merkur.de/freising/die-fuehrerscheinstelle-e86a
- 07cfc45168712584cb32d9d901a7c.html
-CATEGORIES:Sonstiges
-END:VEVENT
-BEGIN:VEVENT
-UID:d249f68d2a2292b3@gratis-freising
-DTSTAMP:20260902T080238Z
-DTSTART;TZID=Europe/Berlin:20260902T093000
-DTEND;TZID=Europe/Berlin:20260902T113000
-SUMMARY:Zwillings-Krabbelgruppe (vermutlich frei)
-LOCATION:Epiphanias-Zentrum — Katharina-Mair-Straße 19\, 85356 Freising
-DESCRIPTION:Treffpunkt für Eltern mit Zwillingen\, Babys und Kleinkindern 
- ab Krabbelalter. Ein regelmäßiges Angebot mit Möglichkeit zum Austausch
-  und Spielen.\n\nEintritt: vermutlich kostenfrei (Quelle nennt: unklar)\nS
- icherheit: niedrig\n\nKategorie: Familie\nZielgruppe: Familien\nDrinnen/Dr
- aussen: drinnen\nAnmeldung noetig: ja — siehe Quelle\n\nQuelle: https://
- veranstaltungen.merkur.de/freising/zwillings-krabbelgruppe-e082b3ea2730ea9
- 25943a9ed532bb8fcf.html
-URL:https://veranstaltungen.merkur.de/freising/zwillings-krabbelgruppe-e082
- b3ea2730ea925943a9ed532bb8fcf.html
-CATEGORIES:Familie
-END:VEVENT
-BEGIN:VEVENT
-UID:d1c0fd6a6b149c67@gratis-freising
-DTSTAMP:20260902T080238Z
-DTSTART;TZID=Europe/Berlin:20260902T130000
-DTEND;TZID=Europe/Berlin:20260902T150000
-SUMMARY:Seniorentreff Lerchenfeld (vermutlich frei)
-LOCATION:Pfarrheim St. Lantpert — 85356 Freising
-DESCRIPTION:Ein Nachmittag für Senioren mit Gymnastik und geselligem Beisa
- mmensein inklusive Geburtstagsfeier. Offenes Angebot für ältere Menschen
- .\n\nEintritt: vermutlich kostenfrei (Quelle nennt: unklar)\nSicherheit: n
- iedrig\n\nKategorie: Geselligkeit/Spiele/Treffen\nZielgruppe: Senioren\nDr
- innen/Draussen: drinnen\n\nQuelle: https://veranstaltungen.merkur.de/freis
- ing/seniorentreff-lerchenfeld-e71a73e5207b3b9f54212b9572b6c35d6.html
-URL:https://veranstaltungen.merkur.de/freising/seniorentreff-lerchenfeld-e7
- 1a73e5207b3b9f54212b9572b6c35d6.html
-CATEGORIES:Geselligkeit/Spiele/Treffen
-END:VEVENT
-BEGIN:VEVENT
-UID:341fa92ab007b48c@gratis-freising
-DTSTAMP:20260902T080238Z
-DTSTART;TZID=Europe/Berlin:20260902T150000
-DTEND;TZID=Europe/Berlin:20260902T170000
-SUMMARY:Verein Freisinger Wärmestube MenschSein (vermutlich frei)
-LOCATION:Begegnungsraum dASAMa (Asamhof) — 85356 Freising
-DESCRIPTION:Der Verein informiert über sein Programm und bietet einen offe
- nen Austausch im Begegnungsraum. Jeden ersten Mittwoch im Monat\, außer i
- n den Schulferien.\n\nEintritt: vermutlich kostenfrei (Quelle nennt: unkla
- r)\nSicherheit: niedrig\n\nKategorie: Sonstiges\nZielgruppe: Alle\nDrinnen
- /Draussen: drinnen\n\nQuelle: https://veranstaltungen.merkur.de/freising/v
- erein-freisinger-waermestube-menschsein-e6574aa28b484e871fc2ee2f301102232.
- html
-URL:https://veranstaltungen.merkur.de/freising/verein-freisinger-waermestub
- e-menschsein-e6574aa28b484e871fc2ee2f301102232.html
-CATEGORIES:Sonstiges
-END:VEVENT
-BEGIN:VEVENT
-UID:7cf48310ee3a7522@gratis-freising
-DTSTAMP:20260902T080238Z
-DTSTART;TZID=Europe/Berlin:20260902T193000
-DTEND;TZID=Europe/Berlin:20260902T193000
-SUMMARY:LBV-Vortrag (vermutlich frei)
-LOCATION:Haus der Vereine — Major-Braun-Weg 12\, 85354 Freising
-DESCRIPTION:Vortrag über die Zugbewegungen und Entwicklungen der oberbayer
- ischen Weißstorchpopulation. Ein informativer Abend für Naturliebhaber.\
- n\nEintritt: vermutlich kostenfrei (Quelle nennt: unklar)\nSicherheit: nie
- drig\n\nKategorie: Vortrag\nZielgruppe: Alle\nDrinnen/Draussen: drinnen\n\
- nQuelle: https://veranstaltungen.merkur.de/freising/lbv-vortrag-e0666cb605
- e1479c93e966028f1a7c7fb.html
-URL:https://veranstaltungen.merkur.de/freising/lbv-vortrag-e0666cb605e1479c
- 93e966028f1a7c7fb.html
-CATEGORIES:Vortrag
-END:VEVENT
-BEGIN:VEVENT
 UID:35c37b21ae4985bd@gratis-freising
-DTSTAMP:20260902T080238Z
+DTSTAMP:20260903T081003Z
 DTSTART;TZID=Europe/Berlin:20260903T190000
 DTEND;TZID=Europe/Berlin:20260903T210000
 SUMMARY:Die Projektgruppe Bauen Wohnen Verkehr (vermutlich frei)
@@ -235,7 +148,7 @@ CATEGORIES:Sonstiges
 END:VEVENT
 BEGIN:VEVENT
 UID:445a41a7ac118f73@gratis-freising
-DTSTAMP:20260902T080238Z
+DTSTAMP:20260903T081003Z
 DTSTART;TZID=Europe/Berlin:20260903T200000
 DTEND;TZID=Europe/Berlin:20260903T220000
 SUMMARY:Probe der Kantorei (vermutlich frei)
@@ -253,7 +166,7 @@ CATEGORIES:Sonstiges
 END:VEVENT
 BEGIN:VEVENT
 UID:fa9898b66f784523@gratis-freising
-DTSTAMP:20260902T080238Z
+DTSTAMP:20260903T081003Z
 DTSTART;TZID=Europe/Berlin:20260903T200000
 DTEND;TZID=Europe/Berlin:20260903T220000
 SUMMARY:Anonyme Alkoholiker (vermutlich frei)
@@ -271,7 +184,7 @@ CATEGORIES:Sonstiges
 END:VEVENT
 BEGIN:VEVENT
 UID:9e8b95fbf3b4e6cf@gratis-freising
-DTSTAMP:20260902T080238Z
+DTSTAMP:20260903T081003Z
 DTSTART;TZID=Europe/Berlin:20260904T090000
 DTEND;TZID=Europe/Berlin:20260904T110000
 SUMMARY:Phoenix (vermutlich frei)
@@ -288,7 +201,7 @@ CATEGORIES:Rat und Hilfe
 END:VEVENT
 BEGIN:VEVENT
 UID:7fddaef47db2f209@gratis-freising
-DTSTAMP:20260902T080238Z
+DTSTAMP:20260903T081003Z
 DTSTART;TZID=Europe/Berlin:20260904T110000
 DTEND;TZID=Europe/Berlin:20260904T130000
 SUMMARY:Senioren-Netzwerk Frieda & Ben (vermutlich frei)
@@ -306,7 +219,7 @@ CATEGORIES:Sonstiges
 END:VEVENT
 BEGIN:VEVENT
 UID:b51842fbfb922624@gratis-freising
-DTSTAMP:20260902T080238Z
+DTSTAMP:20260903T081003Z
 DTSTART;TZID=Europe/Berlin:20260904T150000
 DTEND;TZID=Europe/Berlin:20260904T210000
 SUMMARY:Volksfest (vermutlich frei)
@@ -323,7 +236,7 @@ CATEGORIES:Feste/Bälle/Tanz
 END:VEVENT
 BEGIN:VEVENT
 UID:7658e605275a5d7e@gratis-freising
-DTSTAMP:20260902T080238Z
+DTSTAMP:20260903T081003Z
 DTSTART;TZID=Europe/Berlin:20261002T180000
 DTEND;TZID=Europe/Berlin:20261002T235900
 SUMMARY:Die Demokratie feiern – gemeinsam in Freising (vermutlich frei)
@@ -340,73 +253,73 @@ CATEGORIES:Fest
 END:VEVENT
 BEGIN:VEVENT
 UID:65bb11a7f5eb8520@gratis-freising
-DTSTAMP:20260902T080238Z
+DTSTAMP:20260903T081003Z
 DTSTART;TZID=Europe/Berlin:20261017T150000
 DTEND;TZID=Europe/Berlin:20261017T170000
 SUMMARY:Radl-Repair Café (vermutlich frei)
 LOCATION:Offene Werkstatt Freising — Schwalbenweg 1\, 85356\, Freising
-DESCRIPTION:Ein offenes Repair-Café für Fahrräder\, bei dem Teilnehmende
-  gemeinsam mit ehrenamtlichen Helfer*innen kleine Reparaturen durchführen
-  können. Es stehen Werkzeuge und Ersatzteile zur Verfügung. Das Angebot 
- richtet sich an alle\, die ihr Fahrrad selbst reparieren möchten oder Unt
- erstützung benötigen.\n\nEintritt: vermutlich kostenfrei (Quelle nennt: 
- frei)\nSicherheit: mittel\n\nKategorie: Sonstiges\nZielgruppe: Alle\n\nQue
- lle: https://einfach-selber-machen.org/event/radl-repair-cafe/
+DESCRIPTION:Ein offenes Repair-Café für Fahrräder\, bei dem gemeinsam kl
+ eine Reparaturen und Pflegearbeiten durchgeführt werden. Teilnehmende kö
+ nnen ihr Fahrrad mitbringen und unter Anleitung selbst reparieren oder Hil
+ fe erhalten. Eine vorherige Anmeldung per Mail oder Social Media wird empf
+ ohlen.\n\nEintritt: vermutlich kostenfrei (Quelle nennt: frei)\nSicherheit
+ : mittel\n\nKategorie: Sonstiges\nZielgruppe: Alle\n\nQuelle: https://einf
+ ach-selber-machen.org/event/radl-repair-cafe/
 URL:https://einfach-selber-machen.org/event/radl-repair-cafe/
 CATEGORIES:Sonstiges
 END:VEVENT
 BEGIN:VEVENT
 UID:4967f298af8ce4e8@gratis-freising
-DTSTAMP:20260902T080238Z
+DTSTAMP:20260903T081003Z
 DTSTART;VALUE=DATE:20261103
 DTEND;VALUE=DATE:20261104
 SUMMARY:[AUSGEBUCHT] Werkstatt für Jugendliche *ausgebucht* (vermutlich fr
  ei)
 LOCATION:Offene Werkstatt Freising — Schwalbenweg 1\, 85356\, Freising
-DESCRIPTION:Ein Workshop speziell für Jugendliche\, bei dem gemeinsam eine
-  Lampe gebaut wird. Dabei werden handwerkliche Fähigkeiten in den Bereich
- en Elektrik\, Holzverarbeitung und Kreativität gefördert. Die Teilnehmen
- den lernen den Umgang mit Werkzeugen und Maschinen unter Anleitung.\n\nEin
- tritt: vermutlich kostenfrei (Quelle nennt: unklar)\nSicherheit: niedrig\n
- \nKategorie: Familie\nZielgruppe: Jugendliche\n\nQuelle: https://einfach-s
- elber-machen.org/event/werkstatt-fuer-jugendliche-ausgebucht/
+DESCRIPTION:Ein Workshop für Jugendliche\, bei dem gemeinsam eine Lampe ge
+ baut wird. Ziel ist es\, handwerkliche Fähigkeiten in den Bereichen Elekt
+ rik\, Holzhandwerk und Kreativität zu fördern. Die Teilnehmenden lernen 
+ Werkstattabläufe und den Umgang mit Werkzeugen kennen.\n\nEintritt: vermu
+ tlich kostenfrei (Quelle nennt: unklar)\nSicherheit: niedrig\n\nKategorie:
+  Familie\nZielgruppe: Jugendliche\n\nQuelle: https://einfach-selber-machen
+ .org/event/werkstatt-fuer-jugendliche-ausgebucht/
 URL:https://einfach-selber-machen.org/event/werkstatt-fuer-jugendliche-ausg
  ebucht/
 CATEGORIES:Familie
 END:VEVENT
 BEGIN:VEVENT
 UID:afbec4c70d42c16c@gratis-freising
-DTSTAMP:20260902T080238Z
+DTSTAMP:20260903T081003Z
 DTSTART;TZID=Europe/Berlin:20261121T090000
 DTEND;TZID=Europe/Berlin:20261121T160000
 SUMMARY:Holzwerken für Einsteiger*innen (vermutlich frei)
 LOCATION:Offene Werkstatt Freising — Schwalbenweg 1\, 85356\, Freising
 DESCRIPTION:Ein offener Abend für alle\, die Unterstützung bei Holzprojek
- ten benötigen. Eine betreuende Person steht für Fragen und Hilfestellung
- en zur Verfügung – von der Beratung zur Umsetzung bis hin zur praktisch
- en Hilfe beim Zuschnitt oder Hobeln. Das Angebot ist auf Mitglieder und eh
- emalige Kursteilnehmerinnen beschränkt.\n\nEintritt: vermutlich kostenfre
- i (Quelle nennt: unklar)\nSicherheit: niedrig\n\nKategorie: Sonstiges\nZie
- lgruppe: Erwachsene\n\nQuelle: https://einfach-selber-machen.org/event/hol
- zwerken-fuer-einsteiger/
+ ten benötigen – vom ersten bis zum fortgeschrittenen Projekt. Betreuend
+ e Personen helfen bei der Umsetzung\, erklären Techniken und Werkzeuge un
+ d stehen für Fragen zur Verfügung. Nur für Mitglieder und ehemalige Tei
+ lnehmerinnen der Schreinern-für-Frauen-Kurse.\n\nEintritt: vermutlich kos
+ tenfrei (Quelle nennt: unklar)\nSicherheit: niedrig\n\nKategorie: Sonstige
+ s\nZielgruppe: Erwachsene\n\nQuelle: https://einfach-selber-machen.org/eve
+ nt/holzwerken-fuer-einsteiger/
 URL:https://einfach-selber-machen.org/event/holzwerken-fuer-einsteiger/
 CATEGORIES:Sonstiges
 END:VEVENT
 BEGIN:VEVENT
 UID:57463acfa527e414@gratis-freising
-DTSTAMP:20260902T080238Z
+DTSTAMP:20260903T081003Z
 DTSTART;TZID=Europe/Berlin:20261205T090000
 DTEND;TZID=Europe/Berlin:20261205T160000
 SUMMARY:Holzwerken für Einsteiger*innen (vermutlich frei)
 LOCATION:Offene Werkstatt Freising — Schwalbenweg 1\, 85356\, Freising
 DESCRIPTION:Ein offener Abend für alle\, die Unterstützung bei Holzprojek
- ten benötigen. Eine betreuende Person steht für Fragen und Hilfestellung
- en zur Verfügung – von der Beratung zur Umsetzung bis hin zur praktisch
- en Hilfe beim Zuschnitt oder Hobeln. Das Angebot ist auf Mitglieder und eh
- emalige Kursteilnehmerinnen beschränkt.\n\nEintritt: vermutlich kostenfre
- i (Quelle nennt: unklar)\nSicherheit: niedrig\n\nKategorie: Sonstiges\nZie
- lgruppe: Erwachsene\n\nQuelle: https://einfach-selber-machen.org/event/hol
- zwerken-fuer-einsteigerinnen/
+ ten benötigen – vom ersten bis zum fortgeschrittenen Projekt. Betreuend
+ e Personen helfen bei der Umsetzung\, erklären Techniken und Werkzeuge un
+ d stehen für Fragen zur Verfügung. Nur für Mitglieder und ehemalige Tei
+ lnehmerinnen der Schreinern-für-Frauen-Kurse.\n\nEintritt: vermutlich kos
+ tenfrei (Quelle nennt: unklar)\nSicherheit: niedrig\n\nKategorie: Sonstige
+ s\nZielgruppe: Erwachsene\n\nQuelle: https://einfach-selber-machen.org/eve
+ nt/holzwerken-fuer-einsteigerinnen/
 URL:https://einfach-selber-machen.org/event/holzwerken-fuer-einsteigerinnen
  /
 CATEGORIES:Sonstiges
