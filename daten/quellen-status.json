@@ -12,8 +12,9 @@
       35,
       24
     ],
-    "fehlversuche": 0,
-    "letzter_erfolg": "2026-09-03"
+    "fehlversuche": 1,
+    "letzter_erfolg": "2026-09-03",
+    "letzter_fehler": "2026-09-04: HTTPError: HTTP Error 429: Too Many Requests: {\"object\":\"error\",\"message\":\"Rate limit exceeded\",\"type\":\"rate_limited\",\"param\":null,\"code\":\"1300\",\"raw_status_code\":429}"
   },
   "Merkur Veranstaltungen": {
     "verlauf": [
@@ -28,9 +29,9 @@
       19,
       28
     ],
-    "fehlversuche": 1,
+    "fehlversuche": 2,
     "letzter_erfolg": "2026-09-02",
-    "letzter_fehler": "2026-09-03: HTTPError: HTTP Error 429: Too Many Requests: {\"object\":\"error\",\"message\":\"Rate limit exceeded\",\"type\":\"rate_limited\",\"param\":null,\"code\":\"1300\",\"raw_status_code\":429}"
+    "letzter_fehler": "2026-09-04: HTTPError: HTTP Error 429: Too Many Requests: {\"object\":\"error\",\"message\":\"Rate limit exceeded\",\"type\":\"rate_limited\",\"param\":null,\"code\":\"1300\",\"raw_status_code\":429}"
   },
   "Schafhof Kunstforum": {
     "verlauf": [
@@ -45,9 +46,9 @@
       8,
       7
     ],
-    "fehlversuche": 0,
+    "fehlversuche": 1,
     "letzter_erfolg": "2026-09-03",
-    "letzter_fehler": "2026-09-02: HTTPError: HTTP Error 429: Too Many Requests: {\"object\":\"error\",\"message\":\"Rate limit exceeded\",\"type\":\"rate_limited\",\"param\":null,\"code\":\"1300\",\"raw_status_code\":429}"
+    "letzter_fehler": "2026-09-04: HTTPError: HTTP Error 429: Too Many Requests: {\"object\":\"error\",\"message\":\"Rate limit exceeded\",\"type\":\"rate_limited\",\"param\":null,\"code\":\"1300\",\"raw_status_code\":429}"
   },
   "Furtner Freising": {
     "verlauf": [
@@ -62,9 +63,9 @@
       19,
       22
     ],
-    "fehlversuche": 1,
+    "fehlversuche": 2,
     "letzter_erfolg": "2026-09-02",
-    "letzter_fehler": "2026-09-03: HTTPError: HTTP Error 429: Too Many Requests: {\"object\":\"error\",\"message\":\"Rate limit exceeded\",\"type\":\"rate_limited\",\"param\":null,\"code\":\"1300\",\"raw_status_code\":429}"
+    "letzter_fehler": "2026-09-04: HTTPError: HTTP Error 429: Too Many Requests: {\"object\":\"error\",\"message\":\"Rate limit exceeded\",\"type\":\"rate_limited\",\"param\":null,\"code\":\"1300\",\"raw_status_code\":429}"
   },
   "Einfach selber machen": {
     "verlauf": [
@@ -79,9 +80,9 @@
       6,
       6
     ],
-    "fehlversuche": 0,
+    "fehlversuche": 1,
     "letzter_erfolg": "2026-09-03",
-    "letzter_fehler": "2026-09-01: HTTPError: HTTP Error 429: Too Many Requests: {\"object\":\"error\",\"message\":\"Rate limit exceeded\",\"type\":\"rate_limited\",\"param\":null,\"code\":\"1300\",\"raw_status_code\":429}"
+    "letzter_fehler": "2026-09-04: HTTPError: HTTP Error 429: Too Many Requests: {\"object\":\"error\",\"message\":\"Rate limit exceeded\",\"type\":\"rate_limited\",\"param\":null,\"code\":\"1300\",\"raw_status_code\":429}"
   },
   "vhs Freising — kostenfrei": {
     "verlauf": [
@@ -96,9 +97,9 @@
       40,
       40
     ],
-    "fehlversuche": 0,
+    "fehlversuche": 1,
     "letzter_erfolg": "2026-09-03",
-    "letzter_fehler": "2026-09-01: HTTPError: HTTP Error 429: Too Many Requests: {\"object\":\"error\",\"message\":\"Rate limit exceeded\",\"type\":\"rate_limited\",\"param\":null,\"code\":\"1300\",\"raw_status_code\":429}"
+    "letzter_fehler": "2026-09-04: HTTPError: HTTP Error 429: Too Many Requests: {\"object\":\"error\",\"message\":\"Rate limit exceeded\",\"type\":\"rate_limited\",\"param\":null,\"code\":\"1300\",\"raw_status_code\":429}"
   },
   "Modern Studio": {
     "verlauf": [
@@ -113,9 +114,9 @@
       5,
       4
     ],
-    "fehlversuche": 1,
+    "fehlversuche": 2,
     "letzter_erfolg": "2026-09-02",
-    "letzter_fehler": "2026-09-03: HTTPError: HTTP Error 429: Too Many Requests: {\"object\":\"error\",\"message\":\"Rate limit exceeded\",\"type\":\"rate_limited\",\"param\":null,\"code\":\"1300\",\"raw_status_code\":429}"
+    "letzter_fehler": "2026-09-04: HTTPError: HTTP Error 429: Too Many Requests: {\"object\":\"error\",\"message\":\"Rate limit exceeded\",\"type\":\"rate_limited\",\"param\":null,\"code\":\"1300\",\"raw_status_code\":429}"
   },
   "DAV Freising — Vortraege": {
     "verlauf": [
@@ -130,9 +131,9 @@
       3,
       3
     ],
-    "fehlversuche": 1,
+    "fehlversuche": 2,
     "letzter_erfolg": "2026-09-02",
-    "letzter_fehler": "2026-09-03: HTTPError: HTTP Error 429: Too Many Requests: {\"object\":\"error\",\"message\":\"Rate limit exceeded\",\"type\":\"rate_limited\",\"param\":null,\"code\":\"1300\",\"raw_status_code\":429}"
+    "letzter_fehler": "2026-09-04: HTTPError: HTTP Error 429: Too Many Requests: {\"object\":\"error\",\"message\":\"Rate limit exceeded\",\"type\":\"rate_limited\",\"param\":null,\"code\":\"1300\",\"raw_status_code\":429}"
   },
   "3Klang Musik": {
     "verlauf": [
@@ -147,9 +148,9 @@
       1,
       1
     ],
-    "fehlversuche": 1,
+    "fehlversuche": 2,
     "letzter_erfolg": "2026-09-02",
-    "letzter_fehler": "2026-09-03: HTTPError: HTTP Error 429: Too Many Requests: {\"object\":\"error\",\"message\":\"Rate limit exceeded\",\"type\":\"rate_limited\",\"param\":null,\"code\":\"1300\",\"raw_status_code\":429}"
+    "letzter_fehler": "2026-09-04: HTTPError: HTTP Error 429: Too Many Requests: {\"object\":\"error\",\"message\":\"Rate limit exceeded\",\"type\":\"rate_limited\",\"param\":null,\"code\":\"1300\",\"raw_status_code\":429}"
   },
   "TUM Freising": {
     "verlauf": [
@@ -164,8 +165,8 @@
       4,
       9
     ],
-    "fehlversuche": 1,
+    "fehlversuche": 2,
     "letzter_erfolg": "2026-09-02",
-    "letzter_fehler": "2026-09-03: HTTPError: HTTP Error 429: Too Many Requests: {\"object\":\"error\",\"message\":\"Rate limit exceeded\",\"type\":\"rate_limited\",\"param\":null,\"code\":\"1300\",\"raw_status_code\":429}"
+    "letzter_fehler": "2026-09-04: HTTPError: HTTP Error 429: Too Many Requests: {\"object\":\"error\",\"message\":\"Rate limit exceeded\",\"type\":\"rate_limited\",\"param\":null,\"code\":\"1300\",\"raw_status_code\":429}"
   }
 }

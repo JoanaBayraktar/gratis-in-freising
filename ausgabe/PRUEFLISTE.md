@@ -47,27 +47,6 @@ Eintrag nicht mehr an.
 - **Beleg:** _kein Hinweis im Text gefunden_
 - **Quelle:** https://veranstaltungen.merkur.de/freising/das-hospizbuero-e72ebad5c5bc83f0a6066ce744f183556.html
 
-## Die Projektgruppe Bauen Wohnen Verkehr
-- **Wann:** 03.09.2026 19:00
-- **Wo:** Rathaus Freising
-- **Angezeigt als:** vermutlich kostenfrei — Quelle nennt `unklar` (Sicherheit: niedrig)
-- **Beleg:** _kein Hinweis im Text gefunden_
-- **Quelle:** https://veranstaltungen.merkur.de/freising/die-projektgruppe-bauen-wohnen-verkehr-e985bb6bba78d5f090e4705f2829d9bb7.html
-
-## Probe der Kantorei
-- **Wann:** 03.09.2026 20:00
-- **Wo:** Evang. Gemeindehaus Christi Himmelfahrt
-- **Angezeigt als:** vermutlich kostenfrei — Quelle nennt `unklar` (Sicherheit: niedrig)
-- **Beleg:** _kein Hinweis im Text gefunden_
-- **Quelle:** https://veranstaltungen.merkur.de/freising/probe-der-kantorei-edb71525c56857492537ddbf30936d3c0.html
-
-## Anonyme Alkoholiker
-- **Wann:** 03.09.2026 20:00
-- **Wo:** Paul-Gerhardt-Haus
-- **Angezeigt als:** vermutlich kostenfrei — Quelle nennt `unklar` (Sicherheit: niedrig)
-- **Beleg:** _kein Hinweis im Text gefunden_
-- **Quelle:** https://veranstaltungen.merkur.de/freising/anonyme-alkoholiker-ead83f9b1925d6c6b3e0cc1c610c2f264.html
-
 ## Phoenix
 - **Wann:** 04.09.2026 09:00
 - **Wo:** dASAMa
