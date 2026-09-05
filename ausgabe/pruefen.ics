@@ -24,7 +24,7 @@ END:STANDARD
 END:VTIMEZONE
 BEGIN:VEVENT
 UID:9dbb539d76866b10@gratis-freising
-DTSTAMP:20260904T080253Z
+DTSTAMP:20260905T074333Z
 DTSTART;VALUE=DATE:20260518
 DTEND;VALUE=DATE:20261019
 SUMMARY:TUM tanzt! (vermutlich frei)
@@ -44,7 +44,7 @@ CATEGORIES:Kunst
 END:VEVENT
 BEGIN:VEVENT
 UID:d2b3c21197115322@gratis-freising
-DTSTAMP:20260904T080253Z
+DTSTAMP:20260905T074333Z
 DTSTART;VALUE=DATE:20260822
 DTEND;VALUE=DATE:20260917
 SUMMARY:Sauna-Sommerpause (vermutlich frei)
@@ -63,7 +63,7 @@ CATEGORIES:Sonstiges
 END:VEVENT
 BEGIN:VEVENT
 UID:098b51d483430017@gratis-freising
-DTSTAMP:20260904T080253Z
+DTSTAMP:20260905T074333Z
 DTSTART;VALUE=DATE:20260825
 DTEND;VALUE=DATE:20260928
 SUMMARY:Archetypen männlicher Grenzüberschreitung (vermutlich frei)
@@ -80,7 +80,7 @@ CATEGORIES:Kunst
 END:VEVENT
 BEGIN:VEVENT
 UID:230977a7b828abe9@gratis-freising
-DTSTAMP:20260904T080253Z
+DTSTAMP:20260905T074333Z
 DTSTART;VALUE=DATE:20260831
 DTEND;VALUE=DATE:20260912
 SUMMARY:Busumleitungen (vermutlich frei)
@@ -97,7 +97,7 @@ CATEGORIES:Sonstiges
 END:VEVENT
 BEGIN:VEVENT
 UID:518af2c284ed7269@gratis-freising
-DTSTAMP:20260904T080253Z
+DTSTAMP:20260905T074333Z
 DTSTART;VALUE=DATE:20260831
 DTEND;VALUE=DATE:20260912
 SUMMARY:Vollsperrung der Falkenstraße (vermutlich frei)
@@ -113,77 +113,8 @@ URL:https://veranstaltungen.merkur.de/freising/vollsperrung-der-falkenstras
 CATEGORIES:Sonstiges
 END:VEVENT
 BEGIN:VEVENT
-UID:9f70c92ead91439a@gratis-freising
-DTSTAMP:20260904T080253Z
-DTSTART;VALUE=DATE:20260831
-DTEND;VALUE=DATE:20260905
-SUMMARY:Das Hospizbüro (vermutlich frei)
-LOCATION:Hospizgruppe — Mainburger Straße 1\, 85354 Freising
-DESCRIPTION:Das Hospizbüro ist bis einschließlich 4. September geschlosse
- n. In dringenden Fällen steht ein Bereitschaftstelefon zur Verfügung.\n\
- nEintritt: vermutlich kostenfrei (Quelle nennt: unklar)\nSicherheit: niedr
- ig\n\nKategorie: Sonstiges\nZielgruppe: Alle\n\nQuelle: https://veranstalt
- ungen.merkur.de/freising/das-hospizbuero-e72ebad5c5bc83f0a6066ce744f183556
- .html
-URL:https://veranstaltungen.merkur.de/freising/das-hospizbuero-e72ebad5c5bc
- 83f0a6066ce744f183556.html
-CATEGORIES:Sonstiges
-END:VEVENT
-BEGIN:VEVENT
-UID:9e8b95fbf3b4e6cf@gratis-freising
-DTSTAMP:20260904T080253Z
-DTSTART;TZID=Europe/Berlin:20260904T090000
-DTEND;TZID=Europe/Berlin:20260904T110000
-SUMMARY:Phoenix (vermutlich frei)
-LOCATION:dASAMa — Marienplatz 7\, 85356 Freising
-DESCRIPTION:Ein Treffen des Vereins für Menschen mit erworbenen Hirnschäd
- en. Ein Angebot für Betroffene und Interessierte zum Austausch und zur Un
- terstützung.\n\nEintritt: vermutlich kostenfrei (Quelle nennt: unklar)\nS
- icherheit: niedrig\n\nKategorie: Rat und Hilfe\nZielgruppe: Alle\nDrinnen/
- Draussen: drinnen\n\nQuelle: https://veranstaltungen.merkur.de/freising/ph
- oenix-e1856e3cf5c53ce772ca83d29b05fc0e6.html
-URL:https://veranstaltungen.merkur.de/freising/phoenix-e1856e3cf5c53ce772ca
- 83d29b05fc0e6.html
-CATEGORIES:Rat und Hilfe
-END:VEVENT
-BEGIN:VEVENT
-UID:7fddaef47db2f209@gratis-freising
-DTSTAMP:20260904T080253Z
-DTSTART;TZID=Europe/Berlin:20260904T110000
-DTEND;TZID=Europe/Berlin:20260904T130000
-SUMMARY:Senioren-Netzwerk Frieda & Ben (vermutlich frei)
-LOCATION:dASAMa Dialograum im Asamgebäude — Marienplatz 7\, 85356 Freisi
- ng
-DESCRIPTION:Ein regelmäßiges Treffen des Senioren-Netzwerks Frieda & Ben.
-  Mitglieder und Interessierte tauschen sich über Aktivitäten und Themen 
- aus.\n\nEintritt: vermutlich kostenfrei (Quelle nennt: unklar)\nSicherheit
- : niedrig\n\nKategorie: Sonstiges\nZielgruppe: Senioren\nDrinnen/Draussen:
-  drinnen\n\nQuelle: https://veranstaltungen.merkur.de/freising/senioren-ne
- tzwerk-frieda-ben-e11cd141ea5fbf58a6c1115d52f79b7d4.html
-URL:https://veranstaltungen.merkur.de/freising/senioren-netzwerk-frieda-ben
- -e11cd141ea5fbf58a6c1115d52f79b7d4.html
-CATEGORIES:Sonstiges
-END:VEVENT
-BEGIN:VEVENT
-UID:b51842fbfb922624@gratis-freising
-DTSTAMP:20260904T080253Z
-DTSTART;TZID=Europe/Berlin:20260904T150000
-DTEND;TZID=Europe/Berlin:20260904T210000
-SUMMARY:Volksfest (vermutlich frei)
-LOCATION:Luitpoldanlage Freising — Luitpoldstraße 1\, 85356 Freising
-DESCRIPTION:Ein buntes Volksfest mit Fahrgeschäften\, Musik\, kulinarische
- n Köstlichkeiten und einem Feuerwerk. Ein traditionelles Fest für die ga
- nze Familie.\n\nEintritt: vermutlich kostenfrei (Quelle nennt: unklar)\nSi
- cherheit: niedrig\n\nKategorie: Feste/Bälle/Tanz\nZielgruppe: Alle\nDrinn
- en/Draussen: draussen\n\nQuelle: https://veranstaltungen.merkur.de/freisin
- g/volksfest-ee7d9fe6367718b3c353f98c0581ec507.html
-URL:https://veranstaltungen.merkur.de/freising/volksfest-ee7d9fe6367718b3c3
- 53f98c0581ec507.html
-CATEGORIES:Feste/Bälle/Tanz
-END:VEVENT
-BEGIN:VEVENT
 UID:7658e605275a5d7e@gratis-freising
-DTSTAMP:20260904T080253Z
+DTSTAMP:20260905T074333Z
 DTSTART;TZID=Europe/Berlin:20261002T180000
 DTEND;TZID=Europe/Berlin:20261002T235900
 SUMMARY:Die Demokratie feiern – gemeinsam in Freising (vermutlich frei)
@@ -200,7 +131,7 @@ CATEGORIES:Fest
 END:VEVENT
 BEGIN:VEVENT
 UID:65bb11a7f5eb8520@gratis-freising
-DTSTAMP:20260904T080253Z
+DTSTAMP:20260905T074333Z
 DTSTART;TZID=Europe/Berlin:20261017T150000
 DTEND;TZID=Europe/Berlin:20261017T170000
 SUMMARY:Radl-Repair Café (vermutlich frei)
@@ -217,7 +148,7 @@ CATEGORIES:Sonstiges
 END:VEVENT
 BEGIN:VEVENT
 UID:4967f298af8ce4e8@gratis-freising
-DTSTAMP:20260904T080253Z
+DTSTAMP:20260905T074333Z
 DTSTART;VALUE=DATE:20261103
 DTEND;VALUE=DATE:20261104
 SUMMARY:[AUSGEBUCHT] Werkstatt für Jugendliche *ausgebucht* (vermutlich fr
@@ -236,7 +167,7 @@ CATEGORIES:Familie
 END:VEVENT
 BEGIN:VEVENT
 UID:afbec4c70d42c16c@gratis-freising
-DTSTAMP:20260904T080253Z
+DTSTAMP:20260905T074333Z
 DTSTART;TZID=Europe/Berlin:20261121T090000
 DTEND;TZID=Europe/Berlin:20261121T160000
 SUMMARY:Holzwerken für Einsteiger*innen (vermutlich frei)
@@ -254,7 +185,7 @@ CATEGORIES:Sonstiges
 END:VEVENT
 BEGIN:VEVENT
 UID:57463acfa527e414@gratis-freising
-DTSTAMP:20260904T080253Z
+DTSTAMP:20260905T074333Z
 DTSTART;TZID=Europe/Berlin:20261205T090000
 DTEND;TZID=Europe/Berlin:20261205T160000
 SUMMARY:Holzwerken für Einsteiger*innen (vermutlich frei)
