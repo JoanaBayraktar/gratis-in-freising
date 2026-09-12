@@ -26,20 +26,6 @@ Eintrag nicht mehr an.
 - **Beleg:** _kein Hinweis im Text gefunden_
 - **Quelle:** https://veranstaltungen.merkur.de/freising/archetypen-maennlicher-grenzueberschreitung-e184f7b19ce85ba7696afcbd77c161681.html
 
-## Busumleitungen
-- **Wann:** 31.08.2026 00:00
-- **Wo:** —
-- **Angezeigt als:** vermutlich kostenfrei — Quelle nennt `unklar` (Sicherheit: niedrig)
-- **Beleg:** _kein Hinweis im Text gefunden_
-- **Quelle:** https://veranstaltungen.merkur.de/freising/busumleitungen-e0a84c8ffb66e751f99eec2079161e181.html
-
-## Vollsperrung der Falkenstraße
-- **Wann:** 31.08.2026 00:00
-- **Wo:** —
-- **Angezeigt als:** vermutlich kostenfrei — Quelle nennt `unklar` (Sicherheit: niedrig)
-- **Beleg:** _kein Hinweis im Text gefunden_
-- **Quelle:** https://veranstaltungen.merkur.de/freising/vollsperrung-der-falkenstrasse-ef950279a28b8839418b1eca47f842b9a.html
-
 ## Die Demokratie feiern – gemeinsam in Freising
 - **Wann:** 02.10.2026 18:00
 - **Wo:** —

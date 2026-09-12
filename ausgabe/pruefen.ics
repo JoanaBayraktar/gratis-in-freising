@@ -24,7 +24,7 @@ END:STANDARD
 END:VTIMEZONE
 BEGIN:VEVENT
 UID:9dbb539d76866b10@gratis-freising
-DTSTAMP:20260911T080809Z
+DTSTAMP:20260912T080011Z
 DTSTART;VALUE=DATE:20260518
 DTEND;VALUE=DATE:20261019
 SUMMARY:TUM tanzt! (vermutlich frei)
@@ -44,7 +44,7 @@ CATEGORIES:Kunst
 END:VEVENT
 BEGIN:VEVENT
 UID:d2b3c21197115322@gratis-freising
-DTSTAMP:20260911T080809Z
+DTSTAMP:20260912T080011Z
 DTSTART;VALUE=DATE:20260822
 DTEND;VALUE=DATE:20260917
 SUMMARY:Sauna-Sommerpause (vermutlich frei)
@@ -63,7 +63,7 @@ CATEGORIES:Sonstiges
 END:VEVENT
 BEGIN:VEVENT
 UID:098b51d483430017@gratis-freising
-DTSTAMP:20260911T080809Z
+DTSTAMP:20260912T080011Z
 DTSTART;VALUE=DATE:20260825
 DTEND;VALUE=DATE:20260928
 SUMMARY:Archetypen männlicher Grenzüberschreitung (vermutlich frei)
@@ -79,42 +79,8 @@ URL:https://veranstaltungen.merkur.de/freising/archetypen-maennlicher-grenz
 CATEGORIES:Kunst
 END:VEVENT
 BEGIN:VEVENT
-UID:230977a7b828abe9@gratis-freising
-DTSTAMP:20260911T080809Z
-DTSTART;VALUE=DATE:20260831
-DTEND;VALUE=DATE:20260912
-SUMMARY:Busumleitungen (vermutlich frei)
-LOCATION:85356 Freising
-DESCRIPTION:Wegen Bauarbeiten in der Falkenstraße und Moosstraße werden d
- ie Buslinien 643\, 653 und 654 umgeleitet. Betroffene Haltestellen entfall
- en ersatzlos oder werden durch Ersatzhaltestellen bedient.\n\nEintritt: ve
- rmutlich kostenfrei (Quelle nennt: unklar)\nSicherheit: niedrig\n\nKategor
- ie: Sonstiges\nZielgruppe: Alle\n\nQuelle: https://veranstaltungen.merkur.
- de/freising/busumleitungen-e0a84c8ffb66e751f99eec2079161e181.html
-URL:https://veranstaltungen.merkur.de/freising/busumleitungen-e0a84c8ffb66e
- 751f99eec2079161e181.html
-CATEGORIES:Sonstiges
-END:VEVENT
-BEGIN:VEVENT
-UID:518af2c284ed7269@gratis-freising
-DTSTAMP:20260911T080809Z
-DTSTART;VALUE=DATE:20260831
-DTEND;VALUE=DATE:20260912
-SUMMARY:Vollsperrung der Falkenstraße (vermutlich frei)
-LOCATION:85356 Freising
-DESCRIPTION:Die Falkenstraße ist wegen Reparaturarbeiten bis zum 11. Septe
- mber voll gesperrt. Es handelt sich um eine reine Verkehrseinschränkung o
- hne öffentliche Veranstaltung.\n\nEintritt: vermutlich kostenfrei (Quelle
-  nennt: unklar)\nSicherheit: niedrig\n\nKategorie: Sonstiges\nZielgruppe: 
- Alle\n\nQuelle: https://veranstaltungen.merkur.de/freising/vollsperrung-de
- r-falkenstrasse-ef950279a28b8839418b1eca47f842b9a.html
-URL:https://veranstaltungen.merkur.de/freising/vollsperrung-der-falkenstras
- se-ef950279a28b8839418b1eca47f842b9a.html
-CATEGORIES:Sonstiges
-END:VEVENT
-BEGIN:VEVENT
 UID:7658e605275a5d7e@gratis-freising
-DTSTAMP:20260911T080809Z
+DTSTAMP:20260912T080011Z
 DTSTART;TZID=Europe/Berlin:20261002T180000
 DTEND;TZID=Europe/Berlin:20261002T235900
 SUMMARY:Die Demokratie feiern – gemeinsam in Freising (vermutlich frei)
@@ -131,7 +97,7 @@ CATEGORIES:Fest
 END:VEVENT
 BEGIN:VEVENT
 UID:65bb11a7f5eb8520@gratis-freising
-DTSTAMP:20260911T080809Z
+DTSTAMP:20260912T080011Z
 DTSTART;TZID=Europe/Berlin:20261017T150000
 DTEND;TZID=Europe/Berlin:20261017T170000
 SUMMARY:Radl-Repair Café (vermutlich frei)
@@ -148,7 +114,7 @@ CATEGORIES:Sonstiges
 END:VEVENT
 BEGIN:VEVENT
 UID:4967f298af8ce4e8@gratis-freising
-DTSTAMP:20260911T080809Z
+DTSTAMP:20260912T080011Z
 DTSTART;VALUE=DATE:20261103
 DTEND;VALUE=DATE:20261104
 SUMMARY:[AUSGEBUCHT] Werkstatt für Jugendliche *ausgebucht* (vermutlich fr
@@ -167,7 +133,7 @@ CATEGORIES:Familie
 END:VEVENT
 BEGIN:VEVENT
 UID:afbec4c70d42c16c@gratis-freising
-DTSTAMP:20260911T080809Z
+DTSTAMP:20260912T080011Z
 DTSTART;TZID=Europe/Berlin:20261121T090000
 DTEND;TZID=Europe/Berlin:20261121T160000
 SUMMARY:Holzwerken für Einsteiger*innen (vermutlich frei)
@@ -185,7 +151,7 @@ CATEGORIES:Sonstiges
 END:VEVENT
 BEGIN:VEVENT
 UID:57463acfa527e414@gratis-freising
-DTSTAMP:20260911T080809Z
+DTSTAMP:20260912T080011Z
 DTSTART;TZID=Europe/Berlin:20261205T090000
 DTEND;TZID=Europe/Berlin:20261205T160000
 SUMMARY:Holzwerken für Einsteiger*innen (vermutlich frei)
