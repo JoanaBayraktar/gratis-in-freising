@@ -3694,7 +3694,7 @@
         "https://veranstaltungen.merkur.de/freising/ausstellung-federfriends-lebensfreude-und-leichtigkeit-ef1b10a39f435ec0468021135c8194c73.html",
         "https://veranstaltungen.merkur.de/freising/ausstellung-federfriends-lebensfreude-und-leichtigkeit-e50b0667ae14e84c7e12e07a084c07252.html"
       ],
-      "status": "aktiv",
+      "status": "vergangen",
       "zuerst_gesehen": "2026-08-23",
       "zuletzt_gesehen": "2026-09-03",
       "manuell_bestaetigt": false,
@@ -3915,7 +3915,7 @@
       "quellen_weitere": [
         "https://veranstaltungen.merkur.de/freising/volksfest-freising-2026-ee28d5ce8f923eb3763e27fa85135531c.html"
       ],
-      "status": "aktiv",
+      "status": "vergangen",
       "zuerst_gesehen": "2026-08-23",
       "zuletzt_gesehen": "2026-09-03",
       "manuell_bestaetigt": false,
@@ -4544,7 +4544,7 @@
       "id": "1bae3be80b72cfb5",
       "social_text": null,
       "quellen_weitere": [],
-      "status": "aktiv",
+      "status": "vergangen",
       "zuerst_gesehen": "2026-08-31",
       "zuletzt_gesehen": "2026-09-03",
       "manuell_bestaetigt": false
@@ -4606,7 +4606,7 @@
       "id": "ca34428ba68e16a8",
       "social_text": null,
       "quellen_weitere": [],
-      "status": "aktiv",
+      "status": "vergangen",
       "zuerst_gesehen": "2026-08-31",
       "zuletzt_gesehen": "2026-09-03",
       "manuell_bestaetigt": false
