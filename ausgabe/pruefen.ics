@@ -24,7 +24,7 @@ END:STANDARD
 END:VTIMEZONE
 BEGIN:VEVENT
 UID:9dbb539d76866b10@gratis-freising
-DTSTAMP:20260916T084045Z
+DTSTAMP:20260917T084505Z
 DTSTART;VALUE=DATE:20260518
 DTEND;VALUE=DATE:20261019
 SUMMARY:TUM tanzt! (vermutlich frei)
@@ -43,27 +43,8 @@ URL:https://www.tum.de/aktuelles/veranstaltungen/terminuebersicht?tx_solr%5
 CATEGORIES:Kunst
 END:VEVENT
 BEGIN:VEVENT
-UID:d2b3c21197115322@gratis-freising
-DTSTAMP:20260916T084045Z
-DTSTART;VALUE=DATE:20260822
-DTEND;VALUE=DATE:20260917
-SUMMARY:Sauna-Sommerpause (vermutlich frei)
-LOCATION:Kneippgarten Freising — Am Kneippgarten 10
-DESCRIPTION:Die Sauna im Kneippgarten Freising bleibt aufgrund der Sommerpa
- use bis Mitte September geschlossen. Ein idealer Zeitpunkt für eine Ausze
- it oder um die Natur zu genießen.\n\nEintritt: vermutlich kostenfrei (Que
- lle nennt: unklar)\nSicherheit: niedrig\n\nKategorie: Sonstiges\nZielgrupp
- e: Alle\nDrinnen/Draussen: drinnen\n\nQuelle: https://veranstaltungen.merk
- ur.de/freising/sauna-sommerpause-e65c8a94e2f8c29083a73af76b53f02cc.html\nA
- uch bei: https://veranstaltungen.merkur.de/freising/sauna-sommerpause-eb2e
- 4c496310e0dcf38004dd2df28cee8.html
-URL:https://veranstaltungen.merkur.de/freising/sauna-sommerpause-e65c8a94e2
- f8c29083a73af76b53f02cc.html
-CATEGORIES:Sonstiges
-END:VEVENT
-BEGIN:VEVENT
 UID:098b51d483430017@gratis-freising
-DTSTAMP:20260916T084045Z
+DTSTAMP:20260917T084505Z
 DTSTART;VALUE=DATE:20260825
 DTEND;VALUE=DATE:20260928
 SUMMARY:Archetypen männlicher Grenzüberschreitung (vermutlich frei)
@@ -80,7 +61,7 @@ CATEGORIES:Kunst
 END:VEVENT
 BEGIN:VEVENT
 UID:7658e605275a5d7e@gratis-freising
-DTSTAMP:20260916T084045Z
+DTSTAMP:20260917T084505Z
 DTSTART;TZID=Europe/Berlin:20261002T180000
 DTEND;TZID=Europe/Berlin:20261002T235900
 SUMMARY:Die Demokratie feiern – gemeinsam in Freising (vermutlich frei)
@@ -97,7 +78,7 @@ CATEGORIES:Fest
 END:VEVENT
 BEGIN:VEVENT
 UID:65bb11a7f5eb8520@gratis-freising
-DTSTAMP:20260916T084045Z
+DTSTAMP:20260917T084505Z
 DTSTART;TZID=Europe/Berlin:20261017T150000
 DTEND;TZID=Europe/Berlin:20261017T170000
 SUMMARY:Radl-Repair Café (vermutlich frei)
@@ -114,7 +95,7 @@ CATEGORIES:Sonstiges
 END:VEVENT
 BEGIN:VEVENT
 UID:4967f298af8ce4e8@gratis-freising
-DTSTAMP:20260916T084045Z
+DTSTAMP:20260917T084505Z
 DTSTART;VALUE=DATE:20261103
 DTEND;VALUE=DATE:20261104
 SUMMARY:[AUSGEBUCHT] Werkstatt für Jugendliche *ausgebucht* (vermutlich fr
@@ -133,7 +114,7 @@ CATEGORIES:Familie
 END:VEVENT
 BEGIN:VEVENT
 UID:afbec4c70d42c16c@gratis-freising
-DTSTAMP:20260916T084045Z
+DTSTAMP:20260917T084505Z
 DTSTART;TZID=Europe/Berlin:20261121T090000
 DTEND;TZID=Europe/Berlin:20261121T160000
 SUMMARY:Holzwerken für Einsteiger*innen (vermutlich frei)
@@ -151,7 +132,7 @@ CATEGORIES:Sonstiges
 END:VEVENT
 BEGIN:VEVENT
 UID:57463acfa527e414@gratis-freising
-DTSTAMP:20260916T084045Z
+DTSTAMP:20260917T084505Z
 DTSTART;TZID=Europe/Berlin:20261205T090000
 DTEND;TZID=Europe/Berlin:20261205T160000
 SUMMARY:Holzwerken für Einsteiger*innen (vermutlich frei)

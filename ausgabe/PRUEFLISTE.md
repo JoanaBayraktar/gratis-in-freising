@@ -12,13 +12,6 @@ Eintrag nicht mehr an.
 - **Beleg:** TUM tanzt! geht 2026 in die zweite Runde. Mit vielen Angeboten zum Mitmachen, Diskutieren und Erleben.
 - **Quelle:** https://www.tum.de/aktuelles/veranstaltungen/terminuebersicht?tx_solr%5Bfilter%5D%5B0%5D=location%3AFreising
 
-## Sauna-Sommerpause
-- **Wann:** 22.08.2026 00:00
-- **Wo:** Kneippgarten Freising
-- **Angezeigt als:** vermutlich kostenfrei — Quelle nennt `unklar` (Sicherheit: niedrig)
-- **Beleg:** _kein Hinweis im Text gefunden_
-- **Quelle:** https://veranstaltungen.merkur.de/freising/sauna-sommerpause-e65c8a94e2f8c29083a73af76b53f02cc.html
-
 ## Archetypen männlicher Grenzüberschreitung
 - **Wann:** 25.08.2026 00:00
 - **Wo:** Galerie am Lindenkeller
