@@ -12,13 +12,6 @@ Eintrag nicht mehr an.
 - **Beleg:** TUM tanzt! geht 2026 in die zweite Runde. Mit vielen Angeboten zum Mitmachen, Diskutieren und Erleben.
 - **Quelle:** https://www.tum.de/aktuelles/veranstaltungen/terminuebersicht?tx_solr%5Bfilter%5D%5B0%5D=location%3AFreising
 
-## Archetypen männlicher Grenzüberschreitung
-- **Wann:** 25.08.2026 00:00
-- **Wo:** Galerie am Lindenkeller
-- **Angezeigt als:** vermutlich kostenfrei — Quelle nennt `unklar` (Sicherheit: niedrig)
-- **Beleg:** _kein Hinweis im Text gefunden_
-- **Quelle:** https://veranstaltungen.merkur.de/freising/archetypen-maennlicher-grenzueberschreitung-e184f7b19ce85ba7696afcbd77c161681.html
-
 ## Die Demokratie feiern – gemeinsam in Freising
 - **Wann:** 02.10.2026 18:00
 - **Wo:** —

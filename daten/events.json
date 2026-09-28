@@ -513,7 +513,7 @@
         "https://veranstaltungen.merkur.de/freising/ein-leben-in-farben-die-malerin-ruth-kohler-ee16be01a76426e348a07f44cfc34baff.html",
         "https://veranstaltungen.freising.de/freising/ein-leben-in-farben-die-malerin-ruth-kohler-ee16be01a76426e348a07f44cfc34baff.html"
       ],
-      "status": "aktiv",
+      "status": "vergangen",
       "zuerst_gesehen": "2026-08-19",
       "zuletzt_gesehen": "2026-08-19",
       "manuell_bestaetigt": false,
@@ -1838,7 +1838,7 @@
       "id": "098b51d483430017",
       "social_text": null,
       "quellen_weitere": [],
-      "status": "aktiv",
+      "status": "vergangen",
       "zuerst_gesehen": "2026-08-25",
       "zuletzt_gesehen": "2026-08-25",
       "manuell_bestaetigt": false
@@ -5566,7 +5566,7 @@
       "quellen_weitere": [
         "https://www.vhs-freising.org/p/fachbereiche/vhs-kostenfrei-633-CAT-KAT332"
       ],
-      "status": "aktiv",
+      "status": "vergangen",
       "zuerst_gesehen": "2026-08-19",
       "zuletzt_gesehen": "2026-08-19",
       "manuell_bestaetigt": false,
