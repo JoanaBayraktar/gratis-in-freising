@@ -299,7 +299,7 @@
         "https://veranstaltungen.merkur.de/freising/spielraeume-eb28f1a2f8ffc9f18f3051d43da44cee1.html",
         "https://veranstaltungen.freising.de/freising/spielraeume-e685b1f3ac6ce7bd4a23fcebabeda2620.html"
       ],
-      "status": "aktiv",
+      "status": "vergangen",
       "zuerst_gesehen": "2026-08-19",
       "zuletzt_gesehen": "2026-09-03",
       "manuell_bestaetigt": false,
@@ -1869,7 +1869,7 @@
       "id": "ca79bf6f377f86b2",
       "social_text": null,
       "quellen_weitere": [],
-      "status": "aktiv",
+      "status": "vergangen",
       "zuerst_gesehen": "2026-08-25",
       "zuletzt_gesehen": "2026-08-25",
       "manuell_bestaetigt": false
@@ -3309,7 +3309,7 @@
       "id": "c8c722a240349e40",
       "social_text": null,
       "quellen_weitere": [],
-      "status": "aktiv",
+      "status": "vergangen",
       "zuerst_gesehen": "2026-08-30",
       "zuletzt_gesehen": "2026-08-31",
       "manuell_bestaetigt": false
