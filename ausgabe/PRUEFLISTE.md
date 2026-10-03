@@ -12,13 +12,6 @@ Eintrag nicht mehr an.
 - **Beleg:** TUM tanzt! geht 2026 in die zweite Runde. Mit vielen Angeboten zum Mitmachen, Diskutieren und Erleben.
 - **Quelle:** https://www.tum.de/aktuelles/veranstaltungen/terminuebersicht?tx_solr%5Bfilter%5D%5B0%5D=location%3AFreising
 
-## Die Demokratie feiern – gemeinsam in Freising
-- **Wann:** 02.10.2026 18:00
-- **Wo:** —
-- **Angezeigt als:** vermutlich kostenfrei — Quelle nennt `frei` (Sicherheit: niedrig)
-- **Beleg:** _kein Hinweis im Text gefunden_
-- **Quelle:** https://www.3klang-musik.de/freising.html
-
 ## Radl-Repair Café
 - **Wann:** 17.10.2026 15:00
 - **Wo:** Offene Werkstatt Freising
