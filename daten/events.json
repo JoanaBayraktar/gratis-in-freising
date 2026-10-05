@@ -4015,7 +4015,7 @@
       "quellen_weitere": [
         "https://veranstaltungen.freising.de/freising/oeffentliche-fuehrungen-im-staudensichtungsgarten-e6b8ef10abf7a4756d27664f5c2652aff.html"
       ],
-      "status": "aktiv",
+      "status": "vergangen",
       "zuerst_gesehen": "2026-08-23",
       "zuletzt_gesehen": "2026-09-03",
       "manuell_bestaetigt": false,
@@ -4823,7 +4823,7 @@
       "id": "bff32a186aa24dfa",
       "social_text": null,
       "quellen_weitere": [],
-      "status": "aktiv",
+      "status": "vergangen",
       "zuerst_gesehen": "2026-09-01",
       "zuletzt_gesehen": "2026-09-01",
       "manuell_bestaetigt": false
@@ -6000,7 +6000,7 @@
       "id": "ca4d9d225887207f",
       "social_text": null,
       "quellen_weitere": [],
-      "status": "aktiv",
+      "status": "vergangen",
       "zuerst_gesehen": "2026-08-19",
       "zuletzt_gesehen": "2026-09-03",
       "manuell_bestaetigt": false,
