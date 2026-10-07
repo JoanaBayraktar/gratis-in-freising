@@ -33,6 +33,7 @@ import yaml
 from jsonschema import Draft202012Validator
 
 from event_id import event_id
+from quellenstatus import konfigurieren, gesundheit_pruefen
 from datenpflege import (EVENT_SCHEMA as BESTAND_SCHEMA, heute_berlin, mit_archiv,
                         normalisieren, pruefen)
 
@@ -1040,25 +1041,6 @@ def aufraeumen(bestand: dict, heute: date, gelesen: set) -> None:
             ev["status"] = "verschwunden"
 
 
-def gesundheit_pruefen(status: dict, name: str, anzahl: int, fehler: str, heute: str) -> None:
-    """Punkt 19 des Plans: nicht nur Abstuerze melden, auch stille Ausfaelle."""
-    eintrag = status.setdefault(name, {"verlauf": [], "fehlversuche": 0})
-    if fehler:
-        eintrag["fehlversuche"] += 1
-        eintrag["letzter_fehler"] = f"{heute}: {fehler}"
-        print(f"    FEHLER ({eintrag['fehlversuche']}. Mal in Folge): {fehler}")
-        return
-
-    eintrag["fehlversuche"] = 0
-    eintrag["letzter_erfolg"] = heute
-    verlauf = eintrag["verlauf"]
-    if verlauf and anzahl == 0 and max(verlauf) >= 3:
-        print(f"    WARNUNG: 0 Events, sonst bis zu {max(verlauf)}. "
-              f"Seite vermutlich umgebaut.")
-    verlauf.append(anzahl)
-    eintrag["verlauf"] = verlauf[-10:]
-
-
 # ---------------------------------------------------------------- Ablauf
 
 def main() -> None:
@@ -1077,6 +1059,7 @@ def main() -> None:
     bestand = json.loads(DATEN.read_text(encoding="utf-8"))
     archivierte = mit_archiv({"events": []}, BASIS / "daten/archiv")["events"]
     status = json.loads(STATUS.read_text(encoding="utf-8")) if STATUS.exists() else {}
+    konfigurieren(status, konfig["quellen"])
     heute = heute_berlin()
     heute_s = heute.isoformat()
     summe_neu = summe_geaendert = 0
@@ -1119,6 +1102,9 @@ def main() -> None:
           f"{len(bestand['events'])} insgesamt.")
     if kaputt:
         print(f"Seit drei Laeufen ohne Erfolg: {', '.join(kaputt)}")
+    probleme = [q["name"] for q in quellen if status[q["name"]].get("fehlversuche")]
+    if probleme:
+        print(f"::warning::{len(probleme)} Quellen konnten nicht aktualisiert werden: {', '.join(probleme)}")
 
 
 if __name__ == "__main__":

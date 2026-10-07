@@ -14,7 +14,11 @@
     ],
     "fehlversuche": 34,
     "letzter_erfolg": "2026-09-03",
-    "letzter_fehler": "2026-10-07: HTTPError: HTTP Error 429: Too Many Requests: {\"object\":\"error\",\"message\":\"Rate limit exceeded\",\"type\":\"rate_limited\",\"param\":null,\"code\":\"1300\",\"raw_status_code\":429}"
+    "letzter_fehler": "2026-10-07: HTTPError: HTTP Error 429: Too Many Requests: {\"object\":\"error\",\"message\":\"Rate limit exceeded\",\"type\":\"rate_limited\",\"param\":null,\"code\":\"1300\",\"raw_status_code\":429}",
+    "aktiv": true,
+    "url": "https://veranstaltungen.freising.de/freising/",
+    "methode": "text",
+    "zuletzt_gefunden": 24
   },
   "Merkur Veranstaltungen": {
     "verlauf": [
@@ -31,7 +35,11 @@
     ],
     "fehlversuche": 35,
     "letzter_erfolg": "2026-09-02",
-    "letzter_fehler": "2026-10-07: HTTPError: HTTP Error 429: Too Many Requests: {\"object\":\"error\",\"message\":\"Rate limit exceeded\",\"type\":\"rate_limited\",\"param\":null,\"code\":\"1300\",\"raw_status_code\":429}"
+    "letzter_fehler": "2026-10-07: HTTPError: HTTP Error 429: Too Many Requests: {\"object\":\"error\",\"message\":\"Rate limit exceeded\",\"type\":\"rate_limited\",\"param\":null,\"code\":\"1300\",\"raw_status_code\":429}",
+    "aktiv": true,
+    "url": "https://veranstaltungen.merkur.de/freising/?suche&datumspezial=abheute&kms=5",
+    "methode": "text",
+    "zuletzt_gefunden": 28
   },
   "Schafhof Kunstforum": {
     "verlauf": [
@@ -48,7 +56,11 @@
     ],
     "fehlversuche": 34,
     "letzter_erfolg": "2026-09-03",
-    "letzter_fehler": "2026-10-07: HTTPError: HTTP Error 429: Too Many Requests: {\"object\":\"error\",\"message\":\"Rate limit exceeded\",\"type\":\"rate_limited\",\"param\":null,\"code\":\"1300\",\"raw_status_code\":429}"
+    "letzter_fehler": "2026-10-07: HTTPError: HTTP Error 429: Too Many Requests: {\"object\":\"error\",\"message\":\"Rate limit exceeded\",\"type\":\"rate_limited\",\"param\":null,\"code\":\"1300\",\"raw_status_code\":429}",
+    "aktiv": true,
+    "url": "https://www.schafhof-kunstforum.de/Aktuell/Veranstaltungskalender/",
+    "methode": "text",
+    "zuletzt_gefunden": 7
   },
   "Furtner Freising": {
     "verlauf": [
@@ -65,7 +77,11 @@
     ],
     "fehlversuche": 35,
     "letzter_erfolg": "2026-09-02",
-    "letzter_fehler": "2026-10-07: HTTPError: HTTP Error 429: Too Many Requests: {\"object\":\"error\",\"message\":\"Rate limit exceeded\",\"type\":\"rate_limited\",\"param\":null,\"code\":\"1300\",\"raw_status_code\":429}"
+    "letzter_fehler": "2026-10-07: HTTPError: HTTP Error 429: Too Many Requests: {\"object\":\"error\",\"message\":\"Rate limit exceeded\",\"type\":\"rate_limited\",\"param\":null,\"code\":\"1300\",\"raw_status_code\":429}",
+    "aktiv": true,
+    "url": "https://furtner-freising.de/wp-json/tribe/events/v1/events?per_page=50",
+    "methode": "tribe",
+    "zuletzt_gefunden": 22
   },
   "Einfach selber machen": {
     "verlauf": [
@@ -82,7 +98,11 @@
     ],
     "fehlversuche": 34,
     "letzter_erfolg": "2026-09-03",
-    "letzter_fehler": "2026-10-07: HTTPError: HTTP Error 429: Too Many Requests: {\"object\":\"error\",\"message\":\"Rate limit exceeded\",\"type\":\"rate_limited\",\"param\":null,\"code\":\"1300\",\"raw_status_code\":429}"
+    "letzter_fehler": "2026-10-07: HTTPError: HTTP Error 429: Too Many Requests: {\"object\":\"error\",\"message\":\"Rate limit exceeded\",\"type\":\"rate_limited\",\"param\":null,\"code\":\"1300\",\"raw_status_code\":429}",
+    "aktiv": true,
+    "url": "https://einfach-selber-machen.org/wp-json/tribe/events/v1/events?per_page=50",
+    "methode": "tribe",
+    "zuletzt_gefunden": 6
   },
   "vhs Freising — kostenfrei": {
     "verlauf": [
@@ -99,7 +119,11 @@
     ],
     "fehlversuche": 34,
     "letzter_erfolg": "2026-09-03",
-    "letzter_fehler": "2026-10-07: HTTPError: HTTP Error 429: Too Many Requests: {\"object\":\"error\",\"message\":\"Rate limit exceeded\",\"type\":\"rate_limited\",\"param\":null,\"code\":\"1300\",\"raw_status_code\":429}"
+    "letzter_fehler": "2026-10-07: HTTPError: HTTP Error 429: Too Many Requests: {\"object\":\"error\",\"message\":\"Rate limit exceeded\",\"type\":\"rate_limited\",\"param\":null,\"code\":\"1300\",\"raw_status_code\":429}",
+    "aktiv": true,
+    "url": "https://www.vhs-freising.org/p/fachbereiche/vhs-kostenfrei-633-CAT-KAT332",
+    "methode": "text",
+    "zuletzt_gefunden": 40
   },
   "Modern Studio": {
     "verlauf": [
@@ -116,7 +140,11 @@
     ],
     "fehlversuche": 35,
     "letzter_erfolg": "2026-09-02",
-    "letzter_fehler": "2026-10-07: HTTPError: HTTP Error 429: Too Many Requests: {\"object\":\"error\",\"message\":\"Rate limit exceeded\",\"type\":\"rate_limited\",\"param\":null,\"code\":\"1300\",\"raw_status_code\":429}"
+    "letzter_fehler": "2026-10-07: HTTPError: HTTP Error 429: Too Many Requests: {\"object\":\"error\",\"message\":\"Rate limit exceeded\",\"type\":\"rate_limited\",\"param\":null,\"code\":\"1300\",\"raw_status_code\":429}",
+    "aktiv": true,
+    "url": "https://modern-studio.de/termine/",
+    "methode": "text",
+    "zuletzt_gefunden": 4
   },
   "DAV Freising — Vortraege": {
     "verlauf": [
@@ -133,7 +161,11 @@
     ],
     "fehlversuche": 35,
     "letzter_erfolg": "2026-09-02",
-    "letzter_fehler": "2026-10-07: HTTPError: HTTP Error 429: Too Many Requests: {\"object\":\"error\",\"message\":\"Rate limit exceeded\",\"type\":\"rate_limited\",\"param\":null,\"code\":\"1300\",\"raw_status_code\":429}"
+    "letzter_fehler": "2026-10-07: HTTPError: HTTP Error 429: Too Many Requests: {\"object\":\"error\",\"message\":\"Rate limit exceeded\",\"type\":\"rate_limited\",\"param\":null,\"code\":\"1300\",\"raw_status_code\":429}",
+    "aktiv": true,
+    "url": "https://dav-freising.de/calendar-2/vortraege/",
+    "methode": "text",
+    "zuletzt_gefunden": 3
   },
   "3Klang Musik": {
     "verlauf": [
@@ -150,7 +182,11 @@
     ],
     "fehlversuche": 35,
     "letzter_erfolg": "2026-09-02",
-    "letzter_fehler": "2026-10-07: HTTPError: HTTP Error 429: Too Many Requests: {\"object\":\"error\",\"message\":\"Rate limit exceeded\",\"type\":\"rate_limited\",\"param\":null,\"code\":\"1300\",\"raw_status_code\":429}"
+    "letzter_fehler": "2026-10-07: HTTPError: HTTP Error 429: Too Many Requests: {\"object\":\"error\",\"message\":\"Rate limit exceeded\",\"type\":\"rate_limited\",\"param\":null,\"code\":\"1300\",\"raw_status_code\":429}",
+    "aktiv": true,
+    "url": "https://www.3klang-musik.de/freising.html",
+    "methode": "text",
+    "zuletzt_gefunden": 1
   },
   "TUM Freising": {
     "verlauf": [
@@ -167,6 +203,101 @@
     ],
     "fehlversuche": 35,
     "letzter_erfolg": "2026-09-02",
-    "letzter_fehler": "2026-10-07: HTTPError: HTTP Error 429: Too Many Requests: {\"object\":\"error\",\"message\":\"Rate limit exceeded\",\"type\":\"rate_limited\",\"param\":null,\"code\":\"1300\",\"raw_status_code\":429}"
+    "letzter_fehler": "2026-10-07: HTTPError: HTTP Error 429: Too Many Requests: {\"object\":\"error\",\"message\":\"Rate limit exceeded\",\"type\":\"rate_limited\",\"param\":null,\"code\":\"1300\",\"raw_status_code\":429}",
+    "aktiv": true,
+    "url": "https://www.tum.de/aktuelles/veranstaltungen/terminuebersicht?tx_solr%5Bfilter%5D%5B0%5D=location%3AFreising",
+    "methode": "text",
+    "zuletzt_gefunden": 9
+  },
+  "Aktive City Freising": {
+    "verlauf": [],
+    "fehlversuche": 0,
+    "aktiv": false,
+    "url": "https://aktivecityfreising.de/service/freisinger-stadttermine/",
+    "methode": "text"
+  },
+  "Stadtkirche Freising": {
+    "verlauf": [],
+    "fehlversuche": 0,
+    "aktiv": false,
+    "url": "https://www.stadtkirche-freising.de/termine/c/0",
+    "methode": "text"
+  },
+  "HSWT Veranstaltungskalender": {
+    "verlauf": [],
+    "fehlversuche": 0,
+    "aktiv": false,
+    "url": "https://www.hswt.de/newsroom/veranstaltungskalender",
+    "methode": "text"
+  },
+  "Domberg-Akademie": {
+    "verlauf": [],
+    "fehlversuche": 0,
+    "aktiv": false,
+    "url": "https://domberg-akademie.de/veranstaltungen",
+    "methode": "text"
+  },
+  "Bildungswerk Freising": {
+    "verlauf": [],
+    "fehlversuche": 0,
+    "aktiv": false,
+    "url": "https://bildungswerk-freising.de/suche/?suchbegriff=&ort=Freising&kategorie=ALL",
+    "methode": "text"
+  },
+  "Galerie 13": {
+    "verlauf": [],
+    "fehlversuche": 0,
+    "aktiv": false,
+    "url": "https://galerie13.net/ausstellungen/",
+    "methode": "text"
+  },
+  "Altes Gefaengnis Freising": {
+    "verlauf": [],
+    "fehlversuche": 0,
+    "aktiv": false,
+    "url": "https://www.altesgefaengnisfreising.de/ausstellungen",
+    "methode": "text"
+  },
+  "Freising evangelisch": {
+    "verlauf": [],
+    "fehlversuche": 0,
+    "aktiv": false,
+    "url": "https://freising-evangelisch.de/aktuelles/veranstaltungen/",
+    "methode": "text"
+  },
+  "HSG Freising — Kultur und Freizeit": {
+    "verlauf": [],
+    "fehlversuche": 0,
+    "aktiv": false,
+    "url": "https://hsg-freising.de/kultur-freizeit/",
+    "methode": "text"
+  },
+  "HSG Freising — International": {
+    "verlauf": [],
+    "fehlversuche": 0,
+    "aktiv": false,
+    "url": "https://hsg-freising.de/international/",
+    "methode": "text"
+  },
+  "uebrig.org": {
+    "verlauf": [],
+    "fehlversuche": 0,
+    "aktiv": false,
+    "url": "https://xn--brig-zra.org/aktuelles/",
+    "methode": "text"
+  },
+  "Genussgarten Freising": {
+    "verlauf": [],
+    "fehlversuche": 0,
+    "aktiv": false,
+    "url": "https://www.genussgarten-freising.de/biergarten-events-freising",
+    "methode": "text"
+  },
+  "Junkers Cafe": {
+    "verlauf": [],
+    "fehlversuche": 0,
+    "aktiv": false,
+    "url": "https://www.junkerscafe.de/kontrastprogramm/",
+    "methode": "text"
   }
 }
