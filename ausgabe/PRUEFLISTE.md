@@ -1,9 +1,8 @@
 # Pruefliste
 
 Faelle, bei denen der freie Eintritt nicht gesichert ist.
-Nach dem Pruefen in `daten/events.json` das Feld `eintritt` korrigieren
-und `manuell_bestaetigt` auf `true` setzen — dann fasst der Agent den
-Eintrag nicht mehr an.
+Optionales Nachschlagewerk; kein Pflichtschritt im taeglichen Ablauf.
+Korrekturen gehoeren in `daten/verwaltung.json`, nicht in den Importbestand.
 
 ## TUM tanzt!
 - **Wann:** 18.05.2026 00:00

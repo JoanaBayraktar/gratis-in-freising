@@ -465,15 +465,15 @@ dialog .fuss .hinweis { color: var(--leiser); font-size: 12px; flex: 1 1 200px; 
 
 <p class="fuss-text">
   Eingriffe stehen in <code>daten/verwaltung.json</code>, getrennt von
-  <code>daten/events.json</code>, das dem Sammellauf gehört. Kalender und
-  Tagesmail übernehmen sie beim nächsten nächtlichen Lauf; diese Seite und die
+  <code>daten/events.json</code>, das dem Sammellauf gehört. Kalender
+  übernehmen sie beim nächsten nächtlichen Lauf; diese Seite und die
   öffentliche Übersicht zeigen sie sofort.
 </p>
 
 </div>
 <script>
 /* ================================================================
-   Die Meldestelle — dieselbe Adresse wie in index.html.
+   Optionaler Verwaltungs-Worker für das Speichern manueller Eingriffe.
    ================================================================ */
 const MELDESTELLE = "";
 
@@ -844,7 +844,7 @@ async function speichern() {
       korrekturen: V.korrekturen, ausgeblendet: V.ausgeblendet }, sha: SHA });
     SHA = d.sha; SCHMUTZIG = false;
     melde("Gespeichert. Die öffentliche Übersicht zeigt es sofort, "
-        + "Kalender und Mail beim nächsten nächtlichen Lauf.");
+        + "Kalender beim nächsten nächtlichen Lauf.");
     zeichnen();
   } catch (f) {
     if (f.status === 409)
@@ -904,7 +904,7 @@ $("#neu").addEventListener("click", async () => {
     dauertermin: false, besonderheit: null, anmeldung_url: null, bild_url: null,
     quelle_url: null, quellen_weitere: [], quelle_name: "Von Hand",
     eintritt: "frei", eintritt_beleg: "Von Hand eingetragen.",
-    eintritt_confidence: "hoch", social_text: null, status: "aktiv",
+    eintritt_confidence: "hoch", status: "aktiv",
     zuerst_gesehen: heute, zuletzt_gesehen: heute, manuell_bestaetigt: true,
   };
   V.eigene.push(ev); SCHMUTZIG = true;

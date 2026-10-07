@@ -203,9 +203,8 @@ def pruefliste_schreiben(pfad: pathlib.Path, events: list) -> None:
         "# Pruefliste",
         "",
         "Faelle, bei denen der freie Eintritt nicht gesichert ist.",
-        "Nach dem Pruefen in `daten/events.json` das Feld `eintritt` korrigieren",
-        "und `manuell_bestaetigt` auf `true` setzen — dann fasst der Agent den",
-        "Eintrag nicht mehr an.",
+        "Optionales Nachschlagewerk; kein Pflichtschritt im taeglichen Ablauf.",
+        "Korrekturen gehoeren in `daten/verwaltung.json`, nicht in den Importbestand.",
         "",
     ]
     if not events:
@@ -239,7 +238,7 @@ def main() -> None:
         # Mehrtaegiges zaehlt, solange es laeuft — nicht nur bis zu seinem
         # Anfang. Sonst faellt jede laufende Ausstellung aus dem Kalender.
         if max((ev.get("ende") or "")[:10], (ev.get("beginn") or "")[:10]) >= heute
-        and ev.get("status") != "verschwunden"
+        and ev.get("status") not in ("verschwunden", "vergangen")
     ]
 
     # Der oeffentliche Kalender zeigt alles, was nicht nachweislich Geld

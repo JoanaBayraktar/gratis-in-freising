@@ -8,8 +8,8 @@ web
 
 ## Users
 
-**Betreiberin (primär).** Pflegt die Sammlung: sichtet wöchentlich die unklaren
-Fälle, korrigiert Ort- und Preisangaben, trägt Termine ein, die keine Quelle
+**Betreiberin (primär).** Pflegt die Sammlung: korrigiert bei Bedarf Ort- und
+Preisangaben, trägt Termine ein, die keine Quelle
 liefert, und blendet aus, was keine Veranstaltung ist. Arbeitet **ernsthaft an
 beiden Geräten** — am Mac für längere Durchgänge, am Handy für Einzelfälle
 unterwegs. Die dichte Tabelle muss deshalb am Telefon eine eigene Darstellung
@@ -20,22 +20,27 @@ weitere Personen pflegen gemeinsam. Jede bekommt einen **eigenen Zugang**; ein
 geteiltes Passwort genügt nicht, weil nachvollziehbar bleiben muss, wer was
 geändert hat.
 
-**Veranstalter (später).** Sollen eigene Termine einreichen und deren Status
-sehen. Heute läuft das über ein Formular, das ein GitHub-Issue erzeugt.
+**Veranstalter (später).** Eine mögliche spätere Erweiterung. Einreichung und
+Übernahme von Meldungen sind derzeit pausiert; es gibt kein öffentliches Meldeformular.
 
 **Leserinnen und Leser: heute ein kleiner, bekannter Kreis.** Kein breites
-Stadtpublikum. Sie bekommen die Tagesmail, abonnieren den Kalender oder sehen
+Stadtpublikum. Sie abonnieren den Kalender oder sehen
 auf die Übersichtsseite.
 
 ## Product Purpose
 
-Veranstaltungen in Freising, die nichts kosten, automatisch zusammentragen und
-in drei Formen ausliefern: eine Tagesmail, einen abonnierbaren Kalender und
-eine Übersichtsseite. Der Zweck ist, dass niemand zehn Veranstalterseiten
+Veranstaltungen in Freising, die nichts kosten, automatisch zusammentragen,
+vereinheitlichen und als zuverlässigen Datenbestand bereitstellen. Kalender
+und Übersichtsseite machen ihn nutzbar. Der Zweck ist, dass niemand zehn Veranstalterseiten
 durchsehen muss, um zu erfahren, was heute umsonst stattfindet.
 
-Erfolg heißt: Die Mail kommt jeden Morgen, sie stimmt, und sie kostet fast
-keine laufende Arbeit.
+Erfolg heißt: Die Sammlung aktualisiert sich zuverlässig, Termine und
+Quellenbelege sind nachvollziehbar, und der Betrieb kostet wenig Handarbeit.
+
+**Aktueller Fokus (07.10.2026):** Sammeln und Aufbereiten der Daten.
+Social-Entwürfe sind entfernt. Meldungsübernahme, Mailerzeugung und Versand
+sind im Standardlauf ausgeschaltet. Zusätzliche KI-Nachprüfung und spätere
+Plattformfunktionen gehören derzeit nicht zum laufenden Workflow.
 
 ## Positioning
 
@@ -54,12 +59,13 @@ trauen kann.
 - Die laufenden Kosten liegen bei etwa 25 Cent im Monat (Modellabfragen).
 - Das Repository ist **öffentlich**. Alle Daten liegen für jeden lesbar da;
   Geheimhaltung ist bauartbedingt unmöglich.
-- Ein Cloudflare Worker ist das einzige serverseitige Stück. Er hält den
-  GitHub-Token, den eine statische Seite nicht haben darf.
-- Rund 15 Minuten Handarbeit pro Woche sind eingeplant: Prüfliste durchsehen,
-  Meldungen freigeben, Quellenstatus prüfen.
-- Meldungen von außen laufen über ein Formular in ein GitHub-Issue und werden
-  erst mit dem Etikett `freigegeben` übernommen.
+- Für Sammlung und Datenaufbereitung wird kein externer Server benötigt.
+  Ein vorhandener Cloudflare Worker kann später die manuelle Verwaltung
+  unterstützen; er gehört nicht zum Sammelworkflow.
+- Keine verpflichtende woechentliche Pruefrunde. Automatische Formatpruefung
+  laeuft vor jedem Speichern; unklare Eintrittsangaben werden sichtbar markiert.
+  Handarbeit fällt nur bei Ergänzungen, Korrekturen oder Fehlern an.
+- Keine automatische Übernahme von Meldungen oder GitHub-Issues.
 
 ## Capabilities and Constraints
 
@@ -101,26 +107,26 @@ Störungsfall an Arbeit erzeugt.
 
 ## Evidence on Hand
 
-- `daten/events.json` — 139 Termine aus 10 aktiven Quellen
+- `daten/events.json` — Arbeitsbestand mit aktuellen Terminen und 30 Tagen Rueckblick
+- `daten/archiv/` — aeltere Termine, weiterhin mit IDs und Quellenbelegen
 - `quellen.yml` — 23 geprüfte Quellen, davon 10 nutzbar, mit Messwerten
-- `ausgabe/` — Kalenderdateien, Tagesmail, Prüfliste, Social-Entwürfe
+- `ausgabe/` — Kalenderdateien und freiwillige Prüfliste; Maildateien sind Altbestand
 - `daten/quellen-status.json` — Gesundheitsverlauf je Quelle
 
 **Nicht vorhanden und nicht zu erfinden:** Nutzerzahlen, Abonnentenzahlen,
 Presseerwähnungen, Empfehlungen, Partnerschaften mit der Stadt oder mit
 Veranstaltern.
 
-## Ausbaustufen (entschieden am 22.08.2026)
+## Ausbau
 
-Das Ziel ist eine Plattform mit Konten, Rollen, Veranstaltereinreichung,
-Werbekunden, Kampagnen und Rechnungen. Der Weg dorthin ist **stufenweise und
-an Belege geknüpft**, nicht an Absicht.
+Zunächst muss der kleine Betrieb mit Sammlung, Datenpflege, Archiv und
+Darstellung funktionieren. Erweiterungen werden erst danach nach tatsächlichem
+Bedarf entschieden. Die früheren Plattformpläne sind zurückgestellt.
 
-1. **Bestehend:** Sammellauf, Kalender, Tagesmail, öffentliche Übersicht,
+1. **Bestehend:** Sammellauf, Kalender, öffentliche Übersicht,
    interner Bereich.
-2. **Als Nächstes, in der heutigen Bauart:** eigene Zugänge je Pflegender,
-   Event-Detailseite mit Teilen-Knöpfen, Einreichung mit sichtbarem Status für
-   Veranstalter, Kategorienpflege.
+2. **Im aktuellen Fokus:** Datenqualität, nachvollziehbarer Quellenstatus,
+   wartbarer Workflow und einfache Korrekturen.
 3. **Neubau, erst wenn Stufe 2 im Betrieb ist und Veranstalter tatsächlich von
    sich aus einreichen:** Konten, Rollen, Werbekunden, Kampagnen, Rechnungen,
    Metriken. Das braucht Datenbank und Server; die heutige Bauart ohne Server

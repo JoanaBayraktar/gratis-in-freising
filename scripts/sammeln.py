@@ -17,6 +17,7 @@ Der teure Teil ist das HTML. Nach dem Bereinigen bleiben von einer typischen
 Seite rund 5 Prozent uebrig, und genau das haelt die Kosten im Centbereich.
 """
 import collections
+import copy
 import html
 import json
 import os
@@ -29,8 +30,11 @@ from datetime import date, datetime, timedelta
 from urllib.parse import urljoin, urlparse
 
 import yaml
+from jsonschema import Draft202012Validator
 
 from event_id import event_id
+from datenpflege import (EVENT_SCHEMA as BESTAND_SCHEMA, heute_berlin, mit_archiv,
+                        normalisieren, pruefen)
 
 BASIS = pathlib.Path(__file__).resolve().parent.parent
 QUELLEN = BASIS / "quellen.yml"
@@ -195,49 +199,21 @@ unveraendert zurueck.
 
 TEXTFELD = {"type": ["string", "null"]}
 
+
+# Ein gemeinsames Schema fuer Ablage und Modell. Metadaten vergibt der Import.
 EVENT_SCHEMA = {
     "type": "object",
-    "properties": {
-        "titel": {"type": "string"},
-        "beginn": {"type": "string"},
-        "ende": TEXTFELD,
-        "ganztaegig": {"type": "boolean"},
-        "ort_name": TEXTFELD,
-        "ort_adresse": TEXTFELD,
-        "veranstalter": TEXTFELD,
-        "beschreibung": TEXTFELD,
-        "kategorie": {"type": "string", "enum": [
-            "Musik", "Kunst", "Familie", "Vortrag", "Markt", "Sport", "Fest", "Sonstiges"]},
-        "zielgruppe": {"type": "string", "enum": [
-            "Alle", "Familien", "Kinder", "Jugendliche", "Erwachsene", "Senioren"]},
-        "drinnen_draussen": {"type": ["string", "null"], "enum": [
-            "drinnen", "draussen", "beides", None]},
-        "anmeldung_noetig": {"type": "boolean"},
-        "ausgebucht": {"type": "boolean"},
-        "dauertermin": {
-            "type": "boolean",
-            "description": "Laeuft die Veranstaltung ueber mehrere Tage "
-                           "(Ausstellung, Markt, Programmreihe), auch wenn die "
-                           "Seite sie nur mit dem heutigen Datum fuehrt?"},
-        "besonderheit": {
-            "type": ["string", "null"],
-            "description": "Falls Dauertermin: Gibt es an diesem Tag etwas, das "
-                           "es an den uebrigen Tagen nicht gibt — Vernissage, "
-                           "Eroeffnung, Fuehrung, Abschluss? Sonst null."},
-        "anmeldung_url": TEXTFELD,
-        "bild_url": TEXTFELD,
-        "quelle_url": TEXTFELD,
-        "eintritt": {"type": "string", "enum": [
-            "frei", "spende", "kostenpflichtig", "unklar"]},
-        "eintritt_beleg": TEXTFELD,
-        "eintritt_confidence": {"type": "string", "enum": ["hoch", "mittel", "niedrig"]},
-    },
-    "required": ["titel", "beginn", "ganztaegig", "kategorie", "zielgruppe",
-                 "anmeldung_noetig", "eintritt", "eintritt_confidence"],
+    "additionalProperties": False,
+    "properties": {k: v for k, v in BESTAND_SCHEMA["properties"].items()
+                   if k not in {"id", "quelle_name", "quellen_weitere", "status",
+                                "zuerst_gesehen", "zuletzt_gesehen",
+                                "manuell_bestaetigt"}},
 }
+EVENT_SCHEMA["required"] = list(EVENT_SCHEMA["properties"])
 
 EINSTUFUNG_SCHEMA = {
     "type": "object",
+    "additionalProperties": False,
     "properties": {
         "nummer": {"type": "integer"},
         "beschreibung": TEXTFELD,
@@ -289,7 +265,9 @@ def modell_antwort(system: str, inhalt: str, schema: dict, name: str) -> dict:
     verbrauch = ergebnis.get("usage", {})
     print(f"    Tokens: {verbrauch.get('prompt_tokens', '?')} rein, "
           f"{verbrauch.get('completion_tokens', '?')} raus")
-    return json.loads(ergebnis["choices"][0]["message"]["content"])
+    antwort = json.loads(ergebnis["choices"][0]["message"]["content"])
+    Draft202012Validator(schema).validate(antwort)
+    return antwort
 
 
 def modell_fragen(system: str, inhalt: str, element_schema: dict) -> list:
@@ -740,11 +718,18 @@ def ignorieren(roh: dict) -> bool:
     return any(m.search(roh.get("titel") or "") for m in IGNORIEREN)
 
 
-def zusammenfuehren(bestand: dict, gefunden: list, quelle: dict, heute: str) -> tuple:
+def zusammenfuehren(bestand: dict, gefunden: list, quelle: dict, heute: str,
+                   archivierte: list = ()) -> tuple:
     # Ein Event steht unter jedem seiner Schluessel im Verzeichnis, damit es
     # auch dann gefunden wird, wenn die neue Fassung nur einen davon teilt.
     verzeichnis = {}
     for vorhanden in bestand["events"]:
+        for kennung in schluessel(vorhanden):
+            verzeichnis.setdefault(kennung, vorhanden)
+    # Archiv dient nur zum Wiedererkennen. Nicht gelieferte historische
+    # Eintraege nehmen nicht erneut an der inhaltlichen Zusammenfuehrung teil.
+    aktive_ids = {ev["id"] for ev in bestand["events"]}
+    for vorhanden in archivierte:
         for kennung in schluessel(vorhanden):
             verzeichnis.setdefault(kennung, vorhanden)
     neu = geaendert = 0
@@ -795,14 +780,22 @@ def zusammenfuehren(bestand: dict, gefunden: list, quelle: dict, heute: str) -> 
         kennungen = schluessel(roh)
         alt = next((verzeichnis[k] for k in kennungen if k in verzeichnis), None)
 
+        if alt is not None and alt["id"] not in aktive_ids:
+            alt = normalisieren(alt)
+            bestand["events"].append(alt)
+            aktive_ids.add(alt["id"])
+            for k in schluessel(alt):
+                verzeichnis[k] = alt
+
         if alt is None:
             frisch = {
-                **roh, "id": kennungen[0], "social_text": None,
+                **roh, "id": kennungen[0],
                 "quellen_weitere": [], "status": "aktiv",
                 "zuerst_gesehen": heute, "zuletzt_gesehen": heute,
                 "manuell_bestaetigt": False,
             }
             bestand["events"].append(frisch)
+            aktive_ids.add(frisch["id"])
             for k in kennungen:
                 verzeichnis.setdefault(k, frisch)
             neu += 1
@@ -1082,8 +1075,9 @@ def main() -> None:
         quellen = [q for q in quellen if q.get("aktiv")]
 
     bestand = json.loads(DATEN.read_text(encoding="utf-8"))
+    archivierte = mit_archiv({"events": []}, BASIS / "daten/archiv")["events"]
     status = json.loads(STATUS.read_text(encoding="utf-8")) if STATUS.exists() else {}
-    heute = date.today()
+    heute = heute_berlin()
     heute_s = heute.isoformat()
     summe_neu = summe_geaendert = 0
     gelesen = set()
@@ -1092,12 +1086,18 @@ def main() -> None:
         print(f"\n{quelle['name']}")
         try:
             gefunden = (tribe_lesen if quelle.get("methode") == "tribe" else text_lesen)(quelle)
+            # Quellenweise uebernehmen: Ein ungueltiger Termin darf nicht
+            # den Bestand halb veraendern oder alle anderen Quellen blockieren.
+            kandidat = copy.deepcopy(bestand)
+            neu, geaendert = zusammenfuehren(kandidat, gefunden, quelle, heute_s, archivierte)
+            kandidat["events"] = [normalisieren(ev) for ev in kandidat["events"]]
+            pruefen(kandidat)
         except Exception as fehler:  # eine kaputte Quelle darf den Lauf nicht kippen
             gesundheit_pruefen(status, quelle["name"], 0, f"{type(fehler).__name__}: {fehler}", heute_s)
             continue
 
         gelesen.add(quelle["name"])
-        neu, geaendert = zusammenfuehren(bestand, gefunden, quelle, heute_s)
+        bestand = kandidat
         summe_neu += neu
         summe_geaendert += geaendert
         print(f"    {len(gefunden)} gefunden, {neu} neu, {geaendert} Felder aktualisiert")
@@ -1108,6 +1108,9 @@ def main() -> None:
         print(f"  {doppelt} Dubletten nachtraeglich verschmolzen")
     aufraeumen(bestand, heute, gelesen)
     bestand["events"].sort(key=lambda e: e.get("beginn") or "")
+    bestand["schema_version"] = 2
+    bestand["events"] = [normalisieren(ev) for ev in bestand["events"]]
+    pruefen(bestand)
     DATEN.write_text(json.dumps(bestand, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     STATUS.write_text(json.dumps(status, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
 
