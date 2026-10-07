@@ -5,6 +5,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="noindex, nofollow">
 <title>Verwaltung — Gratis in Freising</title>
+<link rel="stylesheet" href="quellenstatus.css">
+<script src="quellenstatus.js" defer></script>
 <style>
 /* ============================================================
    Schriftbild: Monospace.
@@ -404,6 +406,9 @@ dialog .fuss .hinweis { color: var(--leiser); font-size: 12px; flex: 1 1 200px; 
     <button id="speichern" class="wichtig" disabled>Speichern</button>
   </div>
 </header>
+<details class="quellenstatus" data-quellenstatus><summary>Quellenstatus</summary>
+  <p>Für die Quellenübersicht bitte JavaScript aktivieren. <a href="daten/quellen-status.json">Abrufdaten ansehen</a>.</p>
+</details>
 
 <div id="meldung"></div>
 
@@ -965,9 +970,9 @@ Promise.all([
 ]).then(([daten, verw]) => {
   ROH = daten.events || [];
   V = { ...structuredClone(LEER), ...verw };
-  // events.json führt kein Laufdatum; das jüngste `zuletzt_gesehen` sagt dasselbe.
+  // Das jüngste Sichtungsdatum ist kein Laufdatum: Quellen können scheitern.
   const gesehen = ROH.map((e) => e.zuletzt_gesehen).filter(Boolean).sort();
-  $("#stand").textContent = `${ROH.length} Termine · Sammellauf ${gesehen.at(-1) || "unbekannt"}`;
+  $("#stand").textContent = `${ROH.length} Termine · letzte Sichtung ${gesehen.at(-1) || "unbekannt"}`;
   for (const [w, feld] of [["#quelle", "quelle_name"], ["#kategorie", "kategorie"]]) {
     for (const wert of [...new Set(ROH.map((e) => e[feld]).filter(Boolean))].sort())
       $(w).insertAdjacentHTML("beforeend", `<option>${esc(wert)}</option>`);

@@ -94,6 +94,20 @@ Kalender werden beim nächsten Sammellauf neu erzeugt.
 
 ## Wenn etwas nicht funktioniert
 
+Auf der öffentlichen Seite und in der Verwaltung lässt sich **Quellenstatus**
+aufklappen. Die Übersicht zeigt aktive und pausierte Quellen, den letzten
+erfolgreichen Abruf, die damals gefundene Anzahl und Probleme beim Abruf.
+Die Anzahl zählt extrahierte Termine vor Filtern und Duplikatabgleich, nicht
+nur neue oder kostenlose Termine. Fehler setzen die letzte erfolgreiche Zahl
+nicht auf null. Nach mehr als drei Tagen ohne Erfolg wird eine aktive Quelle
+als nicht aktuell markiert. Ein unerwarteter Rückgang auf null wird ebenfalls
+sichtbar. Ein grüner Sammellauf allein bestätigt nicht die Aktualität aller Quellen.
+
+Genaue Zeitpunkte werden ab dem nächsten Abruf aufgezeichnet; aus älteren
+Protokollen werden nur vorhandene Erfolgstage und Zahlen übernommen.
+`python scripts/quellenstatus.py` aktualisiert nach einer Änderung an
+`quellen.yml` die angezeigte Konfiguration, ohne Quellen oder KI abzufragen.
+
 - **Roter Sammellauf:** Fehler im Actions-Protokoll ansehen.
 - **Quelle liefert nichts:** `daten/quellen-status.json` ansehen.
   Eine Quelle kann in `quellen.yml` mit `aktiv: false` pausiert werden.
