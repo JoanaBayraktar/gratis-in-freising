@@ -28,11 +28,14 @@ import sys
 import urllib.error
 import urllib.request
 from datetime import datetime
+from jsonschema import ValidationError
 
 from event_id import event_id
+from datenpflege import event_pruefen, mit_archiv, normalisieren, pruefen
 
 BASIS = pathlib.Path(__file__).resolve().parent.parent
 DATEN = BASIS / "daten" / "events.json"
+ABSCHLUSS = BASIS / "work" / "meldungen-abschluss.json"
 
 ETIKETT = "freigegeben"
 API = "https://api.github.com"
@@ -155,6 +158,18 @@ def main() -> None:
     if not repo:
         sys.exit("GITHUB_REPOSITORY ist nicht gesetzt (Form: besitzer/repo).")
 
+    if "--abschliessen" in sys.argv:
+        if ABSCHLUSS.exists():
+            for eintrag in json.loads(ABSCHLUSS.read_text(encoding="utf-8")):
+                github(f"/repos/{repo}/issues/{eintrag['nummer']}/comments",
+                       "POST", {"body": eintrag["hinweis"]})
+                github(f"/repos/{repo}/issues/{eintrag['nummer']}",
+                       "PATCH", {"state": "closed"})
+        return
+
+    spaeter = "--spaeter-schliessen" in sys.argv
+    abschluesse = []
+
     offen = github(f"/repos/{repo}/issues?state=open&labels={ETIKETT}&per_page=50") or []
     # Die API liefert unter /issues auch Pull Requests. Die gehoeren nicht hierher.
     offen = [i for i in offen if "pull_request" not in i]
@@ -163,13 +178,19 @@ def main() -> None:
         return
 
     daten = json.loads(DATEN.read_text(encoding="utf-8"))
-    vorhanden = {ev.get("id") for ev in daten["events"]}
+    vorhanden = {ev.get("id") for ev in mit_archiv(daten, BASIS / "daten/archiv")["events"]}
     neu = 0
 
     for issue in offen:
         ereignis = bauen(issue)
         if ereignis is None:
             print(f"  #{issue['number']}: Titel oder Datum fehlt — übersprungen")
+            continue
+        ereignis = normalisieren(ereignis)
+        try:
+            event_pruefen(ereignis)
+        except (ValueError, ValidationError) as fehler:
+            print(f"  #{issue['number']}: ungueltige Meldung — {fehler}")
             continue
         if ereignis["id"] in vorhanden:
             print(f"  #{issue['number']}: steht schon in der Liste")
@@ -186,16 +207,24 @@ def main() -> None:
 
         if nur_melden:
             continue
-        github(f"/repos/{repo}/issues/{issue['number']}/comments",
-               "POST", {"body": hinweis})
-        github(f"/repos/{repo}/issues/{issue['number']}",
-               "PATCH", {"state": "closed"})
+        abschluesse.append({"nummer": issue["number"], "hinweis": hinweis})
 
     if neu and not nur_melden:
         daten["events"].sort(key=lambda ev: ev.get("beginn") or "")
+        pruefen(daten)
         with DATEN.open("w", encoding="utf-8") as datei:
             json.dump(daten, datei, ensure_ascii=False, indent=2)
             datei.write("\n")
+    if not nur_melden:
+        if spaeter:
+            ABSCHLUSS.parent.mkdir(exist_ok=True)
+            ABSCHLUSS.write_text(json.dumps(abschluesse), encoding="utf-8")
+        else:
+            for eintrag in abschluesse:
+                github(f"/repos/{repo}/issues/{eintrag['nummer']}/comments",
+                       "POST", {"body": eintrag["hinweis"]})
+                github(f"/repos/{repo}/issues/{eintrag['nummer']}",
+                       "PATCH", {"state": "closed"})
     print(f"{neu} Meldungen übernommen.")
 
 

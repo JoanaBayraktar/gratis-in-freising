@@ -1,17 +1,21 @@
 name: Events sammeln
 
 on:
-  # GitHub rechnet in UTC. 03:20 UTC sind 05:20 deutscher Sommerzeit
-  # bzw. 04:20 im Winter. Der Start verschiebt sich bei GitHub regelmaessig
-  # um 5 bis 20 Minuten — fuer einen naechtlichen Abgleich ohne Belang.
   schedule:
     - cron: "20 3 * * *"
-  # Erlaubt den Lauf jederzeit von Hand: Actions-Tab, "Run workflow".
   workflow_dispatch:
+    inputs:
+      nachpruefen:
+        description: "Zusaetzliche KI-Nachpruefung (optional)"
+        type: boolean
+        default: false
+      social:
+        description: "Social-Entwuerfe erzeugen (optional)"
+        type: boolean
+        default: false
 
 permissions:
   contents: write
-  # Meldungen kommentieren und schliessen
   issues: write
 
 concurrency:
@@ -21,63 +25,100 @@ concurrency:
 jobs:
   sammeln:
     runs-on: ubuntu-latest
+    env:
+      TZ: Europe/Berlin
     steps:
       - uses: actions/checkout@v4
         with:
-          # Voller Verlauf: auf einer flachen Kopie schlaegt das Nachziehen
-          # per rebase fehl, das der Push-Schritt unten braucht.
           fetch-depth: 0
-
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
-
       - run: pip install -r requirements.txt
+
+      - name: Daten und Archiv pruefen
+        run: python scripts/datenpflege.py
 
       - name: Quellen abfragen
         env:
           MISTRAL_API_KEY: ${{ secrets.MISTRAL_API_KEY }}
         run: python scripts/sammeln.py
 
-      # Was Sie auf GitHub freigegeben haben, kommt vor der Nachpruefung rein
-      # — dann wird es beim Ortsabgleich gleich mitgesehen.
       - name: Freigegebene Meldungen uebernehmen
-        continue-on-error: true
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           GITHUB_REPOSITORY: ${{ github.repository }}
-        run: python scripts/meldungen.py
+        run: python scripts/meldungen.py --spaeter-schliessen
 
-      # Zweiter Blick des Modells, diesmal auf die fertige Liste statt auf
-      # einzelne Seiten: Dubletten ueber Quellen hinweg, widersprüchliche
-      # Eintrittsangaben, uneinheitliche Ortsnamen. Schlaegt der Schritt fehl,
-      # soll der Lauf trotzdem Kalender und Mail erzeugen — die Nachpruefung
-      # verbessert das Ergebnis, sie traegt es nicht.
-      - name: Liste nachpruefen
-        continue-on-error: true
+      - name: Liste nachpruefen (optional)
+        if: ${{ inputs.nachpruefen == true }}
         env:
           MISTRAL_API_KEY: ${{ secrets.MISTRAL_API_KEY }}
         run: python scripts/nachpruefen.py
 
-      - name: Kalender bauen
-        run: python scripts/build_kalender.py
-
-      # Freitags zusaetzlich die Social-Entwuerfe fuer die kommende Woche.
-      - name: Social-Entwuerfe
+      - name: Daten normalisieren und Vergangenes archivieren
         run: |
-          if [ "$(date +%u)" = "5" ]; then
-            python scripts/build_social.py
-          else
-            echo "Kein Freitag, uebersprungen."
-          fi
+          python scripts/datenpflege.py --schreiben
+          python scripts/datenpflege.py
 
-      - name: Tagesmail bauen
-        id: mail
+      - name: Kalender und Mail bauen
         run: |
+          python scripts/build_kalender.py
           python scripts/build_mail.py
+
+      - name: Social-Entwuerfe (optional)
+        if: ${{ inputs.social == true }}
+        run: python scripts/build_social.py
+
+      # Erst speichern, dann senden: Ein SMTP-Fehler darf keine Daten verlieren.
+      - name: Ergebnis festschreiben
+        run: |
+          git config user.name "gratis-freising-bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add daten ausgabe
+          if git diff --staged --quiet; then
+            echo "Nichts geaendert."
+            exit 0
+          fi
+          git commit -m "Sammellauf $(date +%F)"
+          for versuch in 1 2 3; do
+            if git push; then exit 0; fi
+            if ! git pull --rebase origin main; then
+              git rebase --abort || true
+              echo "::error::Konflikt beim Nachziehen. Bitte ansehen."
+              exit 1
+            fi
+            sleep 5
+          done
+          echo "::error::Ergebnis konnte nicht gespeichert werden."
+          exit 1
+
+      - name: Gespeicherte Meldungen abschliessen
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_REPOSITORY: ${{ github.repository }}
+        run: python scripts/meldungen.py --abschliessen
+
+      - name: Mail-Konfiguration pruefen
+        id: mail
+        env:
+          MAIL_SERVER: ${{ secrets.MAIL_SERVER }}
+          MAIL_BENUTZER: ${{ secrets.MAIL_BENUTZER }}
+          MAIL_PASSWORT: ${{ secrets.MAIL_PASSWORT }}
+          MAIL_AN: ${{ secrets.MAIL_AN }}
+        run: |
+          if [ -n "$MAIL_SERVER" ] && [ -n "$MAIL_BENUTZER" ] && [ -n "$MAIL_PASSWORT" ] && [ -n "$MAIL_AN" ]; then
+            echo "aktiv=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "aktiv=false" >> "$GITHUB_OUTPUT"
+            echo "Mailversand nicht eingerichtet; Kalender und Website funktionieren trotzdem."
+          fi
           echo "betreff=$(cat ausgabe/mail-betreff)" >> "$GITHUB_OUTPUT"
 
       - name: Tagesmail senden
+        if: ${{ steps.mail.outputs.aktiv == 'true' }}
+        id: versand
+        continue-on-error: true
         uses: dawidd6/action-send-mail@v18
         with:
           server_address: ${{ secrets.MAIL_SERVER }}
@@ -90,35 +131,8 @@ jobs:
           subject: ${{ steps.mail.outputs.betreff }}
           html_body: file://ausgabe/mail.html
 
-      - name: Ergebnis festschreiben
+      - name: Versandfehler melden
+        if: ${{ steps.versand.outcome == 'failure' }}
         run: |
-          git config user.name  "gratis-freising-bot"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add daten ausgabe
-          if git diff --staged --quiet; then
-            echo "Nichts geaendert."
-            exit 0
-          fi
-          git commit -m "Sammellauf $(date +%F)"
-
-          # Der Lauf dauert Minuten. Wird in dieser Zeit etwas ins Repo
-          # geschoben — eine Korrektur in events.json, eine geaenderte
-          # quellen.yml —, weist GitHub den Push zurueck. Also neu aufsetzen
-          # und noch einmal versuchen, statt den ganzen Lauf zu verlieren.
-          for versuch in 1 2 3; do
-            if git push; then
-              exit 0
-            fi
-            echo "Push abgelehnt (Versuch $versuch). Hole den Stand nach."
-            if ! git pull --rebase origin main; then
-              # Konflikt in den Daten: hier faengt Automatik an zu raten.
-              # Lieber laut scheitern — der naechste Lauf baut die Ausgabe
-              # ohnehin neu, verloren geht nichts als dieser eine Commit.
-              git rebase --abort || true
-              echo "::error::Konflikt beim Nachziehen. Bitte einmal von Hand ansehen."
-              exit 1
-            fi
-            sleep 5
-          done
-          echo "::error::Push nach drei Versuchen nicht durchgekommen."
+          echo "::error::Daten gespeichert, aber Tagesmail nicht versendet."
           exit 1

@@ -1,0 +1,32 @@
+name: Daten und Workflow pruefen
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+    paths:
+      - "scripts/**"
+      - "tests/**"
+      - "daten/**"
+      - ".github/workflows/**"
+      - "requirements.txt"
+
+permissions:
+  contents: read
+
+jobs:
+  pruefen:
+    runs-on: ubuntu-latest
+    env:
+      TZ: Europe/Berlin
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install -r requirements.txt
+      - run: python -m unittest discover -s tests
+      - run: python scripts/datenpflege.py
+      - run: |
+          python scripts/build_kalender.py
+          python scripts/build_mail.py

@@ -56,8 +56,9 @@ trauen kann.
   Geheimhaltung ist bauartbedingt unmöglich.
 - Ein Cloudflare Worker ist das einzige serverseitige Stück. Er hält den
   GitHub-Token, den eine statische Seite nicht haben darf.
-- Rund 15 Minuten Handarbeit pro Woche sind eingeplant: Prüfliste durchsehen,
-  Meldungen freigeben, Quellenstatus prüfen.
+- Keine verpflichtende woechentliche Pruefrunde. Automatische Formatpruefung
+  laeuft vor jedem Speichern; unklare Eintrittsangaben werden sichtbar markiert.
+  Handarbeit faellt nur bei eigenen Meldungen, Korrekturen oder Fehlern an.
 - Meldungen von außen laufen über ein Formular in ein GitHub-Issue und werden
   erst mit dem Etikett `freigegeben` übernommen.
 
@@ -101,7 +102,8 @@ Störungsfall an Arbeit erzeugt.
 
 ## Evidence on Hand
 
-- `daten/events.json` — 139 Termine aus 10 aktiven Quellen
+- `daten/events.json` — Arbeitsbestand mit aktuellen Terminen und 30 Tagen Rueckblick
+- `daten/archiv/` — aeltere Termine, weiterhin mit IDs und Quellenbelegen
 - `quellen.yml` — 23 geprüfte Quellen, davon 10 nutzbar, mit Messwerten
 - `ausgabe/` — Kalenderdateien, Tagesmail, Prüfliste, Social-Entwürfe
 - `daten/quellen-status.json` — Gesundheitsverlauf je Quelle

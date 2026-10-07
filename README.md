@@ -1,375 +1,149 @@
-# Gratis in Freising — automatische Eventsammlung
+# Gratis in Freising
 
-Jede Nacht liest ein GitHub-Action-Lauf die Quellen aus `quellen.yml`, erkennt
-Veranstaltungen mit freiem Eintritt und pflegt daraus zwei Kalender. Das läuft
-auf GitHubs Servern — Ihr Rechner muss dafür nicht an sein.
+Veranstaltungen in Freising sammeln und als Website, Kalender und Tagesmail
+anzeigen. Speicherung und Automatisierung laufen auf GitHub.
+
+## Der normale Betrieb
+
+Jede Nacht erledigt GitHub Actions diese Schritte:
+
+1. Vorhandene Daten automatisch auf Formatfehler pruefen.
+2. Aktive Quellen aus `quellen.yml` abfragen und Termine aktualisieren.
+3. Freigegebene GitHub-Meldungen uebernehmen.
+4. Bekannte Feldschreibfehler vereinheitlichen und alte Termine archivieren.
+5. Kalender und Mail erzeugen und den Stand im Repository speichern.
+6. Uebernommene Meldungen schliessen und, sofern eingerichtet, die Tagesmail senden.
+
+Es gibt **keine verpflichtende woechentliche Pruefrunde**. Nicht belegte
+Eintrittsangaben erscheinen weiterhin als „vermutlich kostenfrei“. Eine
+Preisangabe schliesst einen Termin aus dem Gratisangebot aus. Die Automatik
+kann sich irren; jeder Termin verlinkt deshalb seine Quelle und den Preisbeleg.
+
+Der Sammellauf startet um 03:20 UTC, also 05:20 im Sommer und 04:20 im Winter.
+GitHub kann den Start verzoegern. Ein manueller Lauf ist unter
+**Actions → Events sammeln → Run workflow** moeglich. Die optionalen Schalter
+fuer KI-Nachpruefung und Social-Entwuerfe bleiben normalerweise ausgeschaltet.
 
 ## Was wo liegt
 
-```
-index.html               die Übersichtsseite (GitHub Pages)
-verwaltung.html          der interne Bereich: eintragen, korrigieren, ausblenden
-melden/worker.js         Meldestelle für das Formular (Cloudflare Worker)
-quellen.yml              Quellenliste  ← hier Quellen an- und abschalten
-SCHEMA.md                welche Felder ein Event hat und was sie bedeuten
-daten/
-  events.json            die Datenablage — das ist die Wahrheit
-  quellen-status.json    Gesundheit je Quelle: Fehlversuche, Trefferverlauf
-  verwaltung.json        Ihre Eingriffe von Hand — der Sammellauf fasst sie nie an
-ausgabe/
-  gratis-freising.ics    gesicherte Gratis-Events → abonnieren
-  pruefen.ics            unklare Fälle → wöchentlich sichten
-  PRUEFLISTE.md          dieselben Fälle als lesbare Liste
-  SOCIAL-KWxx.md         Post-Entwürfe, entstehen freitags
-  mail.html              die Tagesmail, wird täglich neu erzeugt
-  NACHPRUEFUNG.md        was der zweite Modellblick gefunden und getan hat
-scripts/
-  sammeln.py             holt die Quellen, fragt das Modell, schreibt events.json
-  build_kalender.py      baut die .ics-Dateien und die Prüfliste
-  meldungen.py           übernimmt freigegebene Meldungen aus GitHub-Issues
-  nachpruefen.py         zweiter Modellblick auf die fertige Liste
-  build_mail.py          baut die Tagesmail
-  build_social.py        baut die Social-Entwürfe
-  event_id.py            stabile ID für die Dublettenerkennung
-  verwaltung.py          legt Ihre Eingriffe über das Gesammelte
-.github/workflows/       der nächtliche Ablauf
+| Datei | Zweck |
+| --- | --- |
+| `index.html` | Oeffentliche Uebersicht auf GitHub Pages |
+| `daten/events.json` | Importbestand: aktuelle Termine und die letzten 30 Tage |
+| `daten/verwaltung.json` | Eigene Termine, Korrekturen und Ausblendungen |
+| `daten/archiv/JJJJ.json` | Aeltere Termine nach ihrem urspruenglichen Anfangsjahr |
+| `daten/events.schema.json` | Verbindliches, automatisch geprueftes Datenformat |
+| `quellen.yml` | Quellen aktivieren/deaktivieren und Ortsnamen vereinheitlichen |
+| `daten/quellen-status.json` | Erfolg und Fehler je Quelle |
+| `ausgabe/gratis-freising.ics` | Abonnierbarer Kalender |
+| `ausgabe/mail.html` | Vorschau der Tagesmail |
+
+**Importdaten nicht von Hand bearbeiten.** Korrekturen gehoeren in
+`daten/verwaltung.json`, damit der naechste Import sie nicht ueberschreibt.
+Das Archiv bleibt erhalten, wird aber nicht von der Website geladen.
+Ein Archivtermin, dessen Ende spaeter verlaengert wird, kann in den
+Arbeitsbestand zurueckkehren. Die stabile ID bleibt dabei erhalten.
+
+Kalender, Mail und Website unterscheiden Einzeltermine und laufende
+Dauertermine. Abgesagte Termine tragen im Kalender einen Absagehinweis.
+Unbekannte Endzeiten bleiben `null`; der Kalender verwendet dann eine
+Darstellungsdauer von zwei Stunden, ohne diese als Quellinformation zu speichern.
+
+## Termine von Hand eintragen
+
+Die vollstaendig auf GitHub laufende Variante verwendet das
+[Veranstaltungsformular](https://github.com/JoanaBayraktar/gratis-in-freising/issues/new?template=veranstaltung.yml).
+Ein GitHub-Konto ist dafuer erforderlich.
+
+- Titel, Datum, Ort und Eintritt eintragen.
+- Als Betreiberin das Label `freigegeben` setzen.
+- Der naechste Sammellauf uebernimmt die Meldung und schliesst sie nach dem
+  erfolgreichen Speichern.
+
+Diese Freigabe betrifft neue Einreichungen, nicht die automatische
+Terminsammlung. Meldungen bleiben ohne Freigabe ausserhalb der Anzeige.
+
+Korrekturen lassen sich direkt im GitHub-Dateieditor in
+`daten/verwaltung.json` speichern. Beispiel:
+
+```json
+{
+  "stand": "2026-10-07T12:00:00",
+  "eigene": [],
+  "korrekturen": {
+    "ID-AUS-EVENTS-JSON": { "ort_name": "Stadtbibliothek Freising" }
+  },
+  "ausgeblendet": {
+    "ANDERE-ID": { "grund": "Keine Veranstaltung" }
+  }
+}
 ```
 
-Wichtig zu verstehen: **`daten/events.json` ist die Quelle, alles unter `ausgabe/`
-wird daraus neu erzeugt.** Änderungen direkt in einer `.ics`-Datei sind beim
-nächsten Lauf weg.
+Es werden nur die angegebenen Felder ueberschrieben. Eine Ortskorrektur
+bestaetigt keinen Preis. Erst eine ausdrueckliche Korrektur von `eintritt`
+gilt als manuelle Preiseinstufung. IDs und Eintraege in der Verwaltungsdatei
+werden bei der Archivierung nicht entfernt.
 
-Und events.json selbst gehört dem Sammellauf — auch dort von Hand geänderte
-Werte hält er nicht unbedingt. Korrekturen gehören deshalb in
-`daten/verwaltung.json`, am bequemsten über `verwaltung.html`.
+`verwaltung.html` ist derzeit nur eine Leseansicht, solange
+`const MELDESTELLE = "";` dort leer ist. Bearbeiten ueber diese Oberflaeche
+erfordert den optionalen Cloudflare Worker in `melden/worker.js`.
+Der Worker ist ein externer Dienst; fuer den GitHub-only-Betrieb genuegen
+Issue-Formular und GitHub-Dateieditor. Daten im oeffentlichen Repository
+sind oeffentlich, auch in der Verwaltungsdatei und im Archiv.
 
 ## Einrichtung
 
-1. Repository auf GitHub anlegen (öffentlich) und diesen Ordner hochladen.
-2. Unter **Settings → Secrets and variables → Actions → New repository secret**
-   ein Secret namens `MISTRAL_API_KEY` mit Ihrem Mistral-Schlüssel anlegen.
-   Der Schlüssel gehört ausschließlich dorthin — nie in eine Datei im Repo.
-3. Für die Tagesmail vier weitere Secrets anlegen:
+1. GitHub Pages auf Branch `main`, Ordner `/` einstellen.
+2. Unter **Settings → Secrets and variables → Actions** das Secret
+   `MISTRAL_API_KEY` hinterlegen.
+3. **Actions → Events sammeln → Run workflow** starten.
+4. Optional die Mail-Secrets `MAIL_SERVER`, `MAIL_BENUTZER`,
+   `MAIL_PASSWORT` und `MAIL_AN` setzen. Ohne vollstaendige Konfiguration
+   laeuft das Projekt mit Website und Kalender weiter.
 
-   | Name | Wert |
-   |---|---|
-   | `MAIL_SERVER` | SMTP-Server, bei Gmail `smtp.gmail.com` |
-   | `MAIL_BENUTZER` | Ihre Absenderadresse |
-   | `MAIL_PASSWORT` | **App-Passwort**, nicht das Kontopasswort |
-   | `MAIL_AN` | Empfänger, mehrere mit Komma getrennt |
+SMTP verwendet Port 465 und TLS. Bei Gmail ist ein App-Passwort erforderlich.
+Ein Versandfehler wird gemeldet, bereits gespeicherte Daten bleiben erhalten.
 
-   Gmail und die meisten Anbieter verlangen für SMTP ein eigenes App-Passwort,
-   das Sie in Ihren Kontoeinstellungen erzeugen. Das normale Passwort
-   funktioniert nicht und gehört auch nicht in ein Repository-Secret.
+Die Website liest die JSON-Dateien direkt. Korrekturen erscheinen nach der
+Veroeffentlichung durch Pages; Mail und Kalender werden beim naechsten
+Sammellauf neu erzeugt.
 
-4. Unter **Actions** den Workflow „Events sammeln" einmal von Hand starten
-   („Run workflow"), um zu sehen, ob alles greift.
+## Wenn etwas nicht funktioniert
 
-Danach läuft er täglich um 03:20 UTC, also 05:20 deutscher Sommerzeit.
+- **Roter Sammellauf:** Fehler im Actions-Protokoll ansehen. Mailfehler werden
+  gesondert bezeichnet; Daten sind dann bereits gespeichert.
+- **Quelle liefert nichts:** `daten/quellen-status.json` ansehen.
+  Eine Quelle kann in `quellen.yml` mit `aktiv: false` pausiert werden.
+  Ein fehlgeschlagener Abruf loescht keine Termine.
+- **Falscher Termin:** In `daten/verwaltung.json` korrigieren oder ausblenden.
+- **Datenpruefung schlaegt fehl:** Feldname, Datentyp, Datum und Ende anhand
+  von [SCHEMA.md](SCHEMA.md) pruefen. Unbekannte Felder werden nicht still geloescht.
 
-## Die Tagesmail
+## Lokal entwickeln und pruefen
 
-Nach jedem Sammellauf geht eine Mail raus, in drei Abschnitten:
-
-**Heute** — die Einzeltermine des Tages, mit Uhrzeit, Ort und kurzer
-Beschreibung. Das ist, was man verpassen kann.
-
-**Läuft gerade** — mehrtägiges wie Ausstellungen, jedes **einmal** genannt
-statt an jedem seiner Tage. Statt der Anfangszeit steht dort die Restlaufzeit,
-sortiert nach Ende: was bald ausläuft, steht oben und wird in den letzten zwei
-Tagen farbig. Eine Ausstellung, die noch drei Monate zu sehen ist, eilt nicht
-und steht unten.
-
-**Die nächsten Tage** — Einzeltermine als knappe Liste, ohne Beschreibung.
-
-Enthalten ist alles, was nicht nachweislich Geld kostet. Was nur vermutlich
-kostenlos ist — weil die Seite zum Preis schweigt —, steht mit dabei und trägt
-die Marke „vermutlich kostenfrei". Spendenbasis ebenso. Nur der belegte freie
-Eintritt bleibt unbeschriftet: Das ist der Normalfall, beschriftet wird die
-Abweichung.
-
-Der Mailtext lässt sich jederzeit ohne Versand ansehen:
-
-```bash
-./venv/bin/python scripts/build_mail.py
+```sh
+python3 -m venv venv
+venv/bin/pip install -r requirements.txt
+venv/bin/python -m unittest discover -s tests
+venv/bin/python scripts/datenpflege.py
+venv/bin/python scripts/build_kalender.py
+venv/bin/python scripts/build_mail.py
+venv/bin/python -m http.server 8765
 ```
 
-Danach `ausgabe/mail.html` im Browser öffnen.
+Die Website ist unter `http://localhost:8765` erreichbar.
+`file://` kann die JSON-Dateien nicht zuverlaessig laden.
 
-## Die Nachprüfung
+`python scripts/datenpflege.py --schreiben` normalisiert und archiviert
+lokal. Ohne diesen Schalter prueft das Skript nur. Alle Daten werden vor dem
+Schreiben validiert. Pull Requests erhalten dieselben Pruefungen ohne
+Modellaufrufe oder Mailversand.
 
-Beim Sammeln sieht das Modell immer nur eine Seite. Dass dieselbe Veranstaltung
-beim Merkur schon steht, dass der Ort dort anders geschrieben wird oder dass
-eine Quelle sie gratis nennt und die andere nicht — das lässt sich erst
-beantworten, wenn alles beieinanderliegt.
+## Optionale Erweiterungen
 
-`nachpruefen.py` schickt deshalb nach dem Sammeln die fertige Liste noch einmal
-zum Modell, als Stichworte, ohne Webseiten. Das kostet rund 6.000 Tokens, also
-etwa 0,1 Cent. Drei Fragen mit drei verschiedenen Folgen:
+`ausgabe/PRUEFLISTE.md` und `pruefen.ics` bleiben als freiwillige
+Nachschlagewerke erhalten. Sie blockieren keine Veroeffentlichung.
+KI-Nachpruefung und Social-Entwuerfe sind manuell zuschaltbar; die
+vorhandenen Skripte bleiben verfuegbar.
 
-| Findet | Was passiert |
-|---|---|
-| Ortsname meint einen bekannten Ort | wird übernommen |
-| Dublettenverdacht | wird **nur gemeldet** |
-| Widerspruch beim Eintritt | wird **nur gemeldet** |
-
-Nur der Ortsname wird automatisch geändert, weil das reiner Anzeigetext ist.
-Alles andere ist ein Hinweis zum Nachsehen, keine Entscheidung.
-
-Der erste Lauf hat gezeigt, warum das so sein muss: Das Modell hielt jede
-wiederkehrende Reihe für eine Dublette — „Führung im Furtner" an vier Terminen,
-„Karaoke mit Stefan" an zwei Abenden. Es schrieb sogar dazu, dass die Tage
-verschieden seien, und meldete sie trotzdem. Verschmolzen wird deshalb
-ausschließlich nach den festen Regeln in `sammeln.py`.
-
-Alles Gefundene steht hinterher in `ausgabe/NACHPRUEFUNG.md`, auch das
-Übernommene. Ohne Änderungen, nur zum Ansehen:
-
-```bash
-MISTRAL_API_KEY=... ./venv/bin/python scripts/nachpruefen.py --nur-melden
-```
-
-## Die Übersichtsseite
-
-Für das Eintragen und Korrigieren von Hand gibt es `verwaltung.html` —
-siehe „Der interne Bereich" weiter unten.
-
-`index.html` zeigt alle gesammelten Veranstaltungen im Browser — mit Datum,
-Ort, Quelle samt Link, Eintrittseinstufung und dem Belegzitat unter „Details".
-Suchen, nach Quelle filtern, nach Datum oder Titel sortieren.
-
-Die Seite liest `daten/events.json` direkt und hat keinen Bauschritt: Was der
-nächtliche Lauf schreibt, steht dort ohne weiteres Zutun. Sie lädt nichts aus
-dem Netz nach — keine Schriften, keine Bibliotheken.
-
-Zum Suchen gibt es drei Wege nebeneinander: das Suchfeld, die Auswahllisten
-für Quelle und Art der Veranstaltung, und einen kleinen Monatskalender hinter
-„Tag wählen". Tage ohne Veranstaltung sind dort ausgegraut; ein gewählter Tag
-sticht die Zeitfilter aus, weil man ihn ja bewusst angeklickt hat.
-
-### Veranstaltungen melden
-
-Unten auf der Seite steht ein Formular. Der Weg einer Meldung:
-
-1. Jemand füllt das Formular aus → Issue mit dem Etikett `meldung`
-2. Sie sehen es an. Stimmt es, hängen Sie das Etikett **`freigegeben`** dran
-3. Der nächste nächtliche Lauf übernimmt es, schließt das Issue und
-   kommentiert es
-
-Ohne `freigegeben` passiert nichts, egal was im Issue steht. Übernommene
-Meldungen bekommen `manuell_bestaetigt: true` — Sie haben sie geprüft, also
-fasst der Sammellauf sie nicht mehr an.
-
-### Die Meldestelle einrichten
-
-Solange in `index.html` die Zeile `const MELDESTELLE = "";` leer ist, führt das
-Formular über einen vorausgefüllten GitHub-Eintrag — das setzt bei der
-meldenden Person ein GitHub-Konto voraus.
-
-Damit Meldungen direkt eingehen, braucht es eine kleine Zwischenstelle, die
-den GitHub-Token hält. Auf einer statischen Seite kann der Token nicht liegen:
-Er stünde im Quelltext und wäre für jeden lesbar. `melden/worker.js` ist diese
-Zwischenstelle, gedacht für Cloudflare Workers — kostenlos, kein Server.
-
-1. **Token erzeugen:** github.com → Settings → Developer settings →
-   Personal access tokens → **Fine-grained tokens** → Generate new token.
-   Repository access: **nur** `gratis-in-freising`. Permissions:
-   **Issues → Read and write**, sonst nichts. Laufzeit ruhig knapp wählen und
-   im Kalender notieren, wann er abläuft.
-2. **Worker anlegen:** dash.cloudflare.com → Workers & Pages → Create →
-   Start with Hello World. Den Inhalt von `melden/worker.js` einfügen, Deploy.
-3. **Variablen setzen** (Settings → Variables and Secrets), alle als *Secret*:
-
-   | Name | Wert |
-   |---|---|
-   | `GITHUB_TOKEN` | der Token aus Schritt 1 |
-   | `GITHUB_REPO` | `JoanaBayraktar/gratis-in-freising` |
-   | `ERLAUBTE_HERKUNFT` | `https://joanabayraktar.github.io` |
-
-4. **Adresse eintragen:** Die Worker-Adresse (`https://….workers.dev`) in
-   `index.html` bei `const MELDESTELLE` einsetzen und committen.
-
-Warum der Token so eng geschnitten wird: Die Adresse ist öffentlich, jeder
-kann darauf POSTen. Selbst wenn das jemand ausnutzt, entstehen daraus nur
-Issues — nichts, was ins Repository geschrieben wird, und nichts, was ohne Ihr
-`freigegeben` in Kalender oder Mail landet. Gegen einfache Bots hilft ein
-unsichtbares Feld im Formular; wird es ausgefüllt, verschwindet die Meldung
-lautlos.
-
-Wenn doch Spam ankommt, lässt sich **Cloudflare Turnstile** dazuschalten: Im
-Cloudflare-Dashboard eine Website hinzufügen, den Secret Key als
-`TURNSTILE_SECRET` hinterlegen — der Worker prüft ihn dann. Das Widget im
-Formular kommt in dem Fall noch dazu; sagen Sie Bescheid, dann baue ich es ein.
-
-Was gerade zur Freigabe wartet:
-<https://github.com/JoanaBayraktar/gratis-in-freising/issues?q=is%3Aopen+label%3Ameldung>
-
-Lokal ansehen (ein Server ist nötig, `file://` darf die JSON nicht laden):
-
-```bash
-./venv/bin/python -m http.server 8765
-```
-
-Dann http://localhost:8765 öffnen — der interne Bereich liegt daneben unter
-http://localhost:8765/verwaltung.html.
-
-## Der interne Bereich
-
-`verwaltung.html` ist die Arbeitsoberfläche: eine dichte Tabelle über alle
-Termine, sortierbar nach jeder Spalte, mit Suche und Filtern nach Quelle, Art
-und Eintritt. Dort lassen sich drei Dinge tun — eigene Termine anlegen,
-gesammelte korrigieren, und Unsinn ausblenden.
-
-### Was er nicht ist
-
-Er verbirgt nichts. Das Repository ist öffentlich, `daten/events.json` liegt
-für jeden lesbar auf GitHub, und eine Seite auf GitHub Pages hat keinen
-Server, der ein Passwort prüfen könnte. Wer die Adresse kennt, sieht die
-Tabelle — dieselben Daten, die auch auf der öffentlichen Seite stehen, nur
-dichter gesetzt. Das Passwort schützt nicht das Lesen, sondern **das
-Schreiben**. Wer nicht angemeldet ist, kann nur schauen.
-
-### Wo die Eingriffe landen
-
-In `daten/verwaltung.json`, getrennt von `daten/events.json`. Das ist der
-ganze Trick: events.json gehört dem Sammellauf, der sie jede Nacht neu
-schreibt. Alles, was von Hand darin stünde, wäre beim nächsten Lauf
-Verhandlungssache — genau so hat eine Nachprüfung schon einmal 13 Termine
-gelöscht. Der Sammellauf kennt die Verwaltungsdatei nicht und kann sie
-deshalb auch nicht kaputtmachen.
-
-Drei Arten von Eingriff, angewandt in dieser Reihenfolge:
-
-| | Wirkung |
-|---|---|
-| **ausgeblendet** | fliegt raus, egal was die Quelle sagt — Mittagskarten, Dubletten, Wochenmarkt |
-| **korrekturen** | einzelne Felder werden überschrieben; der Rest kommt weiter aus der Quelle und bleibt aktuell |
-| **eigene** | vollständige Termine, die keine Quelle hat |
-
-Korrigiert wird feldweise, nicht der ganze Termin: Wenn Sie den Ort
-richtigstellen und die Quelle morgen eine bessere Beschreibung liefert, kommt
-die Beschreibung an und Ihr Ort bleibt.
-
-**Eine Ausnahme, die wichtig ist:** Nur wenn Sie ausdrücklich das Feld
-*Eintritt* ändern, gilt der Preis als von Ihnen geprüft und die Anzeige
-springt von „vermutlich kostenfrei" auf „Eintritt frei". Ein berichtigter
-Ortsname tut das nicht. Sonst genügte ein Tippfehler, um aus einer Vermutung
-eine Zusage zu machen — und bei fälschlich „frei" steht jemand vor der Kasse.
-
-### Wann Änderungen sichtbar werden
-
-Die öffentliche Übersicht und der interne Bereich wenden die Eingriffe **beim
-Laden** an, also sofort. Kalender und Tagesmail entstehen im nächtlichen Lauf
-und übernehmen sie erst dann.
-
-Dieselben drei Schritte stehen deshalb zweimal da: in `scripts/verwaltung.py`
-für Mail und Kalender, und in JavaScript in `index.html` und
-`verwaltung.html`. Wer an einer Stelle etwas ändert, muss an den anderen
-nachziehen. Dass beide dasselbe tun, lässt sich prüfen, indem man dieselbe
-Liste durch beide schickt und die Ergebnisse vergleicht.
-
-### Einrichtung
-
-Der interne Bereich braucht den Worker aus `melden/worker.js` — er hält den
-GitHub-Token, den die Seite nicht haben darf. Zusätzlich zur Einrichtung
-unter „Veranstaltungen melden":
-
-1. Der Token braucht jetzt **Contents: Read and write** neben Issues: Write.
-2. Im Cloudflare-Dashboard eine weitere Variable **`VERWALTUNG_PASSWORT`**
-   anlegen, als Secret. Nehmen Sie ein langes, zufälliges Passwort — es ist
-   das Einzige zwischen dem Internet und der Verwaltungsdatei.
-3. Die Worker-Adresse in `verwaltung.html` bei `const MELDESTELLE` eintragen,
-   dieselbe wie in `index.html`.
-
-Der Worker schreibt **ausschließlich** `daten/verwaltung.json`; der Pfad steht
-hart im Code. Selbst wer das Passwort hätte, könnte damit nichts anderes im
-Repository anfassen — keine Workflows, keine anderen Dateien, nichts löschen.
-Bei falschem Passwort wartet er eine halbe Sekunde, was systematisches
-Durchprobieren unbezahlbar macht.
-
-### Wenn zwei gleichzeitig schreiben
-
-Die Seite merkt sich beim Anmelden den Stand der Datei und schickt ihn beim
-Speichern mit. Hat sich inzwischen etwas geändert — etwa weil der nächtliche
-Lauf dazwischenkam —, lehnt GitHub ab und die Seite sagt es Ihnen, statt die
-fremde Änderung stillschweigend zu überschreiben. Dann neu laden und noch
-einmal eintragen.
-
-## Kalender abonnieren
-
-Nach dem ersten erfolgreichen Lauf liegt `ausgabe/gratis-freising.ics` im Repo.
-Den Raw-Link kopieren (Datei öffnen → Button „Raw" → Adresse aus der Zeile) und
-im Kalenderprogramm unter „Kalenderabonnement hinzufügen" eintragen. Der
-Kalender aktualisiert sich dann von selbst.
-
-## Die wöchentliche Handarbeit
-
-Rechnen Sie mit rund 15 Minuten:
-
-1. `ausgabe/PRUEFLISTE.md` öffnen
-2. Bei jedem Fall entscheiden — das Belegzitat steht dabei, meist reicht es
-3. In `daten/events.json` das Feld `eintritt` korrigieren **und
-   `manuell_bestaetigt` auf `true` setzen**
-
-Schritt 3 ist der entscheidende: `manuell_bestaetigt: true` schützt Ihre
-Entscheidung davor, im nächsten Lauf wieder überschrieben zu werden. Der
-Sammellauf fasst solche Einträge nur noch an, um `zuletzt_gesehen` nachzuziehen.
-
-## Quellen pflegen
-
-`quellen.yml` lässt sich direkt auf github.com bearbeiten: Datei öffnen,
-Stift-Symbol, ändern, „Commit changes". Kein Git nötig.
-
-`aktiv: false` schaltet eine Quelle ab, ohne sie zu löschen — samt Notiz, warum.
-
-Eine einzelne Quelle vorher ausprobieren:
-
-```bash
-MISTRAL_API_KEY=... python3 scripts/sammeln.py "Schafhof Kunstforum"
-```
-
-## Wenn eine Quelle Ärger macht
-
-`daten/quellen-status.json` führt je Quelle Buch: letzter Erfolg, Fehlversuche
-in Folge, wie viele Events die letzten zehn Läufe gebracht haben. Der Lauf meldet
-am Ende, welche Quellen dreimal hintereinander versagt haben, und warnt, wenn
-eine Quelle plötzlich null Events liefert, die sonst zuverlässig welche hatte.
-Das ist der stille Ausfall, der sonst monatelang unbemerkt bliebe.
-
-GitHub schickt Ihnen außerdem automatisch eine E-Mail, wenn ein Lauf abbricht.
-
-## Stand der Quellen (geprüft am 19.08.2026)
-
-Von den 23 gesammelten Adressen liefern zehn verwertbare Daten. Die übrigen
-laden ihre Termine per JavaScript nach oder nennen Datumsangaben ohne
-Jahreszahl — die Gründe stehen einzeln in `quellen.yml`.
-
-Aktiv: Stadtkalender Freising, Merkur, Schafhof, Furtner (API), Einfach selber
-machen (API), vhs „kostenfrei", Modern Studio, DAV Freising, 3Klang Musik,
-TUM Freising.
-
-Zwei Werkzeuge helfen bei sperrigen Seiten und stehen jeder Quelle offen:
-
-`text_ab` schneidet alles vor einer Marke weg. Die TUM stellt ihrer
-Terminliste 23.000 Zeichen Menü voran — nach Länge zu kürzen hätte genau die
-Termine getroffen und das Menü behalten.
-
-`nur_ort` wirft Veranstaltungen weg, die den Ort nicht nennen. Der
-TUM-Kalender lässt sich per Adresse auf Freising filtern, liefert beim
-einfachen Abruf aber München und Heilbronn mit.
-
-Bevor weitere Quellen dazukommen, lohnt der Blick in die Daten: Wenn die beiden
-Aggregatoren die Veranstaltungen der Einzelveranstalter ohnehin mit abdecken,
-bringt jede zusätzliche Quelle vor allem zusätzliche Wartung.
-
-## Kosten
-
-Rund 43.000 Tokens für die Textquellen, dazu die beiden API-Quellen und etwa
-6.000 für die Nachprüfung — zusammen knapp 1 Cent pro Lauf mit
-`mistral-small-latest`, also gut 25 Cent im Monat.
-
-Die Detailseiten hinter den Übersichten sind der größte Posten, liefern aber
-erst die Preisangabe. GitHub Actions ist bei öffentlichen Repositories kostenlos.
-
-Ein anderes Modell lässt sich ohne Codeänderung setzen: Umgebungsvariable
-`MISTRAL_MODELL`, lokal vorangestellt oder im Workflow als `env:`.
+Die geplanten Ausbaustufen und Produktgrundsaetze stehen in [PRODUCT.md](PRODUCT.md).
