@@ -15,5 +15,5 @@ __pycache__/
 # Gespeichertes HTML aus scripts/test.py
 scripts/test_seite.html
 
-# Temporaere Import-Abschluesse; werden erst nach erfolgreichem Push angewandt
+# Lokale Arbeitsdateien
 work/

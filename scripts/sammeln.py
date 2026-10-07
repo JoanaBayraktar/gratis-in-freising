@@ -207,7 +207,7 @@ EVENT_SCHEMA = {
     "properties": {k: v for k, v in BESTAND_SCHEMA["properties"].items()
                    if k not in {"id", "quelle_name", "quellen_weitere", "status",
                                 "zuerst_gesehen", "zuletzt_gesehen",
-                                "manuell_bestaetigt", "social_text"}},
+                                "manuell_bestaetigt"}},
 }
 EVENT_SCHEMA["required"] = list(EVENT_SCHEMA["properties"])
 
@@ -789,7 +789,7 @@ def zusammenfuehren(bestand: dict, gefunden: list, quelle: dict, heute: str,
 
         if alt is None:
             frisch = {
-                **roh, "id": kennungen[0], "social_text": None,
+                **roh, "id": kennungen[0],
                 "quellen_weitere": [], "status": "aktiv",
                 "zuerst_gesehen": heute, "zuletzt_gesehen": heute,
                 "manuell_bestaetigt": False,

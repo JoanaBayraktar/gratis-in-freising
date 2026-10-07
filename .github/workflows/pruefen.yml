@@ -27,6 +27,4 @@ jobs:
       - run: pip install -r requirements.txt
       - run: python -m unittest discover -s tests
       - run: python scripts/datenpflege.py
-      - run: |
-          python scripts/build_kalender.py
-          python scripts/build_mail.py
+      - run: python scripts/build_kalender.py

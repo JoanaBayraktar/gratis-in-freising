@@ -42,7 +42,6 @@
         "anmeldung_url",
         "bild_url",
         "quelle_url",
-        "social_text",
         "ganztaegig",
         "anmeldung_noetig",
         "ausgebucht",
@@ -127,12 +126,6 @@
           ]
         },
         "quelle_url": {
-          "type": [
-            "string",
-            "null"
-          ]
-        },
-        "social_text": {
           "type": [
             "string",
             "null"

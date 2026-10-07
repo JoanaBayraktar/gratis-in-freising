@@ -30,7 +30,7 @@ keine Zeichenketten. Zusaetzliche, unbekannte Felder sind ungueltig.
 | `kategorie`, `zielgruppe` | Nichtleere Texte; Quellkategorien bleiben erhalten |
 | `drinnen_draussen` | `drinnen`, `draussen`, `beides` oder `null` |
 | `anmeldung_noetig`, `anmeldung_url`, `ausgebucht` | Anmeldung und Verfuegbarkeit |
-| `bild_url`, `social_text` | Optionale Zusatzinformationen |
+| `bild_url` | Optionales Veranstaltungsbild |
 | `eintritt` | `frei`, `spende`, `kostenpflichtig`, `unklar` |
 | `eintritt_beleg` | Quellenzitat oder ausdruecklich als Annahme bezeichnete Hausregel |
 | `eintritt_confidence` | `hoch`, `mittel`, `niedrig` |
@@ -57,6 +57,9 @@ geprueft. Bekannte historische Feldvarianten wie `drinnen_draußen`,
 `dauertermine`, `dauerterm` und `ausgebukt` werden auf die kanonischen Namen
 abgebildet. Bei widerspruechlichen Werten gewinnt das korrekt benannte Feld.
 Unbekannte Felder oder falsche Werte erzeugen einen Fehler.
+
+Das frühere Feld `social_text` wird bei der Migration entfernt; Social-Ausgaben
+sind nicht mehr Teil des Produkts. Alle Termininhalte und Quellenbelege bleiben erhalten.
 
 Kategorien und Zielgruppen sind bewusst freie Texte: Vorhandene Quellen
 liefern etwa „Fuehrung/Besichtigung“ oder „Frauen“. Sie auf „Sonstiges“ bzw.

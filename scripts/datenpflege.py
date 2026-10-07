@@ -34,7 +34,7 @@ STANDARD = {
     "veranstalter": None, "beschreibung": None, "kategorie": "Sonstiges",
     "zielgruppe": "Alle", "drinnen_draussen": None, "anmeldung_noetig": False,
     "ausgebucht": False, "dauertermin": False, "besonderheit": None,
-    "anmeldung_url": None, "bild_url": None, "social_text": None,
+    "anmeldung_url": None, "bild_url": None,
     "quellen_weitere": [], "manuell_bestaetigt": False,
 }
 
@@ -54,6 +54,8 @@ def normalisieren(event):
     Unbekannte Felder und ungueltige Werte werden nicht still entfernt.
     """
     ev = copy.deepcopy(event)
+    # Social-Ausgaben wurden eingestellt; alte Eintraege sauber migrieren.
+    ev.pop("social_text", None)
     for alias, richtig in ALIASE.items():
         if alias in ev:
             wert = ev.pop(alias)
