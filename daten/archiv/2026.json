@@ -3952,6 +3952,38 @@
       "ausgebucht": false,
       "dauertermin": false,
       "besonderheit": null
+    },
+    {
+      "titel": "Bilder für die Demokratie – Ausstellungseröffnung",
+      "beginn": "2026-09-17T19:00:00",
+      "ende": "2026-09-17T21:00:00",
+      "ganztaegig": false,
+      "ort_name": "Altes Gefängnis Freising",
+      "ort_adresse": "Brennergasse 1, 85354 Freising",
+      "veranstalter": "Modern Studio Freising e. V. / Oskar-Maria-Graf-Gymnasium Neufahrn",
+      "beschreibung": "Die Ausstellung zeigt Graphic Novels und Collagen, die an das Scheitern staatlicher Verantwortung erinnern und die Bedeutung von Mitmenschlichkeit betonen. Schülerprojekte ergänzen die Schau mit einer Groß-Collage und einer Installation zum Thema Demokratie und Vielfalt.",
+      "kategorie": "Kunst",
+      "zielgruppe": "Alle",
+      "drinnen_draussen": "drinnen",
+      "anmeldung_noetig": false,
+      "ausgebucht": false,
+      "dauertermin": true,
+      "besonderheit": "Ausstellungseröffnung",
+      "anmeldung_url": null,
+      "bild_url": null,
+      "quelle_url": "https://veranstaltungen.freising.de/freising/bilder-fuer-die-demokratie-ausstellungseroeffnung-e6b2746f25643b0a9316b6a533de9ecbd.html",
+      "eintritt": "frei",
+      "eintritt_beleg": "Eintritt frei",
+      "eintritt_confidence": "hoch",
+      "quelle_name": "Modern Studio",
+      "id": "c10b3a88c42d5954",
+      "quellen_weitere": [
+        "https://modern-studio.de/termine/"
+      ],
+      "status": "vergangen",
+      "zuerst_gesehen": "2026-08-26",
+      "zuletzt_gesehen": "2026-09-02",
+      "manuell_bestaetigt": false
     }
   ],
   "laeufe": []

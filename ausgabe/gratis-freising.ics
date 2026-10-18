@@ -24,7 +24,7 @@ END:STANDARD
 END:VTIMEZONE
 BEGIN:VEVENT
 UID:9dbb539d76866b10@gratis-freising
-DTSTAMP:20261017T075347Z
+DTSTAMP:20261018T080734Z
 DTSTART;VALUE=DATE:20260518
 DTEND;VALUE=DATE:20261019
 SUMMARY:TUM tanzt! (vermutlich frei)
@@ -44,7 +44,7 @@ CATEGORIES:Kunst
 END:VEVENT
 BEGIN:VEVENT
 UID:da000446f2911bbd@gratis-freising
-DTSTAMP:20261017T075347Z
+DTSTAMP:20261018T080734Z
 DTSTART;VALUE=DATE:20260829
 DTEND;VALUE=DATE:20261101
 SUMMARY:Krisendienst Psychiatrie Oberbayern
@@ -62,57 +62,8 @@ URL:https://veranstaltungen.merkur.de/freising/krisendienst-psychiatrie-obe
 CATEGORIES:Rat und Hilfe
 END:VEVENT
 BEGIN:VEVENT
-UID:c48b4a5a6e52bc3e@gratis-freising
-DTSTAMP:20261017T075347Z
-DTSTART;TZID=Europe/Berlin:20260908T100000
-DTEND;TZID=Europe/Berlin:20261017T190000
-SUMMARY:Ausstellung in der Stadtbibliothek Freising – „Werte verbinden 
- – Kunst vom Ich zum Wir“
-LOCATION:Stadtbibliothek Freising — Weizengasse 3 (Zugang über Untere Ha
- uptstraße)
-DESCRIPTION:Die Ausstellung präsentiert Collagen und Leinwände\, die im R
- ahmen von Werteworkshops unter der Leitung von Marian Kretschmer entstande
- n sind. Die Werke thematisieren demokratische Werte und die Verschmelzung 
- individueller Perspektiven zu einem gemeinsamen „Wir“.\n\nEintritt: Ei
- ntritt frei (Quelle nennt: frei)\nBeleg: "Eintritt frei"\nSicherheit: hoch
- \n\nVeranstalter: Werteworkshop unter der Leitung von Marian Kretschmer\nK
- ategorie: Kunst\nZielgruppe: Alle\nDrinnen/Draussen: drinnen\n\nQuelle: ht
- tps://veranstaltungen.freising.de/freising/ausstellung-in-der-stadtbibliot
- hek-freising-werte-verbinden-kunst-vom-ich-zum-wir-efe6893c43678195e22f7ec
- d7ed209c74.html
-URL:https://veranstaltungen.freising.de/freising/ausstellung-in-der-stadtbi
- bliothek-freising-werte-verbinden-kunst-vom-ich-zum-wir-efe6893c43678195e2
- 2f7ecd7ed209c74.html
-CATEGORIES:Kunst
-END:VEVENT
-BEGIN:VEVENT
-UID:d2483a298b8d5544@gratis-freising
-DTSTAMP:20261017T075347Z
-DTSTART;TZID=Europe/Berlin:20260908T100000
-DTEND;TZID=Europe/Berlin:20261017T190000
-SUMMARY:Neue Ausstellung in der Stadtbibliothek Freising – „Kreatives f
- ür Kinderrechte“
-LOCATION:Stadtbibliothek Freising — Weizengasse 3 (Zugang über Untere Ha
- uptstraße)
-DESCRIPTION:Die Ausstellung zeigt Graffiti-Kunstwerke\, die im Rahmen eines
-  Workshops mit dem Künstler Oliver Skarvan von angehenden Erzieherinnen u
- nd Erziehern erstellt wurden. Die Werke thematisieren Kinderrechte und set
- zen sich mit Mitbestimmung\, Chancengleichheit und interkulturellem Zusamm
- enleben auseinander.\n\nEintritt: Eintritt frei (Quelle nennt: frei)\nBele
- g: "Eintritt frei"\nSicherheit: hoch\n\nVeranstalter: Staatliche Fachakade
- mie für Sozialpädagogik\; Freising\nKategorie: Kunst\nZielgruppe: Alle\n
- Drinnen/Draussen: drinnen\n\nQuelle: https://veranstaltungen.freising.de/f
- reising/neue-ausstellung-in-der-stadtbibliothek-freising-kreatives-fuer-ki
- nderrechte-vom-08092026-bis-17102026-efe45fefd4ddbecd60b99c0bd7e3495d9.htm
- l
-URL:https://veranstaltungen.freising.de/freising/neue-ausstellung-in-der-st
- adtbibliothek-freising-kreatives-fuer-kinderrechte-vom-08092026-bis-171020
- 26-efe45fefd4ddbecd60b99c0bd7e3495d9.html
-CATEGORIES:Kunst
-END:VEVENT
-BEGIN:VEVENT
 UID:011804391f6f3bfd@gratis-freising
-DTSTAMP:20261017T075347Z
+DTSTAMP:20261018T080734Z
 DTSTART;VALUE=DATE:20260919
 DTEND;VALUE=DATE:20261130
 SUMMARY:Artists in Motion
@@ -139,7 +90,7 @@ CATEGORIES:Kunst
 END:VEVENT
 BEGIN:VEVENT
 UID:09c26f37a06c81b7@gratis-freising
-DTSTAMP:20261017T075347Z
+DTSTAMP:20261018T080734Z
 DTSTART;VALUE=DATE:20260919
 DTEND;VALUE=DATE:20261130
 SUMMARY:Ausstellung Artists in Motion
@@ -165,7 +116,7 @@ CATEGORIES:Kunst
 END:VEVENT
 BEGIN:VEVENT
 UID:80d5dfbb945b413f@gratis-freising
-DTSTAMP:20261017T075347Z
+DTSTAMP:20261018T080734Z
 DTSTART;VALUE=DATE:20260919
 DTEND;VALUE=DATE:20261130
 SUMMARY:Maotik: ZufallsBlüten
@@ -201,7 +152,7 @@ CATEGORIES:Kunst
 END:VEVENT
 BEGIN:VEVENT
 UID:c0693b3213e24c2a@gratis-freising
-DTSTAMP:20261017T075347Z
+DTSTAMP:20261018T080734Z
 DTSTART;VALUE=DATE:20260919
 DTEND;VALUE=DATE:20261130
 SUMMARY:Ausstellung Maotik: ZufallsBlüten
@@ -227,46 +178,8 @@ URL:https://www.schafhof-kunstforum.de/Aktuell/Veranstaltungskalender/Maoti
 CATEGORIES:Kunst
 END:VEVENT
 BEGIN:VEVENT
-UID:232a7c38f94035f0@gratis-freising
-DTSTAMP:20261017T075347Z
-DTSTART;TZID=Europe/Berlin:20261017T130000
-DTEND;TZID=Europe/Berlin:20261017T130000
-SUMMARY:Naturnahe Flächenpflege mit Augenmaß – Balance zwischen Ästhet
- ik und Ökologie
-LOCATION:Freising
-DESCRIPTION:Der Workshop thematisiert\, warum „Aufräumen“ in der Natur
-  oft schadet und wie Struktur Leben schafft. Es werden Beispiele für Blü
- tenreste\, Stängel oder Laub gezeigt\, die stehen bleiben dürfen. Ziel i
- st es\, ökologische und gestalterische Ansprüche in Einklang zu bringen.
- \n\nEintritt: Eintritt frei (Quelle nennt: frei)\nBeleg: "Kategorieseite 
- vhs Freising — kostenfrei“"\nSicherheit: hoch\n\nVeranstalter: vhs F
- reising\nKategorie: Vortrag\nZielgruppe: Alle\nDrinnen/Draussen: draussen\
- n\nQuelle: https://www.vhs-freising.org/p/fachbereiche/vhs-kostenfrei-633-
- CAT-KAT332
-URL:https://www.vhs-freising.org/p/fachbereiche/vhs-kostenfrei-633-CAT-KAT3
- 32
-CATEGORIES:Vortrag
-END:VEVENT
-BEGIN:VEVENT
-UID:65bb11a7f5eb8520@gratis-freising
-DTSTAMP:20261017T075347Z
-DTSTART;TZID=Europe/Berlin:20261017T150000
-DTEND;TZID=Europe/Berlin:20261017T170000
-SUMMARY:Radl-Repair Café (vermutlich frei)
-LOCATION:Offene Werkstatt Freising — Schwalbenweg 1\, 85356\, Freising
-DESCRIPTION:Ein offenes Repair-Café für Fahrräder\, bei dem gemeinsam kl
- eine Reparaturen und Pflegearbeiten durchgeführt werden. Teilnehmende kö
- nnen ihr Fahrrad mitbringen und unter Anleitung selbst reparieren oder Hil
- fe erhalten. Eine vorherige Anmeldung per Mail oder Social Media wird empf
- ohlen.\n\nEintritt: vermutlich kostenfrei (Quelle nennt: frei)\nSicherheit
- : mittel\n\nKategorie: Sonstiges\nZielgruppe: Alle\n\nQuelle: https://einf
- ach-selber-machen.org/event/radl-repair-cafe/
-URL:https://einfach-selber-machen.org/event/radl-repair-cafe/
-CATEGORIES:Sonstiges
-END:VEVENT
-BEGIN:VEVENT
 UID:37faf818b2b4d9e4@gratis-freising
-DTSTAMP:20261017T075347Z
+DTSTAMP:20261018T080734Z
 DTSTART;TZID=Europe/Berlin:20261020T183000
 DTEND;TZID=Europe/Berlin:20261020T183000
 SUMMARY:Wem kann ich mein Geld anvertrauen? Anlageberatung von KI\, Robo-Ad
@@ -287,7 +200,7 @@ CATEGORIES:Vortrag
 END:VEVENT
 BEGIN:VEVENT
 UID:3ff230bced861408@gratis-freising
-DTSTAMP:20261017T075347Z
+DTSTAMP:20261018T080734Z
 DTSTART;TZID=Europe/Berlin:20261020T183000
 DTEND;TZID=Europe/Berlin:20261020T203000
 SUMMARY:Wem kann ich mein Geld anvertrauen? Anlageberatung von KI\, Robo-Ad
@@ -308,7 +221,7 @@ CATEGORIES:Vortrag
 END:VEVENT
 BEGIN:VEVENT
 UID:b0428f55254e7726@gratis-freising
-DTSTAMP:20261017T075347Z
+DTSTAMP:20261018T080734Z
 DTSTART;TZID=Europe/Berlin:20261020T193000
 DTEND;TZID=Europe/Berlin:20261020T210000
 SUMMARY:Philosophische Gesprächsrunde "Das gelungene Leben"
@@ -329,7 +242,7 @@ CATEGORIES:Vortrag
 END:VEVENT
 BEGIN:VEVENT
 UID:a2351ea57857617e@gratis-freising
-DTSTAMP:20261017T075347Z
+DTSTAMP:20261018T080734Z
 DTSTART;TZID=Europe/Berlin:20261020T200000
 DTEND;TZID=Europe/Berlin:20261020T200000
 SUMMARY:Boogie Woogie (Spende)
@@ -346,7 +259,7 @@ CATEGORIES:Sport
 END:VEVENT
 BEGIN:VEVENT
 UID:116037abfbc43f0e@gratis-freising
-DTSTAMP:20261017T075347Z
+DTSTAMP:20261018T080734Z
 DTSTART;TZID=Europe/Berlin:20261021T183000
 DTEND;TZID=Europe/Berlin:20261021T183000
 SUMMARY:Knochenstark essen – mitten im Leben! - Vortrag
@@ -367,7 +280,7 @@ CATEGORIES:Vortrag
 END:VEVENT
 BEGIN:VEVENT
 UID:eb135f9fef44884c@gratis-freising
-DTSTAMP:20261017T075347Z
+DTSTAMP:20261018T080734Z
 DTSTART;TZID=Europe/Berlin:20261021T200000
 DTEND;TZID=Europe/Berlin:20261021T200000
 SUMMARY:Forró – Tanzabend (Spende)
@@ -384,7 +297,7 @@ CATEGORIES:Sport
 END:VEVENT
 BEGIN:VEVENT
 UID:0787c67a7120e06d@gratis-freising
-DTSTAMP:20261017T075347Z
+DTSTAMP:20261018T080734Z
 DTSTART;TZID=Europe/Berlin:20261022T193000
 DTEND;TZID=Europe/Berlin:20261022T213000
 SUMMARY:Fotostammtisch
@@ -404,7 +317,7 @@ CATEGORIES:Kunst
 END:VEVENT
 BEGIN:VEVENT
 UID:8d153a3878670fca@gratis-freising
-DTSTAMP:20261017T075347Z
+DTSTAMP:20261018T080734Z
 DTSTART;TZID=Europe/Berlin:20261023T193000
 DTEND;TZID=Europe/Berlin:20261023T193000
 SUMMARY:Kneipensingen
@@ -423,7 +336,7 @@ CATEGORIES:Musik
 END:VEVENT
 BEGIN:VEVENT
 UID:607c19c6685d0f0d@gratis-freising
-DTSTAMP:20261017T075347Z
+DTSTAMP:20261018T080734Z
 DTSTART;TZID=Europe/Berlin:20261024T193000
 DTEND;TZID=Europe/Berlin:20261024T193000
 SUMMARY:Kneipensingen
@@ -441,7 +354,7 @@ CATEGORIES:Musik
 END:VEVENT
 BEGIN:VEVENT
 UID:8cc40edf8ccab802@gratis-freising
-DTSTAMP:20261017T075347Z
+DTSTAMP:20261018T080734Z
 DTSTART;TZID=Europe/Berlin:20261028T200000
 DTEND;TZID=Europe/Berlin:20261028T200000
 SUMMARY:Open Latin Abend (Spende)
@@ -458,7 +371,7 @@ CATEGORIES:Sport
 END:VEVENT
 BEGIN:VEVENT
 UID:2f244d9db195425f@gratis-freising
-DTSTAMP:20261017T075347Z
+DTSTAMP:20261018T080734Z
 DTSTART;TZID=Europe/Berlin:20261029T190000
 DTEND;TZID=Europe/Berlin:20261029T203000
 SUMMARY:Netzwerke in der Bioinformatik
@@ -477,7 +390,7 @@ CATEGORIES:Vortrag
 END:VEVENT
 BEGIN:VEVENT
 UID:c42dd10155846937@gratis-freising
-DTSTAMP:20261017T075347Z
+DTSTAMP:20261018T080734Z
 DTSTART;TZID=Europe/Berlin:20261030T200000
 DTEND;TZID=Europe/Berlin:20261030T200000
 SUMMARY:Karaoke mit Stefan
@@ -495,7 +408,7 @@ CATEGORIES:Musik
 END:VEVENT
 BEGIN:VEVENT
 UID:4967f298af8ce4e8@gratis-freising
-DTSTAMP:20261017T075347Z
+DTSTAMP:20261018T080734Z
 DTSTART;VALUE=DATE:20261103
 DTEND;VALUE=DATE:20261104
 SUMMARY:[AUSGEBUCHT] Werkstatt für Jugendliche *ausgebucht* (vermutlich fr
@@ -514,7 +427,7 @@ CATEGORIES:Familie
 END:VEVENT
 BEGIN:VEVENT
 UID:45ca8ed3fc3486b1@gratis-freising
-DTSTAMP:20261017T075347Z
+DTSTAMP:20261018T080734Z
 DTSTART;TZID=Europe/Berlin:20261103T190000
 DTEND;TZID=Europe/Berlin:20261103T190000
 SUMMARY:Bier & Stricken
@@ -532,7 +445,7 @@ CATEGORIES:Familie
 END:VEVENT
 BEGIN:VEVENT
 UID:47abf858cf9014cb@gratis-freising
-DTSTAMP:20261017T075347Z
+DTSTAMP:20261018T080734Z
 DTSTART;TZID=Europe/Berlin:20261104T200000
 DTEND;TZID=Europe/Berlin:20261104T200000
 SUMMARY:Forró – Tanzabend (Spende)
@@ -550,7 +463,7 @@ CATEGORIES:Sport
 END:VEVENT
 BEGIN:VEVENT
 UID:2913ad5e45cc0bfc@gratis-freising
-DTSTAMP:20261017T075347Z
+DTSTAMP:20261018T080734Z
 DTSTART;TZID=Europe/Berlin:20261105T183000
 DTEND;TZID=Europe/Berlin:20261105T183000
 SUMMARY:Nahrungsergänzungsmittel – (Un)Sinn im Alter? - Vortrag
@@ -571,7 +484,7 @@ CATEGORIES:Vortrag
 END:VEVENT
 BEGIN:VEVENT
 UID:e043902a8dd775c9@gratis-freising
-DTSTAMP:20261017T075347Z
+DTSTAMP:20261018T080734Z
 DTSTART;TZID=Europe/Berlin:20261106T200000
 DTEND;TZID=Europe/Berlin:20261106T200000
 SUMMARY:Irish Night mit der Paul Daly Band (Folk/Irish) (Spende)
@@ -591,7 +504,7 @@ CATEGORIES:Musik
 END:VEVENT
 BEGIN:VEVENT
 UID:0a744a35879edb13@gratis-freising
-DTSTAMP:20261017T075347Z
+DTSTAMP:20261018T080734Z
 DTSTART;TZID=Europe/Berlin:20261110T180000
 DTEND;TZID=Europe/Berlin:20261110T180000
 SUMMARY:Deutsche Einheit: Jungsein in Demokratie und Diktatur - ONLINE
@@ -612,7 +525,7 @@ CATEGORIES:Vortrag
 END:VEVENT
 BEGIN:VEVENT
 UID:623b0f25a2cbe060@gratis-freising
-DTSTAMP:20261017T075347Z
+DTSTAMP:20261018T080734Z
 DTSTART;TZID=Europe/Berlin:20261110T190000
 DTEND;TZID=Europe/Berlin:20261110T190000
 SUMMARY:Schimmel vermeiden und beseitigen: Wie heize und lüfte ich richtig
@@ -633,7 +546,7 @@ CATEGORIES:Vortrag
 END:VEVENT
 BEGIN:VEVENT
 UID:752752ab83957e20@gratis-freising
-DTSTAMP:20261017T075347Z
+DTSTAMP:20261018T080734Z
 DTSTART;TZID=Europe/Berlin:20261114T150000
 DTEND;TZID=Europe/Berlin:20261114T180000
 SUMMARY:Repair Café
@@ -653,7 +566,7 @@ CATEGORIES:Familie
 END:VEVENT
 BEGIN:VEVENT
 UID:84b1f7747aa182c1@gratis-freising
-DTSTAMP:20261017T075347Z
+DTSTAMP:20261018T080734Z
 DTSTART;TZID=Europe/Berlin:20261117T183000
 DTEND;TZID=Europe/Berlin:20261117T183000
 SUMMARY:Grün und Rendite? Investieren mit Gewissen - ONLINE
@@ -674,7 +587,7 @@ CATEGORIES:Vortrag
 END:VEVENT
 BEGIN:VEVENT
 UID:409f77971e2c072a@gratis-freising
-DTSTAMP:20261017T075347Z
+DTSTAMP:20261018T080734Z
 DTSTART;TZID=Europe/Berlin:20261117T200000
 DTEND;TZID=Europe/Berlin:20261117T200000
 SUMMARY:Boogie Woogie (Spende)
@@ -691,7 +604,7 @@ CATEGORIES:Sport
 END:VEVENT
 BEGIN:VEVENT
 UID:24a9a71e47ef9fb6@gratis-freising
-DTSTAMP:20261017T075347Z
+DTSTAMP:20261018T080734Z
 DTSTART;TZID=Europe/Berlin:20261118T143000
 DTEND;TZID=Europe/Berlin:20261118T143000
 SUMMARY:Silver Surfer: Google Maps 2026 – Die Welt in 3D und KI-Planung
@@ -710,7 +623,7 @@ CATEGORIES:Vortrag
 END:VEVENT
 BEGIN:VEVENT
 UID:079f71542ddb361a@gratis-freising
-DTSTAMP:20261017T075347Z
+DTSTAMP:20261018T080734Z
 DTSTART;TZID=Europe/Berlin:20261119T193000
 DTEND;TZID=Europe/Berlin:20261119T213000
 SUMMARY:Fotostammtisch
@@ -730,7 +643,7 @@ CATEGORIES:Kunst
 END:VEVENT
 BEGIN:VEVENT
 UID:fe0bcc3fd4f0b3ac@gratis-freising
-DTSTAMP:20261017T075347Z
+DTSTAMP:20261018T080734Z
 DTSTART;TZID=Europe/Berlin:20261119T200000
 DTEND;TZID=Europe/Berlin:20261119T200000
 SUMMARY:Jubiläumsfeier Queer Freising. Treffpunkt für die LGBTQIA+ Commun
@@ -751,7 +664,7 @@ CATEGORIES:Sonstiges
 END:VEVENT
 BEGIN:VEVENT
 UID:b2e0f4b8e099c2ae@gratis-freising
-DTSTAMP:20261017T075347Z
+DTSTAMP:20261018T080734Z
 DTSTART;TZID=Europe/Berlin:20261120T200000
 DTEND;TZID=Europe/Berlin:20261120T200000
 SUMMARY:Karaoke mit Stefan
@@ -769,7 +682,7 @@ CATEGORIES:Musik
 END:VEVENT
 BEGIN:VEVENT
 UID:afbec4c70d42c16c@gratis-freising
-DTSTAMP:20261017T075347Z
+DTSTAMP:20261018T080734Z
 DTSTART;TZID=Europe/Berlin:20261121T090000
 DTEND;TZID=Europe/Berlin:20261121T160000
 SUMMARY:Holzwerken für Einsteiger*innen (vermutlich frei)
@@ -787,7 +700,7 @@ CATEGORIES:Sonstiges
 END:VEVENT
 BEGIN:VEVENT
 UID:80b56d9422c44a00@gratis-freising
-DTSTAMP:20261017T075347Z
+DTSTAMP:20261018T080734Z
 DTSTART;TZID=Europe/Berlin:20261124T190000
 DTEND;TZID=Europe/Berlin:20261124T203000
 SUMMARY:Der Fettversteher kehrt zurück
@@ -806,7 +719,7 @@ CATEGORIES:Vortrag
 END:VEVENT
 BEGIN:VEVENT
 UID:0bf217239527b66c@gratis-freising
-DTSTAMP:20261017T075347Z
+DTSTAMP:20261018T080734Z
 DTSTART;TZID=Europe/Berlin:20261125T200000
 DTEND;TZID=Europe/Berlin:20261125T200000
 SUMMARY:Open Latin Abend (Spende)
@@ -823,7 +736,7 @@ CATEGORIES:Sport
 END:VEVENT
 BEGIN:VEVENT
 UID:dd2f2b5641726fa9@gratis-freising
-DTSTAMP:20261017T075347Z
+DTSTAMP:20261018T080734Z
 DTSTART;TZID=Europe/Berlin:20261201T190000
 DTEND;TZID=Europe/Berlin:20261201T190000
 SUMMARY:Bier & Stricken
@@ -841,7 +754,7 @@ CATEGORIES:Familie
 END:VEVENT
 BEGIN:VEVENT
 UID:4f4f7d9118262d80@gratis-freising
-DTSTAMP:20261017T075347Z
+DTSTAMP:20261018T080734Z
 DTSTART;TZID=Europe/Berlin:20261202T080000
 DTEND;TZID=Europe/Berlin:20261202T170000
 SUMMARY:Forró – Tanzabend (Spende)
@@ -857,7 +770,7 @@ CATEGORIES:Sport
 END:VEVENT
 BEGIN:VEVENT
 UID:57463acfa527e414@gratis-freising
-DTSTAMP:20261017T075347Z
+DTSTAMP:20261018T080734Z
 DTSTART;TZID=Europe/Berlin:20261205T090000
 DTEND;TZID=Europe/Berlin:20261205T160000
 SUMMARY:Holzwerken für Einsteiger*innen (vermutlich frei)
@@ -876,7 +789,7 @@ CATEGORIES:Sonstiges
 END:VEVENT
 BEGIN:VEVENT
 UID:ee477e5da391da09@gratis-freising
-DTSTAMP:20261017T075347Z
+DTSTAMP:20261018T080734Z
 DTSTART;TZID=Europe/Berlin:20261205T200000
 DTEND;TZID=Europe/Berlin:20261205T200000
 SUMMARY:Abtanzparty zu Rock und Pop querbeet
@@ -895,7 +808,7 @@ CATEGORIES:Sport
 END:VEVENT
 BEGIN:VEVENT
 UID:6bd952803544b4d1@gratis-freising
-DTSTAMP:20261017T075347Z
+DTSTAMP:20261018T080734Z
 DTSTART;TZID=Europe/Berlin:20261206T150000
 DTEND;TZID=Europe/Berlin:20261206T170000
 SUMMARY:Sankt Nikolaus im Weltwald
@@ -918,7 +831,7 @@ CATEGORIES:Fest
 END:VEVENT
 BEGIN:VEVENT
 UID:a0e775cc011915ca@gratis-freising
-DTSTAMP:20261017T075347Z
+DTSTAMP:20261018T080734Z
 DTSTART;TZID=Europe/Berlin:20261207T190000
 DTEND;TZID=Europe/Berlin:20261207T190000
 SUMMARY:Solarstrom selbst erzeugen mit PV-Kleinstanlagen - ONLINE
@@ -939,7 +852,7 @@ CATEGORIES:Vortrag
 END:VEVENT
 BEGIN:VEVENT
 UID:635ef2072c914c18@gratis-freising
-DTSTAMP:20261017T075347Z
+DTSTAMP:20261018T080734Z
 DTSTART;TZID=Europe/Berlin:20261208T183000
 DTEND;TZID=Europe/Berlin:20261208T183000
 SUMMARY:Demografie vs. Geldbeutel: Warum wir über die Rente sprechen sollt
@@ -960,7 +873,7 @@ CATEGORIES:Vortrag
 END:VEVENT
 BEGIN:VEVENT
 UID:619fbcdba1cbbbf6@gratis-freising
-DTSTAMP:20261017T075347Z
+DTSTAMP:20261018T080734Z
 DTSTART;TZID=Europe/Berlin:20261211T190000
 DTEND;TZID=Europe/Berlin:20261211T210000
 SUMMARY:Vernissage Charly-Ann Cobdak: MaschinenSpiel
@@ -987,7 +900,7 @@ CATEGORIES:Kunst
 END:VEVENT
 BEGIN:VEVENT
 UID:0d13b49c0e7807ea@gratis-freising
-DTSTAMP:20261017T075347Z
+DTSTAMP:20261018T080734Z
 DTSTART;VALUE=DATE:20261212
 DTEND;VALUE=DATE:20270301
 SUMMARY:Ausstellung Charly-Ann Cobdak: MaschinenSpiel
@@ -1013,7 +926,7 @@ CATEGORIES:Kunst
 END:VEVENT
 BEGIN:VEVENT
 UID:d024ca4fc3269f7c@gratis-freising
-DTSTAMP:20261017T075347Z
+DTSTAMP:20261018T080734Z
 DTSTART;VALUE=DATE:20261212
 DTEND;VALUE=DATE:20270301
 SUMMARY:Charly-Ann Cobdak: MaschinenSpiel
@@ -1040,7 +953,7 @@ CATEGORIES:Kunst
 END:VEVENT
 BEGIN:VEVENT
 UID:eb82fc87c5d18335@gratis-freising
-DTSTAMP:20261017T075347Z
+DTSTAMP:20261018T080734Z
 DTSTART;TZID=Europe/Berlin:20261212T150000
 DTEND;TZID=Europe/Berlin:20261212T180000
 SUMMARY:Repair Café
@@ -1061,7 +974,7 @@ CATEGORIES:Familie
 END:VEVENT
 BEGIN:VEVENT
 UID:0076af3e2a40bcc6@gratis-freising
-DTSTAMP:20261017T075347Z
+DTSTAMP:20261018T080734Z
 DTSTART;TZID=Europe/Berlin:20261217T200000
 DTEND;TZID=Europe/Berlin:20261217T200000
 SUMMARY:Weihnachtliches Kneipensingen

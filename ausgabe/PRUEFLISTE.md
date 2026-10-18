@@ -11,13 +11,6 @@ Korrekturen gehoeren in `daten/verwaltung.json`, nicht in den Importbestand.
 - **Beleg:** TUM tanzt! geht 2026 in die zweite Runde. Mit vielen Angeboten zum Mitmachen, Diskutieren und Erleben.
 - **Quelle:** https://www.tum.de/aktuelles/veranstaltungen/terminuebersicht?tx_solr%5Bfilter%5D%5B0%5D=location%3AFreising
 
-## Radl-Repair Café
-- **Wann:** 17.10.2026 15:00
-- **Wo:** Offene Werkstatt Freising
-- **Angezeigt als:** vermutlich kostenfrei — Quelle nennt `frei` (Sicherheit: mittel)
-- **Beleg:** _kein Hinweis im Text gefunden_
-- **Quelle:** https://einfach-selber-machen.org/event/radl-repair-cafe/
-
 ## Werkstatt für Jugendliche *ausgebucht*
 - **Wann:** 03.11.2026 00:00
 - **Wo:** Offene Werkstatt Freising
