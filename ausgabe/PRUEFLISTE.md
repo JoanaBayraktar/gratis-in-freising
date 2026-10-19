@@ -4,13 +4,6 @@ Faelle, bei denen der freie Eintritt nicht gesichert ist.
 Optionales Nachschlagewerk; kein Pflichtschritt im taeglichen Ablauf.
 Korrekturen gehoeren in `daten/verwaltung.json`, nicht in den Importbestand.
 
-## TUM tanzt!
-- **Wann:** 18.05.2026 00:00
-- **Wo:** München, Garching, Freising
-- **Angezeigt als:** vermutlich kostenfrei — Quelle nennt `frei` (Sicherheit: mittel)
-- **Beleg:** TUM tanzt! geht 2026 in die zweite Runde. Mit vielen Angeboten zum Mitmachen, Diskutieren und Erleben.
-- **Quelle:** https://www.tum.de/aktuelles/veranstaltungen/terminuebersicht?tx_solr%5Bfilter%5D%5B0%5D=location%3AFreising
-
 ## Werkstatt für Jugendliche *ausgebucht*
 - **Wann:** 03.11.2026 00:00
 - **Wo:** Offene Werkstatt Freising
