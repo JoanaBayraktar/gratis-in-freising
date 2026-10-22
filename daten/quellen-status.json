@@ -12,9 +12,9 @@
       35,
       24
     ],
-    "fehlversuche": 48,
+    "fehlversuche": 49,
     "letzter_erfolg": "2026-09-03",
-    "letzter_fehler": "2026-10-21: HTTPError: HTTP Error 401: Unauthorized: {\"detail\":\"Invalid API Key\"}\n"
+    "letzter_fehler": "2026-10-22: HTTPError: HTTP Error 401: Unauthorized: {\"detail\":\"Invalid API Key\"}\n"
   },
   "Merkur Veranstaltungen": {
     "verlauf": [
@@ -29,9 +29,9 @@
       19,
       28
     ],
-    "fehlversuche": 49,
+    "fehlversuche": 50,
     "letzter_erfolg": "2026-09-02",
-    "letzter_fehler": "2026-10-21: HTTPError: HTTP Error 401: Unauthorized: {\"detail\":\"Invalid API Key\"}\n"
+    "letzter_fehler": "2026-10-22: HTTPError: HTTP Error 401: Unauthorized: {\"detail\":\"Invalid API Key\"}\n"
   },
   "Schafhof Kunstforum": {
     "verlauf": [
@@ -46,9 +46,9 @@
       8,
       7
     ],
-    "fehlversuche": 48,
+    "fehlversuche": 49,
     "letzter_erfolg": "2026-09-03",
-    "letzter_fehler": "2026-10-21: HTTPError: HTTP Error 401: Unauthorized: {\"detail\":\"Invalid API Key\"}\n"
+    "letzter_fehler": "2026-10-22: HTTPError: HTTP Error 401: Unauthorized: {\"detail\":\"Invalid API Key\"}\n"
   },
   "Furtner Freising": {
     "verlauf": [
@@ -63,9 +63,9 @@
       19,
       22
     ],
-    "fehlversuche": 49,
+    "fehlversuche": 50,
     "letzter_erfolg": "2026-09-02",
-    "letzter_fehler": "2026-10-21: HTTPError: HTTP Error 401: Unauthorized: {\"detail\":\"Invalid API Key\"}\n"
+    "letzter_fehler": "2026-10-22: HTTPError: HTTP Error 401: Unauthorized: {\"detail\":\"Invalid API Key\"}\n"
   },
   "Einfach selber machen": {
     "verlauf": [
@@ -80,9 +80,9 @@
       6,
       6
     ],
-    "fehlversuche": 48,
+    "fehlversuche": 49,
     "letzter_erfolg": "2026-09-03",
-    "letzter_fehler": "2026-10-21: HTTPError: HTTP Error 401: Unauthorized: {\"detail\":\"Invalid API Key\"}\n"
+    "letzter_fehler": "2026-10-22: HTTPError: HTTP Error 401: Unauthorized: {\"detail\":\"Invalid API Key\"}\n"
   },
   "vhs Freising — kostenfrei": {
     "verlauf": [
@@ -97,9 +97,9 @@
       40,
       40
     ],
-    "fehlversuche": 48,
+    "fehlversuche": 49,
     "letzter_erfolg": "2026-09-03",
-    "letzter_fehler": "2026-10-21: HTTPError: HTTP Error 401: Unauthorized: {\"detail\":\"Invalid API Key\"}\n"
+    "letzter_fehler": "2026-10-22: HTTPError: HTTP Error 401: Unauthorized: {\"detail\":\"Invalid API Key\"}\n"
   },
   "Modern Studio": {
     "verlauf": [
@@ -114,9 +114,9 @@
       5,
       4
     ],
-    "fehlversuche": 49,
+    "fehlversuche": 50,
     "letzter_erfolg": "2026-09-02",
-    "letzter_fehler": "2026-10-21: HTTPError: HTTP Error 401: Unauthorized: {\"detail\":\"Invalid API Key\"}\n"
+    "letzter_fehler": "2026-10-22: HTTPError: HTTP Error 401: Unauthorized: {\"detail\":\"Invalid API Key\"}\n"
   },
   "DAV Freising — Vortraege": {
     "verlauf": [
@@ -131,9 +131,9 @@
       3,
       3
     ],
-    "fehlversuche": 49,
+    "fehlversuche": 50,
     "letzter_erfolg": "2026-09-02",
-    "letzter_fehler": "2026-10-21: HTTPError: HTTP Error 401: Unauthorized: {\"detail\":\"Invalid API Key\"}\n"
+    "letzter_fehler": "2026-10-22: HTTPError: HTTP Error 401: Unauthorized: {\"detail\":\"Invalid API Key\"}\n"
   },
   "3Klang Musik": {
     "verlauf": [
@@ -148,9 +148,9 @@
       1,
       1
     ],
-    "fehlversuche": 49,
+    "fehlversuche": 50,
     "letzter_erfolg": "2026-09-02",
-    "letzter_fehler": "2026-10-21: HTTPError: HTTP Error 401: Unauthorized: {\"detail\":\"Invalid API Key\"}\n"
+    "letzter_fehler": "2026-10-22: HTTPError: HTTP Error 401: Unauthorized: {\"detail\":\"Invalid API Key\"}\n"
   },
   "TUM Freising": {
     "verlauf": [
@@ -165,8 +165,8 @@
       4,
       9
     ],
-    "fehlversuche": 49,
+    "fehlversuche": 50,
     "letzter_erfolg": "2026-09-02",
-    "letzter_fehler": "2026-10-21: HTTPError: HTTP Error 401: Unauthorized: {\"detail\":\"Invalid API Key\"}\n"
+    "letzter_fehler": "2026-10-22: HTTPError: HTTP Error 401: Unauthorized: {\"detail\":\"Invalid API Key\"}\n"
   }
 }
