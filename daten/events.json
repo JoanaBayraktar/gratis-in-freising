@@ -232,38 +232,6 @@
       "besonderheit": null
     },
     {
-      "titel": "Landratsamt sucht Pflegefamilien",
-      "beginn": "2026-08-23T00:00:00",
-      "ende": "2026-09-22T00:00:00",
-      "ganztaegig": true,
-      "ort_name": "Landratsamt Freising",
-      "ort_adresse": "85356 Freising",
-      "veranstalter": "Landratsamt Freising",
-      "beschreibung": "Der Pflegekinderdienst des Landratsamts Freising sucht dringend Pflegefamilien, die im Notfall einspringen können. Interessierte können sich an mehreren Terminen über die Aufgaben und Anforderungen informieren.",
-      "kategorie": "Sonstiges",
-      "zielgruppe": "Alle",
-      "drinnen_draussen": "drinnen",
-      "anmeldung_noetig": true,
-      "ausgebucht": false,
-      "dauertermin": true,
-      "besonderheit": null,
-      "anmeldung_url": "mailto:pflegekinderdienst@kreis-fs.de",
-      "bild_url": null,
-      "quelle_url": "https://veranstaltungen.merkur.de/freising/landratsamt-sucht-pflegefamilien-e381cd7cffc281ded1893a8353bb39ae4.html",
-      "eintritt": "frei",
-      "eintritt_beleg": "Eintritt frei",
-      "eintritt_confidence": "hoch",
-      "quelle_name": "Merkur Veranstaltungen",
-      "id": "4689da62f25a166e",
-      "quellen_weitere": [
-        "https://veranstaltungen.merkur.de/freising/landratsamt-sucht-pflegefamilien-e1b4aed1606e7ae50a85f3e2930919675.html"
-      ],
-      "status": "vergangen",
-      "zuerst_gesehen": "2026-08-21",
-      "zuletzt_gesehen": "2026-08-23",
-      "manuell_bestaetigt": false
-    },
-    {
       "titel": "Archetypen männlicher Grenzüberschreitung",
       "beginn": "2026-08-25T00:00:00",
       "ende": "2026-09-27T00:00:00",
@@ -2073,7 +2041,7 @@
       "quellen_weitere": [
         "https://www.vhs-freising.org/p/fachbereiche/vhs-kostenfrei-633-CAT-KAT32"
       ],
-      "status": "aktiv",
+      "status": "vergangen",
       "zuerst_gesehen": "2026-08-19",
       "zuletzt_gesehen": "2026-09-03",
       "manuell_bestaetigt": false,
