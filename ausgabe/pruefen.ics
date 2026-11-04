@@ -23,27 +23,8 @@ RRULE:FREQ=YEARLY;BYMONTH=10;BYDAY=-1SU
 END:STANDARD
 END:VTIMEZONE
 BEGIN:VEVENT
-UID:4967f298af8ce4e8@gratis-freising
-DTSTAMP:20261103T105757Z
-DTSTART;VALUE=DATE:20261103
-DTEND;VALUE=DATE:20261104
-SUMMARY:[AUSGEBUCHT] Werkstatt für Jugendliche *ausgebucht* (vermutlich fr
- ei)
-LOCATION:Offene Werkstatt Freising — Schwalbenweg 1\, 85356\, Freising
-DESCRIPTION:Ein Workshop für Jugendliche\, bei dem gemeinsam eine Lampe ge
- baut wird. Ziel ist es\, handwerkliche Fähigkeiten in den Bereichen Elekt
- rik\, Holzhandwerk und Kreativität zu fördern. Die Teilnehmenden lernen 
- Werkstattabläufe und den Umgang mit Werkzeugen kennen.\n\nEintritt: vermu
- tlich kostenfrei (Quelle nennt: unklar)\nSicherheit: niedrig\n\nKategorie:
-  Familie\nZielgruppe: Jugendliche\n\nQuelle: https://einfach-selber-machen
- .org/event/werkstatt-fuer-jugendliche-ausgebucht/
-URL:https://einfach-selber-machen.org/event/werkstatt-fuer-jugendliche-ausg
- ebucht/
-CATEGORIES:Familie
-END:VEVENT
-BEGIN:VEVENT
 UID:afbec4c70d42c16c@gratis-freising
-DTSTAMP:20261103T105757Z
+DTSTAMP:20261104T110142Z
 DTSTART;TZID=Europe/Berlin:20261121T090000
 DTEND;TZID=Europe/Berlin:20261121T160000
 SUMMARY:Holzwerken für Einsteiger*innen (vermutlich frei)
@@ -61,7 +42,7 @@ CATEGORIES:Sonstiges
 END:VEVENT
 BEGIN:VEVENT
 UID:57463acfa527e414@gratis-freising
-DTSTAMP:20261103T105757Z
+DTSTAMP:20261104T110142Z
 DTSTART;TZID=Europe/Berlin:20261205T090000
 DTEND;TZID=Europe/Berlin:20261205T160000
 SUMMARY:Holzwerken für Einsteiger*innen (vermutlich frei)
