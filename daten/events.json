@@ -363,38 +363,6 @@
       "manuell_bestaetigt": false
     },
     {
-      "titel": "Fotostammtisch",
-      "beginn": "2026-10-22T19:30:00",
-      "ende": "2026-10-22T21:30:00",
-      "ganztaegig": false,
-      "ort_name": "Freising",
-      "ort_adresse": "vhs Freising",
-      "veranstalter": "vhs Freising",
-      "beschreibung": "Der Fotostammtisch bietet Fotografierenden die Möglichkeit, sich über ihre Bilder auszutauschen und Tipps zu erhalten. Egal, ob Hobby- oder Profifotograf – alle sind willkommen, um neue Impulse und Inspiration zu sammeln.",
-      "kategorie": "Kunst",
-      "zielgruppe": "Alle",
-      "anmeldung_noetig": false,
-      "anmeldung_url": "https://www.vhs-freising.org/p/fachbereiche/vhs-kostenfrei-633-CAT-KAT332",
-      "bild_url": null,
-      "quelle_url": "https://www.vhs-freising.org/p/fachbereiche/vhs-kostenfrei-633-CAT-KAT332",
-      "eintritt": "frei",
-      "eintritt_beleg": "Kategorieseite „vhs Freising — kostenfrei“",
-      "eintritt_confidence": "hoch",
-      "quelle_name": "vhs Freising — kostenfrei",
-      "id": "0787c67a7120e06d",
-      "quellen_weitere": [
-        "https://www.vhs-freising.org/p/fachbereiche/vhs-kostenfrei-633-CAT-KAT32"
-      ],
-      "status": "vergangen",
-      "zuerst_gesehen": "2026-08-19",
-      "zuletzt_gesehen": "2026-09-03",
-      "manuell_bestaetigt": false,
-      "drinnen_draussen": "drinnen",
-      "ausgebucht": false,
-      "dauertermin": false,
-      "besonderheit": null
-    },
-    {
       "titel": "Kneipensingen",
       "beginn": "2026-10-23T19:30:00",
       "ende": "2026-10-23T19:30:00",
@@ -1055,7 +1023,7 @@
       "quelle_name": "Einfach selber machen",
       "id": "afbec4c70d42c16c",
       "quellen_weitere": [],
-      "status": "aktiv",
+      "status": "vergangen",
       "zuerst_gesehen": "2026-08-30",
       "zuletzt_gesehen": "2026-09-03",
       "manuell_bestaetigt": false

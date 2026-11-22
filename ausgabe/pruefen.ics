@@ -23,26 +23,8 @@ RRULE:FREQ=YEARLY;BYMONTH=10;BYDAY=-1SU
 END:STANDARD
 END:VTIMEZONE
 BEGIN:VEVENT
-UID:afbec4c70d42c16c@gratis-freising
-DTSTAMP:20261121T111230Z
-DTSTART;TZID=Europe/Berlin:20261121T090000
-DTEND;TZID=Europe/Berlin:20261121T160000
-SUMMARY:Holzwerken für Einsteiger*innen (vermutlich frei)
-LOCATION:Offene Werkstatt Freising — Schwalbenweg 1\, 85356\, Freising
-DESCRIPTION:Ein offener Abend für alle\, die Unterstützung bei Holzprojek
- ten benötigen – vom ersten bis zum fortgeschrittenen Projekt. Betreuend
- e Personen helfen bei der Umsetzung\, erklären Techniken und Werkzeuge un
- d stehen für Fragen zur Verfügung. Nur für Mitglieder und ehemalige Tei
- lnehmerinnen der Schreinern-für-Frauen-Kurse.\n\nEintritt: vermutlich kos
- tenfrei (Quelle nennt: unklar)\nSicherheit: niedrig\n\nKategorie: Sonstige
- s\nZielgruppe: Erwachsene\n\nQuelle: https://einfach-selber-machen.org/eve
- nt/holzwerken-fuer-einsteiger/
-URL:https://einfach-selber-machen.org/event/holzwerken-fuer-einsteiger/
-CATEGORIES:Sonstiges
-END:VEVENT
-BEGIN:VEVENT
 UID:57463acfa527e414@gratis-freising
-DTSTAMP:20261121T111230Z
+DTSTAMP:20261122T113257Z
 DTSTART;TZID=Europe/Berlin:20261205T090000
 DTEND;TZID=Europe/Berlin:20261205T160000
 SUMMARY:Holzwerken für Einsteiger*innen (vermutlich frei)
